@@ -34,7 +34,7 @@ export default function CommandList({ commands }: CommandListProps) {
           placeholder="Search commands by name or opcode..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="flex-1 px-4 py-2 bg-nvme-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-nvme-accent"
+          className="flex-1 px-4 py-2 bg-nvme-dark border border-warm-700 rounded-lg text-warm-50 placeholder-warm-600 focus:outline-none focus:border-nvme-accent"
         />
         <div className="flex gap-2">
           <button
@@ -42,7 +42,7 @@ export default function CommandList({ commands }: CommandListProps) {
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               filter === "all"
                 ? "bg-nvme-accent text-nvme-darker"
-                : "bg-nvme-dark border border-gray-700 text-gray-300 hover:text-white"
+                : "bg-nvme-dark border border-warm-700 text-warm-300 hover:text-warm-50"
             }`}
           >
             All ({commands.length})
@@ -51,8 +51,8 @@ export default function CommandList({ commands }: CommandListProps) {
             onClick={() => setFilter("admin")}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               filter === "admin"
-                ? "bg-blue-600 text-white"
-                : "bg-nvme-dark border border-gray-700 text-gray-300 hover:text-white"
+                ? "bg-nvme-accent text-nvme-darker"
+                : "bg-nvme-dark border border-warm-700 text-warm-300 hover:text-warm-50"
             }`}
           >
             Admin ({adminCount})
@@ -61,8 +61,8 @@ export default function CommandList({ commands }: CommandListProps) {
             onClick={() => setFilter("io")}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               filter === "io"
-                ? "bg-emerald-600 text-white"
-                : "bg-nvme-dark border border-gray-700 text-gray-300 hover:text-white"
+                ? "bg-nvme-accent text-nvme-darker"
+                : "bg-nvme-dark border border-warm-700 text-warm-300 hover:text-warm-50"
             }`}
           >
             I/O ({ioCount})
@@ -71,7 +71,7 @@ export default function CommandList({ commands }: CommandListProps) {
       </div>
 
       {/* Results count */}
-      <p className="text-gray-500 text-sm mb-4">
+      <p className="text-warm-500 text-sm mb-4">
         Showing {filtered.length} of {commands.length} commands
       </p>
 
@@ -81,7 +81,7 @@ export default function CommandList({ commands }: CommandListProps) {
           <Link
             key={cmd.id}
             href={`/commands/${cmd.id}`}
-            className="group block p-4 rounded-lg border border-gray-800 hover:border-gray-600 bg-nvme-dark/50 hover:bg-nvme-dark transition-all"
+            className="group block p-4 rounded-lg border border-warm-800 hover:border-warm-600 bg-nvme-dark/50 hover:bg-nvme-dark transition-all"
             prefetch={false}
           >
             <div className="flex items-start justify-between mb-2">
@@ -91,20 +91,20 @@ export default function CommandList({ commands }: CommandListProps) {
               <span
                 className={`text-xs px-2 py-0.5 rounded-full ${
                   cmd.type === "admin"
-                    ? "bg-blue-900/50 text-blue-300"
-                    : "bg-emerald-900/50 text-emerald-300"
+                    ? "bg-nvme-blue/20 text-nvme-accent"
+                    : "bg-nvme-green/20 text-nvme-green"
                 }`}
               >
                 {cmd.type === "admin" ? "Admin" : "I/O"}
               </span>
             </div>
-            <h3 className="text-white font-semibold group-hover:text-nvme-accent transition-colors mb-1">
+            <h3 className="text-warm-50 font-semibold group-hover:text-nvme-accent transition-colors mb-1">
               {cmd.name}
             </h3>
-            <p className="text-gray-500 text-xs line-clamp-2">
+            <p className="text-warm-500 text-xs line-clamp-2">
               {cmd.description}
             </p>
-            <div className="mt-2 text-xs text-gray-600">
+            <div className="mt-2 text-xs text-warm-600">
               {cmd.fields.length} field{cmd.fields.length !== 1 ? "s" : ""}
             </div>
           </Link>
@@ -112,7 +112,7 @@ export default function CommandList({ commands }: CommandListProps) {
       </div>
 
       {filtered.length === 0 && (
-        <div className="text-center py-12 text-gray-500">
+        <div className="text-center py-12 text-warm-500">
           No commands match your search.
         </div>
       )}

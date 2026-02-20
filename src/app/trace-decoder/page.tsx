@@ -22,10 +22,10 @@ export default function TraceDecoderPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-white mb-4">
+        <h1 className="text-4xl font-bold text-warm-50 mb-4">
           NVMe Ftrace Decoder
         </h1>
-        <p className="text-gray-400 max-w-3xl">
+        <p className="text-warm-400 max-w-3xl">
           Paste Linux ftrace output containing NVMe trace events and instantly
           see decoded commands with field-level details. Based on the{" "}
           <a
@@ -41,11 +41,11 @@ export default function TraceDecoderPage() {
       </div>
 
       {/* How to capture traces */}
-      <details className="mb-6 bg-nvme-dark rounded-lg border border-gray-800">
-        <summary className="px-4 py-3 text-sm text-gray-300 cursor-pointer hover:text-white transition-colors">
+      <details className="mb-6 bg-nvme-dark rounded-lg border border-warm-800">
+        <summary className="px-4 py-3 text-sm text-warm-300 cursor-pointer hover:text-warm-50 transition-colors">
           How to capture NVMe ftrace output
         </summary>
-        <div className="px-4 pb-4 text-sm text-gray-400 space-y-2">
+        <div className="px-4 pb-4 text-sm text-warm-400 space-y-2">
           <pre className="bg-nvme-darker rounded p-3 text-xs overflow-x-auto">
 {`# Enable NVMe trace events
 echo 1 > /sys/kernel/debug/tracing/events/nvme/enable

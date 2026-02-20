@@ -45,32 +45,32 @@ export default async function ArticlePage({ params }: Props) {
       <nav className="mb-6 text-sm">
         <Link
           href="/articles"
-          className="text-gray-500 hover:text-nvme-accent transition-colors"
+          className="text-warm-500 hover:text-nvme-accent transition-colors"
           prefetch={false}
         >
           Articles
         </Link>
-        <span className="text-gray-600 mx-2">/</span>
-        <span className="text-gray-300">{article.title}</span>
+        <span className="text-warm-600 mx-2">/</span>
+        <span className="text-warm-300">{article.title}</span>
       </nav>
 
       {/* Header */}
       <header className="mb-8">
         <div className="flex items-center gap-3 mb-3">
-          <time className="text-sm text-gray-500">{article.date}</time>
+          <time className="text-sm text-warm-500">{article.date}</time>
           <div className="flex gap-1">
             {article.tags.map((tag) => (
               <span
                 key={tag}
-                className="text-xs px-2 py-0.5 bg-nvme-gray rounded-full text-gray-400"
+                className="text-xs px-2 py-0.5 bg-nvme-gray rounded-full text-warm-400"
               >
                 {tag}
               </span>
             ))}
           </div>
         </div>
-        <h1 className="text-3xl font-bold text-white mb-3">{article.title}</h1>
-        <p className="text-gray-400 text-lg">{article.description}</p>
+        <h1 className="text-3xl font-bold text-warm-50 mb-3">{article.title}</h1>
+        <p className="text-warm-400 text-lg">{article.description}</p>
       </header>
 
       {/* YouTube embed */}
@@ -93,7 +93,7 @@ export default async function ArticlePage({ params }: Props) {
       />
 
       {/* Back link */}
-      <div className="mt-12 pt-6 border-t border-gray-800">
+      <div className="mt-12 pt-6 border-t border-warm-800">
         <Link
           href="/articles"
           className="text-nvme-accent hover:underline"

@@ -36,6 +36,15 @@ export function useCommandBuilder() {
     setFieldValues((prev) => ({ ...prev, [name]: value }));
   }, []);
 
+  const loadPreset = useCallback(
+    (commandId: string, presetNsid: number, fields: Record<string, number>) => {
+      setSelectedId(commandId);
+      setNsid(presetNsid);
+      setFieldValues(fields);
+    },
+    []
+  );
+
   const sqEntry: SQEntry | null = useMemo(() => {
     if (!selectedCommand) return null;
     return buildSQEntry(selectedCommand, fieldValues, nsid);
@@ -77,5 +86,6 @@ export function useCommandBuilder() {
     ftraceLine,
     roundTripDecode,
     encodedDwords,
+    loadPreset,
   };
 }

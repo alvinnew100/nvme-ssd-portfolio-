@@ -8,7 +8,7 @@ interface DwordFieldTableProps {
 export default function DwordFieldTable({ fields }: DwordFieldTableProps) {
   if (fields.length === 0) {
     return (
-      <p className="text-gray-500 italic">
+      <p className="text-warm-500 italic">
         This command has no command-specific fields (CDW10-CDW15 are reserved).
       </p>
     );
@@ -18,17 +18,17 @@ export default function DwordFieldTable({ fields }: DwordFieldTableProps) {
     <div className="overflow-x-auto">
       <table className="w-full text-sm">
         <thead>
-          <tr className="border-b border-gray-700">
-            <th className="text-left py-2 px-3 text-gray-400 font-medium">
+          <tr className="border-b border-warm-700">
+            <th className="text-left py-2 px-3 text-warm-400 font-medium">
               Field
             </th>
-            <th className="text-left py-2 px-3 text-gray-400 font-medium">
+            <th className="text-left py-2 px-3 text-warm-400 font-medium">
               Dword
             </th>
-            <th className="text-left py-2 px-3 text-gray-400 font-medium">
+            <th className="text-left py-2 px-3 text-warm-400 font-medium">
               Bits
             </th>
-            <th className="text-left py-2 px-3 text-gray-400 font-medium">
+            <th className="text-left py-2 px-3 text-warm-400 font-medium">
               Description
             </th>
           </tr>
@@ -39,32 +39,32 @@ export default function DwordFieldTable({ fields }: DwordFieldTableProps) {
             return (
               <tr
                 key={`${field.dword}-${field.name}`}
-                className="border-b border-gray-800 hover:bg-nvme-gray/30"
+                className="border-b border-warm-800 hover:bg-nvme-gray/30"
               >
                 <td className="py-2 px-3">
                   <span
-                    className="font-mono font-semibold text-white"
+                    className="font-mono font-semibold"
                     style={{ color }}
                   >
                     {field.name}
                   </span>
                 </td>
-                <td className="py-2 px-3 text-gray-300 font-mono">
+                <td className="py-2 px-3 text-warm-300 font-mono">
                   CDW{field.dword}
                 </td>
-                <td className="py-2 px-3 text-gray-300 font-mono">
+                <td className="py-2 px-3 text-warm-300 font-mono">
                   [{field.bitEnd}:{field.bitStart}]
                 </td>
-                <td className="py-2 px-3 text-gray-300">
+                <td className="py-2 px-3 text-warm-300">
                   {field.description}
                   {field.values && (
                     <div className="mt-1 space-y-0.5">
                       {Object.entries(field.values).map(([val, meaning]) => (
                         <div
                           key={val}
-                          className="text-xs text-gray-500"
+                          className="text-xs text-warm-500"
                         >
-                          <span className="font-mono text-gray-400">
+                          <span className="font-mono text-warm-400">
                             {val}
                           </span>{" "}
                           = {meaning}

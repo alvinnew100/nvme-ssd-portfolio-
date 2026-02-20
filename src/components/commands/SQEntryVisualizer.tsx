@@ -36,7 +36,7 @@ export default function SQEntryVisualizer({ command }: SQEntryVisualizerProps) {
           x={width / 2}
           y={18}
           textAnchor="middle"
-          className="fill-gray-300 text-[11px] font-semibold"
+          className="fill-warm-200 text-[11px] font-semibold"
         >
           64-Byte Submission Queue Entry — {command.name}
         </text>
@@ -48,7 +48,7 @@ export default function SQEntryVisualizer({ command }: SQEntryVisualizerProps) {
             x={labelW + padX + c * cellW + cellW / 2}
             y={padY - 4}
             textAnchor="middle"
-            className="fill-gray-500 text-[9px]"
+            className="fill-warm-500 text-[9px]"
           >
             Byte {c}
           </text>
@@ -66,7 +66,7 @@ export default function SQEntryVisualizer({ command }: SQEntryVisualizerProps) {
               <text
                 x={padX}
                 y={y + cellH / 2 + 4}
-                className="fill-gray-400 text-[9px]"
+                className="fill-warm-400 text-[9px]"
               >
                 CDW{dw}: {SQ_DWORD_LABELS[dw]}
               </text>
@@ -82,8 +82,8 @@ export default function SQEntryVisualizer({ command }: SQEntryVisualizerProps) {
                       y={y}
                       width={cellW}
                       height={cellH}
-                      fill={hasField ? color + "30" : "#0f172a"}
-                      stroke={hasField ? color : "#334155"}
+                      fill={hasField ? color + "30" : "#242018"}
+                      stroke={hasField ? color : "#3a3022"}
                       strokeWidth={hasField ? 1.5 : 0.5}
                       rx={2}
                     />
@@ -91,7 +91,7 @@ export default function SQEntryVisualizer({ command }: SQEntryVisualizerProps) {
                       x={x + cellW / 2}
                       y={y + cellH / 2 + 4}
                       textAnchor="middle"
-                      className="fill-gray-300 text-[9px] font-mono"
+                      className="fill-warm-300 text-[9px] font-mono"
                     >
                       [{byteOffset}]
                     </text>
@@ -121,7 +121,7 @@ export default function SQEntryVisualizer({ command }: SQEntryVisualizerProps) {
                     strokeWidth={1}
                     rx={1}
                   />
-                  <text x={lx + 14} y={ly} className="fill-gray-400 text-[8px]">
+                  <text x={lx + 14} y={ly} className="fill-warm-400 text-[8px]">
                     CDW{f.dword}[{f.bitEnd}:{f.bitStart}] — {f.name}: {f.description}
                   </text>
                 </g>

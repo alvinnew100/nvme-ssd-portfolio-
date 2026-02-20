@@ -1,8 +1,21 @@
-# NVMe Ftrace - Basic Read/Write Operations
-# Captured from: nvme0n1
-# Trace events: nvme:nvme_setup_cmd
- kworker/0:1H-312   [000] ....  1234.567890: nvme_setup_cmd: nvme0n1: qid=1, cmdid=0, nsid=1, cdw10=0x00000000, cdw11=0x00000000, cdw12=0x000000ff, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x01
- kworker/0:1H-312   [000] ....  1234.567900: nvme_setup_cmd: nvme0n1: qid=1, cmdid=1, nsid=1, cdw10=0x00000100, cdw11=0x00000000, cdw12=0x0000001f, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x02
- kworker/0:1H-312   [000] ....  1234.568000: nvme_setup_cmd: nvme0n1: qid=1, cmdid=2, nsid=1, cdw10=0x00001000, cdw11=0x00000000, cdw12=0x400000ff, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x01
- kworker/0:1H-312   [001] ....  1234.568100: nvme_setup_cmd: nvme0n1: qid=2, cmdid=3, nsid=1, cdw10=0x00002000, cdw11=0x00000000, cdw12=0x000001ff, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x02
- kworker/0:1H-312   [001] ....  1234.568200: nvme_setup_cmd: nvme0n1: qid=1, cmdid=4, nsid=1, cdw10=0x00000000, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x00
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 12/12   #P:8
+#
+#                                _-----=> irqs-off/BH-disabled
+#                               / _----=> need-resched
+#                              | / _---=> hardirq/softirq
+#                              || / _--=> preempt-depth
+#                              ||| / _-=> migrate-disable
+#                              |||| /     delay
+#           TASK-PID     CPU#  |||||  TIMESTAMP  FUNCTION
+#              | |         |   |||||     |         |
+     fio-18234   [003] d..1.  2847.331205: nvme_setup_cmd: nvme0n1: qid=1, cmdid=0, nsid=1, cdw10=0x00000000, cdw11=0x00000000, cdw12=0x00000007, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x02
+     fio-18234   [003] d..1.  2847.331298: nvme_setup_cmd: nvme0n1: qid=1, cmdid=1, nsid=1, cdw10=0x00000008, cdw11=0x00000000, cdw12=0x00000007, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x02
+     fio-18234   [003] d..1.  2847.331387: nvme_setup_cmd: nvme0n1: qid=1, cmdid=2, nsid=1, cdw10=0x000003e8, cdw11=0x00000000, cdw12=0x000000ff, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x02
+     fio-18235   [005] d..1.  2847.331492: nvme_setup_cmd: nvme0n1: qid=3, cmdid=0, nsid=1, cdw10=0x00008000, cdw11=0x00000000, cdw12=0x000000ff, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x01
+     fio-18235   [005] d..1.  2847.331578: nvme_setup_cmd: nvme0n1: qid=3, cmdid=1, nsid=1, cdw10=0x00008100, cdw11=0x00000000, cdw12=0x400000ff, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x01
+     fio-18234   [003] d..1.  2847.331689: nvme_setup_cmd: nvme0n1: qid=1, cmdid=3, nsid=1, cdw10=0x00100000, cdw11=0x00000000, cdw12=0x000001ff, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x02
+     fio-18235   [005] d..1.  2847.331801: nvme_setup_cmd: nvme0n1: qid=3, cmdid=2, nsid=1, cdw10=0x00020000, cdw11=0x00000000, cdw12=0x400007ff, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x01
+ kworker/3:1H-542 [003] d..2.  2847.331923: nvme_setup_cmd: nvme0n1: qid=1, cmdid=4, nsid=1, cdw10=0x00000000, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x00
+ kworker/5:1H-678 [005] d..2.  2847.331945: nvme_setup_cmd: nvme0n1: qid=3, cmdid=3, nsid=1, cdw10=0x00000000, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x00

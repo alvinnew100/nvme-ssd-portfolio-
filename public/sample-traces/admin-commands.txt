@@ -1,11 +1,22 @@
-# NVMe Ftrace - Admin Command Examples
-# Captured from: nvme0
-# Trace events: nvme:nvme_setup_cmd
- nvme/0-256       [000] ....  5678.123456: nvme_setup_cmd: nvme0n1: qid=0, cmdid=0, nsid=0, cdw10=0x00000001, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x06
- nvme/0-256       [000] ....  5678.123556: nvme_setup_cmd: nvme0n1: qid=0, cmdid=1, nsid=1, cdw10=0x00000000, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x06
- nvme/0-256       [000] ....  5678.123656: nvme_setup_cmd: nvme0n1: qid=0, cmdid=2, nsid=0, cdw10=0x007f0002, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x02
- nvme/0-256       [000] ....  5678.123756: nvme_setup_cmd: nvme0n1: qid=0, cmdid=3, nsid=0, cdw10=0x00ff0001, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x02
- nvme/0-256       [000] ....  5678.123856: nvme_setup_cmd: nvme0n1: qid=0, cmdid=4, nsid=0, cdw10=0x00000007, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x0a
- nvme/0-256       [001] ....  5678.123956: nvme_setup_cmd: nvme0n1: qid=0, cmdid=5, nsid=0, cdw10=0x003f0001, cdw11=0x00030003, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x01
- nvme/0-256       [001] ....  5678.124056: nvme_setup_cmd: nvme0n1: qid=0, cmdid=6, nsid=0, cdw10=0x001f0001, cdw11=0x00010003, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x05
- nvme/0-256       [000] ....  5678.124156: nvme_setup_cmd: nvme0n1: qid=0, cmdid=7, nsid=1, cdw10=0x00000009, cdw11=0x00000001, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x09
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 10/10   #P:8
+#
+#                                _-----=> irqs-off/BH-disabled
+#                               / _----=> need-resched
+#                              | / _---=> hardirq/softirq
+#                              || / _--=> preempt-depth
+#                              ||| / _-=> migrate-disable
+#                              |||| /     delay
+#           TASK-PID     CPU#  |||||  TIMESTAMP  FUNCTION
+#              | |         |   |||||     |         |
+  nvme-cli-9102   [001] ....  5678.112340: nvme_setup_cmd: nvme0: qid=0, cmdid=0, nsid=0, cdw10=0x00000001, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x06
+  nvme-cli-9102   [001] ....  5678.114562: nvme_setup_cmd: nvme0: qid=0, cmdid=1, nsid=1, cdw10=0x00000000, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x06
+  smartctl-9201   [000] ....  5678.223456: nvme_setup_cmd: nvme0: qid=0, cmdid=2, nsid=0, cdw10=0x007f0002, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x02
+  smartctl-9201   [000] ....  5678.225678: nvme_setup_cmd: nvme0: qid=0, cmdid=3, nsid=0, cdw10=0x00ff0003, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x02
+  nvme-cli-9102   [001] ....  5678.331234: nvme_setup_cmd: nvme0: qid=0, cmdid=4, nsid=0, cdw10=0x00000007, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x0a
+ kworker/0:1H-312 [000] d..2.  5678.445123: nvme_setup_cmd: nvme0: qid=0, cmdid=5, nsid=0, cdw10=0x00ff0005, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x05
+ kworker/0:1H-312 [000] d..2.  5678.447234: nvme_setup_cmd: nvme0: qid=0, cmdid=6, nsid=0, cdw10=0x00ff0001, cdw11=0x00010001, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x01
+  nvme-cli-9102   [001] ....  5678.556789: nvme_setup_cmd: nvme0: qid=0, cmdid=7, nsid=0, cdw10=0x003f0001, cdw11=0x00030003, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x01
+  nvme-cli-9102   [002] ....  5678.661234: nvme_setup_cmd: nvme0: qid=0, cmdid=8, nsid=1, cdw10=0x00000006, cdw11=0x00000001, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x09
+  nvme-cli-9102   [002] ....  5678.772345: nvme_setup_cmd: nvme0: qid=0, cmdid=9, nsid=0, cdw10=0x00000001, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x14

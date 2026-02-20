@@ -9,20 +9,18 @@ const navItems = [
   { label: "Command Builder", href: "/command-builder" },
   { label: "Architecture", href: "/architecture" },
   { label: "Articles", href: "/articles" },
-  { label: "About", href: "/about" },
 ];
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const basePath = "/nvme-ssd-portfolio";
 
   return (
-    <header className="bg-nvme-dark border-b border-gray-800 sticky top-0 z-50">
+    <header className="bg-nvme-dark border-b border-warm-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link
             href="/"
-            className="flex items-center gap-2 text-white font-bold text-lg hover:text-nvme-accent transition-colors"
+            className="flex items-center gap-2 text-warm-50 font-bold text-lg hover:text-nvme-accent transition-colors"
             prefetch={false}
           >
             <svg
@@ -41,7 +39,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="px-3 py-2 rounded-md text-sm text-gray-300 hover:text-white hover:bg-nvme-gray transition-colors"
+                className="px-3 py-2 rounded-md text-sm text-warm-300 hover:text-warm-50 hover:bg-nvme-gray transition-colors"
                 prefetch={false}
               >
                 {item.label}
@@ -51,7 +49,7 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 text-gray-400 hover:text-white"
+            className="md:hidden p-2 text-warm-400 hover:text-warm-50"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -72,7 +70,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block px-3 py-2 rounded-md text-gray-300 hover:text-white hover:bg-nvme-gray transition-colors"
+                className="block px-3 py-2 rounded-md text-warm-300 hover:text-warm-50 hover:bg-nvme-gray transition-colors"
                 onClick={() => setMobileOpen(false)}
                 prefetch={false}
               >
