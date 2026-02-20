@@ -4,7 +4,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 
 export default function Reservations() {
   return (
-    <SectionWrapper className="py-20 px-4">
+    <SectionWrapper className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Reservations &amp; Multi-Host Access
@@ -16,7 +16,7 @@ export default function Reservations() {
           fencing &mdash; preventing data corruption from concurrent writes.
         </p>
 
-        <div className="bg-story-panel rounded-xl border border-story-border p-6 mb-6">
+        <div className="bg-white rounded-2xl p-6 card-shadow mb-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
             {[
               {
@@ -40,7 +40,7 @@ export default function Reservations() {
                 desc: "Report registered controllers and reservation status.",
               },
             ].map((r) => (
-              <div key={r.cmd} className="bg-story-bg rounded-lg p-3">
+              <div key={r.cmd} className="bg-story-surface rounded-xl p-4">
                 <div className="flex items-center gap-2 mb-1">
                   <span className="text-nvme-blue font-mono font-bold">
                     {r.cmd}

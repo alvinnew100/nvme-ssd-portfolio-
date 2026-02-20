@@ -42,7 +42,7 @@ export default function TraceDecoderEmbed() {
           in real time.
         </p>
 
-        <div className="bg-story-panel rounded-xl border border-story-border p-6 space-y-4">
+        <div className="bg-white rounded-2xl p-6 card-shadow space-y-4">
           <TraceInput
             value={input}
             onChange={(val: string) => decode(val)}
@@ -51,7 +51,7 @@ export default function TraceDecoderEmbed() {
           />
 
           {error && (
-            <div className="text-nvme-red text-xs bg-nvme-red/10 rounded p-3">
+            <div className="text-nvme-red text-xs bg-nvme-red/10 rounded-lg p-3">
               {error}
             </div>
           )}

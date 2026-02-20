@@ -38,7 +38,7 @@ export default function CommandAccordion() {
   }, [commands, search, filter]);
 
   return (
-    <div className="py-20 px-4 bg-story-surface">
+    <div className="py-24 px-4 bg-story-surface">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           All 38 NVMe Commands
@@ -56,17 +56,17 @@ export default function CommandAccordion() {
             placeholder="Search by name, ID, or opcode..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="flex-1 min-w-[200px] bg-story-bg border border-story-border rounded-lg px-4 py-2 text-text-primary text-sm font-mono placeholder:text-text-muted"
+            className="flex-1 min-w-[200px] bg-white border border-story-border rounded-xl px-4 py-2.5 text-text-primary text-sm font-mono placeholder:text-text-muted focus:outline-none focus:border-nvme-blue card-shadow"
           />
           <div className="flex gap-1">
             {(["all", "admin", "io"] as const).map((f) => (
               <button
                 key={f}
                 onClick={() => setFilter(f)}
-                className={`px-4 py-2 rounded-lg text-xs font-mono transition-colors ${
+                className={`px-4 py-2.5 rounded-xl text-xs font-mono transition-all ${
                   filter === f
-                    ? "bg-nvme-green/20 text-nvme-green border border-nvme-green/40"
-                    : "bg-story-panel border border-story-border text-text-muted hover:text-text-secondary"
+                    ? "bg-nvme-blue text-white shadow-md"
+                    : "bg-white border border-story-border text-text-muted hover:text-text-secondary card-shadow"
                 }`}
               >
                 {f === "all" ? "All" : f === "admin" ? "Admin (26)" : "I/O (12)"}
@@ -86,7 +86,7 @@ export default function CommandAccordion() {
               <Accordion.Item
                 key={cmd.id}
                 value={cmd.id}
-                className="bg-story-panel rounded-xl border border-story-border overflow-hidden"
+                className="bg-white rounded-2xl card-shadow overflow-hidden"
               >
                 <Accordion.Header>
                   <Accordion.Trigger className="w-full px-5 py-4 text-left flex items-center gap-3 hover:bg-story-surface/50 transition-colors group">
@@ -97,7 +97,7 @@ export default function CommandAccordion() {
                       {cmd.name}
                     </span>
                     <span
-                      className={`text-[10px] font-mono px-2 py-0.5 rounded ${
+                      className={`text-[10px] font-mono px-2 py-0.5 rounded-full ${
                         cmd.type === "admin"
                           ? "bg-nvme-violet/10 text-nvme-violet"
                           : "bg-nvme-blue/10 text-nvme-blue"
@@ -128,13 +128,13 @@ export default function CommandAccordion() {
 
                     {/* nvme-cli equivalent */}
                     {cliResult.isKernelOnly ? (
-                      <div className="text-text-muted text-xs italic bg-story-bg rounded p-3 font-mono">
+                      <div className="text-text-muted text-xs italic bg-story-surface rounded-lg p-3 font-mono">
                         {cliResult.note}
                       </div>
                     ) : cliResult.command ? (
-                      <div className="bg-story-bg rounded-lg p-3 font-mono text-xs">
+                      <div className="bg-story-dark rounded-lg p-3 font-mono text-xs">
                         <span className="text-nvme-green select-none">$ </span>
-                        <span className="text-text-code">{cliResult.command}</span>
+                        <span className="text-white/90">{cliResult.command}</span>
                       </div>
                     ) : null}
 
@@ -147,7 +147,7 @@ export default function CommandAccordion() {
 
                     <button
                       onClick={() => scrollToPlayground(cmd.id)}
-                      className="text-xs text-nvme-green hover:underline font-mono"
+                      className="text-xs text-nvme-blue hover:underline font-mono"
                     >
                       Try it in Playground &rarr;
                     </button>

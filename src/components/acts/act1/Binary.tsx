@@ -19,7 +19,7 @@ export default function Binary() {
   const hex = decimal.toString(16).padStart(2, "0").toUpperCase();
 
   return (
-    <SectionWrapper className="py-20 px-4">
+    <SectionWrapper className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Binary &amp; Bits
@@ -32,8 +32,8 @@ export default function Binary() {
           sector of data, every register value is just a sequence of bytes.
         </p>
 
-        <div className="bg-story-panel rounded-xl border border-story-border p-6 mb-6">
-          <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
+        <div className="bg-white rounded-2xl p-8 card-shadow mb-6">
+          <div className="text-text-muted text-xs font-mono mb-6 uppercase tracking-wider">
             Interactive &mdash; Click bits to flip them
           </div>
           <div className="flex items-center justify-center gap-2 mb-6">
@@ -41,10 +41,10 @@ export default function Binary() {
               <button
                 key={i}
                 onClick={() => toggleBit(i)}
-                className={`w-12 h-14 rounded-lg border-2 font-mono text-xl font-bold transition-all duration-200 ${
+                className={`w-14 h-16 rounded-xl border-2 font-mono text-xl font-bold transition-all duration-200 ${
                   b
-                    ? "bg-nvme-green/20 border-nvme-green text-nvme-green"
-                    : "bg-story-bg border-story-border text-text-muted"
+                    ? "bg-nvme-green/10 border-nvme-green text-nvme-green shadow-md shadow-nvme-green/10"
+                    : "bg-story-surface border-story-border text-text-muted hover:border-text-muted"
                 }`}
               >
                 {b}
@@ -54,19 +54,19 @@ export default function Binary() {
           <div className="flex justify-center gap-8 text-sm">
             <div>
               <span className="text-text-muted">Decimal: </span>
-              <span className="text-text-primary font-mono font-bold">
+              <span className="text-text-primary font-mono font-bold text-lg">
                 {decimal}
               </span>
             </div>
             <div>
               <span className="text-text-muted">Hex: </span>
-              <span className="text-text-code font-mono font-bold">
+              <span className="text-text-code font-mono font-bold text-lg">
                 0x{hex}
               </span>
             </div>
             <div>
               <span className="text-text-muted">Binary: </span>
-              <span className="text-nvme-green font-mono font-bold">
+              <span className="text-nvme-green font-mono font-bold text-lg">
                 {bits.join("")}b
               </span>
             </div>

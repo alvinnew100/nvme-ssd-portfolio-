@@ -23,21 +23,21 @@ export default function TerminalBlock({
   };
 
   return (
-    <div className="rounded-xl border border-story-border bg-story-bg overflow-hidden">
-      <div className="flex items-center justify-between px-4 py-2 border-b border-story-border bg-story-panel">
+    <div className="rounded-xl bg-story-dark overflow-hidden">
+      <div className="flex items-center justify-between px-4 py-2 border-b border-white/10">
         <div className="flex items-center gap-2">
           <div className="flex gap-1.5">
-            <div className="w-2.5 h-2.5 rounded-full bg-nvme-red/60" />
-            <div className="w-2.5 h-2.5 rounded-full bg-nvme-amber/60" />
-            <div className="w-2.5 h-2.5 rounded-full bg-nvme-green/60" />
+            <div className="w-2.5 h-2.5 rounded-full bg-red-400/60" />
+            <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/60" />
+            <div className="w-2.5 h-2.5 rounded-full bg-green-400/60" />
           </div>
-          <span className="text-text-muted text-xs font-mono ml-2">
+          <span className="text-white/40 text-xs font-mono ml-2">
             {title}
           </span>
         </div>
         <button
           onClick={handleCopy}
-          className="text-xs text-text-muted hover:text-nvme-green transition-colors"
+          className="text-xs text-white/40 hover:text-white/80 transition-colors"
         >
           {copied ? "Copied!" : "Copy"}
         </button>
@@ -46,14 +46,14 @@ export default function TerminalBlock({
         {lines.map((line, i) => (
           <div key={i}>
             {line.startsWith("#") ? (
-              <span className="text-text-muted">{line}</span>
+              <span className="text-white/30">{line}</span>
             ) : line.startsWith("$") ? (
               <>
-                <span className="text-nvme-green select-none">$ </span>
-                <span className="text-text-code">{line.slice(2)}</span>
+                <span className="text-green-400 select-none">$ </span>
+                <span className="text-white/90">{line.slice(2)}</span>
               </>
             ) : (
-              <span className="text-text-secondary">{line}</span>
+              <span className="text-white/70">{line}</span>
             )}
           </div>
         ))}

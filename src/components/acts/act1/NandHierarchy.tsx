@@ -7,42 +7,42 @@ const LEVELS = [
     name: "Page",
     size: "4-16 KB",
     desc: "Smallest readable/writable unit. A page holds your data.",
-    color: "nvme-green",
-    width: "w-16",
+    color: "#00d4aa",
+    width: "64px",
   },
   {
     name: "Block",
     size: "128-256 pages",
     desc: "Smallest erasable unit. You must erase a whole block before rewriting any page in it.",
-    color: "nvme-blue",
-    width: "w-32",
+    color: "#635bff",
+    width: "128px",
   },
   {
     name: "Plane",
     size: "~1000 blocks",
     desc: "Enables parallel operations. Multi-plane commands speed up I/O.",
-    color: "nvme-violet",
-    width: "w-48",
+    color: "#7c5cfc",
+    width: "192px",
   },
   {
     name: "Die",
     size: "2-4 planes",
     desc: "Independent unit with its own row decoder and page buffer. Dies interleave for speed.",
-    color: "nvme-amber",
-    width: "w-64",
+    color: "#f5a623",
+    width: "256px",
   },
   {
     name: "Package",
     size: "1-8 dies",
     desc: "Physical chip. Multiple dies stacked vertically in a single NAND package.",
-    color: "nvme-red",
-    width: "w-80",
+    color: "#ed5f74",
+    width: "320px",
   },
 ];
 
 export default function NandHierarchy() {
   return (
-    <SectionWrapper className="py-20 px-4">
+    <SectionWrapper className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Pages, Blocks, Planes, Dies
@@ -53,34 +53,36 @@ export default function NandHierarchy() {
           TRIM matters, and why garbage collection exists.
         </p>
 
-        <div className="flex flex-col items-center gap-3">
-          {LEVELS.map((level, i) => (
-            <div key={level.name} className="flex items-center gap-4 w-full max-w-lg">
-              <div
-                className={`${level.width} h-12 rounded-lg border-2 border-${level.color}/50 bg-${level.color}/10 flex items-center justify-center flex-shrink-0`}
-              >
-                <span className={`text-${level.color} font-mono font-bold text-sm`}>
-                  {level.name}
-                </span>
+        <div className="bg-white rounded-2xl p-8 card-shadow mb-6">
+          <div className="flex flex-col items-center gap-3">
+            {LEVELS.map((level) => (
+              <div key={level.name} className="flex items-center gap-4 w-full max-w-lg">
+                <div
+                  className="h-12 rounded-lg flex items-center justify-center flex-shrink-0"
+                  style={{
+                    width: level.width,
+                    backgroundColor: `${level.color}10`,
+                    border: `2px solid ${level.color}50`,
+                  }}
+                >
+                  <span className="font-mono font-bold text-sm" style={{ color: level.color }}>
+                    {level.name}
+                  </span>
+                </div>
+                <div className="min-w-0">
+                  <div className="text-text-muted text-xs font-mono">
+                    {level.size}
+                  </div>
+                  <div className="text-text-secondary text-xs leading-relaxed">
+                    {level.desc}
+                  </div>
+                </div>
               </div>
-              <div className="min-w-0">
-                <div className="text-text-muted text-xs font-mono">
-                  {level.size}
-                </div>
-                <div className="text-text-secondary text-xs leading-relaxed">
-                  {level.desc}
-                </div>
-              </div>
-              {i < LEVELS.length - 1 && (
-                <div className="absolute left-1/2 transform -translate-x-1/2 hidden">
-                  &darr;
-                </div>
-              )}
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        <div className="mt-8 bg-story-panel rounded-xl border border-story-border p-5">
+        <div className="bg-white rounded-2xl p-6 card-shadow">
           <div className="text-text-primary font-semibold text-sm mb-2">
             Key insight: Read vs. Erase asymmetry
           </div>

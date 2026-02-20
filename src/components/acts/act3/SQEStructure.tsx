@@ -13,7 +13,7 @@ export default function SQEStructure() {
   const identifyCmd = getAdminCommands().find((c) => c.id === "admin-identify");
 
   return (
-    <SectionWrapper className="py-20 px-4">
+    <SectionWrapper className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           The 64-Byte Submission Queue Entry
@@ -25,7 +25,7 @@ export default function SQEStructure() {
           (CDW10-CDW15) are command-specific &mdash; they carry the actual parameters.
         </p>
 
-        <div className="bg-story-panel rounded-xl border border-story-border p-6 mb-6">
+        <div className="bg-white rounded-2xl p-8 card-shadow mb-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono mb-6">
             <div>
               <div className="text-text-muted mb-1">CDW0 (bytes 0-3)</div>

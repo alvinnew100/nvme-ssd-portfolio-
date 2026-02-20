@@ -6,7 +6,7 @@ import CodeBlock from "@/components/story/CodeBlock";
 
 export default function Tracing() {
   return (
-    <SectionWrapper className="py-20 px-4">
+    <SectionWrapper className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           ftrace NVMe Tracing
@@ -50,8 +50,8 @@ cat /sys/kernel/debug/tracing/trace_pipe`}
           fields, you can decode the exact command and its parameters.
         </p>
 
-        <div className="bg-story-panel rounded-xl border border-story-border p-5">
-          <div className="text-text-primary font-semibold text-sm mb-2">
+        <div className="bg-white rounded-2xl p-6 card-shadow">
+          <div className="text-text-primary font-semibold text-sm mb-3">
             Trace line anatomy
           </div>
           <div className="font-mono text-[10px] text-text-code overflow-x-auto">

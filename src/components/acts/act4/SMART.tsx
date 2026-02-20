@@ -33,7 +33,7 @@ export default function SMART() {
   }, [animatedIdx]);
 
   return (
-    <SectionWrapper className="py-20 px-4">
+    <SectionWrapper className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           SMART Health Monitoring
@@ -48,8 +48,8 @@ export default function SMART() {
 
         <NvmeCliBlock command="nvme smart-log /dev/nvme0" />
 
-        <div className="mt-6 bg-story-panel rounded-xl border border-story-border overflow-hidden">
-          <div className="px-4 py-3 border-b border-story-border bg-story-surface flex items-center gap-2">
+        <div className="mt-6 bg-white rounded-2xl card-shadow overflow-hidden">
+          <div className="px-5 py-3 border-b border-story-border bg-story-surface flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-nvme-green animate-pulse" />
             <span className="text-text-muted text-xs font-mono">SMART Dashboard</span>
           </div>
@@ -57,12 +57,12 @@ export default function SMART() {
             {SMART_FIELDS.map((field, i) => (
               <div
                 key={field.name}
-                className={`flex justify-between items-center px-3 py-2 rounded text-xs transition-opacity duration-300 ${
+                className={`flex justify-between items-center px-3 py-2 rounded-lg text-xs transition-opacity duration-300 ${
                   i < animatedIdx ? "opacity-100" : "opacity-0"
                 } ${
                   field.status === "warn"
                     ? "bg-nvme-amber/5 border border-nvme-amber/20"
-                    : "bg-story-bg/50"
+                    : "bg-story-surface"
                 }`}
               >
                 <span className="text-text-secondary">{field.name}</span>

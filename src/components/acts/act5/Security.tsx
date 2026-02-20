@@ -5,7 +5,7 @@ import InfoCard from "@/components/story/InfoCard";
 
 export default function Security() {
   return (
-    <SectionWrapper className="py-20 px-4 bg-story-surface">
+    <SectionWrapper className="py-24 px-4 bg-story-surface">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Security &mdash; Encryption &amp; TCG Opal
@@ -21,7 +21,7 @@ export default function Security() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-          <div className="bg-story-panel rounded-xl border border-story-border p-5">
+          <div className="bg-white rounded-2xl p-6 card-shadow">
             <div className="text-nvme-green font-mono font-bold text-sm mb-2">
               Self-Encrypting Drives (SED)
             </div>
@@ -31,7 +31,7 @@ export default function Security() {
               destroyed &mdash; instant, secure wipe.
             </p>
           </div>
-          <div className="bg-story-panel rounded-xl border border-story-border p-5">
+          <div className="bg-white rounded-2xl p-6 card-shadow">
             <div className="text-nvme-violet font-mono font-bold text-sm mb-2">
               TCG Opal 2.0
             </div>

@@ -31,7 +31,7 @@ export default function TraceInput({
               <button
                 key={s.name}
                 onClick={() => onLoadSample(s.name)}
-                className="text-xs px-2 py-1 bg-story-panel rounded text-text-muted hover:text-text-primary transition-colors"
+                className="text-xs px-3 py-1.5 bg-story-surface rounded-lg text-text-muted hover:text-text-primary hover:bg-story-border transition-colors"
               >
                 {s.label}
               </button>
@@ -39,7 +39,7 @@ export default function TraceInput({
           {value && (
             <button
               onClick={onClear}
-              className="text-xs px-2 py-1 bg-nvme-red/20 rounded text-nvme-red hover:text-nvme-red/80 transition-colors"
+              className="text-xs px-3 py-1.5 bg-nvme-red/10 rounded-lg text-nvme-red hover:bg-nvme-red/20 transition-colors"
             >
               Clear
             </button>
@@ -53,7 +53,7 @@ export default function TraceInput({
 
 Example:
  kworker/0:1H-312   [000] ....  1234.567890: nvme_setup_cmd: nvme0n1: qid=1, cmdid=0, nsid=1, cdw10=0x00000000, cdw11=0x00000000, cdw12=0x000000ff, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x01`}
-        className="w-full h-48 px-4 py-3 bg-story-bg border border-story-border rounded-lg text-text-primary font-mono text-xs placeholder-text-muted focus:outline-none focus:border-nvme-green resize-y"
+        className="w-full h-48 px-4 py-3 bg-story-surface border border-story-border rounded-xl text-text-primary font-mono text-xs placeholder-text-muted focus:outline-none focus:border-nvme-blue resize-y"
         spellCheck={false}
       />
     </div>

@@ -1,11 +1,34 @@
 "use client";
 
+import { useState } from "react";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 
+const GENS = [
+  { gen: "Gen 1", gts: 2.5, encoding: "8b/10b", year: 2003 },
+  { gen: "Gen 2", gts: 5, encoding: "8b/10b", year: 2007 },
+  { gen: "Gen 3", gts: 8, encoding: "128b/130b", year: 2010 },
+  { gen: "Gen 4", gts: 16, encoding: "128b/130b", year: 2017 },
+  { gen: "Gen 5", gts: 32, encoding: "128b/130b", year: 2019 },
+  { gen: "Gen 6", gts: 64, encoding: "PAM4", year: 2024 },
+];
+
+const LANES = [1, 2, 4, 8, 16];
+
+function calcThroughput(gts: number, encoding: string, lanes: number): number {
+  const overhead = encoding === "8b/10b" ? 0.8 : encoding === "128b/130b" ? 128 / 130 : 1.0;
+  return (gts * overhead * lanes) / 8; // GB/s (gts is in GT/s, each transfer = 1 bit)
+}
+
 export default function PCIe() {
+  const [selectedGen, setSelectedGen] = useState(3); // Gen 4
+  const [selectedLanes, setSelectedLanes] = useState(4);
+
+  const gen = GENS[selectedGen];
+  const throughput = calcThroughput(gen.gts, gen.encoding, selectedLanes);
+
   return (
-    <SectionWrapper className="py-20 px-4 bg-story-surface">
+    <SectionWrapper className="py-24 px-4 bg-story-surface">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           PCIe Transport
@@ -18,49 +41,75 @@ export default function PCIe() {
           typically uses 4 lanes (x4).
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-          {[
-            {
-              gen: "Gen 3",
-              rate: "~1 GB/s/lane",
-              total: "~3.5 GB/s (x4)",
-              year: "2010",
-            },
-            {
-              gen: "Gen 4",
-              rate: "~2 GB/s/lane",
-              total: "~7 GB/s (x4)",
-              year: "2017",
-            },
-            {
-              gen: "Gen 5",
-              rate: "~4 GB/s/lane",
-              total: "~14 GB/s (x4)",
-              year: "2019",
-            },
-            {
-              gen: "Gen 6",
-              rate: "~8 GB/s/lane",
-              total: "~28 GB/s (x4)",
-              year: "2024",
-            },
-          ].map((g) => (
-            <div
-              key={g.gen}
-              className="bg-story-panel rounded-lg border border-story-border p-4"
-            >
-              <div className="flex justify-between items-center mb-2">
-                <span className="text-nvme-blue font-bold">{g.gen}</span>
-                <span className="text-text-muted text-xs font-mono">
-                  {g.year}
-                </span>
+        {/* Interactive bandwidth calculator */}
+        <div className="bg-white rounded-2xl p-8 card-shadow mb-8">
+          <div className="text-text-muted text-xs font-mono mb-6 uppercase tracking-wider">
+            PCIe Bandwidth Calculator
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8">
+            {/* Gen selector */}
+            <div>
+              <div className="text-text-secondary text-sm font-medium mb-3">Generation</div>
+              <div className="flex flex-wrap gap-2">
+                {GENS.map((g, i) => (
+                  <button
+                    key={g.gen}
+                    onClick={() => setSelectedGen(i)}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-all ${
+                      i === selectedGen
+                        ? "bg-nvme-blue text-white shadow-md"
+                        : "bg-story-surface text-text-secondary hover:bg-story-border"
+                    }`}
+                  >
+                    {g.gen}
+                  </button>
+                ))}
               </div>
-              <div className="text-text-primary font-mono text-sm">
-                {g.total}
-              </div>
-              <div className="text-text-muted text-xs">{g.rate}</div>
             </div>
-          ))}
+
+            {/* Lane selector */}
+            <div>
+              <div className="text-text-secondary text-sm font-medium mb-3">Lanes</div>
+              <div className="flex gap-2">
+                {LANES.map((l) => (
+                  <button
+                    key={l}
+                    onClick={() => setSelectedLanes(l)}
+                    className={`px-4 py-1.5 rounded-lg text-xs font-mono transition-all ${
+                      l === selectedLanes
+                        ? "bg-nvme-green text-white shadow-md"
+                        : "bg-story-surface text-text-secondary hover:bg-story-border"
+                    }`}
+                  >
+                    x{l}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Result */}
+          <div className="bg-gradient-to-r from-nvme-blue/5 to-nvme-green/5 rounded-xl p-6 flex items-center justify-between">
+            <div>
+              <div className="text-text-muted text-xs font-mono">
+                {gen.gen} x{selectedLanes} &middot; {gen.gts} GT/s &middot; {gen.encoding}
+              </div>
+              <div className="text-4xl font-bold text-text-primary mt-1">
+                {throughput.toFixed(1)} <span className="text-lg text-text-muted">GB/s</span>
+              </div>
+            </div>
+            <div className="text-right">
+              <div className="text-text-muted text-xs">Per lane</div>
+              <div className="text-text-secondary font-mono">
+                {(throughput / selectedLanes).toFixed(2)} GB/s
+              </div>
+              <div className="text-text-muted text-xs mt-2">Transfer rate</div>
+              <div className="text-text-secondary font-mono">
+                {gen.gts} GT/s
+              </div>
+            </div>
+          </div>
         </div>
 
         <p className="text-text-secondary mb-6 leading-relaxed max-w-3xl">

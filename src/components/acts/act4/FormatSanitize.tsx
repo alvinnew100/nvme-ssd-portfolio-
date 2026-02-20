@@ -6,7 +6,7 @@ import InfoCard from "@/components/story/InfoCard";
 
 export default function FormatSanitize() {
   return (
-    <SectionWrapper className="py-20 px-4">
+    <SectionWrapper className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Format NVM &amp; Sanitize
@@ -22,7 +22,7 @@ export default function FormatSanitize() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-          <div className="bg-story-panel rounded-xl border border-story-border p-5">
+          <div className="bg-white rounded-2xl p-6 card-shadow">
             <div className="text-nvme-blue font-mono font-bold mb-2">
               Format NVM
             </div>
@@ -35,7 +35,7 @@ export default function FormatSanitize() {
             <NvmeCliBlock command="nvme format /dev/nvme0n1 --ses=1" />
           </div>
 
-          <div className="bg-story-panel rounded-xl border border-story-border p-5">
+          <div className="bg-white rounded-2xl p-6 card-shadow">
             <div className="text-nvme-red font-mono font-bold mb-2">
               Sanitize
             </div>

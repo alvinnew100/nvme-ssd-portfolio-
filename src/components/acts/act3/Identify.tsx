@@ -6,7 +6,7 @@ import TerminalBlock from "@/components/story/TerminalBlock";
 
 export default function Identify() {
   return (
-    <SectionWrapper className="py-20 px-4 bg-story-surface">
+    <SectionWrapper className="py-24 px-4 bg-story-surface">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Identify &mdash; The First Command
@@ -48,14 +48,14 @@ export default function Identify() {
         </div>
 
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-          <div className="bg-story-panel rounded-lg border border-story-border p-4">
+          <div className="bg-white rounded-2xl p-5 card-shadow">
             <code className="text-text-code text-xs">CNS=0</code>
             <div className="text-text-primary font-semibold mt-1">Identify Namespace</div>
             <p className="text-text-muted text-xs mt-1">
               Returns namespace size, capacity, LBA format, and protection info.
             </p>
           </div>
-          <div className="bg-story-panel rounded-lg border border-story-border p-4">
+          <div className="bg-white rounded-2xl p-5 card-shadow">
             <code className="text-text-code text-xs">CNS=1</code>
             <div className="text-text-primary font-semibold mt-1">Identify Controller</div>
             <p className="text-text-muted text-xs mt-1">

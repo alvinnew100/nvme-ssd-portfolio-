@@ -5,7 +5,7 @@ import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 
 export default function FirmwareUpdate() {
   return (
-    <SectionWrapper className="py-20 px-4">
+    <SectionWrapper className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Firmware Updates
@@ -19,35 +19,23 @@ export default function FirmwareUpdate() {
           specific slot.
         </p>
 
-        <div className="space-y-3 mb-6">
-          <div className="flex items-center gap-4">
-            <div className="w-8 h-8 rounded-full bg-nvme-green/20 text-nvme-green flex items-center justify-center text-xs font-bold">1</div>
-            <div>
-              <div className="text-text-primary text-sm font-semibold">Check current firmware</div>
-              <NvmeCliBlock command="nvme fw-log /dev/nvme0" />
+        <div className="space-y-4 mb-6">
+          {[
+            { step: 1, title: "Check current firmware", cmd: "nvme fw-log /dev/nvme0" },
+            { step: 2, title: "Download the image", cmd: "nvme fw-download /dev/nvme0 --fw=firmware.bin" },
+            { step: 3, title: "Commit to slot & activate", cmd: "nvme fw-commit /dev/nvme0 --slot=1 --action=1", note: "Action 1 = download to slot, activate on next reset" },
+            { step: 4, title: "Reset controller", cmd: "nvme reset /dev/nvme0" },
+          ].map((item) => (
+            <div key={item.step} className="flex items-start gap-4">
+              <div className="w-8 h-8 rounded-full bg-nvme-blue/10 text-nvme-blue flex items-center justify-center text-xs font-bold flex-shrink-0 mt-1">
+                {item.step}
+              </div>
+              <div className="flex-1">
+                <div className="text-text-primary text-sm font-semibold mb-2">{item.title}</div>
+                <NvmeCliBlock command={item.cmd} note={item.note} />
+              </div>
             </div>
-          </div>
-          <div className="flex items-center gap-4">
-            <div className="w-8 h-8 rounded-full bg-nvme-green/20 text-nvme-green flex items-center justify-center text-xs font-bold">2</div>
-            <div>
-              <div className="text-text-primary text-sm font-semibold">Download the image</div>
-              <NvmeCliBlock command="nvme fw-download /dev/nvme0 --fw=firmware.bin" />
-            </div>
-          </div>
-          <div className="flex items-center gap-4">
-            <div className="w-8 h-8 rounded-full bg-nvme-green/20 text-nvme-green flex items-center justify-center text-xs font-bold">3</div>
-            <div>
-              <div className="text-text-primary text-sm font-semibold">Commit to slot &amp; activate</div>
-              <NvmeCliBlock command="nvme fw-commit /dev/nvme0 --slot=1 --action=1" note="Action 1 = download to slot, activate on next reset" />
-            </div>
-          </div>
-          <div className="flex items-center gap-4">
-            <div className="w-8 h-8 rounded-full bg-nvme-green/20 text-nvme-green flex items-center justify-center text-xs font-bold">4</div>
-            <div>
-              <div className="text-text-primary text-sm font-semibold">Reset controller</div>
-              <NvmeCliBlock command="nvme reset /dev/nvme0" />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </SectionWrapper>

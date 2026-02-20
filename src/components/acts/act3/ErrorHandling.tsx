@@ -18,7 +18,7 @@ const STATUS_CODES = [
 
 export default function ErrorHandling() {
   return (
-    <SectionWrapper className="py-20 px-4 bg-story-surface">
+    <SectionWrapper className="py-24 px-4 bg-story-surface">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Error Handling
@@ -31,24 +31,24 @@ export default function ErrorHandling() {
           If DNR=1, the error is permanent &mdash; retrying won&apos;t help.
         </p>
 
-        <div className="bg-story-panel rounded-xl border border-story-border p-6 mb-6">
+        <div className="bg-white rounded-2xl p-6 card-shadow mb-6">
           <div className="text-text-muted text-xs font-mono mb-3 uppercase tracking-wider">
             CQE Status Field (bits 17:1 of DW3)
           </div>
           <div className="flex items-center gap-2 font-mono text-xs mb-6">
-            <div className="h-8 flex-1 bg-nvme-red/10 border border-nvme-red/30 rounded flex items-center justify-center text-nvme-red">
+            <div className="h-8 flex-1 bg-nvme-red/10 border border-nvme-red/30 rounded-lg flex items-center justify-center text-nvme-red">
               DNR (1 bit)
             </div>
-            <div className="h-8 flex-1 bg-nvme-amber/10 border border-nvme-amber/30 rounded flex items-center justify-center text-nvme-amber">
+            <div className="h-8 flex-1 bg-nvme-amber/10 border border-nvme-amber/30 rounded-lg flex items-center justify-center text-nvme-amber">
               More (1 bit)
             </div>
-            <div className="h-8 flex-[2] bg-nvme-violet/10 border border-nvme-violet/30 rounded flex items-center justify-center text-nvme-violet">
+            <div className="h-8 flex-[2] bg-nvme-violet/10 border border-nvme-violet/30 rounded-lg flex items-center justify-center text-nvme-violet">
               SCT (3 bits)
             </div>
-            <div className="h-8 flex-[4] bg-nvme-blue/10 border border-nvme-blue/30 rounded flex items-center justify-center text-nvme-blue">
+            <div className="h-8 flex-[4] bg-nvme-blue/10 border border-nvme-blue/30 rounded-lg flex items-center justify-center text-nvme-blue">
               SC (8 bits)
             </div>
-            <div className="h-8 flex-1 bg-story-bg border border-story-border rounded flex items-center justify-center text-text-muted">
+            <div className="h-8 flex-1 bg-story-surface border border-story-border rounded-lg flex items-center justify-center text-text-muted">
               P
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function ErrorHandling() {
               </thead>
               <tbody>
                 {STATUS_CODES.map((s) => (
-                  <tr key={s.code} className="border-b border-story-border/30">
+                  <tr key={s.code} className="border-b border-story-border/30 hover:bg-story-surface/50 transition-colors">
                     <td className="p-2 text-text-code font-mono">{s.code}</td>
                     <td className="p-2 text-text-muted">{s.type}</td>
                     <td className="p-2 text-text-secondary">{s.meaning}</td>

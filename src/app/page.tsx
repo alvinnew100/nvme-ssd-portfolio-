@@ -11,7 +11,7 @@ import NandHierarchy from "@/components/acts/act1/NandHierarchy";
 import SsdOverview from "@/components/acts/act1/SsdOverview";
 
 // Act 2 — The Interface
-import WhyNVMe from "@/components/acts/act2/WhyNVMe";
+// WhyNVMe removed per user request
 import PCIe from "@/components/acts/act2/PCIe";
 import BAR0 from "@/components/acts/act2/BAR0";
 import Queues from "@/components/acts/act2/Queues";
@@ -72,7 +72,6 @@ export default function HomePage() {
 
       {/* ===================== ACT 2: THE INTERFACE ===================== */}
       <ActDivider act={2} title="The Interface" id="act-2" />
-      <WhyNVMe />
       <PCIe />
       <BAR0 />
       <Queues />

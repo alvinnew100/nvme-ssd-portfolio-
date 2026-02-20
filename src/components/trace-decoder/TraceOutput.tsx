@@ -8,7 +8,7 @@ interface TraceOutputProps {
 export default function TraceOutput({ results, error }: TraceOutputProps) {
   if (error) {
     return (
-      <div className="bg-nvme-red/10 border border-nvme-red/40 rounded-lg p-4 text-nvme-red text-sm">
+      <div className="bg-nvme-red/10 border border-nvme-red/30 rounded-xl p-4 text-nvme-red text-sm">
         {error}
       </div>
     );
@@ -31,11 +31,11 @@ export default function TraceOutput({ results, error }: TraceOutputProps) {
       {results.map((decoded, i) => (
         <div
           key={i}
-          className="bg-story-panel rounded-lg border border-story-border overflow-hidden"
+          className="bg-white rounded-2xl card-shadow overflow-hidden"
         >
           {/* Raw line */}
-          <div className="px-4 py-2 bg-story-bg border-b border-story-border overflow-x-auto">
-            <code className="text-xs text-text-muted whitespace-nowrap">
+          <div className="px-4 py-2 bg-story-surface border-b border-story-border overflow-x-auto">
+            <code className="text-xs text-text-muted whitespace-nowrap font-mono">
               {decoded.raw}
             </code>
           </div>
@@ -43,14 +43,14 @@ export default function TraceOutput({ results, error }: TraceOutputProps) {
           {/* Decoded header */}
           <div className="px-4 py-3">
             <div className="flex items-center gap-3 mb-2">
-              <span className="font-mono text-sm text-nvme-green">
+              <span className="font-mono text-sm text-nvme-blue font-bold">
                 0x{decoded.opcode.toString(16).padStart(2, "0")}
               </span>
               <span
                 className={`text-xs px-2 py-0.5 rounded-full ${
                   decoded.type === "admin"
-                    ? "bg-nvme-violet/20 text-nvme-violet"
-                    : "bg-nvme-blue/20 text-nvme-blue"
+                    ? "bg-nvme-violet/10 text-nvme-violet"
+                    : "bg-nvme-blue/10 text-nvme-blue"
                 }`}
               >
                 {decoded.type === "admin" ? "Admin" : "I/O"}
@@ -58,7 +58,7 @@ export default function TraceOutput({ results, error }: TraceOutputProps) {
               <span className="text-text-primary font-semibold">
                 {decoded.commandName}
               </span>
-              <span className="text-xs text-text-muted">
+              <span className="text-xs text-text-muted font-mono">
                 qid={decoded.qid} nsid={decoded.nsid}
               </span>
             </div>
@@ -69,7 +69,7 @@ export default function TraceOutput({ results, error }: TraceOutputProps) {
                 {decoded.fields.map((f) => (
                   <div
                     key={f.name}
-                    className="bg-story-bg rounded px-3 py-2"
+                    className="bg-story-surface rounded-lg px-3 py-2"
                   >
                     <div className="text-xs text-text-muted">{f.name}</div>
                     <div className="text-sm text-text-primary font-mono">

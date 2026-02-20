@@ -33,7 +33,7 @@ const VENDOR_EXAMPLES = [
 
 export default function Passthru() {
   return (
-    <SectionWrapper className="py-20 px-4 bg-story-surface">
+    <SectionWrapper className="py-24 px-4 bg-story-surface">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Vendor Passthrough Commands
@@ -56,10 +56,10 @@ export default function Passthru() {
           {VENDOR_EXAMPLES.map((ex) => (
             <div
               key={ex.vendor}
-              className="bg-story-panel rounded-xl border border-story-border p-5"
+              className="bg-white rounded-2xl p-6 card-shadow"
             >
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-nvme-green font-mono font-bold text-sm">
+                <span className="text-nvme-blue font-mono font-bold text-sm">
                   {ex.vendor}
                 </span>
               </div>

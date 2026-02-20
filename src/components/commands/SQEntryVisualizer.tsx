@@ -82,10 +82,10 @@ export default function SQEntryVisualizer({ command }: SQEntryVisualizerProps) {
                       y={y}
                       width={cellW}
                       height={cellH}
-                      fill={hasField ? color + "30" : "#111927"}
-                      stroke={hasField ? color : "#1e2d42"}
+                      fill={hasField ? color + "15" : "#f6f9fc"}
+                      stroke={hasField ? color : "#e6ebf1"}
                       strokeWidth={hasField ? 1.5 : 0.5}
-                      rx={2}
+                      rx={3}
                     />
                     <text
                       x={x + cellW / 2}
@@ -116,10 +116,10 @@ export default function SQEntryVisualizer({ command }: SQEntryVisualizerProps) {
                     y={ly - 8}
                     width={10}
                     height={10}
-                    fill={color + "60"}
+                    fill={color + "40"}
                     stroke={color}
                     strokeWidth={1}
-                    rx={1}
+                    rx={2}
                   />
                   <text x={lx + 14} y={ly} className="fill-text-muted text-[8px]">
                     CDW{f.dword}[{f.bitEnd}:{f.bitStart}] — {f.name}: {f.description}

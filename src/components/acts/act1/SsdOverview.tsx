@@ -4,7 +4,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 
 export default function SsdOverview() {
   return (
-    <SectionWrapper className="py-20 px-4 bg-story-surface">
+    <SectionWrapper className="py-24 px-4 bg-story-surface">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Inside the SSD
@@ -18,7 +18,7 @@ export default function SsdOverview() {
         </p>
 
         {/* SSD block diagram */}
-        <div className="bg-story-panel rounded-xl border border-story-border p-6">
+        <div className="bg-white rounded-2xl p-6 card-shadow">
           <svg
             viewBox="0 0 700 280"
             className="w-full max-w-2xl mx-auto"
@@ -33,7 +33,7 @@ export default function SsdOverview() {
               rx="8"
               className="stroke-nvme-green"
               strokeWidth="2"
-              fill="#6db33f10"
+              fill="#00d4aa10"
             />
             <text
               x="60"
@@ -72,7 +72,7 @@ export default function SsdOverview() {
               rx="12"
               className="stroke-nvme-blue"
               strokeWidth="2"
-              fill="#38bdf808"
+              fill="#635bff08"
             />
             <text
               x="270"
@@ -90,8 +90,8 @@ export default function SsdOverview() {
               width="90"
               height="40"
               rx="6"
-              fill="#111927"
-              className="stroke-story-border"
+              fill="#f6f9fc"
+              stroke="#e6ebf1"
               strokeWidth="1"
             />
             <text
@@ -109,8 +109,8 @@ export default function SsdOverview() {
               width="90"
               height="40"
               rx="6"
-              fill="#111927"
-              className="stroke-story-border"
+              fill="#f6f9fc"
+              stroke="#e6ebf1"
               strokeWidth="1"
             />
             <text
@@ -128,8 +128,8 @@ export default function SsdOverview() {
               width="90"
               height="40"
               rx="6"
-              fill="#111927"
-              className="stroke-story-border"
+              fill="#f6f9fc"
+              stroke="#e6ebf1"
               strokeWidth="1"
             />
             <text
@@ -147,8 +147,8 @@ export default function SsdOverview() {
               width="90"
               height="40"
               rx="6"
-              fill="#111927"
-              className="stroke-story-border"
+              fill="#f6f9fc"
+              stroke="#e6ebf1"
               strokeWidth="1"
             />
             <text
@@ -166,8 +166,8 @@ export default function SsdOverview() {
               width="200"
               height="40"
               rx="6"
-              fill="#111927"
-              className="stroke-story-border"
+              fill="#f6f9fc"
+              stroke="#e6ebf1"
               strokeWidth="1"
             />
             <text
@@ -188,7 +188,7 @@ export default function SsdOverview() {
               rx="8"
               className="stroke-nvme-violet"
               strokeWidth="2"
-              fill="#a78bfa10"
+              fill="#7c5cfc10"
             />
             <text
               x="470"
@@ -228,7 +228,7 @@ export default function SsdOverview() {
                   rx="6"
                   className="stroke-nvme-amber"
                   strokeWidth="1.5"
-                  fill="#f59e0b08"
+                  fill="#f5a62308"
                 />
                 <text
                   x={457 + i * 65}
@@ -277,21 +277,21 @@ export default function SsdOverview() {
         </div>
 
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
-          <div className="bg-story-panel rounded-lg border border-story-border p-4">
+          <div className="bg-white rounded-2xl p-5 card-shadow">
             <div className="text-nvme-blue font-semibold mb-1">Controller</div>
             <p className="text-text-muted text-xs">
               Processes NVMe commands, manages FTL mapping, handles ECC, and
               coordinates NAND operations.
             </p>
           </div>
-          <div className="bg-story-panel rounded-lg border border-story-border p-4">
+          <div className="bg-white rounded-2xl p-5 card-shadow">
             <div className="text-nvme-violet font-semibold mb-1">DRAM</div>
             <p className="text-text-muted text-xs">
               Caches the FTL table (logical-to-physical mapping) for fast
               lookups. Some SSDs are DRAM-less and use HMB.
             </p>
           </div>
-          <div className="bg-story-panel rounded-lg border border-story-border p-4">
+          <div className="bg-white rounded-2xl p-5 card-shadow">
             <div className="text-nvme-amber font-semibold mb-1">NAND Packages</div>
             <p className="text-text-muted text-xs">
               Multiple CE (chip enable) channels allow parallel access.

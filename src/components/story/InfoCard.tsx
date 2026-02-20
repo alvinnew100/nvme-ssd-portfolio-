@@ -6,28 +6,28 @@ interface InfoCardProps {
 
 const variants = {
   info: {
-    border: "border-nvme-blue/40",
+    border: "border-l-nvme-blue",
     bg: "bg-nvme-blue/5",
     icon: "i",
-    iconBg: "bg-nvme-blue/20 text-nvme-blue",
+    iconBg: "bg-nvme-blue/10 text-nvme-blue",
   },
   warning: {
-    border: "border-nvme-amber/40",
+    border: "border-l-nvme-amber",
     bg: "bg-nvme-amber/5",
     icon: "!",
-    iconBg: "bg-nvme-amber/20 text-nvme-amber",
+    iconBg: "bg-nvme-amber/10 text-nvme-amber",
   },
   tip: {
-    border: "border-nvme-green/40",
+    border: "border-l-nvme-green",
     bg: "bg-nvme-green/5",
     icon: "*",
-    iconBg: "bg-nvme-green/20 text-nvme-green",
+    iconBg: "bg-nvme-green/10 text-nvme-green",
   },
   note: {
-    border: "border-nvme-violet/40",
+    border: "border-l-nvme-violet",
     bg: "bg-nvme-violet/5",
     icon: "#",
-    iconBg: "bg-nvme-violet/20 text-nvme-violet",
+    iconBg: "bg-nvme-violet/10 text-nvme-violet",
   },
 };
 
@@ -38,7 +38,7 @@ export default function InfoCard({
 }: InfoCardProps) {
   const v = variants[variant];
   return (
-    <div className={`rounded-xl border ${v.border} ${v.bg} p-5`}>
+    <div className={`rounded-xl border-l-4 ${v.border} ${v.bg} p-5`}>
       <div className="flex gap-3">
         <div
           className={`flex-shrink-0 w-7 h-7 rounded-full ${v.iconBg} flex items-center justify-center text-xs font-bold`}

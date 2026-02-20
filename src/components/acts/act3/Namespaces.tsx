@@ -6,7 +6,7 @@ import InfoCard from "@/components/story/InfoCard";
 
 export default function Namespaces() {
   return (
-    <SectionWrapper className="py-20 px-4">
+    <SectionWrapper className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Namespaces
@@ -19,16 +19,16 @@ export default function Namespaces() {
           each with its own LBA range, format, and access controls.
         </p>
 
-        <div className="bg-story-panel rounded-xl border border-story-border p-6 mb-6">
+        <div className="bg-white rounded-2xl p-6 card-shadow mb-6">
           <svg viewBox="0 0 600 120" className="w-full max-w-xl mx-auto" fill="none">
-            <rect x="10" y="10" width="130" height="100" rx="8" className="stroke-nvme-blue" strokeWidth="2" fill="#38bdf808" />
+            <rect x="10" y="10" width="130" height="100" rx="8" className="stroke-nvme-blue" strokeWidth="2" fill="#635bff08" />
             <text x="75" y="50" textAnchor="middle" className="fill-nvme-blue text-[11px] font-bold">NVMe Controller</text>
             <text x="75" y="70" textAnchor="middle" className="fill-text-muted text-[9px]">/dev/nvme0</text>
 
             {[1, 2, 3].map((ns, i) => (
               <g key={ns}>
                 <line x1="140" y1="60" x2={200 + i * 150} y2="60" className="stroke-text-muted" strokeWidth="1" strokeDasharray="4,4" />
-                <rect x={200 + i * 150 - 55} y="20" width="110" height="80" rx="6" className="stroke-nvme-green" strokeWidth="1.5" fill="#6db33f08" />
+                <rect x={200 + i * 150 - 55} y="20" width="110" height="80" rx="6" className="stroke-nvme-green" strokeWidth="1.5" fill="#00d4aa08" />
                 <text x={200 + i * 150} y="50" textAnchor="middle" className="fill-nvme-green text-[10px] font-bold">
                   Namespace {ns}
                 </text>
@@ -46,7 +46,7 @@ export default function Namespaces() {
         <NvmeCliBlock command="nvme list" note="Lists all NVMe devices and their namespaces" />
 
         <div className="mt-4">
-          <NvmeCliBlock command="nvme id-ns /dev/nvme0n1" note="Identify a specific namespace — shows size, format, features" />
+          <NvmeCliBlock command="nvme id-ns /dev/nvme0n1" note="Identify a specific namespace -- shows size, format, features" />
         </div>
 
         <div className="mt-6">

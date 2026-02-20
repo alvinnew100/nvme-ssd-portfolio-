@@ -2,9 +2,16 @@
 
 import SectionWrapper from "@/components/story/SectionWrapper";
 
+const CELL_ENDURANCE = [
+  { type: "SLC", pe: "~100,000", tbw: "High", color: "#00d4aa" },
+  { type: "MLC", pe: "~10,000", tbw: "Medium", color: "#635bff" },
+  { type: "TLC", pe: "~3,000", tbw: "Standard", color: "#7c5cfc" },
+  { type: "QLC", pe: "~1,000", tbw: "Low", color: "#f5a623" },
+];
+
 export default function WearLeveling() {
   return (
-    <SectionWrapper className="py-20 px-4 bg-story-surface">
+    <SectionWrapper className="py-24 px-4 bg-story-surface">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Wear Leveling &amp; Endurance
@@ -18,14 +25,9 @@ export default function WearLeveling() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          {[
-            { type: "SLC", pe: "~100,000", tbw: "High", color: "nvme-green" },
-            { type: "MLC", pe: "~10,000", tbw: "Medium", color: "nvme-blue" },
-            { type: "TLC", pe: "~3,000", tbw: "Standard", color: "nvme-violet" },
-            { type: "QLC", pe: "~1,000", tbw: "Low", color: "nvme-amber" },
-          ].map((c) => (
-            <div key={c.type} className="bg-story-panel rounded-xl border border-story-border p-4 text-center">
-              <div className={`text-${c.color} font-mono font-bold text-lg mb-1`}>
+          {CELL_ENDURANCE.map((c) => (
+            <div key={c.type} className="bg-white rounded-2xl p-5 card-shadow text-center">
+              <div className="font-mono font-bold text-lg mb-1" style={{ color: c.color }}>
                 {c.type}
               </div>
               <div className="text-text-primary font-mono text-sm">{c.pe}</div>
@@ -40,15 +42,15 @@ export default function WearLeveling() {
           might be rated for 600 TBW. You can check current usage via SMART:
         </p>
 
-        <div className="bg-story-panel rounded-xl border border-story-border p-5">
+        <div className="bg-white rounded-2xl p-6 card-shadow">
           <div className="text-text-muted text-xs font-mono mb-3">Endurance check</div>
           <div className="space-y-2 text-xs font-mono">
             <div className="flex justify-between">
               <span className="text-text-secondary">Percentage Used</span>
               <span className="text-nvme-green">3%</span>
             </div>
-            <div className="w-full bg-story-bg rounded-full h-2">
-              <div className="bg-nvme-green h-2 rounded-full" style={{ width: "3%" }} />
+            <div className="w-full bg-story-surface rounded-full h-2.5">
+              <div className="bg-nvme-green h-2.5 rounded-full" style={{ width: "3%" }} />
             </div>
             <div className="flex justify-between text-text-muted">
               <span>0 TBW</span>
@@ -57,7 +59,7 @@ export default function WearLeveling() {
           </div>
         </div>
 
-        <div className="mt-6 bg-story-panel rounded-xl border border-story-border p-5">
+        <div className="mt-6 bg-white rounded-2xl p-6 card-shadow">
           <div className="text-text-primary font-semibold text-sm mb-2">
             Two types of wear leveling
           </div>

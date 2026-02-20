@@ -43,25 +43,25 @@ export default function StoryNav() {
     <>
       {/* Desktop: Left rail */}
       <nav className="fixed left-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col items-center gap-1">
-        <div className="relative flex flex-col items-center">
+        <div className="relative flex flex-col items-center bg-white/80 backdrop-blur-sm rounded-full py-3 px-1.5 shadow-lg shadow-black/5">
           {ACTS.map((act, i) => (
             <div key={act.id} className="flex flex-col items-center">
               <button
                 onClick={() => scrollTo(act.id)}
-                className="group relative flex items-center"
+                className="group relative flex items-center p-1"
                 aria-label={`Scroll to Act ${act.num}: ${act.label}`}
               >
                 <div
-                  className={`w-3 h-3 rounded-full border-2 transition-all duration-300 ${
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                     i <= activeAct
-                      ? "bg-nvme-green border-nvme-green"
-                      : "bg-transparent border-story-border"
+                      ? "bg-nvme-blue scale-110"
+                      : "bg-story-border"
                   }`}
                 />
                 <span
-                  className={`absolute left-6 whitespace-nowrap text-xs font-mono transition-all duration-200 ${
+                  className={`absolute left-8 whitespace-nowrap text-xs font-medium transition-all duration-200 ${
                     i === activeAct
-                      ? "opacity-100 text-nvme-green"
+                      ? "opacity-100 text-nvme-blue"
                       : "opacity-0 group-hover:opacity-100 text-text-muted"
                   }`}
                 >
@@ -70,8 +70,8 @@ export default function StoryNav() {
               </button>
               {i < ACTS.length - 1 && (
                 <div
-                  className={`w-0.5 h-8 transition-colors duration-300 ${
-                    i < activeAct ? "bg-nvme-green" : "bg-story-border"
+                  className={`w-0.5 h-6 transition-colors duration-300 ${
+                    i < activeAct ? "bg-nvme-blue" : "bg-story-border"
                   }`}
                 />
               )}
@@ -82,15 +82,15 @@ export default function StoryNav() {
 
       {/* Mobile: Bottom progress bar + contents button */}
       <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden">
-        <div className="h-1 bg-story-panel">
+        <div className="h-0.5 bg-story-border">
           <div
-            className="h-full bg-nvme-green transition-all duration-300"
+            className="h-full bg-nvme-blue transition-all duration-300"
             style={{ width: `${((activeAct + 1) / ACTS.length) * 100}%` }}
           />
         </div>
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="absolute bottom-4 right-4 bg-story-panel border border-story-border rounded-full px-4 py-2 text-xs text-text-secondary font-mono"
+          className="absolute bottom-4 right-4 bg-white border border-story-border rounded-full px-4 py-2 text-xs text-text-secondary font-mono shadow-lg shadow-black/5"
         >
           Act {activeAct + 1} / {ACTS.length}
         </button>
@@ -100,18 +100,18 @@ export default function StoryNav() {
       {mobileOpen && (
         <div className="fixed inset-0 z-[60] lg:hidden">
           <div
-            className="absolute inset-0 bg-story-bg/80 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/20 backdrop-blur-sm"
             onClick={() => setMobileOpen(false)}
           />
-          <div className="absolute bottom-16 right-4 bg-story-panel border border-story-border rounded-xl p-4 space-y-2">
+          <div className="absolute bottom-16 right-4 bg-white border border-story-border rounded-2xl p-3 space-y-1 shadow-xl">
             {ACTS.map((act, i) => (
               <button
                 key={act.id}
                 onClick={() => scrollTo(act.id)}
-                className={`block w-full text-left px-3 py-2 rounded-lg text-sm font-mono transition-colors ${
+                className={`block w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${
                   i === activeAct
-                    ? "bg-nvme-green/10 text-nvme-green"
-                    : "text-text-secondary hover:bg-story-border/50"
+                    ? "bg-nvme-blue/5 text-nvme-blue"
+                    : "text-text-secondary hover:bg-story-surface"
                 }`}
               >
                 {act.num}. {act.label}

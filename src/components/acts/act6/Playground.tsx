@@ -98,7 +98,7 @@ export default function Playground() {
     : null;
 
   return (
-    <div className="py-20 px-4">
+    <div className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-2">
           Command Builder
@@ -114,7 +114,11 @@ export default function Playground() {
             <button
               key={p.label}
               onClick={() => loadPreset(p.commandId, p.nsid, p.fields)}
-              className="px-4 py-2 bg-story-panel border border-story-border rounded-lg text-xs font-mono text-text-secondary hover:text-nvme-green hover:border-nvme-green/40 transition-colors"
+              className={`px-4 py-2 rounded-xl text-xs font-mono transition-all ${
+                selectedId === p.commandId
+                  ? "bg-nvme-blue text-white shadow-md"
+                  : "bg-white border border-story-border text-text-secondary hover:text-nvme-blue hover:border-nvme-blue/40 card-shadow"
+              }`}
             >
               {p.label}
             </button>
@@ -126,7 +130,7 @@ export default function Playground() {
           <select
             value={selectedId}
             onChange={(e) => selectCommand(e.target.value)}
-            className="flex-1 min-w-[200px] bg-story-bg border border-story-border rounded-lg px-4 py-2 text-text-primary text-sm font-mono"
+            className="flex-1 min-w-[200px] bg-white border border-story-border rounded-xl px-4 py-2.5 text-text-primary text-sm font-mono card-shadow focus:outline-none focus:border-nvme-blue"
           >
             <optgroup label="Admin Commands">
               {commands
@@ -156,7 +160,7 @@ export default function Playground() {
               max={0xffffffff}
               value={nsid}
               onChange={(e) => setNsid(parseInt(e.target.value) || 0)}
-              className="w-20 bg-story-bg border border-story-border rounded-lg px-3 py-2 text-text-primary text-sm font-mono"
+              className="w-20 bg-white border border-story-border rounded-xl px-3 py-2.5 text-text-primary text-sm font-mono card-shadow focus:outline-none focus:border-nvme-blue"
             />
           </div>
         </div>
@@ -170,7 +174,7 @@ export default function Playground() {
 
             {/* Field editor */}
             {selectedCommand.fields.length > 0 && (
-              <div className="bg-story-panel rounded-xl border border-story-border p-5">
+              <div className="bg-white rounded-2xl p-6 card-shadow">
                 <div className="text-text-muted text-xs font-mono mb-3 uppercase tracking-wider">
                   Fields
                 </div>
@@ -180,7 +184,7 @@ export default function Playground() {
                       key={field.name}
                       className="flex items-center gap-3 text-xs"
                     >
-                      <label className="text-nvme-green font-mono w-20 flex-shrink-0">
+                      <label className="text-nvme-blue font-mono w-20 flex-shrink-0">
                         {field.name}
                       </label>
                       <input
@@ -194,7 +198,7 @@ export default function Playground() {
                             parseInt(e.target.value) || 0
                           )
                         }
-                        className="w-24 bg-story-bg border border-story-border rounded px-2 py-1 text-text-primary font-mono"
+                        className="w-24 bg-story-surface border border-story-border rounded-lg px-2 py-1.5 text-text-primary font-mono focus:outline-none focus:border-nvme-blue"
                       />
                       <span className="text-text-muted">
                         CDW{field.dword} [{field.bitEnd}:{field.bitStart}]
@@ -215,7 +219,7 @@ export default function Playground() {
                   Terminal Command
                 </div>
                 {cliResult.isKernelOnly ? (
-                  <div className="text-text-muted text-xs italic bg-story-panel rounded-xl border border-story-border p-4 font-mono">
+                  <div className="text-text-muted text-xs italic bg-white rounded-2xl card-shadow p-4 font-mono">
                     {cliResult.note}
                   </div>
                 ) : cliResult.command ? (
@@ -226,12 +230,12 @@ export default function Playground() {
 
             {/* Dword table and SQ visualizer */}
             {selectedCommand.fields.length > 0 && (
-              <div className="bg-story-panel rounded-xl border border-story-border p-5">
+              <div className="bg-white rounded-2xl p-6 card-shadow">
                 <DwordFieldTable fields={selectedCommand.fields} />
               </div>
             )}
 
-            <div className="bg-story-panel rounded-xl border border-story-border p-5">
+            <div className="bg-white rounded-2xl p-6 card-shadow">
               <SQEntryVisualizer command={selectedCommand} />
             </div>
 
@@ -241,7 +245,7 @@ export default function Playground() {
                 <div className="text-text-muted text-xs font-mono mb-2 uppercase tracking-wider">
                   64-Byte SQ Entry (Hex Dump)
                 </div>
-                <pre className="text-text-code text-[11px] bg-story-panel rounded-xl border border-story-border p-5 overflow-x-auto">
+                <pre className="text-text-code text-[11px] bg-white rounded-2xl card-shadow p-6 overflow-x-auto font-mono">
                   {hexDump}
                 </pre>
               </div>
@@ -253,7 +257,7 @@ export default function Playground() {
                 <div className="text-text-muted text-xs font-mono mb-2 uppercase tracking-wider">
                   Synthetic ftrace Line
                 </div>
-                <pre className="text-nvme-green text-[10px] bg-story-panel rounded-xl border border-story-border p-5 overflow-x-auto">
+                <pre className="text-nvme-green text-[10px] bg-story-dark rounded-2xl p-6 overflow-x-auto font-mono">
                   {ftraceLine}
                 </pre>
               </div>
@@ -265,7 +269,7 @@ export default function Playground() {
                 <div className="text-text-muted text-xs font-mono mb-2 uppercase tracking-wider">
                   Round-Trip Decode (ftrace &rarr; decode)
                 </div>
-                <div className="bg-story-panel rounded-xl border border-story-border p-5 space-y-2 text-xs">
+                <div className="bg-white rounded-2xl card-shadow p-6 space-y-2 text-xs">
                   <div className="flex gap-2">
                     <span className="text-text-muted">Command:</span>
                     <span className="text-text-primary font-semibold">
@@ -274,7 +278,7 @@ export default function Playground() {
                   </div>
                   {roundTripDecode.fields.map((f) => (
                     <div key={f.name} className="flex gap-2">
-                      <span className="text-nvme-green font-mono w-20">
+                      <span className="text-nvme-blue font-mono w-20">
                         {f.name}
                       </span>
                       <span className="text-text-code font-mono">{f.hex}</span>

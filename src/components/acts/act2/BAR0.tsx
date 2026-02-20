@@ -3,13 +3,13 @@
 import SectionWrapper from "@/components/story/SectionWrapper";
 
 const REGISTERS = [
-  { offset: "0x00", name: "CAP", size: "8B", desc: "Controller Capabilities — max queue size, doorbell stride, timeout" },
-  { offset: "0x08", name: "VS", size: "4B", desc: "Version — NVMe spec version (e.g., 1.4, 2.0)" },
+  { offset: "0x00", name: "CAP", size: "8B", desc: "Controller Capabilities -- max queue size, doorbell stride, timeout" },
+  { offset: "0x08", name: "VS", size: "4B", desc: "Version -- NVMe spec version (e.g., 1.4, 2.0)" },
   { offset: "0x0C", name: "INTMS", size: "4B", desc: "Interrupt Mask Set" },
   { offset: "0x10", name: "INTMC", size: "4B", desc: "Interrupt Mask Clear" },
-  { offset: "0x14", name: "CC", size: "4B", desc: "Controller Configuration — enable, I/O command set, page size" },
-  { offset: "0x1C", name: "CSTS", size: "4B", desc: "Controller Status — ready, fatal, shutdown status" },
-  { offset: "0x24", name: "AQA", size: "4B", desc: "Admin Queue Attributes — admin SQ/CQ sizes" },
+  { offset: "0x14", name: "CC", size: "4B", desc: "Controller Configuration -- enable, I/O command set, page size" },
+  { offset: "0x1C", name: "CSTS", size: "4B", desc: "Controller Status -- ready, fatal, shutdown status" },
+  { offset: "0x24", name: "AQA", size: "4B", desc: "Admin Queue Attributes -- admin SQ/CQ sizes" },
   { offset: "0x28", name: "ASQ", size: "8B", desc: "Admin Submission Queue Base Address" },
   { offset: "0x30", name: "ACQ", size: "8B", desc: "Admin Completion Queue Base Address" },
   { offset: "0x1000+", name: "Doorbells", size: "4B each", desc: "Submission and Completion Queue doorbells start here" },
@@ -17,7 +17,7 @@ const REGISTERS = [
 
 export default function BAR0() {
   return (
-    <SectionWrapper className="py-20 px-4">
+    <SectionWrapper className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           BAR0 Registers
@@ -30,8 +30,8 @@ export default function BAR0() {
           &mdash; just regular memory reads and writes.
         </p>
 
-        <div className="bg-story-panel rounded-xl border border-story-border overflow-hidden">
-          <div className="px-4 py-3 border-b border-story-border bg-story-surface">
+        <div className="bg-white rounded-2xl card-shadow overflow-hidden">
+          <div className="px-5 py-3 border-b border-story-border bg-story-surface">
             <span className="text-text-muted text-xs font-mono">
               NVMe Controller Register Map (BAR0)
             </span>
@@ -58,7 +58,7 @@ export default function BAR0() {
                 {REGISTERS.map((reg) => (
                   <tr
                     key={reg.offset}
-                    className="border-b border-story-border/30 hover:bg-story-surface/50"
+                    className="border-b border-story-border/50 hover:bg-story-surface/50 transition-colors"
                   >
                     <td className="p-3 text-text-code font-mono text-xs">
                       {reg.offset}

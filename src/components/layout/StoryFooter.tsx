@@ -1,6 +1,6 @@
 export default function StoryFooter() {
   return (
-    <footer className="border-t border-story-border py-12 px-4">
+    <footer className="border-t border-story-border py-16 px-4 bg-story-surface">
       <div className="max-w-4xl mx-auto text-center">
         <p className="text-text-muted text-sm">
           NVMe Explorer &mdash; An interactive guide to NVMe storage technology
@@ -11,7 +11,7 @@ export default function StoryFooter() {
             href="https://nvmexpress.org/specifications/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-nvme-green hover:underline"
+            className="text-nvme-blue hover:underline"
           >
             NVM Express Base Specification
           </a>

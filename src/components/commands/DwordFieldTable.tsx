@@ -19,16 +19,16 @@ export default function DwordFieldTable({ fields }: DwordFieldTableProps) {
       <table className="w-full text-sm">
         <thead>
           <tr className="border-b border-story-border">
-            <th className="text-left py-2 px-3 text-text-muted font-medium">
+            <th className="text-left py-2 px-3 text-text-muted font-medium text-xs">
               Field
             </th>
-            <th className="text-left py-2 px-3 text-text-muted font-medium">
+            <th className="text-left py-2 px-3 text-text-muted font-medium text-xs">
               Dword
             </th>
-            <th className="text-left py-2 px-3 text-text-muted font-medium">
+            <th className="text-left py-2 px-3 text-text-muted font-medium text-xs">
               Bits
             </th>
-            <th className="text-left py-2 px-3 text-text-muted font-medium">
+            <th className="text-left py-2 px-3 text-text-muted font-medium text-xs">
               Description
             </th>
           </tr>
@@ -39,7 +39,7 @@ export default function DwordFieldTable({ fields }: DwordFieldTableProps) {
             return (
               <tr
                 key={`${field.dword}-${field.name}`}
-                className="border-b border-story-border/50 hover:bg-story-surface/50"
+                className="border-b border-story-border/50 hover:bg-story-surface/50 transition-colors"
               >
                 <td className="py-2 px-3">
                   <span
@@ -49,13 +49,13 @@ export default function DwordFieldTable({ fields }: DwordFieldTableProps) {
                     {field.name}
                   </span>
                 </td>
-                <td className="py-2 px-3 text-text-secondary font-mono">
+                <td className="py-2 px-3 text-text-secondary font-mono text-xs">
                   CDW{field.dword}
                 </td>
-                <td className="py-2 px-3 text-text-secondary font-mono">
+                <td className="py-2 px-3 text-text-secondary font-mono text-xs">
                   [{field.bitEnd}:{field.bitStart}]
                 </td>
-                <td className="py-2 px-3 text-text-secondary">
+                <td className="py-2 px-3 text-text-secondary text-xs">
                   {field.description}
                   {field.values && (
                     <div className="mt-1 space-y-0.5">

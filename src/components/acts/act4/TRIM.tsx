@@ -6,7 +6,7 @@ import InfoCard from "@/components/story/InfoCard";
 
 export default function TRIM() {
   return (
-    <SectionWrapper className="py-20 px-4 bg-story-surface">
+    <SectionWrapper className="py-24 px-4 bg-story-surface">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           TRIM, Garbage Collection &amp; the FTL
@@ -21,7 +21,7 @@ export default function TRIM() {
         </p>
 
         {/* FTL diagram */}
-        <div className="bg-story-panel rounded-xl border border-story-border p-6 mb-6">
+        <div className="bg-white rounded-2xl p-6 card-shadow mb-6">
           <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
             Flash Translation Layer
           </div>
@@ -30,7 +30,7 @@ export default function TRIM() {
             <text x="80" y="20" textAnchor="middle" className="fill-text-muted text-[10px]">Logical (Host sees)</text>
             {[0, 1, 2, 3, 4].map((i) => (
               <g key={`lba-${i}`}>
-                <rect x={20 + i * 60} y="30" width="50" height="30" rx="4" className="stroke-nvme-green" strokeWidth="1.5" fill="#6db33f10" />
+                <rect x={20 + i * 60} y="30" width="50" height="30" rx="4" className="stroke-nvme-green" strokeWidth="1.5" fill="#00d4aa10" />
                 <text x={45 + i * 60} y="50" textAnchor="middle" className="fill-nvme-green text-[9px] font-bold">LBA {i}</text>
               </g>
             ))}
@@ -45,7 +45,7 @@ export default function TRIM() {
             <text x="80" y="125" textAnchor="middle" className="fill-text-muted text-[10px]">Physical (NAND)</text>
             {[0, 1, 2, 3, 4].map((i) => (
               <g key={`pba-${i}`}>
-                <rect x={20 + i * 60} y="135" width="50" height="30" rx="4" className="stroke-nvme-amber" strokeWidth="1.5" fill={i === 1 || i === 3 ? "#f59e0b15" : "#f8717108"} />
+                <rect x={20 + i * 60} y="135" width="50" height="30" rx="4" className={i === 1 || i === 3 ? "stroke-nvme-amber" : "stroke-nvme-red"} strokeWidth="1.5" fill={i === 1 || i === 3 ? "#f5a62315" : "#ed5f7410"} />
                 <text x={45 + i * 60} y="155" textAnchor="middle" className={`text-[9px] font-bold ${i === 1 || i === 3 ? "fill-nvme-amber" : "fill-nvme-red"}`}>
                   {i === 1 || i === 3 ? `Page ${i}` : "Stale"}
                 </text>

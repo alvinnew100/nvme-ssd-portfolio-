@@ -6,7 +6,7 @@ import InfoCard from "@/components/story/InfoCard";
 
 export default function IOCommands() {
   return (
-    <SectionWrapper className="py-20 px-4">
+    <SectionWrapper className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           I/O Commands &mdash; Read, Write, Flush
@@ -16,8 +16,8 @@ export default function IOCommands() {
           namespaces and are the workhorses of NVMe. The three most common:
         </p>
 
-        <div className="space-y-6 mb-8">
-          <div className="bg-story-panel rounded-xl border border-story-border p-5">
+        <div className="space-y-4 mb-8">
+          <div className="bg-white rounded-2xl p-6 card-shadow">
             <div className="flex items-center gap-3 mb-2">
               <span className="text-nvme-green font-mono font-bold">Read</span>
               <code className="text-text-code text-xs">opcode=0x02</code>
@@ -29,7 +29,7 @@ export default function IOCommands() {
             <NvmeCliBlock command="nvme read /dev/nvme0n1 --start-block=0 --block-count=7 --data-size=4096" />
           </div>
 
-          <div className="bg-story-panel rounded-xl border border-story-border p-5">
+          <div className="bg-white rounded-2xl p-6 card-shadow">
             <div className="flex items-center gap-3 mb-2">
               <span className="text-nvme-blue font-mono font-bold">Write</span>
               <code className="text-text-code text-xs">opcode=0x01</code>
@@ -41,7 +41,7 @@ export default function IOCommands() {
             <NvmeCliBlock command="nvme write /dev/nvme0n1 --start-block=0 --block-count=7 --data-size=4096 -d data.bin" />
           </div>
 
-          <div className="bg-story-panel rounded-xl border border-story-border p-5">
+          <div className="bg-white rounded-2xl p-6 card-shadow">
             <div className="flex items-center gap-3 mb-2">
               <span className="text-nvme-violet font-mono font-bold">Flush</span>
               <code className="text-text-code text-xs">opcode=0x00</code>
