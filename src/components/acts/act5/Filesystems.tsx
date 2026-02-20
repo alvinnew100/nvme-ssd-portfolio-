@@ -262,9 +262,8 @@ export default function Filesystems() {
             Partition → Format → Mount Workflow
           </div>
           <p className="text-text-secondary text-sm mb-4 leading-relaxed">
-            Here&apos;s the typical workflow for setting up an NVMe drive for benchmarking
-            with fio. We&apos;ll create a partition, format it, mount it, and then
-            run fio against the filesystem.
+            Here&apos;s the typical workflow for setting up an NVMe drive. We&apos;ll
+            create a partition, format it, and mount it with proper TRIM support.
           </p>
 
           <div className="space-y-3">
@@ -315,16 +314,13 @@ export default function Filesystems() {
 
             <div className="bg-story-card rounded-xl p-4 card-shadow">
               <div className="text-text-primary text-sm font-semibold mb-2">
-                6. Run fio on the filesystem
+                6. Ready for benchmarking
               </div>
-              <NvmeCliBlock
-                command={`fio --name=fs-test --directory=/mnt/nvme \\
-  --ioengine=io_uring --rw=randread --bs=4k \\
-  --iodepth=64 --numjobs=4 --direct=1 \\
-  --runtime=60s --time_based --group_reporting \\
-  --size=1g`}
-                note="Tests filesystem-level performance (includes filesystem overhead)"
-              />
+              <p className="text-text-muted text-xs">
+                Your filesystem is mounted and ready. In the next section, we&apos;ll
+                cover <strong className="text-text-primary">fio</strong> — the tool
+                used to benchmark both raw devices and filesystem-mounted drives.
+              </p>
             </div>
           </div>
         </div>
