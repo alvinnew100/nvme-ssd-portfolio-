@@ -7,8 +7,9 @@ const ACTS = [
   { num: 2, label: "Interface", id: "act-2" },
   { num: 3, label: "Protocol", id: "act-3" },
   { num: 4, label: "Maintenance", id: "act-4" },
-  { num: 5, label: "Advanced", id: "act-5" },
-  { num: 6, label: "Playground", id: "act-6" },
+  { num: 5, label: "Storage & Testing", id: "act-5" },
+  { num: 6, label: "Advanced", id: "act-6" },
+  { num: 7, label: "Playground", id: "act-7" },
 ];
 
 export default function StoryNav() {
@@ -70,7 +71,7 @@ export default function StoryNav() {
               </button>
               {i < ACTS.length - 1 && (
                 <div
-                  className={`w-0.5 h-6 transition-colors duration-300 ${
+                  className={`w-0.5 h-4 transition-colors duration-300 ${
                     i < activeAct ? "bg-nvme-blue" : "bg-story-border"
                   }`}
                 />

@@ -33,14 +33,17 @@ import TRIM from "@/components/acts/act4/TRIM";
 import FormatSanitize from "@/components/acts/act4/FormatSanitize";
 import WearLeveling from "@/components/acts/act4/WearLeveling";
 
-// Act 5 — Advanced & Tools
+// Act 5 — Storage Stack & Testing
+import Filesystems from "@/components/acts/act5/Filesystems";
+import Testing from "@/components/acts/act5/Testing";
+import FioGuide from "@/components/acts/act5/FioGuide";
+
+// Act 6 — Advanced & Tools
 import FirmwareUpdate from "@/components/acts/act5/FirmwareUpdate";
 import Security from "@/components/acts/act5/Security";
 import Reservations from "@/components/acts/act5/Reservations";
 import Passthru from "@/components/acts/act5/Passthru";
 import Tracing from "@/components/acts/act5/Tracing";
-import Testing from "@/components/acts/act5/Testing";
-import FioGuide from "@/components/acts/act5/FioGuide";
 
 // Heavy components — dynamic imports
 const CommandBuilderEmbed = dynamic(
@@ -120,20 +123,24 @@ export default function HomePage() {
       <FormatSanitize />
       <WearLeveling />
 
-      {/* ===================== ACT 5: ADVANCED & TOOLS ===================== */}
-      <ActDivider act={5} title="Advanced & Tools" id="act-5" />
+      {/* ===================== ACT 5: STORAGE STACK & TESTING ===================== */}
+      <ActDivider act={5} title="Storage Stack & Testing" id="act-5" />
+      <Filesystems />
+      <Testing />
+      <FioGuide />
+
+      {/* ===================== ACT 6: ADVANCED & TOOLS ===================== */}
+      <ActDivider act={6} title="Advanced & Tools" id="act-6" />
       <FirmwareUpdate />
       <Security />
       <Reservations />
       <Passthru />
       <Tracing />
       <TraceDecoderEmbed />
-      <Testing />
-      <FioGuide />
       <CommandAccordion />
 
-      {/* ===================== ACT 6: PLAYGROUND ===================== */}
-      <ActDivider act={6} title="Playground" id="act-6" />
+      {/* ===================== ACT 7: PLAYGROUND ===================== */}
+      <ActDivider act={7} title="Playground" id="act-7" />
       <Playground />
     </div>
   );
