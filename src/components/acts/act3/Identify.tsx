@@ -48,14 +48,14 @@ export default function Identify() {
         </div>
 
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-          <div className="bg-white rounded-2xl p-5 card-shadow">
+          <div className="bg-story-card rounded-2xl p-5 card-shadow">
             <code className="text-text-code text-xs">CNS=0</code>
             <div className="text-text-primary font-semibold mt-1">Identify Namespace</div>
             <p className="text-text-muted text-xs mt-1">
               Returns namespace size, capacity, LBA format, and protection info.
             </p>
           </div>
-          <div className="bg-white rounded-2xl p-5 card-shadow">
+          <div className="bg-story-card rounded-2xl p-5 card-shadow">
             <code className="text-text-code text-xs">CNS=1</code>
             <div className="text-text-primary font-semibold mt-1">Identify Controller</div>
             <p className="text-text-muted text-xs mt-1">

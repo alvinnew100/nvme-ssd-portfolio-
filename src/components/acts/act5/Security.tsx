@@ -21,7 +21,7 @@ export default function Security() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-          <div className="bg-white rounded-2xl p-6 card-shadow">
+          <div className="bg-story-card rounded-2xl p-6 card-shadow">
             <div className="text-nvme-green font-mono font-bold text-sm mb-2">
               Self-Encrypting Drives (SED)
             </div>
@@ -31,7 +31,7 @@ export default function Security() {
               destroyed &mdash; instant, secure wipe.
             </p>
           </div>
-          <div className="bg-white rounded-2xl p-6 card-shadow">
+          <div className="bg-story-card rounded-2xl p-6 card-shadow">
             <div className="text-nvme-violet font-mono font-bold text-sm mb-2">
               TCG Opal 2.0
             </div>

@@ -1,22 +1,23 @@
 @import "tailwindcss";
 
 @theme {
-  /* Stripe-inspired bright palette */
-  --color-story-bg: #ffffff;
-  --color-story-surface: #f6f9fc;
-  --color-story-panel: #ffffff;
-  --color-story-border: #e6ebf1;
-  --color-story-dark: #0a2540;
+  /* Warm beige palette — soft, readable, not too bright */
+  --color-story-bg: #faf8f5;
+  --color-story-surface: #f0ece4;
+  --color-story-panel: #faf8f5;
+  --color-story-border: #ddd6ca;
+  --color-story-dark: #1a1a2e;
+  --color-story-card: #fffdf9;
 
-  --color-nvme-green: #00d4aa;
+  --color-nvme-green: #00b894;
   --color-nvme-blue: #635bff;
   --color-nvme-violet: #7c5cfc;
-  --color-nvme-amber: #f5a623;
-  --color-nvme-red: #ed5f74;
+  --color-nvme-amber: #e8a317;
+  --color-nvme-red: #e05d6f;
 
-  --color-text-primary: #0a2540;
-  --color-text-secondary: #425466;
-  --color-text-muted: #8898aa;
+  --color-text-primary: #2d2a24;
+  --color-text-secondary: #56524a;
+  --color-text-muted: #9e9789;
   --color-text-code: #635bff;
 }
 
@@ -129,17 +130,17 @@ code {
   to { height: 0; opacity: 0; }
 }
 
-/* Stripe-style card shadows */
+/* Card shadows — warm tones */
 .card-shadow {
-  box-shadow: 0 2px 8px -2px rgba(10, 37, 64, 0.08), 0 6px 20px -4px rgba(10, 37, 64, 0.06);
+  box-shadow: 0 1px 3px rgba(45, 42, 36, 0.06), 0 4px 16px rgba(45, 42, 36, 0.04);
 }
 .card-shadow-hover {
-  box-shadow: 0 4px 16px -2px rgba(10, 37, 64, 0.12), 0 12px 32px -4px rgba(10, 37, 64, 0.10);
+  box-shadow: 0 4px 16px rgba(45, 42, 36, 0.10), 0 12px 32px rgba(45, 42, 36, 0.06);
 }
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(135deg, #635bff 0%, #00d4aa 100%);
+  background: linear-gradient(135deg, #635bff 0%, #00b894 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

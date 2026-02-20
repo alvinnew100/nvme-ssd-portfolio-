@@ -56,7 +56,7 @@ export default function Passthru() {
           {VENDOR_EXAMPLES.map((ex) => (
             <div
               key={ex.vendor}
-              className="bg-white rounded-2xl p-6 card-shadow"
+              className="bg-story-card rounded-2xl p-6 card-shadow"
             >
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-nvme-blue font-mono font-bold text-sm">

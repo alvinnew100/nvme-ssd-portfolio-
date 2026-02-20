@@ -53,7 +53,7 @@ export default function NandHierarchy() {
           TRIM matters, and why garbage collection exists.
         </p>
 
-        <div className="bg-white rounded-2xl p-8 card-shadow mb-6">
+        <div className="bg-story-card rounded-2xl p-8 card-shadow mb-6">
           <div className="flex flex-col items-center gap-3">
             {LEVELS.map((level) => (
               <div key={level.name} className="flex items-center gap-4 w-full max-w-lg">
@@ -82,7 +82,7 @@ export default function NandHierarchy() {
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-6 card-shadow">
+        <div className="bg-story-card rounded-2xl p-6 card-shadow">
           <div className="text-text-primary font-semibold text-sm mb-2">
             Key insight: Read vs. Erase asymmetry
           </div>

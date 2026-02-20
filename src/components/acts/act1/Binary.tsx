@@ -32,7 +32,7 @@ export default function Binary() {
           sector of data, every register value is just a sequence of bytes.
         </p>
 
-        <div className="bg-white rounded-2xl p-8 card-shadow mb-6">
+        <div className="bg-story-card rounded-2xl p-8 card-shadow mb-6">
           <div className="text-text-muted text-xs font-mono mb-6 uppercase tracking-wider">
             Interactive &mdash; Click bits to flip them
           </div>

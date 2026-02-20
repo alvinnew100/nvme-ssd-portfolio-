@@ -42,7 +42,7 @@ export default function PCIe() {
         </p>
 
         {/* Interactive bandwidth calculator */}
-        <div className="bg-white rounded-2xl p-8 card-shadow mb-8">
+        <div className="bg-story-card rounded-2xl p-8 card-shadow mb-8">
           <div className="text-text-muted text-xs font-mono mb-6 uppercase tracking-wider">
             PCIe Bandwidth Calculator
           </div>

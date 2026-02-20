@@ -44,7 +44,7 @@ export default function AdminCommands() {
             return (
               <div
                 key={cat.label}
-                className="bg-white rounded-2xl p-5 card-shadow"
+                className="bg-story-card rounded-2xl p-5 card-shadow"
               >
                 <div className="font-semibold text-sm mb-3" style={{ color }}>
                   {cat.label}

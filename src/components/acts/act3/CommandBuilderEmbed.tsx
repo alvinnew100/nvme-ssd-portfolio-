@@ -74,7 +74,7 @@ export default function CommandBuilderEmbed({
             Load {commands.find((c) => c.id === presetId)?.name ?? presetId} preset
           </button>
         ) : selectedCommand ? (
-          <div className="bg-white rounded-2xl p-6 card-shadow space-y-6">
+          <div className="bg-story-card rounded-2xl p-6 card-shadow space-y-6">
             <div className="flex items-center justify-between">
               <div>
                 <div className="flex items-center gap-3 mb-1">

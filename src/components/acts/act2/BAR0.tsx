@@ -30,7 +30,7 @@ export default function BAR0() {
           &mdash; just regular memory reads and writes.
         </p>
 
-        <div className="bg-white rounded-2xl card-shadow overflow-hidden">
+        <div className="bg-story-card rounded-2xl card-shadow overflow-hidden">
           <div className="px-5 py-3 border-b border-story-border bg-story-surface">
             <span className="text-text-muted text-xs font-mono">
               NVMe Controller Register Map (BAR0)

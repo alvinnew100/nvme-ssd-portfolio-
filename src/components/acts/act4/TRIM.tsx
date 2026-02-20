@@ -21,7 +21,7 @@ export default function TRIM() {
         </p>
 
         {/* FTL diagram */}
-        <div className="bg-white rounded-2xl p-6 card-shadow mb-6">
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
           <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
             Flash Translation Layer
           </div>

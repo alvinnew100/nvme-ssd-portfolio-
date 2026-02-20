@@ -16,7 +16,7 @@ export default function Reservations() {
           fencing &mdash; preventing data corruption from concurrent writes.
         </p>
 
-        <div className="bg-white rounded-2xl p-6 card-shadow mb-6">
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
             {[
               {

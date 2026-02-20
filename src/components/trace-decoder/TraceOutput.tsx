@@ -31,7 +31,7 @@ export default function TraceOutput({ results, error }: TraceOutputProps) {
       {results.map((decoded, i) => (
         <div
           key={i}
-          className="bg-white rounded-2xl card-shadow overflow-hidden"
+          className="bg-story-card rounded-2xl card-shadow overflow-hidden"
         >
           {/* Raw line */}
           <div className="px-4 py-2 bg-story-surface border-b border-story-border overflow-x-auto">

@@ -56,7 +56,7 @@ export default function CommandAccordion() {
             placeholder="Search by name, ID, or opcode..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="flex-1 min-w-[200px] bg-white border border-story-border rounded-xl px-4 py-2.5 text-text-primary text-sm font-mono placeholder:text-text-muted focus:outline-none focus:border-nvme-blue card-shadow"
+            className="flex-1 min-w-[200px] bg-story-card border border-story-border rounded-xl px-4 py-2.5 text-text-primary text-sm font-mono placeholder:text-text-muted focus:outline-none focus:border-nvme-blue card-shadow"
           />
           <div className="flex gap-1">
             {(["all", "admin", "io"] as const).map((f) => (
@@ -66,7 +66,7 @@ export default function CommandAccordion() {
                 className={`px-4 py-2.5 rounded-xl text-xs font-mono transition-all ${
                   filter === f
                     ? "bg-nvme-blue text-white shadow-md"
-                    : "bg-white border border-story-border text-text-muted hover:text-text-secondary card-shadow"
+                    : "bg-story-card border border-story-border text-text-muted hover:text-text-secondary card-shadow"
                 }`}
               >
                 {f === "all" ? "All" : f === "admin" ? "Admin (26)" : "I/O (12)"}
@@ -86,7 +86,7 @@ export default function CommandAccordion() {
               <Accordion.Item
                 key={cmd.id}
                 value={cmd.id}
-                className="bg-white rounded-2xl card-shadow overflow-hidden"
+                className="bg-story-card rounded-2xl card-shadow overflow-hidden"
               >
                 <Accordion.Header>
                   <Accordion.Trigger className="w-full px-5 py-4 text-left flex items-center gap-3 hover:bg-story-surface/50 transition-colors group">

@@ -43,7 +43,7 @@ export default function StoryNav() {
     <>
       {/* Desktop: Left rail */}
       <nav className="fixed left-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col items-center gap-1">
-        <div className="relative flex flex-col items-center bg-white/80 backdrop-blur-sm rounded-full py-3 px-1.5 shadow-lg shadow-black/5">
+        <div className="relative flex flex-col items-center bg-story-card/90 backdrop-blur-sm rounded-full py-3 px-1.5 shadow-lg shadow-black/5">
           {ACTS.map((act, i) => (
             <div key={act.id} className="flex flex-col items-center">
               <button
@@ -90,7 +90,7 @@ export default function StoryNav() {
         </div>
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="absolute bottom-4 right-4 bg-white border border-story-border rounded-full px-4 py-2 text-xs text-text-secondary font-mono shadow-lg shadow-black/5"
+          className="absolute bottom-4 right-4 bg-story-card border border-story-border rounded-full px-4 py-2 text-xs text-text-secondary font-mono shadow-lg shadow-black/5"
         >
           Act {activeAct + 1} / {ACTS.length}
         </button>
@@ -103,7 +103,7 @@ export default function StoryNav() {
             className="absolute inset-0 bg-black/20 backdrop-blur-sm"
             onClick={() => setMobileOpen(false)}
           />
-          <div className="absolute bottom-16 right-4 bg-white border border-story-border rounded-2xl p-3 space-y-1 shadow-xl">
+          <div className="absolute bottom-16 right-4 bg-story-card border border-story-border rounded-2xl p-3 space-y-1 shadow-xl">
             {ACTS.map((act, i) => (
               <button
                 key={act.id}

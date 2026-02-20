@@ -19,7 +19,7 @@ export default function Doorbells() {
           head to the CQ doorbell at offset <code>0x1000</code> + (2 &times; QID + 1) &times; stride.
         </p>
 
-        <div className="bg-white rounded-2xl p-6 card-shadow mb-6">
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
           <div className="space-y-2 font-mono text-xs">
             {[
               { offset: "0x1000", label: "Admin SQ Tail Doorbell", type: "sq" as const, qid: 0 },

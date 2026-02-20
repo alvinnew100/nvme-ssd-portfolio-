@@ -50,7 +50,7 @@ cat /sys/kernel/debug/tracing/trace_pipe`}
           fields, you can decode the exact command and its parameters.
         </p>
 
-        <div className="bg-white rounded-2xl p-6 card-shadow">
+        <div className="bg-story-card rounded-2xl p-6 card-shadow">
           <div className="text-text-primary font-semibold text-sm mb-3">
             Trace line anatomy
           </div>

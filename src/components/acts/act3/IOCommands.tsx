@@ -17,7 +17,7 @@ export default function IOCommands() {
         </p>
 
         <div className="space-y-4 mb-8">
-          <div className="bg-white rounded-2xl p-6 card-shadow">
+          <div className="bg-story-card rounded-2xl p-6 card-shadow">
             <div className="flex items-center gap-3 mb-2">
               <span className="text-nvme-green font-mono font-bold">Read</span>
               <code className="text-text-code text-xs">opcode=0x02</code>
@@ -29,7 +29,7 @@ export default function IOCommands() {
             <NvmeCliBlock command="nvme read /dev/nvme0n1 --start-block=0 --block-count=7 --data-size=4096" />
           </div>
 
-          <div className="bg-white rounded-2xl p-6 card-shadow">
+          <div className="bg-story-card rounded-2xl p-6 card-shadow">
             <div className="flex items-center gap-3 mb-2">
               <span className="text-nvme-blue font-mono font-bold">Write</span>
               <code className="text-text-code text-xs">opcode=0x01</code>
@@ -41,7 +41,7 @@ export default function IOCommands() {
             <NvmeCliBlock command="nvme write /dev/nvme0n1 --start-block=0 --block-count=7 --data-size=4096 -d data.bin" />
           </div>
 
-          <div className="bg-white rounded-2xl p-6 card-shadow">
+          <div className="bg-story-card rounded-2xl p-6 card-shadow">
             <div className="flex items-center gap-3 mb-2">
               <span className="text-nvme-violet font-mono font-bold">Flush</span>
               <code className="text-text-code text-xs">opcode=0x00</code>

@@ -25,7 +25,7 @@ export default function SQEStructure() {
           (CDW10-CDW15) are command-specific &mdash; they carry the actual parameters.
         </p>
 
-        <div className="bg-white rounded-2xl p-8 card-shadow mb-6">
+        <div className="bg-story-card rounded-2xl p-8 card-shadow mb-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono mb-6">
             <div>
               <div className="text-text-muted mb-1">CDW0 (bytes 0-3)</div>

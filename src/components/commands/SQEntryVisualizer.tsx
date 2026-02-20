@@ -82,8 +82,8 @@ export default function SQEntryVisualizer({ command }: SQEntryVisualizerProps) {
                       y={y}
                       width={cellW}
                       height={cellH}
-                      fill={hasField ? color + "15" : "#f6f9fc"}
-                      stroke={hasField ? color : "#e6ebf1"}
+                      fill={hasField ? color + "15" : "#f5f2ed"}
+                      stroke={hasField ? color : "#ddd6ca"}
                       strokeWidth={hasField ? 1.5 : 0.5}
                       rx={3}
                     />

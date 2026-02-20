@@ -48,7 +48,7 @@ export default function SMART() {
 
         <NvmeCliBlock command="nvme smart-log /dev/nvme0" />
 
-        <div className="mt-6 bg-white rounded-2xl card-shadow overflow-hidden">
+        <div className="mt-6 bg-story-card rounded-2xl card-shadow overflow-hidden">
           <div className="px-5 py-3 border-b border-story-border bg-story-surface flex items-center gap-2">
             <div className="w-2 h-2 rounded-full bg-nvme-green animate-pulse" />
             <span className="text-text-muted text-xs font-mono">SMART Dashboard</span>

@@ -31,7 +31,7 @@ export default function ErrorHandling() {
           If DNR=1, the error is permanent &mdash; retrying won&apos;t help.
         </p>
 
-        <div className="bg-white rounded-2xl p-6 card-shadow mb-6">
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
           <div className="text-text-muted text-xs font-mono mb-3 uppercase tracking-wider">
             CQE Status Field (bits 17:1 of DW3)
           </div>

@@ -26,7 +26,7 @@ export default function WearLeveling() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           {CELL_ENDURANCE.map((c) => (
-            <div key={c.type} className="bg-white rounded-2xl p-5 card-shadow text-center">
+            <div key={c.type} className="bg-story-card rounded-2xl p-5 card-shadow text-center">
               <div className="font-mono font-bold text-lg mb-1" style={{ color: c.color }}>
                 {c.type}
               </div>
@@ -42,7 +42,7 @@ export default function WearLeveling() {
           might be rated for 600 TBW. You can check current usage via SMART:
         </p>
 
-        <div className="bg-white rounded-2xl p-6 card-shadow">
+        <div className="bg-story-card rounded-2xl p-6 card-shadow">
           <div className="text-text-muted text-xs font-mono mb-3">Endurance check</div>
           <div className="space-y-2 text-xs font-mono">
             <div className="flex justify-between">
@@ -59,7 +59,7 @@ export default function WearLeveling() {
           </div>
         </div>
 
-        <div className="mt-6 bg-white rounded-2xl p-6 card-shadow">
+        <div className="mt-6 bg-story-card rounded-2xl p-6 card-shadow">
           <div className="text-text-primary font-semibold text-sm mb-2">
             Two types of wear leveling
           </div>

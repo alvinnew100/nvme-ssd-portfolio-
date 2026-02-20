@@ -18,7 +18,7 @@ export default function SsdOverview() {
         </p>
 
         {/* SSD block diagram */}
-        <div className="bg-white rounded-2xl p-6 card-shadow">
+        <div className="bg-story-card rounded-2xl p-6 card-shadow">
           <svg
             viewBox="0 0 700 280"
             className="w-full max-w-2xl mx-auto"
@@ -90,8 +90,8 @@ export default function SsdOverview() {
               width="90"
               height="40"
               rx="6"
-              fill="#f6f9fc"
-              stroke="#e6ebf1"
+              fill="#f5f2ed"
+              stroke="#ddd6ca"
               strokeWidth="1"
             />
             <text
@@ -109,8 +109,8 @@ export default function SsdOverview() {
               width="90"
               height="40"
               rx="6"
-              fill="#f6f9fc"
-              stroke="#e6ebf1"
+              fill="#f5f2ed"
+              stroke="#ddd6ca"
               strokeWidth="1"
             />
             <text
@@ -128,8 +128,8 @@ export default function SsdOverview() {
               width="90"
               height="40"
               rx="6"
-              fill="#f6f9fc"
-              stroke="#e6ebf1"
+              fill="#f5f2ed"
+              stroke="#ddd6ca"
               strokeWidth="1"
             />
             <text
@@ -147,8 +147,8 @@ export default function SsdOverview() {
               width="90"
               height="40"
               rx="6"
-              fill="#f6f9fc"
-              stroke="#e6ebf1"
+              fill="#f5f2ed"
+              stroke="#ddd6ca"
               strokeWidth="1"
             />
             <text
@@ -166,8 +166,8 @@ export default function SsdOverview() {
               width="200"
               height="40"
               rx="6"
-              fill="#f6f9fc"
-              stroke="#e6ebf1"
+              fill="#f5f2ed"
+              stroke="#ddd6ca"
               strokeWidth="1"
             />
             <text
@@ -277,21 +277,21 @@ export default function SsdOverview() {
         </div>
 
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
-          <div className="bg-white rounded-2xl p-5 card-shadow">
+          <div className="bg-story-card rounded-2xl p-5 card-shadow">
             <div className="text-nvme-blue font-semibold mb-1">Controller</div>
             <p className="text-text-muted text-xs">
               Processes NVMe commands, manages FTL mapping, handles ECC, and
               coordinates NAND operations.
             </p>
           </div>
-          <div className="bg-white rounded-2xl p-5 card-shadow">
+          <div className="bg-story-card rounded-2xl p-5 card-shadow">
             <div className="text-nvme-violet font-semibold mb-1">DRAM</div>
             <p className="text-text-muted text-xs">
               Caches the FTL table (logical-to-physical mapping) for fast
               lookups. Some SSDs are DRAM-less and use HMB.
             </p>
           </div>
-          <div className="bg-white rounded-2xl p-5 card-shadow">
+          <div className="bg-story-card rounded-2xl p-5 card-shadow">
             <div className="text-nvme-amber font-semibold mb-1">NAND Packages</div>
             <p className="text-text-muted text-xs">
               Multiple CE (chip enable) channels allow parallel access.

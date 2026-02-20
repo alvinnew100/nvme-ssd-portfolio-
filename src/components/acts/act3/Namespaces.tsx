@@ -19,7 +19,7 @@ export default function Namespaces() {
           each with its own LBA range, format, and access controls.
         </p>
 
-        <div className="bg-white rounded-2xl p-6 card-shadow mb-6">
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
           <svg viewBox="0 0 600 120" className="w-full max-w-xl mx-auto" fill="none">
             <rect x="10" y="10" width="130" height="100" rx="8" className="stroke-nvme-blue" strokeWidth="2" fill="#635bff08" />
             <text x="75" y="50" textAnchor="middle" className="fill-nvme-blue text-[11px] font-bold">NVMe Controller</text>

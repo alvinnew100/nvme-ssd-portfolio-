@@ -23,7 +23,7 @@ export default function Testing() {
           loss protection, and error injection. Here&apos;s the test pyramid:
         </p>
 
-        <div className="bg-white rounded-2xl p-6 card-shadow mb-6">
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
           <div className="flex flex-col items-center gap-2">
             {TEST_LEVELS.map((level) => (
               <div
@@ -46,14 +46,14 @@ export default function Testing() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-          <div className="bg-white rounded-2xl p-5 card-shadow">
+          <div className="bg-story-card rounded-2xl p-5 card-shadow">
             <div className="text-nvme-green font-semibold mb-1">Tools</div>
             <p className="text-text-muted text-xs">
               fio (flexible I/O tester), nvme-cli, blktrace/ftrace, custom
               test frameworks, hardware power-loss rigs.
             </p>
           </div>
-          <div className="bg-white rounded-2xl p-5 card-shadow">
+          <div className="bg-story-card rounded-2xl p-5 card-shadow">
             <div className="text-nvme-blue font-semibold mb-1">Key Metrics</div>
             <p className="text-text-muted text-xs">
               4KB random read/write IOPS, 128KB sequential MB/s, mixed workload

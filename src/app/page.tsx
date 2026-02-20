@@ -6,16 +6,18 @@ import ActDivider from "@/components/story/ActDivider";
 // Act 1 — Foundations
 import Hero from "@/components/acts/act1/Hero";
 import Binary from "@/components/acts/act1/Binary";
+import LBA from "@/components/acts/act1/LBA";
 import NandCell from "@/components/acts/act1/NandCell";
 import NandHierarchy from "@/components/acts/act1/NandHierarchy";
 import SsdOverview from "@/components/acts/act1/SsdOverview";
 
 // Act 2 — The Interface
-// WhyNVMe removed per user request
 import PCIe from "@/components/acts/act2/PCIe";
 import BAR0 from "@/components/acts/act2/BAR0";
+import BootSequence from "@/components/acts/act2/BootSequence";
 import Queues from "@/components/acts/act2/Queues";
 import Doorbells from "@/components/acts/act2/Doorbells";
+import BusTrace from "@/components/acts/act2/BusTrace";
 
 // Act 3 — The Protocol
 import SQEStructure from "@/components/acts/act3/SQEStructure";
@@ -38,6 +40,7 @@ import Reservations from "@/components/acts/act5/Reservations";
 import Passthru from "@/components/acts/act5/Passthru";
 import Tracing from "@/components/acts/act5/Tracing";
 import Testing from "@/components/acts/act5/Testing";
+import FioGuide from "@/components/acts/act5/FioGuide";
 
 // Heavy components — dynamic imports
 const CommandBuilderEmbed = dynamic(
@@ -66,6 +69,7 @@ export default function HomePage() {
       {/* ===================== ACT 1: FOUNDATIONS ===================== */}
       <ActDivider act={1} title="Foundations" id="act-1" />
       <Binary />
+      <LBA />
       <NandCell />
       <NandHierarchy />
       <SsdOverview />
@@ -74,8 +78,10 @@ export default function HomePage() {
       <ActDivider act={2} title="The Interface" id="act-2" />
       <PCIe />
       <BAR0 />
+      <BootSequence />
       <Queues />
       <Doorbells />
+      <BusTrace />
 
       {/* ===================== ACT 3: THE PROTOCOL ===================== */}
       <ActDivider act={3} title="The Protocol" id="act-3" />
@@ -123,6 +129,7 @@ export default function HomePage() {
       <Tracing />
       <TraceDecoderEmbed />
       <Testing />
+      <FioGuide />
       <CommandAccordion />
 
       {/* ===================== ACT 6: PLAYGROUND ===================== */}

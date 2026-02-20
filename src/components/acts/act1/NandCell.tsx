@@ -74,7 +74,7 @@ export default function NandCell() {
               className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
                 i === activeCell
                   ? "text-white shadow-lg"
-                  : "bg-white text-text-secondary hover:bg-story-surface border border-story-border"
+                  : "bg-story-card text-text-secondary hover:bg-story-surface border border-story-border"
               }`}
               style={
                 i === activeCell
@@ -89,7 +89,7 @@ export default function NandCell() {
         </div>
 
         {/* Voltage level visualization */}
-        <div className="bg-white rounded-2xl p-8 card-shadow">
+        <div className="bg-story-card rounded-2xl p-8 card-shadow">
           <div className="flex items-start gap-8">
             {/* Voltage diagram */}
             <div className="flex-1">

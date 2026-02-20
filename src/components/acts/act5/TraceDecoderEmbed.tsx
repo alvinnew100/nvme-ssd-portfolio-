@@ -42,7 +42,7 @@ export default function TraceDecoderEmbed() {
           in real time.
         </p>
 
-        <div className="bg-white rounded-2xl p-6 card-shadow space-y-4">
+        <div className="bg-story-card rounded-2xl p-6 card-shadow space-y-4">
           <TraceInput
             value={input}
             onChange={(val: string) => decode(val)}
