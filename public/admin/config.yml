@@ -1,10 +1,10 @@
 backend:
   name: github
-  repo: alvinnew100/nvme-ssd-portfolio
+  repo: alvinnew100/nvme-ssd-portfolio-
   branch: main
 
 media_folder: public/images/uploads
-public_folder: /nvme-ssd-portfolio/images/uploads
+public_folder: /nvme-ssd-portfolio-/images/uploads
 
 collections:
   - name: articles
