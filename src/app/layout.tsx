@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import { StoryProvider } from "@/context/StoryContext";
+import StoryNav from "@/components/layout/StoryNav";
+import StoryFooter from "@/components/layout/StoryFooter";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "NVMe Explorer — Interactive NVMe Command Reference & Tools",
+  title: "NVMe Explorer — From NAND to NVMe: An Interactive Deep Dive",
   description:
-    "Interactive NVMe command reference, ftrace decoder, command builder, and architecture visualizer. Built to demonstrate deep SSD/NVMe engineering knowledge.",
+    "A single flowing story that takes you from binary basics and NAND flash all the way through NVMe commands, queues, SMART monitoring, and hands-on tools. Interactive command builder, trace decoder, and 38-command reference included.",
   keywords: [
     "NVMe",
     "SSD",
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     "PCIe",
     "flash",
     "NAND",
+    "nvme-cli",
   ],
 };
 
@@ -26,10 +28,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+      <body className="min-h-screen">
+        <StoryProvider>
+          <StoryNav />
+          <main>{children}</main>
+          <StoryFooter />
+        </StoryProvider>
       </body>
     </html>
   );

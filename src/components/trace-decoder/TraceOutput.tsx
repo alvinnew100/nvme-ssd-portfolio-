@@ -1,9 +1,8 @@
-import Link from "next/link";
 import { DecodedCommand } from "@/lib/nvme/types";
 
 interface TraceOutputProps {
   results: DecodedCommand[];
-  error: string | null;
+  error?: string | null;
 }
 
 export default function TraceOutput({ results, error }: TraceOutputProps) {
@@ -17,7 +16,7 @@ export default function TraceOutput({ results, error }: TraceOutputProps) {
 
   if (results.length === 0) {
     return (
-      <div className="text-warm-500 text-center py-8">
+      <div className="text-text-muted text-center py-8">
         Decoded commands will appear here. Try loading a sample trace or paste
         your own ftrace output above.
       </div>
@@ -26,17 +25,17 @@ export default function TraceOutput({ results, error }: TraceOutputProps) {
 
   return (
     <div className="space-y-4">
-      <div className="text-sm text-warm-400 mb-2">
+      <div className="text-sm text-text-secondary mb-2">
         Decoded {results.length} command{results.length !== 1 ? "s" : ""}
       </div>
       {results.map((decoded, i) => (
         <div
           key={i}
-          className="bg-nvme-dark rounded-lg border border-warm-800 overflow-hidden"
+          className="bg-story-panel rounded-lg border border-story-border overflow-hidden"
         >
           {/* Raw line */}
-          <div className="px-4 py-2 bg-nvme-darker border-b border-warm-800 overflow-x-auto">
-            <code className="text-xs text-warm-500 whitespace-nowrap">
+          <div className="px-4 py-2 bg-story-bg border-b border-story-border overflow-x-auto">
+            <code className="text-xs text-text-muted whitespace-nowrap">
               {decoded.raw}
             </code>
           </div>
@@ -44,32 +43,22 @@ export default function TraceOutput({ results, error }: TraceOutputProps) {
           {/* Decoded header */}
           <div className="px-4 py-3">
             <div className="flex items-center gap-3 mb-2">
-              <span className="font-mono text-sm text-nvme-accent">
+              <span className="font-mono text-sm text-nvme-green">
                 0x{decoded.opcode.toString(16).padStart(2, "0")}
               </span>
               <span
                 className={`text-xs px-2 py-0.5 rounded-full ${
                   decoded.type === "admin"
-                    ? "bg-nvme-blue/20 text-nvme-accent"
-                    : "bg-nvme-green/20 text-nvme-green"
+                    ? "bg-nvme-violet/20 text-nvme-violet"
+                    : "bg-nvme-blue/20 text-nvme-blue"
                 }`}
               >
                 {decoded.type === "admin" ? "Admin" : "I/O"}
               </span>
-              {decoded.commandId ? (
-                <Link
-                  href={`/commands/${decoded.commandId}`}
-                  className="text-warm-50 font-semibold hover:text-nvme-accent transition-colors"
-                  prefetch={false}
-                >
-                  {decoded.commandName}
-                </Link>
-              ) : (
-                <span className="text-warm-50 font-semibold">
-                  {decoded.commandName}
-                </span>
-              )}
-              <span className="text-xs text-warm-500">
+              <span className="text-text-primary font-semibold">
+                {decoded.commandName}
+              </span>
+              <span className="text-xs text-text-muted">
                 qid={decoded.qid} nsid={decoded.nsid}
               </span>
             </div>
@@ -80,15 +69,15 @@ export default function TraceOutput({ results, error }: TraceOutputProps) {
                 {decoded.fields.map((f) => (
                   <div
                     key={f.name}
-                    className="bg-nvme-darker rounded px-3 py-2"
+                    className="bg-story-bg rounded px-3 py-2"
                   >
-                    <div className="text-xs text-warm-500">{f.name}</div>
-                    <div className="text-sm text-warm-50 font-mono">
+                    <div className="text-xs text-text-muted">{f.name}</div>
+                    <div className="text-sm text-text-primary font-mono">
                       {f.hex}{" "}
-                      <span className="text-warm-500">({f.value})</span>
+                      <span className="text-text-muted">({f.value})</span>
                     </div>
                     {f.valueMeaning && (
-                      <div className="text-xs text-nvme-accent mt-0.5">
+                      <div className="text-xs text-nvme-green mt-0.5">
                         {f.valueMeaning}
                       </div>
                     )}
@@ -98,7 +87,7 @@ export default function TraceOutput({ results, error }: TraceOutputProps) {
             )}
 
             {/* CDW hex values */}
-            <div className="mt-3 flex flex-wrap gap-2 text-xs font-mono text-warm-600">
+            <div className="mt-3 flex flex-wrap gap-2 text-xs font-mono text-text-muted">
               <span>cdw10=0x{decoded.cdw10.toString(16).padStart(8, "0")}</span>
               <span>cdw11=0x{decoded.cdw11.toString(16).padStart(8, "0")}</span>
               <span>cdw12=0x{decoded.cdw12.toString(16).padStart(8, "0")}</span>
