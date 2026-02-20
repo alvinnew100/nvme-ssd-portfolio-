@@ -1,0 +1,10 @@
+# NVMe Ftrace - Mixed Workload (Admin + I/O)
+# Includes: Identify, Get Log Page, Read, Write, TRIM, Flush
+ systemd-256      [000] ....  9999.000100: nvme_setup_cmd: nvme0n1: qid=0, cmdid=0, nsid=0, cdw10=0x00000001, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x06
+ systemd-256      [000] ....  9999.000200: nvme_setup_cmd: nvme0n1: qid=0, cmdid=1, nsid=0, cdw10=0x007f8002, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x02
+ fio-1234         [001] ....  9999.001000: nvme_setup_cmd: nvme0n1: qid=1, cmdid=10, nsid=1, cdw10=0x00000000, cdw11=0x00000000, cdw12=0x0000007f, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x02
+ fio-1234         [001] ....  9999.001100: nvme_setup_cmd: nvme0n1: qid=1, cmdid=11, nsid=1, cdw10=0x00000080, cdw11=0x00000000, cdw12=0x0000007f, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x02
+ fio-1234         [002] ....  9999.001200: nvme_setup_cmd: nvme0n1: qid=2, cmdid=20, nsid=1, cdw10=0x00010000, cdw11=0x00000000, cdw12=0x400000ff, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x01
+ fio-1234         [002] ....  9999.001300: nvme_setup_cmd: nvme0n1: qid=2, cmdid=21, nsid=1, cdw10=0x00010100, cdw11=0x00000000, cdw12=0x400000ff, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x01
+ fstrim-5678      [000] ....  9999.002000: nvme_setup_cmd: nvme0n1: qid=1, cmdid=30, nsid=1, cdw10=0x00000000, cdw11=0x00000004, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x09
+ kworker/0:1H-312 [000] ....  9999.003000: nvme_setup_cmd: nvme0n1: qid=1, cmdid=31, nsid=1, cdw10=0x00000000, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x00

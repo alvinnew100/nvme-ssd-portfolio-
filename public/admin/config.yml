@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: alvinnew100/nvme-ssd-portfolio
+  branch: main
+
+media_folder: public/images/uploads
+public_folder: /nvme-ssd-portfolio/images/uploads
+
+collections:
+  - name: articles
+    label: Articles
+    folder: content/articles
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "YouTube Video ID", name: "youtubeId", widget: "string", required: false, default: "" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }

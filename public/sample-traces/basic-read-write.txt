@@ -1,0 +1,8 @@
+# NVMe Ftrace - Basic Read/Write Operations
+# Captured from: nvme0n1
+# Trace events: nvme:nvme_setup_cmd
+ kworker/0:1H-312   [000] ....  1234.567890: nvme_setup_cmd: nvme0n1: qid=1, cmdid=0, nsid=1, cdw10=0x00000000, cdw11=0x00000000, cdw12=0x000000ff, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x01
+ kworker/0:1H-312   [000] ....  1234.567900: nvme_setup_cmd: nvme0n1: qid=1, cmdid=1, nsid=1, cdw10=0x00000100, cdw11=0x00000000, cdw12=0x0000001f, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x02
+ kworker/0:1H-312   [000] ....  1234.568000: nvme_setup_cmd: nvme0n1: qid=1, cmdid=2, nsid=1, cdw10=0x00001000, cdw11=0x00000000, cdw12=0x400000ff, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x01
+ kworker/0:1H-312   [001] ....  1234.568100: nvme_setup_cmd: nvme0n1: qid=2, cmdid=3, nsid=1, cdw10=0x00002000, cdw11=0x00000000, cdw12=0x000001ff, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x02
+ kworker/0:1H-312   [001] ....  1234.568200: nvme_setup_cmd: nvme0n1: qid=1, cmdid=4, nsid=1, cdw10=0x00000000, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x00

@@ -1,0 +1,11 @@
+# NVMe Ftrace - Admin Command Examples
+# Captured from: nvme0
+# Trace events: nvme:nvme_setup_cmd
+ nvme/0-256       [000] ....  5678.123456: nvme_setup_cmd: nvme0n1: qid=0, cmdid=0, nsid=0, cdw10=0x00000001, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x06
+ nvme/0-256       [000] ....  5678.123556: nvme_setup_cmd: nvme0n1: qid=0, cmdid=1, nsid=1, cdw10=0x00000000, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x06
+ nvme/0-256       [000] ....  5678.123656: nvme_setup_cmd: nvme0n1: qid=0, cmdid=2, nsid=0, cdw10=0x007f0002, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x02
+ nvme/0-256       [000] ....  5678.123756: nvme_setup_cmd: nvme0n1: qid=0, cmdid=3, nsid=0, cdw10=0x00ff0001, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x02
+ nvme/0-256       [000] ....  5678.123856: nvme_setup_cmd: nvme0n1: qid=0, cmdid=4, nsid=0, cdw10=0x00000007, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x0a
+ nvme/0-256       [001] ....  5678.123956: nvme_setup_cmd: nvme0n1: qid=0, cmdid=5, nsid=0, cdw10=0x003f0001, cdw11=0x00030003, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x01
+ nvme/0-256       [001] ....  5678.124056: nvme_setup_cmd: nvme0n1: qid=0, cmdid=6, nsid=0, cdw10=0x001f0001, cdw11=0x00010003, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x05
+ nvme/0-256       [000] ....  5678.124156: nvme_setup_cmd: nvme0n1: qid=0, cmdid=7, nsid=1, cdw10=0x00000009, cdw11=0x00000001, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x09
