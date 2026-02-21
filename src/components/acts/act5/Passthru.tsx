@@ -7,104 +7,282 @@ import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import CodeBlock from "@/components/story/CodeBlock";
 import InfoCard from "@/components/story/InfoCard";
 
-/* ─── Little-Endian Animator ─── */
-const LE_PRESETS = [
-  { label: "4096", hex: "0x00001000", bytes: ["00", "10", "00", "00"] },
-  { label: "932", hex: "0x000003A4", bytes: ["A4", "03", "00", "00"] },
-  { label: "1000", hex: "0x000003E8", bytes: ["E8", "03", "00", "00"] },
-  { label: "500", hex: "0x000001F4", bytes: ["F4", "01", "00", "00"] },
-  { label: "65535", hex: "0x0000FFFF", bytes: ["FF", "FF", "00", "00"] },
+/* ─── Helpers ─── */
+const HEX_DIGITS = "0123456789ABCDEF";
+
+function divisionSteps(n: number) {
+  if (n === 0) return [{ dividend: 0, quotient: 0, remainder: 0, hexDigit: "0" }];
+  const steps: { dividend: number; quotient: number; remainder: number; hexDigit: string }[] = [];
+  let val = n;
+  while (val > 0) {
+    const q = Math.floor(val / 16);
+    const r = val % 16;
+    steps.push({ dividend: val, quotient: q, remainder: r, hexDigit: HEX_DIGITS[r] });
+    val = q;
+  }
+  return steps;
+}
+
+function toBytes(hex: string): string[] {
+  const h = hex.replace("0x", "").padStart(8, "0");
+  return [h.slice(0, 2), h.slice(2, 4), h.slice(4, 6), h.slice(6, 8)];
+}
+
+/* ─── Little-Endian Walkthrough ─── */
+const LE_VALUES = [4096, 932, 500, 65535, 12];
+
+const STEP_LABELS = [
+  "Decimal number",
+  "Convert to hex",
+  "Split into bytes",
+  "Reverse → little-endian",
 ];
 
 function LittleEndianAnimator() {
-  const [selected, setSelected] = useState(0);
-  const [showLE, setShowLE] = useState(false);
-  const preset = LE_PRESETS[selected];
+  const [valIdx, setValIdx] = useState(0);
+  const [step, setStep] = useState(0);
 
-  // Big-endian bytes = hex string split into pairs (left to right)
-  const hexClean = preset.hex.replace("0x", "").padStart(8, "0");
-  const beBytePairs = [
-    hexClean.slice(0, 2),
-    hexClean.slice(2, 4),
-    hexClean.slice(4, 6),
-    hexClean.slice(6, 8),
-  ];
+  const decimal = LE_VALUES[valIdx];
+  const hexStr = "0x" + decimal.toString(16).toUpperCase().padStart(8, "0");
+  const steps = divisionSteps(decimal);
+  const beBytes = toBytes(hexStr);
+  const leBytes = [...beBytes].reverse();
 
-  const handleSwap = () => setShowLE((p) => !p);
-  const displayBytes = showLE ? preset.bytes : beBytePairs;
+  const selectValue = (i: number) => { setValIdx(i); setStep(0); };
 
   return (
     <div className="bg-story-surface rounded-xl p-5 mb-4">
+      {/* Value picker */}
       <div className="flex flex-wrap items-center gap-2 mb-4">
-        <span className="text-text-muted text-xs">Try a value:</span>
-        {LE_PRESETS.map((p, i) => (
+        <span className="text-text-muted text-[10px]">Pick a value:</span>
+        {LE_VALUES.map((v, i) => (
           <button
-            key={p.label}
-            onClick={() => { setSelected(i); setShowLE(false); }}
+            key={v}
+            onClick={() => selectValue(i)}
             className={`px-2.5 py-1 rounded-lg text-xs font-mono transition-colors ${
-              selected === i
-                ? "bg-nvme-green/20 text-nvme-green"
-                : "bg-story-card text-text-muted hover:text-text-secondary"
+              valIdx === i ? "bg-nvme-green/20 text-nvme-green" : "bg-story-card text-text-muted hover:text-text-secondary"
             }`}
           >
-            {p.label}
+            {v}
           </button>
         ))}
       </div>
 
-      <div className="text-center mb-3">
-        <span className="text-text-muted text-xs">Value: </span>
-        <code className="text-text-code font-mono text-sm font-bold">{preset.hex}</code>
-        <span className="text-text-muted text-xs"> (decimal {preset.label})</span>
+      {/* Step tabs */}
+      <div className="flex gap-1 mb-4 overflow-x-auto">
+        {STEP_LABELS.map((label, i) => (
+          <button
+            key={i}
+            onClick={() => setStep(i)}
+            className={`flex-shrink-0 px-3 py-1.5 rounded-lg text-[10px] font-medium transition-colors ${
+              step === i
+                ? "bg-nvme-blue/15 text-nvme-blue"
+                : "text-text-muted hover:text-text-secondary"
+            }`}
+          >
+            {i + 1}. {label}
+          </button>
+        ))}
       </div>
 
-      <div className="flex items-center justify-center gap-1 mb-3">
-        <AnimatePresence mode="popLayout">
-          {displayBytes.map((byte, i) => (
-            <motion.div
-              key={`${showLE ? "le" : "be"}-${i}-${byte}`}
-              layout
-              initial={{ opacity: 0, y: showLE ? -20 : 20, scale: 0.8 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: showLE ? 20 : -20, scale: 0.8 }}
-              transition={{ type: "spring", stiffness: 300, damping: 25, delay: i * 0.08 }}
-              className="bg-story-card rounded-lg p-3 min-w-[4rem] text-center"
-            >
-              <div className={`font-mono text-lg font-bold ${
-                byte !== "00" ? "text-nvme-green" : "text-text-secondary"
-              }`}>
-                {byte}
-              </div>
-              <div className="text-text-muted text-[9px] mt-1">
-                {showLE
-                  ? `Byte ${i} in memory`
-                  : i === 0 ? "Most significant" : i === 3 ? "Least significant" : `Byte ${i}`}
-              </div>
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </div>
-
-      <div className="text-center mb-2">
-        <span className={`text-xs font-semibold ${showLE ? "text-nvme-green" : "text-nvme-blue"}`}>
-          {showLE ? "Little-Endian (how it's stored in memory)" : "Big-Endian (how we read hex values)"}
-        </span>
-      </div>
-
-      <div className="text-center">
-        <button
-          onClick={handleSwap}
-          className="px-4 py-2 rounded-lg bg-nvme-green/10 text-nvme-green text-xs font-semibold hover:bg-nvme-green/20 transition-colors"
+      {/* Step content */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={`${valIdx}-${step}`}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -20 }}
+          transition={{ duration: 0.25 }}
+          className="min-h-[140px]"
         >
-          {showLE ? "Show Big-Endian (human-readable)" : "Convert to Little-Endian →"}
+          {/* ─── Step 1: Decimal ─── */}
+          {step === 0 && (
+            <div className="text-center py-4">
+              <div className="text-5xl font-bold text-text-primary font-mono mb-3">
+                {decimal.toLocaleString()}
+              </div>
+              <p className="text-text-muted text-xs">
+                This is a decimal (base-10) number. Computers store numbers in hex (base-16).
+              </p>
+              <p className="text-text-muted text-[10px] mt-2 italic">
+                Why base-16? Because 16 = 2⁴, so each hex digit maps neatly to 4 binary bits.
+                It&apos;s a compact way to write binary.
+              </p>
+            </div>
+          )}
+
+          {/* ─── Step 2: Hex conversion ─── */}
+          {step === 1 && (
+            <div>
+              <p className="text-text-muted text-[10px] mb-3">
+                To convert decimal to hex, divide by 16 repeatedly. Each remainder becomes a hex digit.
+                {decimal >= 10 && " Remainders 10-15 use letters: 10=A, 11=B, 12=C, 13=D, 14=E, 15=F."}
+              </p>
+              <div className="bg-story-card rounded-xl p-4 mb-3 overflow-x-auto">
+                <table className="text-xs font-mono w-full">
+                  <thead>
+                    <tr className="border-b border-story-border text-text-muted">
+                      <th className="text-left py-1 pr-3">Divide</th>
+                      <th className="text-left py-1 pr-3">=</th>
+                      <th className="text-left py-1 pr-3">Quotient</th>
+                      <th className="text-left py-1 pr-3">Remainder</th>
+                      <th className="text-left py-1">Hex digit</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {steps.map((s, i) => (
+                      <motion.tr
+                        key={i}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: i * 0.15 }}
+                        className="border-b border-story-border/30"
+                      >
+                        <td className="py-1.5 pr-3 text-text-secondary">
+                          {s.dividend} ÷ 16
+                        </td>
+                        <td className="py-1.5 pr-3 text-text-muted">=</td>
+                        <td className="py-1.5 pr-3 text-text-secondary">{s.quotient}</td>
+                        <td className="py-1.5 pr-3 text-text-primary">
+                          {s.remainder}
+                          {s.remainder >= 10 && (
+                            <span className="text-text-muted"> ({s.remainder} in hex = {s.hexDigit})</span>
+                          )}
+                        </td>
+                        <td className="py-1.5 text-nvme-green font-bold text-base">
+                          {s.hexDigit}
+                        </td>
+                      </motion.tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: steps.length * 0.15 + 0.1 }}
+                className="text-center"
+              >
+                <span className="text-text-muted text-xs">Read remainders bottom → top: </span>
+                <span className="text-nvme-green font-mono font-bold text-sm">
+                  {steps.map((s) => s.hexDigit).reverse().join("")}
+                </span>
+                <span className="text-text-muted text-xs"> → </span>
+                <span className="text-text-code font-mono font-bold text-sm">{hexStr}</span>
+              </motion.div>
+            </div>
+          )}
+
+          {/* ─── Step 3: Byte split ─── */}
+          {step === 2 && (
+            <div className="text-center py-2">
+              <p className="text-text-muted text-[10px] mb-4">
+                A byte is 8 bits = 2 hex digits. Split the hex value into pairs of 2 digits, each pair = 1 byte.
+              </p>
+              <div className="font-mono text-lg mb-2 text-text-secondary">
+                {hexStr.replace("0x", "")}
+              </div>
+              <div className="flex items-center justify-center gap-0 mb-4">
+                {beBytes.map((b, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.15, type: "spring", stiffness: 300, damping: 25 }}
+                    className="flex flex-col items-center"
+                  >
+                    {i > 0 && <span className="text-text-muted text-xs mx-1">|</span>}
+                    <div className={`bg-story-card rounded-lg px-4 py-3 mx-0.5 ${
+                      b !== "00" ? "ring-1 ring-nvme-green/30" : ""
+                    }`}>
+                      <div className={`text-xl font-bold ${b !== "00" ? "text-nvme-green" : "text-text-muted"}`}>
+                        {b}
+                      </div>
+                      <div className="text-text-muted text-[9px] mt-1">Byte {i}</div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+              <p className="text-text-muted text-[10px]">
+                4 bytes = 32 bits. This is the &ldquo;big-endian&rdquo; order — most significant byte first (how humans read it).
+              </p>
+            </div>
+          )}
+
+          {/* ─── Step 4: Reverse ─── */}
+          {step === 3 && (
+            <div className="text-center py-2">
+              <p className="text-text-muted text-[10px] mb-4">
+                Little-endian means &ldquo;little end first&rdquo; — the <strong className="text-text-primary">least significant byte</strong> goes
+                to the <strong className="text-text-primary">lowest memory address</strong>. So we reverse the byte order:
+              </p>
+              <div className="flex items-center justify-center gap-1 mb-2">
+                <span className="text-text-muted text-xs mr-2">Big-endian:</span>
+                {beBytes.map((b, i) => (
+                  <div key={i} className="bg-story-card/50 rounded px-2 py-1 font-mono text-sm text-text-secondary">
+                    {b}
+                  </div>
+                ))}
+              </div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+                className="text-nvme-green text-lg my-2"
+              >
+                ↓ reverse ↓
+              </motion.div>
+              <div className="flex items-center justify-center gap-1 mb-4">
+                <span className="text-text-muted text-xs mr-2">Little-endian:</span>
+                {leBytes.map((b, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: -20, scale: 0.8 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ delay: 0.5 + i * 0.12, type: "spring", stiffness: 300, damping: 25 }}
+                    className={`rounded-lg px-3 py-2 font-mono text-lg font-bold ${
+                      b !== "00" ? "bg-nvme-green/15 text-nvme-green" : "bg-story-card text-text-muted"
+                    }`}
+                  >
+                    {b}
+                    <div className="text-[8px] text-text-muted font-normal mt-0.5">addr {i}</div>
+                  </motion.div>
+                ))}
+              </div>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1 }}
+                className="text-text-secondary text-xs"
+              >
+                In a hexdump or binary file, <code className="text-text-code">{decimal}</code>{" "}
+                appears as: <code className="text-nvme-green font-bold">{leBytes.join(" ").toLowerCase()}</code>
+              </motion.p>
+            </div>
+          )}
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Navigation */}
+      <div className="flex items-center justify-between mt-4">
+        <button
+          onClick={() => setStep((s) => Math.max(0, s - 1))}
+          disabled={step === 0}
+          className="px-3 py-1.5 rounded-lg text-xs font-medium bg-story-card text-text-secondary disabled:opacity-30 disabled:cursor-not-allowed hover:bg-story-card/80 transition-colors"
+        >
+          ← Back
+        </button>
+        <span className="text-text-muted text-[10px]">
+          Step {step + 1} of 4
+        </span>
+        <button
+          onClick={() => setStep((s) => Math.min(3, s + 1))}
+          disabled={step === 3}
+          className="px-3 py-1.5 rounded-lg text-xs font-medium bg-nvme-green/10 text-nvme-green disabled:opacity-30 disabled:cursor-not-allowed hover:bg-nvme-green/20 transition-colors"
+        >
+          Next →
         </button>
       </div>
-
-      <p className="text-text-muted text-[10px] italic text-center mt-3 leading-relaxed">
-        {showLE
-          ? "This is the byte order you'd see in a hexdump or binary file. Least significant byte at the lowest address."
-          : "This is how we write the hex value — most significant byte first. But memory stores it reversed."}
-      </p>
     </div>
   );
 }
@@ -239,72 +417,130 @@ function HexdumpExplorer() {
 
       {/* Info panel */}
       <AnimatePresence mode="wait">
-        {selected !== null && (
-          <motion.div
-            key={activeField?.name ?? selected}
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.2 }}
-            className="bg-story-card rounded-xl p-4"
-          >
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs mb-3">
-              <div>
-                <div className="text-text-muted text-[10px]">Offset</div>
-                <div className="text-text-code font-mono font-bold">
-                  0x{selected.toString(16).padStart(2, "0").toUpperCase()}
-                </div>
-              </div>
-              <div>
-                <div className="text-text-muted text-[10px]">Row</div>
-                <div className="text-nvme-violet font-mono">
-                  0x{(Math.floor(selected / 16) * 16).toString(16).padStart(8, "0")}
-                </div>
-              </div>
-              <div>
-                <div className="text-text-muted text-[10px]">Position in row</div>
-                <div className="text-text-primary font-mono">
-                  {(selected % 16).toString(16).toUpperCase()} ({selected % 16})
-                </div>
-              </div>
-              <div>
-                <div className="text-text-muted text-[10px]">Byte value</div>
-                <div className="text-nvme-green font-mono font-bold">
-                  0x{HEX_DATA[selected].toUpperCase()} ({parseInt(HEX_DATA[selected], 16)})
-                </div>
-              </div>
-            </div>
+        {selected !== null && (() => {
+          const row = Math.floor(selected / 16);
+          const pos = selected % 16;
+          const hexOffset = selected.toString(16).toUpperCase().padStart(2, "0");
+          const byteVal = parseInt(HEX_DATA[selected], 16);
 
-            {activeField && (
-              <div className="border-t border-story-border pt-3">
-                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
+          return (
+            <motion.div
+              key={activeField?.name ?? selected}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.2 }}
+              className="bg-story-card rounded-xl p-4"
+            >
+              {/* Offset conversion math */}
+              <div className="bg-story-surface rounded-lg p-3 mb-3 text-xs font-mono">
+                <div className="text-text-muted text-[10px] font-sans mb-1 font-medium">
+                  How to find byte #{selected}:
+                </div>
+                <div className="space-y-1 text-text-secondary">
                   <div>
-                    <span className="text-text-muted">Field: </span>
-                    <span className="text-text-primary font-semibold">{activeField.name}</span>
+                    <span className="text-text-muted">Decimal to hex: </span>
+                    {selected < 16 ? (
+                      <span>
+                        {selected} → {selected >= 10
+                          ? <><span className="text-nvme-green">{selected} = {HEX_DIGITS[selected]} in hex</span> → </>
+                          : null}
+                        <span className="text-text-code font-bold">0x{hexOffset}</span>
+                      </span>
+                    ) : (
+                      <span>
+                        {selected} ÷ 16 = {row} remainder {pos}
+                        {pos >= 10 && <span className="text-nvme-green"> ({pos} = {HEX_DIGITS[pos]})</span>}
+                        {row >= 10 && <span className="text-nvme-green"> ({row} = {HEX_DIGITS[row]})</span>}
+                        {" → "}
+                        <span className="text-text-code font-bold">0x{hexOffset}</span>
+                      </span>
+                    )}
                   </div>
                   <div>
-                    <span className="text-text-muted">Raw bytes: </span>
-                    <span className="text-nvme-green font-mono">{activeField.raw}</span>
-                  </div>
-                  <div>
-                    <span className="text-text-muted">Decoded: </span>
-                    <span className="text-text-primary font-mono">{activeField.decoded}</span>
+                    <span className="text-text-muted">Row: </span>
+                    <span className="text-nvme-violet">0x{hexOffset[0]}0</span>
+                    <span className="text-text-muted"> (first hex digit + 0) </span>
+                    <span className="text-text-muted">| Position: </span>
+                    <span className="text-text-primary">{hexOffset[1]}</span>
+                    <span className="text-text-muted"> (second hex digit = byte #{pos} in row)</span>
                   </div>
                 </div>
-                {activeField.end - activeField.start >= 1 && activeField.name !== "Magic signature" && (
-                  <p className="text-text-muted text-[10px] mt-2 italic">
-                    Little-endian: reverse the bytes → then read as hex value
-                  </p>
-                )}
               </div>
-            )}
-          </motion.div>
-        )}
+
+              {/* Value info */}
+              <div className="grid grid-cols-3 gap-3 text-xs mb-3">
+                <div>
+                  <div className="text-text-muted text-[10px]">Offset</div>
+                  <div className="text-text-code font-mono font-bold">0x{hexOffset}</div>
+                  <div className="text-text-muted text-[9px]">(decimal {selected})</div>
+                </div>
+                <div>
+                  <div className="text-text-muted text-[10px]">Byte value</div>
+                  <div className="text-nvme-green font-mono font-bold">
+                    0x{HEX_DATA[selected].toUpperCase()}
+                  </div>
+                  <div className="text-text-muted text-[9px]">(decimal {byteVal})</div>
+                </div>
+                <div>
+                  <div className="text-text-muted text-[10px]">ASCII</div>
+                  <div className="text-nvme-blue font-mono font-bold">
+                    {byteVal >= 0x20 && byteVal <= 0x7e
+                      ? `'${String.fromCharCode(byteVal)}'`
+                      : "(non-printable)"}
+                  </div>
+                </div>
+              </div>
+
+              {/* Field decode with LE math */}
+              {activeField && (
+                <div className="border-t border-story-border pt-3">
+                  <div className="text-text-primary text-xs font-semibold mb-2">
+                    Field: {activeField.name}
+                    <span className="text-text-muted font-normal ml-2">
+                      (offset 0x{activeField.start.toString(16).toUpperCase().padStart(2, "0")}
+                      –0x{activeField.end.toString(16).toUpperCase().padStart(2, "0")})
+                    </span>
+                  </div>
+                  {activeField.end - activeField.start >= 1 && activeField.name !== "Magic signature" ? (
+                    <div className="bg-story-surface rounded-lg p-3 text-xs font-mono space-y-1">
+                      <div>
+                        <span className="text-text-muted font-sans">Raw bytes: </span>
+                        <span className="text-nvme-green">{activeField.raw}</span>
+                      </div>
+                      <div>
+                        <span className="text-text-muted font-sans">Reverse (little-endian): </span>
+                        <span className="text-text-primary">
+                          {activeField.raw.split(" ").reverse().join(" ")}
+                        </span>
+                      </div>
+                      <div>
+                        <span className="text-text-muted font-sans">Hex value: </span>
+                        <span className="text-text-code font-bold">
+                          0x{activeField.raw.split(" ").reverse().join("").toUpperCase()}
+                        </span>
+                      </div>
+                      <div>
+                        <span className="text-text-muted font-sans">Result: </span>
+                        <span className="text-text-primary font-bold font-sans">{activeField.decoded}</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="text-xs">
+                      <span className="text-text-muted">Value: </span>
+                      <span className="text-text-primary font-mono">{activeField.decoded}</span>
+                    </div>
+                  )}
+                </div>
+              )}
+            </motion.div>
+          );
+        })()}
       </AnimatePresence>
 
       {selected === null && (
         <div className="text-center text-text-muted text-[10px] italic py-2">
-          Click any byte above to see its offset, position, and decoded value
+          Click any byte above to see how its offset is calculated and what it decodes to
         </div>
       )}
     </div>
