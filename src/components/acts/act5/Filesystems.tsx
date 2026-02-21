@@ -199,6 +199,97 @@ export default function Filesystems() {
           <li><strong className="text-text-primary">Journaling overhead</strong> — how much extra writing does it do for crash safety?</li>
         </ul>
 
+        {/* Filesystem concepts explained */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-8">
+          <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
+            Filesystem Concepts Explained
+          </div>
+          <p className="text-text-secondary text-xs mb-4 leading-relaxed">
+            Before comparing filesystems, let&apos;s define the terms you&apos;ll see in the table below.
+            Each of these concepts solves a specific problem:
+          </p>
+          <div className="space-y-4">
+            <div className="bg-story-surface rounded-xl p-4">
+              <div className="font-mono font-bold text-nvme-blue text-sm mb-1">Metadata</div>
+              <p className="text-text-secondary text-xs leading-relaxed">
+                Data about your data. When you save a file, the filesystem stores not just the file contents
+                but also: who owns it, when it was created/modified, its size, and <em className="text-text-primary">which
+                LBAs it occupies on the SSD</em>. This bookkeeping data IS the metadata. Without it, the
+                filesystem wouldn&apos;t know where your files are.
+              </p>
+            </div>
+
+            <div className="bg-story-surface rounded-xl p-4">
+              <div className="font-mono font-bold text-nvme-amber text-sm mb-1">Journaling</div>
+              <p className="text-text-secondary text-xs leading-relaxed mb-3">
+                A crash-safety mechanism. Before the filesystem makes any change (writing a file, renaming,
+                deleting), it first writes a note to a special area called the &ldquo;journal&rdquo; describing
+                what it&apos;s about to do. If power is lost mid-operation, the system checks the journal on
+                boot and either completes or rolls back the pending change. Without journaling (ext2), recovery
+                requires scanning the entire drive &mdash; which can take minutes.
+              </p>
+              <div className="bg-story-card rounded-lg p-3">
+                <div className="text-text-muted text-[10px] font-mono mb-2 uppercase">Three journal modes (ext3/ext4):</div>
+                <div className="space-y-1.5 text-[11px]">
+                  <div className="flex items-start gap-2">
+                    <code className="text-nvme-green font-mono font-bold flex-shrink-0">journal</code>
+                    <span className="text-text-muted">Journals both metadata AND file data (safest, slowest &mdash; doubles write traffic)</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <code className="text-nvme-blue font-mono font-bold flex-shrink-0">ordered</code>
+                    <span className="text-text-muted">Journals only metadata, but ensures data is written before metadata is committed (good default)</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <code className="text-nvme-amber font-mono font-bold flex-shrink-0">writeback</code>
+                    <span className="text-text-muted">Journals only metadata, data may be written in any order (fastest, but data can be corrupted on crash)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-story-surface rounded-xl p-4">
+              <div className="font-mono font-bold text-nvme-violet text-sm mb-1">Copy-on-Write (CoW)</div>
+              <p className="text-text-secondary text-xs leading-relaxed">
+                Instead of overwriting data in place, the filesystem writes the new version to a different
+                location and updates the pointer. <em className="text-text-primary">Sound familiar?</em> It&apos;s
+                the same principle as the SSD&apos;s FTL from Act 1! Btrfs does this at the filesystem level.
+                Benefits: old versions of data are preserved (enabling snapshots), and partial writes can never
+                corrupt existing data.
+              </p>
+            </div>
+
+            <div className="bg-story-surface rounded-xl p-4">
+              <div className="font-mono font-bold text-nvme-green text-sm mb-1">Checksums</div>
+              <p className="text-text-secondary text-xs leading-relaxed">
+                A small mathematical fingerprint computed from your data. Every time data is read back, the
+                filesystem recomputes the checksum and compares it. If they don&apos;t match, the data was
+                silently corrupted (<em className="text-text-primary">bit rot</em>). Without checksums (ext4 on
+                data), corruption goes undetected until the file is actually used and looks wrong.
+              </p>
+            </div>
+
+            <div className="bg-story-surface rounded-xl p-4">
+              <div className="font-mono font-bold text-nvme-blue text-sm mb-1">Snapshots</div>
+              <p className="text-text-secondary text-xs leading-relaxed">
+                A frozen-in-time copy of the filesystem. With CoW, creating a snapshot is nearly instant &mdash;
+                you just tell the filesystem &ldquo;preserve all current pointers.&rdquo; New writes go to new
+                locations, while the snapshot still points to the old data. Used for: backups (snapshot before
+                updating), rollbacks (revert to last known good state), and testing (snapshot, experiment, revert).
+              </p>
+            </div>
+
+            <div className="bg-story-surface rounded-xl p-4">
+              <div className="font-mono font-bold text-nvme-amber text-sm mb-1">Compression</div>
+              <p className="text-text-secondary text-xs leading-relaxed">
+                The filesystem automatically compresses data before writing to NAND and decompresses when reading.
+                Btrfs supports zstd, lzo, and zlib. Benefits: less data written to the SSD (less wear, more
+                effective capacity), and reads can be faster because less data needs to come off the NAND
+                (decompression is fast on modern CPUs). Downside: uses CPU time.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Storage stack layer diagram */}
         <StorageStackVisual />
 
@@ -348,6 +439,13 @@ export default function Filesystems() {
           hardware level. So with Btrfs on an NVMe SSD, writes are redirected
           twice — once by Btrfs and once by the FTL. This can increase write
           amplification but also improves crash consistency.
+        </InfoCard>
+
+        <InfoCard variant="note" title="Sources">
+          Filesystem specifications and behaviors referenced from: Linux kernel
+          documentation (kernel.org/doc), ext4 wiki (ext4.wiki.kernel.org), XFS
+          documentation (xfs.org), Btrfs wiki (btrfs.wiki.kernel.org), and the
+          SNIA NVM Programming Model specification.
         </InfoCard>
       </div>
     </SectionWrapper>

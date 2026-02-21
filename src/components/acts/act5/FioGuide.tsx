@@ -33,6 +33,9 @@ const FIO_OPTIONS: {
   { name: "IO Depth Batch Complete", flag: "--iodepth_batch_complete_min=", desc: "Wait for at least this many completions before submitting more.", why: "Controls the balance between submission and completion. Setting this to 1 means 'submit a new batch as soon as any I/O completes.' Setting it higher means 'wait for more completions before submitting' — reducing CPU overhead but potentially leaving the SSD idle briefly.", values: "1, 8, 16", category: "advanced" },
   { name: "Verify", flag: "--verify=", desc: "Data integrity verification — writes patterns, reads back, and verifies.", why: "Detects silent data corruption. fio writes known patterns (checksummed), then reads them back and verifies the checksum matches. If the SSD corrupts data silently (no error status, but wrong data), this catches it. Essential for qualifying new SSDs or testing after firmware updates.", values: "md5, crc32c, sha256, pattern", category: "verification" },
   { name: "Latency Target", flag: "--latency_target=", desc: "Target latency in microseconds. fio automatically adjusts queue depth.", why: "Instead of 'what's the max IOPS at QD128?', this answers 'what's the max IOPS while keeping latency under 500μs?' This is how real SLAs work — you care about both throughput AND latency. fio starts at high QD and backs off until latency meets the target.", values: "500, 1000, 5000", category: "advanced" },
+  { name: "Fsync Interval", flag: "--fsync=", desc: "Call fsync() every N writes. Forces buffered writes to be flushed to the physical device.", why: "Without fsync, writes may sit in the OS buffer cache or the SSD's volatile write cache. Databases use fsync to guarantee durability — 'if I get an fsync success, this data survived a power loss.' SSDs with capacitor-backed caches can acknowledge fsync instantly; cheaper SSDs must actually write to NAND first.", values: "1, 8, 32, 128", gotcha: "fsync=1 means every single write is flushed — extremely slow but maximum durability. This is what databases like PostgreSQL do for WAL writes.", category: "advanced" },
+  { name: "Sync I/O", flag: "--sync=", desc: "Open file with O_SYNC flag, making every single write synchronous.", why: "O_SYNC is like calling fsync after every write — the kernel won't return from write() until data is on stable storage. Very slow but maximum durability. This is how some embedded systems ensure crash safety without relying on application-level fsync calls.", values: "0 (default), 1 (sync)", gotcha: "This makes EVERY write synchronous, not just every Nth write. Expect QD=1-like performance regardless of iodepth setting.", category: "advanced" },
+  { name: "End Fsync", flag: "--end_fsync=", desc: "Call fsync() once at the end of the test.", why: "Useful for measuring 'how long does it take for the SSD to flush its caches after a burst of writes?' Without end_fsync, writes may still be in the SSD's volatile cache when fio reports completion. The delta between runtime with and without end_fsync shows how much data was cached.", values: "0 (default), 1 (enabled)", category: "advanced" },
 ];
 
 const PRESETS = [
@@ -268,6 +271,143 @@ export default function FioGuide() {
             consistent performance. But even they have limits — steady-state testing is the
             only way to know the real sustained performance.
           </p>
+        </div>
+
+        {/* Jobfiles */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-8">
+          <div className="text-text-primary font-semibold text-sm mb-3">
+            Jobfiles &mdash; Reusable Test Configurations
+          </div>
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            Instead of passing everything on the command line, fio can read a{" "}
+            <code className="text-text-code">.fio</code> jobfile &mdash; an INI-style config file that
+            defines one or more jobs. This is cleaner for complex tests and lets you save configurations
+            for reproducible benchmarking.
+          </p>
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            A jobfile has a <code className="text-text-code">[global]</code> section that sets defaults,
+            and each <code className="text-text-code">[job-name]</code> section can override any global
+            setting. This lets you run <em className="text-text-primary">mixed workloads</em> &mdash;
+            e.g., 70% read + 30% write simultaneously &mdash; in a single test run.
+          </p>
+          <pre className="text-xs bg-story-dark rounded-xl p-5 overflow-x-auto font-mono text-white/90 mb-4 whitespace-pre">
+{`[global]
+ioengine=io_uring
+direct=1
+runtime=60s
+time_based
+filename=/dev/nvme0n1
+group_reporting
+
+[seq-read]
+rw=read
+bs=128k
+iodepth=32
+numjobs=1
+
+[rand-write]
+rw=randwrite
+bs=4k
+iodepth=64
+numjobs=2`}
+          </pre>
+          <div className="space-y-2 text-xs text-text-secondary">
+            <div className="flex items-start gap-2">
+              <span className="text-nvme-green font-mono font-bold flex-shrink-0">[global]</span>
+              <span>Sets defaults for all jobs &mdash; engine, direct I/O, runtime, target device</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-nvme-blue font-mono font-bold flex-shrink-0">[seq-read]</span>
+              <span>Sequential read job with 128K blocks &mdash; measures bandwidth</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-nvme-amber font-mono font-bold flex-shrink-0">[rand-write]</span>
+              <span>Random write job with 4K blocks using 2 threads &mdash; measures IOPS</span>
+            </div>
+          </div>
+          <p className="text-text-muted text-[10px] mt-3 italic">
+            Run with: <code className="text-text-code">fio mytest.fio</code> &mdash; both jobs run
+            simultaneously, simulating a realistic mixed workload where reads and writes compete for
+            SSD resources.
+          </p>
+        </div>
+
+        {/* Sync/Async and fsync */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-8">
+          <div className="text-text-primary font-semibold text-sm mb-3">
+            Synchronous vs Asynchronous I/O &mdash; And Why It Matters
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            <div className="bg-story-surface rounded-xl p-4">
+              <div className="text-nvme-amber font-mono font-bold text-xs mb-2">
+                Synchronous I/O
+              </div>
+              <p className="text-text-muted text-xs leading-relaxed mb-2">
+                One request at a time. The application sends a read/write and <strong className="text-text-primary">waits
+                (blocks)</strong> until it completes before sending the next one. Like ordering food and standing
+                at the counter until it&apos;s ready. Simple but slow &mdash; the SSD is idle while the app
+                processes results.
+              </p>
+              <code className="text-text-code text-[10px] font-mono">--ioengine=sync</code>
+            </div>
+            <div className="bg-story-surface rounded-xl p-4">
+              <div className="text-nvme-green font-mono font-bold text-xs mb-2">
+                Asynchronous I/O
+              </div>
+              <p className="text-text-muted text-xs leading-relaxed mb-2">
+                Submit multiple requests without waiting. The application fires off many reads/writes and
+                collects completions later. Like ordering from multiple counters simultaneously. The
+                SSD&apos;s <strong className="text-text-primary">multiple NAND channels stay busy</strong>.
+              </p>
+              <code className="text-text-code text-[10px] font-mono">--ioengine=io_uring</code>
+              <span className="text-text-muted text-[10px]"> or </span>
+              <code className="text-text-code text-[10px] font-mono">libaio</code>
+            </div>
+          </div>
+
+          <div className="bg-nvme-violet/5 rounded-xl p-3 border border-nvme-violet/20 mb-4">
+            <p className="text-text-secondary text-xs leading-relaxed">
+              <strong className="text-nvme-violet">Connection to NVMe queues:</strong> Remember from
+              Act 2 &mdash; NVMe has deep queues (64K entries). Synchronous I/O can only use QD=1. To
+              leverage NVMe&apos;s parallelism, you <em className="text-text-primary">must</em> use async I/O.
+            </p>
+          </div>
+
+          <div className="text-text-primary font-semibold text-sm mb-3">
+            fsync &mdash; Guaranteeing Data Reaches NAND
+          </div>
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            When an application writes data, it may sit in the OS buffer cache or the SSD&apos;s volatile
+            write cache. <code className="text-text-code">fsync()</code> forces all buffered writes to be
+            flushed to stable storage. Databases use fsync to guarantee durability &mdash; &ldquo;if I get
+            an fsync success, this data survived a power loss.&rdquo;
+          </p>
+          <div className="space-y-2 mb-4">
+            {[
+              { flag: "--fsync=N", desc: "Call fsync() every N writes. Balances durability vs performance. Databases typically use fsync=1 for WAL (Write-Ahead Log) writes." },
+              { flag: "--fdatasync=N", desc: "Like fsync but only syncs file data, not metadata (slightly faster). Skips updating timestamps and file size." },
+              { flag: "--sync=1", desc: "Opens the file with O_SYNC flag, making every single write synchronous. As if fsync is called after each write. Very slow but maximum durability." },
+              { flag: "--end_fsync=1", desc: "Call fsync once at the end of the test. Measures how long the SSD takes to flush its caches after a write burst." },
+            ].map((item) => (
+              <div key={item.flag} className="bg-story-surface rounded-lg p-3 flex items-start gap-3">
+                <code className="text-nvme-blue font-mono text-[11px] font-bold flex-shrink-0 mt-0.5">
+                  {item.flag}
+                </code>
+                <p className="text-text-muted text-[11px] leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-nvme-amber/5 rounded-xl p-3 border border-nvme-amber/20">
+            <div className="text-nvme-amber text-xs font-bold mb-1">Why this matters for real workloads</div>
+            <p className="text-text-muted text-[11px] leading-relaxed">
+              When a database does <code className="text-text-code">INSERT</code> +{" "}
+              <code className="text-text-code">fsync</code>, the database isn&apos;t done until fsync returns.
+              The SSD must flush its volatile cache to NAND. SSDs with <strong className="text-text-primary">
+              capacitor-backed caches</strong> can acknowledge fsync instantly (data is safe even on power loss).
+              Cheaper SSDs without capacitors must actually write to NAND first &mdash; much slower.
+            </p>
+          </div>
         </div>
 
         {/* Common Mistakes */}

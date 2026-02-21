@@ -16,6 +16,104 @@ const INITIAL_MAP = [
   { lba: 7, pba: 3, valid: true },
 ];
 
+function L2POverviewVisual() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  return (
+    <div ref={ref} className="bg-story-card rounded-2xl p-6 card-shadow mb-8">
+      <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
+        Logical-to-Physical Mapping &mdash; The Core Idea
+      </div>
+      <div className="flex flex-col sm:flex-row items-center gap-4 max-w-2xl mx-auto">
+        {/* Host / LBA side */}
+        <motion.div
+          className="flex-1 rounded-xl p-4 text-center bg-nvme-green/5 border-2 border-nvme-green/30"
+          initial={{ opacity: 0, x: -20 }}
+          animate={inView ? { opacity: 1, x: 0 } : {}}
+          transition={{ delay: 0.1, type: "spring" }}
+        >
+          <div className="text-nvme-green font-mono font-bold text-sm mb-1">Host</div>
+          <div className="text-text-secondary text-xs mb-2">Sends logical address</div>
+          <div className="bg-story-surface rounded-lg p-2 font-mono text-sm text-text-primary">
+            LBA 42
+          </div>
+        </motion.div>
+
+        {/* Arrow 1 */}
+        <motion.div
+          className="text-nvme-violet"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={inView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ delay: 0.3 }}
+        >
+          <svg width="40" height="24" viewBox="0 0 40 24" className="hidden sm:block">
+            <path d="M0 12 L30 12 L22 6 M30 12 L22 18" stroke="#7c5cfc" strokeWidth="2" fill="none" />
+          </svg>
+          <svg width="24" height="30" viewBox="0 0 24 30" className="block sm:hidden mx-auto">
+            <path d="M12 0 L12 22 L6 16 M12 22 L18 16" stroke="#7c5cfc" strokeWidth="2" fill="none" />
+          </svg>
+        </motion.div>
+
+        {/* FTL Table */}
+        <motion.div
+          className="flex-1 rounded-xl p-4 text-center bg-nvme-violet/5 border-2 border-nvme-violet/30"
+          initial={{ opacity: 0, y: 10 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.2, type: "spring" }}
+        >
+          <div className="text-nvme-violet font-mono font-bold text-sm mb-1">FTL Table</div>
+          <div className="text-text-secondary text-xs mb-2">Lookup in DRAM</div>
+          <div className="bg-story-surface rounded-lg p-2 text-[10px] font-mono space-y-0.5">
+            <div className="text-text-muted">LBA 41 → P128</div>
+            <div className="text-nvme-violet font-bold">LBA 42 → P507</div>
+            <div className="text-text-muted">LBA 43 → P33</div>
+          </div>
+        </motion.div>
+
+        {/* Arrow 2 */}
+        <motion.div
+          className="text-nvme-violet"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={inView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ delay: 0.4 }}
+        >
+          <svg width="40" height="24" viewBox="0 0 40 24" className="hidden sm:block">
+            <path d="M0 12 L30 12 L22 6 M30 12 L22 18" stroke="#7c5cfc" strokeWidth="2" fill="none" />
+          </svg>
+          <svg width="24" height="30" viewBox="0 0 24 30" className="block sm:hidden mx-auto">
+            <path d="M12 0 L12 22 L6 16 M12 22 L18 16" stroke="#7c5cfc" strokeWidth="2" fill="none" />
+          </svg>
+        </motion.div>
+
+        {/* NAND side */}
+        <motion.div
+          className="flex-1 rounded-xl p-4 text-center bg-nvme-amber/5 border-2 border-nvme-amber/30"
+          initial={{ opacity: 0, x: 20 }}
+          animate={inView ? { opacity: 1, x: 0 } : {}}
+          transition={{ delay: 0.3, type: "spring" }}
+        >
+          <div className="text-nvme-amber font-mono font-bold text-sm mb-1">NAND</div>
+          <div className="text-text-secondary text-xs mb-2">Physical page</div>
+          <div className="bg-story-surface rounded-lg p-2 font-mono text-sm text-text-primary">
+            Page 507
+          </div>
+        </motion.div>
+      </div>
+
+      <motion.p
+        className="text-text-muted text-xs text-center mt-4 max-w-lg mx-auto"
+        initial={{ opacity: 0 }}
+        animate={inView ? { opacity: 1 } : {}}
+        transition={{ delay: 0.5 }}
+      >
+        The FTL table lives in <strong className="text-text-primary">DRAM</strong> for fast lookups
+        (~100ns) and is persisted to NAND on power-off so mappings survive reboots.
+      </motion.p>
+    </div>
+  );
+}
+
 function OutOfPlaceWriteVisual() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
@@ -152,11 +250,34 @@ export default function FTLBasics() {
           <strong className="text-text-primary">garbage collection</strong> (covered in Act 4).
         </p>
         <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
-          Click any LBA below to simulate a write and see the FTL in action:
+          Let&apos;s see how this works visually, then try it yourself:
         </p>
 
-        {/* Out-of-place write concept visual */}
-        <OutOfPlaceWriteVisual />
+        {/* L2P overview diagram */}
+        <L2POverviewVisual />
+
+        {/* Usage instructions */}
+        <div className="bg-nvme-blue/5 rounded-xl p-4 border border-nvme-blue/20 mb-6">
+          <div className="text-nvme-blue text-xs font-bold mb-2">Try it yourself &mdash; Interactive FTL Mapping</div>
+          <ul className="text-text-secondary text-xs space-y-1.5 leading-relaxed">
+            <li className="flex items-start gap-2">
+              <span className="text-nvme-blue flex-shrink-0 mt-0.5">1.</span>
+              <span><strong className="text-text-primary">Click any LBA button</strong> to simulate writing new data to that address</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-nvme-blue flex-shrink-0 mt-0.5">2.</span>
+              <span><strong className="text-text-primary">Watch the Physical Page column</strong> &mdash; the PBA changes because SSDs write to a NEW page instead of overwriting</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-nvme-blue flex-shrink-0 mt-0.5">3.</span>
+              <span>The <strong className="text-text-primary">write log</strong> at the bottom shows each remapping as it happens</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-nvme-blue flex-shrink-0 mt-0.5">4.</span>
+              <span><strong className="text-text-primary">Click the same LBA multiple times</strong> to see the PBA keep changing &mdash; old pages become stale</span>
+            </li>
+          </ul>
+        </div>
 
         {/* Interactive FTL mapping */}
         <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
@@ -262,6 +383,9 @@ export default function FTLBasics() {
             </div>
           )}
         </div>
+
+        {/* Out-of-place write concept visual */}
+        <OutOfPlaceWriteVisual />
 
         {/* Key concepts */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
