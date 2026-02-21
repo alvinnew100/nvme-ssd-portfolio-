@@ -150,22 +150,12 @@ function M2ConnectorVisual() {
           </div>
         </div>
 
-        {/* Vertical schematic view */}
+        {/* Vertical pinout — pin-by-pin list */}
         <div>
-          <div className="text-text-muted text-[9px] font-mono mb-2 uppercase tracking-wider">Vertical schematic (side view)</div>
+          <div className="text-text-muted text-[9px] font-mono mb-2 uppercase tracking-wider">Pin-by-pin breakdown</div>
           <div className="bg-story-dark rounded-xl p-4">
-            <div className="flex gap-3">
-              {/* M.2 SSD body (vertical) */}
-              <motion.div
-                className="bg-story-surface/10 border border-story-border/30 rounded-lg w-20 flex items-center justify-center"
-                initial={{ opacity: 0, x: -10 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ delay: 0.5 }}
-              >
-                <span className="text-text-muted text-[8px] font-mono [writing-mode:vertical-lr] rotate-180">M.2 2280 NVMe SSD</span>
-              </motion.div>
-
-              {/* Pin rows (vertical layout) */}
+            <div className="flex items-stretch gap-3">
+              {/* Pin rows (vertical list) */}
               <div className="flex flex-col gap-[2px] flex-1">
                 {[
                   { label: "GND", color: "#475569", pins: "1-3" },
@@ -206,6 +196,7 @@ function M2ConnectorVisual() {
                       </div>
                     ) : (
                       <>
+                        <span className="text-text-muted text-[6px] font-mono w-8 flex-shrink-0">{pin.pins}</span>
                         <div
                           className="w-full h-3 rounded-sm flex items-center"
                           style={{ backgroundColor: `${pin.color}25`, borderLeft: `3px solid ${pin.color}` }}
@@ -214,23 +205,12 @@ function M2ConnectorVisual() {
                             {pin.label}
                           </span>
                         </div>
-                        <span className="text-text-muted text-[6px] font-mono w-8 text-right flex-shrink-0">{pin.pins}</span>
                       </>
                     )}
                   </motion.div>
                 ))}
               </div>
             </div>
-
-            {/* Motherboard slot indicator */}
-            <motion.div
-              className="mt-2 bg-story-surface/10 border border-story-border/30 rounded-lg px-3 py-1.5 text-center"
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
-              transition={{ delay: 1 }}
-            >
-              <span className="text-text-muted text-[8px] font-mono">&darr; Inserts into M.2 slot on motherboard &darr;</span>
-            </motion.div>
           </div>
         </div>
       </div>

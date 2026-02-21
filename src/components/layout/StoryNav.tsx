@@ -31,7 +31,7 @@ const NAV_ITEMS: NavItem[] = [
 
   { id: "act-4", label: "Maintenance", isAct: true, actNum: 4, actIndex: 3 },
   { id: "sec-smart", label: "SMART", actIndex: 3 },
-  { id: "sec-trim", label: "TRIM", actIndex: 3 },
+  { id: "sec-trim", label: "TRIM & GC", actIndex: 3 },
   { id: "sec-wear", label: "Wear Leveling", actIndex: 3 },
 
   { id: "act-5", label: "Storage & Testing", isAct: true, actNum: 5, actIndex: 4 },
