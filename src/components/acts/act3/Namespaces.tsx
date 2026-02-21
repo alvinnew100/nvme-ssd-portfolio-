@@ -79,7 +79,7 @@ export default function Namespaces() {
         </h3>
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
-          In Act 1, we learned about LBAs — numbered mailboxes that address the
+          In Lesson 1, we learned about LBAs — numbered mailboxes that address the
           drive&apos;s storage. But here&apos;s a question: <em className="text-text-primary">
           what if you want one physical drive to act like multiple separate
           drives?</em>

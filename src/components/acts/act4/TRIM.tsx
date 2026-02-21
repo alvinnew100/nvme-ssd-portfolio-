@@ -101,7 +101,7 @@ export default function TRIM() {
 
         {/* ─── Section 1: The Problem ─── */}
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
-          In Act 1, we learned about the FTL — the Flash Translation Layer that
+          In Lesson 3, we learned about the FTL — the Flash Translation Layer that
           writes data to <em>new</em> pages instead of overwriting old ones. Old
           pages become &ldquo;stale.&rdquo; We also learned that erasing happens at
           the <em>block</em> level (hundreds of pages at once).

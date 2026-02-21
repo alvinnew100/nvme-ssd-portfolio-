@@ -147,6 +147,7 @@ export default function Queues() {
   const [cqTail, setCqTail] = useState(0);
   const [nextId, setNextId] = useState(1);
   const [status, setStatus] = useState("Idle — click 'Submit Command' to begin");
+  const [flowAnimating, setFlowAnimating] = useState(false);
 
   const sqCount = sqSlots.filter(Boolean).length;
   const cqCount = cqSlots.filter(Boolean).length;
@@ -175,6 +176,11 @@ export default function Queues() {
       setStatus("No command at SQ head.");
       return;
     }
+
+    // Trigger flow animation
+    setFlowAnimating(true);
+    setTimeout(() => setFlowAnimating(false), 800);
+
     const newSq = [...sqSlots];
     newSq[sqHead] = null;
     setSqSlots(newSq);
@@ -219,6 +225,7 @@ export default function Queues() {
     setCqTail(0);
     setNextId(1);
     setStatus("Queues reset.");
+    setFlowAnimating(false);
   };
 
   return (
@@ -274,13 +281,13 @@ export default function Queues() {
           to a real step in the NVMe command flow:
         </p>
 
-        <div className="bg-story-card rounded-2xl p-8 card-shadow mb-6">
+        <div className="bg-story-card rounded-2xl p-8 card-shadow mb-6 relative">
           <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
             Interactive Circular Queue Simulator
           </div>
 
-          {/* Circular queue diagrams */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+          {/* Circular queue diagrams with flow arrow */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 relative">
             <CircularQueue
               entries={sqSlots}
               head={sqHead}
@@ -290,6 +297,57 @@ export default function Queues() {
               label="Submission Queue (SQ)"
               type="sq"
             />
+
+            {/* Flow arrow between queues */}
+            <div className="hidden sm:flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none">
+              <div className="relative w-16">
+                <svg viewBox="0 0 64 24" className="w-full">
+                  <defs>
+                    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                      <path d="M0,0 L8,3 L0,6" fill="#9e9789" />
+                    </marker>
+                  </defs>
+                  <line x1="0" y1="12" x2="56" y2="12" stroke="#9e9789" strokeWidth="1.5" markerEnd="url(#arrowhead)" strokeDasharray="4,3" />
+                </svg>
+                <AnimatePresence>
+                  {flowAnimating && (
+                    <motion.div
+                      className="absolute top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-nvme-green shadow-md shadow-nvme-green/40"
+                      initial={{ left: -4, opacity: 0, scale: 0.5 }}
+                      animate={{ left: 56, opacity: [0, 1, 1, 0], scale: [0.5, 1.2, 1.2, 0.5] }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.7, ease: "easeInOut" }}
+                    />
+                  )}
+                </AnimatePresence>
+              </div>
+            </div>
+
+            {/* Mobile flow arrow (vertical) */}
+            <div className="flex sm:hidden items-center justify-center -my-2 z-10 pointer-events-none">
+              <div className="relative h-8">
+                <svg viewBox="0 0 24 32" className="h-full w-6">
+                  <defs>
+                    <marker id="arrowhead-v" markerWidth="6" markerHeight="8" refX="3" refY="8" orient="auto">
+                      <path d="M0,0 L3,8 L6,0" fill="#9e9789" />
+                    </marker>
+                  </defs>
+                  <line x1="12" y1="0" x2="12" y2="24" stroke="#9e9789" strokeWidth="1.5" markerEnd="url(#arrowhead-v)" strokeDasharray="4,3" />
+                </svg>
+                <AnimatePresence>
+                  {flowAnimating && (
+                    <motion.div
+                      className="absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-nvme-green shadow-md shadow-nvme-green/40"
+                      initial={{ top: -4, opacity: 0, scale: 0.5 }}
+                      animate={{ top: 24, opacity: [0, 1, 1, 0], scale: [0.5, 1.2, 1.2, 0.5] }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.7, ease: "easeInOut" }}
+                    />
+                  )}
+                </AnimatePresence>
+              </div>
+            </div>
+
             <CircularQueue
               entries={cqSlots}
               head={cqHead}
@@ -313,108 +371,118 @@ export default function Queues() {
             </div>
           </div>
 
-          {/* Detailed step-by-step guide */}
-          <div className="bg-story-surface rounded-xl p-5 mb-4 text-xs space-y-3">
-            <div className="text-text-muted font-mono text-[10px] uppercase tracking-wider mb-2">
-              What to do &amp; what to observe at each step
-            </div>
-            <div className="space-y-3">
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="w-5 h-5 rounded-full bg-nvme-blue text-white flex items-center justify-center text-[10px] font-bold">1</span>
-                  <strong className="text-nvme-blue">Submit Command</strong>
+          {/* Detailed step-by-step guide — collapsible on mobile */}
+          <details className="sm:open bg-story-surface rounded-xl mb-4 text-xs group" open>
+            <summary className="sm:hidden cursor-pointer p-4 text-text-muted font-mono text-[10px] uppercase tracking-wider select-none flex items-center justify-between">
+              <span>Step-by-step guide</span>
+              <svg className="w-4 h-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </summary>
+            <div className="p-5 pt-0 sm:pt-5 space-y-3">
+              <div className="text-text-muted font-mono text-[10px] uppercase tracking-wider mb-2 hidden sm:block">
+                What to do &amp; what to observe at each step
+              </div>
+              <div className="space-y-3">
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="w-5 h-5 rounded-full bg-nvme-blue text-white flex items-center justify-center text-[10px] font-bold">1</span>
+                    <strong className="text-nvme-blue">Submit Command</strong>
+                  </div>
+                  <p className="text-text-secondary ml-7 leading-relaxed">
+                    Click this to simulate the host placing a command into the Submission Queue.
+                    <strong className="text-text-primary"> Watch the SQ ring:</strong> a new entry (C1, C2, etc.)
+                    appears at the <span className="text-nvme-amber font-mono">TAIL</span> position. The tail pointer
+                    advances clockwise. In real NVMe, the host then writes the new tail value to
+                    the SQ Tail Doorbell register — that&apos;s how the SSD knows new work arrived.
+                    <em className="text-text-primary"> Try clicking it 3-4 times</em> to queue up multiple
+                    commands and watch the tail chase around the ring.
+                  </p>
                 </div>
-                <p className="text-text-secondary ml-7 leading-relaxed">
-                  Click this to simulate the host placing a command into the Submission Queue.
-                  <strong className="text-text-primary"> Watch the SQ ring:</strong> a new entry (C1, C2, etc.)
-                  appears at the <span className="text-nvme-amber font-mono">TAIL</span> position. The tail pointer
-                  advances clockwise. In real NVMe, the host then writes the new tail value to
-                  the SQ Tail Doorbell register — that&apos;s how the SSD knows new work arrived.
-                  <em className="text-text-primary"> Try clicking it 3-4 times</em> to queue up multiple
-                  commands and watch the tail chase around the ring.
-                </p>
-              </div>
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="w-5 h-5 rounded-full bg-nvme-green text-white flex items-center justify-center text-[10px] font-bold">2</span>
-                  <strong className="text-nvme-green">Process (SSD)</strong>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="w-5 h-5 rounded-full bg-nvme-green text-white flex items-center justify-center text-[10px] font-bold">2</span>
+                    <strong className="text-nvme-green">Process (SSD)</strong>
+                  </div>
+                  <p className="text-text-secondary ml-7 leading-relaxed">
+                    Click this to simulate the SSD fetching a command and completing it.
+                    <strong className="text-text-primary"> Watch both rings:</strong> the entry disappears from the
+                    SQ at the <span className="text-nvme-blue font-mono">HEAD</span> position (the SSD consumed it),
+                    and a matching result appears in the CQ. The SQ head advances, and the CQ tail advances.
+                    <em className="text-text-primary"> Notice:</em> commands are always consumed in order (FIFO) —
+                    the SSD reads from HEAD, not from any random slot.
+                  </p>
                 </div>
-                <p className="text-text-secondary ml-7 leading-relaxed">
-                  Click this to simulate the SSD fetching a command and completing it.
-                  <strong className="text-text-primary"> Watch both rings:</strong> the entry disappears from the
-                  SQ at the <span className="text-nvme-blue font-mono">HEAD</span> position (the SSD consumed it),
-                  and a matching result appears in the CQ. The SQ head advances, and the CQ tail advances.
-                  <em className="text-text-primary"> Notice:</em> commands are always consumed in order (FIFO) —
-                  the SSD reads from HEAD, not from any random slot.
-                </p>
-              </div>
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="w-5 h-5 rounded-full bg-nvme-violet text-white flex items-center justify-center text-[10px] font-bold">3</span>
-                  <strong className="text-nvme-violet">Consume Result</strong>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="w-5 h-5 rounded-full bg-nvme-violet text-white flex items-center justify-center text-[10px] font-bold">3</span>
+                    <strong className="text-nvme-violet">Consume Result</strong>
+                  </div>
+                  <p className="text-text-secondary ml-7 leading-relaxed">
+                    Click this to simulate the host reading a completion entry.
+                    <strong className="text-text-primary"> Watch the CQ ring:</strong> the result is removed from the
+                    CQ head position and the head advances. The host then writes the new CQ head to the
+                    CQ Head Doorbell — telling the SSD &ldquo;I&apos;ve read up to this point, you can
+                    reuse those slots.&rdquo;
+                  </p>
                 </div>
-                <p className="text-text-secondary ml-7 leading-relaxed">
-                  Click this to simulate the host reading a completion entry.
-                  <strong className="text-text-primary"> Watch the CQ ring:</strong> the result is removed from the
-                  CQ head position and the head advances. The host then writes the new CQ head to the
-                  CQ Head Doorbell — telling the SSD &ldquo;I&apos;ve read up to this point, you can
-                  reuse those slots.&rdquo;
-                </p>
+              </div>
+              <div className="border-t border-story-border pt-3 mt-3">
+                <div className="text-text-muted font-mono text-[10px] uppercase tracking-wider mb-1.5">
+                  Experiments to try
+                </div>
+                <div className="text-text-secondary space-y-1 leading-relaxed">
+                  <div>&bull; Submit 8 commands without processing any — the SQ fills up and rejects the 9th (queue full)</div>
+                  <div>&bull; Submit 3, process 3, consume 3 — watch the full lifecycle: SQ &rarr; SSD &rarr; CQ &rarr; Host</div>
+                  <div>&bull; Submit 5, process only 2 — watch how HEAD and TAIL have a gap (the pending commands)</div>
+                  <div>&bull; Fill SQ, process all, but don&apos;t consume — CQ fills up, blocking new completions</div>
+                </div>
               </div>
             </div>
-            <div className="border-t border-story-border pt-3 mt-3">
-              <div className="text-text-muted font-mono text-[10px] uppercase tracking-wider mb-1.5">
-                Experiments to try
-              </div>
-              <div className="text-text-secondary space-y-1 leading-relaxed">
-                <div>&bull; Submit 8 commands without processing any — the SQ fills up and rejects the 9th (queue full)</div>
-                <div>&bull; Submit 3, process 3, consume 3 — watch the full lifecycle: SQ → SSD → CQ → Host</div>
-                <div>&bull; Submit 5, process only 2 — watch how HEAD and TAIL have a gap (the pending commands)</div>
-                <div>&bull; Fill SQ, process all, but don&apos;t consume — CQ fills up, blocking new completions</div>
-              </div>
-            </div>
-          </div>
+          </details>
 
-          {/* Control buttons */}
-          <div className="flex flex-wrap gap-3 mb-4 justify-center">
-            <button
-              onClick={submitCommand}
-              className="px-5 py-2.5 bg-nvme-blue text-white rounded-full text-xs font-semibold hover:shadow-lg hover:shadow-nvme-blue/20 transition-all active:scale-95"
-            >
-              1. Submit Command
-            </button>
-            <button
-              onClick={processCommand}
-              className="px-5 py-2.5 bg-nvme-green text-white rounded-full text-xs font-semibold hover:shadow-lg hover:shadow-nvme-green/20 transition-all active:scale-95"
-            >
-              2. Process (SSD)
-            </button>
-            <button
-              onClick={consumeCompletion}
-              className="px-5 py-2.5 bg-nvme-violet text-white rounded-full text-xs font-semibold hover:shadow-lg hover:shadow-nvme-violet/20 transition-all active:scale-95"
-            >
-              3. Consume Result
-            </button>
-            <button
-              onClick={reset}
-              className="px-5 py-2.5 bg-story-surface text-text-muted rounded-full text-xs font-semibold hover:bg-story-border transition-all"
-            >
-              Reset
-            </button>
-          </div>
+          {/* Control buttons + status — sticky on mobile */}
+          <div className="sticky bottom-0 z-10 bg-story-card pt-3 -mx-8 px-8 border-t border-story-border/30 sm:static sm:border-0 sm:mx-0 sm:px-0 sm:pt-0">
+            <div className="flex flex-wrap gap-3 mb-4 justify-center">
+              <button
+                onClick={submitCommand}
+                className="px-5 py-2.5 bg-nvme-blue text-white rounded-full text-xs font-semibold hover:shadow-lg hover:shadow-nvme-blue/20 transition-all active:scale-95"
+              >
+                1. Submit Command
+              </button>
+              <button
+                onClick={processCommand}
+                className="px-5 py-2.5 bg-nvme-green text-white rounded-full text-xs font-semibold hover:shadow-lg hover:shadow-nvme-green/20 transition-all active:scale-95"
+              >
+                2. Process (SSD)
+              </button>
+              <button
+                onClick={consumeCompletion}
+                className="px-5 py-2.5 bg-nvme-violet text-white rounded-full text-xs font-semibold hover:shadow-lg hover:shadow-nvme-violet/20 transition-all active:scale-95"
+              >
+                3. Consume Result
+              </button>
+              <button
+                onClick={reset}
+                className="px-5 py-2.5 bg-story-surface text-text-muted rounded-full text-xs font-semibold hover:bg-story-border transition-all"
+              >
+                Reset
+              </button>
+            </div>
 
-          {/* Status line */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={status}
-              initial={{ opacity: 0, y: 5 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              className="text-text-secondary text-xs bg-story-surface rounded-xl p-3 font-mono text-center"
-            >
-              {status}
-            </motion.div>
-          </AnimatePresence>
+            {/* Status line */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={status}
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                className="text-text-secondary text-xs bg-story-surface rounded-xl p-3 font-mono text-center mb-2 sm:mb-0"
+              >
+                {status}
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
 
         {/* Why this design works */}

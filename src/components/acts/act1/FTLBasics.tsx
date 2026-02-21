@@ -247,7 +247,7 @@ export default function FTLBasics() {
           The old page still exists but now contains outdated data — it&apos;s
           called <strong className="text-text-primary">&ldquo;stale.&rdquo;</strong> Stale
           pages waste space. They&apos;ll be cleaned up later by a process called{" "}
-          <strong className="text-text-primary">garbage collection</strong> (covered in Act 4).
+          <strong className="text-text-primary">garbage collection</strong> (covered in Lesson 10).
         </p>
         <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
           Let&apos;s see how this works visually, then try it yourself:

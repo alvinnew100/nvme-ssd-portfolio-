@@ -243,7 +243,7 @@ export default function PCIe() {
           How the SSD Connects to Your Computer — PCIe
         </h3>
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
-          In Act 1 we looked inside the SSD — its cells, pages, blocks, controller, and
+          In earlier lessons we looked inside the SSD — its cells, pages, blocks, controller, and
           FTL. But how does the SSD actually talk to your computer&apos;s CPU and memory?
           Through a high-speed connection called <strong className="text-text-primary">PCIe</strong>{" "}
           (Peripheral Component Interconnect Express).

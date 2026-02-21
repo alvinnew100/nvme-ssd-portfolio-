@@ -76,7 +76,7 @@ export default function SQEStructure() {
         </h3>
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
-          In Act 2, we learned that commands go into the Submission Queue. But what
+          In Lesson 5, we learned that commands go into the Submission Queue. But what
           does a command actually <em>look like</em>? It&apos;s not text — it&apos;s a
           precisely structured block of 64 bytes (that&apos;s 512 bits, or 16 groups
           of 4 bytes each).

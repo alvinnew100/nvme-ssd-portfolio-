@@ -50,10 +50,16 @@ export default function WriteAmplification() {
           rated drive effectively only lasts 200 TBW of <em>your</em> data. Two
           factors dominate WAF:
         </p>
-        <ul className="text-text-secondary mb-8 leading-relaxed max-w-3xl list-disc ml-5 space-y-1">
+        <ul className="text-text-secondary mb-4 leading-relaxed max-w-3xl list-disc ml-5 space-y-1">
           <li><strong className="text-text-primary">TRIM</strong> — tells the FTL which pages are free, so GC doesn&apos;t copy dead data</li>
           <li><strong className="text-text-primary">Drive fullness</strong> — a nearly-full drive has fewer free blocks, forcing GC to work harder</li>
+          <li><strong className="text-text-primary">Workload pattern</strong> — sequential writes fill blocks cleanly (low WAF), while random 4KB writes scatter data across many blocks, leaving each partially valid and forcing GC to copy more valid pages during reclamation</li>
         </ul>
+        <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
+          Typical WAF values: consumer SSDs under normal use see ~1.5-3x,
+          enterprise drives with steady-state random writes can reach 3-5x,
+          and well-tuned sequential workloads with TRIM approach the ideal 1.0x.
+        </p>
 
         {/* Interactive WAF calculator */}
         <div className="bg-story-card rounded-2xl p-6 card-shadow mb-8">

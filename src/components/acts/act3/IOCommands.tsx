@@ -55,7 +55,7 @@ const IO_CMDS = [
     opcode: "0x09",
     color: "#e05d6f",
     desc: "Tells the SSD which LBA ranges are no longer in use. The SSD can then reclaim those physical blocks during garbage collection.",
-    why: "Remember the FTL from Act 1? When you delete a file, the filesystem frees the LBAs, but the SSD doesn't know — it still thinks those pages contain valid data. TRIM bridges this gap, reducing write amplification and keeping the drive fast.",
+    why: "Remember the FTL from Lesson 3? When you delete a file, the filesystem frees the LBAs, but the SSD doesn't know — it still thinks those pages contain valid data. TRIM bridges this gap, reducing write amplification and keeping the drive fast.",
     cli: "nvme dsm /dev/nvme0n1 --ad --slbs=0 --blocks=256",
     note: "--ad = deallocate (TRIM). Multiple ranges can be specified in one command",
   },

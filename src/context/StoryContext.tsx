@@ -3,8 +3,8 @@
 import { createContext, useContext, useState, useCallback } from "react";
 
 interface StoryState {
-  activeAct: number;
-  setActiveAct: (act: number) => void;
+  activeLesson: number;
+  setActiveLesson: (lesson: number) => void;
   scrollToPlayground: (commandId: string) => void;
   pendingCommand: string | null;
   clearPendingCommand: () => void;
@@ -13,12 +13,12 @@ interface StoryState {
 const StoryContext = createContext<StoryState | null>(null);
 
 export function StoryProvider({ children }: { children: React.ReactNode }) {
-  const [activeAct, setActiveAct] = useState(1);
+  const [activeLesson, setActiveLesson] = useState(1);
   const [pendingCommand, setPendingCommand] = useState<string | null>(null);
 
   const scrollToPlayground = useCallback((commandId: string) => {
     setPendingCommand(commandId);
-    const el = document.getElementById("act-6");
+    const el = document.getElementById("lesson-12");
     el?.scrollIntoView({ behavior: "smooth" });
   }, []);
 
@@ -29,8 +29,8 @@ export function StoryProvider({ children }: { children: React.ReactNode }) {
   return (
     <StoryContext.Provider
       value={{
-        activeAct,
-        setActiveAct,
+        activeLesson,
+        setActiveLesson,
         scrollToPlayground,
         pendingCommand,
         clearPendingCommand,

@@ -5,56 +5,89 @@ import { useState, useEffect, useCallback } from "react";
 interface NavItem {
   id: string;
   label: string;
-  isAct?: boolean;
-  actNum?: number;
-  actIndex?: number;
+  isLesson?: boolean;
+  lessonNum?: number;
+  lessonIndex?: number;
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { id: "act-1", label: "Foundations", isAct: true, actNum: 1, actIndex: 0 },
-  { id: "sec-binary", label: "Binary", actIndex: 0 },
-  { id: "sec-nand", label: "NAND Cell", actIndex: 0 },
-  { id: "sec-ssd", label: "SSD Overview", actIndex: 0 },
-  { id: "sec-ftl", label: "FTL", actIndex: 0 },
+  // Lesson 1: Bits, Bytes, and Addressing
+  { id: "lesson-1", label: "Bits & Addressing", isLesson: true, lessonNum: 1, lessonIndex: 0 },
+  { id: "sec-binary", label: "Binary", lessonIndex: 0 },
+  { id: "sec-lba", label: "LBA", lessonIndex: 0 },
 
-  { id: "act-2", label: "Interface", isAct: true, actNum: 2, actIndex: 1 },
-  { id: "sec-pcie", label: "PCIe", actIndex: 1 },
-  { id: "sec-bar0", label: "BAR0", actIndex: 1 },
-  { id: "sec-queues", label: "Queues", actIndex: 1 },
-  { id: "sec-doorbells", label: "Doorbells", actIndex: 1 },
+  // Lesson 2: NAND Flash Memory
+  { id: "lesson-2", label: "NAND Flash", isLesson: true, lessonNum: 2, lessonIndex: 1 },
+  { id: "sec-nand", label: "NAND Cells", lessonIndex: 1 },
+  { id: "sec-nand-hierarchy", label: "NAND Hierarchy", lessonIndex: 1 },
 
-  { id: "act-3", label: "Protocol", isAct: true, actNum: 3, actIndex: 2 },
-  { id: "sec-sqe", label: "SQE Structure", actIndex: 2 },
-  { id: "sec-admin-cmds", label: "Admin Cmds", actIndex: 2 },
-  { id: "sec-io-cmds", label: "I/O Cmds", actIndex: 2 },
-  { id: "sec-errors", label: "Errors", actIndex: 2 },
+  // Lesson 3: SSD Architecture and FTL
+  { id: "lesson-3", label: "SSD & FTL", isLesson: true, lessonNum: 3, lessonIndex: 2 },
+  { id: "sec-ssd", label: "SSD Overview", lessonIndex: 2 },
+  { id: "sec-ftl", label: "FTL", lessonIndex: 2 },
 
-  { id: "act-4", label: "Maintenance", isAct: true, actNum: 4, actIndex: 3 },
-  { id: "sec-smart", label: "SMART", actIndex: 3 },
-  { id: "sec-trim", label: "TRIM & GC", actIndex: 3 },
-  { id: "sec-wear", label: "Wear Leveling", actIndex: 3 },
+  // Lesson 4: PCIe — The Highway
+  { id: "lesson-4", label: "PCIe", isLesson: true, lessonNum: 4, lessonIndex: 3 },
+  { id: "sec-pcie", label: "PCIe", lessonIndex: 3 },
 
-  { id: "act-5", label: "Storage & Testing", isAct: true, actNum: 5, actIndex: 4 },
-  { id: "sec-filesystems", label: "Filesystems", actIndex: 4 },
-  { id: "sec-fio", label: "fio Guide", actIndex: 4 },
-  { id: "sec-testing", label: "Testing", actIndex: 4 },
+  // Lesson 5: BAR0, Queues, and Doorbells
+  { id: "lesson-5", label: "BAR0 & Queues", isLesson: true, lessonNum: 5, lessonIndex: 4 },
+  { id: "sec-bar0", label: "BAR0 Registers", lessonIndex: 4 },
+  { id: "sec-queues", label: "Queues", lessonIndex: 4 },
+  { id: "sec-doorbells", label: "Doorbells", lessonIndex: 4 },
 
-  { id: "act-6", label: "Advanced", isAct: true, actNum: 6, actIndex: 5 },
-  { id: "sec-firmware", label: "Firmware", actIndex: 5 },
-  { id: "sec-security", label: "Security", actIndex: 5 },
-  { id: "sec-passthru", label: "Passthru", actIndex: 5 },
-  { id: "sec-tracing", label: "Tracing", actIndex: 5 },
+  // Lesson 6: Boot Sequence and Bus Trace
+  { id: "lesson-6", label: "Boot & Bus Trace", isLesson: true, lessonNum: 6, lessonIndex: 5 },
+  { id: "sec-boot", label: "Boot Sequence", lessonIndex: 5 },
+  { id: "sec-bus-trace", label: "Bus Trace", lessonIndex: 5 },
 
-  { id: "act-7", label: "Playground", isAct: true, actNum: 7, actIndex: 6 },
+  // Lesson 7: Command Structure
+  { id: "lesson-7", label: "Command Structure", isLesson: true, lessonNum: 7, lessonIndex: 6 },
+  { id: "sec-sqe", label: "SQE Structure", lessonIndex: 6 },
+  { id: "sec-identify", label: "Identify", lessonIndex: 6 },
+  { id: "sec-namespaces", label: "Namespaces", lessonIndex: 6 },
+
+  // Lesson 8: NVMe Commands
+  { id: "lesson-8", label: "NVMe Commands", isLesson: true, lessonNum: 8, lessonIndex: 7 },
+  { id: "sec-admin-cmds", label: "Admin Cmds", lessonIndex: 7 },
+  { id: "sec-io-cmds", label: "I/O Cmds", lessonIndex: 7 },
+
+  // Lesson 9: Error Handling and I/O Path
+  { id: "lesson-9", label: "Errors & I/O Path", isLesson: true, lessonNum: 9, lessonIndex: 8 },
+  { id: "sec-errors", label: "Errors", lessonIndex: 8 },
+  { id: "sec-io-path", label: "I/O Path", lessonIndex: 8 },
+
+  // Lesson 10: SMART, TRIM, and Drive Health
+  { id: "lesson-10", label: "Drive Health", isLesson: true, lessonNum: 10, lessonIndex: 9 },
+  { id: "sec-smart", label: "SMART", lessonIndex: 9 },
+  { id: "sec-trim", label: "TRIM & GC", lessonIndex: 9 },
+  { id: "sec-waf", label: "Write Amplification", lessonIndex: 9 },
+  { id: "sec-format-sanitize", label: "Format & Sanitize", lessonIndex: 9 },
+  { id: "sec-wear", label: "Wear Leveling", lessonIndex: 9 },
+
+  // Lesson 11: Storage Stack and Testing
+  { id: "lesson-11", label: "Storage & Testing", isLesson: true, lessonNum: 11, lessonIndex: 10 },
+  { id: "sec-filesystems", label: "Filesystems", lessonIndex: 10 },
+  { id: "sec-fio", label: "fio Guide", lessonIndex: 10 },
+  { id: "sec-testing", label: "Testing", lessonIndex: 10 },
+
+  // Lesson 12: Advanced Features and Tools
+  { id: "lesson-12", label: "Advanced & Tools", isLesson: true, lessonNum: 12, lessonIndex: 11 },
+  { id: "sec-firmware", label: "Firmware", lessonIndex: 11 },
+  { id: "sec-security", label: "Security", lessonIndex: 11 },
+  { id: "sec-passthru", label: "Passthru", lessonIndex: 11 },
+  { id: "sec-tracing", label: "Tracing", lessonIndex: 11 },
+  { id: "sec-command-ref", label: "Command Ref", lessonIndex: 11 },
+  { id: "sec-playground", label: "Playground", lessonIndex: 11 },
 ];
 
 export default function StoryNav() {
-  const [activeId, setActiveId] = useState("act-1");
+  const [activeId, setActiveId] = useState("lesson-1");
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const activeItem = NAV_ITEMS.find((n) => n.id === activeId);
-  const activeActIndex = activeItem?.actIndex ?? 0;
-  const totalActs = NAV_ITEMS.filter((n) => n.isAct).length;
+  const activeLessonIndex = activeItem?.lessonIndex ?? 0;
+  const totalLessons = NAV_ITEMS.filter((n) => n.isLesson).length;
 
   useEffect(() => {
     const elements: (HTMLElement | null)[] = NAV_ITEMS.map((n) =>
@@ -82,22 +115,22 @@ export default function StoryNav() {
     setMobileOpen(false);
   }, []);
 
-  // Filter: show all acts + sub-sections of the active act
+  // Filter: show all lessons + sub-sections of the active lesson
   const visibleItems = NAV_ITEMS.filter(
-    (n) => n.isAct || n.actIndex === activeActIndex
+    (n) => n.isLesson || n.lessonIndex === activeLessonIndex
   );
 
   return (
     <>
       {/* ─── Desktop: Left sidebar ─── */}
       <nav className="fixed left-4 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
-        <div className="bg-story-card/95 backdrop-blur-md border border-story-border/50 rounded-xl py-3 px-2 shadow-xl shadow-black/10 w-40">
+        <div className="bg-story-card/95 backdrop-blur-md border border-story-border/50 rounded-xl py-3 px-2 shadow-xl shadow-black/10 w-44 max-h-[80vh] overflow-y-auto">
           {visibleItems.map((item) => {
             const isActive = item.id === activeId;
-            const isPastAct =
-              item.isAct && (item.actIndex ?? 0) < activeActIndex;
+            const isPastLesson =
+              item.isLesson && (item.lessonIndex ?? 0) < activeLessonIndex;
 
-            if (item.isAct) {
+            if (item.isLesson) {
               return (
                 <button
                   key={item.id}
@@ -105,7 +138,7 @@ export default function StoryNav() {
                   className={`flex items-center gap-2 w-full px-2 py-1.5 rounded-lg text-left transition-colors ${
                     isActive
                       ? "text-nvme-blue"
-                      : isPastAct
+                      : isPastLesson
                       ? "text-text-secondary"
                       : "text-text-muted hover:text-text-secondary"
                   }`}
@@ -114,13 +147,13 @@ export default function StoryNav() {
                     className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${
                       isActive
                         ? "bg-nvme-blue"
-                        : isPastAct
+                        : isPastLesson
                         ? "bg-nvme-blue/40"
                         : "bg-story-border"
                     }`}
                   />
                   <span className="text-[11px] font-semibold truncate">
-                    {item.actNum}. {item.label}
+                    {item.lessonNum}. {item.label}
                   </span>
                 </button>
               );
@@ -155,7 +188,7 @@ export default function StoryNav() {
           <div
             className="h-full bg-nvme-blue transition-all duration-300"
             style={{
-              width: `${((activeActIndex + 1) / totalActs) * 100}%`,
+              width: `${((activeLessonIndex + 1) / totalLessons) * 100}%`,
             }}
           />
         </div>
@@ -163,7 +196,7 @@ export default function StoryNav() {
           onClick={() => setMobileOpen(!mobileOpen)}
           className="absolute bottom-4 right-4 bg-story-card border border-story-border rounded-full px-4 py-2 text-xs text-text-secondary font-mono shadow-lg shadow-black/5"
         >
-          Act {activeActIndex + 1} / {totalActs}
+          Lesson {activeLessonIndex + 1} / {totalLessons}
         </button>
       </div>
 
@@ -180,7 +213,7 @@ export default function StoryNav() {
                 key={item.id}
                 onClick={() => scrollTo(item.id)}
                 className={`block w-full text-left rounded-lg transition-colors ${
-                  item.isAct
+                  item.isLesson
                     ? `px-3 py-2 text-xs font-semibold ${
                         item.id === activeId
                           ? "text-nvme-blue bg-nvme-blue/5"
@@ -193,7 +226,7 @@ export default function StoryNav() {
                       }`
                 }`}
               >
-                {item.isAct ? `${item.actNum}. ${item.label}` : item.label}
+                {item.isLesson ? `${item.lessonNum}. ${item.label}` : item.label}
               </button>
             ))}
           </div>

@@ -144,6 +144,23 @@ export default function FormatSanitize() {
           </div>
         </div>
 
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+          <div className="text-text-primary font-semibold text-sm mb-2">
+            Cryptographic Erase — why it&apos;s instant
+          </div>
+          <p className="text-text-secondary text-sm leading-relaxed">
+            Self-encrypting drives (SED) encrypt all data with an internal AES key
+            before writing it to NAND. Crypto Erase doesn&apos;t touch the NAND at
+            all — it destroys the encryption key, making all stored data
+            permanently unreadable gibberish. This is why it completes in under a
+            second regardless of drive capacity. The physical NAND still contains
+            encrypted ciphertext, but without the key it&apos;s indistinguishable
+            from random data. Crypto Erase is sufficient for most commercial
+            decommissioning; block erase or overwrite is required when regulations
+            demand physical media sanitization.
+          </p>
+        </div>
+
         <InfoCard variant="warning" title="Sanitize is irreversible">
           Once started, Sanitize cannot be aborted and affects all namespaces on the
           entire NVM subsystem. Check progress with{" "}

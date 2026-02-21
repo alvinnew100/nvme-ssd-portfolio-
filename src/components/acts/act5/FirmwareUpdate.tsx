@@ -148,7 +148,7 @@ export default function FirmwareUpdate() {
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           Remember the <strong className="text-text-primary">SSD controller</strong> from
-          Act 1? It&apos;s the processor that runs the FTL, manages wear leveling, handles
+          Lesson 3? It&apos;s the processor that runs the FTL, manages wear leveling, handles
           garbage collection, and processes every NVMe command. All of that behavior is
           controlled by <em className="text-text-primary">firmware</em> — software that runs
           on the controller chip.

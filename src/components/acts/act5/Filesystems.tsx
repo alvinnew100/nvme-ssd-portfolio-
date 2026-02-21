@@ -252,7 +252,7 @@ export default function Filesystems() {
               <p className="text-text-secondary text-xs leading-relaxed">
                 Instead of overwriting data in place, the filesystem writes the new version to a different
                 location and updates the pointer. <em className="text-text-primary">Sound familiar?</em> It&apos;s
-                the same principle as the SSD&apos;s FTL from Act 1! Btrfs does this at the filesystem level.
+                the same principle as the SSD&apos;s FTL from Lesson 3! Btrfs does this at the filesystem level.
                 Benefits: old versions of data are preserved (enabling snapshots), and partial writes can never
                 corrupt existing data.
               </p>

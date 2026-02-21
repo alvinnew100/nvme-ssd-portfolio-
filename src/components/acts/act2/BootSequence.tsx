@@ -65,6 +65,111 @@ const BOOT_STEPS = [
   },
 ];
 
+const SEQUENCE_DATA: { type: "mmio" | "dma" | "msix"; label: string; dir: "right" | "left" }[][] = [
+  // Phase 0: Discovery
+  [
+    { type: "mmio", label: "Config Read: Vendor/Class", dir: "right" },
+    { type: "mmio", label: "Config Write: Assign BAR0", dir: "right" },
+    { type: "mmio", label: "Config Write: MSI-X vectors", dir: "right" },
+    { type: "mmio", label: "Config Write: Bus Master Enable", dir: "right" },
+  ],
+  // Phase 1: Power Up Controller
+  [
+    { type: "mmio", label: "Read CAP register", dir: "right" },
+    { type: "mmio", label: "Write CC.EN=0 (disable)", dir: "right" },
+    { type: "mmio", label: "Read CSTS.RDY=0 (poll)", dir: "right" },
+    { type: "mmio", label: "Write AQA, ASQ, ACQ", dir: "right" },
+    { type: "mmio", label: "Write CC.EN=1 (enable)", dir: "right" },
+    { type: "mmio", label: "Read CSTS.RDY=1 (poll)", dir: "right" },
+  ],
+  // Phase 2: Identify
+  [
+    { type: "mmio", label: "Write SQE to Admin SQ", dir: "right" },
+    { type: "mmio", label: "Ring SQ Tail Doorbell", dir: "right" },
+    { type: "dma", label: "Fetch SQE from host RAM", dir: "left" },
+    { type: "dma", label: "Write Identify data to host", dir: "left" },
+    { type: "dma", label: "Write CQE to Admin CQ", dir: "left" },
+    { type: "msix", label: "MSI-X interrupt", dir: "left" },
+  ],
+  // Phase 3: Create I/O Queues
+  [
+    { type: "mmio", label: "SQE: Set Features (queues)", dir: "right" },
+    { type: "mmio", label: "Ring doorbell", dir: "right" },
+    { type: "dma", label: "Fetch + complete", dir: "left" },
+    { type: "msix", label: "MSI-X interrupt", dir: "left" },
+    { type: "mmio", label: "SQE: Create I/O CQ", dir: "right" },
+    { type: "mmio", label: "SQE: Create I/O SQ", dir: "right" },
+  ],
+  // Phase 4: Ready
+  [
+    { type: "mmio", label: "I/O SQE → I/O SQ", dir: "right" },
+    { type: "mmio", label: "Ring I/O SQ doorbell", dir: "right" },
+    { type: "dma", label: "Fetch SQE, read NAND", dir: "left" },
+    { type: "dma", label: "DMA data to host RAM", dir: "left" },
+    { type: "dma", label: "Write CQE to I/O CQ", dir: "left" },
+    { type: "msix", label: "MSI-X to target CPU core", dir: "left" },
+  ],
+];
+
+const TYPE_COLORS = {
+  mmio: "#635bff",
+  dma: "#00b894",
+  msix: "#7c5cfc",
+};
+
+function SequenceDiagram({ phase }: { phase: number }) {
+  const arrows = SEQUENCE_DATA[phase];
+  const rowH = 28;
+  const h = arrows.length * rowH + 40;
+  const hostX = 60;
+  const ssdX = 340;
+
+  return (
+    <svg viewBox={`0 0 400 ${h}`} className="w-full max-w-[500px] mx-auto">
+      {/* Column headers */}
+      <text x={hostX} y="16" textAnchor="middle" className="text-[10px] font-mono font-bold" fill="#635bff">HOST (CPU)</text>
+      <text x={ssdX} y="16" textAnchor="middle" className="text-[10px] font-mono font-bold" fill="#00b894">SSD</text>
+
+      {/* Lifelines */}
+      <line x1={hostX} y1="22" x2={hostX} y2={h - 4} stroke="#635bff" strokeWidth="2" strokeDasharray="4,4" opacity="0.3" />
+      <line x1={ssdX} y1="22" x2={ssdX} y2={h - 4} stroke="#00b894" strokeWidth="2" strokeDasharray="4,4" opacity="0.3" />
+
+      {/* Arrows */}
+      {arrows.map((arrow, i) => {
+        const y = 36 + i * rowH;
+        const color = TYPE_COLORS[arrow.type];
+        const x1 = arrow.dir === "right" ? hostX : ssdX;
+        const x2 = arrow.dir === "right" ? ssdX : hostX;
+        const labelX = (hostX + ssdX) / 2;
+
+        return (
+          <motion.g
+            key={`${phase}-${i}`}
+            initial={{ opacity: 0, x: arrow.dir === "right" ? -10 : 10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: i * 0.08, duration: 0.3 }}
+          >
+            {/* Arrow line */}
+            <line x1={x1} y1={y} x2={x2 - (arrow.dir === "right" ? 8 : -8)} y2={y} stroke={color} strokeWidth="1.5" />
+            {/* Arrowhead */}
+            <polygon
+              points={arrow.dir === "right"
+                ? `${x2},${y} ${x2 - 8},${y - 4} ${x2 - 8},${y + 4}`
+                : `${x2},${y} ${x2 + 8},${y - 4} ${x2 + 8},${y + 4}`
+              }
+              fill={color}
+            />
+            {/* Label */}
+            <text x={labelX} y={y - 5} textAnchor="middle" className="text-[7px] font-mono" fill={color}>
+              {arrow.label}
+            </text>
+          </motion.g>
+        );
+      })}
+    </svg>
+  );
+}
+
 export default function BootSequence() {
   const [activePhase, setActivePhase] = useState(0);
   const phase = BOOT_STEPS[activePhase];
@@ -177,6 +282,20 @@ export default function BootSequence() {
               </div>
             </motion.div>
           </AnimatePresence>
+        </div>
+
+        {/* Host ↔ SSD Sequence Diagram */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+          <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
+            Host &harr; SSD Communication — Phase {activePhase + 1}
+          </div>
+          <p className="text-text-muted text-xs mb-4">
+            Each arrow shows a real bus transaction. Colors indicate the type:
+            <span className="text-nvme-blue font-semibold"> MMIO</span> (CPU writes to device registers),
+            <span className="text-nvme-green font-semibold"> DMA</span> (device reads/writes host RAM),
+            <span className="text-nvme-violet font-semibold"> MSI-X</span> (device-to-host interrupt).
+          </p>
+          <SequenceDiagram phase={activePhase} />
         </div>
 
         <div className="bg-story-card rounded-2xl p-6 card-shadow">

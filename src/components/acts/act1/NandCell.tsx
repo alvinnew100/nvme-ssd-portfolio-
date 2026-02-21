@@ -379,6 +379,148 @@ function FloatingGateVisual() {
   );
 }
 
+// Gaussian-like bell curve points for SVG path
+function bellCurve(centerX: number, spread: number, height: number, steps = 20): string {
+  const points: string[] = [];
+  for (let i = 0; i <= steps; i++) {
+    const t = (i / steps) * 2 - 1; // -1 to 1
+    const x = centerX + t * spread;
+    const y = height * Math.exp(-4.5 * t * t);
+    points.push(`${i === 0 ? "M" : "L"}${x.toFixed(1)},${(100 - y).toFixed(1)}`);
+  }
+  return points.join(" ");
+}
+
+function VoltageDistributionDiagram({
+  activeCell,
+  onSelectCell,
+}: {
+  activeCell: number;
+  onSelectCell: (i: number) => void;
+}) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+  const cell = CELL_TYPES[activeCell];
+
+  // Distribution parameters per cell type
+  const distributions = {
+    SLC: { levels: 2, spread: 28, height: 70, labels: ["1", "0"] },
+    MLC: { levels: 4, spread: 14, height: 60, labels: ["11", "10", "00", "01"] },
+    TLC: { levels: 8, spread: 7, height: 50, labels: ["111", "110", "101", "100", "011", "010", "001", "000"] },
+    QLC: { levels: 16, spread: 3.5, height: 40, labels: [] },
+  };
+
+  const dist = distributions[cell.name as keyof typeof distributions];
+  const svgWidth = 400;
+  const padding = 30;
+  const usableWidth = svgWidth - padding * 2;
+
+  return (
+    <div ref={ref} className="bg-story-card rounded-2xl p-6 card-shadow mb-8">
+      <div className="text-text-muted text-xs font-mono mb-2 uppercase tracking-wider">
+        Voltage Threshold Distributions
+      </div>
+      <p className="text-text-muted text-xs mb-4">
+        Each bell curve shows the voltage distribution for one state. As you add more bits per cell,
+        the curves squeeze closer together — increasing the chance of a misread.
+      </p>
+
+      {/* Mini toggle for cell type */}
+      <div className="flex gap-1 mb-4">
+        {CELL_TYPES.map((c, i) => (
+          <button
+            key={c.name}
+            onClick={() => onSelectCell(i)}
+            className={`px-3 py-1 rounded-full text-[10px] font-mono font-semibold transition-all ${
+              i === activeCell
+                ? "text-white"
+                : "bg-story-surface text-text-muted hover:text-text-secondary"
+            }`}
+            style={i === activeCell ? { backgroundColor: c.color } : undefined}
+          >
+            {c.name}
+          </button>
+        ))}
+      </div>
+
+      <svg viewBox={`0 0 ${svgWidth} 120`} className="w-full max-w-[500px]">
+        {/* Voltage axis */}
+        <line x1={padding} y1="105" x2={svgWidth - padding} y2="105" stroke="#ddd6ca" strokeWidth="1" />
+        <text x={svgWidth / 2} y="118" textAnchor="middle" className="text-[8px] font-mono" fill="#9e9789">
+          Threshold Voltage &rarr;
+        </text>
+
+        {/* Threshold lines between distributions */}
+        {Array.from({ length: dist.levels - 1 }).map((_, i) => {
+          const gap = usableWidth / dist.levels;
+          const x = padding + gap * (i + 1);
+          return (
+            <motion.line
+              key={`thresh-${cell.name}-${i}`}
+              x1={x}
+              y1="10"
+              x2={x}
+              y2="105"
+              stroke="#ef444460"
+              strokeWidth="1"
+              strokeDasharray="3,3"
+              initial={{ opacity: 0 }}
+              animate={inView ? { opacity: 1 } : {}}
+              transition={{ delay: 0.3 + i * 0.05 }}
+            />
+          );
+        })}
+
+        {/* Bell curves */}
+        {Array.from({ length: dist.levels }).map((_, i) => {
+          const gap = usableWidth / dist.levels;
+          const centerX = padding + gap * i + gap / 2;
+          const path = bellCurve(centerX, dist.spread, dist.height);
+          const label = dist.labels[i] || "";
+
+          return (
+            <g key={`curve-${cell.name}-${i}`}>
+              <motion.path
+                d={path}
+                fill={`${cell.color}15`}
+                stroke={cell.color}
+                strokeWidth="1.5"
+                initial={{ opacity: 0, pathLength: 0 }}
+                animate={inView ? { opacity: 1, pathLength: 1 } : {}}
+                transition={{ delay: i * 0.06, duration: 0.5 }}
+              />
+              {label && dist.levels <= 8 && (
+                <text
+                  x={centerX}
+                  y={100 - dist.height + 6}
+                  textAnchor="middle"
+                  className="text-[7px] font-mono font-bold"
+                  fill={cell.color}
+                >
+                  {label}
+                </text>
+              )}
+            </g>
+          );
+        })}
+      </svg>
+
+      {/* Insight callout */}
+      <div className="mt-3 flex items-start gap-2 text-[11px] text-text-secondary">
+        <span className="text-nvme-red flex-shrink-0 mt-0.5">&#9888;</span>
+        <span>
+          The <span className="text-nvme-red font-mono">dashed red lines</span> are threshold voltages.
+          When curves overlap these lines, the controller may misread the state — this is why
+          {cell.name === "SLC" ? " SLC has virtually zero read errors." :
+           cell.name === "MLC" ? " MLC needs stronger error correction than SLC." :
+           cell.name === "TLC" ? " TLC requires sophisticated ECC (like LDPC)." :
+           " QLC demands the most powerful ECC and read-retry algorithms."}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 export default function NandCell() {
   const [activeCell, setActiveCell] = useState(0);
   const cell = CELL_TYPES[activeCell];
@@ -427,6 +569,9 @@ export default function NandCell() {
 
         {/* Floating gate diagram */}
         <FloatingGateVisual />
+
+        {/* Voltage threshold distribution diagram */}
+        <VoltageDistributionDiagram activeCell={activeCell} onSelectCell={setActiveCell} />
 
         {/* Cell type selector */}
         <div className="flex gap-2 mb-8">

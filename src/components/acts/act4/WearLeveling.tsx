@@ -82,7 +82,7 @@ export default function WearLeveling() {
         </h3>
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
-          In Act 1, we learned that each NAND cell type has a different number of
+          In Lesson 2, we learned that each NAND cell type has a different number of
           voltage levels (SLC=2, MLC=4, TLC=8, QLC=16). <em className="text-text-primary">
           But there&apos;s a consequence we haven&apos;t discussed yet:</em> the more
           voltage levels you pack into a cell, the faster it wears out.
