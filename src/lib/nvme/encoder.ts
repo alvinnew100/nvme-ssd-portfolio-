@@ -61,20 +61,28 @@ export function buildSQEntry(
 }
 
 /**
- * Format SQ entry bytes as a hex dump string.
+ * Format SQ entry bytes as a hex dump string, grouped by dwords (4 bytes).
+ * Each line shows 4 dwords (16 bytes) with dword labels.
  */
 export function formatHexDump(entry: SQEntry): string {
   const lines: string[] = [];
   for (let offset = 0; offset < 64; offset += 16) {
-    const hex: string[] = [];
+    const dwords: string[] = [];
     const ascii: string[] = [];
-    for (let i = 0; i < 16; i++) {
-      const b = entry.bytes[offset + i];
-      hex.push(b.toString(16).padStart(2, "0"));
-      ascii.push(b >= 0x20 && b <= 0x7e ? String.fromCharCode(b) : ".");
+    // Group into 4 dwords per line
+    for (let dw = 0; dw < 4; dw++) {
+      const dwBytes: string[] = [];
+      for (let b = 0; b < 4; b++) {
+        const byte = entry.bytes[offset + dw * 4 + b];
+        dwBytes.push(byte.toString(16).padStart(2, "0"));
+        ascii.push(byte >= 0x20 && byte <= 0x7e ? String.fromCharCode(byte) : ".");
+      }
+      dwords.push(dwBytes.join(" "));
     }
     const addr = offset.toString(16).padStart(4, "0");
-    lines.push(`${addr}: ${hex.join(" ")}  |${ascii.join("")}|`);
+    const dwStart = offset / 4;
+    const label = `CDW${dwStart}-${dwStart + 3}`;
+    lines.push(`${addr}:  ${dwords.join("  ")}  |${ascii.join("")}|  ${label}`);
   }
   return lines.join("\n");
 }
