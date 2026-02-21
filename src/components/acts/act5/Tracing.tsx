@@ -230,33 +230,371 @@ cat trace_pipe                           # stream output`}
           />
         </div>
 
-        {/* ─── NVMe Trace Output ─── */}
+        {/* ─── NVMe Trace Output — Read ─── */}
         <div className="mb-6">
           <h4 className="text-lg font-bold text-text-primary mb-3">
             NVMe Trace Output
           </h4>
+          <InfoCard variant="note" title="These are constructed examples">
+            The trace output shown below is <em>not</em> captured from a live system.
+            These examples are constructed based on the kernel&apos;s NVMe tracepoint
+            format definition to illustrate what each field means. The structure and
+            format are accurate — this is what you would see on a real system, but the
+            specific timestamps, PIDs, and values are illustrative. You can paste them
+            into the Trace Decoder tool below to decode the CDW fields.
+          </InfoCard>
+
+          <div className="mt-4" />
+
           <p className="text-text-secondary text-sm mb-3 leading-relaxed max-w-3xl">
-            <em className="text-text-primary">The NVMe tracepoint logs each command with
-            its raw CDW (Command Dword) values in hex.</em> This is the format you&apos;ll
-            see when reading trace_pipe. The examples below are constructed based on the
-            kernel&apos;s tracepoint format definition — the same structure you&apos;d
-            see on a live system. You can paste them into the{" "}
-            <strong className="text-text-primary">Trace Decoder</strong> tool below to
-            decode the CDW fields:
+            <em className="text-text-primary">Let&apos;s start with the most common
+            command — a Read.</em> The NVMe tracepoint logs each command with its raw
+            CDW (Command Dword) values in hex:
           </p>
 
           <TerminalBlock
-            title="nvme trace output — Read and Write commands"
+            title="NVMe Read command (opcode 0x02)"
             lines={[
               "# tracer: nop",
               "#           TASK-PID     CPU#  |||||  TIMESTAMP  FUNCTION",
               "#              | |         |   |||||     |         |",
               "     fio-18234   [003] d..1.  2847.331205: nvme_setup_cmd: nvme0n1: qid=1, cmdid=0, nsid=1, cdw10=0x00000000, cdw11=0x00000000, cdw12=0x00000007, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x02",
               "     fio-18234   [003] d..1.  2847.331312: nvme_complete_rq: nvme0n1: qid=1, cmdid=0, res=0x0, retries=0, flags=0x0, status=0x0",
+            ]}
+          />
+
+          <div className="bg-story-card rounded-2xl p-5 card-shadow mt-4 mb-6">
+            <div className="text-text-primary font-semibold text-xs mb-3">
+              Decoding the Read CDW fields — what do they mean?
+            </div>
+            <p className="text-text-secondary text-xs leading-relaxed mb-3">
+              <em className="text-text-primary">For a Read command (opcode 0x02), the
+              NVMe spec defines what each CDW field contains:</em>
+            </p>
+            <div className="space-y-2 text-xs">
+              <div className="bg-story-surface rounded-lg p-3">
+                <code className="text-text-code font-mono font-bold">opcode=0x02</code>
+                <p className="text-text-muted mt-1">
+                  This is an NVMe <strong>Read</strong> command.{" "}
+                  <em>How do you know?</em> The NVMe spec assigns opcode 0x02 to Read.
+                  Other I/O opcodes: 0x01 = Write, 0x00 = Flush, 0x09 = Dataset Management (TRIM).
+                </p>
+              </div>
+              <div className="bg-story-surface rounded-lg p-3">
+                <code className="text-text-code font-mono font-bold">cdw10=0x00000000</code>
+                <span className="text-text-muted ml-2">→ SLBA low 32 bits = 0</span>
+                <p className="text-text-muted mt-1">
+                  For Read/Write, CDW10 holds the <strong>lower 32 bits of the Starting
+                  LBA (SLBA)</strong>. Here it&apos;s 0 — reading from the very beginning
+                  of the namespace.{" "}
+                  <em>Why split the LBA across two dwords?</em> Because an LBA can be
+                  up to 64 bits (addressing up to 2^64 logical blocks), but each CDW is
+                  only 32 bits. So the lower half goes in CDW10 and the upper half in CDW11.
+                </p>
+              </div>
+              <div className="bg-story-surface rounded-lg p-3">
+                <code className="text-text-code font-mono font-bold">cdw11=0x00000000</code>
+                <span className="text-text-muted ml-2">→ SLBA high 32 bits = 0</span>
+                <p className="text-text-muted mt-1">
+                  Upper 32 bits of the SLBA. Combined with CDW10: full SLBA ={" "}
+                  <code className="text-text-code">(CDW11 &lt;&lt; 32) | CDW10</code> = 0.{" "}
+                  <em>For most consumer SSDs, LBAs fit in 32 bits</em> (up to ~2 billion
+                  blocks = ~8 TB with 4K blocks), so CDW11 is usually 0.
+                </p>
+              </div>
+              <div className="bg-story-surface rounded-lg p-3">
+                <code className="text-text-code font-mono font-bold">cdw12=0x00000007</code>
+                <span className="text-text-muted ml-2">→ NLB = 7 (means 8 blocks)</span>
+                <p className="text-text-muted mt-1">
+                  CDW12 bits [15:0] hold the <strong>Number of Logical Blocks (NLB)</strong>.
+                  This is a <em>0-based value</em> — a value of 7 means &ldquo;read 8
+                  blocks.&rdquo;{" "}
+                  <em>Why 0-based?</em> So that 0 means &ldquo;1 block&rdquo; (the minimum),
+                  and 0xFFFF means &ldquo;65,536 blocks&rdquo; (the maximum in a single command).
+                  With 4K blocks, NLB=7 reads 8 × 4096 = 32,768 bytes (32 KB).
+                </p>
+                <p className="text-text-muted mt-2 text-[10px] italic">
+                  CDW12 bits [31:16] contain flags: bit 30 = Force Unit Access (FUA), bit 31 =
+                  Limited Retry (LR), bits [29:26] = Protection Info. Here they&apos;re
+                  all 0 — no special flags.
+                </p>
+              </div>
+              <div className="bg-story-surface rounded-lg p-3">
+                <code className="text-text-code font-mono font-bold">cdw13, cdw14, cdw15 = 0</code>
+                <p className="text-text-muted mt-1">
+                  CDW13 = Dataset Management hints (e.g., sequential, random). CDW14 =
+                  Expected Initial Logical Block Reference Tag (for protection info). CDW15 =
+                  Expected Logical Block Application/Guard Tag. All zeros = no hints, no
+                  protection info.{" "}
+                  <em>Most basic reads leave CDW13-15 at zero.</em>
+                </p>
+              </div>
+              <div className="bg-story-surface rounded-lg p-3">
+                <code className="text-text-code font-mono font-bold">status=0x0</code>
+                <span className="text-text-muted ml-2">(in the complete_rq line)</span>
+                <p className="text-text-muted mt-1">
+                  Status 0x0 = <strong>success</strong>. The drive read the data and
+                  placed it in the host buffer. Common error statuses: 0x2 = Invalid
+                  Field, 0x80 = LBA Out of Range, 0x81 = Capacity Exceeded.
+                </p>
+              </div>
+            </div>
+            <p className="text-text-muted text-[10px] italic mt-3 leading-relaxed">
+              <em>Summary: this Read command reads 8 blocks (32 KB) starting at LBA 0
+              from namespace 1, on I/O queue 1, with no special flags — and it
+              succeeded.</em>
+            </p>
+          </div>
+
+          {/* ─── Write Example ─── */}
+          <p className="text-text-secondary text-sm mb-3 leading-relaxed max-w-3xl">
+            <em className="text-text-primary">Now a Write command.</em> The CDW layout
+            for Write (opcode 0x01) is almost identical to Read:
+          </p>
+
+          <TerminalBlock
+            title="NVMe Write command (opcode 0x01)"
+            lines={[
               "     fio-18234   [005] d..1.  2847.331450: nvme_setup_cmd: nvme0n1: qid=2, cmdid=1, nsid=1, cdw10=0x00001000, cdw11=0x00000000, cdw12=0x400000ff, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x01",
               "     fio-18234   [005] d..1.  2847.331823: nvme_complete_rq: nvme0n1: qid=2, cmdid=1, res=0x0, retries=0, flags=0x0, status=0x0",
             ]}
           />
+
+          <div className="bg-story-card rounded-2xl p-5 card-shadow mt-4 mb-6">
+            <div className="text-text-primary font-semibold text-xs mb-3">
+              Decoding the Write CDW fields
+            </div>
+            <div className="space-y-2 text-xs">
+              <div className="bg-story-surface rounded-lg p-3">
+                <code className="text-text-code font-mono font-bold">opcode=0x01</code>
+                <span className="text-text-muted ml-2">→ Write</span>
+              </div>
+              <div className="bg-story-surface rounded-lg p-3">
+                <code className="text-text-code font-mono font-bold">cdw10=0x00001000</code>
+                <span className="text-text-muted ml-2">→ SLBA low = 0x1000 = 4096</span>
+                <p className="text-text-muted mt-1">
+                  Writing starts at LBA 4096. With 4K logical blocks, that&apos;s byte
+                  offset 4096 × 4096 = 16 MB into the namespace.{" "}
+                  <em>Why LBA 4096 and not 0?</em> Perhaps the test is writing to the
+                  middle of the device, or the filesystem placed this file&apos;s data
+                  at that LBA.
+                </p>
+              </div>
+              <div className="bg-story-surface rounded-lg p-3">
+                <code className="text-text-code font-mono font-bold">cdw12=0x400000ff</code>
+                <span className="text-text-muted ml-2">→ FUA + NLB=255 (256 blocks)</span>
+                <p className="text-text-muted mt-1">
+                  <em>This one&apos;s more interesting.</em> Let&apos;s break it down
+                  bit by bit:
+                </p>
+                <ul className="text-text-muted mt-1 ml-3 space-y-1 list-disc">
+                  <li>
+                    Bits [15:0] = <code className="text-text-code">0x00FF</code> = 255 →
+                    NLB = 256 blocks (0-based, remember). That&apos;s 256 × 4K = 1 MB.
+                  </li>
+                  <li>
+                    Bit 30 = <code className="text-text-code">1</code> (the{" "}
+                    <code className="text-text-code">0x40000000</code> part) → <strong>FUA
+                    (Force Unit Access)</strong>. This means the drive must write the data
+                    all the way to NAND before reporting completion — it cannot just cache it
+                    in DRAM.
+                  </li>
+                </ul>
+                <p className="text-text-muted mt-2 text-[10px] italic">
+                  <em>When do you see FUA?</em> Filesystem journal writes, database
+                  WAL (write-ahead log) entries, and any I/O where data durability
+                  matters. If the power fails, FUA-written data is guaranteed to be on
+                  NAND.
+                </p>
+              </div>
+            </div>
+            <p className="text-text-muted text-[10px] italic mt-3 leading-relaxed">
+              <em>Summary: this Write command writes 256 blocks (1 MB) starting at LBA
+              4096, with FUA forced, on I/O queue 2 — and succeeded. Notice it went to
+              queue 2 while the Read was on queue 1 — the kernel spreads I/O across
+              queues for parallelism.</em>
+            </p>
+          </div>
+
+          {/* ─── Flush Example ─── */}
+          <p className="text-text-secondary text-sm mb-3 leading-relaxed max-w-3xl">
+            <em className="text-text-primary">What about a Flush?</em> The Flush
+            command (opcode 0x00) tells the drive to persist all cached data:
+          </p>
+
+          <TerminalBlock
+            title="NVMe Flush command (opcode 0x00)"
+            lines={[
+              "  jbd2/nvme0-18421   [001] d..1.  2847.332100: nvme_setup_cmd: nvme0n1: qid=3, cmdid=5, nsid=1, cdw10=0x00000000, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x00",
+              "  jbd2/nvme0-18421   [001] d..1.  2847.333540: nvme_complete_rq: nvme0n1: qid=3, cmdid=5, res=0x0, retries=0, flags=0x0, status=0x0",
+            ]}
+          />
+
+          <div className="bg-story-card rounded-2xl p-5 card-shadow mt-4 mb-6">
+            <div className="text-text-primary font-semibold text-xs mb-3">
+              Decoding the Flush
+            </div>
+            <div className="space-y-2 text-xs">
+              <div className="bg-story-surface rounded-lg p-3">
+                <code className="text-text-code font-mono font-bold">opcode=0x00</code>
+                <span className="text-text-muted ml-2">→ Flush</span>
+                <p className="text-text-muted mt-1">
+                  <em>All CDW fields are zero.</em> That&apos;s because Flush doesn&apos;t
+                  need any parameters — it&apos;s a simple instruction: &ldquo;persist
+                  everything in your write cache to NAND, now.&rdquo; There&apos;s no LBA
+                  range, no block count, no flags.
+                </p>
+              </div>
+              <div className="bg-story-surface rounded-lg p-3">
+                <span className="text-nvme-amber font-mono font-bold text-xs">jbd2/nvme0-18421</span>
+                <p className="text-text-muted mt-1">
+                  <em>Who sent this?</em> Not fio — it&apos;s{" "}
+                  <code className="text-text-code">jbd2</code>, the ext4 filesystem&apos;s
+                  journal daemon. jbd2 periodically flushes the journal to ensure filesystem
+                  consistency. <em>This is the kind of thing you&apos;d never see in application
+                  logs</em> — the filesystem is sending NVMe commands behind your back.
+                </p>
+              </div>
+              <div className="bg-story-surface rounded-lg p-3">
+                <span className="text-text-muted font-mono font-bold text-xs">latency: 1.44 ms</span>
+                <p className="text-text-muted mt-1">
+                  setup at 2847.332100, complete at 2847.333540 → 1.44 ms.{" "}
+                  <em>Why is Flush so much slower than Read?</em> Because the drive has
+                  to physically write all cached data to NAND cells. A Read just fetches
+                  data from NAND (or DRAM cache). A Flush forces a cache commit — potentially
+                  writing megabytes of cached data.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* ─── TRIM / DSM Example ─── */}
+          <p className="text-text-secondary text-sm mb-3 leading-relaxed max-w-3xl">
+            <em className="text-text-primary">And TRIM?</em> TRIM is sent as a
+            Dataset Management command (opcode 0x09):
+          </p>
+
+          <TerminalBlock
+            title="NVMe Dataset Management / TRIM (opcode 0x09)"
+            lines={[
+              "  fstrim-5678   [000] d..1.  2847.502345: nvme_setup_cmd: nvme0n1: qid=1, cmdid=8, nsid=1, cdw10=0x00000000, cdw11=0x00000004, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x09",
+              "  fstrim-5678   [000] d..1.  2847.502890: nvme_complete_rq: nvme0n1: qid=1, cmdid=8, res=0x0, retries=0, flags=0x0, status=0x0",
+            ]}
+          />
+
+          <div className="bg-story-card rounded-2xl p-5 card-shadow mt-4 mb-6">
+            <div className="text-text-primary font-semibold text-xs mb-3">
+              Decoding the Dataset Management (TRIM)
+            </div>
+            <div className="space-y-2 text-xs">
+              <div className="bg-story-surface rounded-lg p-3">
+                <code className="text-text-code font-mono font-bold">opcode=0x09</code>
+                <span className="text-text-muted ml-2">→ Dataset Management</span>
+                <p className="text-text-muted mt-1">
+                  <em>Not called &ldquo;TRIM&rdquo; at the NVMe protocol level.</em> The
+                  NVMe spec calls it &ldquo;Dataset Management&rdquo; because it can do
+                  more than just trim — but in practice, it&apos;s almost always used
+                  for TRIM (deallocate).
+                </p>
+              </div>
+              <div className="bg-story-surface rounded-lg p-3">
+                <code className="text-text-code font-mono font-bold">cdw10=0x00000000</code>
+                <span className="text-text-muted ml-2">→ NR = 0 (1 range)</span>
+                <p className="text-text-muted mt-1">
+                  CDW10 bits [7:0] = <strong>Number of Ranges (NR)</strong>, 0-based. A value
+                  of 0 means 1 range. The actual LBA ranges are in the <em>data buffer</em>{" "}
+                  (pointed to by DW6-DW9), not in the CDW fields.{" "}
+                  <em>Why put ranges in a separate buffer instead of CDWs?</em> Because you
+                  might TRIM thousands of ranges at once — they wouldn&apos;t fit in 6 dwords.
+                  Each range entry is 16 bytes (context attributes + LBA + block count).
+                </p>
+              </div>
+              <div className="bg-story-surface rounded-lg p-3">
+                <code className="text-text-code font-mono font-bold">cdw11=0x00000004</code>
+                <span className="text-text-muted ml-2">→ AD (Attribute — Deallocate) bit set</span>
+                <p className="text-text-muted mt-1">
+                  CDW11 bit 2 = <strong>AD (Attribute — Deallocate)</strong>. This is what
+                  makes it a TRIM: it tells the drive &ldquo;these blocks are no longer in
+                  use, you can reclaim them.&rdquo;{" "}
+                  <em>What if AD is 0?</em> Then it&apos;s just a hint about data
+                  access patterns, not a trim — the drive doesn&apos;t reclaim anything.
+                </p>
+              </div>
+              <div className="bg-story-surface rounded-lg p-3">
+                <span className="text-nvme-amber font-mono font-bold text-xs">fstrim-5678</span>
+                <p className="text-text-muted mt-1">
+                  Sent by the <code className="text-text-code">fstrim</code> utility.{" "}
+                  <em>This is the manual TRIM command</em> — run periodically (or via
+                  cron/systemd timer) to tell the SSD about free space. Alternatively,
+                  mounting with <code className="text-text-code">discard</code> option
+                  sends TRIMs inline as files are deleted.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* ─── Admin Command Example ─── */}
+          <p className="text-text-secondary text-sm mb-3 leading-relaxed max-w-3xl">
+            <em className="text-text-primary">What about admin commands?</em> They go
+            to queue 0 (the admin queue). Here&apos;s an Identify Controller command:
+          </p>
+
+          <TerminalBlock
+            title="Admin Identify Controller (opcode 0x06)"
+            lines={[
+              "   nvme-cli-19000   [002] d..1.  2850.100200: nvme_setup_cmd: nvme0: qid=0, cmdid=12, nsid=0, cdw10=0x00000001, cdw11=0x00000000, cdw12=0x00000000, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x06",
+              "   nvme-cli-19000   [002] d..1.  2850.100450: nvme_complete_rq: nvme0: qid=0, cmdid=12, res=0x0, retries=0, flags=0x0, status=0x0",
+            ]}
+          />
+
+          <div className="bg-story-card rounded-2xl p-5 card-shadow mt-4 mb-6">
+            <div className="text-text-primary font-semibold text-xs mb-3">
+              Decoding the Identify Controller
+            </div>
+            <div className="space-y-2 text-xs">
+              <div className="bg-story-surface rounded-lg p-3">
+                <code className="text-text-code font-mono font-bold">opcode=0x06</code>
+                <span className="text-text-muted ml-2">→ Identify (admin command)</span>
+                <p className="text-text-muted mt-1">
+                  <em>Notice the opcode is 0x06, same as Read is 0x02.</em> But this is on
+                  the admin queue (qid=0), so opcodes are from the <em>admin</em> command
+                  set, not the I/O set. Admin opcode 0x06 = Identify. I/O opcode 0x02 = Read.
+                  They don&apos;t conflict because admin and I/O queues have separate
+                  opcode spaces.
+                </p>
+              </div>
+              <div className="bg-story-surface rounded-lg p-3">
+                <code className="text-text-code font-mono font-bold">qid=0</code>
+                <span className="text-text-muted ml-2">→ admin queue</span>
+                <p className="text-text-muted mt-1">
+                  Queue ID 0 is always the admin queue. All admin commands go here.{" "}
+                  <em>I/O commands never use qid=0, and admin commands never use qid &ge; 1.</em>
+                </p>
+              </div>
+              <div className="bg-story-surface rounded-lg p-3">
+                <code className="text-text-code font-mono font-bold">cdw10=0x00000001</code>
+                <span className="text-text-muted ml-2">→ CNS = 1 (Identify Controller)</span>
+                <p className="text-text-muted mt-1">
+                  CDW10 bits [7:0] = <strong>CNS (Controller or Namespace Structure)</strong>.
+                  CNS=1 means &ldquo;return the controller identification structure&rdquo; —
+                  a 4096-byte blob containing the drive&apos;s model name, serial number,
+                  firmware version, capabilities, queue limits, and more.{" "}
+                  <em>CNS=0 would be &ldquo;identify namespace&rdquo; instead.</em>
+                </p>
+              </div>
+              <div className="bg-story-surface rounded-lg p-3">
+                <code className="text-text-code font-mono font-bold">nsid=0</code>
+                <span className="text-text-muted ml-2">→ not namespace-specific</span>
+                <p className="text-text-muted mt-1">
+                  NSID is 0 because Identify Controller is about the <em>controller</em>,
+                  not a specific namespace. For Identify Namespace (CNS=0), you&apos;d
+                  see nsid=1 or whichever namespace is being queried.{" "}
+                  <em>Also notice the device is <code className="text-text-code">nvme0</code>{" "}
+                  (controller), not <code className="text-text-code">nvme0n1</code> (namespace).</em>
+                </p>
+              </div>
+            </div>
+          </div>
 
           <p className="text-text-muted text-xs mt-3 mb-4 leading-relaxed max-w-3xl">
             <em>Note:</em> Newer kernel versions may show a more decoded format (e.g.,{" "}
@@ -298,7 +636,7 @@ cat trace_pipe                           # stream output`}
           </p>
         </div>
 
-        {/* ─── Trace Line Anatomy ─── */}
+        {/* ─── Trace Line Anatomy — NVMe ─── */}
         <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
           <div className="text-text-primary font-semibold text-sm mb-3">
             Trace Line Anatomy — NVMe Events
@@ -319,14 +657,19 @@ cat trace_pipe                           # stream output`}
               <p className="text-text-muted mt-1">
                 The process name and PID that issued the command. Here, the{" "}
                 <code className="text-text-code">fio</code> benchmarking tool, process
-                ID 18234.
+                ID 18234.{" "}
+                <em>Why does this matter?</em> If you see unexpected processes sending I/O
+                (like a backup daemon or filesystem journal), it explains &ldquo;mystery&rdquo;
+                I/O you didn&apos;t expect.
               </p>
             </div>
             <div className="bg-story-surface rounded-lg p-3">
               <span className="text-text-muted font-mono font-bold">[003]</span>
               <p className="text-text-muted mt-1">
                 Which CPU core handled this. Useful for spotting unbalanced I/O
-                across cores. <em>Ideally, I/O should spread across all cores.</em>
+                across cores. <em>NVMe typically creates one I/O queue per CPU core</em>{" "}
+                — if all I/O hits one core, you might have an affinity or interrupt
+                routing issue.
               </p>
             </div>
             <div className="bg-story-surface rounded-lg p-3">
@@ -342,22 +685,27 @@ cat trace_pipe                           # stream output`}
               <p className="text-text-muted mt-1">
                 Timestamp in seconds since boot (with microsecond precision). The
                 difference between setup and complete timestamps gives you the
-                command latency.
+                command latency.{" "}
+                <em>Microsecond precision matters</em> — NVMe reads can complete in
+                under 100 μs, so you need that resolution.
               </p>
             </div>
             <div className="bg-story-surface rounded-lg p-3">
               <span className="text-nvme-green font-mono font-bold">nvme_setup_cmd</span>
               <p className="text-text-muted mt-1">
-                Event type: setup_cmd = command submitted to the queue,
-                complete_rq = response received from the drive.
+                Event type: <code className="text-text-code">setup_cmd</code> = command
+                submitted to the queue, <code className="text-text-code">complete_rq</code>{" "}
+                = response received from the drive.{" "}
+                <em>Every setup should have a matching complete.</em> If you see setups
+                without completes, a command may have timed out or the drive is hung.
               </p>
             </div>
             <div className="bg-story-surface rounded-lg p-3">
               <span className="text-text-secondary font-mono font-bold">opcode=0x02</span>
               <p className="text-text-muted mt-1">
                 The NVMe opcode. 0x02 = Read, 0x01 = Write, 0x00 = Flush, 0x09 = Dataset
-                Management (TRIM). The CDW fields contain the command parameters — paste
-                the line into the Trace Decoder to decode them.
+                Management (TRIM), 0x06 = Identify (admin). The CDW fields contain the
+                command parameters — paste the line into the Trace Decoder to decode them.
               </p>
             </div>
           </div>
