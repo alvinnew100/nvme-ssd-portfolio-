@@ -72,34 +72,29 @@ export default function HomePage() {
       <Hero />
 
       {/* ===================== ACT 1: FOUNDATIONS ===================== */}
-      {/* Binary → LBA → NAND cell → NAND hierarchy → SSD overview → FTL */}
-      {/* FTL introduced HERE so later sections (TRIM, GC) can reference it */}
       <ActDivider act={1} title="Foundations" id="act-1" />
-      <Binary />
+      <div id="sec-binary"><Binary /></div>
       <LBA />
-      <NandCell />
+      <div id="sec-nand"><NandCell /></div>
       <NandHierarchy />
-      <SsdOverview />
-      <FTLBasics />
+      <div id="sec-ssd"><SsdOverview /></div>
+      <div id="sec-ftl"><FTLBasics /></div>
 
       {/* ===================== ACT 2: THE INTERFACE ===================== */}
-      {/* PCIe → BAR0 → Boot sequence → Queues → Doorbells → Bus trace */}
       <ActDivider act={2} title="The Interface" id="act-2" />
-      <PCIe />
-      <BAR0 />
+      <div id="sec-pcie"><PCIe /></div>
+      <div id="sec-bar0"><BAR0 /></div>
       <BootSequence />
-      <Queues />
-      <Doorbells />
+      <div id="sec-queues"><Queues /></div>
+      <div id="sec-doorbells"><Doorbells /></div>
       <BusTrace />
 
       {/* ===================== ACT 3: THE PROTOCOL ===================== */}
-      {/* SQE → Identify → Namespaces → Admin cmds → I/O cmds → Errors → I/O path */}
-      {/* I/O path diagram wraps up the protocol by showing the full request journey */}
       <ActDivider act={3} title="The Protocol" id="act-3" />
-      <SQEStructure />
+      <div id="sec-sqe"><SQEStructure /></div>
       <Identify />
       <Namespaces />
-      <AdminCommands />
+      <div id="sec-admin-cmds"><AdminCommands /></div>
       <CommandBuilderEmbed
         presetId="admin-identify"
         presetFields={{ CNS: 1 }}
@@ -107,7 +102,7 @@ export default function HomePage() {
         title="Try It — Build an Identify Command"
         description="Click to load the Identify Controller preset and see the full 64-byte SQ entry."
       />
-      <IOCommands />
+      <div id="sec-io-cmds"><IOCommands /></div>
       <CommandBuilderEmbed
         presetId="io-read"
         presetFields={{ SLBA_L: 0, NLB: 7 }}
@@ -115,14 +110,12 @@ export default function HomePage() {
         title="Try It — Build a Read Command"
         description="Load a Read preset: 8 blocks starting at LBA 0."
       />
-      <ErrorHandling />
+      <div id="sec-errors"><ErrorHandling /></div>
       <IOPathDiagram />
 
       {/* ===================== ACT 4: MAINTENANCE & HEALTH ===================== */}
-      {/* SMART → TRIM/GC (builds on FTL from Act 1) → WAF → Format/Sanitize → Wear leveling */}
-      {/* WAF calculator placed right after TRIM since it builds on GC concepts */}
       <ActDivider act={4} title="Maintenance & Health" id="act-4" />
-      <SMART />
+      <div id="sec-smart"><SMART /></div>
       <CommandBuilderEmbed
         presetId="admin-get-log-page"
         presetFields={{ LID: 2, NUMDL: 127 }}
@@ -130,27 +123,23 @@ export default function HomePage() {
         title="Try It — Get SMART Log"
         description="Build a Get Log Page command for SMART health data (Log ID 0x02)."
       />
-      <TRIM />
+      <div id="sec-trim"><TRIM /></div>
       <WriteAmplification />
       <FormatSanitize />
-      <WearLeveling />
+      <div id="sec-wear"><WearLeveling /></div>
 
       {/* ===================== ACT 5: STORAGE STACK & TESTING ===================== */}
-      {/* Filesystems (theory + setup) → fio (the tool) → Testing (methodology) */}
-      {/* fio comes AFTER filesystems so the partition/mount workflow references it naturally */}
-      {/* Testing methodology comes LAST since it references both fio and filesystems */}
       <ActDivider act={5} title="Storage Stack & Testing" id="act-5" />
-      <Filesystems />
-      <FioGuide />
-      <Testing />
+      <div id="sec-filesystems"><Filesystems /></div>
+      <div id="sec-fio"><FioGuide /></div>
+      <div id="sec-testing"><Testing /></div>
 
       {/* ===================== ACT 6: ADVANCED & TOOLS ===================== */}
-      {/* Firmware (with CA0-3) → Security → Passthru → Tracing → Reference */}
       <ActDivider act={6} title="Advanced & Tools" id="act-6" />
-      <FirmwareUpdate />
-      <Security />
-      <Passthru />
-      <Tracing />
+      <div id="sec-firmware"><FirmwareUpdate /></div>
+      <div id="sec-security"><Security /></div>
+      <div id="sec-passthru"><Passthru /></div>
+      <div id="sec-tracing"><Tracing /></div>
       <TraceDecoderEmbed />
       <CommandAccordion />
 

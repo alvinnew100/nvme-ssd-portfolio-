@@ -109,6 +109,208 @@ function LittleEndianAnimator() {
   );
 }
 
+/* ─── Hexdump Explorer ─── */
+const HEX_DATA = [
+  "56","45","4e","44","01","00","02","00","00","10","00","00","a4","03","00","00",
+  "e8","03","00","00","00","00","00","00","64","00","00","00","00","00","00","00",
+  "25","04","00","00","c8","00","00","00","00","00","00","00","00","00","00","00",
+  "00","00","00","00","00","00","00","00","00","00","00","00","00","00","00","00",
+];
+
+const HEX_FIELDS: { start: number; end: number; name: string; raw: string; decoded: string }[] = [
+  { start: 0x00, end: 0x03, name: "Magic signature", raw: "56 45 4e 44", decoded: "ASCII: \"VEND\"" },
+  { start: 0x04, end: 0x05, name: "Version", raw: "01 00", decoded: "0x0001 → 1" },
+  { start: 0x06, end: 0x07, name: "Structure type", raw: "02 00", decoded: "0x0002 → 2 (health)" },
+  { start: 0x08, end: 0x0B, name: "NAND writes (GB)", raw: "00 10 00 00", decoded: "0x00001000 → 4096 GB" },
+  { start: 0x0C, end: 0x0F, name: "Temperature", raw: "a4 03 00 00", decoded: "0x000003A4 → 932 (93.2°C)" },
+  { start: 0x10, end: 0x13, name: "Power-on hours", raw: "e8 03 00 00", decoded: "0x000003E8 → 1000 hrs" },
+  { start: 0x14, end: 0x17, name: "Reserved", raw: "00 00 00 00", decoded: "—" },
+  { start: 0x18, end: 0x1B, name: "Percentage used", raw: "64 00 00 00", decoded: "0x00000064 → 100%" },
+  { start: 0x20, end: 0x23, name: "Error count", raw: "25 04 00 00", decoded: "0x00000425 → 1061" },
+  { start: 0x24, end: 0x27, name: "Available spare", raw: "c8 00 00 00", decoded: "0x000000C8 → 200 (100%)" },
+];
+
+const HEX_PRESETS = [
+  { offset: 0x0C, label: "Temperature (0x0C)" },
+  { offset: 0x18, label: "% Used (0x18)" },
+  { offset: 0x00, label: "Magic (0x00)" },
+  { offset: 0x20, label: "Errors (0x20)" },
+];
+
+function HexdumpExplorer() {
+  const [selected, setSelected] = useState<number | null>(null);
+
+  const asciiChar = (hex: string) => {
+    const c = parseInt(hex, 16);
+    return c >= 0x20 && c <= 0x7e ? String.fromCharCode(c) : ".";
+  };
+
+  // Find which field a byte belongs to
+  const fieldFor = (offset: number) =>
+    HEX_FIELDS.find((f) => offset >= f.start && offset <= f.end) ?? null;
+
+  const activeField = selected !== null ? fieldFor(selected) : null;
+
+  const isHighlighted = (offset: number) => {
+    if (activeField) return offset >= activeField.start && offset <= activeField.end;
+    return offset === selected;
+  };
+
+  return (
+    <div className="bg-story-surface rounded-xl p-4">
+      {/* Preset buttons */}
+      <div className="flex flex-wrap items-center gap-2 mb-4">
+        <span className="text-text-muted text-[10px]">Jump to field:</span>
+        {HEX_PRESETS.map((p) => (
+          <button
+            key={p.offset}
+            onClick={() => setSelected(p.offset)}
+            className={`px-2.5 py-1 rounded-lg text-[10px] font-mono transition-colors ${
+              activeField && p.offset >= activeField.start && p.offset <= activeField.end
+                ? "bg-nvme-green/20 text-nvme-green"
+                : "bg-story-card text-text-muted hover:text-text-secondary"
+            }`}
+          >
+            {p.label}
+          </button>
+        ))}
+      </div>
+
+      {/* Hexdump rows */}
+      <div className="overflow-x-auto mb-4">
+        <div className="font-mono text-[11px] leading-loose min-w-[540px]">
+          {[0, 1, 2, 3].map((row) => {
+            const rowOffset = row * 16;
+            const rowBytes = HEX_DATA.slice(rowOffset, rowOffset + 16);
+            return (
+              <div key={row} className="flex items-center">
+                {/* Offset column */}
+                <span className="text-nvme-violet w-[72px] flex-shrink-0 select-none">
+                  {rowOffset.toString(16).padStart(8, "0")}
+                </span>
+                {/* Hex bytes */}
+                <span className="flex-shrink-0">
+                  {rowBytes.map((byte, col) => {
+                    const offset = rowOffset + col;
+                    const lit = isHighlighted(offset);
+                    return (
+                      <span key={offset}>
+                        <motion.span
+                          onClick={() => setSelected(offset)}
+                          className={`cursor-pointer px-[1px] rounded transition-colors ${
+                            lit
+                              ? "bg-nvme-green/20 text-nvme-green font-bold"
+                              : "text-white/60 hover:text-white hover:bg-white/5"
+                          }`}
+                          animate={lit ? { scale: 1.05 } : { scale: 1 }}
+                          transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                        >
+                          {byte}
+                        </motion.span>
+                        {col === 7 ? (
+                          <span className="text-white/20">{" "} </span>
+                        ) : col < 15 ? (
+                          <span className="text-white/10"> </span>
+                        ) : null}
+                      </span>
+                    );
+                  })}
+                </span>
+                {/* ASCII column */}
+                <span className="text-nvme-blue/40 ml-2 flex-shrink-0 select-none">
+                  |{rowBytes.map((b, col) => {
+                    const offset = rowOffset + col;
+                    const lit = isHighlighted(offset);
+                    return (
+                      <span
+                        key={offset}
+                        className={lit ? "text-nvme-blue font-bold" : ""}
+                      >
+                        {asciiChar(b)}
+                      </span>
+                    );
+                  })}|
+                </span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Info panel */}
+      <AnimatePresence mode="wait">
+        {selected !== null && (
+          <motion.div
+            key={activeField?.name ?? selected}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2 }}
+            className="bg-story-card rounded-xl p-4"
+          >
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs mb-3">
+              <div>
+                <div className="text-text-muted text-[10px]">Offset</div>
+                <div className="text-text-code font-mono font-bold">
+                  0x{selected.toString(16).padStart(2, "0").toUpperCase()}
+                </div>
+              </div>
+              <div>
+                <div className="text-text-muted text-[10px]">Row</div>
+                <div className="text-nvme-violet font-mono">
+                  0x{(Math.floor(selected / 16) * 16).toString(16).padStart(8, "0")}
+                </div>
+              </div>
+              <div>
+                <div className="text-text-muted text-[10px]">Position in row</div>
+                <div className="text-text-primary font-mono">
+                  {(selected % 16).toString(16).toUpperCase()} ({selected % 16})
+                </div>
+              </div>
+              <div>
+                <div className="text-text-muted text-[10px]">Byte value</div>
+                <div className="text-nvme-green font-mono font-bold">
+                  0x{HEX_DATA[selected].toUpperCase()} ({parseInt(HEX_DATA[selected], 16)})
+                </div>
+              </div>
+            </div>
+
+            {activeField && (
+              <div className="border-t border-story-border pt-3">
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs">
+                  <div>
+                    <span className="text-text-muted">Field: </span>
+                    <span className="text-text-primary font-semibold">{activeField.name}</span>
+                  </div>
+                  <div>
+                    <span className="text-text-muted">Raw bytes: </span>
+                    <span className="text-nvme-green font-mono">{activeField.raw}</span>
+                  </div>
+                  <div>
+                    <span className="text-text-muted">Decoded: </span>
+                    <span className="text-text-primary font-mono">{activeField.decoded}</span>
+                  </div>
+                </div>
+                {activeField.end - activeField.start >= 1 && activeField.name !== "Magic signature" && (
+                  <p className="text-text-muted text-[10px] mt-2 italic">
+                    Little-endian: reverse the bytes → then read as hex value
+                  </p>
+                )}
+              </div>
+            )}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {selected === null && (
+        <div className="text-center text-text-muted text-[10px] italic py-2">
+          Click any byte above to see its offset, position, and decoded value
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function Passthru() {
   return (
     <SectionWrapper className="py-24 px-4 bg-story-surface">
@@ -283,264 +485,42 @@ export default function Passthru() {
           </div>
         </div>
 
-        {/* ─── Little-Endian Deep Dive ─── */}
+        {/* ─── Little-Endian ─── */}
         <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
           <div className="text-text-primary font-semibold text-sm mb-3">
             Little-Endian — How Bytes Are Actually Stored
           </div>
-          <p className="text-text-secondary text-xs leading-relaxed mb-3">
-            <em className="text-text-primary">Before we look at binary files, we need
-            to understand something that trips up almost everyone: byte ordering.</em>{" "}
-            NVMe (like x86 and PCIe) uses <strong className="text-text-primary">
-            little-endian</strong> byte order. What does that mean?
-          </p>
-          <p className="text-text-secondary text-xs leading-relaxed mb-3">
-            <em className="text-text-primary">Imagine you have the number 4096.
-            In hex, that&apos;s <code className="text-text-code">0x00001000</code> — four
-            bytes. How would you store those bytes in memory?</em>
-          </p>
-          <p className="text-text-secondary text-xs leading-relaxed mb-3">
-            You might expect them in the &ldquo;natural&rdquo; reading order:{" "}
-            <code className="text-text-code">00 00 10 00</code>. That would be{" "}
-            <strong>big-endian</strong> — most significant byte first, like how we
-            naturally read numbers left to right.
-          </p>
           <p className="text-text-secondary text-xs leading-relaxed mb-4">
-            But NVMe and x86 use <strong className="text-text-primary">little-endian</strong> — the{" "}
-            <em>least</em> significant byte is stored at the <em>lowest</em> memory
-            address. So the bytes are reversed: <code className="text-text-code">00 10 00 00</code>.
+            NVMe stores numbers with the <strong className="text-text-primary">smallest
+            byte first</strong>. So the value <code className="text-text-code">0x00001000</code>{" "}
+            (4096) isn&apos;t stored as <code className="text-text-code">00 00 10 00</code>{" "}
+            — it&apos;s stored <em>reversed</em>:{" "}
+            <code className="text-text-code">00 10 00 00</code>. This is called{" "}
+            <strong className="text-text-primary">little-endian</strong>. Try it:
           </p>
-
-          {/* ─── Interactive Animation ─── */}
-          <div className="text-text-primary text-xs font-semibold mb-2">
-            Try it — click a value, then convert to see the bytes reverse:
-          </div>
           <LittleEndianAnimator />
-
-          <p className="text-text-secondary text-xs leading-relaxed mb-3">
-            <em className="text-text-primary">How do you convert manually?</em> Take the
-            hex value, split into byte pairs from right to left. For{" "}
-            <code className="text-text-code">0x000003A4</code>: split into{" "}
-            <code className="text-text-code">00</code>{" "}
-            <code className="text-text-code">00</code>{" "}
-            <code className="text-text-code">03</code>{" "}
-            <code className="text-text-code">A4</code>, then reverse the order →{" "}
-            <code className="text-text-code">A4 03 00 00</code>. That&apos;s what you&apos;ll
-            see in memory and in hexdump output.
-          </p>
-
-          <p className="text-text-secondary text-xs leading-relaxed mb-3">
-            <em className="text-text-primary">And the reverse — reading from a hexdump?</em>{" "}
-            If you see <code className="text-text-code">E8 03 00 00</code> in a binary dump,
-            reverse the bytes: <code className="text-text-code">00 00 03 E8</code> →{" "}
-            <code className="text-text-code">0x000003E8</code> = 1000 decimal.
-          </p>
-
-          <p className="text-text-secondary text-xs leading-relaxed mb-3">
-            <em className="text-text-primary">Why does this matter for passthru?</em>{" "}
-            When you write <code className="text-text-code">--cdw10=0x00001000</code>,
-            nvme-cli stores that value in DW10 of the SQE in little-endian. And when the
-            drive sends back binary data, all multi-byte values are <em>also</em> little-endian.
-            If you read a binary file in a hex editor and don&apos;t account for byte
-            ordering, you&apos;ll misread every number.
-          </p>
           <p className="text-text-muted text-[10px] italic leading-relaxed">
-            <em>Why little-endian and not big-endian?</em> Historical convention from Intel
-            x86 processors. PCIe was designed around x86, and NVMe runs over PCIe, so
-            everything uses little-endian. Network protocols (TCP/IP) use big-endian
-            (&ldquo;network byte order&rdquo;), but storage protocols use the native CPU order.
+            NVMe uses little-endian because it runs over PCIe on x86 CPUs, which are
+            little-endian. Binary data from the drive is also little-endian — if you
+            don&apos;t reverse the bytes when reading, you&apos;ll misread every value.
           </p>
         </div>
 
-        {/* ─── What is hexdump? ─── */}
+        {/* ─── Hexdump Explorer ─── */}
         <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
           <div className="text-text-primary font-semibold text-sm mb-3">
-            Reading hexdump Output — What Are Those Rows?
+            Reading a Hexdump
           </div>
-          <p className="text-text-secondary text-xs leading-relaxed mb-3">
-            <em className="text-text-primary">When you inspect a binary file, you&apos;ll
-            use <code className="text-text-code">hexdump -C</code>.</em> But the output
-            can look intimidating if you haven&apos;t seen it before. Let&apos;s break
-            down what each part means:
+          <p className="text-text-secondary text-xs leading-relaxed mb-4">
+            An <strong className="text-text-primary">offset</strong> is just a position
+            — how many bytes from the start of the data. Byte 0 is at offset 0, byte 16
+            is at offset <code className="text-text-code">0x10</code>, byte 32 is at{" "}
+            <code className="text-text-code">0x20</code>, and so on.{" "}
+            <code className="text-text-code">hexdump -C</code> shows your binary data
+            in rows of 16 bytes. <strong className="text-text-primary">Click any byte
+            below</strong> to see how it works:
           </p>
-          <pre className="text-[11px] bg-story-dark rounded-xl p-4 overflow-x-auto font-mono text-white/70 mb-4 leading-relaxed">
-{`00000000  56 45 4e 44 01 00 02 00  00 10 00 00 a4 03 00 00  |VEND............|
-00000010  e8 03 00 00 00 00 00 00  64 00 00 00 00 00 00 00  |........d.......|`}
-          </pre>
-          <p className="text-text-secondary text-xs leading-relaxed mb-3">
-            Every row has three parts:
-          </p>
-          <div className="space-y-2 text-xs mb-4">
-            <div className="bg-story-surface rounded-lg p-3">
-              <code className="text-nvme-violet font-mono font-bold">00000000</code>
-              <span className="text-text-muted ml-2">← Offset (byte address)</span>
-              <p className="text-text-muted mt-1">
-                <em>Where in the file are these bytes?</em> The first row starts at
-                offset 0x00000000 (the very beginning). The second row starts at
-                0x00000010 (byte 16). Each row shows 16 bytes, so the next row would
-                be at 0x00000020 (byte 32), then 0x00000030 (byte 48), and so on.
-              </p>
-            </div>
-            <div className="bg-story-surface rounded-lg p-3">
-              <code className="text-nvme-green font-mono font-bold">56 45 4e 44 01 00 02 00 &nbsp;00 10 00 00 a4 03 00 00</code>
-              <span className="text-text-muted ml-2">← Hex values (16 bytes)</span>
-              <p className="text-text-muted mt-1">
-                <em>The actual byte values in hexadecimal.</em> Each pair of hex digits
-                is one byte (e.g., <code className="text-text-code">56</code> = decimal 86 =
-                ASCII &ldquo;V&rdquo;). There are 16 bytes per row, split into two groups
-                of 8 with a space in the middle for readability.{" "}
-                <em>Why 16 bytes per row?</em> It&apos;s a convention — 16 is a nice
-                power of 2, and it makes offset math easy (each row increments by 0x10 = 16).
-              </p>
-            </div>
-            <div className="bg-story-surface rounded-lg p-3">
-              <code className="text-nvme-blue font-mono font-bold">|VEND............|</code>
-              <span className="text-text-muted ml-2">← ASCII representation</span>
-              <p className="text-text-muted mt-1">
-                <em>The same 16 bytes, but shown as ASCII characters.</em> Printable
-                characters (letters, digits, punctuation) show as themselves.
-                Non-printable bytes (anything below 0x20 or above 0x7E) show as a dot.{" "}
-                <em>Why is this useful?</em> It helps you spot text strings buried in
-                binary data — like the &ldquo;VEND&rdquo; magic signature here.
-              </p>
-            </div>
-          </div>
-          {/* ─── Finding a specific byte ─── */}
-          <div className="text-text-primary font-semibold text-xs mb-2 mt-4">
-            How to Find a Specific Byte
-          </div>
-          <p className="text-text-secondary text-xs leading-relaxed mb-3">
-            <em className="text-text-primary">If someone says &ldquo;the temperature
-            field is at byte offset 0x0C,&rdquo; how do you find it in the hexdump?</em>{" "}
-            You combine two things: which <strong>row</strong> (the offset on the left)
-            and which <strong>position within that row</strong> (counting from 0 to 15,
-            left to right).
-          </p>
-          <p className="text-text-secondary text-xs leading-relaxed mb-3">
-            Let&apos;s walk through it step by step for offset <code className="text-text-code">0x0C</code>:
-          </p>
-          <div className="space-y-2 text-xs mb-4">
-            <div className="bg-story-surface rounded-lg p-3">
-              <span className="text-text-primary font-semibold">Step 1: Which row?</span>
-              <p className="text-text-muted mt-1">
-                Each row shows 16 bytes (0x10 in hex). Divide your offset by 16:{" "}
-                <code className="text-text-code">0x0C ÷ 0x10 = 0</code> remainder{" "}
-                <code className="text-text-code">0x0C</code>. So it&apos;s on the
-                row that starts at <code className="text-text-code">0x00000000</code>{" "}
-                (the first row).{" "}
-                <em>If the offset was 0x18, that&apos;s 0x18 ÷ 0x10 = 1 remainder 0x08,
-                so row <code className="text-text-code">0x00000010</code> (the second row),
-                position 8.</em>
-              </p>
-            </div>
-            <div className="bg-story-surface rounded-lg p-3">
-              <span className="text-text-primary font-semibold">Step 2: Which position in the row?</span>
-              <p className="text-text-muted mt-1">
-                The remainder tells you the position: <code className="text-text-code">0x0C</code>{" "}
-                = 12 decimal. So count 12 positions from the left (starting at 0).
-              </p>
-            </div>
-          </div>
-
-          <p className="text-text-secondary text-xs leading-relaxed mb-2">
-            <em className="text-text-primary">Let&apos;s count it visually.</em> Here&apos;s
-            the first row with position numbers underneath:
-          </p>
-          <div className="bg-story-dark rounded-xl p-4 overflow-x-auto mb-4">
-            <div className="font-mono text-[11px] leading-relaxed">
-              <div className="text-white/40 mb-1">
-                {"          "}position:{"  "}
-                <span>0{"  "}1{"  "}2{"  "}3{"  "}4{"  "}5{"  "}6{"  "}7{"   "}8{"  "}9{"  "}A{"  "}B{"  "}</span>
-                <span className="text-nvme-green font-bold">C{"  "}</span>
-                <span>D{"  "}E{"  "}F</span>
-              </div>
-              <div>
-                <span className="text-nvme-violet">00000000</span>
-                <span className="text-white/70">{"  "}56 45 4e 44 01 00 02 00{"  "}00 10 00 00 </span>
-                <span className="text-nvme-green font-bold bg-nvme-green/10 px-1 rounded">a4</span>
-                <span className="text-white/70"> 03 00 00</span>
-              </div>
-              <div className="text-white/30 mt-1">
-                {"          "}                                            {"       "}
-                <span className="text-nvme-green">↑</span>
-              </div>
-              <div className="text-white/30">
-                {"          "}                                      {"     "}
-                <span className="text-nvme-green text-[10px]">position 0x0C (12th byte)</span>
-              </div>
-            </div>
-          </div>
-
-          <p className="text-text-secondary text-xs leading-relaxed mb-3">
-            <em className="text-text-primary">The byte at position 0x0C
-            is <code className="text-text-code">a4</code>.</em> But remember — this
-            is a 4-byte little-endian field (offset 0x0C through 0x0F). So we take
-            the next 4 bytes: <code className="text-text-code">a4 03 00 00</code>, reverse
-            them → <code className="text-text-code">0x000003A4</code> = 932.
-            That&apos;s our temperature value (in 0.1°C units → 93.2°C).
-          </p>
-
-          <p className="text-text-secondary text-xs leading-relaxed mb-3">
-            <em className="text-text-primary">Another example — offset 0x18:</em>{" "}
-            That&apos;s 0x18 = 24 decimal. Row = 24 ÷ 16 = 1 (second row, starting at{" "}
-            <code className="text-text-code">0x00000010</code>). Position = 24 - 16 = 8
-            (the 9th byte, which is the first byte after the middle gap). On the
-            second row:
-          </p>
-          <div className="bg-story-dark rounded-xl p-4 overflow-x-auto mb-4">
-            <div className="font-mono text-[11px] leading-relaxed">
-              <div className="text-white/40 mb-1">
-                {"          "}position:{"  "}
-                <span>0{"  "}1{"  "}2{"  "}3{"  "}4{"  "}5{"  "}6{"  "}7{"   "}</span>
-                <span className="text-nvme-blue font-bold">8{"  "}</span>
-                <span>9{"  "}A{"  "}B{"  "}C{"  "}D{"  "}E{"  "}F</span>
-              </div>
-              <div>
-                <span className="text-nvme-violet">00000010</span>
-                <span className="text-white/70">{"  "}e8 03 00 00 00 00 00 00{"  "}</span>
-                <span className="text-nvme-blue font-bold bg-nvme-blue/10 px-1 rounded">64</span>
-                <span className="text-white/70"> 00 00 00 00 00 00 00</span>
-              </div>
-              <div className="text-white/30 mt-1">
-                {"          "}                                  {"           "}
-                <span className="text-nvme-blue">↑</span>
-              </div>
-              <div className="text-white/30">
-                {"          "}                                  {"   "}
-                <span className="text-nvme-blue text-[10px]">row 0x10 + position 0x08 = offset 0x18</span>
-              </div>
-            </div>
-          </div>
-
-          <p className="text-text-secondary text-xs leading-relaxed mb-3">
-            Offset 0x18: bytes <code className="text-text-code">64 00 00 00</code> →
-            reverse → <code className="text-text-code">0x00000064</code> = 100 decimal.
-            That&apos;s the &ldquo;percentage used&rdquo; field.
-          </p>
-
-          <p className="text-text-muted text-[10px] italic leading-relaxed mb-3">
-            <em>Quick shortcut:</em> the row offset always ends in 0
-            (<code className="text-text-code">0x00</code>,{" "}
-            <code className="text-text-code">0x10</code>,{" "}
-            <code className="text-text-code">0x20</code>, ...). So for any byte offset,
-            the row is the offset with the last digit replaced by 0, and the position
-            is the last hex digit. Offset <code className="text-text-code">0x0C</code> →
-            row <code className="text-text-code">0x00</code>, position{" "}
-            <code className="text-text-code">C</code>. Offset{" "}
-            <code className="text-text-code">0x24</code> → row{" "}
-            <code className="text-text-code">0x20</code>, position{" "}
-            <code className="text-text-code">4</code>. Simple.
-          </p>
-
-          <p className="text-text-muted text-[10px] italic leading-relaxed">
-            <em>Is there another format?</em> <code className="text-text-code">hexdump</code>{" "}
-            without <code className="text-text-code">-C</code> shows a different layout
-            (16-bit words instead of individual bytes). The{" "}
-            <code className="text-text-code">-C</code> flag stands for
-            &ldquo;Canonical&rdquo; — it&apos;s the most readable format and the one
-            you&apos;ll see most often. You can also use{" "}
-            <code className="text-text-code">xxd</code> for a similar view.
-          </p>
+          <HexdumpExplorer />
         </div>
 
         {/* ─── Data Transfer Deep Dive ─── */}
@@ -644,62 +624,10 @@ export default function Passthru() {
             </p>
           </div>
 
-          <div className="text-text-primary text-xs font-semibold mb-2">
-            Step 3: Decode it — using little-endian
-          </div>
-          <p className="text-text-secondary text-xs leading-relaxed mb-3">
-            <em className="text-text-primary">The vendor spec tells you the
-            structure layout. For each field, we take the raw bytes from the hexdump,
-            reverse them (little-endian → value), and look up what the field means:</em>
-          </p>
-          <div className="overflow-x-auto mb-4">
-            <table className="w-full text-xs">
-              <thead>
-                <tr className="border-b border-story-border">
-                  <th className="text-left py-2 px-2 text-text-muted font-mono">Offset</th>
-                  <th className="text-left py-2 px-2 text-text-muted font-mono">Raw Bytes</th>
-                  <th className="text-left py-2 px-2 text-text-muted font-mono">Little-Endian → Value</th>
-                  <th className="text-left py-2 px-2 text-text-muted font-mono">Field</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { off: "0x00-0x03", raw: "56 45 4e 44", val: "0x444E4556 → \"VEND\"", field: "Magic signature (also ASCII — read each byte as a char: V, E, N, D)" },
-                  { off: "0x04-0x05", raw: "01 00", val: "0x0001 → 1", field: "Version" },
-                  { off: "0x06-0x07", raw: "02 00", val: "0x0002 → 2", field: "Structure type (2 = health data)" },
-                  { off: "0x08-0x0B", raw: "00 10 00 00", val: "0x00001000 → 4096", field: "Total NAND writes (GB)" },
-                  { off: "0x0C-0x0F", raw: "a4 03 00 00", val: "0x000003A4 → 932", field: "Temperature (0.1°C units → 93.2°C)" },
-                  { off: "0x10-0x13", raw: "e8 03 00 00", val: "0x000003E8 → 1000", field: "Power-on hours" },
-                  { off: "0x14-0x17", raw: "00 00 00 00", val: "0x00000000 → 0", field: "Reserved" },
-                  { off: "0x18-0x1B", raw: "64 00 00 00", val: "0x00000064 → 100", field: "Percentage used (%)" },
-                  { off: "0x20-0x23", raw: "25 04 00 00", val: "0x00000425 → 1061", field: "Uncorrectable error count" },
-                  { off: "0x24-0x27", raw: "c8 00 00 00", val: "0x000000C8 → 200", field: "Available spare (%×2, so 100%)" },
-                ].map((row) => (
-                  <tr key={row.off} className="border-b border-story-border/50">
-                    <td className="py-2 px-2 font-mono text-text-code">{row.off}</td>
-                    <td className="py-2 px-2 font-mono text-nvme-green">{row.raw}</td>
-                    <td className="py-2 px-2 font-mono text-text-primary">{row.val}</td>
-                    <td className="py-2 px-2 text-text-muted">{row.field}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-text-secondary text-xs leading-relaxed mb-3">
-            <em className="text-text-primary">See the pattern?</em> For every field,
-            you take the raw bytes from the hexdump, reverse them, and that gives you the
-            hex value. <code className="text-text-code">a4 03 00 00</code> → reverse →{" "}
-            <code className="text-text-code">00 00 03 a4</code> → <code className="text-text-code">
-            0x3A4</code> → 932.
-          </p>
-          <p className="text-text-muted text-[10px] italic leading-relaxed">
-            <em>Wait, why is the magic &ldquo;VEND&rdquo; readable left-to-right?</em>{" "}
-            Good catch. ASCII strings are stored byte-by-byte, not as a multi-byte integer.
-            Each character is one byte: <code className="text-text-code">0x56</code>=V,{" "}
-            <code className="text-text-code">0x45</code>=E, <code className="text-text-code">
-            0x4E</code>=N, <code className="text-text-code">0x44</code>=D. Endianness only
-            applies to multi-byte <em>numbers</em>, not to strings. This is a common
-            source of confusion when reading binary dumps.
+          <p className="text-text-secondary text-xs leading-relaxed">
+            <em className="text-text-primary">Step 3: Decode it.</em> This is the same
+            data shown in the interactive hexdump explorer above — scroll up and click
+            any byte to see the field name, raw bytes, and little-endian decoded value.
           </p>
         </div>
 
