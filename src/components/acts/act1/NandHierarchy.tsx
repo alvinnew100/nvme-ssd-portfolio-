@@ -53,20 +53,22 @@ export default function NandHierarchy() {
           How NAND Cells Are Organized
         </h3>
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
-          A single NAND cell is microscopic. To build a drive that holds terabytes
-          of data, billions of cells are organized into a strict hierarchy &mdash;
-          like pages in a notebook, notebooks on a shelf, shelves on a floor, and
-          floors in a building.
+          A single NAND cell is microscopic — it stores just 1 to 4 bits. <em className="text-text-primary">
+          So how do you get from a tiny cell to a 1 TB drive?</em> By organizing
+          billions of cells into a strict hierarchy, like a library system: pages in
+          notebooks, notebooks on shelves, shelves on floors, floors in a building.
         </p>
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
-          Understanding this hierarchy is important because it explains a key rule
-          of flash memory:{" "}
+          <em className="text-text-primary">Why does this hierarchy matter?</em> Because
+          it explains the most important rule of flash memory:{" "}
           <strong className="text-text-primary">
             you can read and write individual pages, but you can only erase entire blocks
           </strong>
           . This mismatch between write size and erase size is the root cause of many
-          SSD behaviors we&apos;ll explore later (garbage collection, write
-          amplification, and TRIM).
+          SSD behaviors we&apos;ll explore later. <em className="text-text-primary">
+          But why can&apos;t you erase a single page?</em> Because of how NAND physics
+          works — erasing requires a high voltage pulse that affects all cells connected
+          to the same block&apos;s circuitry.
         </p>
 
         <div className="bg-story-card rounded-2xl p-8 card-shadow mb-6">
@@ -114,12 +116,18 @@ export default function NandHierarchy() {
             (hundreds of pages at once). Imagine needing to shred an entire notebook just to
             correct one page — that&apos;s the constraint the SSD&apos;s firmware must work around.
           </p>
+          <p className="text-text-secondary text-sm leading-relaxed mb-3">
+            <em className="text-text-primary">So what happens when you want to change
+            just one page&apos;s data?</em> The SSD can&apos;t erase that one page —
+            it would destroy the other 127+ pages in the same block. Instead, it writes
+            the new data to a <em>different</em> free page and updates a mapping table.
+            The old page becomes &ldquo;stale.&rdquo;
+          </p>
           <p className="text-text-secondary text-sm leading-relaxed">
-            This is why SSDs don&apos;t overwrite data in place. Instead, they write new data
-            to a different free page and update a mapping table. The old page becomes
-            &ldquo;stale&rdquo; and will be cleaned up later. We&apos;ll see exactly how this
-            works in the next section on the <strong className="text-text-primary">Flash
-            Translation Layer (FTL)</strong>.
+            <em className="text-text-primary">But then stale pages pile up — who cleans
+            them?</em> That&apos;s exactly the problem the <strong className="text-text-primary">
+            Flash Translation Layer (FTL)</strong> solves. Let&apos;s see how in the
+            next section.
           </p>
         </div>
       </div>

@@ -59,29 +59,37 @@ export default function NandCell() {
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           Now we know that data is made of bits (0s and 1s) and that drives organize
-          them into numbered blocks (LBAs). But how does an SSD physically store a
-          bit? It doesn&apos;t have spinning platters like a hard drive. Instead, it
-          uses <strong className="text-text-primary">NAND flash memory</strong>.
+          them into numbered blocks (LBAs). <em className="text-text-primary">But
+          how does an SSD physically store a bit?</em> It doesn&apos;t have spinning
+          platters like a hard drive. Instead, it uses <strong className="text-text-primary">
+          NAND flash memory</strong>.
         </p>
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           Think of each memory cell as a <strong className="text-text-primary">tiny bucket
           that holds electrical charge</strong>. To store a &ldquo;1&rdquo;, you put charge
           in the bucket. To store a &ldquo;0&rdquo;, you leave it empty. To read the
-          value, you check how much charge is in the bucket. The bucket is actually a
-          microscopic structure called a <strong className="text-text-primary">floating gate
-          </strong> — a layer of material that can trap electrons and hold them even when
-          power is off. That&apos;s why SSDs keep your data when you unplug them.
+          value, you check how much charge is in the bucket.
         </p>
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
-          Here&apos;s the clever part: you can store <em>more than 1 bit</em> per cell
-          by using multiple charge levels. Instead of just &ldquo;empty&rdquo; or
-          &ldquo;full,&rdquo; you can have 4, 8, or even 16 distinct charge levels in
-          the same cell. Each level represents a different bit pattern.
+          <em className="text-text-primary">But how does the charge stay there when
+          you unplug the power?</em> The bucket is actually a microscopic structure
+          called a <strong className="text-text-primary">floating gate</strong> — a
+          layer of material surrounded by insulation that <em>traps</em> electrons.
+          Once electrons are pushed in, they can&apos;t escape (for years). That&apos;s
+          why SSDs keep your data when power is off — the charge is physically trapped.
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          Here&apos;s the clever part: <em className="text-text-primary">what if you
+          could store more than 1 bit per cell?</em> Instead of just &ldquo;empty&rdquo;
+          or &ldquo;full,&rdquo; you can have 4, 8, or even 16 distinct charge levels
+          in the same cell. Each level represents a different bit pattern.
         </p>
         <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
-          The tradeoff? More levels per cell means more storage, but it&apos;s harder
-          to read accurately (the levels are closer together), slower to write, and the
-          cell wears out faster. Click each type below to compare:
+          <em className="text-text-primary">But what&apos;s the catch?</em> More
+          levels per cell means more storage, but it&apos;s harder to read accurately
+          (the levels are closer together), slower to write, and the cell wears out
+          faster. It&apos;s a fundamental tradeoff between capacity, speed, and
+          durability. Click each type below to compare:
         </p>
 
         {/* Cell type selector */}
@@ -129,7 +137,9 @@ export default function NandCell() {
               </div>
               <p className="text-text-muted text-xs mb-4">
                 Each bar represents a different charge level. The bit pattern next to it
-                is what that level &ldquo;means.&rdquo;
+                is what that level &ldquo;means.&rdquo; <em>Notice how the bars get
+                closer together with more levels?</em> That&apos;s why reading gets
+                harder.
               </p>
               <div className="space-y-2">
                 {Array.from({ length: Math.min(cell.levels, 8) }).map((_, i) => {

@@ -44,7 +44,6 @@ import Testing from "@/components/acts/act5/Testing";
 // Act 6 — Advanced & Tools
 import FirmwareUpdate from "@/components/acts/act5/FirmwareUpdate";
 import Security from "@/components/acts/act5/Security";
-import Reservations from "@/components/acts/act5/Reservations";
 import Passthru from "@/components/acts/act5/Passthru";
 import Tracing from "@/components/acts/act5/Tracing";
 
@@ -146,11 +145,10 @@ export default function HomePage() {
       <Testing />
 
       {/* ===================== ACT 6: ADVANCED & TOOLS ===================== */}
-      {/* Firmware (with CA0-3) → Security → Reservations → Passthru → Tracing → Reference */}
+      {/* Firmware (with CA0-3) → Security → Passthru → Tracing → Reference */}
       <ActDivider act={6} title="Advanced & Tools" id="act-6" />
       <FirmwareUpdate />
       <Security />
-      <Reservations />
       <Passthru />
       <Tracing />
       <TraceDecoderEmbed />

@@ -46,6 +46,12 @@ export default function LBA() {
         </h3>
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          We know data is made of bits and bytes. But an SSD holds a trillion bytes
+          &mdash; <em className="text-text-primary">how does the computer know where
+          to find a specific piece of data?</em> It needs an addressing system, like
+          street addresses for houses.
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           Imagine a very long row of numbered mailboxes. Each mailbox holds a small,
           fixed amount of data. When you want to read or write data, you just say{" "}
           &ldquo;give me mailbox number 42&rdquo; &mdash; you don&apos;t need to know
@@ -58,8 +64,17 @@ export default function LBA() {
           starting from 0. Each block is called an <strong className="text-text-primary">
           LBA</strong>. The &ldquo;logical&rdquo; part means these are <em>virtual</em>{" "}
           addresses &mdash; your computer uses them, but the SSD internally maps them
-          to the actual physical locations on the NAND chips. (We&apos;ll see how that
-          mapping works when we cover the FTL later.)
+          to the actual physical locations on the NAND chips.
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          <em className="text-text-primary">But why &ldquo;logical&rdquo;? Why not
+          just use physical addresses directly?</em> Because the SSD constantly moves
+          data around internally (for wear leveling, garbage collection, and error
+          recovery). If the OS used physical addresses, every internal move would
+          break the OS&apos;s bookkeeping. The LBA abstraction means the OS sees a
+          stable, unchanging address space while the SSD manages the physical chaos
+          underneath. (We&apos;ll see exactly how this mapping works when we cover
+          the FTL later.)
         </p>
         <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
           Each LBA has a fixed size &mdash; either <strong className="text-text-primary">
@@ -79,7 +94,9 @@ export default function LBA() {
             <div>
               <div className="text-text-secondary text-sm font-medium mb-2">Block Size</div>
               <p className="text-text-muted text-xs mb-3">
-                How many bytes each &ldquo;mailbox&rdquo; holds.
+                How many bytes each &ldquo;mailbox&rdquo; holds. <em>Why does size
+                matter?</em> Larger blocks mean fewer total addresses but potentially
+                wasted space for small files.
               </p>
               <div className="flex gap-2">
                 {[512, 4096].map((size) => (
@@ -174,10 +191,12 @@ export default function LBA() {
         <InfoCard variant="tip" title="512 bytes vs 4 KB — why two sizes?">
           Older hard drives used 512-byte sectors, so most software was written for
           that size. Modern SSDs internally use 4 KB pages, but they can{" "}
-          <strong>emulate</strong> 512-byte sectors for compatibility. Using native 4
-          KB sectors avoids extra translation work inside the SSD and is generally
-          faster. You can check what your drive supports (and switch) using{" "}
-          <code className="text-text-code">nvme id-ns</code>.
+          <strong>emulate</strong> 512-byte sectors for compatibility. <em>What
+          happens when the OS writes 512 bytes to a 4KB-native SSD?</em> The SSD
+          must read the full 4KB page, modify the 512 bytes, and write the whole page
+          back — a read-modify-write cycle that wastes bandwidth. Using native 4 KB
+          sectors avoids this entirely. You can check what your drive supports (and
+          switch) using <code className="text-text-code">nvme id-ns</code>.
         </InfoCard>
       </div>
     </SectionWrapper>

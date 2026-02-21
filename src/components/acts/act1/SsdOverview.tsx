@@ -11,29 +11,40 @@ export default function SsdOverview() {
         </h3>
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           So far we&apos;ve seen the building blocks: bits, bytes, LBAs, and NAND cells
-          organized into pages, blocks, and dies. Now let&apos;s see how they all fit
-          together inside an actual SSD.
+          organized into pages, blocks, and dies. <em className="text-text-primary">But
+          how do all these pieces fit together inside an actual SSD?</em> An SSD
+          isn&apos;t just a pile of NAND chips — it&apos;s a complete mini-computer.
         </p>
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
-          An SSD isn&apos;t just a pile of NAND chips. It&apos;s a complete
-          mini-computer with three main parts:
+          <em className="text-text-primary">Why does an SSD need to be a computer?
+          </em> Because someone has to manage all the complexity we just learned about
+          — translating LBAs to physical pages, choosing which cells to write to,
+          handling the read/write vs erase size mismatch, fixing bit errors,
+          monitoring wear. That management software needs a processor, memory, and
+          interfaces, just like a computer.
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          An SSD has three main parts:
         </p>
         <ul className="text-text-secondary mb-4 leading-relaxed max-w-3xl list-disc ml-5 space-y-1">
           <li>
             <strong className="text-text-primary">Controller</strong> — The &ldquo;brain.&rdquo;
             A specialized processor that runs all the software (firmware) managing the drive.
-            It handles translating your read/write requests into NAND operations.
+            It handles every read, write, and erase operation.
           </li>
           <li>
             <strong className="text-text-primary">DRAM</strong> — Fast temporary memory
-            (like your computer&apos;s RAM). The controller uses it to store the mapping table
-            that translates logical addresses (LBAs) to physical NAND locations. Without DRAM,
-            every read would need an extra NAND lookup, making it much slower.
+            (like your computer&apos;s RAM). <em className="text-text-primary">Why does
+            the SSD need its own RAM?</em> To store the mapping table that translates
+            LBAs to physical NAND locations. This table can be hundreds of MB for a large
+            drive. Without DRAM, every read would need an extra NAND lookup first, adding
+            latency.
           </li>
           <li>
             <strong className="text-text-primary">NAND Flash Packages</strong> — The actual
             storage chips where your data lives permanently. Multiple packages connected through
-            separate channels allow parallel access, which is how SSDs achieve high speeds.
+            separate channels allow parallel access — <em className="text-text-primary">this
+            is the key to SSD speed</em>: the controller can read from many chips simultaneously.
           </li>
         </ul>
         <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
@@ -306,21 +317,23 @@ export default function SsdOverview() {
             <div className="text-nvme-blue font-semibold mb-1">Controller</div>
             <p className="text-text-muted text-xs">
               Processes NVMe commands, manages FTL mapping, handles ECC, and
-              coordinates NAND operations.
+              coordinates NAND operations. <em>Think of it as the SSD&apos;s CPU.</em>
             </p>
           </div>
           <div className="bg-story-card rounded-2xl p-5 card-shadow">
             <div className="text-nvme-violet font-semibold mb-1">DRAM</div>
             <p className="text-text-muted text-xs">
-              Caches the FTL table (logical-to-physical mapping) for fast
-              lookups. Some SSDs are DRAM-less and use HMB.
+              Caches the FTL table for fast lookups. <em>What about
+              DRAM-less SSDs?</em> They use HMB (Host Memory Buffer) — borrowing
+              a slice of your computer&apos;s RAM instead.
             </p>
           </div>
           <div className="bg-story-card rounded-2xl p-5 card-shadow">
             <div className="text-nvme-amber font-semibold mb-1">NAND Packages</div>
             <p className="text-text-muted text-xs">
               Multiple CE (chip enable) channels allow parallel access.
-              More channels = higher bandwidth.
+              <em> More channels = higher bandwidth</em> — a 4-channel controller
+              can read from 4 NAND chips simultaneously.
             </p>
           </div>
         </div>

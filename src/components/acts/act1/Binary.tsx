@@ -33,18 +33,29 @@ export default function Binary() {
           and app on your computer is made of billions of these tiny switches.
         </p>
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          <em className="text-text-primary">But why only 0 and 1? Why not 0 through
+          9 like normal numbers?</em> Because electronic circuits are most reliable
+          when they only need to distinguish between two states — voltage above a
+          threshold (1) or below it (0). More states would mean smaller margins and
+          more errors. (We&apos;ll see this exact tradeoff later when we look at how
+          NAND cells store multiple bits.)
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           A single bit isn&apos;t very useful &mdash; it can only represent two things
-          (yes/no, true/false). But when you group <strong className="text-text-primary">8
-          bits together</strong>, you get a <strong className="text-text-primary">byte</strong>.
+          (yes/no, true/false). <em className="text-text-primary">So how do we represent
+          something more complex, like a letter or a number?</em> By grouping{" "}
+          <strong className="text-text-primary">8 bits together</strong> into a{" "}
+          <strong className="text-text-primary">byte</strong>.
           A byte can represent 256 different values (2&times;2&times;2&times;2&times;2&times;2&times;2&times;2
           = 256), which is enough for a single letter, a small number, or a single
           color channel in an image.
         </p>
         <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
           Storage drives hold billions of bytes. A 1 TB (terabyte) SSD holds about
-          1 trillion bytes &mdash; or 8 trillion individual bits. Every one of those
-          bits is physically stored as an electrical charge inside a tiny cell on a
-          silicon chip. We&apos;ll explore how that works soon.
+          1 trillion bytes &mdash; or 8 trillion individual bits. <em className="text-text-primary">
+          But how does the SSD physically store each of those bits?</em> That&apos;s
+          exactly what we&apos;ll explore after we understand how these bits are
+          addressed.
         </p>
 
         {/* Interactive bit widget */}
@@ -55,7 +66,9 @@ export default function Binary() {
           <p className="text-text-muted text-xs mb-6">
             Each bit position has a different &ldquo;weight&rdquo; &mdash; the leftmost
             bit is worth 128, the next 64, then 32, 16, 8, 4, 2, 1. Add up the weights
-            of all the &ldquo;on&rdquo; bits to get the decimal value.
+            of all the &ldquo;on&rdquo; bits to get the decimal value. <em>Why these
+            specific numbers?</em> They&apos;re powers of 2 — each position doubles
+            the previous one.
           </p>
           <div className="flex flex-col items-center">
             {/* Bit weights */}
@@ -107,11 +120,13 @@ export default function Binary() {
         </div>
 
         <InfoCard variant="tip" title="What is hexadecimal?">
-          Counting in decimal (base-10) uses digits 0-9. <strong>Hexadecimal</strong> (base-16)
-          extends this with letters: 0-9 then A=10, B=11, C=12, D=13, E=14, F=15. We use hex
-          in storage because each hex digit perfectly represents 4 bits.
-          So <code className="text-text-code">0xFF</code> means all 8 bits are on = 255 in decimal.
-          Two hex digits always equal one byte. You&apos;ll see hex everywhere in NVMe.
+          <em>Why do engineers use hex instead of decimal?</em> Because each hex digit
+          perfectly represents 4 bits. Counting in decimal (base-10) uses digits 0-9.{" "}
+          <strong>Hexadecimal</strong> (base-16) extends this with letters: 0-9 then
+          A=10, B=11, C=12, D=13, E=14, F=15. So{" "}
+          <code className="text-text-code">0xFF</code> means all 8 bits are on = 255
+          in decimal. Two hex digits always equal one byte — a compact way to write
+          binary values. You&apos;ll see hex everywhere in NVMe.
         </InfoCard>
       </div>
     </SectionWrapper>
