@@ -790,6 +790,13 @@ export default function Passthru() {
             in rows of 16 bytes. <strong className="text-text-primary">Click any byte
             below</strong> to see how it works:
           </p>
+          <p className="text-text-muted text-[10px] italic mb-4 leading-relaxed">
+            Note: the data below is a <strong className="text-text-secondary">fictional
+            example</strong> — a made-up vendor health structure to teach hexdump reading.
+            Real vendor data structures are proprietary and not publicly documented. In
+            practice, you&apos;d get the field layout from the vendor&apos;s internal spec
+            or SDK documentation.
+          </p>
           <HexdumpExplorer />
         </div>
 
