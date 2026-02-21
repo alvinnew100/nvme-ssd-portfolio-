@@ -36,11 +36,7 @@ export default function LBA() {
     setLba(blockLbas[i]);
   };
 
-  // Determine which block the current LBA falls in
-  const currentBlock = Math.min(
-    Math.floor((lba / totalLBAs) * BLOCK_COUNT),
-    BLOCK_COUNT - 1
-  );
+  // Use selectedBlock directly (avoids floating-point round-trip bug)
 
   return (
     <SectionWrapper className="py-24 px-4 bg-story-surface">
@@ -153,7 +149,7 @@ export default function LBA() {
             </div>
             <div className="flex items-center gap-0.5">
               {Array.from({ length: BLOCK_COUNT }).map((_, i) => {
-                const isActive = currentBlock === i;
+                const isActive = selectedBlock === i;
                 return (
                   <button
                     key={i}
