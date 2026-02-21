@@ -360,7 +360,7 @@ export default function Queues() {
           </div>
 
           {/* Pointer legend */}
-          <div className="flex items-center gap-6 justify-center mb-6 text-xs">
+          <div className="flex items-center gap-6 justify-center mb-4 text-xs">
             <div className="flex items-center gap-1.5">
               <div className="w-3 h-3 rounded-full border-2 border-dashed border-nvme-blue" />
               <span className="text-text-muted font-mono">HEAD (consumer reads here)</span>
@@ -371,8 +371,49 @@ export default function Queues() {
             </div>
           </div>
 
-          {/* Detailed step-by-step guide — collapsible on mobile */}
-          <details className="sm:open bg-story-surface rounded-xl mb-4 text-xs group" open>
+          {/* Control buttons + status — directly below the queues */}
+          <div className="flex flex-wrap gap-3 mb-3 justify-center">
+            <button
+              onClick={submitCommand}
+              className="px-5 py-2.5 bg-nvme-blue text-white rounded-full text-xs font-semibold hover:shadow-lg hover:shadow-nvme-blue/20 transition-all active:scale-95"
+            >
+              1. Submit Command
+            </button>
+            <button
+              onClick={processCommand}
+              className="px-5 py-2.5 bg-nvme-green text-white rounded-full text-xs font-semibold hover:shadow-lg hover:shadow-nvme-green/20 transition-all active:scale-95"
+            >
+              2. Process (SSD)
+            </button>
+            <button
+              onClick={consumeCompletion}
+              className="px-5 py-2.5 bg-nvme-violet text-white rounded-full text-xs font-semibold hover:shadow-lg hover:shadow-nvme-violet/20 transition-all active:scale-95"
+            >
+              3. Consume Result
+            </button>
+            <button
+              onClick={reset}
+              className="px-5 py-2.5 bg-story-surface text-text-muted rounded-full text-xs font-semibold hover:bg-story-border transition-all"
+            >
+              Reset
+            </button>
+          </div>
+
+          {/* Status line */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={status}
+              initial={{ opacity: 0, y: 5 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0 }}
+              className="text-text-secondary text-xs bg-story-surface rounded-xl p-3 font-mono text-center mb-4"
+            >
+              {status}
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Detailed step-by-step guide — collapsible on mobile, below controls */}
+          <details className="sm:open bg-story-surface rounded-xl text-xs group" open>
             <summary className="sm:hidden cursor-pointer p-4 text-text-muted font-mono text-[10px] uppercase tracking-wider select-none flex items-center justify-between">
               <span>Step-by-step guide</span>
               <svg className="w-4 h-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -440,49 +481,6 @@ export default function Queues() {
               </div>
             </div>
           </details>
-
-          {/* Control buttons + status — sticky on mobile */}
-          <div className="sticky bottom-0 z-10 bg-story-card pt-3 -mx-8 px-8 border-t border-story-border/30 sm:static sm:border-0 sm:mx-0 sm:px-0 sm:pt-0">
-            <div className="flex flex-wrap gap-3 mb-4 justify-center">
-              <button
-                onClick={submitCommand}
-                className="px-5 py-2.5 bg-nvme-blue text-white rounded-full text-xs font-semibold hover:shadow-lg hover:shadow-nvme-blue/20 transition-all active:scale-95"
-              >
-                1. Submit Command
-              </button>
-              <button
-                onClick={processCommand}
-                className="px-5 py-2.5 bg-nvme-green text-white rounded-full text-xs font-semibold hover:shadow-lg hover:shadow-nvme-green/20 transition-all active:scale-95"
-              >
-                2. Process (SSD)
-              </button>
-              <button
-                onClick={consumeCompletion}
-                className="px-5 py-2.5 bg-nvme-violet text-white rounded-full text-xs font-semibold hover:shadow-lg hover:shadow-nvme-violet/20 transition-all active:scale-95"
-              >
-                3. Consume Result
-              </button>
-              <button
-                onClick={reset}
-                className="px-5 py-2.5 bg-story-surface text-text-muted rounded-full text-xs font-semibold hover:bg-story-border transition-all"
-              >
-                Reset
-              </button>
-            </div>
-
-            {/* Status line */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={status}
-                initial={{ opacity: 0, y: 5 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                className="text-text-secondary text-xs bg-story-surface rounded-xl p-3 font-mono text-center mb-2 sm:mb-0"
-              >
-                {status}
-              </motion.div>
-            </AnimatePresence>
-          </div>
         </div>
 
         {/* Why this design works */}
