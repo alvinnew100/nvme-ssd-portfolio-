@@ -1,9 +1,64 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import TerminalBlock from "@/components/story/TerminalBlock";
 import InfoCard from "@/components/story/InfoCard";
+
+function IdentifyCard() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  const fields = [
+    { label: "Model", value: "Samsung 990 PRO 2TB", color: "#38bdf8" },
+    { label: "Serial", value: "S6PENL0T123456", color: "#a78bfa" },
+    { label: "Firmware", value: "4B2QJXD7", color: "#00d4aa" },
+    { label: "Max Queues", value: "128", color: "#f5a623" },
+    { label: "Namespaces", value: "1", color: "#94a3b8" },
+  ];
+
+  return (
+    <div ref={ref} className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+      <div className="text-text-muted text-xs font-mono mb-3 uppercase tracking-wider">
+        The Drive&apos;s &ldquo;Resume&rdquo; — 4,096 Bytes of Identity Data
+      </div>
+      <div className="bg-gradient-to-br from-nvme-blue/5 to-nvme-violet/5 rounded-xl p-5 border border-nvme-blue/20">
+        <div className="flex items-center gap-3 mb-4">
+          <motion.div
+            className="w-12 h-12 rounded-xl bg-nvme-blue/10 border-2 border-nvme-blue flex items-center justify-center"
+            initial={{ scale: 0 }}
+            animate={inView ? { scale: 1 } : {}}
+            transition={{ type: "spring", stiffness: 200 }}
+          >
+            <span className="text-nvme-blue font-mono font-bold text-xs">ID</span>
+          </motion.div>
+          <div>
+            <div className="text-text-primary font-semibold text-sm">NVMe Controller Identity</div>
+            <div className="text-text-muted text-[10px] font-mono">opcode 0x06 · CNS=1 · 4,096 bytes</div>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
+          {fields.map((f, i) => (
+            <motion.div
+              key={f.label}
+              className="bg-story-surface/50 rounded-lg p-2.5 text-center"
+              initial={{ opacity: 0, y: 10 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.2 + i * 0.08 }}
+            >
+              <div className="text-[8px] font-mono text-text-muted uppercase">{f.label}</div>
+              <div className="font-mono text-[10px] font-bold mt-0.5" style={{ color: f.color }}>
+                {f.value}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Identify() {
   return (
@@ -38,6 +93,9 @@ export default function Identify() {
           <code className="text-text-code">id-ctrl</code> subcommand is a shortcut
           for &ldquo;Identify Controller&rdquo;:
         </p>
+
+        {/* Animated ID card visual */}
+        <IdentifyCard />
 
         <NvmeCliBlock command="nvme id-ctrl /dev/nvme0" />
 

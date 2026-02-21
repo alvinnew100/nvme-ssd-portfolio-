@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 
 const CELL_TYPES = [
@@ -45,6 +46,156 @@ const CELL_TYPES = [
     desc: "Each cell stores 4 bits using 16 voltage levels. Maximum storage density. The margins between levels are razor-thin, making reads slower and cells less durable. Best for read-heavy, cold storage workloads.",
   },
 ];
+
+function FloatingGateVisual() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  return (
+    <div ref={ref} className="bg-story-card rounded-2xl p-6 card-shadow mb-8">
+      <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
+        How a NAND Cell Stores a Bit — The Floating Gate
+      </div>
+      <div className="flex flex-col sm:flex-row items-center gap-6">
+        {/* Transistor cross-section */}
+        <div className="flex-1 flex justify-center">
+          <svg viewBox="0 0 240 200" className="w-full max-w-[240px]">
+            {/* Substrate */}
+            <motion.rect
+              x="20" y="150" width="200" height="40" rx="4"
+              fill="#635bff10" stroke="#635bff" strokeWidth="1.5"
+              initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}}
+              transition={{ delay: 0.1 }}
+            />
+            <text x="120" y="175" textAnchor="middle" className="fill-nvme-blue text-[10px] font-mono">
+              Silicon Substrate
+            </text>
+
+            {/* Source & Drain */}
+            <motion.rect
+              x="30" y="130" width="40" height="25" rx="3"
+              fill="#00d4aa20" stroke="#00d4aa" strokeWidth="1.5"
+              initial={{ opacity: 0, y: 10 }} animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.2 }}
+            />
+            <text x="50" y="146" textAnchor="middle" className="fill-nvme-green text-[8px] font-mono font-bold">
+              Source
+            </text>
+            <motion.rect
+              x="170" y="130" width="40" height="25" rx="3"
+              fill="#00d4aa20" stroke="#00d4aa" strokeWidth="1.5"
+              initial={{ opacity: 0, y: 10 }} animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.25 }}
+            />
+            <text x="190" y="146" textAnchor="middle" className="fill-nvme-green text-[8px] font-mono font-bold">
+              Drain
+            </text>
+
+            {/* Oxide layer */}
+            <motion.rect
+              x="70" y="110" width="100" height="20" rx="2"
+              fill="#f5a62310" stroke="#f5a623" strokeWidth="1" strokeDasharray="3,2"
+              initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}}
+              transition={{ delay: 0.3 }}
+            />
+            <text x="120" y="124" textAnchor="middle" className="fill-nvme-amber text-[7px] font-mono">
+              Oxide (insulator)
+            </text>
+
+            {/* Floating gate */}
+            <motion.rect
+              x="75" y="80" width="90" height="28" rx="4"
+              fill="#f5a62330" stroke="#f5a623" strokeWidth="2"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={inView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ delay: 0.4, type: "spring" }}
+            />
+            <text x="120" y="98" textAnchor="middle" className="fill-nvme-amber text-[9px] font-mono font-bold">
+              Floating Gate
+            </text>
+
+            {/* Electrons trapped inside */}
+            {[0, 1, 2, 3, 4].map((i) => (
+              <motion.circle
+                key={i}
+                cx={88 + i * 16} cy={88}
+                r="3"
+                fill="#f5a623"
+                initial={{ opacity: 0, scale: 0 }}
+                animate={inView ? { opacity: [0, 1, 0.7], scale: [0, 1.2, 1] } : {}}
+                transition={{ delay: 0.6 + i * 0.1, duration: 0.4 }}
+              />
+            ))}
+
+            {/* Oxide layer top */}
+            <motion.rect
+              x="70" y="68" width="100" height="12" rx="2"
+              fill="#f5a62310" stroke="#f5a623" strokeWidth="1" strokeDasharray="3,2"
+              initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}}
+              transition={{ delay: 0.35 }}
+            />
+
+            {/* Control gate */}
+            <motion.rect
+              x="75" y="40" width="90" height="26" rx="4"
+              fill="#635bff20" stroke="#635bff" strokeWidth="2"
+              initial={{ opacity: 0, y: -10 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.5, type: "spring" }}
+            />
+            <text x="120" y="57" textAnchor="middle" className="fill-nvme-blue text-[9px] font-mono font-bold">
+              Control Gate
+            </text>
+
+            {/* Arrow label */}
+            <text x="120" y="18" textAnchor="middle" className="fill-text-muted text-[8px] font-mono">
+              Voltage applied here →
+            </text>
+          </svg>
+        </div>
+
+        {/* Explanation */}
+        <div className="flex-1 space-y-3">
+          <motion.div
+            className="bg-nvme-amber/5 rounded-xl p-3 border-l-3 border-nvme-amber/40"
+            initial={{ opacity: 0, x: 20 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ delay: 0.5 }}
+          >
+            <div className="text-nvme-amber text-xs font-bold mb-1">Floating Gate</div>
+            <p className="text-text-secondary text-xs leading-relaxed">
+              Electrons are trapped here by insulating oxide layers above and below.
+              Once pushed in, they stay — even without power. That&apos;s non-volatile storage.
+            </p>
+          </motion.div>
+          <motion.div
+            className="bg-nvme-blue/5 rounded-xl p-3 border-l-3 border-nvme-blue/40"
+            initial={{ opacity: 0, x: 20 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ delay: 0.6 }}
+          >
+            <div className="text-nvme-blue text-xs font-bold mb-1">Write (Program)</div>
+            <p className="text-text-secondary text-xs leading-relaxed">
+              High voltage on the control gate pushes electrons into the floating gate.
+            </p>
+          </motion.div>
+          <motion.div
+            className="bg-nvme-green/5 rounded-xl p-3 border-l-3 border-nvme-green/40"
+            initial={{ opacity: 0, x: 20 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ delay: 0.7 }}
+          >
+            <div className="text-nvme-green text-xs font-bold mb-1">Read</div>
+            <p className="text-text-secondary text-xs leading-relaxed">
+              A medium voltage is applied. If electrons are present, current is blocked (= &ldquo;0&rdquo;).
+              If empty, current flows (= &ldquo;1&rdquo;).
+            </p>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function NandCell() {
   const [activeCell, setActiveCell] = useState(0);
@@ -92,6 +243,9 @@ export default function NandCell() {
           durability. Click each type below to compare:
         </p>
 
+        {/* Floating gate diagram */}
+        <FloatingGateVisual />
+
         {/* Cell type selector */}
         <div className="flex gap-2 mb-8">
           {CELL_TYPES.map((c, i) => (
@@ -129,41 +283,47 @@ export default function NandCell() {
             <span className="text-text-secondary">{cell.analogy}</span>
           </div>
 
-          <div className="flex items-start gap-8">
-            {/* Voltage diagram */}
+          <div className="flex flex-col sm:flex-row items-start gap-8">
+            {/* Voltage diagram — animated glass fill */}
             <div className="flex-1">
               <div className="text-text-muted text-xs font-mono mb-1 uppercase tracking-wider">
                 Charge Levels in One Cell
               </div>
               <p className="text-text-muted text-xs mb-4">
-                Each bar represents a different charge level. The bit pattern next to it
-                is what that level &ldquo;means.&rdquo; <em>Notice how the bars get
-                closer together with more levels?</em> That&apos;s why reading gets
-                harder.
+                Each bar shows a voltage level. The bit pattern is what the level &ldquo;means.&rdquo;{" "}
+                <em>Notice levels get closer with more bits — harder to tell apart.</em>
               </p>
-              <div className="space-y-2">
+              <div className="space-y-1.5">
                 {Array.from({ length: Math.min(cell.levels, 8) }).map((_, i) => {
                   const label = cell.thresholds[i] || `L${i}`;
                   const width = 20 + ((i + 1) / Math.min(cell.levels, 8)) * 80;
                   return (
-                    <div key={i} className="flex items-center gap-3">
+                    <motion.div
+                      key={`${cell.name}-${i}`}
+                      className="flex items-center gap-3"
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.06, duration: 0.3 }}
+                    >
                       <code className="text-xs font-mono w-8 text-right" style={{ color: cell.color }}>
                         {label}
                       </code>
-                      <div className="flex-1 h-6 bg-story-surface rounded-full overflow-hidden">
-                        <div
-                          className="h-full rounded-full transition-all duration-500"
+                      <div className="flex-1 h-5 bg-story-surface rounded-full overflow-hidden">
+                        <motion.div
+                          className="h-full rounded-full"
                           style={{
-                            width: `${width}%`,
                             backgroundColor: `${cell.color}30`,
                             border: `2px solid ${cell.color}`,
                           }}
+                          initial={{ width: 0 }}
+                          animate={{ width: `${width}%` }}
+                          transition={{ delay: i * 0.06 + 0.1, duration: 0.5, ease: "easeOut" }}
                         />
                       </div>
                       <span className="text-text-muted text-[10px] font-mono w-20">
                         {i === 0 ? "low charge" : i === Math.min(cell.levels, 8) - 1 ? "high charge" : ""}
                       </span>
-                    </div>
+                    </motion.div>
                   );
                 })}
                 {cell.levels > 8 && (
@@ -174,29 +334,86 @@ export default function NandCell() {
               </div>
             </div>
 
-            {/* Stats */}
+            {/* Stats — animated counters */}
             <div className="w-48 space-y-4">
-              <div>
+              <motion.div
+                key={`bits-${cell.name}`}
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ type: "spring", stiffness: 200 }}
+              >
                 <div className="text-text-muted text-[10px] font-mono uppercase">Bits per cell</div>
                 <div className="text-3xl font-bold" style={{ color: cell.color }}>{cell.bits}</div>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                key={`levels-${cell.name}`}
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ type: "spring", stiffness: 200, delay: 0.1 }}
+              >
                 <div className="text-text-muted text-[10px] font-mono uppercase">Charge levels</div>
                 <div className="text-2xl font-bold text-text-primary">{cell.levels}</div>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                key={`endurance-${cell.name}`}
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
+              >
                 <div className="text-text-muted text-[10px] font-mono uppercase">Lifespan</div>
                 <div className="text-sm font-mono text-text-secondary">{cell.endurance}</div>
                 <p className="text-text-muted text-[10px] mt-1">
-                  (how many times the cell can be written and erased before wearing out)
+                  (write+erase cycles before wearing out)
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
 
           <p className="text-text-secondary text-sm mt-6 leading-relaxed">
             {cell.desc}
           </p>
+
+          {/* Comparison bar chart */}
+          <div className="mt-6 pt-6 border-t border-story-border">
+            <div className="text-text-muted text-xs font-mono mb-3 uppercase tracking-wider">
+              Comparison — Capacity vs Speed vs Endurance
+            </div>
+            <div className="grid grid-cols-3 gap-4">
+              {[
+                { label: "Storage Density", values: [1, 2, 3, 4], icon: "capacity" },
+                { label: "Read Speed", values: [100, 75, 60, 40], icon: "speed" },
+                { label: "Endurance", values: [100, 30, 10, 3], icon: "endurance" },
+              ].map((metric) => (
+                <div key={metric.label} className="text-center">
+                  <div className="text-text-muted text-[10px] font-mono mb-2">{metric.label}</div>
+                  <div className="flex items-end justify-center gap-1 h-16">
+                    {CELL_TYPES.map((ct, ci) => {
+                      const val = metric.values[ci];
+                      const max = Math.max(...metric.values);
+                      const h = (val / max) * 100;
+                      return (
+                        <motion.div
+                          key={ct.name}
+                          className="w-6 rounded-t"
+                          style={{ backgroundColor: ci === activeCell ? ct.color : `${ct.color}40` }}
+                          initial={{ height: 0 }}
+                          animate={{ height: `${h}%` }}
+                          transition={{ duration: 0.4, delay: ci * 0.05 }}
+                        />
+                      );
+                    })}
+                  </div>
+                  <div className="flex justify-center gap-1 mt-1">
+                    {CELL_TYPES.map((ct, ci) => (
+                      <span key={ct.name} className="text-[7px] font-mono w-6 text-center" style={{ color: ci === activeCell ? ct.color : "#475569" }}>
+                        {ct.name}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </SectionWrapper>

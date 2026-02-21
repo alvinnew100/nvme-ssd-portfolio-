@@ -1,8 +1,68 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
+
+function EraseComparisonVisual() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  return (
+    <div ref={ref} className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+      <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
+        Scope of Erasure — Format vs Sanitize
+      </div>
+      <div className="grid grid-cols-2 gap-4">
+        {/* Format */}
+        <div className="text-center">
+          <div className="text-nvme-blue text-xs font-bold mb-2">Format NVM</div>
+          <div className="flex gap-1 justify-center">
+            {["NS1", "NS2", "NS3"].map((ns, i) => (
+              <motion.div
+                key={ns}
+                className={`w-16 h-16 rounded-lg flex items-center justify-center text-[9px] font-mono font-bold border-2 ${
+                  i === 0
+                    ? "bg-nvme-blue/20 border-nvme-blue text-nvme-blue"
+                    : "bg-story-surface border-story-border text-text-muted"
+                }`}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={inView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ delay: i * 0.1, type: "spring" }}
+              >
+                {ns}
+                {i === 0 && <span className="block text-[7px]">ERASED</span>}
+              </motion.div>
+            ))}
+          </div>
+          <div className="text-text-muted text-[9px] mt-2">One namespace only</div>
+        </div>
+
+        {/* Sanitize */}
+        <div className="text-center">
+          <div className="text-nvme-red text-xs font-bold mb-2">Sanitize</div>
+          <div className="flex gap-1 justify-center">
+            {["NS1", "NS2", "NS3"].map((ns, i) => (
+              <motion.div
+                key={ns}
+                className="w-16 h-16 rounded-lg flex items-center justify-center text-[9px] font-mono font-bold border-2 bg-nvme-red/20 border-nvme-red text-nvme-red"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={inView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ delay: 0.3 + i * 0.1, type: "spring" }}
+              >
+                {ns}
+                <span className="block text-[7px]">ERASED</span>
+              </motion.div>
+            ))}
+          </div>
+          <div className="text-text-muted text-[9px] mt-2">ALL namespaces — entire drive</div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function FormatSanitize() {
   return (
@@ -24,6 +84,9 @@ export default function FormatSanitize() {
           forensic experts might still recover the data. Sanitize is like shredding
           the whiteboard — the data is cryptographically or physically destroyed.
         </p>
+
+        {/* Scope comparison visual */}
+        <EraseComparisonVisual />
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
           <div className="bg-story-card rounded-2xl p-6 card-shadow">

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 
@@ -14,6 +15,86 @@ const INITIAL_MAP = [
   { lba: 6, pba: 17, valid: true },
   { lba: 7, pba: 3, valid: true },
 ];
+
+function OutOfPlaceWriteVisual() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  const steps = [
+    { label: "1. Original data at Page 5", pages: [
+      { id: 5, state: "valid", content: "Data A" },
+      { id: 6, state: "valid", content: "Data B" },
+      { id: 7, state: "free", content: "" },
+      { id: 8, state: "free", content: "" },
+    ]},
+    { label: "2. Update 'Data A' → writes to new Page 7", pages: [
+      { id: 5, state: "stale", content: "Data A" },
+      { id: 6, state: "valid", content: "Data B" },
+      { id: 7, state: "new", content: "Data A'" },
+      { id: 8, state: "free", content: "" },
+    ]},
+    { label: "3. FTL table updated: LBA 0 → Page 7 (was Page 5)", pages: [
+      { id: 5, state: "stale", content: "Data A" },
+      { id: 6, state: "valid", content: "Data B" },
+      { id: 7, state: "valid", content: "Data A'" },
+      { id: 8, state: "free", content: "" },
+    ]},
+  ];
+
+  const stateColors: Record<string, { bg: string; border: string; text: string }> = {
+    valid: { bg: "bg-nvme-green/10", border: "border-nvme-green/40", text: "text-nvme-green" },
+    stale: { bg: "bg-nvme-red/10", border: "border-nvme-red/40", text: "text-nvme-red" },
+    free: { bg: "bg-story-surface", border: "border-story-border", text: "text-text-muted" },
+    new: { bg: "bg-nvme-blue/10", border: "border-nvme-blue/40", text: "text-nvme-blue" },
+  };
+
+  return (
+    <div ref={ref} className="bg-story-card rounded-2xl p-6 card-shadow mb-8">
+      <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
+        Out-of-Place Write — Why SSDs Never Overwrite
+      </div>
+      <div className="space-y-4">
+        {steps.map((step, si) => (
+          <motion.div
+            key={si}
+            className="bg-story-surface rounded-xl p-4"
+            initial={{ opacity: 0, x: -20 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ delay: si * 0.2, duration: 0.4 }}
+          >
+            <div className="text-text-secondary text-xs font-medium mb-2">{step.label}</div>
+            <div className="flex gap-2">
+              {step.pages.map((page) => {
+                const colors = stateColors[page.state];
+                return (
+                  <motion.div
+                    key={`${si}-${page.id}`}
+                    className={`flex-1 ${colors.bg} ${colors.border} border-2 rounded-lg p-2 text-center`}
+                    initial={{ scale: 0.9 }}
+                    animate={inView ? { scale: 1 } : {}}
+                    transition={{ delay: si * 0.2 + 0.1, type: "spring" }}
+                  >
+                    <div className={`${colors.text} font-mono text-[10px] font-bold`}>P{page.id}</div>
+                    <div className="text-text-muted text-[8px] font-mono">{page.content || "empty"}</div>
+                    <div className={`${colors.text} text-[7px] font-mono mt-0.5`}>
+                      {page.state === "stale" ? "✕ stale" : page.state === "new" ? "★ new" : page.state === "valid" ? "✓ valid" : "○ free"}
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
+        ))}
+      </div>
+      <div className="flex gap-4 justify-center mt-4 text-[10px]">
+        <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-nvme-green" /> Valid</span>
+        <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-nvme-red" /> Stale</span>
+        <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-nvme-blue" /> New write</span>
+        <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-full bg-story-border" /> Free</span>
+      </div>
+    </div>
+  );
+}
 
 export default function FTLBasics() {
   const [ftlMap, setFtlMap] = useState(INITIAL_MAP);
@@ -74,6 +155,9 @@ export default function FTLBasics() {
           Click any LBA below to simulate a write and see the FTL in action:
         </p>
 
+        {/* Out-of-place write concept visual */}
+        <OutOfPlaceWriteVisual />
+
         {/* Interactive FTL mapping */}
         <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
           <div className="flex items-center justify-between mb-4">
@@ -96,14 +180,17 @@ export default function FTLBasics() {
               </div>
               <div className="grid grid-cols-4 gap-2">
                 {ftlMap.map((entry) => (
-                  <button
+                  <motion.button
                     key={entry.lba}
                     onClick={() => handleWrite(entry.lba)}
-                    className={`rounded-lg p-3 text-center transition-all border-2 ${
+                    className={`rounded-lg p-3 text-center border-2 ${
                       selectedLba === entry.lba
-                        ? "border-nvme-blue bg-nvme-blue/5 scale-105"
+                        ? "border-nvme-blue bg-nvme-blue/5"
                         : "border-story-border bg-story-surface hover:border-nvme-green/50"
                     }`}
+                    animate={selectedLba === entry.lba ? { scale: 1.05 } : { scale: 1 }}
+                    whileHover={{ scale: 1.03 }}
+                    transition={{ type: "spring", stiffness: 300 }}
                   >
                     <div className="text-text-primary font-mono font-bold text-sm">
                       LBA {entry.lba}
@@ -111,7 +198,7 @@ export default function FTLBasics() {
                     <div className="text-[9px] text-text-muted mt-1">
                       click to write
                     </div>
-                  </button>
+                  </motion.button>
                 ))}
               </div>
             </div>

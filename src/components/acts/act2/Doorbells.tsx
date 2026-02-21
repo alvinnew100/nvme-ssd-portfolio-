@@ -63,6 +63,52 @@ export default function Doorbells() {
           those slots&rdquo;). Click each doorbell below to see it ring:
         </p>
 
+        {/* Doorbell flow animation */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+          <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
+            Doorbell Notification Flow
+          </div>
+          <div className="flex items-center justify-between gap-3 mb-4">
+            {[
+              { label: "Host writes\ncommands to SQ", color: "#38bdf8" },
+              { label: "Host writes\nnew tail to doorbell", color: "#a78bfa" },
+              { label: "SSD reads\ndoorbell value", color: "#f5a623" },
+              { label: "SSD fetches\ncommands via DMA", color: "#00d4aa" },
+            ].map((step, i) => (
+              <div key={i} className="flex items-center flex-shrink-0">
+                <motion.div
+                  className="flex flex-col items-center max-w-[80px]"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: i * 0.15, type: "spring" }}
+                >
+                  <div
+                    className="w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-bold"
+                    style={{ backgroundColor: step.color }}
+                  >
+                    {i + 1}
+                  </div>
+                  <div className="text-text-muted text-[8px] text-center mt-1.5 whitespace-pre-line leading-tight">
+                    {step.label}
+                  </div>
+                </motion.div>
+                {i < 3 && (
+                  <motion.div
+                    className="mx-1"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: i * 0.15 + 0.1 }}
+                  >
+                    <svg width="20" height="10" viewBox="0 0 20 10">
+                      <path d="M0 5 L15 5 L11 1 M15 5 L11 9" stroke="#475569" strokeWidth="1.5" fill="none" />
+                    </svg>
+                  </motion.div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
           <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
             Doorbell Registers — starting at BAR0 + 0x1000

@@ -1,8 +1,74 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
+
+function NamespaceDiagram() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  const namespaces = [
+    { id: 1, size: "500 GB", lba: "0 → N" },
+    { id: 2, size: "250 GB", lba: "0 → M" },
+    { id: 3, size: "250 GB", lba: "0 → K" },
+  ];
+
+  return (
+    <div ref={ref} className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+      <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
+        One controller, multiple namespaces
+      </div>
+      <div className="flex items-center gap-4 overflow-x-auto py-2">
+        {/* Controller */}
+        <motion.div
+          className="bg-nvme-blue/5 border-2 border-nvme-blue rounded-xl px-5 py-6 text-center flex-shrink-0"
+          initial={{ opacity: 0, x: -20 }}
+          animate={inView ? { opacity: 1, x: 0 } : {}}
+          transition={{ type: "spring" }}
+        >
+          <div className="text-nvme-blue font-mono font-bold text-xs">NVMe Controller</div>
+          <div className="text-text-muted text-[9px] font-mono mt-1">/dev/nvme0</div>
+        </motion.div>
+
+        {/* Arrow lines */}
+        <motion.div
+          className="flex flex-col gap-2"
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.2 }}
+        >
+          {[0, 1, 2].map((i) => (
+            <div key={i} className="w-8 h-0.5 bg-text-muted" style={{ opacity: 0.4 + i * 0.2 }} />
+          ))}
+        </motion.div>
+
+        {/* Namespaces */}
+        <div className="flex gap-3">
+          {namespaces.map((ns, i) => (
+            <motion.div
+              key={ns.id}
+              className="bg-nvme-green/5 border-2 border-nvme-green/40 rounded-xl px-4 py-4 text-center flex-shrink-0 min-w-[120px]"
+              initial={{ opacity: 0, y: 15 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.3 + i * 0.12, type: "spring" }}
+            >
+              <div className="text-nvme-green font-mono font-bold text-xs">Namespace {ns.id}</div>
+              <div className="text-text-muted text-[9px] font-mono mt-1">/dev/nvme0n{ns.id}</div>
+              <div className="text-text-secondary text-[10px] font-mono mt-2">{ns.size}</div>
+              <div className="text-text-muted text-[8px] font-mono">LBAs: {ns.lba}</div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+      <p className="text-text-muted text-xs text-center mt-3">
+        Each namespace has its own device node and independent LBA range
+      </p>
+    </div>
+  );
+}
 
 export default function Namespaces() {
   return (
@@ -40,38 +106,8 @@ export default function Namespaces() {
           efficient than having separate drives for each VM.
         </p>
 
-        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
-          <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
-            One controller, multiple namespaces
-          </div>
-          <svg viewBox="0 0 600 120" className="w-full max-w-xl mx-auto" fill="none">
-            <rect x="10" y="10" width="130" height="100" rx="8" className="stroke-nvme-blue" strokeWidth="2" fill="#635bff08" />
-            <text x="75" y="50" textAnchor="middle" className="fill-nvme-blue text-[11px] font-bold">NVMe Controller</text>
-            <text x="75" y="70" textAnchor="middle" className="fill-text-muted text-[9px]">/dev/nvme0</text>
+        <NamespaceDiagram />
 
-            {[1, 2, 3].map((ns, i) => (
-              <g key={ns}>
-                <line x1="140" y1="60" x2={200 + i * 150} y2="60" className="stroke-text-muted" strokeWidth="1" strokeDasharray="4,4" />
-                <rect x={200 + i * 150 - 55} y="20" width="110" height="80" rx="6" className="stroke-nvme-green" strokeWidth="1.5" fill="#00d4aa08" />
-                <text x={200 + i * 150} y="45" textAnchor="middle" className="fill-nvme-green text-[10px] font-bold">
-                  Namespace {ns}
-                </text>
-                <text x={200 + i * 150} y="62" textAnchor="middle" className="fill-text-muted text-[8px]">
-                  /dev/nvme0n{ns}
-                </text>
-                <text x={200 + i * 150} y="78" textAnchor="middle" className="fill-text-muted text-[8px]">
-                  {ns === 1 ? "500 GB" : ns === 2 ? "250 GB" : "250 GB"}
-                </text>
-                <text x={200 + i * 150} y="90" textAnchor="middle" className="fill-text-muted text-[7px]">
-                  {ns === 1 ? "Its own LBAs: 0 → N" : ns === 2 ? "Its own LBAs: 0 → M" : "Its own LBAs: 0 → K"}
-                </text>
-              </g>
-            ))}
-          </svg>
-          <p className="text-text-muted text-xs text-center mt-3">
-            Each namespace has its own device node (e.g., /dev/nvme0n1) and its own independent LBA range
-          </p>
-        </div>
 
         <div className="space-y-3 mb-6">
           <NvmeCliBlock command="nvme list" note="Lists all NVMe devices and their namespaces" />

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 
@@ -121,20 +122,82 @@ export default function PCIe() {
           </div>
         </div>
 
-        <p className="text-text-secondary mb-6 leading-relaxed max-w-3xl">
-          Data moves in <strong className="text-text-primary">Transaction Layer Packets (TLPs)</strong>.
-          When the host writes an NVMe command to the SQ, the NVMe driver uses
-          a PCIe memory write TLP. When the controller DMAs data back, it uses
-          another memory write TLP targeting host memory. These are all
-          memory-mapped I/O operations &mdash; no special I/O instructions needed.
-        </p>
+        {/* Lane visualization */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+          <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
+            PCIe x{selectedLanes} — {selectedLanes} parallel lanes
+          </div>
+          <div className="flex items-center gap-4 overflow-hidden">
+            {/* CPU */}
+            <div className="bg-nvme-blue/10 border border-nvme-blue/30 rounded-xl px-4 py-3 text-center flex-shrink-0">
+              <div className="text-nvme-blue font-mono font-bold text-xs">CPU</div>
+            </div>
+            {/* Lanes */}
+            <div className="flex-1 flex flex-col gap-1.5">
+              {Array.from({ length: Math.min(selectedLanes, 16) }, (_, i) => (
+                <div key={i} className="relative h-3 bg-story-surface rounded-full overflow-hidden">
+                  <motion.div
+                    className="absolute h-full w-8 rounded-full bg-nvme-green/40"
+                    animate={{ x: ["-2rem", "calc(100% + 2rem)"] }}
+                    transition={{
+                      duration: 1.2,
+                      repeat: Infinity,
+                      delay: i * 0.15,
+                      ease: "linear",
+                    }}
+                  />
+                  <motion.div
+                    className="absolute h-full w-6 rounded-full bg-nvme-blue/30"
+                    animate={{ x: ["calc(100% + 2rem)", "-2rem"] }}
+                    transition={{
+                      duration: 1.4,
+                      repeat: Infinity,
+                      delay: i * 0.15 + 0.5,
+                      ease: "linear",
+                    }}
+                  />
+                </div>
+              ))}
+            </div>
+            {/* SSD */}
+            <div className="bg-nvme-green/10 border border-nvme-green/30 rounded-xl px-4 py-3 text-center flex-shrink-0">
+              <div className="text-nvme-green font-mono font-bold text-xs">SSD</div>
+            </div>
+          </div>
+          <div className="flex justify-between mt-2 text-[10px] text-text-muted">
+            <span>← Host memory reads</span>
+            <span>Each lane = full-duplex (both directions simultaneously)</span>
+            <span>DMA writes →</span>
+          </div>
+        </div>
 
-        <InfoCard variant="info" title="TLP Structure">
-          A TLP has a header (12-16 bytes), an optional data payload (up to 4 KB
-          per TLP), and an ECRC. NVMe&apos;s efficiency comes from batching: one
-          doorbell write (a single TLP) can trigger the controller to fetch
-          dozens of queued commands.
-        </InfoCard>
+        {/* TLP structure visual */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+          <div className="text-text-muted text-xs font-mono mb-3 uppercase tracking-wider">
+            Transaction Layer Packet (TLP)
+          </div>
+          <p className="text-text-secondary text-xs mb-4 leading-relaxed">
+            Data moves in TLPs — the packets that flow through the lanes above.
+          </p>
+          <div className="flex items-stretch gap-0 rounded-xl overflow-hidden mb-3">
+            <div className="bg-nvme-violet/15 border-r border-nvme-violet/20 px-4 py-3 text-center">
+              <div className="text-nvme-violet font-mono font-bold text-[10px]">Header</div>
+              <div className="text-text-muted text-[9px]">12-16 B</div>
+            </div>
+            <div className="bg-nvme-green/10 flex-1 px-4 py-3 text-center border-r border-nvme-green/20">
+              <div className="text-nvme-green font-mono font-bold text-[10px]">Data Payload</div>
+              <div className="text-text-muted text-[9px]">up to 4 KB</div>
+            </div>
+            <div className="bg-nvme-amber/10 px-4 py-3 text-center">
+              <div className="text-nvme-amber font-mono font-bold text-[10px]">ECRC</div>
+              <div className="text-text-muted text-[9px]">4 B</div>
+            </div>
+          </div>
+          <p className="text-text-muted text-[10px] italic">
+            NVMe&apos;s efficiency: one doorbell write (a single TLP) can trigger the controller
+            to fetch dozens of queued commands.
+          </p>
+        </div>
       </div>
     </SectionWrapper>
   );

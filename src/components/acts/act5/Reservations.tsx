@@ -1,7 +1,65 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
+
+function MultiHostVisual() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  return (
+    <div ref={ref} className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+      <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
+        Multiple Hosts Accessing One Drive — Why Reservations Are Needed
+      </div>
+      <div className="flex items-center justify-center gap-4">
+        {/* Hosts */}
+        <div className="flex flex-col gap-2">
+          {["Host A", "Host B", "Host C"].map((host, i) => (
+            <motion.div
+              key={host}
+              className="bg-nvme-blue/10 border border-nvme-blue/30 rounded-lg px-4 py-2 text-center"
+              initial={{ opacity: 0, x: -20 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ delay: i * 0.1, type: "spring" }}
+            >
+              <div className="text-nvme-blue font-mono font-bold text-[10px]">{host}</div>
+              <div className="text-text-muted text-[8px]">
+                {i === 0 ? "✓ Holder" : i === 1 ? "✓ Registered" : "✗ Blocked"}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Arrows */}
+        <motion.div
+          className="flex flex-col gap-2"
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.3 }}
+        >
+          <div className="text-nvme-green text-[10px] font-mono">R/W →</div>
+          <div className="text-nvme-amber text-[10px] font-mono">R →</div>
+          <div className="text-nvme-red text-[10px] font-mono">✗ →</div>
+        </motion.div>
+
+        {/* Namespace */}
+        <motion.div
+          className="bg-nvme-green/10 border-2 border-nvme-green rounded-xl px-6 py-6 text-center"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={inView ? { opacity: 1, scale: 1 } : {}}
+          transition={{ delay: 0.4, type: "spring" }}
+        >
+          <div className="text-nvme-green font-mono font-bold text-xs">Namespace 1</div>
+          <div className="text-text-muted text-[9px] mt-1">Write Exclusive</div>
+          <div className="text-text-muted text-[8px]">reservation</div>
+        </motion.div>
+      </div>
+    </div>
+  );
+}
 
 export default function Reservations() {
   return (
@@ -37,6 +95,9 @@ export default function Reservations() {
           claim exclusive (or shared) access to a namespace, preventing unsafe concurrent
           writes.
         </p>
+
+        {/* Multi-host access visual */}
+        <MultiHostVisual />
 
         <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
           <div className="text-text-primary font-semibold text-sm mb-3">

@@ -1,5 +1,7 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 
 const LEVELS = [
@@ -45,6 +47,83 @@ const LEVELS = [
   },
 ];
 
+function HierarchyVisual() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  return (
+    <div ref={ref} className="bg-story-card rounded-2xl p-8 card-shadow mb-6">
+      <div className="text-text-muted text-xs font-mono mb-6 uppercase tracking-wider">
+        NAND Hierarchy — smallest to largest
+      </div>
+
+      {/* Nested containment visual */}
+      <div className="flex justify-center mb-8">
+        <div className="relative">
+          {[...LEVELS].reverse().map((level, ri) => {
+            const i = LEVELS.length - 1 - ri;
+            const pad = (LEVELS.length - 1 - i) * 12;
+            return (
+              <motion.div
+                key={level.name}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={inView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ delay: ri * 0.15, duration: 0.4 }}
+                className="rounded-xl p-3 mb-0"
+                style={{
+                  backgroundColor: `${level.color}08`,
+                  border: `2px solid ${level.color}30`,
+                  marginLeft: pad,
+                  marginRight: pad,
+                }}
+              >
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="font-mono font-bold text-xs" style={{ color: level.color }}>
+                    {level.name}
+                  </span>
+                  <span className="text-text-muted text-[10px] font-mono">{level.size}</span>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Detail cards */}
+      <div className="space-y-2">
+        {LEVELS.map((level, i) => (
+          <motion.div
+            key={level.name}
+            className="flex items-start gap-4 w-full"
+            initial={{ opacity: 0, x: -20 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ delay: 0.8 + i * 0.1 }}
+          >
+            <div
+              className="w-3 h-3 rounded-full flex-shrink-0 mt-1"
+              style={{ backgroundColor: level.color }}
+            />
+            <div className="min-w-0">
+              <div className="flex items-center gap-2">
+                <span className="font-mono font-bold text-xs" style={{ color: level.color }}>
+                  {level.name}
+                </span>
+                <span className="text-text-muted text-[10px] font-mono">{level.size}</span>
+              </div>
+              <div className="text-text-secondary text-xs leading-relaxed">
+                {level.desc}
+              </div>
+              <div className="text-text-muted text-[10px] italic mt-0.5">
+                {level.analogy}
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function NandHierarchy() {
   return (
     <SectionWrapper className="py-24 px-4">
@@ -71,40 +150,7 @@ export default function NandHierarchy() {
           to the same block&apos;s circuitry.
         </p>
 
-        <div className="bg-story-card rounded-2xl p-8 card-shadow mb-6">
-          <div className="text-text-muted text-xs font-mono mb-6 uppercase tracking-wider">
-            NAND Hierarchy — smallest to largest
-          </div>
-          <div className="flex flex-col items-center gap-4">
-            {LEVELS.map((level) => (
-              <div key={level.name} className="flex items-start gap-4 w-full max-w-lg">
-                <div
-                  className="h-14 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{
-                    width: level.width,
-                    backgroundColor: `${level.color}10`,
-                    border: `2px solid ${level.color}50`,
-                  }}
-                >
-                  <span className="font-mono font-bold text-sm" style={{ color: level.color }}>
-                    {level.name}
-                  </span>
-                </div>
-                <div className="min-w-0 pt-1">
-                  <div className="text-text-muted text-xs font-mono">
-                    {level.size}
-                  </div>
-                  <div className="text-text-secondary text-xs leading-relaxed mb-1">
-                    {level.desc}
-                  </div>
-                  <div className="text-text-muted text-[10px] italic">
-                    {level.analogy}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <HierarchyVisual />
 
         <div className="bg-story-card rounded-2xl p-6 card-shadow">
           <div className="text-text-primary font-semibold text-sm mb-2">

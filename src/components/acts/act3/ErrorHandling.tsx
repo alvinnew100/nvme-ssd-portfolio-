@@ -1,5 +1,7 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 
@@ -13,6 +15,80 @@ const STATUS_CODES = [
   { code: "0x0181", meaning: "Unrecovered Read Error", type: "Media", hint: "ECC couldn't fix the data — the page is corrupted beyond repair" },
   { code: "0x0182", meaning: "End-to-End Guard Check Error", type: "Media", hint: "Data protection checksum mismatch — data was corrupted in transit" },
 ];
+
+function ErrorDecisionFlow() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  const nodes = [
+    { label: "Command\nCompletes", color: "#38bdf8", x: 0 },
+    { label: "SC = 0?", color: "#a78bfa", x: 1 },
+    { label: "Success!", color: "#00d4aa", x: 2, branch: "yes" },
+    { label: "DNR = 1?", color: "#f5a623", x: 2, branch: "no" },
+    { label: "Permanent\nError", color: "#f87171", x: 3, branch: "yes" },
+    { label: "Retry", color: "#38bdf8", x: 3, branch: "no" },
+  ];
+
+  return (
+    <div ref={ref} className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+      <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
+        Error Decision Flow — What Happens After a Command
+      </div>
+      <div className="flex items-center gap-2 overflow-x-auto py-2">
+        {nodes.map((node, i) => (
+          <div key={i} className="flex items-center flex-shrink-0">
+            <motion.div
+              className="flex flex-col items-center"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={inView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ delay: i * 0.12, type: "spring" }}
+            >
+              {node.branch && (
+                <div className={`text-[8px] font-mono mb-1 ${node.branch === "yes" ? "text-nvme-green" : "text-nvme-amber"}`}>
+                  {node.branch}
+                </div>
+              )}
+              <div
+                className="w-16 h-16 rounded-xl flex items-center justify-center text-[9px] font-bold text-center shadow-md whitespace-pre-line leading-tight"
+                style={{
+                  backgroundColor: `${node.color}15`,
+                  border: `2px solid ${node.color}`,
+                  color: node.color,
+                }}
+              >
+                {node.label}
+              </div>
+            </motion.div>
+            {i < nodes.length - 1 && i !== 2 && (
+              <motion.div
+                className="mx-1"
+                initial={{ opacity: 0 }}
+                animate={inView ? { opacity: 1 } : {}}
+                transition={{ delay: i * 0.12 + 0.06 }}
+              >
+                <svg width="16" height="8" viewBox="0 0 16 8">
+                  <path d="M0 4 L12 4 L9 1 M12 4 L9 7" stroke="#475569" strokeWidth="1.5" fill="none" />
+                </svg>
+              </motion.div>
+            )}
+            {i === 2 && (
+              <motion.div
+                className="mx-2 flex flex-col items-center gap-1"
+                initial={{ opacity: 0 }}
+                animate={inView ? { opacity: 1 } : {}}
+                transition={{ delay: 0.4 }}
+              >
+                <div className="w-px h-6 bg-text-muted" />
+                <div className="text-[7px] text-text-muted font-mono">or</div>
+                <div className="w-px h-6 bg-text-muted" />
+              </motion.div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function ErrorHandling() {
   return (
@@ -34,6 +110,9 @@ export default function ErrorHandling() {
           result, there&apos;s a <strong className="text-text-primary">status
           field</strong> that contains:
         </p>
+
+        {/* Error decision flow */}
+        <ErrorDecisionFlow />
 
         <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
           <div className="text-text-muted text-xs font-mono mb-3 uppercase tracking-wider">

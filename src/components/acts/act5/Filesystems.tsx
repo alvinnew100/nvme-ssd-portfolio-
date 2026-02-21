@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
@@ -112,6 +113,58 @@ const FEATURE_ROWS: { label: string; key: keyof Filesystem }[] = [
   { label: "Best For", key: "bestFor" },
 ];
 
+function StorageStackVisual() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  const layers = [
+    { label: "Application", sublabel: "open(), read(), write()", color: "#94a3b8" },
+    { label: "Filesystem (ext4/XFS/Btrfs)", sublabel: "files → LBAs, journaling, TRIM", color: "#a78bfa" },
+    { label: "Block Layer", sublabel: "I/O scheduling, merging", color: "#38bdf8" },
+    { label: "NVMe Driver", sublabel: "SQ/CQ commands, doorbells", color: "#00d4aa" },
+    { label: "PCIe + SSD Controller", sublabel: "DMA, FTL, NAND", color: "#f5a623" },
+  ];
+
+  return (
+    <div ref={ref} className="bg-story-card rounded-2xl p-6 card-shadow mb-8">
+      <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
+        Linux Storage Stack — From Application to NAND
+      </div>
+      <div className="flex flex-col items-center gap-1.5 max-w-sm mx-auto">
+        {layers.map((layer, i) => (
+          <div key={layer.label} className="w-full flex flex-col items-center">
+            <motion.div
+              className="w-full rounded-lg p-3 text-center"
+              style={{
+                backgroundColor: `${layer.color}10`,
+                border: `2px solid ${layer.color}40`,
+              }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ delay: i * 0.1, type: "spring" }}
+            >
+              <div className="font-mono font-bold text-[11px]" style={{ color: layer.color }}>
+                {layer.label}
+              </div>
+              <div className="text-text-muted text-[9px]">{layer.sublabel}</div>
+            </motion.div>
+            {i < layers.length - 1 && (
+              <motion.div
+                className="text-text-muted text-[10px] my-0.5"
+                initial={{ opacity: 0 }}
+                animate={inView ? { opacity: 1 } : {}}
+                transition={{ delay: i * 0.1 + 0.05 }}
+              >
+                ▼
+              </motion.div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function Filesystems() {
   const [activeFs, setActiveFs] = useState(2);
 
@@ -145,6 +198,9 @@ export default function Filesystems() {
           <li><strong className="text-text-primary">Write pattern</strong> — does it use copy-on-write (spreading writes) or in-place updates?</li>
           <li><strong className="text-text-primary">Journaling overhead</strong> — how much extra writing does it do for crash safety?</li>
         </ul>
+
+        {/* Storage stack layer diagram */}
+        <StorageStackVisual />
 
         {/* Filesystem selector */}
         <div className="flex flex-wrap gap-2 mb-6">

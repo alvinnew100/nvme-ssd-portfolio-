@@ -1,5 +1,7 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 
@@ -9,6 +11,67 @@ const CELL_ENDURANCE = [
   { type: "TLC", pe: "~3,000", color: "#7c5cfc", analogy: "A fine-tip pen — writes well but wears faster" },
   { type: "QLC", pe: "~1,000", color: "#f5a623", analogy: "A pencil — cheapest but needs replacing soonest" },
 ];
+
+function WearHeatMap() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  // Simulated wear distribution: without vs with wear leveling
+  const withoutWL = [95, 88, 92, 5, 3, 7, 4, 2, 6, 3, 8, 5, 90, 85, 4, 3];
+  const withWL =    [42, 45, 41, 43, 44, 40, 42, 43, 41, 44, 42, 43, 41, 42, 43, 44];
+
+  const getColor = (pct: number) => {
+    if (pct > 80) return "#f87171";
+    if (pct > 50) return "#f5a623";
+    if (pct > 30) return "#38bdf8";
+    return "#00d4aa";
+  };
+
+  return (
+    <div ref={ref} className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+      <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
+        Block Wear Distribution — Without vs With Wear Leveling
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {[
+          { label: "Without Wear Leveling", data: withoutWL, bad: true },
+          { label: "With Wear Leveling", data: withWL, bad: false },
+        ].map((scenario) => (
+          <div key={scenario.label}>
+            <div className={`text-xs font-semibold mb-2 ${scenario.bad ? "text-nvme-red" : "text-nvme-green"}`}>
+              {scenario.label}
+            </div>
+            <div className="grid grid-cols-8 gap-1">
+              {scenario.data.map((wear, i) => (
+                <motion.div
+                  key={i}
+                  className="aspect-square rounded flex items-center justify-center text-[7px] font-mono text-white font-bold"
+                  style={{ backgroundColor: getColor(wear) }}
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={inView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ delay: i * 0.03 + (scenario.bad ? 0 : 0.5), type: "spring" }}
+                >
+                  {wear}%
+                </motion.div>
+              ))}
+            </div>
+            <div className="text-text-muted text-[9px] mt-1 text-center">
+              {scenario.bad
+                ? "Hot blocks worn out (90%+), cold blocks barely used (3%)"
+                : "All blocks evenly distributed (~42%)"}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="flex gap-3 justify-center mt-4 text-[9px]">
+        <span className="flex items-center gap-1"><span className="w-2 h-2 rounded" style={{ backgroundColor: "#f87171" }} /> &gt;80%</span>
+        <span className="flex items-center gap-1"><span className="w-2 h-2 rounded" style={{ backgroundColor: "#f5a623" }} /> 50-80%</span>
+        <span className="flex items-center gap-1"><span className="w-2 h-2 rounded" style={{ backgroundColor: "#38bdf8" }} /> 30-50%</span>
+        <span className="flex items-center gap-1"><span className="w-2 h-2 rounded" style={{ backgroundColor: "#00d4aa" }} /> &lt;30%</span>
+      </div>
+    </div>
+  );
+}
 
 export default function WearLeveling() {
   return (
@@ -31,16 +94,24 @@ export default function WearLeveling() {
           <strong className="text-text-primary">P/E (Program/Erase) cycle</strong> count:
         </p>
 
+        <WearHeatMap />
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-          {CELL_ENDURANCE.map((c) => (
-            <div key={c.type} className="bg-story-card rounded-2xl p-5 card-shadow text-center">
+          {CELL_ENDURANCE.map((c, i) => (
+            <motion.div
+              key={c.type}
+              className="bg-story-card rounded-2xl p-5 card-shadow text-center"
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+            >
               <div className="font-mono font-bold text-lg mb-1" style={{ color: c.color }}>
                 {c.type}
               </div>
               <div className="text-text-primary font-mono text-sm">{c.pe}</div>
               <div className="text-text-muted text-xs mb-2">P/E cycles</div>
               <div className="text-text-muted text-[10px] italic">{c.analogy}</div>
-            </div>
+            </motion.div>
           ))}
         </div>
 

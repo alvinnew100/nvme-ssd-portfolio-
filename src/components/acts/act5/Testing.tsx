@@ -1,5 +1,7 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 
@@ -10,6 +12,36 @@ const TEST_LEVELS = [
   { label: "Endurance", desc: "How long will it last? P/E cycle testing, SMART degradation tracking, TBW validation.", color: "#7c5cfc", w: "304px" },
   { label: "Power & Recovery", desc: "What happens when power is lost? Data integrity after unexpected shutdown, recovery time, FTL consistency.", color: "#00d4aa", w: "100%" },
 ];
+
+function TestPyramid() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  return (
+    <div ref={ref} className="flex flex-col items-center gap-2">
+      {TEST_LEVELS.map((level, i) => (
+        <motion.div
+          key={level.label}
+          className="rounded-xl p-3 text-center"
+          style={{
+            width: level.w,
+            maxWidth: "384px",
+            backgroundColor: `${level.color}10`,
+            border: `1px solid ${level.color}30`,
+          }}
+          initial={{ opacity: 0, scaleX: 0.5 }}
+          animate={inView ? { opacity: 1, scaleX: 1 } : {}}
+          transition={{ delay: i * 0.12, duration: 0.4, ease: "easeOut" }}
+        >
+          <div className="font-mono font-bold text-sm" style={{ color: level.color }}>
+            {level.label}
+          </div>
+          <div className="text-text-muted text-xs mt-1">{level.desc}</div>
+        </motion.div>
+      ))}
+    </div>
+  );
+}
 
 export default function Testing() {
   return (
@@ -42,25 +74,7 @@ export default function Testing() {
           <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
             SSD Test Pyramid — from foundation to top
           </div>
-          <div className="flex flex-col items-center gap-2">
-            {TEST_LEVELS.map((level) => (
-              <div
-                key={level.label}
-                className="rounded-xl p-3 text-center"
-                style={{
-                  width: level.w,
-                  maxWidth: "384px",
-                  backgroundColor: `${level.color}10`,
-                  border: `1px solid ${level.color}30`,
-                }}
-              >
-                <div className="font-mono font-bold text-sm" style={{ color: level.color }}>
-                  {level.label}
-                </div>
-                <div className="text-text-muted text-xs mt-1">{level.desc}</div>
-              </div>
-            ))}
-          </div>
+          <TestPyramid />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm mb-6">

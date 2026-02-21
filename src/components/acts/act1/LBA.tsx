@@ -1,10 +1,67 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 
 const BLOCK_COUNT = 24;
+
+function MailboxVisual({ selectedLba, lbaSize }: { selectedLba: number; lbaSize: number }) {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+  const boxes = 12;
+
+  return (
+    <div ref={ref} className="bg-story-card rounded-2xl p-6 card-shadow mb-8">
+      <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
+        LBA = Numbered Mailboxes
+      </div>
+      <div className="flex items-end gap-1 justify-center mb-4">
+        {Array.from({ length: boxes }).map((_, i) => {
+          const isSelected = i === (selectedLba % boxes);
+          return (
+            <motion.div
+              key={i}
+              className="flex flex-col items-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: i * 0.05, type: "spring", stiffness: 150 }}
+            >
+              <div
+                className={`w-10 h-14 rounded-t-lg border-2 flex flex-col items-center justify-center transition-all ${
+                  isSelected
+                    ? "border-nvme-blue bg-nvme-blue/10 scale-110 shadow-lg shadow-nvme-blue/20"
+                    : "border-story-border bg-story-surface"
+                }`}
+              >
+                <div className={`text-[8px] font-mono ${isSelected ? "text-nvme-blue font-bold" : "text-text-muted"}`}>
+                  {lbaSize}B
+                </div>
+              </div>
+              <div className={`text-[9px] font-mono mt-1 ${isSelected ? "text-nvme-blue font-bold" : "text-text-muted"}`}>
+                {i}
+              </div>
+            </motion.div>
+          );
+        })}
+        <motion.div
+          className="text-text-muted text-xs font-mono ml-1 self-center"
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.6 }}
+        >
+          ...
+        </motion.div>
+      </div>
+      <div className="flex justify-center gap-4 text-[10px] text-text-muted">
+        <span>Each mailbox = one LBA = {lbaSize} bytes</span>
+        <span>|</span>
+        <span>Address by number, not physical location</span>
+      </div>
+    </div>
+  );
+}
 
 export default function LBA() {
   const [lbaSize, setLbaSize] = useState(512);
@@ -82,6 +139,9 @@ export default function LBA() {
           <strong className="text-text-primary">4096 bytes (4 KB)</strong> (which
           matches how modern SSDs work internally, making them more efficient).
         </p>
+
+        {/* Mailbox analogy visual */}
+        <MailboxVisual selectedLba={lba} lbaSize={lbaSize} />
 
         {/* Interactive LBA calculator */}
         <div className="bg-story-card rounded-2xl p-8 card-shadow mb-6">
@@ -168,15 +228,17 @@ export default function LBA() {
               {Array.from({ length: BLOCK_COUNT }).map((_, i) => {
                 const isActive = selectedBlock === i;
                 return (
-                  <button
+                  <motion.button
                     key={i}
-                    className="flex-1 h-10 rounded transition-all duration-150"
+                    className="flex-1 h-10 rounded transition-colors duration-150"
                     style={{
                       backgroundColor: isActive ? "#635bff" : `rgba(99, 91, 255, ${0.06 + (i / BLOCK_COUNT) * 0.12})`,
-                      border: isActive ? "2px solid #635bff" : "1px solid #ddd6ca",
-                      transform: isActive ? "scaleY(1.15)" : undefined,
+                      border: isActive ? "2px solid #635bff" : "1px solid #1e2d42",
                     }}
+                    animate={isActive ? { scaleY: 1.2 } : { scaleY: 1 }}
+                    transition={{ type: "spring", stiffness: 300 }}
                     onClick={() => handleBlockClick(i)}
+                    whileHover={{ scaleY: 1.1 }}
                   />
                 );
               })}

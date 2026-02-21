@@ -1,6 +1,146 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
+
+function SsdDiagram() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  const controllerBlocks = [
+    { x: 30, y: 55, w: 90, h: 35, label: "NVMe Frontend", color: "#38bdf8" },
+    { x: 130, y: 55, w: 90, h: 35, label: "FTL Engine", color: "#a78bfa" },
+    { x: 30, y: 100, w: 90, h: 35, label: "ECC Engine", color: "#00d4aa" },
+    { x: 130, y: 100, w: 90, h: 35, label: "Wear Leveling", color: "#f5a623" },
+    { x: 30, y: 145, w: 190, h: 30, label: "NAND Interface (ONFI)", color: "#94a3b8" },
+  ];
+
+  return (
+    <div ref={ref} className="bg-story-card rounded-2xl p-6 card-shadow">
+      <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
+        SSD Architecture — Animated Data Flow
+      </div>
+      <svg viewBox="0 0 560 210" className="w-full max-w-2xl mx-auto" fill="none">
+        {/* Host */}
+        <motion.g
+          initial={{ opacity: 0, x: -20 }}
+          animate={inView ? { opacity: 1, x: 0 } : {}}
+          transition={{ delay: 0.1 }}
+        >
+          <rect x="0" y="80" width="80" height="50" rx="8" fill="#00d4aa10" stroke="#00d4aa" strokeWidth="2" />
+          <text x="40" y="102" textAnchor="middle" className="fill-nvme-green text-[10px] font-bold">Host</text>
+          <text x="40" y="118" textAnchor="middle" className="fill-text-muted text-[8px]">PCIe x4</text>
+        </motion.g>
+
+        {/* Arrow host → controller */}
+        <motion.line
+          x1="80" y1="105" x2="108" y2="105"
+          stroke="#475569" strokeWidth="2" markerEnd="url(#ssd-arrow)"
+          initial={{ pathLength: 0 }} animate={inView ? { pathLength: 1 } : {}}
+          transition={{ delay: 0.3, duration: 0.4 }}
+        />
+
+        {/* Data packet animation */}
+        <motion.circle
+          r="4" fill="#00d4aa"
+          animate={inView ? { cx: [85, 105], cy: [105, 105], opacity: [1, 0.5, 1] } : {}}
+          transition={{ delay: 0.5, duration: 0.8, repeat: Infinity, repeatDelay: 2 }}
+        />
+
+        {/* Controller group */}
+        <motion.g
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.2 }}
+        >
+          <rect x="110" y="20" width="230" height="170" rx="10" fill="#38bdf808" stroke="#38bdf8" strokeWidth="2" />
+          <text x="225" y="42" textAnchor="middle" className="fill-nvme-blue text-[11px] font-bold">SSD Controller</text>
+
+          {controllerBlocks.map((b, i) => (
+            <motion.g
+              key={b.label}
+              initial={{ opacity: 0, y: 10 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.3 + i * 0.1 }}
+            >
+              <rect
+                x={110 + b.x} y={b.y} width={b.w} height={b.h} rx="5"
+                fill="#111927" stroke={`${b.color}40`} strokeWidth="1"
+              />
+              <text
+                x={110 + b.x + b.w / 2} y={b.y + b.h / 2 + 4}
+                textAnchor="middle" fill={b.color} className="text-[8px] font-mono"
+              >
+                {b.label}
+              </text>
+            </motion.g>
+          ))}
+        </motion.g>
+
+        {/* DRAM */}
+        <motion.g
+          initial={{ opacity: 0, y: -10 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.5 }}
+        >
+          <rect x="360" y="30" width="80" height="50" rx="8" fill="#a78bfa10" stroke="#a78bfa" strokeWidth="2" />
+          <text x="400" y="52" textAnchor="middle" className="fill-nvme-violet text-[10px] font-bold">DRAM</text>
+          <text x="400" y="68" textAnchor="middle" className="fill-text-muted text-[8px]">FTL Table</text>
+          <line x1="340" y1="55" x2="360" y2="55" stroke="#475569" strokeWidth="1.5" />
+        </motion.g>
+
+        {/* NAND packages */}
+        {[0, 1, 2, 3].map((i) => (
+          <motion.g
+            key={i}
+            initial={{ opacity: 0, y: 10 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.6 + i * 0.1 }}
+          >
+            <rect
+              x={365 + i * 50} y="110" width="42" height="70" rx="5"
+              fill="#f5a62308" stroke="#f5a623" strokeWidth="1.5"
+            />
+            <text
+              x={386 + i * 50} y="145" textAnchor="middle"
+              className="fill-nvme-amber text-[8px] font-bold"
+            >
+              NAND
+            </text>
+            <text
+              x={386 + i * 50} y="158" textAnchor="middle"
+              className="fill-text-muted text-[7px]"
+            >
+              CH{i}
+            </text>
+
+            {/* Animated data flowing to NAND */}
+            <motion.rect
+              x={382 + i * 50} y="110" width="8" height="3" rx="1" fill="#f5a623"
+              animate={inView ? { y: [110, 165], opacity: [0.8, 0] } : {}}
+              transition={{ delay: 1 + i * 0.3, duration: 0.6, repeat: Infinity, repeatDelay: 3 }}
+            />
+          </motion.g>
+        ))}
+
+        {/* Arrow controller → NAND */}
+        <motion.line
+          x1="340" y1="145" x2="365" y2="145"
+          stroke="#475569" strokeWidth="2" markerEnd="url(#ssd-arrow)"
+          initial={{ pathLength: 0 }} animate={inView ? { pathLength: 1 } : {}}
+          transition={{ delay: 0.5, duration: 0.3 }}
+        />
+
+        <defs>
+          <marker id="ssd-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569" />
+          </marker>
+        </defs>
+      </svg>
+    </div>
+  );
+}
 
 export default function SsdOverview() {
   return (
@@ -53,264 +193,8 @@ export default function SsdOverview() {
           controller manages everything else.
         </p>
 
-        {/* SSD block diagram */}
-        <div className="bg-story-card rounded-2xl p-6 card-shadow">
-          <svg
-            viewBox="0 0 700 280"
-            className="w-full max-w-2xl mx-auto"
-            fill="none"
-          >
-            {/* Host interface */}
-            <rect
-              x="10"
-              y="110"
-              width="100"
-              height="60"
-              rx="8"
-              className="stroke-nvme-green"
-              strokeWidth="2"
-              fill="#00d4aa10"
-            />
-            <text
-              x="60"
-              y="135"
-              textAnchor="middle"
-              className="fill-nvme-green text-[11px] font-bold"
-            >
-              Host
-            </text>
-            <text
-              x="60"
-              y="152"
-              textAnchor="middle"
-              className="fill-text-muted text-[9px]"
-            >
-              PCIe x4
-            </text>
-
-            {/* Arrow */}
-            <line
-              x1="110"
-              y1="140"
-              x2="150"
-              y2="140"
-              className="stroke-text-muted"
-              strokeWidth="2"
-              markerEnd="url(#arrow)"
-            />
-
-            {/* Controller box */}
-            <rect
-              x="150"
-              y="30"
-              width="240"
-              height="220"
-              rx="12"
-              className="stroke-nvme-blue"
-              strokeWidth="2"
-              fill="#635bff08"
-            />
-            <text
-              x="270"
-              y="55"
-              textAnchor="middle"
-              className="fill-nvme-blue text-[12px] font-bold"
-            >
-              SSD Controller
-            </text>
-
-            {/* Sub-blocks inside controller */}
-            <rect
-              x="170"
-              y="70"
-              width="90"
-              height="40"
-              rx="6"
-              fill="#f5f2ed"
-              stroke="#ddd6ca"
-              strokeWidth="1"
-            />
-            <text
-              x="215"
-              y="94"
-              textAnchor="middle"
-              className="fill-text-secondary text-[9px]"
-            >
-              NVMe Frontend
-            </text>
-
-            <rect
-              x="280"
-              y="70"
-              width="90"
-              height="40"
-              rx="6"
-              fill="#f5f2ed"
-              stroke="#ddd6ca"
-              strokeWidth="1"
-            />
-            <text
-              x="325"
-              y="94"
-              textAnchor="middle"
-              className="fill-text-secondary text-[9px]"
-            >
-              FTL Engine
-            </text>
-
-            <rect
-              x="170"
-              y="125"
-              width="90"
-              height="40"
-              rx="6"
-              fill="#f5f2ed"
-              stroke="#ddd6ca"
-              strokeWidth="1"
-            />
-            <text
-              x="215"
-              y="149"
-              textAnchor="middle"
-              className="fill-text-secondary text-[9px]"
-            >
-              ECC Engine
-            </text>
-
-            <rect
-              x="280"
-              y="125"
-              width="90"
-              height="40"
-              rx="6"
-              fill="#f5f2ed"
-              stroke="#ddd6ca"
-              strokeWidth="1"
-            />
-            <text
-              x="325"
-              y="149"
-              textAnchor="middle"
-              className="fill-text-secondary text-[9px]"
-            >
-              Wear Leveling
-            </text>
-
-            <rect
-              x="170"
-              y="180"
-              width="200"
-              height="40"
-              rx="6"
-              fill="#f5f2ed"
-              stroke="#ddd6ca"
-              strokeWidth="1"
-            />
-            <text
-              x="270"
-              y="204"
-              textAnchor="middle"
-              className="fill-text-secondary text-[9px]"
-            >
-              NAND Flash Interface (ONFI / Toggle)
-            </text>
-
-            {/* DRAM */}
-            <rect
-              x="420"
-              y="50"
-              width="100"
-              height="60"
-              rx="8"
-              className="stroke-nvme-violet"
-              strokeWidth="2"
-              fill="#7c5cfc10"
-            />
-            <text
-              x="470"
-              y="75"
-              textAnchor="middle"
-              className="fill-nvme-violet text-[11px] font-bold"
-            >
-              DRAM
-            </text>
-            <text
-              x="470"
-              y="92"
-              textAnchor="middle"
-              className="fill-text-muted text-[9px]"
-            >
-              FTL Table Cache
-            </text>
-
-            {/* Arrow controller to DRAM */}
-            <line
-              x1="390"
-              y1="80"
-              x2="420"
-              y2="80"
-              className="stroke-text-muted"
-              strokeWidth="2"
-            />
-
-            {/* NAND packages */}
-            {[0, 1, 2, 3].map((i) => (
-              <g key={i}>
-                <rect
-                  x={430 + i * 65}
-                  y="160"
-                  width="55"
-                  height="80"
-                  rx="6"
-                  className="stroke-nvme-amber"
-                  strokeWidth="1.5"
-                  fill="#f5a62308"
-                />
-                <text
-                  x={457 + i * 65}
-                  y="195"
-                  textAnchor="middle"
-                  className="fill-nvme-amber text-[9px] font-bold"
-                >
-                  NAND
-                </text>
-                <text
-                  x={457 + i * 65}
-                  y="210"
-                  textAnchor="middle"
-                  className="fill-text-muted text-[8px]"
-                >
-                  CE{i}
-                </text>
-              </g>
-            ))}
-
-            {/* Arrow controller to NAND */}
-            <line
-              x1="370"
-              y1="200"
-              x2="430"
-              y2="200"
-              className="stroke-text-muted"
-              strokeWidth="2"
-              markerEnd="url(#arrow)"
-            />
-
-            <defs>
-              <marker
-                id="arrow"
-                viewBox="0 0 10 10"
-                refX="9"
-                refY="5"
-                markerWidth="6"
-                markerHeight="6"
-                orient="auto-start-reverse"
-              >
-                <path d="M 0 0 L 10 5 L 0 10 z" className="fill-text-muted" />
-              </marker>
-            </defs>
-          </svg>
-        </div>
+        {/* SSD block diagram with animated data flow */}
+        <SsdDiagram />
 
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
           <div className="bg-story-card rounded-2xl p-5 card-shadow">

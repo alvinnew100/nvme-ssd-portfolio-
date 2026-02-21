@@ -1,8 +1,55 @@
 "use client";
 
 import { useState } from "react";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
+
+const DATA_SCALE = [
+  { name: "1 bit", detail: "0 or 1", w: 2 },
+  { name: "1 byte", detail: "8 bits", w: 6 },
+  { name: "1 KB", detail: "1,024 bytes", w: 14 },
+  { name: "1 MB", detail: "1,024 KB", w: 28 },
+  { name: "1 GB", detail: "1,024 MB", w: 55 },
+  { name: "1 TB", detail: "1,024 GB", w: 100 },
+];
+
+function DataScaleLadder() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+  return (
+    <div ref={ref} className="bg-story-card rounded-2xl p-6 card-shadow">
+      <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
+        Data Size Scale
+      </div>
+      <div className="space-y-2">
+        {DATA_SCALE.map((d, i) => (
+          <motion.div
+            key={d.name}
+            className="flex items-center gap-3"
+            initial={{ opacity: 0, x: -20 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ delay: i * 0.1, duration: 0.4 }}
+          >
+            <motion.div
+              className="h-6 rounded bg-nvme-green/20 border border-nvme-green/30 flex-shrink-0"
+              style={{ width: `${d.w}%`, minWidth: 4 }}
+              initial={{ scaleX: 0 }}
+              animate={inView ? { scaleX: 1 } : {}}
+              transition={{ delay: i * 0.1 + 0.2, duration: 0.5, ease: "easeOut" }}
+            />
+            <span className="text-text-primary font-mono text-xs font-bold w-12 flex-shrink-0">{d.name}</span>
+            <span className="text-text-muted text-[10px]">= {d.detail}</span>
+          </motion.div>
+        ))}
+      </div>
+      <p className="text-text-muted text-[10px] italic mt-3">
+        A 1 TB SSD holds about 8 trillion individual bits.
+      </p>
+    </div>
+  );
+}
 
 export default function Binary() {
   const [bits, setBits] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
@@ -119,15 +166,32 @@ export default function Binary() {
           </div>
         </div>
 
-        <InfoCard variant="tip" title="What is hexadecimal?">
-          <em>Why do engineers use hex instead of decimal?</em> Because each hex digit
-          perfectly represents 4 bits. Counting in decimal (base-10) uses digits 0-9.{" "}
-          <strong>Hexadecimal</strong> (base-16) extends this with letters: 0-9 then
-          A=10, B=11, C=12, D=13, E=14, F=15. So{" "}
-          <code className="text-text-code">0xFF</code> means all 8 bits are on = 255
-          in decimal. Two hex digits always equal one byte — a compact way to write
-          binary values. You&apos;ll see hex everywhere in NVMe.
-        </InfoCard>
+        {/* Hex reference visual */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+          <div className="text-text-muted text-xs font-mono mb-3 uppercase tracking-wider">
+            Hexadecimal — the language of hardware
+          </div>
+          <p className="text-text-secondary text-xs mb-4 leading-relaxed">
+            <em className="text-text-primary">Why do engineers use hex instead of decimal?</em>{" "}
+            Each hex digit = exactly 4 bits. Two hex digits = 1 byte. It&apos;s compact and maps perfectly to binary.
+          </p>
+          <div className="grid grid-cols-8 sm:grid-cols-16 gap-1 mb-2">
+            {Array.from({ length: 16 }, (_, i) => (
+              <div key={i} className="bg-story-surface rounded-lg p-1.5 text-center">
+                <div className="text-text-code font-mono font-bold text-xs">
+                  {i.toString(16).toUpperCase()}
+                </div>
+                <div className="text-text-muted text-[8px] font-mono">{i}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-text-muted text-[10px] italic">
+            0-9 are the same. Then A=10, B=11, C=12, D=13, E=14, F=15. So <code className="text-text-code">0xFF</code> = 255.
+          </p>
+        </div>
+
+        {/* Data scale ladder */}
+        <DataScaleLadder />
       </div>
     </SectionWrapper>
   );

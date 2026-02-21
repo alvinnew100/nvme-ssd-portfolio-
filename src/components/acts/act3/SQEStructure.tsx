@@ -1,5 +1,7 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import dynamic from "next/dynamic";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import { getAdminCommands } from "@/lib/nvme/decoder";
@@ -8,6 +10,60 @@ const SQEntryVisualizer = dynamic(
   () => import("@/components/commands/SQEntryVisualizer"),
   { ssr: false }
 );
+
+const DWORD_SECTIONS = [
+  { dw: "CDW0", bytes: "0-3", color: "#00d4aa", label: "Opcode + CID" },
+  { dw: "CDW1", bytes: "4-7", color: "#a78bfa", label: "NSID" },
+  { dw: "CDW2-3", bytes: "8-15", color: "#475569", label: "Reserved" },
+  { dw: "CDW4-5", bytes: "16-23", color: "#475569", label: "Metadata" },
+  { dw: "CDW6-9", bytes: "24-39", color: "#38bdf8", label: "PRP Pointers" },
+  { dw: "CDW10-15", bytes: "40-63", color: "#f5a623", label: "Command-Specific" },
+];
+
+function ByteRuler() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  return (
+    <div ref={ref} className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+      <div className="text-text-muted text-xs font-mono mb-3 uppercase tracking-wider">
+        64-Byte SQ Entry — Visual Map
+      </div>
+      <div className="flex items-stretch gap-0 rounded-xl overflow-hidden mb-3">
+        {DWORD_SECTIONS.map((sec, i) => {
+          const widths: Record<string, string> = {
+            "CDW0": "6.25%", "CDW1": "6.25%", "CDW2-3": "12.5%",
+            "CDW4-5": "12.5%", "CDW6-9": "25%", "CDW10-15": "37.5%",
+          };
+          return (
+            <motion.div
+              key={sec.dw}
+              className="py-3 text-center border-r border-black/10 last:border-r-0"
+              style={{
+                width: widths[sec.dw],
+                backgroundColor: `${sec.color}15`,
+                borderBottom: `3px solid ${sec.color}`,
+              }}
+              initial={{ opacity: 0, scaleX: 0 }}
+              animate={inView ? { opacity: 1, scaleX: 1 } : {}}
+              transition={{ delay: i * 0.1, duration: 0.3 }}
+            >
+              <div className="font-mono font-bold text-[9px]" style={{ color: sec.color }}>
+                {sec.dw}
+              </div>
+              <div className="text-text-muted text-[7px] font-mono">{sec.label}</div>
+              <div className="text-text-muted text-[7px]">bytes {sec.bytes}</div>
+            </motion.div>
+          );
+        })}
+      </div>
+      <div className="flex justify-between text-[9px] text-text-muted font-mono">
+        <span>Byte 0</span>
+        <span>Byte 63</span>
+      </div>
+    </div>
+  );
+}
 
 export default function SQEStructure() {
   const identifyCmd = getAdminCommands().find((c) => c.id === "admin-identify");
@@ -38,6 +94,9 @@ export default function SQEStructure() {
           Command Dword</strong> (CDW), numbered 0 through 15. Here&apos;s how
           they&apos;re organized:
         </p>
+
+        {/* Byte ruler visual */}
+        <ByteRuler />
 
         <div className="bg-story-card rounded-2xl p-8 card-shadow mb-6">
           {/* Fixed portion */}
