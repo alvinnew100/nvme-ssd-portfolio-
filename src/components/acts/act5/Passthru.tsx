@@ -76,7 +76,9 @@ function LittleEndianAnimator() {
                 {byte}
               </div>
               <div className="text-text-muted text-[9px] mt-1">
-                {showLE ? `Addr ${i}` : `MSB+${i}`}
+                {showLE
+                  ? `Byte ${i} in memory`
+                  : i === 0 ? "Most significant" : i === 3 ? "Least significant" : `Byte ${i}`}
               </div>
             </motion.div>
           ))}
@@ -281,69 +283,6 @@ export default function Passthru() {
           </div>
         </div>
 
-        {/* ─── Opcode ≠ Direction Clarification ─── */}
-        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
-          <div className="text-text-primary font-semibold text-sm mb-3">
-            The Opcode Does NOT Determine Data Direction
-          </div>
-          <p className="text-text-secondary text-xs leading-relaxed mb-3">
-            <em className="text-text-primary">This is a common point of confusion.</em>{" "}
-            In the examples below, you&apos;ll see us use opcode 0xC0 with{" "}
-            <code className="text-text-code">-r</code> (read from drive) and opcode 0xC1
-            with <code className="text-text-code">-w</code> (write to drive). This might
-            make it look like 0xC0 means &ldquo;read&rdquo; and 0xC1 means
-            &ldquo;write&rdquo; — <strong className="text-text-primary">but
-            that&apos;s not the case at all.</strong>
-          </p>
-          <p className="text-text-secondary text-xs leading-relaxed mb-3">
-            <em className="text-text-primary">The opcode tells the drive&apos;s firmware
-            <em> what to do</em>. The <code className="text-text-code">-r</code> or{" "}
-            <code className="text-text-code">-w</code> flag tells nvme-cli which direction
-            data flows.</em> These are two separate things:
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
-            <div className="bg-story-surface rounded-xl p-4">
-              <div className="text-nvme-violet font-mono font-bold text-xs mb-2">
-                --opcode (what to do)
-              </div>
-              <p className="text-text-muted text-xs leading-relaxed">
-                Tells the drive which vendor command to execute. The meaning is defined
-                by the vendor&apos;s firmware — 0xC0 could be &ldquo;get health data&rdquo;
-                on one vendor&apos;s drive and &ldquo;set power mode&rdquo; on another.{" "}
-                <em>Opcodes 0xC0-0xFF are all unassigned by the NVMe spec</em> — vendors
-                choose what each one does.
-              </p>
-            </div>
-            <div className="bg-story-surface rounded-xl p-4">
-              <div className="text-nvme-green font-mono font-bold text-xs mb-2">
-                -r or -w (which direction)
-              </div>
-              <p className="text-text-muted text-xs leading-relaxed">
-                Tells nvme-cli how to set up the data buffer. <code className="text-text-code">
-                -r</code> = allocate an empty buffer, let the drive fill it (drive→host).{" "}
-                <code className="text-text-code">-w</code> = fill the buffer from a file,
-                let the drive read it (host→drive).{" "}
-                <em>Some commands need -r, some need -w, some need neither</em> (no data
-                transfer), and the vendor spec tells you which.
-              </p>
-            </div>
-          </div>
-          <p className="text-text-secondary text-xs leading-relaxed mb-3">
-            <em className="text-text-primary">Could 0xC0 be a write command?</em>{" "}
-            Absolutely. A vendor could define 0xC0 as &ldquo;upload diagnostic
-            config&rdquo; — you&apos;d use <code className="text-text-code">
-            --opcode=0xC0 -w --input-file=config.bin</code>.{" "}
-            <em>Could a single opcode need both directions?</em> Not in one command — each
-            NVMe command transfers data in one direction only. But the same opcode with
-            different CDW10 sub-commands might read for one sub-command and write for another.
-          </p>
-          <p className="text-text-muted text-[10px] italic leading-relaxed">
-            We use 0xC0 and 0xC1 throughout these examples purely as placeholders — they
-            are the first two values in the vendor-specific range. They have no universal
-            meaning. Every vendor assigns their own meaning to every opcode in the 0xC0-0xFF range.
-          </p>
-        </div>
-
         {/* ─── Little-Endian Deep Dive ─── */}
         <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
           <div className="text-text-primary font-semibold text-sm mb-3">
@@ -466,13 +405,133 @@ export default function Passthru() {
               </p>
             </div>
           </div>
+          {/* ─── Finding a specific byte ─── */}
+          <div className="text-text-primary font-semibold text-xs mb-2 mt-4">
+            How to Find a Specific Byte
+          </div>
           <p className="text-text-secondary text-xs leading-relaxed mb-3">
-            <em className="text-text-primary">So to find a specific byte:</em> take the
-            row offset + the byte&apos;s position in that row. For example, the byte{" "}
-            <code className="text-text-code">a4</code> is on the row starting at
-            0x00000000, and it&apos;s the 13th byte (position 0x0C) → offset 0x0C. That
-            matches our field table below where we say &ldquo;Byte 0x0C: temperature.&rdquo;
+            <em className="text-text-primary">If someone says &ldquo;the temperature
+            field is at byte offset 0x0C,&rdquo; how do you find it in the hexdump?</em>{" "}
+            You combine two things: which <strong>row</strong> (the offset on the left)
+            and which <strong>position within that row</strong> (counting from 0 to 15,
+            left to right).
           </p>
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            Let&apos;s walk through it step by step for offset <code className="text-text-code">0x0C</code>:
+          </p>
+          <div className="space-y-2 text-xs mb-4">
+            <div className="bg-story-surface rounded-lg p-3">
+              <span className="text-text-primary font-semibold">Step 1: Which row?</span>
+              <p className="text-text-muted mt-1">
+                Each row shows 16 bytes (0x10 in hex). Divide your offset by 16:{" "}
+                <code className="text-text-code">0x0C ÷ 0x10 = 0</code> remainder{" "}
+                <code className="text-text-code">0x0C</code>. So it&apos;s on the
+                row that starts at <code className="text-text-code">0x00000000</code>{" "}
+                (the first row).{" "}
+                <em>If the offset was 0x18, that&apos;s 0x18 ÷ 0x10 = 1 remainder 0x08,
+                so row <code className="text-text-code">0x00000010</code> (the second row),
+                position 8.</em>
+              </p>
+            </div>
+            <div className="bg-story-surface rounded-lg p-3">
+              <span className="text-text-primary font-semibold">Step 2: Which position in the row?</span>
+              <p className="text-text-muted mt-1">
+                The remainder tells you the position: <code className="text-text-code">0x0C</code>{" "}
+                = 12 decimal. So count 12 positions from the left (starting at 0).
+              </p>
+            </div>
+          </div>
+
+          <p className="text-text-secondary text-xs leading-relaxed mb-2">
+            <em className="text-text-primary">Let&apos;s count it visually.</em> Here&apos;s
+            the first row with position numbers underneath:
+          </p>
+          <div className="bg-story-dark rounded-xl p-4 overflow-x-auto mb-4">
+            <div className="font-mono text-[11px] leading-relaxed">
+              <div className="text-white/40 mb-1">
+                {"          "}position:{"  "}
+                <span>0{"  "}1{"  "}2{"  "}3{"  "}4{"  "}5{"  "}6{"  "}7{"   "}8{"  "}9{"  "}A{"  "}B{"  "}</span>
+                <span className="text-nvme-green font-bold">C{"  "}</span>
+                <span>D{"  "}E{"  "}F</span>
+              </div>
+              <div>
+                <span className="text-nvme-violet">00000000</span>
+                <span className="text-white/70">{"  "}56 45 4e 44 01 00 02 00{"  "}00 10 00 00 </span>
+                <span className="text-nvme-green font-bold bg-nvme-green/10 px-1 rounded">a4</span>
+                <span className="text-white/70"> 03 00 00</span>
+              </div>
+              <div className="text-white/30 mt-1">
+                {"          "}                                            {"       "}
+                <span className="text-nvme-green">↑</span>
+              </div>
+              <div className="text-white/30">
+                {"          "}                                      {"     "}
+                <span className="text-nvme-green text-[10px]">position 0x0C (12th byte)</span>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            <em className="text-text-primary">The byte at position 0x0C
+            is <code className="text-text-code">a4</code>.</em> But remember — this
+            is a 4-byte little-endian field (offset 0x0C through 0x0F). So we take
+            the next 4 bytes: <code className="text-text-code">a4 03 00 00</code>, reverse
+            them → <code className="text-text-code">0x000003A4</code> = 932.
+            That&apos;s our temperature value (in 0.1°C units → 93.2°C).
+          </p>
+
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            <em className="text-text-primary">Another example — offset 0x18:</em>{" "}
+            That&apos;s 0x18 = 24 decimal. Row = 24 ÷ 16 = 1 (second row, starting at{" "}
+            <code className="text-text-code">0x00000010</code>). Position = 24 - 16 = 8
+            (the 9th byte, which is the first byte after the middle gap). On the
+            second row:
+          </p>
+          <div className="bg-story-dark rounded-xl p-4 overflow-x-auto mb-4">
+            <div className="font-mono text-[11px] leading-relaxed">
+              <div className="text-white/40 mb-1">
+                {"          "}position:{"  "}
+                <span>0{"  "}1{"  "}2{"  "}3{"  "}4{"  "}5{"  "}6{"  "}7{"   "}</span>
+                <span className="text-nvme-blue font-bold">8{"  "}</span>
+                <span>9{"  "}A{"  "}B{"  "}C{"  "}D{"  "}E{"  "}F</span>
+              </div>
+              <div>
+                <span className="text-nvme-violet">00000010</span>
+                <span className="text-white/70">{"  "}e8 03 00 00 00 00 00 00{"  "}</span>
+                <span className="text-nvme-blue font-bold bg-nvme-blue/10 px-1 rounded">64</span>
+                <span className="text-white/70"> 00 00 00 00 00 00 00</span>
+              </div>
+              <div className="text-white/30 mt-1">
+                {"          "}                                  {"           "}
+                <span className="text-nvme-blue">↑</span>
+              </div>
+              <div className="text-white/30">
+                {"          "}                                  {"   "}
+                <span className="text-nvme-blue text-[10px]">row 0x10 + position 0x08 = offset 0x18</span>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            Offset 0x18: bytes <code className="text-text-code">64 00 00 00</code> →
+            reverse → <code className="text-text-code">0x00000064</code> = 100 decimal.
+            That&apos;s the &ldquo;percentage used&rdquo; field.
+          </p>
+
+          <p className="text-text-muted text-[10px] italic leading-relaxed mb-3">
+            <em>Quick shortcut:</em> the row offset always ends in 0
+            (<code className="text-text-code">0x00</code>,{" "}
+            <code className="text-text-code">0x10</code>,{" "}
+            <code className="text-text-code">0x20</code>, ...). So for any byte offset,
+            the row is the offset with the last digit replaced by 0, and the position
+            is the last hex digit. Offset <code className="text-text-code">0x0C</code> →
+            row <code className="text-text-code">0x00</code>, position{" "}
+            <code className="text-text-code">C</code>. Offset{" "}
+            <code className="text-text-code">0x24</code> → row{" "}
+            <code className="text-text-code">0x20</code>, position{" "}
+            <code className="text-text-code">4</code>. Simple.
+          </p>
+
           <p className="text-text-muted text-[10px] italic leading-relaxed">
             <em>Is there another format?</em> <code className="text-text-code">hexdump</code>{" "}
             without <code className="text-text-code">-C</code> shows a different layout
