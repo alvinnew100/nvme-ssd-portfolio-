@@ -340,11 +340,20 @@ export default function TRIM() {
           <h4 className="text-lg font-bold text-text-primary mb-3">
             GC Deep Dive &mdash; When, How, and the Costs
           </h4>
+          <p className="text-text-secondary text-sm mb-4 leading-relaxed max-w-3xl">
+            Recall from <em className="text-text-primary">Lesson 3: SSD Architecture</em>{" "}
+            that every block has a <strong className="text-text-primary">VPC (Valid Page Count)</strong> —
+            the number of pages still holding current data. GC uses the VPC table to pick{" "}
+            <strong className="text-text-primary">source blocks</strong> (lowest VPC = best candidate)
+            and copies their valid pages to <strong className="text-text-primary">spare blocks</strong>{" "}
+            before erasing. TRIM directly lowers VPC by telling the SSD which pages are no longer
+            needed — making GC faster and cheaper.
+          </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
             <div className="bg-story-card rounded-2xl p-5 card-shadow">
               <div className="text-nvme-green font-mono font-bold text-xs mb-2">
-                Background GC (Idle GC)
+                Background GC (Idle GC) — Uses Spare Blocks
               </div>
               <p className="text-text-secondary text-xs leading-relaxed mb-2">
                 Runs when the SSD detects idle time — no host commands for a while.

@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 
 const IO_LAYERS = [
@@ -14,6 +14,7 @@ const IO_LAYERS = [
     icon: "APP",
     zone: "userspace",
     latency: "~0.1μs",
+    latencyUs: 0.1,
   },
   {
     id: 1,
@@ -24,6 +25,7 @@ const IO_LAYERS = [
     icon: "VFS",
     zone: "kernel",
     latency: "~0.5μs",
+    latencyUs: 0.5,
   },
   {
     id: 2,
@@ -34,6 +36,7 @@ const IO_LAYERS = [
     icon: "FS",
     zone: "kernel",
     latency: "~1μs",
+    latencyUs: 1,
   },
   {
     id: 3,
@@ -44,6 +47,7 @@ const IO_LAYERS = [
     icon: "BLK",
     zone: "kernel",
     latency: "~1μs",
+    latencyUs: 1,
   },
   {
     id: 4,
@@ -54,6 +58,7 @@ const IO_LAYERS = [
     icon: "DRV",
     zone: "driver",
     latency: "~0.5μs",
+    latencyUs: 0.5,
   },
   {
     id: 5,
@@ -64,6 +69,7 @@ const IO_LAYERS = [
     icon: "DB",
     zone: "driver",
     latency: "~0.5μs",
+    latencyUs: 0.5,
   },
   {
     id: 6,
@@ -74,6 +80,7 @@ const IO_LAYERS = [
     icon: "SSD",
     zone: "hardware",
     latency: "~5μs",
+    latencyUs: 5,
   },
   {
     id: 7,
@@ -83,7 +90,8 @@ const IO_LAYERS = [
     color: "#e8a317",
     icon: "NAND",
     zone: "hardware",
-    latency: "~50-100μs",
+    latency: "~75μs",
+    latencyUs: 75,
   },
   {
     id: 8,
@@ -94,6 +102,7 @@ const IO_LAYERS = [
     icon: "DMA",
     zone: "return",
     latency: "~2μs",
+    latencyUs: 2,
   },
   {
     id: 9,
@@ -104,18 +113,72 @@ const IO_LAYERS = [
     icon: "IRQ",
     zone: "return",
     latency: "~1μs",
+    latencyUs: 1,
   },
 ];
 
+const TOTAL_LATENCY = IO_LAYERS.reduce((sum, l) => sum + l.latencyUs, 0);
+
+function LatencyWaterfall() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  return (
+    <div ref={ref} className="bg-story-card rounded-2xl p-6 card-shadow">
+      <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
+        Latency Waterfall &mdash; Where Does the Time Go?
+      </div>
+      <div className="space-y-1.5">
+        {IO_LAYERS.map((layer, i) => {
+          const pct = (layer.latencyUs / TOTAL_LATENCY) * 100;
+          const barWidth = Math.max(pct, 1.5);
+          return (
+            <motion.div
+              key={layer.id}
+              className="flex items-center gap-2"
+              initial={{ opacity: 0, x: -10 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
+              transition={{ delay: i * 0.06, duration: 0.3 }}
+            >
+              <div className="text-[9px] font-mono text-text-muted w-20 text-right flex-shrink-0 truncate">
+                {layer.name.length > 12 ? layer.icon : layer.name}
+              </div>
+              <div className="flex-1 flex items-center gap-2">
+                <motion.div
+                  className="h-5 rounded flex items-center justify-end pr-1.5"
+                  style={{ backgroundColor: `${layer.color}25`, borderLeft: `3px solid ${layer.color}` }}
+                  initial={{ width: 0 }}
+                  animate={inView ? { width: `${barWidth}%` } : {}}
+                  transition={{ delay: i * 0.06 + 0.2, duration: 0.5, ease: "easeOut" }}
+                >
+                  {pct > 8 && (
+                    <span className="text-[8px] font-mono font-bold" style={{ color: layer.color }}>
+                      {layer.latency}
+                    </span>
+                  )}
+                </motion.div>
+                {pct <= 8 && (
+                  <span className="text-[8px] font-mono" style={{ color: layer.color }}>
+                    {layer.latency}
+                  </span>
+                )}
+              </div>
+            </motion.div>
+          );
+        })}
+      </div>
+      <div className="flex justify-between mt-3 text-[9px] font-mono text-text-muted">
+        <span>0μs</span>
+        <span className="text-text-primary font-bold">NAND read dominates: ~87% of total latency</span>
+        <span>~{TOTAL_LATENCY.toFixed(1)}μs total</span>
+      </div>
+    </div>
+  );
+}
+
 export default function IOPathDiagram() {
-  const [step, setStep] = useState(-1);
-
-  const goNext = () => setStep((s) => Math.min(s + 1, IO_LAYERS.length - 1));
-  const goPrev = () => setStep((s) => Math.max(s - 1, -1));
-  const reset = () => setStep(-1);
-
-  const isStarted = step >= 0;
-  const isFinished = step === IO_LAYERS.length - 1;
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
     <SectionWrapper className="py-24 px-4 bg-story-surface">
@@ -126,7 +189,7 @@ export default function IOPathDiagram() {
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           Now that we understand all the protocol pieces — commands, queues,
           doorbells, completions — let&apos;s trace the <em className="text-text-primary">
-          entire journey</em> of a single 4KB read, step by step. It passes through
+          entire journey</em> of a single 4KB read. It passes through
           10 layers, each one doing something we&apos;ve already learned about.
         </p>
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
@@ -135,205 +198,109 @@ export default function IOPathDiagram() {
           connect. When something goes wrong — a slow read, a timeout, an error —
           knowing the full path tells you <em>where</em> to look.
         </p>
-        <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
-          Use the <strong className="text-text-primary">Next Step</strong> button
-          below to walk through each layer at your own pace. Each step shows what
-          happens and <em>why</em>:
-        </p>
 
-        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
-          {/* Controls */}
-          <div className="flex items-center justify-between mb-5">
-            <div className="text-text-muted text-xs font-mono uppercase tracking-wider">
-              {!isStarted
-                ? "Ready — click \"Start Journey\" to begin"
-                : isFinished
-                ? `Complete — 10/10 layers traversed`
-                : `Step ${step + 1} of ${IO_LAYERS.length}`}
-            </div>
-            <div className="flex gap-2">
-              {!isStarted ? (
-                <button
-                  onClick={goNext}
-                  className="px-5 py-2.5 bg-nvme-green text-white rounded-full text-xs font-semibold hover:shadow-lg transition-all active:scale-95"
-                >
-                  Start Journey
-                </button>
-              ) : (
-                <>
-                  <button
-                    onClick={goPrev}
-                    disabled={step <= 0}
-                    className="px-4 py-2 bg-story-surface text-text-secondary rounded-full text-xs font-semibold hover:bg-story-border disabled:opacity-30 transition-all"
-                  >
-                    Previous
-                  </button>
-                  {isFinished ? (
-                    <button
-                      onClick={reset}
-                      className="px-4 py-2 bg-nvme-violet text-white rounded-full text-xs font-semibold hover:shadow-lg transition-all active:scale-95"
-                    >
-                      Reset
-                    </button>
-                  ) : (
-                    <button
-                      onClick={goNext}
-                      className="px-5 py-2.5 bg-nvme-blue text-white rounded-full text-xs font-semibold hover:shadow-lg transition-all active:scale-95"
-                    >
-                      Next Step
-                    </button>
-                  )}
-                </>
-              )}
-            </div>
+        <div ref={ref} className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+          <div className="text-text-muted text-xs font-mono mb-5 uppercase tracking-wider">
+            10-Layer I/O Path &mdash; All Layers
           </div>
 
-          {/* Progress bar */}
-          <div className="w-full h-1.5 bg-story-surface rounded-full mb-5 overflow-hidden">
-            <motion.div
-              className="h-full bg-nvme-green rounded-full"
-              initial={{ width: "0%" }}
-              animate={{ width: isStarted ? `${((step + 1) / IO_LAYERS.length) * 100}%` : "0%" }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-            />
-          </div>
-
-          {/* Layers */}
+          {/* All layers shown expanded */}
           <div className="flex flex-col gap-1">
-            {IO_LAYERS.map((layer, i) => {
-              const isActive = step === i;
-              const isPassed = step > i;
-              const isReached = step >= i;
-              return (
-                <div key={layer.id}>
-                  <button
-                    onClick={() => {
-                      if (isReached) setStep(i);
-                    }}
-                    className={`w-full flex items-center gap-3 p-3 rounded-xl transition-all text-left ${
-                      isActive
-                        ? "ring-2 scale-[1.02]"
-                        : isPassed
-                        ? "bg-story-surface/50 cursor-pointer"
-                        : step >= 0
-                        ? "opacity-40"
-                        : "hover:bg-story-surface"
-                    }`}
-                    style={isActive ? {
-                      backgroundColor: `${layer.color}10`,
-                      boxShadow: `0 0 0 2px ${layer.color}40`,
-                    } : undefined}
+            {IO_LAYERS.map((layer, i) => (
+              <motion.div
+                key={layer.id}
+                initial={{ opacity: 0, y: 8 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: i * 0.08, duration: 0.35 }}
+              >
+                <div
+                  className="w-full flex items-center gap-3 p-3 rounded-xl text-left"
+                  style={{
+                    backgroundColor: `${layer.color}10`,
+                  }}
+                >
+                  <div
+                    className="w-10 h-10 rounded-lg flex items-center justify-center text-white text-[10px] font-mono font-bold flex-shrink-0"
+                    style={{ backgroundColor: layer.color }}
                   >
-                    <div
-                      className={`w-10 h-10 rounded-lg flex items-center justify-center text-white text-[10px] font-mono font-bold flex-shrink-0 transition-all ${
-                        isReached ? "scale-110" : "opacity-50"
-                      }`}
-                      style={{ backgroundColor: isReached ? layer.color : "#9e9789" }}
-                    >
-                      {isPassed ? (
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                          <path d="M2 7L5.5 10.5L12 3.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      ) : (
-                        layer.icon
-                      )}
+                    {layer.icon}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm font-semibold text-text-primary">
+                      {layer.name}
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <div className={`text-sm font-semibold ${isActive ? "text-text-primary" : isPassed ? "text-text-secondary" : "text-text-muted"}`}>
-                        {layer.name}
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      {isReached && (
-                        <span className="text-[10px] font-mono" style={{ color: layer.color }}>
-                          {layer.latency}
-                        </span>
-                      )}
-                      <span className="text-text-muted text-[9px] font-mono flex-shrink-0 w-16 text-right">
-                        {layer.zone}
-                      </span>
-                    </div>
-                  </button>
-
-                  <AnimatePresence>
-                    {isActive && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.25 }}
-                        className="overflow-hidden"
-                      >
-                        <div
-                          className="mx-3 mb-2 p-4 rounded-lg text-sm leading-relaxed space-y-3"
-                          style={{
-                            backgroundColor: `${layer.color}08`,
-                            borderLeft: `3px solid ${layer.color}`,
-                          }}
-                        >
-                          <div className="text-text-secondary text-xs leading-relaxed">{layer.detail}</div>
-                          <div className="text-xs italic leading-relaxed" style={{ color: layer.color }}>
-                            {layer.why}
-                          </div>
-                          <div className="flex items-center gap-2 text-[10px] font-mono text-text-muted">
-                            <span>Layer {i + 1} of {IO_LAYERS.length}</span>
-                            <span className="text-text-muted">|</span>
-                            <span>Typical latency: <strong style={{ color: layer.color }}>{layer.latency}</strong></span>
-                          </div>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-
-                  {/* Connector */}
-                  {i < IO_LAYERS.length - 1 && (
-                    <div className="flex justify-center">
-                      <motion.div
-                        className="w-0.5 h-3"
-                        animate={{
-                          backgroundColor: isPassed ? "#00d4aa" : step === i ? layer.color : "#ddd6ca",
-                        }}
-                        transition={{ duration: 0.3 }}
-                      />
-                    </div>
-                  )}
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-mono" style={{ color: layer.color }}>
+                      {layer.latency}
+                    </span>
+                    <span className="text-text-muted text-[9px] font-mono flex-shrink-0 w-16 text-right">
+                      {layer.zone}
+                    </span>
+                  </div>
                 </div>
-              );
-            })}
+
+                {/* Detail always visible */}
+                <div
+                  className="mx-3 mb-2 p-4 rounded-lg text-sm leading-relaxed space-y-3"
+                  style={{
+                    backgroundColor: `${layer.color}08`,
+                    borderLeft: `3px solid ${layer.color}`,
+                  }}
+                >
+                  <div className="text-text-secondary text-xs leading-relaxed">{layer.detail}</div>
+                  <div className="text-xs italic leading-relaxed" style={{ color: layer.color }}>
+                    {layer.why}
+                  </div>
+                  <div className="flex items-center gap-2 text-[10px] font-mono text-text-muted">
+                    <span>Layer {i + 1} of {IO_LAYERS.length}</span>
+                    <span className="text-text-muted">|</span>
+                    <span>Typical latency: <strong style={{ color: layer.color }}>{layer.latency}</strong></span>
+                  </div>
+                </div>
+
+                {/* Connector */}
+                {i < IO_LAYERS.length - 1 && (
+                  <div className="flex justify-center">
+                    <motion.div
+                      className="w-0.5 h-3"
+                      style={{ backgroundColor: layer.color }}
+                      initial={{ scaleY: 0 }}
+                      animate={inView ? { scaleY: 1 } : {}}
+                      transition={{ delay: i * 0.08 + 0.15, duration: 0.2 }}
+                    />
+                  </div>
+                )}
+              </motion.div>
+            ))}
           </div>
         </div>
 
-        {/* Summary cards — shown after completion */}
-        <AnimatePresence>
-          {isFinished && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
-            >
-              <div className="bg-story-card rounded-xl p-4 card-shadow">
-                <div className="font-mono font-bold text-nvme-green text-sm mb-1">
-                  Typical 4K Read Latency
-                </div>
-                <p className="text-text-muted text-xs">
-                  ~70-120μs end-to-end at queue depth 1. NAND read dominates (~50μs).
-                  Software layers add ~5-15μs. PCIe round-trip adds ~2-3μs.
-                </p>
-              </div>
-              <div className="bg-story-card rounded-xl p-4 card-shadow">
-                <div className="font-mono font-bold text-nvme-blue text-sm mb-1">
-                  Bypassing Layers for Speed
-                </div>
-                <p className="text-text-muted text-xs">
-                  <strong>O_DIRECT</strong> skips the page cache. <strong>io_uring</strong>{" "}
-                  reduces syscall overhead. <strong>SPDK</strong> bypasses the kernel
-                  entirely, driving NVMe from userspace for lowest possible latency.
-                </p>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {/* Latency waterfall */}
+        <LatencyWaterfall />
+
+        {/* Summary cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+          <div className="bg-story-card rounded-xl p-4 card-shadow">
+            <div className="font-mono font-bold text-nvme-green text-sm mb-1">
+              Typical 4K Read Latency
+            </div>
+            <p className="text-text-muted text-xs">
+              ~70-120μs end-to-end at queue depth 1. NAND read dominates (~50-100μs).
+              Software layers add ~5-15μs. PCIe round-trip adds ~2-3μs.
+            </p>
+          </div>
+          <div className="bg-story-card rounded-xl p-4 card-shadow">
+            <div className="font-mono font-bold text-nvme-blue text-sm mb-1">
+              Bypassing Layers for Speed
+            </div>
+            <p className="text-text-muted text-xs">
+              <strong>O_DIRECT</strong> skips the page cache. <strong>io_uring</strong>{" "}
+              reduces syscall overhead. <strong>SPDK</strong> bypasses the kernel
+              entirely, driving NVMe from userspace for lowest possible latency.
+            </p>
+          </div>
+        </div>
       </div>
     </SectionWrapper>
   );

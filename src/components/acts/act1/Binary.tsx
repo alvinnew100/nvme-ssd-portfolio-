@@ -7,12 +7,12 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 
 const DATA_SCALE = [
-  { name: "1 bit", detail: "0 or 1", w: 2 },
-  { name: "1 byte", detail: "8 bits", w: 6 },
-  { name: "1 KB", detail: "1,024 bytes", w: 14 },
-  { name: "1 MB", detail: "1,024 KB", w: 28 },
-  { name: "1 GB", detail: "1,024 MB", w: 55 },
-  { name: "1 TB", detail: "1,024 GB", w: 100 },
+  { name: "1 bit", detail: "0 or 1", w: 1.5 },
+  { name: "1 byte", detail: "8 bits", w: 4 },
+  { name: "1 KB", detail: "1,024 bytes", w: 10 },
+  { name: "1 MB", detail: "1,024 KB", w: 20 },
+  { name: "1 GB", detail: "1,024 MB", w: 40 },
+  { name: "1 TB", detail: "1,024 GB", w: 70 },
 ];
 
 function DataScaleLadder() {

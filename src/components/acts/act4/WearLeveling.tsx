@@ -135,28 +135,35 @@ export default function WearLeveling() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="bg-story-surface rounded-xl p-4">
               <div className="text-nvme-green font-mono font-bold text-xs mb-2">
-                Dynamic Wear Leveling
+                Dynamic Wear Leveling — Dynamic Blocks
               </div>
               <p className="text-text-muted text-xs leading-relaxed mb-2">
-                When writing new data, the FTL picks the block with the lowest erase
-                count. Simple and effective for active data.
+                When writing new data, the FTL picks a <strong className="text-text-primary">
+                dynamic spare block</strong> with the lowest erase count as the next write
+                target. The block that receives these hot writes becomes a{" "}
+                <strong className="text-text-primary">dynamic block</strong>. This is simple
+                and effective for actively written data.
               </p>
               <p className="text-text-muted text-[10px] italic">
-                <em>Limitation:</em> cold data (rarely written) might sit on low-wear
-                blocks forever, wasting their remaining P/E cycles.
+                <em>Limitation:</em> cold data (rarely written) might sit on low-wear{" "}
+                <strong>static blocks</strong> forever, wasting their remaining P/E cycles.
+                See Lesson 3 for the complete block type taxonomy.
               </p>
             </div>
             <div className="bg-story-surface rounded-xl p-4">
               <div className="text-nvme-blue font-mono font-bold text-xs mb-2">
-                Static Wear Leveling
+                Static Wear Leveling — Static &amp; Static Spare Blocks
               </div>
               <p className="text-text-muted text-xs leading-relaxed mb-2">
-                Periodically moves cold data from low-wear blocks to high-wear blocks.
-                This frees up fresh blocks for hot writes.
+                Periodically moves cold data from low-wear <strong className="text-text-primary">
+                static blocks</strong> to high-wear <strong className="text-text-primary">
+                static spare blocks</strong>. The old static block (now empty) returns to the
+                spare pool. This frees up fresh blocks for hot writes.
               </p>
               <p className="text-text-muted text-[10px] italic">
                 <em>Better uniformity:</em> ensures ALL blocks wear evenly, not just
-                the ones being actively written.
+                the ones being actively written. The VPC (Valid Page Count) of static
+                blocks is typically at max since the data rarely changes.
               </p>
             </div>
           </div>

@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 
 interface TraceEvent {
@@ -26,37 +26,8 @@ const TRACE_SCENARIO: TraceEvent[] = [
 ];
 
 export default function BusTrace() {
-  const [events, setEvents] = useState<TraceEvent[]>([]);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentIdx, setCurrentIdx] = useState(0);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
-
-  const play = () => {
-    setEvents([]);
-    setCurrentIdx(0);
-    setIsPlaying(true);
-  };
-
-  const stopAndReset = () => {
-    setIsPlaying(false);
-    if (intervalRef.current) clearInterval(intervalRef.current);
-    setEvents([]);
-    setCurrentIdx(0);
-  };
-
-  useEffect(() => {
-    if (isPlaying && currentIdx < TRACE_SCENARIO.length) {
-      intervalRef.current = setTimeout(() => {
-        setEvents((prev) => [...prev, TRACE_SCENARIO[currentIdx]]);
-        setCurrentIdx((i) => i + 1);
-      }, 700);
-      return () => {
-        if (intervalRef.current) clearTimeout(intervalRef.current);
-      };
-    } else if (currentIdx >= TRACE_SCENARIO.length) {
-      setIsPlaying(false);
-    }
-  }, [isPlaying, currentIdx]);
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <SectionWrapper className="py-24 px-4 bg-story-surface">
@@ -79,7 +50,8 @@ export default function BusTrace() {
           NAND read time?
         </p>
         <p className="text-text-secondary mb-6 leading-relaxed max-w-3xl">
-          Click &ldquo;Play&rdquo; to watch the trace unfold step by step:
+          The 7-step trace below shows the complete lifecycle of a single
+          4KB NVMe Read command across the PCIe bus:
         </p>
 
         {/* Term definitions */}
@@ -117,7 +89,7 @@ export default function BusTrace() {
           </div>
         </div>
 
-        <div className="bg-story-card rounded-2xl p-8 card-shadow mb-6">
+        <div ref={ref} className="bg-story-card rounded-2xl p-8 card-shadow mb-6">
           {/* Bus lanes header */}
           <div className="flex items-center justify-between mb-6">
             <div className="text-center flex-1">
@@ -133,94 +105,70 @@ export default function BusTrace() {
             </div>
           </div>
 
-          {/* Bus trace area */}
-          <div className="relative min-h-[320px] border-l-2 border-r-2 border-dashed border-story-border mx-[15%]">
+          {/* Bus trace area — all events shown */}
+          <div className="relative border-l-2 border-r-2 border-dashed border-story-border mx-[15%]">
             <div className="absolute left-1/2 top-0 bottom-0 w-px bg-story-border" />
 
-            <AnimatePresence>
-              {events.map((evt) => (
-                <motion.div
-                  key={evt.id}
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="relative py-2"
-                >
-                  <div className="flex items-center gap-2 px-2">
-                    <div className="text-[9px] font-mono text-text-muted w-12 text-right flex-shrink-0">
-                      +{evt.time}ms
-                    </div>
-
-                    <div className="flex-1 flex items-center gap-1">
-                      {evt.direction === "host-to-ctrl" ? (
-                        <div className="flex-1 flex items-center">
-                          <div className="h-0.5 flex-1 rounded" style={{ backgroundColor: evt.color }} />
-                          <div
-                            className="w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-l-[6px]"
-                            style={{ borderLeftColor: evt.color }}
-                          />
-                        </div>
-                      ) : (
-                        <div className="flex-1 flex items-center">
-                          <div
-                            className="w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-r-[6px]"
-                            style={{ borderRightColor: evt.color }}
-                          />
-                          <div className="h-0.5 flex-1 rounded" style={{ backgroundColor: evt.color }} />
-                        </div>
-                      )}
-                    </div>
+            {TRACE_SCENARIO.map((evt, idx) => (
+              <motion.div
+                key={evt.id}
+                initial={{ opacity: 0, y: -10 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: idx * 0.15, duration: 0.4 }}
+                className="relative py-2"
+              >
+                <div className="flex items-center gap-2 px-2">
+                  <div className="text-[9px] font-mono text-text-muted w-12 text-right flex-shrink-0">
+                    +{evt.time}ms
                   </div>
 
-                  <div className="flex items-start gap-2 px-2 mt-1">
-                    <div className="w-12 flex-shrink-0" />
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2">
-                        <span
-                          className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full"
-                          style={{
-                            color: evt.color,
-                            backgroundColor: `${evt.color}10`,
-                          }}
-                        >
-                          {evt.type.toUpperCase()}
-                        </span>
-                        <span className="text-text-primary text-[11px] font-semibold">{evt.label}</span>
+                  <div className="flex-1 flex items-center gap-1">
+                    {evt.direction === "host-to-ctrl" ? (
+                      <div className="flex-1 flex items-center">
+                        <div className="h-0.5 flex-1 rounded" style={{ backgroundColor: evt.color }} />
+                        <div
+                          className="w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-l-[6px]"
+                          style={{ borderLeftColor: evt.color }}
+                        />
                       </div>
-                      <div className="text-[10px] text-text-muted mt-0.5">{evt.detail}</div>
-                      <div
-                        className="text-[10px] mt-1 leading-relaxed italic"
-                        style={{ color: evt.color }}
+                    ) : (
+                      <div className="flex-1 flex items-center">
+                        <div
+                          className="w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-r-[6px]"
+                          style={{ borderRightColor: evt.color }}
+                        />
+                        <div className="h-0.5 flex-1 rounded" style={{ backgroundColor: evt.color }} />
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-2 px-2 mt-1">
+                  <div className="w-12 flex-shrink-0" />
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2">
+                      <span
+                        className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full"
+                        style={{
+                          color: evt.color,
+                          backgroundColor: `${evt.color}10`,
+                        }}
                       >
-                        {evt.why}
-                      </div>
+                        {evt.type.toUpperCase()}
+                      </span>
+                      <span className="text-text-primary text-[11px] font-semibold">{evt.label}</span>
+                    </div>
+                    <div className="text-[10px] text-text-muted mt-0.5">{evt.detail}</div>
+                    <div
+                      className="text-[10px] mt-1 leading-relaxed italic"
+                      style={{ color: evt.color }}
+                    >
+                      {evt.why}
                     </div>
                   </div>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-
-            {events.length === 0 && (
-              <div className="flex items-center justify-center h-[320px] text-text-muted text-xs italic">
-                Click &ldquo;Play Read Command&rdquo; to see the 7-step bus trace
-              </div>
-            )}
-          </div>
-
-          {/* Controls */}
-          <div className="flex gap-3 mt-6 justify-center">
-            <button
-              onClick={play}
-              disabled={isPlaying}
-              className="px-5 py-2.5 bg-nvme-blue text-white rounded-full text-xs font-semibold hover:shadow-lg disabled:opacity-50 transition-all active:scale-95"
-            >
-              {events.length > 0 && !isPlaying ? "Replay" : "Play Read Command"}
-            </button>
-            <button
-              onClick={stopAndReset}
-              className="px-5 py-2.5 bg-story-surface text-text-muted rounded-full text-xs font-semibold hover:bg-story-border transition-all"
-            >
-              Reset
-            </button>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
 
