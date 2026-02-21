@@ -33,39 +33,39 @@ const FILESYSTEMS: Filesystem[] = [
     checksums: false,
     snapshots: false,
     compression: false,
-    trimSupport: "Basic (mount -o discard)",
-    bestFor: "USB drives, /boot partitions, embedded systems",
-    desc: "The original Linux extended filesystem. No journaling means fast writes but risk of data corruption after unclean shutdown. Still used for /boot because bootloaders understand it and journaling adds unnecessary overhead for a read-only partition.",
+    trimSupport: "Basic",
+    bestFor: "USB drives, /boot partitions",
+    desc: "The original Linux filesystem. No journaling means writes go directly to disk — fast, but if power is lost mid-write, the data structure can become corrupted. Recovery requires scanning the entire drive (fsck), which can take minutes. Still used for /boot because bootloaders understand it and it's tiny.",
   },
   {
     name: "ext3",
     color: "#e8a317",
     year: "2001",
-    journaling: "Journal (ordered, writeback, journal)",
+    journaling: "Journal (3 modes)",
     maxFileSize: "2 TB",
     maxVolSize: "32 TB",
     cow: false,
     checksums: false,
     snapshots: false,
     compression: false,
-    trimSupport: "Basic (mount -o discard)",
-    bestFor: "Legacy systems, upgrades from ext2",
-    desc: "Added journaling to ext2 — the journal records metadata changes before they hit disk, so recovery after a crash is fast (seconds, not minutes of fsck). Three journal modes: ordered (default, safest), writeback (fastest), and full journal (slowest, journals data too).",
+    trimSupport: "Basic",
+    bestFor: "Legacy systems",
+    desc: "Added journaling to ext2. Before changing data on disk, ext3 first writes what it's about to do to a \"journal\" — like writing a to-do list before doing the task. If power is lost, the system checks the journal and either finishes or undoes the pending change. Recovery takes seconds instead of minutes.",
   },
   {
     name: "ext4",
     color: "#635bff",
     year: "2008",
-    journaling: "Journal (same modes as ext3)",
+    journaling: "Journal (3 modes)",
     maxFileSize: "16 TB",
     maxVolSize: "1 EB",
     cow: false,
     checksums: true,
     snapshots: false,
     compression: false,
-    trimSupport: "Full (discard, fstrim, fitrim ioctl)",
-    bestFor: "General-purpose Linux, databases, most workloads",
-    desc: "The default Linux filesystem. Adds extents (replacing indirect block mapping), delayed allocation, multiblock allocation, and journal checksumming. Extents map contiguous blocks efficiently — a 1GB file might need just 1 extent instead of 262,144 indirect block pointers. This dramatically improves sequential I/O on NVMe.",
+    trimSupport: "Full (discard + fstrim)",
+    bestFor: "General-purpose, databases",
+    desc: "The default Linux filesystem. Added extents — instead of tracking each block individually, it says \"blocks 1000-5000 belong to this file.\" One extent replaces thousands of block pointers, dramatically improving performance on large files and sequential reads on NVMe. Also adds delayed allocation (batches writes for efficiency) and journal checksumming.",
   },
   {
     name: "XFS",
@@ -78,24 +78,24 @@ const FILESYSTEMS: Filesystem[] = [
     checksums: true,
     snapshots: false,
     compression: false,
-    trimSupport: "Full (discard, fstrim)",
-    bestFor: "Large files, media, NAS, enterprise storage, RHEL default",
-    desc: "Designed by SGI for IRIX, now the RHEL/CentOS default. Excels at large files and parallel I/O thanks to allocation groups (AGs) — independent regions of the filesystem that allow concurrent metadata operations. Supports online grow (but not shrink). Delayed allocation and extent-based allocation make it very efficient on NVMe SSDs.",
+    trimSupport: "Full (discard + fstrim)",
+    bestFor: "Large files, enterprise, RHEL default",
+    desc: "Designed by SGI for handling massive files on supercomputers. Its key innovation is allocation groups (AGs) — independent regions of the filesystem that allow multiple threads to allocate space simultaneously without contention. This makes XFS excellent for parallel I/O workloads on NVMe SSDs. The RHEL/CentOS default.",
   },
   {
     name: "Btrfs",
     color: "#7c5cfc",
     year: "2009 (stable 2013+)",
-    journaling: "Copy-on-Write (no journal needed)",
+    journaling: "Copy-on-Write (no journal)",
     maxFileSize: "16 EB",
     maxVolSize: "16 EB",
     cow: true,
     checksums: true,
     snapshots: true,
     compression: true,
-    trimSupport: "Full (discard, fstrim, async discard)",
-    bestFor: "Snapshots, compression, RAID, data integrity, Fedora/openSUSE default",
-    desc: "A modern copy-on-write (CoW) filesystem. Instead of overwriting data in place, Btrfs writes modified data to a new location and updates the pointer — this makes snapshots nearly free (just preserve old pointers). Built-in checksumming detects silent data corruption (bit rot). Supports transparent compression (zstd, lzo, zlib), built-in RAID, subvolumes, and send/receive for incremental backups.",
+    trimSupport: "Full (discard + fstrim + async)",
+    bestFor: "Snapshots, compression, data integrity",
+    desc: "A modern copy-on-write (CoW) filesystem. Instead of overwriting data in place, Btrfs writes to a new location and updates the pointer — exactly like the SSD's FTL! This makes snapshots nearly free (just preserve old pointers). Also detects silent data corruption (bit rot) via checksums on every block, and supports transparent compression.",
   },
 ];
 
@@ -113,26 +113,38 @@ const FEATURE_ROWS: { label: string; key: keyof Filesystem }[] = [
 ];
 
 export default function Filesystems() {
-  const [activeFs, setActiveFs] = useState(2); // ext4 default
+  const [activeFs, setActiveFs] = useState(2);
 
   return (
     <SectionWrapper className="py-24 px-4 bg-story-surface">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
-          Linux Filesystems &mdash; ext2, ext3, ext4, XFS, Btrfs
+          Filesystems &mdash; How Files Become LBAs
         </h3>
+
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
-          An NVMe SSD is a raw block device. To store files, you need a{" "}
-          <strong className="text-text-primary">filesystem</strong> — a layer that
-          translates file operations (open, read, write) into block I/O commands.
-          The filesystem determines how data is organized, how metadata is tracked,
-          and how the drive&apos;s TRIM/discard capabilities are utilized.
+          So far, we&apos;ve been talking about LBAs — numbered blocks on the SSD.
+          But when you save a document, you don&apos;t think in LBAs. You think in
+          files and folders. <em className="text-text-primary">Who translates between
+          the two?</em>
         </p>
-        <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
-          Understanding filesystems matters for NVMe because different filesystems
-          interact differently with the drive&apos;s FTL, alignment, and TRIM support.
-          The wrong choice can halve your IOPS or cause premature write amplification.
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          The <strong className="text-text-primary">filesystem</strong>. It&apos;s a
+          layer of software that turns file operations (open, read, write, delete)
+          into block I/O commands (NVMe Read, Write, TRIM). It tracks which LBAs
+          belong to which file, manages free space, and handles crash recovery.
         </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          <em className="text-text-primary">Why does the filesystem choice matter
+          for NVMe?</em> Because different filesystems interact differently with the
+          SSD&apos;s internals:
+        </p>
+        <ul className="text-text-secondary mb-8 leading-relaxed max-w-3xl list-disc ml-5 space-y-1">
+          <li><strong className="text-text-primary">TRIM support</strong> — does the filesystem tell the SSD when files are deleted?</li>
+          <li><strong className="text-text-primary">Alignment</strong> — does it write in 4KB-aligned blocks matching the SSD&apos;s internal page size?</li>
+          <li><strong className="text-text-primary">Write pattern</strong> — does it use copy-on-write (spreading writes) or in-place updates?</li>
+          <li><strong className="text-text-primary">Journaling overhead</strong> — how much extra writing does it do for crash safety?</li>
+        </ul>
 
         {/* Filesystem selector */}
         <div className="flex flex-wrap gap-2 mb-6">
@@ -152,7 +164,6 @@ export default function Filesystems() {
           ))}
         </div>
 
-        {/* Active filesystem detail */}
         <div className="bg-story-card rounded-2xl p-6 card-shadow mb-8">
           <div className="flex items-center gap-3 mb-3">
             <div
@@ -170,7 +181,6 @@ export default function Filesystems() {
             {FILESYSTEMS[activeFs].desc}
           </p>
 
-          {/* Feature badges */}
           <div className="flex flex-wrap gap-2">
             {FILESYSTEMS[activeFs].cow && (
               <span className="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-nvme-violet/10 text-nvme-violet">
@@ -205,15 +215,9 @@ export default function Filesystems() {
               <table className="w-full text-xs">
                 <thead>
                   <tr className="border-b border-story-border">
-                    <th className="text-left py-3 px-4 text-text-muted font-mono whitespace-nowrap">
-                      Feature
-                    </th>
+                    <th className="text-left py-3 px-4 text-text-muted font-mono whitespace-nowrap">Feature</th>
                     {FILESYSTEMS.map((fs) => (
-                      <th
-                        key={fs.name}
-                        className="text-center py-3 px-3 font-mono font-bold whitespace-nowrap"
-                        style={{ color: fs.color }}
-                      >
+                      <th key={fs.name} className="text-center py-3 px-3 font-mono font-bold whitespace-nowrap" style={{ color: fs.color }}>
                         {fs.name}
                       </th>
                     ))}
@@ -222,24 +226,13 @@ export default function Filesystems() {
                 <tbody>
                   {FEATURE_ROWS.map((row) => (
                     <tr key={row.label} className="border-b border-story-border/50">
-                      <td className="py-2.5 px-4 text-text-muted font-mono whitespace-nowrap">
-                        {row.label}
-                      </td>
+                      <td className="py-2.5 px-4 text-text-muted font-mono whitespace-nowrap">{row.label}</td>
                       {FILESYSTEMS.map((fs) => {
                         const val = fs[row.key];
                         return (
-                          <td
-                            key={fs.name}
-                            className="py-2.5 px-3 text-center text-text-secondary"
-                          >
+                          <td key={fs.name} className="py-2.5 px-3 text-center text-text-secondary">
                             {typeof val === "boolean" ? (
-                              <span
-                                className={
-                                  val
-                                    ? "text-nvme-green font-bold"
-                                    : "text-text-muted"
-                                }
-                              >
+                              <span className={val ? "text-nvme-green font-bold" : "text-text-muted"}>
                                 {val ? "Yes" : "No"}
                               </span>
                             ) : (
@@ -256,130 +249,49 @@ export default function Filesystems() {
           </div>
         </div>
 
-        {/* Partition, format, mount workflow */}
+        {/* Workflow */}
         <div className="mb-8">
           <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
-            Partition → Format → Mount Workflow
+            Setting Up a Filesystem on NVMe
           </div>
-          <p className="text-text-secondary text-sm mb-4 leading-relaxed">
-            Here&apos;s the typical workflow for setting up an NVMe drive. We&apos;ll
-            create a partition, format it, and mount it with proper TRIM support.
-          </p>
-
           <div className="space-y-3">
             <div className="bg-story-card rounded-xl p-4 card-shadow">
-              <div className="text-text-primary text-sm font-semibold mb-2">
-                1. Check the NVMe device
-              </div>
-              <NvmeCliBlock command="nvme list" note="Lists all NVMe devices with model, serial, firmware, and capacity" />
+              <div className="text-text-primary text-sm font-semibold mb-2">1. Find your NVMe device</div>
+              <NvmeCliBlock command="nvme list" note="Shows all NVMe devices with model, serial, and capacity" />
             </div>
-
             <div className="bg-story-card rounded-xl p-4 card-shadow">
-              <div className="text-text-primary text-sm font-semibold mb-2">
-                2. Create a GPT partition table and partition
-              </div>
-              <NvmeCliBlock
-                command="sudo parted /dev/nvme0n1 mklabel gpt && sudo parted /dev/nvme0n1 mkpart primary 0% 100%"
-                note="Creates a single partition spanning the entire drive"
-              />
+              <div className="text-text-primary text-sm font-semibold mb-2">2. Create a partition</div>
+              <NvmeCliBlock command="sudo parted /dev/nvme0n1 mklabel gpt && sudo parted /dev/nvme0n1 mkpart primary 0% 100%" note="Creates a GPT partition table with one partition spanning the entire drive" />
             </div>
-
             <div className="bg-story-card rounded-xl p-4 card-shadow">
-              <div className="text-text-primary text-sm font-semibold mb-2">
-                3. Format with your chosen filesystem
-              </div>
+              <div className="text-text-primary text-sm font-semibold mb-2">3. Format with your chosen filesystem</div>
               <div className="space-y-2">
-                <NvmeCliBlock command="sudo mkfs.ext4 -L nvme-test /dev/nvme0n1p1" note="ext4 — general purpose, safe default" />
+                <NvmeCliBlock command="sudo mkfs.ext4 -L nvme-test /dev/nvme0n1p1" note="ext4 — safe default for most workloads" />
                 <NvmeCliBlock command="sudo mkfs.xfs -L nvme-test /dev/nvme0n1p1" note="XFS — best for large files and parallel I/O" />
                 <NvmeCliBlock command="sudo mkfs.btrfs -L nvme-test /dev/nvme0n1p1" note="Btrfs — snapshots, compression, checksums" />
               </div>
             </div>
-
             <div className="bg-story-card rounded-xl p-4 card-shadow">
-              <div className="text-text-primary text-sm font-semibold mb-2">
-                4. Mount with TRIM support
-              </div>
-              <NvmeCliBlock command="sudo mount -o discard,noatime /dev/nvme0n1p1 /mnt/nvme" note="discard = online TRIM, noatime = skip access time updates (reduces writes)" />
+              <div className="text-text-primary text-sm font-semibold mb-2">4. Mount with TRIM support</div>
+              <NvmeCliBlock command="sudo mount -o discard,noatime /dev/nvme0n1p1 /mnt/nvme" note="discard = TRIM on delete, noatime = skip access time updates (reduces writes to SSD)" />
             </div>
-
             <div className="bg-story-card rounded-xl p-4 card-shadow">
-              <div className="text-text-primary text-sm font-semibold mb-2">
-                5. Verify alignment and TRIM
-              </div>
-              <div className="space-y-2">
-                <NvmeCliBlock command="sudo fstrim -v /mnt/nvme" note="Manual TRIM — reports bytes trimmed" />
-                <NvmeCliBlock command="cat /sys/block/nvme0n1/queue/discard_granularity" note="Should show 4096 or 512 — the TRIM granularity" />
-              </div>
-            </div>
-
-            <div className="bg-story-card rounded-xl p-4 card-shadow">
-              <div className="text-text-primary text-sm font-semibold mb-2">
-                6. Ready for benchmarking
-              </div>
+              <div className="text-text-primary text-sm font-semibold mb-2">5. Ready for benchmarking</div>
               <p className="text-text-muted text-xs">
-                Your filesystem is mounted and ready. In the next section, we&apos;ll
-                cover <strong className="text-text-primary">fio</strong> — the tool
-                used to benchmark both raw devices and filesystem-mounted drives.
+                Your filesystem is mounted. In the next section, we&apos;ll use{" "}
+                <strong className="text-text-primary">fio</strong> to benchmark
+                performance — both on the raw device and through the filesystem.
               </p>
             </div>
           </div>
         </div>
 
-        {/* NVMe-specific filesystem considerations */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-          <div className="bg-story-card rounded-xl p-5 card-shadow">
-            <div className="font-mono font-bold text-nvme-blue text-sm mb-2">
-              Alignment Matters
-            </div>
-            <p className="text-text-muted text-xs leading-relaxed">
-              NVMe SSDs have an internal page size (typically 4KB or 16KB). If your
-              filesystem block size doesn&apos;t align, every I/O crosses a page boundary,
-              causing read-modify-write amplification. Always use 4K sectors:{" "}
-              <code className="text-text-code">mkfs.ext4 -b 4096</code>.
-            </p>
-          </div>
-          <div className="bg-story-card rounded-xl p-5 card-shadow">
-            <div className="font-mono font-bold text-nvme-green text-sm mb-2">
-              TRIM / Discard
-            </div>
-            <p className="text-text-muted text-xs leading-relaxed">
-              When you delete a file, the filesystem marks blocks as free but the SSD
-              doesn&apos;t know. TRIM tells the FTL which blocks are unused so it can
-              reclaim them during garbage collection. Use{" "}
-              <code className="text-text-code">fstrim</code> (periodic) or{" "}
-              <code className="text-text-code">mount -o discard</code> (continuous).
-            </p>
-          </div>
-          <div className="bg-story-card rounded-xl p-5 card-shadow">
-            <div className="font-mono font-bold text-nvme-violet text-sm mb-2">
-              CoW vs In-Place
-            </div>
-            <p className="text-text-muted text-xs leading-relaxed">
-              ext4/XFS overwrite data in-place. Btrfs uses copy-on-write — writes go
-              to new locations, old data stays until the pointer updates. CoW naturally
-              spreads writes across the drive (implicit wear leveling) but can fragment
-              random write workloads.
-            </p>
-          </div>
-          <div className="bg-story-card rounded-xl p-5 card-shadow">
-            <div className="font-mono font-bold text-nvme-amber text-sm mb-2">
-              Raw Device vs Filesystem
-            </div>
-            <p className="text-text-muted text-xs leading-relaxed">
-              Benchmarking on a raw device (<code className="text-text-code">/dev/nvme0n1</code>)
-              measures pure SSD performance. Through a filesystem, you add filesystem
-              overhead (journaling, metadata, CoW) — typically 5-15% lower IOPS.
-              Test both to understand the filesystem&apos;s cost.
-            </p>
-          </div>
-        </div>
-
-        <InfoCard variant="warning" title="Online TRIM vs Periodic TRIM">
-          <code className="text-text-code">mount -o discard</code> sends TRIM commands
-          on every delete, which can cause latency spikes on busy systems. For
-          production, prefer periodic TRIM via{" "}
-          <code className="text-text-code">fstrim.timer</code> (systemd) which runs
-          weekly. For benchmarking, either approach works fine.
+        <InfoCard variant="tip" title="Btrfs CoW and the SSD's FTL — double indirection">
+          Here&apos;s an interesting parallel: Btrfs uses copy-on-write to avoid
+          overwriting data in place. The SSD&apos;s FTL does the same thing at the
+          hardware level. So with Btrfs on an NVMe SSD, writes are redirected
+          twice — once by Btrfs and once by the FTL. This can increase write
+          amplification but also improves crash consistency.
         </InfoCard>
       </div>
     </SectionWrapper>

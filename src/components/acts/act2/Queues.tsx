@@ -55,7 +55,6 @@ function CircularQueue({
 
           return (
             <g key={i}>
-              {/* Slot circle */}
               <circle
                 cx={x}
                 cy={y}
@@ -64,7 +63,6 @@ function CircularQueue({
                 stroke={entry ? color : "#ddd6ca"}
                 strokeWidth={entry ? 2 : 1}
               />
-              {/* Entry label */}
               {entry ? (
                 <text
                   x={x}
@@ -89,7 +87,6 @@ function CircularQueue({
                 </text>
               )}
 
-              {/* Head pointer */}
               {isHead && (
                 <g>
                   <circle cx={x} cy={y} r={slotRadius + 5} fill="none" stroke={color} strokeWidth="1.5" strokeDasharray="3,3" />
@@ -106,7 +103,6 @@ function CircularQueue({
                 </g>
               )}
 
-              {/* Tail pointer */}
               {isTail && !isHead && (
                 <g>
                   <circle cx={x} cy={y} r={slotRadius + 5} fill="none" stroke="#e8a317" strokeWidth="1.5" strokeDasharray="3,3" />
@@ -190,7 +186,7 @@ export default function Queues() {
       newCq[cqTail] = cmd;
       setCqSlots(newCq);
       setCqTail((cqTail + 1) % QUEUE_SIZE);
-      setStatus(`Controller fetched ${cmd.label} from SQ[${oldSqHead}], posted CQE at CQ[${cqTail}]. Interrupt raised.`);
+      setStatus(`Controller fetched ${cmd.label} from SQ[${oldSqHead}], posted result at CQ[${cqTail}]. Interrupt sent.`);
     } else {
       setStatus(`Controller fetched ${cmd.label} but CQ is full!`);
     }
@@ -198,12 +194,12 @@ export default function Queues() {
 
   const consumeCompletion = () => {
     if (cqCount === 0) {
-      setStatus("CQ empty — no completions to consume.");
+      setStatus("CQ empty — no results to consume.");
       return;
     }
     const cqe = cqSlots[cqHead];
     if (!cqe) {
-      setStatus("No completion at CQ head.");
+      setStatus("No result at CQ head.");
       return;
     }
     const newCq = [...cqSlots];
@@ -211,7 +207,7 @@ export default function Queues() {
     setCqSlots(newCq);
     const oldCqHead = cqHead;
     setCqHead((cqHead + 1) % QUEUE_SIZE);
-    setStatus(`Host consumed ${cqe.label} from CQ[${oldCqHead}], head → ${(oldCqHead + 1) % QUEUE_SIZE}. CQ doorbell updated.`);
+    setStatus(`Host consumed ${cqe.label} result from CQ[${oldCqHead}], head → ${(oldCqHead + 1) % QUEUE_SIZE}. CQ doorbell updated.`);
   };
 
   const reset = () => {
@@ -229,15 +225,53 @@ export default function Queues() {
     <SectionWrapper className="py-24 px-4 bg-story-surface">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
-          Submission &amp; Completion Queues
+          How Commands Are Sent &mdash; Submission &amp; Completion Queues
         </h3>
+
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
-          NVMe uses paired <strong className="text-text-primary">circular buffers</strong> in host memory: a{" "}
-          <strong className="text-text-primary">Submission Queue</strong> (SQ) where the host places
-          64-byte commands, and a{" "}
-          <strong className="text-text-primary">Completion Queue</strong> (CQ) where the
-          controller posts 16-byte results. Head and tail pointers chase each other
-          around the ring. When tail catches head, the queue is full.
+          We know the SSD has a control panel (BAR0 registers) and a high-speed
+          connection (PCIe). But here&apos;s the critical question:{" "}
+          <em className="text-text-primary">how does the host actually send
+          commands to the drive?</em>
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          Imagine a busy restaurant. Customers don&apos;t walk into the kitchen to
+          place orders — there&apos;s a system. Customers write their orders on
+          slips and put them in an <strong className="text-text-primary">order
+          rack</strong>. The kitchen takes orders from the rack, cooks the food,
+          then puts a <strong className="text-text-primary">ready ticket</strong> in
+          a pickup tray. The waiter checks the pickup tray and delivers the food.
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          NVMe works the same way. The computer (host) places commands into a{" "}
+          <strong className="text-text-primary">Submission Queue (SQ)</strong> in
+          RAM — that&apos;s the order rack. The SSD picks up commands, processes
+          them, and puts results into a{" "}
+          <strong className="text-text-primary">Completion Queue (CQ)</strong> in
+          RAM — that&apos;s the pickup tray.
+        </p>
+
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          <em className="text-text-primary">But why use queues at all?</em> Why not
+          just send one command at a time? Because SSDs are massively parallel —
+          they have multiple NAND chips working simultaneously. If you sent one
+          command and waited for it to finish before sending the next, most of the
+          SSD would sit idle. Queues let you stack up many commands so the SSD can
+          work on them in parallel, keeping all its NAND chips busy.
+        </p>
+
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          <em className="text-text-primary">And why circular?</em> Both queues are
+          shaped like rings (circular buffers). Two pointers chase each other
+          around: the <strong className="text-nvme-blue">HEAD</strong> (where the
+          consumer reads from) and the <strong className="text-nvme-amber">TAIL</strong>{" "}
+          (where the producer writes to). When the tail catches the head, the queue
+          is full — you must wait. When head catches tail, the queue is empty.
+        </p>
+
+        <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
+          Try the simulator below to see this in action. Each button corresponds
+          to a real step in the NVMe command flow:
         </p>
 
         <div className="bg-story-card rounded-2xl p-8 card-shadow mb-6">
@@ -271,12 +305,19 @@ export default function Queues() {
           <div className="flex items-center gap-6 justify-center mb-6 text-xs">
             <div className="flex items-center gap-1.5">
               <div className="w-3 h-3 rounded-full border-2 border-dashed border-nvme-blue" />
-              <span className="text-text-muted font-mono">HEAD (controller reads)</span>
+              <span className="text-text-muted font-mono">HEAD (consumer reads here)</span>
             </div>
             <div className="flex items-center gap-1.5">
               <div className="w-3 h-3 rounded-full border-2 border-dashed border-nvme-amber" />
-              <span className="text-text-muted font-mono">TAIL (host writes)</span>
+              <span className="text-text-muted font-mono">TAIL (producer writes here)</span>
             </div>
+          </div>
+
+          {/* Step-by-step guide */}
+          <div className="bg-story-surface rounded-xl p-4 mb-4 text-xs text-text-secondary space-y-1">
+            <div><strong className="text-nvme-blue">Step 1:</strong> Click &ldquo;Submit Command&rdquo; — host writes a command to SQ at the tail pointer, then rings the doorbell</div>
+            <div><strong className="text-nvme-green">Step 2:</strong> Click &ldquo;Process&rdquo; — SSD reads command from SQ at head, executes it, writes result to CQ</div>
+            <div><strong className="text-nvme-violet">Step 3:</strong> Click &ldquo;Consume&rdquo; — host reads the result from CQ at head, updates CQ doorbell</div>
           </div>
 
           {/* Control buttons */}
@@ -285,19 +326,19 @@ export default function Queues() {
               onClick={submitCommand}
               className="px-5 py-2.5 bg-nvme-blue text-white rounded-full text-xs font-semibold hover:shadow-lg hover:shadow-nvme-blue/20 transition-all active:scale-95"
             >
-              Submit Command
+              1. Submit Command
             </button>
             <button
               onClick={processCommand}
               className="px-5 py-2.5 bg-nvme-green text-white rounded-full text-xs font-semibold hover:shadow-lg hover:shadow-nvme-green/20 transition-all active:scale-95"
             >
-              Process (Controller)
+              2. Process (SSD)
             </button>
             <button
               onClick={consumeCompletion}
               className="px-5 py-2.5 bg-nvme-violet text-white rounded-full text-xs font-semibold hover:shadow-lg hover:shadow-nvme-violet/20 transition-all active:scale-95"
             >
-              Consume Completion
+              3. Consume Result
             </button>
             <button
               onClick={reset}
@@ -321,11 +362,41 @@ export default function Queues() {
           </AnimatePresence>
         </div>
 
-        <InfoCard variant="info" title="Phase bit trick">
-          Instead of comparing head/tail pointers, NVMe uses a phase bit (P) in
-          each CQ entry. When the controller wraps around the CQ, it flips the
-          phase. The host knows a CQ entry is new when its P bit matches the
-          expected phase.
+        {/* Why this design works */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+          <div className="text-text-primary font-semibold text-sm mb-3">
+            Why is this design so fast?
+          </div>
+          <div className="space-y-3 text-text-secondary text-sm leading-relaxed">
+            <p>
+              <strong className="text-text-primary">No locking needed.</strong> The
+              host only writes the tail; the SSD only writes the head. They never
+              touch each other&apos;s pointer, so there&apos;s no contention and no
+              need for locks.
+            </p>
+            <p>
+              <strong className="text-text-primary">Batching.</strong> The host can
+              write 10 commands to the SQ and then ring the doorbell once. The SSD
+              sees the new tail and processes all 10 commands in one batch. This is
+              much faster than signaling for each command individually.
+            </p>
+            <p>
+              <strong className="text-text-primary">Multiple queues.</strong> NVMe
+              supports up to 65,535 I/O queue pairs. In practice, the OS creates one
+              queue pair per CPU core. Each core submits commands to its own queue
+              without coordinating with other cores — maximum parallelism with zero
+              cross-core overhead.
+            </p>
+          </div>
+        </div>
+
+        <InfoCard variant="info" title="The phase bit trick — how the host detects new completions">
+          <em>But wait — if the SSD writes results to the CQ, how does the host
+          know which entries are new?</em> NVMe uses a clever trick: each CQ entry
+          has a &ldquo;phase bit&rdquo; (P). When the SSD wraps around the ring, it
+          flips the phase. The host knows a CQ entry is new when its P bit matches
+          the expected phase. This avoids the overhead of comparing head/tail
+          pointers for every completion check.
         </InfoCard>
       </div>
     </SectionWrapper>

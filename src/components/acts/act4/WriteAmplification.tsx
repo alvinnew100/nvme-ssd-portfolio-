@@ -9,7 +9,6 @@ export default function WriteAmplification() {
   const [trimEnabled, setTrimEnabled] = useState(true);
   const [driveFullness, setDriveFullness] = useState(50);
 
-  // WAF model: trimmed and low fullness → ~1.1, no trim + 90% full → ~4.0
   const baseWaf = trimEnabled ? 1.05 : 1.5;
   const fullnessFactor = 1 + (driveFullness / 100) * (trimEnabled ? 0.3 : 2.5);
   const waf = Math.round(baseWaf * fullnessFactor * 100) / 100;
@@ -21,29 +20,48 @@ export default function WriteAmplification() {
     <SectionWrapper className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
-          Write Amplification Factor (WAF)
+          Write Amplification &mdash; The Hidden Cost of Writing
         </h3>
+
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
-          Write amplification is the ratio of data actually written to NAND versus
-          data the host sent. A WAF of 2.0 means the SSD writes 2x the host data
-          to NAND — halving the drive&apos;s effective endurance. WAF is caused by
-          garbage collection, which must copy valid pages when reclaiming blocks.
+          We just learned that garbage collection copies valid pages when reclaiming
+          blocks. <em className="text-text-primary">But that copying is itself a
+          write to NAND.</em> This means the SSD writes <em>more</em> data to NAND
+          than the host actually sent.
         </p>
-        <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
-          Two factors dominate WAF:{" "}
-          <strong className="text-text-primary">TRIM</strong> (tells the FTL which
-          pages are free) and <strong className="text-text-primary">drive fullness
-          </strong> (a nearly-full drive has fewer free blocks for GC to work with).
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          The ratio is called the <strong className="text-text-primary">Write
+          Amplification Factor (WAF)</strong>:
         </p>
+        <div className="bg-story-card rounded-xl p-4 card-shadow mb-4 text-center">
+          <span className="font-mono text-text-code text-lg">
+            WAF = Total NAND Writes &divide; Host Writes
+          </span>
+        </div>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          A WAF of 1.0 is perfect — the SSD writes only what you asked. A WAF of
+          3.0 means the SSD writes 3x the data to NAND — <em className="text-text-primary">
+          tripling the wear on the NAND cells</em>. This directly reduces the
+          drive&apos;s lifespan.
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          <em className="text-text-primary">Why does WAF matter?</em> Because NAND
+          cells have limited P/E (Program/Erase) cycles. If WAF is 3x, your 600 TBW
+          rated drive effectively only lasts 200 TBW of <em>your</em> data. Two
+          factors dominate WAF:
+        </p>
+        <ul className="text-text-secondary mb-8 leading-relaxed max-w-3xl list-disc ml-5 space-y-1">
+          <li><strong className="text-text-primary">TRIM</strong> — tells the FTL which pages are free, so GC doesn&apos;t copy dead data</li>
+          <li><strong className="text-text-primary">Drive fullness</strong> — a nearly-full drive has fewer free blocks, forcing GC to work harder</li>
+        </ul>
 
         {/* Interactive WAF calculator */}
         <div className="bg-story-card rounded-2xl p-6 card-shadow mb-8">
           <div className="text-text-muted text-xs font-mono mb-6 uppercase tracking-wider">
-            Interactive WAF Calculator
+            Interactive WAF Calculator — try different scenarios
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-            {/* Controls */}
             <div className="space-y-5">
               <div>
                 <label className="text-text-secondary text-sm font-medium block mb-2">
@@ -100,7 +118,6 @@ export default function WriteAmplification() {
               </div>
             </div>
 
-            {/* Results */}
             <div className="flex flex-col items-center justify-center">
               <div className="text-center mb-4">
                 <div className="text-text-muted text-xs font-mono mb-1">
@@ -122,13 +139,13 @@ export default function WriteAmplification() {
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-text-muted text-xs">NAND writes</span>
+                  <span className="text-text-muted text-xs">Actual NAND writes</span>
                   <span className="font-mono text-sm font-bold" style={{ color: wafColor }}>
                     {nandWritesGB} GB
                   </span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-text-muted text-xs">Extra wear</span>
+                  <span className="text-text-muted text-xs">Wasted writes (GC overhead)</span>
                   <span className="text-nvme-red font-mono text-sm font-bold">
                     +{nandWritesGB - hostWritesGB} GB
                   </span>
@@ -140,7 +157,7 @@ export default function WriteAmplification() {
           {/* Visual bar comparison */}
           <div className="space-y-2">
             <div>
-              <div className="text-[10px] text-text-muted font-mono mb-1">Host writes</div>
+              <div className="text-[10px] text-text-muted font-mono mb-1">What you wrote</div>
               <div className="w-full bg-story-surface rounded-full h-4">
                 <div
                   className="h-4 rounded-full bg-nvme-green transition-all"
@@ -149,7 +166,7 @@ export default function WriteAmplification() {
               </div>
             </div>
             <div>
-              <div className="text-[10px] text-text-muted font-mono mb-1">NAND writes (host + GC overhead)</div>
+              <div className="text-[10px] text-text-muted font-mono mb-1">What the SSD actually wrote to NAND (your data + GC overhead)</div>
               <div className="w-full bg-story-surface rounded-full h-4">
                 <div
                   className="h-4 rounded-full transition-all"
@@ -160,39 +177,37 @@ export default function WriteAmplification() {
           </div>
         </div>
 
-        {/* What affects WAF */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
           <div className="bg-story-card rounded-xl p-4 card-shadow">
             <div className="font-mono font-bold text-nvme-green text-sm mb-1">
-              Reduces WAF
+              How to reduce WAF
             </div>
             <ul className="text-text-muted text-xs space-y-1">
-              <li>• TRIM/discard enabled</li>
-              <li>• Over-provisioning (leaving 10-28% unpartitioned)</li>
-              <li>• Sequential write patterns</li>
-              <li>• Low drive fullness (&lt;70%)</li>
-              <li>• Larger block sizes</li>
+              <li>&#8226; Enable TRIM/discard</li>
+              <li>&#8226; Leave 10-28% unpartitioned (over-provisioning)</li>
+              <li>&#8226; Write sequentially when possible</li>
+              <li>&#8226; Keep drive below 70% full</li>
             </ul>
           </div>
           <div className="bg-story-card rounded-xl p-4 card-shadow">
             <div className="font-mono font-bold text-nvme-red text-sm mb-1">
-              Increases WAF
+              What increases WAF
             </div>
             <ul className="text-text-muted text-xs space-y-1">
-              <li>• No TRIM (OS doesn&apos;t inform FTL)</li>
-              <li>• High drive fullness (&gt;90%)</li>
-              <li>• Random small writes (4K)</li>
-              <li>• No over-provisioning</li>
-              <li>• Misaligned I/O</li>
+              <li>&#8226; No TRIM (OS doesn&apos;t inform FTL)</li>
+              <li>&#8226; Drive &gt;90% full</li>
+              <li>&#8226; Random small writes (4KB)</li>
+              <li>&#8226; Misaligned I/O</li>
             </ul>
           </div>
         </div>
 
         <InfoCard variant="tip" title="Measuring WAF in practice">
-          Use SMART log attributes: <code className="text-text-code">Data Units Written</code>{" "}
-          (host) and vendor-specific NAND writes counter. WAF = NAND writes / host writes.
-          Run <code className="text-text-code">nvme smart-log /dev/nvme0</code> before and
-          after a workload to calculate the delta.
+          Check SMART before and after a workload: <code className="text-text-code">
+          Data Units Written</code> shows host writes. For NAND writes, you need
+          the vendor-specific counter (varies by manufacturer). WAF = NAND writes /
+          host writes. Run <code className="text-text-code">nvme smart-log /dev/nvme0
+          </code> and note the values before and after.
         </InfoCard>
       </div>
     </SectionWrapper>

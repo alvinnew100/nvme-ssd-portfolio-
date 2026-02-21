@@ -8,26 +8,28 @@ interface TraceEvent {
   id: number;
   time: string;
   direction: "host-to-ctrl" | "ctrl-to-host";
-  type: "mmio-write" | "mmio-read" | "dma-read" | "dma-write" | "msi-x";
+  type: string;
   label: string;
   detail: string;
+  why: string;
   color: string;
 }
 
 const TRACE_SCENARIO: TraceEvent[] = [
-  { id: 1, time: "0.000", direction: "host-to-ctrl", type: "mmio-write", label: "SQ Doorbell Write", detail: "Host writes SQ tail=1 to doorbell register 0x1008", color: "#635bff" },
-  { id: 2, time: "0.001", direction: "ctrl-to-host", type: "dma-read", label: "DMA: Fetch SQE", detail: "Controller DMA reads 64-byte SQ entry from host memory", color: "#7c5cfc" },
-  { id: 3, time: "0.002", direction: "ctrl-to-host", type: "dma-read", label: "DMA: Fetch PRP List", detail: "Controller reads PRP list to locate data buffers", color: "#7c5cfc" },
-  { id: 4, time: "0.050", direction: "ctrl-to-host", type: "dma-write", label: "DMA: Write Data", detail: "Controller writes 4KB read data to host memory via DMA", color: "#00b894" },
-  { id: 5, time: "0.051", direction: "ctrl-to-host", type: "dma-write", label: "DMA: Post CQE", detail: "Controller writes 16-byte CQ entry to host memory", color: "#00b894" },
-  { id: 6, time: "0.052", direction: "ctrl-to-host", type: "msi-x", label: "MSI-X Interrupt", detail: "Controller sends MSI-X interrupt to notify host", color: "#e05d6f" },
-  { id: 7, time: "0.053", direction: "host-to-ctrl", type: "mmio-write", label: "CQ Doorbell Write", detail: "Host writes CQ head=1 to doorbell register 0x100C", color: "#635bff" },
+  { id: 1, time: "0.000", direction: "host-to-ctrl", type: "mmio-write", label: "SQ Doorbell Write", detail: "Host writes SQ tail=1 to doorbell register 0x1008", why: "This is the \"ding\" — the host tells the SSD \"I placed a command for you.\"", color: "#635bff" },
+  { id: 2, time: "0.001", direction: "ctrl-to-host", type: "dma-read", label: "DMA: Fetch Command", detail: "SSD reads the 64-byte command from the Submission Queue in host RAM", why: "The command lives in host memory. The SSD fetches it over PCIe using DMA (Direct Memory Access) — it reads RAM without bothering the CPU.", color: "#7c5cfc" },
+  { id: 3, time: "0.002", direction: "ctrl-to-host", type: "dma-read", label: "DMA: Fetch Buffer Addresses", detail: "SSD reads the PRP list to find where the host wants data delivered", why: "The command says \"read 4KB\" but the SSD needs to know WHERE in RAM to put the data. The PRP (Physical Region Page) list contains those addresses.", color: "#7c5cfc" },
+  { id: 4, time: "0.050", direction: "ctrl-to-host", type: "dma-write", label: "DMA: Write Data to Host", detail: "SSD writes 4KB of read data directly to host memory via DMA", why: "The SSD read the data from NAND (~50μs), and now delivers it to the host buffer. This happens without CPU involvement — DMA writes straight to RAM.", color: "#00b894" },
+  { id: 5, time: "0.051", direction: "ctrl-to-host", type: "dma-write", label: "DMA: Post Completion", detail: "SSD writes a 16-byte completion entry to the Completion Queue in host RAM", why: "The result goes into the CQ — \"I finished command C1 with status Success.\" This 16-byte entry includes the status code and command ID.", color: "#00b894" },
+  { id: 6, time: "0.052", direction: "ctrl-to-host", type: "msi-x", label: "MSI-X Interrupt", detail: "SSD sends an MSI-X interrupt to wake the host CPU", why: "The host CPU might be doing other work. The interrupt says \"check your Completion Queue — there's a new result.\" MSI-X is itself a memory write over PCIe.", color: "#e05d6f" },
+  { id: 7, time: "0.053", direction: "host-to-ctrl", type: "mmio-write", label: "CQ Doorbell Write", detail: "Host writes CQ head=1 to doorbell register 0x100C", why: "The host tells the SSD \"I've read your completion entry, you can reuse that CQ slot.\" This closes the loop.", color: "#635bff" },
 ];
 
 export default function BusTrace() {
   const [events, setEvents] = useState<TraceEvent[]>([]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentIdx, setCurrentIdx] = useState(0);
+  const [hoveredId, setHoveredId] = useState<number | null>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const play = () => {
@@ -41,6 +43,7 @@ export default function BusTrace() {
     if (intervalRef.current) clearInterval(intervalRef.current);
     setEvents([]);
     setCurrentIdx(0);
+    setHoveredId(null);
   };
 
   useEffect(() => {
@@ -48,7 +51,7 @@ export default function BusTrace() {
       intervalRef.current = setTimeout(() => {
         setEvents((prev) => [...prev, TRACE_SCENARIO[currentIdx]]);
         setCurrentIdx((i) => i + 1);
-      }, 600);
+      }, 700);
       return () => {
         if (intervalRef.current) clearTimeout(intervalRef.current);
       };
@@ -61,13 +64,25 @@ export default function BusTrace() {
     <SectionWrapper className="py-24 px-4 bg-story-surface">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
-          PCIe Bus Trace Simulation
+          Seeing It All in Action &mdash; A PCIe Bus Trace
         </h3>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          We&apos;ve learned all the concepts separately — PCIe, BAR0, queues, and
+          doorbells. Now let&apos;s see how they work <em>together</em> during a
+          single NVMe Read command. Every step below is a real PCIe packet (called
+          a <strong className="text-text-primary">Transaction Layer Packet</strong>,
+          or TLP) traveling between the host and SSD.
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          <em className="text-text-primary">Why does this matter?</em> When you
+          debug NVMe performance or trace issues, you&apos;ll see these exact
+          packet types. Understanding this flow helps you pinpoint where time
+          is being spent — is it the doorbell write? The DMA data transfer? The
+          NAND read time?
+        </p>
         <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
-          This simulates what happens on the PCIe bus during a single NVMe Read
-          command. Each row is a Transaction Layer Packet (TLP) on the bus.
-          Watch the sequence: doorbell write &rarr; DMA fetch &rarr; data transfer
-          &rarr; completion &rarr; interrupt &rarr; doorbell update.
+          Click &ldquo;Play&rdquo; and hover over each event to see <em>why</em> it
+          happens:
         </p>
 
         <div className="bg-story-card rounded-2xl p-8 card-shadow mb-6">
@@ -81,57 +96,51 @@ export default function BusTrace() {
               <div className="text-text-muted text-[10px] font-mono">PCIe x4 Bus</div>
             </div>
             <div className="text-center flex-1">
-              <div className="text-nvme-green font-mono font-bold text-sm">CONTROLLER</div>
-              <div className="text-text-muted text-[10px]">NVMe SSD</div>
+              <div className="text-nvme-green font-mono font-bold text-sm">SSD</div>
+              <div className="text-text-muted text-[10px]">NVMe Controller</div>
             </div>
           </div>
 
           {/* Bus trace area */}
           <div className="relative min-h-[320px] border-l-2 border-r-2 border-dashed border-story-border mx-[15%]">
-            {/* Center line */}
             <div className="absolute left-1/2 top-0 bottom-0 w-px bg-story-border" />
 
             <AnimatePresence>
-              {events.map((evt, i) => (
+              {events.map((evt) => (
                 <motion.div
                   key={evt.id}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   className="relative py-1.5"
+                  onMouseEnter={() => setHoveredId(evt.id)}
+                  onMouseLeave={() => setHoveredId(null)}
                 >
                   <div className="flex items-center gap-2 px-2">
-                    {/* Timestamp */}
                     <div className="text-[9px] font-mono text-text-muted w-12 text-right flex-shrink-0">
                       +{evt.time}ms
                     </div>
 
-                    {/* Arrow and label */}
                     <div className="flex-1 flex items-center gap-1">
                       {evt.direction === "host-to-ctrl" ? (
-                        <>
-                          <div className="flex-1 flex items-center">
-                            <div className="h-0.5 flex-1 rounded" style={{ backgroundColor: evt.color }} />
-                            <div
-                              className="w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-l-[6px]"
-                              style={{ borderLeftColor: evt.color }}
-                            />
-                          </div>
-                        </>
+                        <div className="flex-1 flex items-center">
+                          <div className="h-0.5 flex-1 rounded" style={{ backgroundColor: evt.color }} />
+                          <div
+                            className="w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-l-[6px]"
+                            style={{ borderLeftColor: evt.color }}
+                          />
+                        </div>
                       ) : (
-                        <>
-                          <div className="flex-1 flex items-center">
-                            <div
-                              className="w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-r-[6px]"
-                              style={{ borderRightColor: evt.color }}
-                            />
-                            <div className="h-0.5 flex-1 rounded" style={{ backgroundColor: evt.color }} />
-                          </div>
-                        </>
+                        <div className="flex-1 flex items-center">
+                          <div
+                            className="w-0 h-0 border-t-[4px] border-t-transparent border-b-[4px] border-b-transparent border-r-[6px]"
+                            style={{ borderRightColor: evt.color }}
+                          />
+                          <div className="h-0.5 flex-1 rounded" style={{ backgroundColor: evt.color }} />
+                        </div>
                       )}
                     </div>
                   </div>
 
-                  {/* Event label */}
                   <div className="flex items-center gap-2 px-2 mt-0.5">
                     <div className="w-12 flex-shrink-0" />
                     <div className="flex-1 text-center">
@@ -145,6 +154,16 @@ export default function BusTrace() {
                         {evt.label}
                       </span>
                       <div className="text-[9px] text-text-muted mt-0.5">{evt.detail}</div>
+                      {hoveredId === evt.id && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          className="text-[10px] text-text-secondary mt-1 leading-relaxed italic"
+                          style={{ color: evt.color }}
+                        >
+                          {evt.why}
+                        </motion.div>
+                      )}
                     </div>
                   </div>
                 </motion.div>
@@ -153,7 +172,7 @@ export default function BusTrace() {
 
             {events.length === 0 && (
               <div className="flex items-center justify-center h-[320px] text-text-muted text-xs italic">
-                Click &ldquo;Play Read Command&rdquo; to see the bus trace
+                Click &ldquo;Play Read Command&rdquo; to see the 7-step bus trace
               </div>
             )}
           </div>
@@ -176,18 +195,30 @@ export default function BusTrace() {
           </div>
         </div>
 
+        {/* Summary of packet types */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
           <div className="bg-story-card rounded-xl p-4 card-shadow">
             <div className="font-mono font-bold text-nvme-blue mb-1">MMIO Write</div>
-            <p className="text-text-muted">Host writes to controller&apos;s BAR0 registers (doorbells). Single PCIe write TLP.</p>
+            <p className="text-text-muted">
+              Host writes to a BAR0 register (doorbell). This is how the host
+              signals the SSD. Just a single PCIe write — very fast.
+            </p>
           </div>
           <div className="bg-story-card rounded-xl p-4 card-shadow">
             <div className="font-mono font-bold text-nvme-violet mb-1">DMA Read/Write</div>
-            <p className="text-text-muted">Controller accesses host memory directly. Fetches SQ entries, writes data and CQ entries.</p>
+            <p className="text-text-muted">
+              The SSD reads or writes host RAM directly, without CPU involvement.
+              This is how commands are fetched and data is delivered — the SSD
+              is the bus master.
+            </p>
           </div>
           <div className="bg-story-card rounded-xl p-4 card-shadow">
             <div className="font-mono font-bold text-nvme-red mb-1">MSI-X Interrupt</div>
-            <p className="text-text-muted">Controller sends a memory write to trigger the host&apos;s interrupt handler.</p>
+            <p className="text-text-muted">
+              The SSD notifies the CPU that work is done. It&apos;s actually a
+              memory write to a special address — the CPU&apos;s interrupt
+              controller picks it up and signals the right core.
+            </p>
           </div>
         </div>
       </div>

@@ -149,19 +149,29 @@ export default function FioGuide() {
     <SectionWrapper className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
-          Mastering fio &mdash; The Flexible I/O Tester
+          Benchmarking with fio &mdash; Measuring Your SSD
         </h3>
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
-          <strong className="text-text-primary">fio</strong> is the industry-standard
-          tool for benchmarking and stress-testing storage devices. Every SSD
-          engineer, performance analyst, and storage admin uses it. Understanding
-          fio is essential for characterizing NVMe performance.
+          We&apos;ve set up a filesystem and mounted our NVMe drive. Now the
+          question: <em className="text-text-primary">how fast is it actually?</em>{" "}
+          SSD manufacturers advertise speeds like &ldquo;7,000 MB/s read,&rdquo; but
+          those numbers only tell part of the story. Real-world performance depends
+          on the I/O pattern: random vs sequential, read vs write, block size,
+          and how many requests are in flight simultaneously.
         </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          <strong className="text-text-primary">fio</strong> (Flexible I/O Tester)
+          is the industry-standard tool for answering these questions. It lets you
+          simulate any workload pattern and measures three critical metrics:
+        </p>
+        <ul className="text-text-secondary mb-4 leading-relaxed max-w-3xl list-disc ml-5 space-y-1">
+          <li><strong className="text-text-primary">IOPS</strong> — I/O Operations Per Second. How many individual read/write operations per second. The key metric for small random I/O (like database workloads).</li>
+          <li><strong className="text-text-primary">Bandwidth (BW)</strong> — MB/s or GB/s. How fast data flows. The key metric for large sequential I/O (like video streaming or file copies).</li>
+          <li><strong className="text-text-primary">Latency</strong> — How long each operation takes. The p99 (99th percentile) matters more than the average because one slow request can stall your application.</li>
+        </ul>
         <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
-          fio works by running &ldquo;jobs&rdquo; that define an I/O pattern.
-          Each job specifies what to read/write, how big the blocks are, how many
-          requests to keep in flight, and how long to run. The results show
-          throughput (MB/s), IOPS, and latency percentiles (p50, p99, p99.9).
+          fio works by running &ldquo;jobs&rdquo; — you tell it what I/O pattern to
+          generate, and it hammers the drive while collecting detailed statistics.
         </p>
 
         {/* Preset commands */}

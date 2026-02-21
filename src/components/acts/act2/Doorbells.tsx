@@ -1,46 +1,102 @@
 "use client";
 
+import { useState } from "react";
+import { motion } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 
+const DOORBELLS = [
+  { offset: "0x1000", label: "Admin SQ Tail Doorbell", type: "sq" as const, qid: 0 },
+  { offset: "0x1004", label: "Admin CQ Head Doorbell", type: "cq" as const, qid: 0 },
+  { offset: "0x1008", label: "I/O SQ 1 Tail Doorbell", type: "sq" as const, qid: 1 },
+  { offset: "0x100C", label: "I/O CQ 1 Head Doorbell", type: "cq" as const, qid: 1 },
+];
+
 export default function Doorbells() {
+  const [ringing, setRinging] = useState<string | null>(null);
+
+  const ringDoorbell = (offset: string) => {
+    setRinging(offset);
+    setTimeout(() => setRinging(null), 600);
+  };
+
   return (
     <SectionWrapper className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
-          Doorbell Registers
+          Ringing the Doorbell &mdash; How the SSD Knows There&apos;s Work
         </h3>
-        <p className="text-text-secondary mb-6 leading-relaxed max-w-3xl">
-          After the host writes a command to the SQ, how does the controller
-          know? The host writes the new SQ tail pointer to a{" "}
-          <strong className="text-text-primary">doorbell register</strong>{" "}
-          at offset <code>0x1000</code> + (2 &times; QID + 0) &times; stride.
-          Similarly, after consuming a CQ entry, the host writes the new CQ
-          head to the CQ doorbell at offset <code>0x1000</code> + (2 &times; QID + 1) &times; stride.
+
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          We&apos;ve seen that the host places commands in the Submission Queue (SQ)
+          in RAM. But the SSD doesn&apos;t constantly watch RAM looking for new
+          commands — <em className="text-text-primary">that would waste power and
+          bandwidth</em>. So how does the SSD know when there&apos;s a new command
+          waiting?
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          Think about a hotel front desk. You don&apos;t stand at the desk shouting
+          for service — you ring the bell. One quick &ldquo;ding&rdquo; tells the
+          staff &ldquo;someone needs attention.&rdquo; NVMe works the same way.
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          After writing one or more commands to the SQ, the host writes the new
+          tail position to a special register called a{" "}
+          <strong className="text-text-primary">doorbell register</strong>. This
+          is a single write to a BAR0 address — remember, BAR0 writes travel over
+          PCIe to the SSD hardware. The SSD sees this write, reads the new tail
+          value, and knows exactly how many new commands are waiting.
+        </p>
+
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          <em className="text-text-primary">Why is this efficient?</em> Because the
+          host can queue up many commands and ring the doorbell just once. The SSD
+          then processes the entire batch. One PCIe write triggers the processing of
+          dozens of commands — this batching is a key reason NVMe can achieve
+          millions of operations per second.
+        </p>
+
+        <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
+          Each queue pair has <strong className="text-text-primary">two doorbells</strong>:
+          one for the SQ tail (host tells SSD &ldquo;I added commands&rdquo;) and one
+          for the CQ head (host tells SSD &ldquo;I read your results, you can reuse
+          those slots&rdquo;). Click each doorbell below to see it ring:
         </p>
 
         <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+          <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
+            Doorbell Registers — starting at BAR0 + 0x1000
+          </div>
           <div className="space-y-2 font-mono text-xs">
-            {[
-              { offset: "0x1000", label: "Admin SQ Tail Doorbell", type: "sq" as const, qid: 0 },
-              { offset: "0x1004", label: "Admin CQ Head Doorbell", type: "cq" as const, qid: 0 },
-              { offset: "0x1008", label: "I/O SQ 1 Tail Doorbell", type: "sq" as const, qid: 1 },
-              { offset: "0x100C", label: "I/O CQ 1 Head Doorbell", type: "cq" as const, qid: 1 },
-            ].map((db) => (
-              <div key={db.offset} className="flex items-center gap-4">
+            {DOORBELLS.map((db) => (
+              <motion.button
+                key={db.offset}
+                onClick={() => ringDoorbell(db.offset)}
+                animate={ringing === db.offset ? { scale: [1, 1.02, 1] } : {}}
+                transition={{ duration: 0.3 }}
+                className="w-full flex items-center gap-4 cursor-pointer"
+              >
                 <span className="text-nvme-blue w-16 text-right font-bold">{db.offset}</span>
                 <div
-                  className={`flex-1 h-10 rounded-lg flex items-center px-4 ${
+                  className={`flex-1 h-10 rounded-lg flex items-center justify-between px-4 transition-all ${
                     db.type === "sq"
                       ? "bg-nvme-blue/5 border border-nvme-blue/20"
                       : "bg-nvme-green/5 border border-nvme-green/20"
                   }`}
+                  style={ringing === db.offset ? {
+                    boxShadow: `0 0 12px ${db.type === "sq" ? "#635bff40" : "#00b89440"}`,
+                  } : undefined}
                 >
                   <span className={db.type === "sq" ? "text-nvme-blue" : "text-nvme-green"}>
                     {db.label}
                   </span>
+                  {ringing === db.offset && (
+                    <span className="text-nvme-amber text-[10px] animate-pulse">
+                      DING!
+                    </span>
+                  )}
                 </div>
-              </div>
+              </motion.button>
             ))}
             <div className="text-text-muted text-center py-1">
               ... one SQ + CQ doorbell pair per queue ...
@@ -48,19 +104,32 @@ export default function Doorbells() {
           </div>
         </div>
 
-        <p className="text-text-secondary mb-6 leading-relaxed max-w-3xl">
-          Each doorbell write is a single PCIe memory write TLP &mdash; very fast.
-          Some controllers support <strong className="text-text-primary">Shadow Doorbells</strong>,
-          where the host writes doorbells to regular memory instead of MMIO,
-          and the controller polls them. This reduces latency in
-          virtualized environments by avoiding costly MMIO traps.
-        </p>
+        {/* Address formula */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+          <div className="text-text-primary font-semibold text-sm mb-2">
+            How the address is calculated
+          </div>
+          <p className="text-text-secondary text-sm leading-relaxed mb-3">
+            The doorbell for queue <em>Q</em> lives at:
+          </p>
+          <div className="bg-story-surface rounded-xl p-4 font-mono text-sm text-text-code text-center mb-3">
+            BAR0 + 0x1000 + (2 &times; Q + type) &times; stride
+          </div>
+          <p className="text-text-muted text-xs leading-relaxed">
+            Where <em>type</em> is 0 for SQ (submission) or 1 for CQ (completion),
+            and <em>stride</em> is read from the CAP register (usually 4 bytes).
+            So the Admin SQ doorbell is at 0x1000, Admin CQ at 0x1004, I/O queue
+            1 SQ at 0x1008, I/O queue 1 CQ at 0x100C, and so on.
+          </p>
+        </div>
 
-        <InfoCard variant="tip" title="One write to start many commands">
-          The host can queue multiple commands into the SQ and then ring the
-          doorbell once. The controller reads the new tail pointer and processes
-          all pending entries. This batching is one reason NVMe achieves
-          millions of IOPS.
+        <InfoCard variant="tip" title="Shadow Doorbells — even faster in virtual machines">
+          Writing to a BAR0 register is a PCIe MMIO write. In a virtual machine,
+          each MMIO write traps to the hypervisor — an expensive operation. To avoid
+          this, some controllers support <strong>Shadow Doorbells</strong>: the host
+          writes the new pointer to regular RAM instead, and the controller
+          periodically polls the RAM location. This eliminates the costly MMIO trap
+          and improves VM performance significantly.
         </InfoCard>
       </div>
     </SectionWrapper>

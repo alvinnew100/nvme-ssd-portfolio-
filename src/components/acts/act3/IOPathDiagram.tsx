@@ -7,73 +7,93 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 const IO_LAYERS = [
   {
     id: 0,
-    name: "Application",
-    detail: "App calls read(fd, buf, 4096). The file descriptor maps to an inode on the filesystem.",
+    name: "Your Application",
+    detail: "Your program calls read(fd, buf, 4096) — \"read 4KB from this file into my buffer.\" The file descriptor (fd) is just a number the OS uses to track which file you opened.",
+    why: "This is where it all starts. Your code doesn't know anything about NVMe, LBAs, or NAND. It just says \"give me my file.\"",
     color: "#9e9789",
     icon: "APP",
+    zone: "userspace",
   },
   {
     id: 1,
     name: "VFS (Virtual File System)",
-    detail: "Linux VFS translates the file read into a filesystem-specific operation. Checks page cache first — if data is cached, return immediately (no I/O).",
+    detail: "Linux VFS is a universal translator. It receives your read() call and first checks the page cache — if the data was recently read, it's already in RAM and can be returned instantly without touching the SSD at all.",
+    why: "The page cache is why a second read of the same file is much faster. VFS checks: \"Do I already have this data in RAM?\" If yes, return immediately. If no, pass the request down.",
     color: "#7c5cfc",
     icon: "VFS",
+    zone: "kernel",
   },
   {
     id: 2,
-    name: "Filesystem (ext4/XFS/Btrfs)",
-    detail: "Maps file offset to logical block addresses (LBAs). Extent trees (ext4) or B-trees (Btrfs) resolve file offset → LBA. Creates a bio (block I/O) request.",
+    name: "Filesystem (ext4 / XFS / Btrfs)",
+    detail: "The filesystem translates \"offset 8192 in file X\" into \"LBA 50000 on the block device.\" It uses data structures like extent trees (ext4) or B-trees (Btrfs) to map file offsets to LBAs.",
+    why: "Your file isn't stored in one contiguous chunk on the SSD — it's scattered across many LBAs. The filesystem knows where all the pieces are. Think of it as a librarian who knows which shelf holds each book.",
     color: "#635bff",
     icon: "FS",
+    zone: "kernel",
   },
   {
     id: 3,
     name: "Block Layer",
-    detail: "The bio enters the block layer. The I/O scheduler (mq-deadline, none, kyber) may merge or reorder requests. For NVMe, 'none' scheduler is recommended since the drive has its own scheduler.",
+    detail: "The block layer receives the LBA request. The I/O scheduler may merge adjacent requests or reorder them. For NVMe, the 'none' scheduler is typical since the SSD has its own internal scheduling.",
+    why: "Multiple applications may read nearby LBAs simultaneously. The block layer merges these into fewer, larger requests — sending one 64KB read is faster than sending sixteen 4KB reads.",
     color: "#635bff",
     icon: "BLK",
+    zone: "kernel",
   },
   {
     id: 4,
     name: "NVMe Driver",
-    detail: "The driver builds a 64-byte SQ entry (CDW0=opcode, CDW10/11=SLBA, CDW12=NLB, PRPs point to host buffer). Writes the entry to the I/O Submission Queue in host memory.",
+    detail: "The driver builds the 64-byte SQ entry: opcode=0x02 (Read), SLBA in CDW10-11, NLB in CDW12, and PRP pointers to the host buffer where data should be delivered.",
+    why: "This is where everything we learned in Act 3 comes together — the driver fills out the 64-byte command form and places it in the Submission Queue in host RAM.",
     color: "#00b894",
     icon: "DRV",
+    zone: "driver",
   },
   {
     id: 5,
-    name: "SQ Doorbell Write",
-    detail: "Driver writes the new SQ tail pointer to the doorbell register (BAR0 + 0x1000 + QID*8). This is an MMIO write over PCIe — the controller now knows there's work to do.",
+    name: "Doorbell Write",
+    detail: "The driver writes the new SQ tail pointer to the doorbell register at BAR0 + 0x1000 + QID×8. This is an MMIO write over PCIe that tells the SSD \"check the queue.\"",
+    why: "Remember the hotel bell analogy from the Doorbells section? This is that moment — one PCIe write wakes up the SSD controller.",
     color: "#00b894",
     icon: "DB",
+    zone: "driver",
   },
   {
     id: 6,
     name: "SSD Controller",
-    detail: "Controller DMA-reads the SQE from host memory. Parses the command, looks up the FTL mapping (LBA → physical NAND page), and issues the NAND read.",
+    detail: "The controller DMA-reads the 64-byte command from host memory, parses it, looks up the FTL mapping table (LBA → physical NAND page), and issues a NAND read to the correct die and page.",
+    why: "The FTL lookup we learned in Act 1 happens right here. The controller translates your logical address into the actual physical location on the NAND chips.",
     color: "#e8a317",
     icon: "SSD",
+    zone: "hardware",
   },
   {
     id: 7,
-    name: "NAND Flash",
-    detail: "The NAND die performs a page read (~50-100μs for TLC). Data passes through ECC engine for error correction. 4KB of data is ready.",
+    name: "NAND Flash Read",
+    detail: "The NAND die performs a page read (~50-100μs for TLC). The charge levels in the NAND cells are sensed, converted to bits, and passed through the ECC engine to correct any bit errors.",
+    why: "This is the slowest part — NAND physics limits how fast you can sense charge levels. TLC needs multiple voltage comparisons, making it slower than SLC. ECC corrects the inevitable bit errors that accumulate over the cell's lifetime.",
     color: "#e8a317",
     icon: "NAND",
+    zone: "hardware",
   },
   {
     id: 8,
-    name: "DMA to Host + CQE",
-    detail: "Controller DMA-writes the 4KB data to the host buffer (via PRP addresses). Then DMA-writes a 16-byte CQ entry to the Completion Queue. Fires an MSI-X interrupt.",
+    name: "DMA Data + Completion",
+    detail: "The controller DMA-writes the 4KB data to the host buffer (using the PRP addresses from the command), then writes a 16-byte CQ entry to the Completion Queue, and fires an MSI-X interrupt.",
+    why: "All three happen in quick succession: data delivery → completion posting → interrupt. The CPU doesn't need to poll — the interrupt wakes it up when the result is ready.",
     color: "#e05d6f",
     icon: "DMA",
+    zone: "return",
   },
   {
     id: 9,
-    name: "Completion",
-    detail: "Interrupt handler reads the CQE, checks status (success/error), writes the CQ head doorbell. The driver wakes the waiting process. App's read() returns with data in buf.",
+    name: "Completion & Return",
+    detail: "The interrupt handler reads the CQE, checks the status code (success or error), writes the CQ head doorbell, and wakes the waiting process. Your application's read() call returns with data in the buffer.",
+    why: "The loop completes. The data has traveled: NAND → SSD controller → PCIe → host RAM → your application's buffer. Your read() returns, and you have your 4KB of data.",
     color: "#e05d6f",
     icon: "IRQ",
+    zone: "return",
   },
 ];
 
@@ -85,6 +105,7 @@ export default function IOPathDiagram() {
   const animateFlow = () => {
     setIsAnimating(true);
     setAnimIdx(0);
+    setActiveLayer(null);
     let i = 0;
     const timer = setInterval(() => {
       i++;
@@ -103,18 +124,23 @@ export default function IOPathDiagram() {
     <SectionWrapper className="py-24 px-4 bg-story-surface">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
-          The I/O Path &mdash; From read() to NAND
+          The Complete Journey &mdash; From read() to NAND and Back
         </h3>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          Now that we understand all the protocol pieces — commands, queues,
+          doorbells, completions — let&apos;s see the <em>entire journey</em> of a
+          single 4KB read. It passes through 10 layers, each one doing something
+          we&apos;ve already learned about.
+        </p>
         <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
-          When your application calls <code className="text-text-code">read()</code>,
-          the request travels through 10 layers before data arrives. Click each layer
-          to see what happens, or hit &ldquo;Animate&rdquo; to watch the full journey.
+          Click each layer to see what happens and <em>why</em>, or click
+          &ldquo;Animate&rdquo; to watch the full round-trip:
         </p>
 
         <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
           <div className="flex items-center justify-between mb-4">
             <div className="text-text-muted text-xs font-mono uppercase tracking-wider">
-              I/O Path — Click a layer or animate
+              I/O Path — Click a layer or animate the full trip
             </div>
             <button
               onClick={animateFlow}
@@ -162,11 +188,10 @@ export default function IOPathDiagram() {
                       </div>
                     </div>
                     <div className="text-text-muted text-[9px] font-mono flex-shrink-0">
-                      {i === 0 ? "userspace" : i <= 3 ? "kernel" : i <= 5 ? "driver" : i <= 7 ? "hardware" : "return"}
+                      {layer.zone}
                     </div>
                   </button>
 
-                  {/* Detail panel */}
                   <AnimatePresence>
                     {isActive && (
                       <motion.div
@@ -177,19 +202,21 @@ export default function IOPathDiagram() {
                         className="overflow-hidden"
                       >
                         <div
-                          className="mx-3 mb-2 p-3 rounded-lg text-sm leading-relaxed"
+                          className="mx-3 mb-2 p-4 rounded-lg text-sm leading-relaxed space-y-2"
                           style={{
                             backgroundColor: `${layer.color}08`,
                             borderLeft: `3px solid ${layer.color}`,
                           }}
                         >
-                          <span className="text-text-secondary text-xs">{layer.detail}</span>
+                          <div className="text-text-secondary text-xs">{layer.detail}</div>
+                          <div className="text-text-muted text-xs italic" style={{ color: layer.color }}>
+                            {layer.why}
+                          </div>
                         </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
 
-                  {/* Connector arrow */}
                   {i < IO_LAYERS.length - 1 && (
                     <div className="flex justify-center">
                       <div
@@ -211,19 +238,18 @@ export default function IOPathDiagram() {
               Typical 4K Read Latency
             </div>
             <p className="text-text-muted text-xs">
-              ~70-120μs end-to-end at QD=1. NAND read (~50μs) dominates.
-              Software overhead (VFS, block layer, driver) adds ~5-15μs.
-              PCIe round-trip adds ~2-3μs.
+              ~70-120μs end-to-end at queue depth 1. NAND read dominates (~50μs).
+              Software layers add ~5-15μs. PCIe round-trip adds ~2-3μs.
             </p>
           </div>
           <div className="bg-story-card rounded-xl p-4 card-shadow">
             <div className="font-mono font-bold text-nvme-blue text-sm mb-1">
-              Bypassing Layers
+              Bypassing Layers for Speed
             </div>
             <p className="text-text-muted text-xs">
-              io_uring with fixed buffers skips some VFS overhead. O_DIRECT
-              bypasses the page cache. SPDK bypasses the kernel entirely by
-              driving NVMe from userspace.
+              <strong>O_DIRECT</strong> skips the page cache. <strong>io_uring</strong>{" "}
+              reduces syscall overhead. <strong>SPDK</strong> bypasses the kernel
+              entirely, driving NVMe from userspace for lowest possible latency.
             </p>
           </div>
         </div>

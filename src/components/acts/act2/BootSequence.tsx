@@ -7,58 +7,60 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 const BOOT_STEPS = [
   {
     id: 0,
-    phase: "PCIe Enumeration",
+    phase: "Discovery",
     color: "#635bff",
+    why: "The computer just turned on. It needs to find out what devices are connected. Think of it like doing a roll call — the BIOS walks through every PCIe slot asking \"Who's here?\"",
     commands: [
-      { action: "BIOS/UEFI", detail: "Scans PCIe bus, discovers NVMe device at BDF address" },
-      { action: "Config Space", detail: "Reads Vendor ID, Device ID, Class Code (01h:08h:02h = NVMe)" },
-      { action: "BAR Setup", detail: "Assigns BAR0 MMIO region. Maps controller registers into memory." },
-      { action: "MSI-X Setup", detail: "Allocates interrupt vectors for completion queue notifications." },
+      { action: "Scan PCIe bus", detail: "BIOS scans every PCIe slot looking for devices. It finds an NVMe SSD at a specific address." },
+      { action: "Read identity", detail: "BIOS reads the device's Vendor ID and Class Code. Class Code 01:08:02 means \"this is an NVMe storage controller.\"" },
+      { action: "Assign control panel", detail: "BIOS assigns BAR0 — the memory address where the SSD's registers will live. Now the CPU can talk to the SSD's control panel." },
+      { action: "Set up interrupts", detail: "BIOS assigns MSI-X interrupt vectors so the SSD can notify the CPU when commands finish." },
     ],
   },
   {
     id: 1,
-    phase: "Controller Init",
+    phase: "Power Up Controller",
     color: "#7c5cfc",
+    why: "We found the SSD and know where its control panel is. Now we need to turn it on. This is like finding the thermostat and setting it up — you read what it supports, configure it, then flip the switch.",
     commands: [
-      { action: "Read CAP", detail: "Read Controller Capabilities: max queue entries, doorbell stride, timeouts." },
-      { action: "Read VS", detail: "Read Version register to confirm NVMe spec revision." },
-      { action: "Disable CC.EN", detail: "Clear CC.EN=0, wait for CSTS.RDY=0. Controller in disabled state." },
-      { action: "Set AQA", detail: "Configure Admin Queue Attributes: set admin SQ and CQ sizes." },
-      { action: "Set ASQ/ACQ", detail: "Write admin SQ and CQ base physical addresses to ASQ/ACQ registers." },
-      { action: "Enable CC.EN", detail: "Set CC.EN=1, set page size, I/O command set, arbitration. Wait CSTS.RDY=1." },
+      { action: "Read capabilities (CAP)", detail: "Read what the drive supports: max queue size, timing limits, doorbell spacing. Like reading the instruction manual before using a new appliance." },
+      { action: "Disable controller", detail: "Set CC.EN=0 and wait for CSTS.RDY=0. Ensure the drive is in a clean, known state before configuring it." },
+      { action: "Configure admin queues", detail: "Tell the drive how big the admin queues are (AQA) and where they live in RAM (ASQ/ACQ). This creates the initial communication channel." },
+      { action: "Enable controller", detail: "Set CC.EN=1 — the ON switch. Also configure page size and command set. Then wait for CSTS.RDY=1 — the drive signals it's ready." },
     ],
   },
   {
     id: 2,
-    phase: "Discovery",
+    phase: "Ask \"Who are you?\"",
     color: "#00b894",
+    why: "The drive is on, and we have admin queues for sending commands. The first thing we do? Send an Identify command — like asking someone their name, what they can do, and what they're carrying.",
     commands: [
-      { action: "Identify Controller", detail: "Admin cmd 0x06 (CNS=1): Get model, serial, firmware, capabilities." },
-      { action: "Identify NS List", detail: "Admin cmd 0x06 (CNS=2): Get list of active namespace IDs." },
-      { action: "Identify Namespace", detail: "Admin cmd 0x06 (CNS=0): For each NSID, get size, LBA format, features." },
-      { action: "Get Log (SMART)", detail: "Admin cmd 0x02 (LID=2): Read SMART health data." },
-      { action: "Get Features", detail: "Admin cmd 0x0A: Query number of queues, power state, temp threshold." },
+      { action: "Identify Controller", detail: "\"What's your name?\" — returns model name, serial number, firmware version, and what features you support." },
+      { action: "Identify Namespace List", detail: "\"What storage partitions do you have?\" — returns a list of active namespace IDs." },
+      { action: "Identify each Namespace", detail: "For each namespace: \"How big are you? What LBA format? What features?\" — returns size, capacity, and format." },
+      { action: "Read health data", detail: "\"How are you feeling?\" — reads SMART health log for temperature, wear, and error counts." },
     ],
   },
   {
     id: 3,
-    phase: "I/O Queue Setup",
+    phase: "Create I/O Queues",
     color: "#e8a317",
+    why: "Admin queues handle management commands, but they're too slow for actual data I/O. We need dedicated high-speed I/O queues — one pair per CPU core for maximum parallelism.",
     commands: [
-      { action: "Set Features", detail: "Admin cmd 0x09 (FID=7): Request N I/O completion queues + N submission queues." },
-      { action: "Create I/O CQ", detail: "Admin cmd 0x05: For each CPU/core, allocate and create a completion queue." },
-      { action: "Create I/O SQ", detail: "Admin cmd 0x01: For each CQ, create a paired submission queue." },
+      { action: "Request queue count", detail: "Ask the drive: \"I want N submission + N completion queues.\" The drive responds with how many it can actually support." },
+      { action: "Create Completion Queues", detail: "For each CPU core, create a Completion Queue first. CQs must exist before their paired SQs can be created." },
+      { action: "Create Submission Queues", detail: "For each CQ, create a paired Submission Queue. Now each CPU core has its own private command channel." },
     ],
   },
   {
     id: 4,
-    phase: "Ready for I/O",
+    phase: "Ready for Data",
     color: "#00b894",
+    why: "Everything is set up. The drive has queues, the driver knows its capabilities, and the OS can register it as a block device. Applications can now read and write data.",
     commands: [
-      { action: "Block layer registers", detail: "Linux block device /dev/nvme0n1 is now available." },
-      { action: "I/O Read/Write", detail: "Applications issue reads and writes. Commands flow through I/O queues." },
-      { action: "Interrupts", detail: "Controller raises MSI-X interrupts on CQ completion." },
+      { action: "Register block device", detail: "Linux creates /dev/nvme0n1 (and partitions like /dev/nvme0n1p1). Applications can now open and use the drive." },
+      { action: "I/O begins", detail: "Read/write commands flow through I/O queues. The filesystem, block layer, and NVMe driver work together to serve application requests." },
+      { action: "Interrupts active", detail: "When the SSD completes a command, it fires an MSI-X interrupt to the specific CPU core that submitted it." },
     ],
   },
 ];
@@ -71,12 +73,23 @@ export default function BootSequence() {
     <SectionWrapper className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
-          NVMe Boot Sequence
+          From Power-On to First I/O &mdash; The Boot Sequence
         </h3>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          Now we know all the building blocks: PCIe is the highway, BAR0 is the
+          control panel, and queues carry commands. <em className="text-text-primary">
+          But how do these pieces come together when you press the power button?</em>
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          The boot process follows a strict order — each step depends on the
+          previous one. You can&apos;t send commands without queues. You can&apos;t
+          create queues without first enabling the controller. You can&apos;t enable
+          the controller without knowing where its registers are. And you can&apos;t
+          find registers without scanning the PCIe bus first.
+        </p>
         <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
-          From power-on to the first I/O, here&apos;s every step the host takes
-          to bring an NVMe drive online. Click each phase to see the exact
-          register writes and admin commands involved.
+          Click each phase below to see the exact steps. Notice how each phase
+          builds on the previous one:
         </p>
 
         {/* Timeline */}
@@ -122,12 +135,19 @@ export default function BootSequence() {
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center gap-2 mb-2">
                 <div className="w-3 h-3 rounded-full" style={{ backgroundColor: phase.color }} />
                 <h4 className="text-lg font-bold text-text-primary">
                   Phase {phase.id + 1}: {phase.phase}
                 </h4>
               </div>
+
+              {/* Why this phase exists */}
+              <p className="text-text-secondary text-sm leading-relaxed mb-4 italic bg-story-surface rounded-xl p-3"
+                style={{ borderLeft: `3px solid ${phase.color}` }}
+              >
+                {phase.why}
+              </p>
 
               <div className="space-y-2">
                 {phase.commands.map((cmd, i) => (
@@ -145,7 +165,7 @@ export default function BootSequence() {
                       {i + 1}
                     </div>
                     <div>
-                      <div className="text-text-primary text-sm font-semibold font-mono">
+                      <div className="text-text-primary text-sm font-semibold">
                         {cmd.action}
                       </div>
                       <div className="text-text-muted text-xs mt-0.5">
@@ -157,6 +177,21 @@ export default function BootSequence() {
               </div>
             </motion.div>
           </AnimatePresence>
+        </div>
+
+        <div className="bg-story-card rounded-2xl p-6 card-shadow">
+          <div className="text-text-primary font-semibold text-sm mb-2">
+            The key insight
+          </div>
+          <p className="text-text-secondary text-sm leading-relaxed">
+            This entire boot sequence uses concepts we&apos;ve already learned: PCIe
+            enumeration discovers the drive, BAR0 gives access to registers, the
+            Submission Queue lets us send commands, and the Completion Queue receives
+            results. The boot process is just these pieces assembled in the right
+            order. Every NVMe drive in the world follows this same sequence — it&apos;s
+            defined by the NVMe spec, which is why one Linux NVMe driver works with
+            drives from Samsung, WD, Intel, or any other manufacturer.
+          </p>
         </div>
       </div>
     </SectionWrapper>

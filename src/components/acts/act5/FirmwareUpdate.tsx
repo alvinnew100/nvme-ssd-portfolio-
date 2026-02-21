@@ -11,6 +11,7 @@ const COMMIT_ACTIONS = [
     name: "CA0 — Download, Replace in Slot",
     short: "Replace image in slot",
     desc: "Downloads the firmware image to the specified slot, replacing whatever was there. Does NOT activate it. The controller continues running the currently active firmware. Use this when you want to stage a new image without disrupting anything.",
+    why: "Think of it like downloading an app update but choosing \"Install Later.\" The update sits ready, but you keep using the current version until you decide to switch.",
     cli: "nvme fw-commit /dev/nvme0 -s 2 -a 0",
     note: "Downloads to slot 2, no activation. The drive keeps running slot 1 firmware.",
     useCase: "Pre-staging firmware before a maintenance window",
@@ -24,6 +25,7 @@ const COMMIT_ACTIONS = [
     name: "CA1 — Download, Activate on Next Reset",
     short: "Download + activate on reset",
     desc: "Downloads the image to the specified slot AND marks it as the firmware to activate on the next controller reset. The currently running firmware is NOT interrupted — the new firmware only takes effect after an explicit nvme reset or a power cycle.",
+    why: "Like updating your phone and seeing \"Restart to complete update.\" The update is ready, but you choose when the restart happens — giving you control over downtime.",
     cli: "nvme fw-commit /dev/nvme0 -s 1 -a 1",
     note: "Downloads to slot 1, will activate on next nvme reset or power cycle.",
     useCase: "Most common for production updates — safe, controlled activation",
@@ -37,6 +39,7 @@ const COMMIT_ACTIONS = [
     name: "CA2 — Activate Existing Slot on Next Reset",
     short: "Activate existing image",
     desc: "Activates firmware that's ALREADY in a slot (from a previous CA0 download). No new image is downloaded — this just changes which slot will be active after reset. Useful for rolling back to a previous firmware version that's still stored in another slot.",
+    why: "This is the rollback button. If a new firmware has a bug, you can switch back to the previous version that's still sitting in another slot — without needing the original firmware file.",
     cli: "nvme fw-commit /dev/nvme0 -s 3 -a 2",
     note: "No download needed. Activates whatever is in slot 3 on next reset.",
     useCase: "Rollback — switch back to a known-good firmware version",
@@ -50,6 +53,7 @@ const COMMIT_ACTIONS = [
     name: "CA3 — Download, Activate Immediately",
     short: "Download + activate NOW",
     desc: "Downloads the image to the specified slot AND activates it immediately without requiring a reset. The controller switches firmware on the fly. Not all drives support this — check the FWUG (Firmware Update Granularity) and OACS bits in Identify Controller. If unsupported, the command will fail with Invalid Field in Command.",
+    why: "Zero downtime. The drive swaps firmware while still running — like changing a car's engine without pulling over. Impressive, but not every drive can do it. The I/O briefly pauses during the switch.",
     cli: "nvme fw-commit /dev/nvme0 -s 1 -a 3",
     note: "Immediate activation — no reset needed. Drive may briefly pause I/O during switch.",
     useCase: "Zero-downtime updates when the drive supports it",
@@ -75,24 +79,51 @@ export default function FirmwareUpdate() {
     <SectionWrapper className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
-          Firmware Updates &mdash; Download, Commit, Activate
+          Firmware Updates &mdash; Upgrading the SSD&apos;s Brain
         </h3>
+
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
-          SSD firmware can be updated in the field using two admin commands:
-          <strong className="text-text-primary"> Firmware Image Download</strong>{" "}
-          (opcode <code className="text-text-code">0x11</code>) transfers the image
-          in chunks, and <strong className="text-text-primary">Firmware Commit</strong>{" "}
-          (opcode <code className="text-text-code">0x10</code>) activates it. The
-          key complexity is in the <strong className="text-text-primary">Commit Action
-          (CA)</strong> field — there are 4 different commit actions, each with different
-          behavior.
+          Remember the <strong className="text-text-primary">SSD controller</strong> from
+          Act 1? It&apos;s the processor that runs the FTL, manages wear leveling, handles
+          garbage collection, and processes every NVMe command. All of that behavior is
+          controlled by <em className="text-text-primary">firmware</em> — software that runs
+          on the controller chip.
         </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          <em className="text-text-primary">But why would firmware need updating?</em> Because
+          bugs exist. A firmware bug might cause rare data corruption, poor garbage collection
+          under specific workloads, or incorrect SMART reporting. Manufacturers continuously
+          improve firmware — fixing bugs, optimizing performance, and adding new features.
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          <em className="text-text-primary">Here&apos;s what makes SSD firmware updates
+          interesting:</em> the drive has <strong className="text-text-primary">multiple
+          firmware slots</strong> — like having multiple versions of an app installed
+          simultaneously. You can download a new version into one slot while the old version
+          keeps running in another. If the update goes wrong, you can switch back. This is
+          done through two NVMe admin commands:
+        </p>
+        <ul className="text-text-secondary mb-8 leading-relaxed max-w-3xl list-disc ml-5 space-y-1">
+          <li>
+            <strong className="text-text-primary">Firmware Image Download</strong> —
+            transfers the new firmware binary from the host to the controller
+          </li>
+          <li>
+            <strong className="text-text-primary">Firmware Commit</strong> — tells the
+            controller what to do with it: store it, activate it, or both
+          </li>
+        </ul>
 
         {/* Firmware slots diagram */}
         <div className="bg-story-card rounded-2xl p-6 card-shadow mb-8">
           <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
             Firmware Slot Layout — NVMe supports up to 7 slots
           </div>
+          <p className="text-text-secondary text-xs mb-4 leading-relaxed">
+            Think of firmware slots like save slots in a video game. Each slot holds a
+            different firmware version, and the drive can only <em>run</em> one at a time
+            (the &ldquo;active&rdquo; slot). Click a slot to select it as the target:
+          </p>
           <div className="flex flex-wrap gap-3 justify-center mb-4">
             {FW_SLOTS.map((slot) => (
               <button
@@ -126,7 +157,8 @@ export default function FirmwareUpdate() {
             ))}
           </div>
           <p className="text-text-muted text-xs text-center">
-            Slot 1 is often read-only (factory firmware). Slots 2-7 are writable. Click to select a target slot.
+            Slot 1 is often read-only (factory firmware that can&apos;t be overwritten — your safety net).
+            Slots 2-7 are writable.
           </p>
         </div>
 
@@ -135,11 +167,16 @@ export default function FirmwareUpdate() {
           <h4 className="text-lg font-bold text-text-primary mb-3">
             Step 1: Firmware Image Download
           </h4>
+          <p className="text-text-secondary text-sm mb-3 leading-relaxed">
+            <em className="text-text-primary">Why not just send the entire file in one
+            command?</em> Because firmware images can be several megabytes, but a single
+            NVMe command can only carry a limited amount of data. So the download command
+            transfers the firmware binary in <strong className="text-text-primary">
+            chunks</strong> — multiple smaller pieces that the controller reassembles.
+          </p>
           <p className="text-text-secondary text-sm mb-4 leading-relaxed">
-            The download command transfers the firmware binary to the controller in
-            chunks. The controller stores it in an internal staging buffer (not yet
-            in a slot). NVMe allows chunked transfers because firmware images can be
-            several MB.
+            The good news: <code className="text-text-code">nvme-cli</code> handles the
+            chunking automatically. You just point it at the firmware file:
           </p>
           <NvmeCliBlock
             command="nvme fw-download /dev/nvme0 --fw=firmware_v2.2.0.bin"
@@ -152,7 +189,7 @@ export default function FirmwareUpdate() {
             </div>
             <div className="bg-story-surface rounded-lg p-3">
               <span className="text-nvme-blue font-mono font-bold">--xfer=&lt;size&gt;</span>
-              <span className="text-text-muted"> — Transfer chunk size (default: 4KB). Larger = fewer commands</span>
+              <span className="text-text-muted"> — Transfer chunk size (default: 4KB). Larger = fewer round-trips</span>
             </div>
             <div className="bg-story-surface rounded-lg p-3">
               <span className="text-nvme-blue font-mono font-bold">--offset=&lt;n&gt;</span>
@@ -170,11 +207,22 @@ export default function FirmwareUpdate() {
           <h4 className="text-lg font-bold text-text-primary mb-3">
             Step 2: Firmware Commit &mdash; The 4 Commit Actions
           </h4>
+          <p className="text-text-secondary text-sm mb-3 leading-relaxed max-w-3xl">
+            After the image is downloaded, you need to <em className="text-text-primary">
+            commit</em> it — telling the controller what to do with it. <em className="text-text-primary">
+            But why are there 4 different commit actions?</em> Because different situations
+            need different levels of urgency and risk:
+          </p>
+          <ul className="text-text-secondary text-sm mb-4 leading-relaxed max-w-3xl list-disc ml-5 space-y-1">
+            <li>Sometimes you want to stage an update for <em>later</em> (maintenance window)</li>
+            <li>Sometimes you want it to activate on the next reboot (controlled transition)</li>
+            <li>Sometimes you want to <em>roll back</em> to a previous version</li>
+            <li>Sometimes you need zero-downtime (activate <em>immediately</em>)</li>
+          </ul>
           <p className="text-text-secondary text-sm mb-4 leading-relaxed max-w-3xl">
-            The commit command takes a <strong className="text-text-primary">slot number (-s)
-            </strong> and a <strong className="text-text-primary">commit action (-a)</strong>.
-            The commit action determines whether to download, activate, require a reset, or
-            do it all immediately.
+            The commit command takes a <strong className="text-text-primary">slot number
+            (-s)</strong> and a <strong className="text-text-primary">commit action
+            (-a)</strong>. Click each CA below to see how it works:
           </p>
 
           {/* CA selector */}
@@ -214,8 +262,12 @@ export default function FirmwareUpdate() {
               </div>
             </div>
 
-            <p className="text-text-secondary text-sm leading-relaxed mb-4">
+            <p className="text-text-secondary text-sm leading-relaxed mb-3">
               {COMMIT_ACTIONS[activeCa].desc}
+            </p>
+
+            <p className="text-nvme-blue text-xs leading-relaxed mb-4 italic">
+              {COMMIT_ACTIONS[activeCa].why}
             </p>
 
             {/* Visual indicators */}
@@ -309,24 +361,30 @@ export default function FirmwareUpdate() {
 
         {/* Typical update workflow */}
         <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
-          <div className="text-text-primary font-semibold mb-4">
+          <div className="text-text-primary font-semibold mb-2">
             Typical Firmware Update Workflow
           </div>
+          <p className="text-text-secondary text-xs mb-4 leading-relaxed">
+            Here&apos;s what a real firmware update looks like from start to finish.
+            Notice how each step has a verification — you never blindly trust that
+            it worked:
+          </p>
           <div className="space-y-4">
             {[
-              { step: 1, title: "Check current firmware", cmd: "nvme fw-log /dev/nvme0", note: "Shows all slots, active slot, and firmware revisions" },
-              { step: 2, title: "Identify capabilities", cmd: "nvme id-ctrl /dev/nvme0 | grep -i fw", note: "Check FRMW field: number of slots, slot 1 read-only, activation without reset" },
-              { step: 3, title: "Download the image", cmd: "nvme fw-download /dev/nvme0 --fw=firmware_v2.2.0.bin", note: "Transfers image to controller staging buffer" },
-              { step: 4, title: "Commit to slot & activate", cmd: "nvme fw-commit /dev/nvme0 -s 2 -a 1", note: "-s 2 = slot 2, -a 1 = CA1 (activate on next reset)" },
-              { step: 5, title: "Reset controller", cmd: "nvme reset /dev/nvme0", note: "Triggers activation. I/O briefly paused during reset." },
-              { step: 6, title: "Verify", cmd: "nvme fw-log /dev/nvme0", note: "Confirm new firmware is active in the expected slot" },
+              { step: 1, title: "Check current firmware", cmd: "nvme fw-log /dev/nvme0", note: "Shows all slots, active slot, and firmware revisions", why: "Always know your starting point before changing anything" },
+              { step: 2, title: "Identify capabilities", cmd: "nvme id-ctrl /dev/nvme0 | grep -i fw", note: "Check FRMW field: number of slots, slot 1 read-only, activation without reset", why: "Not all drives have the same number of slots or support CA3" },
+              { step: 3, title: "Download the image", cmd: "nvme fw-download /dev/nvme0 --fw=firmware_v2.2.0.bin", note: "Transfers image to controller staging buffer", why: "The image is staged, not yet written to a slot" },
+              { step: 4, title: "Commit to slot & activate", cmd: "nvme fw-commit /dev/nvme0 -s 2 -a 1", note: "-s 2 = slot 2, -a 1 = CA1 (activate on next reset)", why: "CA1 is safest — you control when the switch happens" },
+              { step: 5, title: "Reset controller", cmd: "nvme reset /dev/nvme0", note: "Triggers activation. I/O briefly paused during reset.", why: "The new firmware takes effect after this" },
+              { step: 6, title: "Verify", cmd: "nvme fw-log /dev/nvme0", note: "Confirm new firmware is active in the expected slot", why: "Trust, but verify — always confirm the update succeeded" },
             ].map((item) => (
               <div key={item.step} className="flex items-start gap-4">
                 <div className="w-8 h-8 rounded-full bg-nvme-blue/10 text-nvme-blue flex items-center justify-center text-xs font-bold flex-shrink-0 mt-1">
                   {item.step}
                 </div>
                 <div className="flex-1">
-                  <div className="text-text-primary text-sm font-semibold mb-2">{item.title}</div>
+                  <div className="text-text-primary text-sm font-semibold">{item.title}</div>
+                  <div className="text-text-muted text-[10px] mb-2 italic">{item.why}</div>
                   <NvmeCliBlock command={item.cmd} note={item.note} />
                 </div>
               </div>
@@ -378,11 +436,12 @@ export default function FirmwareUpdate() {
           </div>
         </div>
 
-        <InfoCard variant="warning" title="Firmware update risks">
+        <InfoCard variant="warning" title="Firmware update risks — why slots matter">
           A power loss during firmware commit can brick the drive if it has no
-          backup boot firmware. Always ensure stable power during updates. Some
-          enterprise drives have dual-boot firmware (a recovery slot that can&apos;t
-          be overwritten) to mitigate this risk.
+          backup boot firmware. <em>This is exactly why multiple slots exist</em> —
+          slot 1 (read-only factory firmware) acts as a safety net. Enterprise drives
+          often have dual-boot firmware so they can always fall back. Always ensure
+          stable power during updates, and never overwrite your only working firmware slot.
         </InfoCard>
       </div>
     </SectionWrapper>

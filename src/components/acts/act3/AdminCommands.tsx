@@ -28,58 +28,58 @@ const CLI_MAP: Record<string, CliMapping> = {
   "admin-create-sq": {
     cli: "",
     kernelOnly: true,
-    note: "Issued by the kernel NVMe driver during initialization, not directly via nvme-cli",
+    note: "The kernel NVMe driver creates I/O queues during boot. You don't run this manually — it happens automatically when the driver sets up one queue pair per CPU core.",
   },
   "admin-create-cq": {
     cli: "",
     kernelOnly: true,
-    note: "Issued by the kernel NVMe driver during initialization, not directly via nvme-cli",
+    note: "Same as Create SQ — the kernel handles this during initialization. CQs are always created before their paired SQs.",
   },
   "admin-delete-sq": {
     cli: "",
     kernelOnly: true,
-    note: "Issued by the kernel NVMe driver during teardown",
+    note: "The kernel deletes queues during driver teardown (e.g., nvme disconnect or rmmod nvme).",
   },
   "admin-delete-cq": {
     cli: "",
     kernelOnly: true,
-    note: "Issued by the kernel NVMe driver during teardown",
+    note: "Same — kernel deletes CQs after their paired SQs are removed.",
   },
   "admin-get-features": {
     cli: "nvme get-feature /dev/nvme0 -f 1",
-    note: "Feature ID 1 = Arbitration. Use -f <id> for different features",
+    note: "Feature ID 1 = Arbitration. Use -f <id> for different features. Common: -f 7 (Number of Queues), -f 4 (Power Management)",
   },
   "admin-set-features": {
     cli: "nvme set-feature /dev/nvme0 -f 7 -v 0x00ff00ff",
-    note: "Feature ID 7 = Number of Queues. -v sets the value",
+    note: "Feature ID 7 = Number of Queues. -v sets the value. The drive responds with how many it actually supports.",
   },
   "admin-get-log-page": {
     cli: "nvme smart-log /dev/nvme0",
-    note: "Shortcut for Get Log Page (LID=2). For other logs: nvme get-log /dev/nvme0 --log-id=<id> --log-len=512",
+    note: "Shortcut for Get Log Page with Log ID=2 (SMART). For other logs: nvme get-log /dev/nvme0 --log-id=<id> --log-len=512",
   },
   "admin-fw-download": {
     cli: "nvme fw-download /dev/nvme0 -f firmware.bin",
-    note: "Downloads firmware image to the controller. Does NOT activate it",
+    note: "Downloads firmware image to the controller. Does NOT activate it — that requires fw-commit (covered in the Firmware Update section).",
   },
   "admin-fw-commit": {
     cli: "nvme fw-commit /dev/nvme0 -s 1 -a 1",
-    note: "-s = slot, -a = action (1=download+activate on next reset)",
+    note: "-s = slot, -a = commit action (0-3). See the Firmware Update section for detailed CA comparison.",
   },
   "admin-format-nvm": {
     cli: "nvme format /dev/nvme0n1 -s 1",
-    note: "-s = secure erase setting (0=none, 1=user data erase, 2=cryptographic erase)",
+    note: "-s = secure erase setting (0=none, 1=user data erase, 2=cryptographic erase). WARNING: destroys all data!",
   },
   "admin-sanitize": {
     cli: "nvme sanitize /dev/nvme0 -a 2",
-    note: "-a = action (1=exit failure, 2=block erase, 3=overwrite, 4=crypto erase)",
+    note: "-a = action (2=block erase, 3=overwrite, 4=crypto erase). Irreversible, affects entire drive.",
   },
   "admin-security-send": {
     cli: "nvme security-send /dev/nvme0 --secp=0x01 --spsp=0x0000 --nssf=0 -f payload.bin",
-    note: "TCG Opal security protocol. --secp = security protocol ID",
+    note: "Used for TCG Opal encryption management. --secp = security protocol ID.",
   },
   "admin-security-recv": {
     cli: "nvme security-recv /dev/nvme0 --secp=0x01 --spsp=0x0000 --al=2048",
-    note: "--al = allocation length for the response buffer",
+    note: "--al = allocation length for the response. Used to read back security protocol data.",
   },
   "admin-ns-mgmt": {
     cli: "nvme create-ns /dev/nvme0 --nsze=1000000 --ncap=1000000 --block-size=4096",
@@ -87,7 +87,7 @@ const CLI_MAP: Record<string, CliMapping> = {
   },
   "admin-ns-attach": {
     cli: "nvme attach-ns /dev/nvme0 -n 1 -c 0",
-    note: "-n = namespace ID, -c = controller ID. Use detach-ns to detach",
+    note: "-n = namespace ID, -c = controller ID. Use detach-ns to detach.",
   },
 };
 
@@ -108,19 +108,32 @@ export default function AdminCommands() {
     <SectionWrapper className="py-24 px-4 bg-story-surface">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
-          Admin Commands
+          Admin Commands &mdash; Managing the Drive
         </h3>
+
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
-          Admin commands are sent on queue ID 0 (the Admin queue). They manage
-          the controller itself &mdash; discovery, configuration, firmware
-          updates, health monitoring, and security. There are{" "}
-          <strong className="text-text-primary">26 admin commands</strong> in
-          the NVMe spec.
+          So far we&apos;ve seen the Identify command — the first question the driver
+          asks. But there are many more management commands. <em className="text-text-primary">
+          Think of admin commands as the building manager&apos;s toolkit:</em> they
+          handle configuration, health checks, firmware updates, security, and
+          creating/destroying queues.
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          Admin commands always go on <strong className="text-text-primary">Queue
+          ID 0</strong> — the special admin queue that was created during boot.
+          They manage the drive <em>itself</em>, not your data. (Data commands use
+          I/O queues with QID &ge; 1, which we&apos;ll cover next.)
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          <em className="text-text-primary">Why separate admin from I/O queues?</em>{" "}
+          Because you always need a way to manage the drive, even when I/O queues
+          are congested. The admin queue is like a &ldquo;priority line&rdquo; that
+          can&apos;t be blocked by data traffic.
         </p>
         <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
           Click any command below to see its{" "}
-          <strong className="text-text-primary">nvme-cli equivalent</strong> &mdash; the
-          actual terminal command you&apos;d type to issue it.
+          <strong className="text-text-primary">nvme-cli equivalent</strong> — the
+          actual terminal command you&apos;d type to issue it:
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
@@ -180,7 +193,6 @@ export default function AdminCommands() {
           })}
         </div>
 
-        {/* Quick reference: most common admin commands */}
         <div className="bg-story-card rounded-2xl p-6 card-shadow">
           <div className="text-text-primary font-semibold mb-4">
             Most Common Admin Commands — Quick Reference
