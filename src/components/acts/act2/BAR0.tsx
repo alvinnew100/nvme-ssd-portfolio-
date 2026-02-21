@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
@@ -21,10 +21,10 @@ function MmioFlowVisual() {
   const inView = useInView(ref, { once: true });
 
   const steps = [
-    { label: "CPU", sublabel: "load/store instruction", color: "#38bdf8", icon: "CPU" },
-    { label: "Memory Controller", sublabel: "routes by address", color: "#a78bfa", icon: "MEM" },
-    { label: "PCIe Root Complex", sublabel: "forwards to device", color: "#00d4aa", icon: "PCIe" },
-    { label: "SSD BAR0", sublabel: "register accessed", color: "#f5a623", icon: "BAR0" },
+    { label: "CPU", sublabel: "Executes load/store to address 0xFE000014", color: "#38bdf8", icon: "CPU", detail: "The CPU doesn't know this address is an SSD register — it just runs a normal memory instruction" },
+    { label: "Memory Controller", sublabel: "Checks: is this address RAM or MMIO?", color: "#a78bfa", icon: "MMU", detail: "The address falls outside physical RAM range, so it's routed to the PCIe root complex instead" },
+    { label: "PCIe Root Complex", sublabel: "Matches address to device BAR range", color: "#00d4aa", icon: "RC", detail: "The root complex checks its routing table: 0xFE000000–0xFE001FFF belongs to NVMe SSD on Bus 1" },
+    { label: "SSD BAR0 Register", sublabel: "Offset 0x14 = CC register accessed", color: "#f5a623", icon: "BAR0", detail: "The SSD hardware receives the write at offset 0x14 (CC register) — controller configuration is updated" },
   ];
 
   return (
@@ -32,53 +32,66 @@ function MmioFlowVisual() {
       <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
         Memory-Mapped I/O — How CPU Talks to SSD Registers
       </div>
-      <div className="flex items-center justify-between gap-2 overflow-x-auto py-2">
+
+      {/* Flow diagram */}
+      <div className="space-y-3 max-w-2xl mx-auto mb-4">
         {steps.map((step, i) => (
-          <div key={step.label} className="flex items-center flex-shrink-0">
+          <div key={step.label}>
             <motion.div
-              className="flex flex-col items-center"
-              initial={{ opacity: 0, y: 15 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
+              className="flex items-start gap-4 rounded-xl p-3"
+              style={{ backgroundColor: `${step.color}08`, border: `1px solid ${step.color}30` }}
+              initial={{ opacity: 0, x: -20 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: i * 0.15, type: "spring" }}
             >
               <div
-                className="w-16 h-16 rounded-xl flex items-center justify-center text-white text-xs font-bold shadow-lg"
-                style={{ backgroundColor: `${step.color}20`, border: `2px solid ${step.color}` }}
+                className="w-12 h-12 rounded-lg flex items-center justify-center text-xs font-bold flex-shrink-0"
+                style={{ backgroundColor: `${step.color}15`, border: `2px solid ${step.color}` }}
               >
                 <span style={{ color: step.color }}>{step.icon}</span>
               </div>
-              <div className="text-text-primary text-[10px] font-semibold mt-2 text-center">{step.label}</div>
-              <div className="text-text-muted text-[8px] text-center max-w-[80px]">{step.sublabel}</div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2">
+                  <span className="text-text-primary text-xs font-semibold">{step.label}</span>
+                  <span className="text-text-muted text-[10px]">&mdash; {step.sublabel}</span>
+                </div>
+                <p className="text-text-muted text-[10px] mt-0.5 leading-relaxed">{step.detail}</p>
+              </div>
             </motion.div>
             {i < steps.length - 1 && (
               <motion.div
-                className="flex items-center mx-1"
-                initial={{ opacity: 0, scaleX: 0 }}
-                animate={inView ? { opacity: 1, scaleX: 1 } : {}}
-                transition={{ delay: i * 0.15 + 0.1, duration: 0.3 }}
+                className="flex justify-center py-1"
+                initial={{ opacity: 0 }}
+                animate={inView ? { opacity: 1 } : {}}
+                transition={{ delay: i * 0.15 + 0.1 }}
               >
-                <div className="w-8 h-0.5 bg-text-muted" />
-                <div className="w-0 h-0 border-t-4 border-b-4 border-l-6 border-t-transparent border-b-transparent border-l-text-muted" />
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                  <path d="M10 2 L10 14 L6 10 M10 14 L14 10" stroke={step.color} strokeWidth="2" fill="none" />
+                </svg>
               </motion.div>
             )}
           </div>
         ))}
       </div>
-      <motion.p
-        className="text-text-muted text-[10px] text-center mt-3 italic"
+
+      <motion.div
+        className="bg-story-surface rounded-xl p-3 text-center"
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : {}}
         transition={{ delay: 0.8 }}
       >
-        The CPU writes to a memory address, but PCIe routes it to the SSD&apos;s hardware register instead of RAM
-      </motion.p>
+        <p className="text-text-secondary text-[11px] leading-relaxed">
+          <strong className="text-text-primary">The key insight:</strong> The CPU uses its normal memory
+          instructions (load/store) — it doesn&apos;t need special I/O instructions. The hardware routing
+          makes SSD registers &ldquo;look like&rdquo; regular memory addresses. This is why it&apos;s called
+          <em> memory-mapped</em> I/O.
+        </p>
+      </motion.div>
     </div>
   );
 }
 
 export default function BAR0() {
-  const [selectedReg, setSelectedReg] = useState<string | null>(null);
-
   return (
     <SectionWrapper className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
@@ -118,8 +131,8 @@ export default function BAR0() {
         </p>
         <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
           Inside BAR0, the NVMe spec defines specific <strong className="text-text-primary">
-          registers</strong> — fixed locations where each knob and dial lives. Click
-          any register below to see what it does:
+          registers</strong> — fixed locations where each knob and dial lives. Here
+          are the key registers and what each one does:
         </p>
 
         {/* MMIO flow diagram */}
@@ -128,54 +141,89 @@ export default function BAR0() {
         <div className="bg-story-card rounded-2xl card-shadow overflow-hidden mb-6">
           <div className="px-5 py-3 border-b border-story-border bg-story-surface">
             <span className="text-text-muted text-xs font-mono">
-              NVMe Controller Register Map (BAR0) — click to explore
+              NVMe Controller Register Map (BAR0)
             </span>
           </div>
 
-          {/* Visual register map */}
+          {/* Visual register map — all expanded */}
           <div className="p-4 space-y-1.5">
-            {REGISTERS.map((reg, i) => {
-              const isSelected = selectedReg === reg.offset;
-              return (
-                <motion.button
-                  key={reg.offset}
-                  onClick={() => setSelectedReg(isSelected ? null : reg.offset)}
-                  className="w-full flex items-center gap-3 p-3 rounded-xl transition-colors text-left hover:bg-story-surface"
-                  style={isSelected ? {
-                    backgroundColor: `${reg.color}08`,
-                    boxShadow: `inset 3px 0 0 ${reg.color}`,
-                  } : undefined}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.05 }}
-                  whileHover={{ x: 3 }}
+            {REGISTERS.map((reg, i) => (
+              <motion.div
+                key={reg.offset}
+                className="flex items-start gap-3 p-3 rounded-xl"
+                style={{
+                  backgroundColor: `${reg.color}08`,
+                  boxShadow: `inset 3px 0 0 ${reg.color}`,
+                }}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.05 }}
+              >
+                <code className="text-text-code font-mono text-xs w-16 text-right flex-shrink-0 mt-0.5">
+                  {reg.offset}
+                </code>
+                <div
+                  className="font-mono font-bold text-xs w-20 flex-shrink-0 mt-0.5"
+                  style={{ color: reg.color }}
                 >
-                  <code className="text-text-code font-mono text-xs w-16 text-right flex-shrink-0">
-                    {reg.offset}
-                  </code>
-                  <div
-                    className="font-mono font-bold text-xs w-20 flex-shrink-0"
-                    style={{ color: reg.color }}
-                  >
-                    {reg.name}
-                  </div>
-                  <span className="text-text-muted font-mono text-[10px] w-12 flex-shrink-0">
-                    {reg.size}
-                  </span>
-                  {isSelected && (
-                    <span className="text-text-secondary text-xs flex-1">
-                      {reg.desc}
-                    </span>
-                  )}
-                  {!isSelected && (
-                    <span className="text-text-muted text-[10px]">
-                      click to see
-                    </span>
-                  )}
-                </motion.button>
-              );
-            })}
+                  {reg.name}
+                </div>
+                <span className="text-text-muted font-mono text-[10px] w-12 flex-shrink-0 mt-0.5">
+                  {reg.size}
+                </span>
+                <span className="text-text-secondary text-xs flex-1">
+                  {reg.desc}
+                </span>
+              </motion.div>
+            ))}
           </div>
+        </div>
+
+        {/* PCIe path mapping — lspci */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+          <div className="text-text-primary font-semibold text-sm mb-2">
+            Finding Your NVMe SSD on the PCIe Bus &mdash; lspci
+          </div>
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            Every PCIe device has a unique address in the format{" "}
+            <strong className="text-text-primary">Bus:Device.Function</strong> (BDF). When the BIOS
+            scans the PCIe bus during boot, it assigns each device a BDF address and maps its
+            BAR0 to a specific memory range. On Linux, you can see this with{" "}
+            <code className="text-text-code">lspci</code>:
+          </p>
+          <pre className="text-xs bg-story-dark rounded-xl p-4 overflow-x-auto font-mono text-white/90 mb-3 whitespace-pre">
+{`$ lspci -v | grep -A5 "NVMe"
+01:00.0 Non-Volatile memory controller: Samsung NVM Express
+        Subsystem: Samsung SSD 980 PRO
+        Region 0: Memory at fe000000 (64-bit) [size=16K]
+        Capabilities: [70] Express Endpoint, MSI-X: Enable+`}
+          </pre>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs mb-3">
+            <div className="bg-story-surface rounded-xl p-3">
+              <code className="text-nvme-blue font-mono font-bold">01:00.0</code>
+              <p className="text-text-muted mt-1 leading-relaxed">
+                <strong className="text-text-primary">Bus 01</strong> : <strong className="text-text-primary">
+                Device 00</strong> . <strong className="text-text-primary">Function 0</strong>. This is the
+                PCIe address. Bus 01 means it&apos;s one hop from the root complex. Device 00 means it&apos;s
+                the first device on that bus. Function 0 is the primary function.
+              </p>
+            </div>
+            <div className="bg-story-surface rounded-xl p-3">
+              <code className="text-nvme-amber font-mono font-bold">Region 0: fe000000 [size=16K]</code>
+              <p className="text-text-muted mt-1 leading-relaxed">
+                This is <strong className="text-text-primary">BAR0</strong> — the memory range where the
+                NVMe registers are mapped. The CPU writes to addresses starting at 0xFE000000, and PCIe
+                routes those writes to the SSD&apos;s controller registers. 16K covers all registers + doorbells.
+              </p>
+            </div>
+          </div>
+          <p className="text-text-muted text-[10px] leading-relaxed">
+            <strong className="text-text-primary">The full path:</strong> CPU &rarr; PCIe Root Complex
+            (Bus 0) &rarr; PCIe Switch/Bridge &rarr; Bus 01, Device 00, Function 0 &rarr; NVMe SSD.
+            The BDF address is how the kernel&apos;s NVMe driver finds and binds to the SSD. You&apos;ll also
+            see this path in <code className="text-text-code">/sys/bus/pci/devices/0000:01:00.0/</code> where
+            the kernel exposes the device&apos;s config space and resource mappings.
+          </p>
         </div>
 
         <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">

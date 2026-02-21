@@ -96,6 +96,11 @@ export default function CommandAccordion() {
                     <span className="text-text-primary font-semibold text-sm flex-1">
                       {cmd.name}
                     </span>
+                    {cliResult.isKernelOnly && (
+                      <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-story-surface text-text-muted">
+                        no CLI
+                      </span>
+                    )}
                     <span
                       className={`text-[10px] font-mono px-2 py-0.5 rounded-full ${
                         cmd.type === "admin"
@@ -128,8 +133,13 @@ export default function CommandAccordion() {
 
                     {/* nvme-cli equivalent */}
                     {cliResult.isKernelOnly ? (
-                      <div className="text-text-muted text-xs italic bg-story-surface rounded-lg p-3 font-mono">
-                        {cliResult.note}
+                      <div className="bg-story-surface rounded-lg p-3">
+                        <div className="text-[10px] font-mono text-nvme-amber font-bold mb-1">
+                          No nvme-cli equivalent &mdash; kernel/driver only
+                        </div>
+                        <div className="text-text-muted text-xs italic">
+                          {cliResult.note}
+                        </div>
                       </div>
                     ) : cliResult.command ? (
                       <div className="bg-story-dark rounded-lg p-3 font-mono text-xs">

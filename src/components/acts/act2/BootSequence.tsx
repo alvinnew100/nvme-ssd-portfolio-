@@ -110,7 +110,7 @@ export default function BootSequence() {
                   >
                     {i + 1}
                   </div>
-                  <span className="text-[10px] font-mono mt-1.5 whitespace-nowrap" style={{ color: i === activePhase ? step.color : "#9e9789" }}>
+                  <span className="text-[9px] sm:text-[10px] font-mono mt-1.5 text-center leading-tight max-w-[72px]" style={{ color: i === activePhase ? step.color : "#9e9789" }}>
                     {step.phase}
                   </span>
                 </button>

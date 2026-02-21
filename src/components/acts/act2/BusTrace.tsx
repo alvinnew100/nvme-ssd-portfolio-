@@ -29,7 +29,6 @@ export default function BusTrace() {
   const [events, setEvents] = useState<TraceEvent[]>([]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentIdx, setCurrentIdx] = useState(0);
-  const [hoveredId, setHoveredId] = useState<number | null>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   const play = () => {
@@ -43,7 +42,6 @@ export default function BusTrace() {
     if (intervalRef.current) clearInterval(intervalRef.current);
     setEvents([]);
     setCurrentIdx(0);
-    setHoveredId(null);
   };
 
   useEffect(() => {
@@ -80,10 +78,44 @@ export default function BusTrace() {
           is being spent — is it the doorbell write? The DMA data transfer? The
           NAND read time?
         </p>
-        <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
-          Click &ldquo;Play&rdquo; and hover over each event to see <em>why</em> it
-          happens:
+        <p className="text-text-secondary mb-6 leading-relaxed max-w-3xl">
+          Click &ldquo;Play&rdquo; to watch the trace unfold step by step:
         </p>
+
+        {/* Term definitions */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-8">
+          <div className="text-text-muted text-xs font-mono mb-3 uppercase tracking-wider">
+            Key Terms in the Trace
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <div className="bg-story-surface rounded-xl p-3">
+              <div className="font-mono font-bold text-nvme-blue mb-1">MMIO (Memory-Mapped I/O)</div>
+              <p className="text-text-muted leading-relaxed">
+                The CPU writes to a memory address that&apos;s actually mapped to the SSD&apos;s hardware
+                register (BAR0). Used for doorbell writes &mdash; the CPU tells the SSD &ldquo;new
+                command is waiting.&rdquo; Extremely fast (a single PCIe write TLP).
+              </p>
+            </div>
+            <div className="bg-story-surface rounded-xl p-3">
+              <div className="font-mono font-bold text-nvme-violet mb-1">DMA (Direct Memory Access)</div>
+              <p className="text-text-muted leading-relaxed">
+                The SSD reads or writes the host&apos;s RAM <em>directly</em>, without the CPU being
+                involved. The SSD becomes a &ldquo;bus master&rdquo; on PCIe and initiates its own memory
+                transactions. This is how commands are fetched and data is delivered &mdash; the CPU is
+                free to do other work.
+              </p>
+            </div>
+            <div className="bg-story-surface rounded-xl p-3">
+              <div className="font-mono font-bold text-nvme-red mb-1">MSI-X (Message Signaled Interrupt)</div>
+              <p className="text-text-muted leading-relaxed">
+                How the SSD notifies the CPU that work is done. Instead of a physical interrupt wire,
+                MSI-X is a PCIe memory write to a special address that the CPU&apos;s interrupt controller
+                recognizes. Each CPU core can have its own interrupt vector &mdash; no sharing, no
+                routing confusion.
+              </p>
+            </div>
+          </div>
+        </div>
 
         <div className="bg-story-card rounded-2xl p-8 card-shadow mb-6">
           {/* Bus lanes header */}
@@ -111,9 +143,7 @@ export default function BusTrace() {
                   key={evt.id}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="relative py-1.5"
-                  onMouseEnter={() => setHoveredId(evt.id)}
-                  onMouseLeave={() => setHoveredId(null)}
+                  className="relative py-2"
                 >
                   <div className="flex items-center gap-2 px-2">
                     <div className="text-[9px] font-mono text-text-muted w-12 text-right flex-shrink-0">
@@ -141,29 +171,28 @@ export default function BusTrace() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2 px-2 mt-0.5">
+                  <div className="flex items-start gap-2 px-2 mt-1">
                     <div className="w-12 flex-shrink-0" />
-                    <div className="flex-1 text-center">
-                      <span
-                        className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full"
-                        style={{
-                          color: evt.color,
-                          backgroundColor: `${evt.color}10`,
-                        }}
-                      >
-                        {evt.label}
-                      </span>
-                      <div className="text-[9px] text-text-muted mt-0.5">{evt.detail}</div>
-                      {hoveredId === evt.id && (
-                        <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: "auto" }}
-                          className="text-[10px] text-text-secondary mt-1 leading-relaxed italic"
-                          style={{ color: evt.color }}
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2">
+                        <span
+                          className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full"
+                          style={{
+                            color: evt.color,
+                            backgroundColor: `${evt.color}10`,
+                          }}
                         >
-                          {evt.why}
-                        </motion.div>
-                      )}
+                          {evt.type.toUpperCase()}
+                        </span>
+                        <span className="text-text-primary text-[11px] font-semibold">{evt.label}</span>
+                      </div>
+                      <div className="text-[10px] text-text-muted mt-0.5">{evt.detail}</div>
+                      <div
+                        className="text-[10px] mt-1 leading-relaxed italic"
+                        style={{ color: evt.color }}
+                      >
+                        {evt.why}
+                      </div>
                     </div>
                   </div>
                 </motion.div>

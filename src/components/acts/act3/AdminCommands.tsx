@@ -12,6 +12,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   "Firmware": "#f5a623",
   "Data Protection": "#ed5f74",
   "Namespace Mgmt": "#635bff",
+  "Operational": "#94a3b8",
 };
 
 interface CliMapping {
@@ -89,6 +90,46 @@ const CLI_MAP: Record<string, CliMapping> = {
     cli: "nvme attach-ns /dev/nvme0 -n 1 -c 0",
     note: "-n = namespace ID, -c = controller ID. Use detach-ns to detach.",
   },
+  "admin-abort": {
+    cli: "",
+    kernelOnly: true,
+    note: "No dedicated nvme-cli command. The kernel uses this internally to cancel in-flight commands (e.g., during timeout recovery). You can issue it via generic passthrough: nvme admin-passthru /dev/nvme0 --opcode=0x08 — but there's rarely a reason to.",
+  },
+  "admin-async-event": {
+    cli: "",
+    kernelOnly: true,
+    note: "No nvme-cli equivalent. The kernel's NVMe driver automatically submits Async Event Requests during initialization. When the controller detects an event (health warning, namespace change, firmware activation), it completes one of these pre-submitted commands to notify the host.",
+  },
+  "admin-self-test": {
+    cli: "nvme device-self-test /dev/nvme0 -s 1",
+    note: "-s 1 = short self-test, -s 2 = extended self-test, -s 0xf = abort running test. Results appear in the Device Self-test Log: nvme self-test-log /dev/nvme0",
+  },
+  "admin-keep-alive": {
+    cli: "",
+    kernelOnly: true,
+    note: "No nvme-cli equivalent. The kernel sends Keep Alive commands periodically to prevent the controller from timing out the host connection. The interval is negotiated via the KATO (Keep Alive Timeout) feature. Only relevant for NVMe-oF (NVMe over Fabrics) connections.",
+  },
+  "admin-directive-send": {
+    cli: "nvme dir-send /dev/nvme0n1 -D 1 -O 1 -S 0",
+    note: "-D = directive type (1=Streams), -O = operation, -S = directive specific. Streams allow the host to hint which data belongs together, helping the SSD's garbage collector.",
+  },
+  "admin-directive-recv": {
+    cli: "nvme dir-receive /dev/nvme0n1 -D 1 -O 1 -S 0",
+    note: "-D = directive type, -O = operation. Used to query stream parameters from the controller.",
+  },
+  "admin-virt-mgmt": {
+    cli: "nvme virt-mgmt /dev/nvme0 --cntlid=1 --rt=0 --nr=4 --act=1",
+    note: "Manages SR-IOV virtual function resources. --act = action (1=primary flex, 7=secondary offline, 8=secondary online). Only on enterprise SSDs with SR-IOV support.",
+  },
+  "admin-doorbell-buf": {
+    cli: "",
+    kernelOnly: true,
+    note: "No nvme-cli equivalent. The kernel configures shadow doorbell buffers to reduce costly MMIO writes. Instead of writing to a PCIe register for every doorbell ring, the host writes to a shared memory buffer — the controller polls it. This is a performance optimization handled entirely by the driver.",
+  },
+  "admin-get-lba-status": {
+    cli: "nvme get-lba-status /dev/nvme0n1 --slba=0 --mndw=1024 --atype=0 --rl=100",
+    note: "--slba = starting LBA, --rl = range length. Returns which LBAs in the range are potentially unrecoverable (e.g., due to NAND failures beyond ECC capability).",
+  },
 };
 
 export default function AdminCommands() {
@@ -96,12 +137,13 @@ export default function AdminCommands() {
   const commands = getAdminCommands();
 
   const categories = [
-    { label: "Discovery", ids: ["admin-identify"] },
-    { label: "Queue Setup", ids: ["admin-create-sq", "admin-create-cq", "admin-delete-sq", "admin-delete-cq"] },
-    { label: "Features & Logs", ids: ["admin-get-features", "admin-set-features", "admin-get-log-page"] },
-    { label: "Firmware", ids: ["admin-fw-download", "admin-fw-commit"] },
+    { label: "Discovery", ids: ["admin-identify", "admin-get-lba-status"] },
+    { label: "Queue Setup", ids: ["admin-create-sq", "admin-create-cq", "admin-delete-sq", "admin-delete-cq", "admin-doorbell-buf"] },
+    { label: "Features & Logs", ids: ["admin-get-features", "admin-set-features", "admin-get-log-page", "admin-async-event"] },
+    { label: "Firmware", ids: ["admin-fw-download", "admin-fw-commit", "admin-self-test"] },
     { label: "Data Protection", ids: ["admin-format-nvm", "admin-sanitize", "admin-security-send", "admin-security-recv"] },
     { label: "Namespace Mgmt", ids: ["admin-ns-mgmt", "admin-ns-attach"] },
+    { label: "Operational", ids: ["admin-abort", "admin-keep-alive", "admin-directive-send", "admin-directive-recv", "admin-virt-mgmt"] },
   ];
 
   return (
@@ -165,6 +207,11 @@ export default function AdminCommands() {
                           <span className="text-text-secondary group-hover:text-text-primary transition-colors flex-1">
                             {cmd.name}
                           </span>
+                          {mapping?.kernelOnly && (
+                            <span className="text-[8px] font-mono text-text-muted bg-story-surface px-1.5 py-0.5 rounded">
+                              no CLI
+                            </span>
+                          )}
                           {mapping && (
                             <span className="text-text-muted text-[9px]">
                               {isExpanded ? "▲" : "▼"}
@@ -174,8 +221,13 @@ export default function AdminCommands() {
                         {isExpanded && mapping && (
                           <div className="mt-2 mb-2">
                             {mapping.kernelOnly ? (
-                              <div className="text-[11px] text-text-muted italic bg-story-surface rounded-lg px-3 py-2">
-                                {mapping.note}
+                              <div className="bg-story-surface rounded-lg px-3 py-2">
+                                <div className="text-[10px] font-mono text-nvme-amber font-bold mb-1">
+                                  No nvme-cli equivalent &mdash; kernel/driver only
+                                </div>
+                                <div className="text-[11px] text-text-muted italic">
+                                  {mapping.note}
+                                </div>
                               </div>
                             ) : (
                               <div className="text-[11px]">

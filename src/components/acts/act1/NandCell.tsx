@@ -64,7 +64,26 @@ function EnduranceVisual({ activeCell }: { activeCell: number }) {
   return (
     <div ref={ref} className="mt-6 pt-6 border-t border-story-border">
       <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
-        Why Cells Wear Out &mdash; P/E Cycles Explained
+        Endurance &mdash; How Long a Cell Lasts
+      </div>
+
+      {/* What is endurance */}
+      <div className="bg-nvme-blue/5 rounded-xl p-4 border border-nvme-blue/20 mb-6">
+        <p className="text-text-secondary text-sm leading-relaxed">
+          <strong className="text-text-primary">Endurance</strong> is a measure of how many times a NAND
+          cell can be written to and erased before it becomes unreliable. Every time you write data and later
+          erase the block to make room for new data, that counts as one <strong className="text-text-primary">
+          P/E (Program/Erase) cycle</strong>. The endurance rating (e.g., &ldquo;~100,000 P/E&rdquo;) tells
+          you the maximum number of these cycles the cell is designed to survive. After that, the cell&apos;s
+          oxide insulator is too damaged to reliably store charge, and bit errors increase beyond what error
+          correction can handle.
+        </p>
+        <p className="text-text-secondary text-xs mt-2 leading-relaxed">
+          <em className="text-text-primary">Why does this matter?</em> Because the cell type you choose
+          (SLC/MLC/TLC/QLC) directly determines how long the drive lasts. The current cell type
+          ({cell.name}) has an endurance of <strong className="text-text-primary">{cell.endurance}</strong> cycles.
+          Here&apos;s why:
+        </p>
       </div>
 
       {/* Oxide degradation animation */}
