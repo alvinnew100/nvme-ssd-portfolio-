@@ -10,6 +10,10 @@ const DwordFieldTable = dynamic(
   () => import("@/components/commands/DwordFieldTable"),
   { ssr: false }
 );
+const InteractiveHexDump = dynamic(
+  () => import("@/components/commands/InteractiveHexDump"),
+  { ssr: false }
+);
 
 interface CommandBuilderEmbedProps {
   presetId: string;
@@ -35,6 +39,7 @@ export default function CommandBuilderEmbed({
     setFieldValue,
     nsid,
     setNsid,
+    sqEntry,
     hexDump,
     ftraceLine,
     loadPreset,
@@ -150,15 +155,13 @@ export default function CommandBuilderEmbed({
               </div>
             )}
 
-            {/* Hex dump */}
-            {hexDump && (
+            {/* Interactive hex dump */}
+            {sqEntry && selectedCommand && (
               <div>
                 <div className="text-text-muted text-xs font-mono mb-2 uppercase tracking-wider">
                   64-Byte SQ Entry (Hex)
                 </div>
-                <pre className="text-text-code text-[11px] bg-story-surface rounded-lg p-4 overflow-x-auto font-mono">
-                  {hexDump}
-                </pre>
+                <InteractiveHexDump entry={sqEntry} command={selectedCommand} />
               </div>
             )}
 

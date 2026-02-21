@@ -16,6 +16,10 @@ const SQEntryVisualizer = dynamic(
   () => import("@/components/commands/SQEntryVisualizer"),
   { ssr: false }
 );
+const InteractiveHexDump = dynamic(
+  () => import("@/components/commands/InteractiveHexDump"),
+  { ssr: false }
+);
 const TraceInput = dynamic(
   () => import("@/components/trace-decoder/TraceInput"),
   { ssr: false }
@@ -62,6 +66,7 @@ export default function Playground() {
     setFieldValue,
     nsid,
     setNsid,
+    sqEntry,
     hexDump,
     ftraceLine,
     roundTripDecode,
@@ -239,15 +244,15 @@ export default function Playground() {
               <SQEntryVisualizer command={selectedCommand} />
             </div>
 
-            {/* Hex dump */}
-            {hexDump && (
+            {/* Interactive hex dump */}
+            {sqEntry && selectedCommand && (
               <div>
                 <div className="text-text-muted text-xs font-mono mb-2 uppercase tracking-wider">
                   64-Byte SQ Entry (Hex Dump)
                 </div>
-                <pre className="text-text-code text-[11px] bg-story-card rounded-2xl card-shadow p-6 overflow-x-auto font-mono">
-                  {hexDump}
-                </pre>
+                <div className="bg-story-card rounded-2xl card-shadow p-6">
+                  <InteractiveHexDump entry={sqEntry} command={selectedCommand} />
+                </div>
               </div>
             )}
 
