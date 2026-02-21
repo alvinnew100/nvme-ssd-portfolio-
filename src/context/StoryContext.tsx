@@ -18,7 +18,7 @@ export function StoryProvider({ children }: { children: React.ReactNode }) {
 
   const scrollToPlayground = useCallback((commandId: string) => {
     setPendingCommand(commandId);
-    const el = document.getElementById("lesson-12");
+    const el = document.getElementById("lesson-13");
     el?.scrollIntoView({ behavior: "smooth" });
   }, []);
 

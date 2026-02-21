@@ -17,44 +17,47 @@ import NandHierarchy from "@/components/acts/act1/NandHierarchy";
 import SsdOverview from "@/components/acts/act1/SsdOverview";
 import FTLBasics from "@/components/acts/act1/FTLBasics";
 
-// Lesson 4 — PCIe
+// Lesson 4 — SSD Internals
+import SsdInternals from "@/components/acts/act1/SsdInternals";
+
+// Lesson 5 — PCIe
 import PCIe from "@/components/acts/act2/PCIe";
 
-// Lesson 5 — BAR0, Queues, and Doorbells
+// Lesson 6 — BAR0, Queues, and Doorbells
 import BAR0 from "@/components/acts/act2/BAR0";
 import Queues from "@/components/acts/act2/Queues";
 import Doorbells from "@/components/acts/act2/Doorbells";
 
-// Lesson 6 — Boot Sequence and Bus Trace
+// Lesson 7 — Boot Sequence and Bus Trace
 import BootSequence from "@/components/acts/act2/BootSequence";
 import BusTrace from "@/components/acts/act2/BusTrace";
 
-// Lesson 7 — Command Structure
+// Lesson 8 — Command Structure
 import SQEStructure from "@/components/acts/act3/SQEStructure";
 import Identify from "@/components/acts/act3/Identify";
 import Namespaces from "@/components/acts/act3/Namespaces";
 
-// Lesson 8 — NVMe Commands
+// Lesson 9 — NVMe Commands
 import AdminCommands from "@/components/acts/act3/AdminCommands";
 import IOCommands from "@/components/acts/act3/IOCommands";
 
-// Lesson 9 — Error Handling and I/O Path
+// Lesson 10 — Error Handling and I/O Path
 import ErrorHandling from "@/components/acts/act3/ErrorHandling";
 import IOPathDiagram from "@/components/acts/act3/IOPathDiagram";
 
-// Lesson 10 — SMART, TRIM, and Drive Health
+// Lesson 11 — SMART, TRIM, and Drive Health
 import SMART from "@/components/acts/act4/SMART";
 import TRIM from "@/components/acts/act4/TRIM";
 import WriteAmplification from "@/components/acts/act4/WriteAmplification";
 import FormatSanitize from "@/components/acts/act4/FormatSanitize";
 import WearLeveling from "@/components/acts/act4/WearLeveling";
 
-// Lesson 11 — Storage Stack and Testing
+// Lesson 12 — Storage Stack and Testing
 import Filesystems from "@/components/acts/act5/Filesystems";
 import FioGuide from "@/components/acts/act5/FioGuide";
 import Testing from "@/components/acts/act5/Testing";
 
-// Lesson 12 — Advanced & Tools
+// Lesson 13 — Advanced & Tools
 import FirmwareUpdate from "@/components/acts/act5/FirmwareUpdate";
 import Security from "@/components/acts/act5/Security";
 import Passthru from "@/components/acts/act5/Passthru";
@@ -88,7 +91,8 @@ export default function HomePage() {
       <LessonDivider lesson={1} title="Bits, Bytes, and Addressing" id="lesson-1" />
       <LessonObjectives objectives={[
         "Understand binary and hexadecimal number systems and convert between them",
-        "Understand how LBA provides uniform storage addressing",
+        "Understand the data size hierarchy from bits to terabytes",
+        "Understand how LBA (Logical Block Addressing) provides a uniform interface to storage devices",
       ]} />
       <div id="sec-binary"><Binary /></div>
       <div id="sec-lba"><LBA /></div>
@@ -96,8 +100,9 @@ export default function HomePage() {
       {/* ===================== LESSON 2: NAND FLASH MEMORY ===================== */}
       <LessonDivider lesson={2} title="NAND Flash Memory" id="lesson-2" />
       <LessonObjectives objectives={[
-        "Understand how NAND cells store data using charge levels (SLC/MLC/TLC/QLC tradeoffs)",
-        "Understand the page/block/plane/die hierarchy and why erases are block-level",
+        "Understand how NAND cells store data using charge levels in floating-gate transistors",
+        "Compare SLC, MLC, TLC, and QLC tradeoffs (capacity vs speed vs endurance vs cost)",
+        "Understand the page/block/plane/die physical hierarchy and why erases are block-level",
       ]} />
       <div id="sec-nand"><NandCell /></div>
       <div id="sec-nand-hierarchy"><NandHierarchy /></div>
@@ -106,56 +111,69 @@ export default function HomePage() {
       <LessonDivider lesson={3} title="SSD Architecture and FTL" id="lesson-3" />
       <LessonObjectives objectives={[
         "Identify the major SSD components (controller, DRAM, NAND) and their roles",
-        "Understand how the FTL maps logical to physical addresses and why out-of-place writes are necessary",
+        "Understand how the FTL maps logical to physical addresses (L2P mapping)",
+        "Understand why out-of-place writes are necessary and how they create stale pages",
       ]} />
       <div id="sec-ssd"><SsdOverview /></div>
       <div id="sec-ftl"><FTLBasics /></div>
 
-      {/* ===================== LESSON 4: PCIe — THE HIGHWAY ===================== */}
-      <LessonDivider lesson={4} title="PCIe — The Highway" id="lesson-4" />
+      {/* ===================== LESSON 4: SSD INTERNALS ===================== */}
+      <LessonDivider lesson={4} title="SSD Internals — Block Management" id="lesson-4" />
+      <LessonObjectives objectives={[
+        "Understand Valid Page Count (VPC) and how GC uses it to select source blocks",
+        "Distinguish block types: dynamic, static, spare, source, dynamic spare, and static spare",
+        "Trace the block lifecycle from spare through garbage collection and back to the free pool",
+        "Understand queue depth and its impact on IOPS, latency, and NAND die utilization",
+      ]} />
+      <div id="sec-vpc"><SsdInternals /></div>
+
+      {/* ===================== LESSON 5: PCIe — THE HIGHWAY ===================== */}
+      <LessonDivider lesson={5} title="PCIe — The Highway" id="lesson-5" />
       <LessonObjectives objectives={[
         "Understand link speed (GT/s), link width (x1-x16), and how to calculate usable bandwidth",
-        "Understand how NVMe operations map to PCIe TLPs",
-        "Read an M.2 connector pinout",
+        "Understand how NVMe operations map to PCIe Transaction Layer Packets (TLPs)",
+        "Read an M.2 connector pinout and identify key signal groups",
       ]} />
       <div id="sec-pcie"><PCIe /></div>
 
-      {/* ===================== LESSON 5: BAR0, QUEUES, AND DOORBELLS ===================== */}
-      <LessonDivider lesson={5} title="BAR0, Queues, and Doorbells" id="lesson-5" />
+      {/* ===================== LESSON 6: BAR0, QUEUES, AND DOORBELLS ===================== */}
+      <LessonDivider lesson={6} title="BAR0, Queues, and Doorbells" id="lesson-6" />
       <LessonObjectives objectives={[
-        "Understand Memory-Mapped I/O (MMIO) and key BAR0 registers",
-        "Understand SQ/CQ circular buffer mechanics (head/tail pointers, phase bit)",
-        "Understand the doorbell notification mechanism",
+        "Understand Memory-Mapped I/O (MMIO) and key BAR0 registers (CC, CSTS, AQA)",
+        "Understand SQ/CQ circular buffer mechanics (head/tail pointers, phase bit, wrapping)",
+        "Understand the doorbell notification mechanism and how it triggers command processing",
       ]} />
       <div id="sec-bar0"><BAR0 /></div>
       <div id="sec-queues"><Queues /></div>
       <div id="sec-doorbells"><Doorbells /></div>
 
-      {/* ===================== LESSON 6: BOOT SEQUENCE AND BUS TRACE ===================== */}
-      <LessonDivider lesson={6} title="Boot Sequence and Bus Trace" id="lesson-6" />
+      {/* ===================== LESSON 7: BOOT SEQUENCE AND BUS TRACE ===================== */}
+      <LessonDivider lesson={7} title="Boot Sequence and Bus Trace" id="lesson-7" />
       <LessonObjectives objectives={[
         "Trace the complete NVMe boot sequence from PCIe enumeration to I/O queue creation",
         "Distinguish between MMIO writes, DMA transfers, and MSI-X interrupts in a real I/O flow",
+        "Read a PCIe bus trace and identify each transaction type",
       ]} />
       <div id="sec-boot"><BootSequence /></div>
       <div id="sec-bus-trace"><BusTrace /></div>
 
-      {/* ===================== LESSON 7: COMMAND STRUCTURE ===================== */}
-      <LessonDivider lesson={7} title="Command Structure" id="lesson-7" />
+      {/* ===================== LESSON 8: COMMAND STRUCTURE ===================== */}
+      <LessonDivider lesson={8} title="Command Structure" id="lesson-8" />
       <LessonObjectives objectives={[
-        "Understand the 64-byte SQE format and purpose of each DWord field",
-        "Know what Identify Controller/Namespace returns and why it matters",
+        "Understand the 64-byte SQE format and purpose of each DWord field (CDW0-CDW15)",
+        "Know what Identify Controller and Identify Namespace return and why they matter",
         "Understand NVMe namespaces as logical storage partitions",
       ]} />
       <div id="sec-sqe"><SQEStructure /></div>
       <div id="sec-identify"><Identify /></div>
       <div id="sec-namespaces"><Namespaces /></div>
 
-      {/* ===================== LESSON 8: NVMe COMMANDS ===================== */}
-      <LessonDivider lesson={8} title="NVMe Commands" id="lesson-8" />
+      {/* ===================== LESSON 9: NVMe COMMANDS ===================== */}
+      <LessonDivider lesson={9} title="NVMe Commands" id="lesson-9" />
       <LessonObjectives objectives={[
-        "Distinguish Admin commands (management) from I/O commands (data) and know common examples",
-        "Use the command builder to construct well-formed NVMe commands",
+        "Distinguish Admin commands (management) from I/O commands (data transfer) and know common examples",
+        "Know key Admin commands (Identify, Get Log Page, Create I/O Queue) and I/O commands (Read, Write, Flush)",
+        "Use the command builder to construct well-formed NVMe commands and see the raw 64-byte output",
       ]} />
       <div id="sec-admin-cmds"><AdminCommands /></div>
       <CommandBuilderEmbed
@@ -174,22 +192,24 @@ export default function HomePage() {
         description="Load a Read preset: 8 blocks starting at LBA 0."
       />
 
-      {/* ===================== LESSON 9: ERROR HANDLING AND I/O PATH ===================== */}
-      <LessonDivider lesson={9} title="Error Handling and the I/O Path" id="lesson-9" />
+      {/* ===================== LESSON 10: ERROR HANDLING AND I/O PATH ===================== */}
+      <LessonDivider lesson={10} title="Error Handling and the I/O Path" id="lesson-10" />
       <LessonObjectives objectives={[
         "Interpret NVMe Completion Queue status codes for common errors",
-        "Trace a 4KB read through all layers of the Linux I/O stack",
+        "Trace a 4KB read through all 10 layers of the Linux I/O stack",
+        "Identify where latency is spent at each layer (NAND read dominates at ~87%)",
       ]} />
       <div id="sec-errors"><ErrorHandling /></div>
       <div id="sec-io-path"><IOPathDiagram /></div>
 
-      {/* ===================== LESSON 10: SMART, TRIM, AND DRIVE HEALTH ===================== */}
-      <LessonDivider lesson={10} title="SMART, TRIM, and Drive Health" id="lesson-10" />
+      {/* ===================== LESSON 11: SMART, TRIM, AND DRIVE HEALTH ===================== */}
+      <LessonDivider lesson={11} title="SMART, TRIM, and Drive Health" id="lesson-11" />
       <LessonObjectives objectives={[
-        "Read and interpret SMART health data using nvme-cli",
-        "Understand how TRIM reduces write amplification and extends drive life",
-        "Explain WAF and factors that affect it (TRIM, fullness, workload)",
-        "Know when to use Format NVM vs Sanitize",
+        "Read and interpret all 14 SMART health fields using nvme-cli",
+        "Understand how TRIM bridges the filesystem-SSD information gap and reduces write amplification",
+        "Explain Write Amplification Factor (WAF) and the factors that affect it (TRIM, fullness, workload)",
+        "Understand wear leveling (dynamic vs static) and P/E cycle endurance by cell type",
+        "Know when to use Format NVM vs Sanitize and the difference between them",
       ]} />
       <div id="sec-smart"><SMART /></div>
       <CommandBuilderEmbed
@@ -204,24 +224,24 @@ export default function HomePage() {
       <div id="sec-format-sanitize"><FormatSanitize /></div>
       <div id="sec-wear"><WearLeveling /></div>
 
-      {/* ===================== LESSON 11: STORAGE STACK AND TESTING ===================== */}
-      <LessonDivider lesson={11} title="Storage Stack and Testing" id="lesson-11" />
+      {/* ===================== LESSON 12: STORAGE STACK AND TESTING ===================== */}
+      <LessonDivider lesson={12} title="Storage Stack and Testing" id="lesson-12" />
       <LessonObjectives objectives={[
-        "Understand how filesystems translate files to LBAs and how filesystem choice affects SSD performance",
-        "Construct fio workloads and interpret benchmark results",
-        "Test NVMe drives for correctness and performance",
+        "Understand how filesystems (ext4, XFS, Btrfs) translate files to LBAs and affect SSD performance",
+        "Construct fio workloads targeting specific I/O patterns and interpret benchmark results",
+        "Test NVMe drives for correctness, performance, and endurance",
       ]} />
       <div id="sec-filesystems"><Filesystems /></div>
       <div id="sec-fio"><FioGuide /></div>
       <div id="sec-testing"><Testing /></div>
 
-      {/* ===================== LESSON 12: ADVANCED FEATURES AND TOOLS ===================== */}
-      <LessonDivider lesson={12} title="Advanced Features and Tools" id="lesson-12" />
+      {/* ===================== LESSON 13: ADVANCED FEATURES AND TOOLS ===================== */}
+      <LessonDivider lesson={13} title="Advanced Features and Tools" id="lesson-13" />
       <LessonObjectives objectives={[
-        "Understand firmware update process and security features (TCG Opal)",
-        "Use passthru to send raw vendor commands",
-        "Use ftrace/blktrace to debug I/O performance",
-        "Use the Command Playground to explore any NVMe command",
+        "Understand the firmware update process and security features (TCG Opal, Secure Erase)",
+        "Use NVMe passthru to send raw vendor-specific commands",
+        "Use ftrace and blktrace to trace and debug I/O performance",
+        "Explore any NVMe command interactively using the Command Playground",
       ]} />
       <div id="sec-firmware"><FirmwareUpdate /></div>
       <div id="sec-security"><Security /></div>

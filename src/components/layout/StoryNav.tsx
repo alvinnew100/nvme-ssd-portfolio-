@@ -26,59 +26,63 @@ const NAV_ITEMS: NavItem[] = [
   { id: "sec-ssd", label: "SSD Overview", lessonIndex: 2 },
   { id: "sec-ftl", label: "FTL", lessonIndex: 2 },
 
-  // Lesson 4: PCIe — The Highway
-  { id: "lesson-4", label: "PCIe", isLesson: true, lessonNum: 4, lessonIndex: 3 },
-  { id: "sec-pcie", label: "PCIe", lessonIndex: 3 },
+  // Lesson 4: SSD Internals — Block Management
+  { id: "lesson-4", label: "SSD Internals", isLesson: true, lessonNum: 4, lessonIndex: 3 },
+  { id: "sec-vpc", label: "VPC & Blocks", lessonIndex: 3 },
 
-  // Lesson 5: BAR0, Queues, and Doorbells
-  { id: "lesson-5", label: "BAR0 & Queues", isLesson: true, lessonNum: 5, lessonIndex: 4 },
-  { id: "sec-bar0", label: "BAR0 Registers", lessonIndex: 4 },
-  { id: "sec-queues", label: "Queues", lessonIndex: 4 },
-  { id: "sec-doorbells", label: "Doorbells", lessonIndex: 4 },
+  // Lesson 5: PCIe — The Highway
+  { id: "lesson-5", label: "PCIe", isLesson: true, lessonNum: 5, lessonIndex: 4 },
+  { id: "sec-pcie", label: "PCIe", lessonIndex: 4 },
 
-  // Lesson 6: Boot Sequence and Bus Trace
-  { id: "lesson-6", label: "Boot & Bus Trace", isLesson: true, lessonNum: 6, lessonIndex: 5 },
-  { id: "sec-boot", label: "Boot Sequence", lessonIndex: 5 },
-  { id: "sec-bus-trace", label: "Bus Trace", lessonIndex: 5 },
+  // Lesson 6: BAR0, Queues, and Doorbells
+  { id: "lesson-6", label: "BAR0 & Queues", isLesson: true, lessonNum: 6, lessonIndex: 5 },
+  { id: "sec-bar0", label: "BAR0 Registers", lessonIndex: 5 },
+  { id: "sec-queues", label: "Queues", lessonIndex: 5 },
+  { id: "sec-doorbells", label: "Doorbells", lessonIndex: 5 },
 
-  // Lesson 7: Command Structure
-  { id: "lesson-7", label: "Command Structure", isLesson: true, lessonNum: 7, lessonIndex: 6 },
-  { id: "sec-sqe", label: "SQE Structure", lessonIndex: 6 },
-  { id: "sec-identify", label: "Identify", lessonIndex: 6 },
-  { id: "sec-namespaces", label: "Namespaces", lessonIndex: 6 },
+  // Lesson 7: Boot Sequence and Bus Trace
+  { id: "lesson-7", label: "Boot & Bus Trace", isLesson: true, lessonNum: 7, lessonIndex: 6 },
+  { id: "sec-boot", label: "Boot Sequence", lessonIndex: 6 },
+  { id: "sec-bus-trace", label: "Bus Trace", lessonIndex: 6 },
 
-  // Lesson 8: NVMe Commands
-  { id: "lesson-8", label: "NVMe Commands", isLesson: true, lessonNum: 8, lessonIndex: 7 },
-  { id: "sec-admin-cmds", label: "Admin Cmds", lessonIndex: 7 },
-  { id: "sec-io-cmds", label: "I/O Cmds", lessonIndex: 7 },
+  // Lesson 8: Command Structure
+  { id: "lesson-8", label: "Command Structure", isLesson: true, lessonNum: 8, lessonIndex: 7 },
+  { id: "sec-sqe", label: "SQE Structure", lessonIndex: 7 },
+  { id: "sec-identify", label: "Identify", lessonIndex: 7 },
+  { id: "sec-namespaces", label: "Namespaces", lessonIndex: 7 },
 
-  // Lesson 9: Error Handling and I/O Path
-  { id: "lesson-9", label: "Errors & I/O Path", isLesson: true, lessonNum: 9, lessonIndex: 8 },
-  { id: "sec-errors", label: "Errors", lessonIndex: 8 },
-  { id: "sec-io-path", label: "I/O Path", lessonIndex: 8 },
+  // Lesson 9: NVMe Commands
+  { id: "lesson-9", label: "NVMe Commands", isLesson: true, lessonNum: 9, lessonIndex: 8 },
+  { id: "sec-admin-cmds", label: "Admin Cmds", lessonIndex: 8 },
+  { id: "sec-io-cmds", label: "I/O Cmds", lessonIndex: 8 },
 
-  // Lesson 10: SMART, TRIM, and Drive Health
-  { id: "lesson-10", label: "Drive Health", isLesson: true, lessonNum: 10, lessonIndex: 9 },
-  { id: "sec-smart", label: "SMART", lessonIndex: 9 },
-  { id: "sec-trim", label: "TRIM & GC", lessonIndex: 9 },
-  { id: "sec-waf", label: "Write Amplification", lessonIndex: 9 },
-  { id: "sec-format-sanitize", label: "Format & Sanitize", lessonIndex: 9 },
-  { id: "sec-wear", label: "Wear Leveling", lessonIndex: 9 },
+  // Lesson 10: Error Handling and I/O Path
+  { id: "lesson-10", label: "Errors & I/O Path", isLesson: true, lessonNum: 10, lessonIndex: 9 },
+  { id: "sec-errors", label: "Errors", lessonIndex: 9 },
+  { id: "sec-io-path", label: "I/O Path", lessonIndex: 9 },
 
-  // Lesson 11: Storage Stack and Testing
-  { id: "lesson-11", label: "Storage & Testing", isLesson: true, lessonNum: 11, lessonIndex: 10 },
-  { id: "sec-filesystems", label: "Filesystems", lessonIndex: 10 },
-  { id: "sec-fio", label: "fio Guide", lessonIndex: 10 },
-  { id: "sec-testing", label: "Testing", lessonIndex: 10 },
+  // Lesson 11: SMART, TRIM, and Drive Health
+  { id: "lesson-11", label: "Drive Health", isLesson: true, lessonNum: 11, lessonIndex: 10 },
+  { id: "sec-smart", label: "SMART", lessonIndex: 10 },
+  { id: "sec-trim", label: "TRIM & GC", lessonIndex: 10 },
+  { id: "sec-waf", label: "Write Amplification", lessonIndex: 10 },
+  { id: "sec-format-sanitize", label: "Format & Sanitize", lessonIndex: 10 },
+  { id: "sec-wear", label: "Wear Leveling", lessonIndex: 10 },
 
-  // Lesson 12: Advanced Features and Tools
-  { id: "lesson-12", label: "Advanced & Tools", isLesson: true, lessonNum: 12, lessonIndex: 11 },
-  { id: "sec-firmware", label: "Firmware", lessonIndex: 11 },
-  { id: "sec-security", label: "Security", lessonIndex: 11 },
-  { id: "sec-passthru", label: "Passthru", lessonIndex: 11 },
-  { id: "sec-tracing", label: "Tracing", lessonIndex: 11 },
-  { id: "sec-command-ref", label: "Command Ref", lessonIndex: 11 },
-  { id: "sec-playground", label: "Playground", lessonIndex: 11 },
+  // Lesson 12: Storage Stack and Testing
+  { id: "lesson-12", label: "Storage & Testing", isLesson: true, lessonNum: 12, lessonIndex: 11 },
+  { id: "sec-filesystems", label: "Filesystems", lessonIndex: 11 },
+  { id: "sec-fio", label: "fio Guide", lessonIndex: 11 },
+  { id: "sec-testing", label: "Testing", lessonIndex: 11 },
+
+  // Lesson 13: Advanced Features and Tools
+  { id: "lesson-13", label: "Advanced & Tools", isLesson: true, lessonNum: 13, lessonIndex: 12 },
+  { id: "sec-firmware", label: "Firmware", lessonIndex: 12 },
+  { id: "sec-security", label: "Security", lessonIndex: 12 },
+  { id: "sec-passthru", label: "Passthru", lessonIndex: 12 },
+  { id: "sec-tracing", label: "Tracing", lessonIndex: 12 },
+  { id: "sec-command-ref", label: "Command Ref", lessonIndex: 12 },
+  { id: "sec-playground", label: "Playground", lessonIndex: 12 },
 ];
 
 export default function StoryNav() {

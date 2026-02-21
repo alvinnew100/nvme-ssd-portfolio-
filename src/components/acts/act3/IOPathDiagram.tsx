@@ -53,7 +53,7 @@ const IO_LAYERS = [
     id: 4,
     name: "NVMe Driver",
     detail: "The driver builds the 64-byte SQ entry: opcode=0x02 (Read), SLBA in CDW10-11, NLB in CDW12, and PRP pointers to the host buffer where data should be delivered.",
-    why: "This is where everything we learned in Lesson 7 comes together — the driver fills out the 64-byte command form and places it in the Submission Queue in host RAM.",
+    why: "This is where everything we learned in Lesson 8 comes together — the driver fills out the 64-byte command form and places it in the Submission Queue in host RAM.",
     color: "#00b894",
     icon: "DRV",
     zone: "driver",

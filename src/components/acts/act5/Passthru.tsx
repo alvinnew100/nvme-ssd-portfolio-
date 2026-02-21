@@ -632,7 +632,7 @@ export default function Passthru() {
           &ldquo;Passthru&rdquo; means &ldquo;pass this raw command through to the
           drive without the driver trying to interpret it.&rdquo; You specify the
           opcode and CDW values directly — the same dword fields we learned about
-          in the SQE structure from Lesson 7.
+          in the SQE structure from Lesson 8.
         </p>
         <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
           <em className="text-text-primary">But where do you get the opcodes and CDW
@@ -650,7 +650,7 @@ export default function Passthru() {
           </div>
           <p className="text-text-secondary text-xs leading-relaxed mb-4">
             <em className="text-text-primary">Remember the 64-byte Submission Queue Entry
-            from Lesson 7?</em> Every NVMe command is a 64-byte structure with 16 dwords
+            from Lesson 8?</em> Every NVMe command is a 64-byte structure with 16 dwords
             (DW0-DW15). When you use <code className="text-text-code">nvme admin-passthru</code>,
             you&apos;re manually filling in those dwords. Here&apos;s how each passthru
             flag maps to the SQE:

@@ -147,7 +147,7 @@ export default function WearLeveling() {
               <p className="text-text-muted text-[10px] italic">
                 <em>Limitation:</em> cold data (rarely written) might sit on low-wear{" "}
                 <strong>static blocks</strong> forever, wasting their remaining P/E cycles.
-                See Lesson 3 for the complete block type taxonomy.
+                See Lesson 4 for the complete block type taxonomy.
               </p>
             </div>
             <div className="bg-story-surface rounded-xl p-4">
