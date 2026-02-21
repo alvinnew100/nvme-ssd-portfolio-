@@ -96,7 +96,7 @@ export default function TRIM() {
     <SectionWrapper className="py-24 px-4 bg-story-surface">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
-          TRIM &amp; Garbage Collection &mdash; Keeping the SSD Fast
+          TRIM and GC &mdash; Keeping the SSD Fast
         </h3>
 
         {/* ─── Section 1: The Problem ─── */}

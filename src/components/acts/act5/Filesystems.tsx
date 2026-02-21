@@ -287,6 +287,69 @@ export default function Filesystems() {
                 (decompression is fast on modern CPUs). Downside: uses CPU time.
               </p>
             </div>
+
+            <div className="bg-story-surface rounded-xl p-4">
+              <div className="font-mono font-bold text-nvme-red text-sm mb-1">TRIM Support Levels</div>
+              <p className="text-text-secondary text-xs leading-relaxed mb-3">
+                In the comparison table, you&apos;ll see TRIM support labeled as &ldquo;Basic&rdquo; or &ldquo;Full.&rdquo;
+                Here&apos;s what each level means and how TRIM can be delivered to the SSD:
+              </p>
+              <div className="bg-story-card rounded-lg p-3 mb-3">
+                <div className="text-text-muted text-[10px] font-mono mb-2 uppercase">TRIM delivery methods:</div>
+                <div className="space-y-2 text-[11px]">
+                  <div className="flex items-start gap-2">
+                    <code className="text-nvme-blue font-mono font-bold flex-shrink-0">discard</code>
+                    <span className="text-text-muted">
+                      <strong className="text-text-primary">Continuous TRIM.</strong> A mount option (<code className="text-text-code">mount -o discard</code>)
+                      that sends TRIM commands to the SSD immediately whenever a file is deleted. The SSD always knows
+                      which blocks are free, but each delete operation takes slightly longer because it waits for the
+                      TRIM command to complete.
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <code className="text-nvme-green font-mono font-bold flex-shrink-0">fstrim</code>
+                    <span className="text-text-muted">
+                      <strong className="text-text-primary">Periodic/batched TRIM.</strong> A command (<code className="text-text-code">sudo fstrim -v /</code>)
+                      that scans the filesystem for all free space and sends TRIM for everything at once. Usually run
+                      weekly via a systemd timer (<code className="text-text-code">fstrim.timer</code>). More efficient
+                      because the SSD receives one large batch instead of many small TRIMs. No impact on normal file operations.
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <code className="text-nvme-violet font-mono font-bold flex-shrink-0">async</code>
+                    <span className="text-text-muted">
+                      <strong className="text-text-primary">Asynchronous discard (Btrfs only).</strong> A newer approach
+                      (<code className="text-text-code">mount -o discard=async</code>) that queues TRIM commands and sends
+                      them in batches during idle time, instead of blocking on every delete. Combines the best of both:
+                      near-continuous TRIM awareness without the per-delete latency penalty. This is the recommended mode
+                      for Btrfs on NVMe.
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-story-card rounded-lg p-3">
+                <div className="text-text-muted text-[10px] font-mono mb-2 uppercase">Support levels in the table:</div>
+                <div className="space-y-1.5 text-[11px]">
+                  <div className="flex items-start gap-2">
+                    <span className="text-text-muted font-mono font-bold flex-shrink-0 w-8">Basic</span>
+                    <span className="text-text-muted">
+                      Only supports <code className="text-text-code">fstrim</code> (periodic batched TRIM). Does not
+                      support the <code className="text-text-code">discard</code> mount option for continuous TRIM.
+                      ext2 and ext3 fall here &mdash; they can tell the SSD about free space, but only when you manually
+                      run fstrim.
+                    </span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="text-nvme-blue font-mono font-bold flex-shrink-0 w-8">Full</span>
+                    <span className="text-text-muted">
+                      Supports both <code className="text-text-code">discard</code> (continuous) and <code className="text-text-code">fstrim</code>{" "}
+                      (periodic). ext4 and XFS support both modes. Btrfs goes further with{" "}
+                      <code className="text-text-code">discard=async</code> for batched asynchronous TRIM.
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -441,12 +504,6 @@ export default function Filesystems() {
           amplification but also improves crash consistency.
         </InfoCard>
 
-        <InfoCard variant="note" title="Sources">
-          Filesystem specifications and behaviors referenced from: Linux kernel
-          documentation (kernel.org/doc), ext4 wiki (ext4.wiki.kernel.org), XFS
-          documentation (xfs.org), Btrfs wiki (btrfs.wiki.kernel.org), and the
-          SNIA NVM Programming Model specification.
-        </InfoCard>
       </div>
     </SectionWrapper>
   );

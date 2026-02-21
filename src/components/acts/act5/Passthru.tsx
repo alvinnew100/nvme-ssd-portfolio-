@@ -98,6 +98,9 @@ function LittleEndianAnimator() {
           {/* ─── Step 1: Decimal ─── */}
           {step === 0 && (
             <div className="text-center py-4">
+              <div className="text-nvme-blue text-[10px] font-mono font-bold mb-3 uppercase tracking-wider">
+                Starting value (decimal)
+              </div>
               <div className="text-5xl font-bold text-text-primary font-mono mb-3">
                 {decimal.toLocaleString()}
               </div>
@@ -114,6 +117,9 @@ function LittleEndianAnimator() {
           {/* ─── Step 2: Hex conversion ─── */}
           {step === 1 && (
             <div>
+              <div className="text-nvme-blue text-[10px] font-mono font-bold mb-2 uppercase tracking-wider text-center">
+                Decimal to hexadecimal conversion
+              </div>
               <p className="text-text-muted text-[10px] mb-3">
                 To convert decimal to hex, divide by 16 repeatedly. Each remainder becomes a hex digit.
                 {decimal >= 10 && " Remainders 10-15 use letters: 10=A, 11=B, 12=C, 13=D, 14=E, 15=F."}
@@ -176,23 +182,26 @@ function LittleEndianAnimator() {
           {/* ─── Step 3: Byte split ─── */}
           {step === 2 && (
             <div className="text-center py-2">
+              <div className="text-nvme-blue text-[10px] font-mono font-bold mb-2 uppercase tracking-wider">
+                Split into bytes (big-endian order)
+              </div>
               <p className="text-text-muted text-[10px] mb-4">
                 A byte is 8 bits = 2 hex digits. Split the hex value into pairs of 2 digits, each pair = 1 byte.
               </p>
               <div className="font-mono text-lg mb-2 text-text-secondary">
                 {hexStr.replace("0x", "")}
               </div>
-              <div className="flex items-center justify-center gap-0 mb-4">
+              <div className="flex items-center justify-center gap-2 mb-2">
                 {beBytes.map((b, i) => (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.15, type: "spring", stiffness: 300, damping: 25 }}
-                    className="flex flex-col items-center"
+                    className="flex items-center gap-2"
                   >
-                    {i > 0 && <span className="text-text-muted text-xs mx-1">|</span>}
-                    <div className={`bg-story-card rounded-lg px-4 py-3 mx-0.5 ${
+                    {i > 0 && <span className="text-text-muted text-xs">|</span>}
+                    <div className={`bg-story-card rounded-lg px-4 py-3 ${
                       b !== "00" ? "ring-1 ring-nvme-green/30" : ""
                     }`}>
                       <div className={`text-xl font-bold ${b !== "00" ? "text-nvme-green" : "text-text-muted"}`}>
@@ -203,8 +212,15 @@ function LittleEndianAnimator() {
                   </motion.div>
                 ))}
               </div>
+              <div className="flex items-center justify-center gap-1 mb-4">
+                <span className="text-text-muted text-[9px] font-mono">MSB (Byte 0)</span>
+                <span className="text-text-muted text-[9px]">&larr;</span>
+                <span className="flex-1 border-t border-dashed border-text-muted/30" />
+                <span className="text-text-muted text-[9px]">&rarr;</span>
+                <span className="text-text-muted text-[9px] font-mono">LSB (Byte 3)</span>
+              </div>
               <p className="text-text-muted text-[10px]">
-                4 bytes = 32 bits. This is the &ldquo;big-endian&rdquo; order — most significant byte first (how humans read it).
+                4 bytes = 32 bits. This is the &ldquo;big-endian&rdquo; order &mdash; most significant byte first (how humans read it).
               </p>
             </div>
           )}
@@ -212,6 +228,9 @@ function LittleEndianAnimator() {
           {/* ─── Step 4: Reverse ─── */}
           {step === 3 && (
             <div className="text-center py-2">
+              <div className="text-nvme-green text-[10px] font-mono font-bold mb-2 uppercase tracking-wider">
+                Reverse byte order &rarr; little-endian
+              </div>
               <p className="text-text-muted text-[10px] mb-4">
                 Little-endian means &ldquo;little end first&rdquo; — the <strong className="text-text-primary">least significant byte</strong> goes
                 to the <strong className="text-text-primary">lowest memory address</strong>. So we reverse the byte order:

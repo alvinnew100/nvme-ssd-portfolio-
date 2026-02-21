@@ -113,31 +113,135 @@ function M2ConnectorVisual() {
         </div>
       </div>
 
-      {/* Pin legend */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[10px]">
-        <div className="flex items-center gap-2">
-          <span className="w-3 h-3 rounded-sm bg-[#00d4aa]" />
-          <span className="text-text-muted"><strong className="text-text-primary">Lane 0</strong> — TX+, TX-, RX+, RX-</span>
+      {/* Dual view: horizontal (above) + vertical schematic */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+        {/* Pin legend */}
+        <div>
+          <div className="text-text-muted text-[9px] font-mono mb-2 uppercase tracking-wider">Pin color legend</div>
+          <div className="grid grid-cols-2 gap-2 text-[10px]">
+            <div className="flex items-center gap-2">
+              <span className="w-3 h-3 rounded-sm bg-[#00d4aa]" />
+              <span className="text-text-muted"><strong className="text-text-primary">Lane 0</strong> — TX+, TX-, RX+, RX-</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-3 h-3 rounded-sm bg-[#38bdf8]" />
+              <span className="text-text-muted"><strong className="text-text-primary">Lane 1</strong> — TX+, TX-, RX+, RX-</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-3 h-3 rounded-sm bg-[#7c5cfc]" />
+              <span className="text-text-muted"><strong className="text-text-primary">Lane 2</strong> — TX+, TX-, RX+, RX-</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-3 h-3 rounded-sm bg-[#f5a623]" />
+              <span className="text-text-muted"><strong className="text-text-primary">Lane 3</strong> — TX+, TX-, RX+, RX-</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-3 h-3 rounded-sm bg-[#ef4444]" />
+              <span className="text-text-muted"><strong className="text-text-primary">3.3V</strong> — Power supply</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-3 h-3 rounded-sm bg-[#475569]" />
+              <span className="text-text-muted"><strong className="text-text-primary">GND</strong> — Ground</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-3 h-3 rounded-sm bg-[#94a3b8]" />
+              <span className="text-text-muted"><strong className="text-text-primary">Ctrl</strong> — Clock, Reset, SMBUS</span>
+            </div>
+          </div>
         </div>
-        <div className="flex items-center gap-2">
-          <span className="w-3 h-3 rounded-sm bg-[#38bdf8]" />
-          <span className="text-text-muted"><strong className="text-text-primary">Lane 1</strong> — TX+, TX-, RX+, RX-</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="w-3 h-3 rounded-sm bg-[#7c5cfc]" />
-          <span className="text-text-muted"><strong className="text-text-primary">Lane 2</strong> — TX+, TX-, RX+, RX-</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="w-3 h-3 rounded-sm bg-[#f5a623]" />
-          <span className="text-text-muted"><strong className="text-text-primary">Lane 3</strong> — TX+, TX-, RX+, RX-</span>
+
+        {/* Vertical schematic view */}
+        <div>
+          <div className="text-text-muted text-[9px] font-mono mb-2 uppercase tracking-wider">Vertical schematic (side view)</div>
+          <div className="bg-story-dark rounded-xl p-4">
+            <div className="flex gap-3">
+              {/* M.2 SSD body (vertical) */}
+              <motion.div
+                className="bg-story-surface/10 border border-story-border/30 rounded-lg w-20 flex items-center justify-center"
+                initial={{ opacity: 0, x: -10 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ delay: 0.5 }}
+              >
+                <span className="text-text-muted text-[8px] font-mono [writing-mode:vertical-lr] rotate-180">M.2 2280 NVMe SSD</span>
+              </motion.div>
+
+              {/* Pin rows (vertical layout) */}
+              <div className="flex flex-col gap-[2px] flex-1">
+                {[
+                  { label: "GND", color: "#475569", pins: "1-3" },
+                  { label: "3.3V", color: "#ef4444", pins: "4-5" },
+                  { label: "Lane 0 TX+", color: "#00d4aa", pins: "6" },
+                  { label: "Lane 0 TX-", color: "#00d4aa", pins: "7" },
+                  { label: "Lane 0 RX+", color: "#00d4aa", pins: "8" },
+                  { label: "Lane 0 RX-", color: "#00d4aa", pins: "9" },
+                  { label: "Lane 1 TX+", color: "#38bdf8", pins: "10" },
+                  { label: "Lane 1 TX-", color: "#38bdf8", pins: "11" },
+                  { label: "Lane 1 RX+", color: "#38bdf8", pins: "12" },
+                  { label: "Lane 1 RX-", color: "#38bdf8", pins: "13" },
+                  { label: "GND", color: "#475569", pins: "14-15" },
+                  { label: "M-KEY NOTCH", color: "transparent", pins: "", isNotch: true },
+                  { label: "Lane 2 TX+", color: "#7c5cfc", pins: "39" },
+                  { label: "Lane 2 TX-", color: "#7c5cfc", pins: "40" },
+                  { label: "Lane 2 RX+", color: "#7c5cfc", pins: "41" },
+                  { label: "Lane 2 RX-", color: "#7c5cfc", pins: "42" },
+                  { label: "Lane 3 TX+", color: "#f5a623", pins: "43" },
+                  { label: "Lane 3 TX-", color: "#f5a623", pins: "44" },
+                  { label: "Lane 3 RX+", color: "#f5a623", pins: "45" },
+                  { label: "Lane 3 RX-", color: "#f5a623", pins: "46" },
+                  { label: "GND", color: "#475569", pins: "47-48" },
+                  { label: "REFCLK+/-", color: "#94a3b8", pins: "49-50" },
+                  { label: "PERST#", color: "#94a3b8", pins: "51" },
+                  { label: "3.3V", color: "#ef4444", pins: "52-53" },
+                ].map((pin, i) => (
+                  <motion.div
+                    key={i}
+                    className="flex items-center gap-1"
+                    initial={{ opacity: 0, x: 5 }}
+                    animate={inView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ delay: 0.5 + i * 0.02 }}
+                  >
+                    {pin.isNotch ? (
+                      <div className="flex-1 h-3 border-y border-dashed border-text-muted/30 flex items-center justify-center">
+                        <span className="text-text-muted text-[7px] font-mono">M-Key Notch (pins 16-38)</span>
+                      </div>
+                    ) : (
+                      <>
+                        <div
+                          className="w-full h-3 rounded-sm flex items-center"
+                          style={{ backgroundColor: `${pin.color}25`, borderLeft: `3px solid ${pin.color}` }}
+                        >
+                          <span className="text-[7px] font-mono ml-1 truncate" style={{ color: pin.color }}>
+                            {pin.label}
+                          </span>
+                        </div>
+                        <span className="text-text-muted text-[6px] font-mono w-8 text-right flex-shrink-0">{pin.pins}</span>
+                      </>
+                    )}
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Motherboard slot indicator */}
+            <motion.div
+              className="mt-2 bg-story-surface/10 border border-story-border/30 rounded-lg px-3 py-1.5 text-center"
+              initial={{ opacity: 0 }}
+              animate={inView ? { opacity: 1 } : {}}
+              transition={{ delay: 1 }}
+            >
+              <span className="text-text-muted text-[8px] font-mono">&darr; Inserts into M.2 slot on motherboard &darr;</span>
+            </motion.div>
+          </div>
         </div>
       </div>
+
       <p className="text-text-muted text-[10px] mt-3 leading-relaxed">
         Each PCIe lane uses 4 physical contacts: <strong className="text-text-primary">TX+/TX-</strong> (transmit
         differential pair) and <strong className="text-text-primary">RX+/RX-</strong> (receive differential pair).
         The differential signaling (two wires carrying opposite signals) allows the receiver to cancel out
         noise — this is how PCIe achieves multi-GHz speeds over a short PCB trace. An x4 NVMe SSD uses
-        4 lanes = 16 signal contacts + ground, power, clock, and control pins.
+        4 lanes = 16 signal contacts + ground, power, clock, and control pins. The <strong className="text-text-primary">
+        M-key notch</strong> (pins 16-38 are absent) prevents inserting a SATA M.2 drive into an NVMe-only slot.
       </p>
     </div>
   );
@@ -262,24 +366,42 @@ export default function PCIe() {
           </div>
 
           {/* Result */}
-          <div className="bg-gradient-to-r from-nvme-blue/5 to-nvme-green/5 rounded-xl p-6 flex items-center justify-between mb-6">
-            <div>
-              <div className="text-text-muted text-xs font-mono">
-                {gen.gen} x{selectedLanes} &middot; {gen.gts} GT/s &middot; {gen.encoding}
+          <div className="bg-gradient-to-r from-nvme-blue/5 to-nvme-green/5 rounded-xl p-6 mb-6">
+            <div className="flex items-center justify-between mb-4">
+              <div>
+                <div className="text-text-muted text-xs font-mono">
+                  {gen.gen} x{selectedLanes} &middot; {gen.gts} GT/s &middot; {gen.encoding}
+                </div>
+                <div className="text-4xl font-bold text-text-primary mt-1">
+                  {throughput.toFixed(1)} <span className="text-lg text-text-muted">GB/s</span>
+                </div>
+                <div className="text-text-muted text-[10px] mt-0.5">
+                  Bandwidth &mdash; total usable data throughput
+                </div>
               </div>
-              <div className="text-4xl font-bold text-text-primary mt-1">
-                {throughput.toFixed(1)} <span className="text-lg text-text-muted">GB/s</span>
+              <div className="text-right">
+                <div className="text-text-muted text-xs">Per lane</div>
+                <div className="text-text-secondary font-mono">
+                  {(throughput / selectedLanes).toFixed(2)} GB/s
+                </div>
+                <div className="text-text-muted text-xs mt-2">Link speed (per lane)</div>
+                <div className="text-text-secondary font-mono">
+                  {gen.gts} GT/s
+                </div>
+                <div className="text-text-muted text-[9px]">
+                  fixed by generation
+                </div>
               </div>
             </div>
-            <div className="text-right">
-              <div className="text-text-muted text-xs">Per lane</div>
-              <div className="text-text-secondary font-mono">
-                {(throughput / selectedLanes).toFixed(2)} GB/s
-              </div>
-              <div className="text-text-muted text-xs mt-2">Transfer rate</div>
-              <div className="text-text-secondary font-mono">
-                {gen.gts} GT/s
-              </div>
+            <div className="bg-story-card/50 rounded-lg p-3 text-[10px] text-text-muted leading-relaxed">
+              <strong className="text-text-primary">Why does link speed stay the same when lanes change?</strong>{" "}
+              Link speed ({gen.gts} GT/s) is a property of the <em>generation</em> &mdash; it&apos;s how
+              fast each individual lane runs. Changing the number of lanes doesn&apos;t make each lane faster;
+              it adds more parallel paths. <strong className="text-text-primary">Bandwidth</strong> (the total
+              data throughput, measured in GB/s) is what increases &mdash; it equals link speed &times; lane
+              count &times; encoding efficiency. Think of it like a highway: adding more lanes doesn&apos;t
+              increase the speed limit (link speed), but it does increase how many cars can pass per minute
+              (bandwidth).
             </div>
           </div>
 
