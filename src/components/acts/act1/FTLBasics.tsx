@@ -50,20 +50,28 @@ export default function FTLBasics() {
           The Flash Translation Layer (FTL)
         </h3>
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
-          The host sees a clean, linear address space (LBA 0, 1, 2, ...) but NAND
-          flash has a critical constraint:{" "}
-          <strong className="text-text-primary">
-            you can&apos;t overwrite data in place
-          </strong>
-          . Pages must be erased before rewriting, and erasing happens at the{" "}
-          <strong className="text-text-primary">block level</strong> (128-512 pages).
+          Remember the &ldquo;shredding the whole notebook&rdquo; problem from the
+          hierarchy section? You can write individual pages, but erasing requires wiping
+          entire blocks (hundreds of pages). So what happens when you want to update just
+          one page&apos;s worth of data?
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          The SSD can&apos;t erase a whole block just to update one page — that would
+          destroy all the other data in that block. Instead, the controller uses a clever
+          trick called the <strong className="text-text-primary">Flash Translation Layer (FTL)</strong>.
+          Instead of overwriting the old page, it writes the new data to a{" "}
+          <strong className="text-text-primary">completely different, free page</strong>{" "}
+          somewhere else on the drive, then updates a mapping table to point the LBA at
+          the new location.
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          The old page still exists but now contains outdated data — it&apos;s
+          called <strong className="text-text-primary">&ldquo;stale.&rdquo;</strong> Stale
+          pages waste space. They&apos;ll be cleaned up later by a process called{" "}
+          <strong className="text-text-primary">garbage collection</strong> (covered in Act 4).
         </p>
         <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
-          The <strong className="text-text-primary">FTL</strong> solves this by
-          maintaining a mapping table — when the host writes to LBA 3, the FTL
-          writes the data to a <em>new</em> free physical page and updates the
-          mapping. The old page becomes &ldquo;stale.&rdquo; This is why SSDs need
-          garbage collection and TRIM.
+          Click any LBA below to simulate a write and see the FTL in action:
         </p>
 
         {/* Interactive FTL mapping */}

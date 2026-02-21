@@ -31,14 +31,23 @@ export default function PCIe() {
     <SectionWrapper className="py-24 px-4 bg-story-surface">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
-          PCIe Transport
+          How the SSD Connects to Your Computer — PCIe
         </h3>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          In Act 1 we looked inside the SSD — its cells, pages, blocks, controller, and
+          FTL. But how does the SSD actually talk to your computer&apos;s CPU and memory?
+          Through a high-speed connection called <strong className="text-text-primary">PCIe</strong>{" "}
+          (Peripheral Component Interconnect Express).
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          Think of PCIe as a multi-lane highway between the CPU and the SSD.
+          Each <strong className="text-text-primary">lane</strong> is like one lane on the
+          highway — data flows in both directions simultaneously. An NVMe SSD typically
+          uses <strong className="text-text-primary">4 lanes</strong> (written as
+          &ldquo;x4&rdquo;), and newer generations of PCIe make each lane faster.
+        </p>
         <p className="text-text-secondary mb-6 leading-relaxed max-w-3xl">
-          NVMe rides on PCIe (Peripheral Component Interconnect Express). PCIe
-          is a point-to-point serial bus organized into{" "}
-          <strong className="text-text-primary">lanes</strong>. Each lane is a
-          pair of differential signal wires (one TX, one RX). An NVMe SSD
-          typically uses 4 lanes (x4).
+          Use the calculator below to see how bandwidth scales with generation and lane count:
         </p>
 
         {/* Interactive bandwidth calculator */}

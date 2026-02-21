@@ -7,14 +7,39 @@ export default function SsdOverview() {
     <SectionWrapper className="py-24 px-4 bg-story-surface">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
-          Inside the SSD
+          Inside the SSD — The Complete Picture
         </h3>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          So far we&apos;ve seen the building blocks: bits, bytes, LBAs, and NAND cells
+          organized into pages, blocks, and dies. Now let&apos;s see how they all fit
+          together inside an actual SSD.
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          An SSD isn&apos;t just a pile of NAND chips. It&apos;s a complete
+          mini-computer with three main parts:
+        </p>
+        <ul className="text-text-secondary mb-4 leading-relaxed max-w-3xl list-disc ml-5 space-y-1">
+          <li>
+            <strong className="text-text-primary">Controller</strong> — The &ldquo;brain.&rdquo;
+            A specialized processor that runs all the software (firmware) managing the drive.
+            It handles translating your read/write requests into NAND operations.
+          </li>
+          <li>
+            <strong className="text-text-primary">DRAM</strong> — Fast temporary memory
+            (like your computer&apos;s RAM). The controller uses it to store the mapping table
+            that translates logical addresses (LBAs) to physical NAND locations. Without DRAM,
+            every read would need an extra NAND lookup, making it much slower.
+          </li>
+          <li>
+            <strong className="text-text-primary">NAND Flash Packages</strong> — The actual
+            storage chips where your data lives permanently. Multiple packages connected through
+            separate channels allow parallel access, which is how SSDs achieve high speeds.
+          </li>
+        </ul>
         <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
-          An SSD is more than just NAND chips. It&apos;s a complete system with
-          a powerful controller, DRAM for metadata, and firmware that
-          orchestrates everything. The controller is the brain &mdash; it
-          manages the FTL, wear leveling, error correction, and the NVMe
-          protocol itself.
+          The diagram below shows how these parts connect. The host computer talks to the
+          controller through the PCIe bus (we&apos;ll cover that in the next act), and the
+          controller manages everything else.
         </p>
 
         {/* SSD block diagram */}
