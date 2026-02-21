@@ -286,20 +286,100 @@ export default function Security() {
             by the TCG Opal specification — a complex binary protocol with sessions,
             tokens, and method calls. sedutil handles all of that for you.
           </p>
-          <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
-            <em className="text-text-primary">What about the PBA (Pre-Boot
-            Authentication)?</em> When a locked SED powers on, the OS can&apos;t boot
-            because the drive is locked. sedutil can write a small PBA image to a
-            special hidden area of the drive — a tiny Linux that runs before your OS,
-            prompts for the password, unlocks the drive, and then chainloads your
-            real OS. It&apos;s like a bouncer at the door who checks your ID before
-            letting you into the building.
-          </p>
 
           <NvmeCliBlock
             command="sudo apt install sedutil"
             note="Install sedutil on Debian/Ubuntu. Also available for Fedora (dnf), Arch (AUR), and from source at github.com/Drive-Trust-Alliance/sedutil"
           />
+        </div>
+
+        {/* ─── MBR Shadowing — explained before it's used ─── */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+          <div className="text-text-primary font-semibold text-sm mb-3">
+            MBR Shadowing &mdash; The Boot Trick That Makes SED Work
+          </div>
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            <em className="text-text-primary">Here&apos;s a chicken-and-egg problem:</em>{" "}
+            if the drive is locked, the OS can&apos;t boot (the drive won&apos;t return
+            any data). But if the OS can&apos;t boot, how do you type in your password
+            to unlock the drive?
+          </p>
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            TCG Opal solves this with <strong className="text-text-primary">MBR
+            shadowing</strong>. The idea: the drive has a small hidden storage area
+            called the <strong className="text-text-primary">Shadow MBR</strong>. You
+            load a tiny bootable image into it — the <strong className="text-text-primary">
+            PBA (Pre-Boot Authentication)</strong> image. This is a minimal Linux
+            system whose only job is to ask for your password.
+          </p>
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            <em className="text-text-primary">How does &ldquo;shadowing&rdquo; work
+            exactly?</em> When MBR shadowing is enabled and the drive is locked, reads
+            to the beginning of the drive (where the MBR/boot sector normally lives)
+            return the Shadow MBR content instead of the actual disk content. The BIOS
+            or UEFI sees what looks like a normal bootable drive and loads the PBA image.
+          </p>
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            The PBA boots, prompts you for your password, and sends it to the drive via
+            TCG Opal commands. Once authenticated, the drive unlocks and{" "}
+            <strong className="text-text-primary">disables the shadow</strong> — now reads
+            to the beginning of the drive return the actual boot sector. The PBA then
+            triggers a warm reboot, and this time the BIOS sees your real OS and boots
+            normally.
+          </p>
+          <p className="text-text-muted text-[10px] italic leading-relaxed">
+            <em>Why not just use BIOS/UEFI password instead?</em> Because a BIOS password
+            only prevents booting — it doesn&apos;t encrypt the data. Someone could remove
+            the drive and read it in another machine. SED with MBR shadowing encrypts the
+            data AND prevents unauthorized boot. Even if the drive is moved to another
+            machine, the data stays locked.
+          </p>
+        </div>
+
+        {/* ─── TCG Opal Authorities ─── */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+          <div className="text-text-primary font-semibold text-sm mb-3">
+            TCG Opal Authorities &mdash; Who Has Which Keys?
+          </div>
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            <em className="text-text-primary">If there are multiple locking ranges with
+            different passwords, who manages all of this?</em> TCG Opal has a concept
+            of <strong className="text-text-primary">authorities</strong> — different
+            identities with different permissions:
+          </p>
+          <div className="space-y-2 mb-3">
+            <div className="bg-story-surface rounded-xl p-3">
+              <div className="text-nvme-green font-mono font-bold text-xs mb-1">SID (Security ID)</div>
+              <p className="text-text-muted text-xs leading-relaxed">
+                The <em>owner</em> of the drive. Can change all settings, create/delete
+                locking ranges, and manage other authorities. <em className="text-text-primary">
+                Think of SID as the building owner</em> — they can change any lock, give out
+                any key, or reset the entire system.
+              </p>
+            </div>
+            <div className="bg-story-surface rounded-xl p-3">
+              <div className="text-nvme-blue font-mono font-bold text-xs mb-1">Admin1</div>
+              <p className="text-text-muted text-xs leading-relaxed">
+                The primary administrator. Can lock/unlock ranges and manage day-to-day
+                security operations. <em className="text-text-primary">The building
+                manager</em> — can lock/unlock doors but can&apos;t change the master plan.
+              </p>
+            </div>
+            <div className="bg-story-surface rounded-xl p-3">
+              <div className="text-nvme-violet font-mono font-bold text-xs mb-1">User1, User2, ...</div>
+              <p className="text-text-muted text-xs leading-relaxed">
+                Optional user authorities. Each can be assigned to a specific locking range.{" "}
+                <em className="text-text-primary">Tenants</em> — each has a key to their
+                own apartment but can&apos;t access others.
+              </p>
+            </div>
+          </div>
+          <p className="text-text-muted text-[10px] italic leading-relaxed">
+            <em>What happens if you set the SID password but forget it?</em> You can
+            still PSID revert (physical label) to factory reset. But if you set the Admin1
+            password and forget it, only the SID or PSID can recover. This layered authority
+            system prevents a single compromised password from giving access to everything.
+          </p>
         </div>
 
         {/* sedutil command explorer */}
@@ -396,17 +476,20 @@ export default function Security() {
             Typical SED Setup Workflow
           </div>
           <p className="text-text-secondary text-xs mb-4 leading-relaxed">
-            Setting up SED encryption from scratch, step by step:
+            Setting up SED encryption from scratch, step by step. <em className="text-text-primary">
+            Why so many steps?</em> Because security requires explicit intent at every
+            stage — you don&apos;t want encryption activating accidentally and locking
+            you out of your own drive.
           </p>
           <div className="space-y-4">
             {[
-              { step: 1, title: "Verify support", cmd: "sedutil-cli --scan", why: "Confirm your drive supports TCG Opal 2.0" },
-              { step: 2, title: "Check current state", cmd: "sedutil-cli --query /dev/nvme0n1", why: "See if a password is already set or if locking is enabled" },
-              { step: 3, title: "Initial setup", cmd: "sedutil-cli --initialSetup <password> /dev/nvme0n1", why: "Take ownership — sets SID and Admin1 passwords, enables MBR shadowing" },
-              { step: 4, title: "Enable locking", cmd: "sedutil-cli --enableLockingRange 0 <password> /dev/nvme0n1", why: "Enable the global locking range so the drive locks on power-off" },
-              { step: 5, title: "Load PBA image", cmd: "sedutil-cli --loadPBAimage <password> /path/to/UEFI64-n.nn.img /dev/nvme0n1", why: "Write the pre-boot authentication image so you get a password prompt on boot" },
-              { step: 6, title: "Enable MBR shadowing", cmd: "sedutil-cli --setMBREnable on <password> /dev/nvme0n1", why: "Activate the PBA — on next boot, the PBA runs first, prompts for password" },
-              { step: 7, title: "Test!", cmd: "# Power cycle the machine and verify the PBA prompts for your password", why: "Always test before relying on it. If the PBA doesn't work, you can still PSID revert" },
+              { step: 1, title: "Verify support", cmd: "sedutil-cli --scan", why: "Confirm your drive supports TCG Opal 2.0. Not all SSDs have SED capability — check before doing anything else." },
+              { step: 2, title: "Check current state", cmd: "sedutil-cli --query /dev/nvme0n1", why: "See if a password is already set or if locking is enabled. A drive that was previously configured needs different handling." },
+              { step: 3, title: "Initial setup (take ownership)", cmd: "sedutil-cli --initialSetup <password> /dev/nvme0n1", why: "Sets both SID and Admin1 passwords at once. Also enables MBR shadowing support (the Shadow MBR feature we explained above — so PBA can work later)." },
+              { step: 4, title: "Enable locking on global range", cmd: "sedutil-cli --enableLockingRange 0 <password> /dev/nvme0n1", why: "Activates the lock mechanism on Range 0 (entire drive). After this, the drive will lock itself when power is removed." },
+              { step: 5, title: "Load PBA image into Shadow MBR", cmd: "sedutil-cli --loadPBAimage <password> /path/to/UEFI64-n.nn.img /dev/nvme0n1", why: "Writes the pre-boot authentication image to the Shadow MBR area. This is the tiny OS that prompts for your password before your real OS boots." },
+              { step: 6, title: "Enable MBR shadowing", cmd: "sedutil-cli --setMBREnable on <password> /dev/nvme0n1", why: "Turns on the shadow. Now when the locked drive is read at boot, it returns the PBA image instead of the encrypted disk content. The BIOS boots the PBA, you type your password, drive unlocks, PBA reboots into your real OS." },
+              { step: 7, title: "Test with a power cycle", cmd: "# Power cycle the machine and verify the PBA prompts for your password", why: "Always test before relying on it. If the PBA doesn't appear, PSID revert is still available as an escape hatch. Better to find out now than after you've been using it for months." },
             ].map((item) => (
               <div key={item.step} className="flex items-start gap-4">
                 <div className="w-8 h-8 rounded-full bg-nvme-violet/10 text-nvme-violet flex items-center justify-center text-xs font-bold flex-shrink-0 mt-1">
@@ -420,6 +503,52 @@ export default function Security() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* MBRDone — the unlock flow */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+          <div className="text-text-primary font-semibold text-sm mb-3">
+            The Unlock Flow &mdash; What Happens at Every Boot
+          </div>
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            <em className="text-text-primary">Once SED is set up, what happens every
+            time you turn on the machine?</em> Here&apos;s the boot sequence:
+          </p>
+          <div className="space-y-1.5 text-text-secondary text-xs mb-4">
+            <div className="flex items-start gap-2">
+              <span className="text-nvme-violet flex-shrink-0 font-bold">1.</span>
+              <span>Machine powers on. Drive is <strong className="text-text-primary">locked</strong>.</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-nvme-violet flex-shrink-0 font-bold">2.</span>
+              <span>BIOS/UEFI reads the boot sector. MBR shadowing is on, so the drive returns the <strong className="text-text-primary">Shadow MBR</strong> (PBA image) instead of the encrypted content.</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-nvme-violet flex-shrink-0 font-bold">3.</span>
+              <span>BIOS boots the PBA. It shows a password prompt.</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-nvme-violet flex-shrink-0 font-bold">4.</span>
+              <span>You type your password. PBA sends it to the drive via TCG Opal (Security Send command).</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-nvme-violet flex-shrink-0 font-bold">5.</span>
+              <span>Drive authenticates, derives KEK from password, decrypts DEK. Drive is now <strong className="text-nvme-green">unlocked</strong>.</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-nvme-violet flex-shrink-0 font-bold">6.</span>
+              <span>PBA sets <strong className="text-text-primary">MBRDone = true</strong> — this tells the drive to <em>stop shadowing</em>. Now reads to the boot sector return the real disk content.</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-nvme-violet flex-shrink-0 font-bold">7.</span>
+              <span>PBA triggers a warm reboot. BIOS reads the boot sector again — this time it sees your real OS. Normal boot continues.</span>
+            </div>
+          </div>
+          <p className="text-text-muted text-[10px] italic leading-relaxed">
+            <em>Why the reboot?</em> Because the BIOS already cached the PBA boot
+            sector in memory. A warm reboot forces it to re-read the drive, and now
+            it gets the real OS boot sector because MBRDone disabled the shadow.
+          </p>
         </div>
 
         {/* PSID Revert deep dive */}

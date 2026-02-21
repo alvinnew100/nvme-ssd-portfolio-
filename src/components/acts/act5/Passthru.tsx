@@ -92,13 +92,71 @@ export default function Passthru() {
               { flag: "--cdw11=0x...", desc: "Command Dword 11 — vendor-defined parameter" },
               { flag: "--cdw12=0x...", desc: "Command Dword 12 — vendor-defined parameter" },
               { flag: "--data-len=N", desc: "Size of the data buffer to allocate (bytes)" },
-              { flag: "-r / --read", desc: "Read data from the drive (vs -w for write)" },
+              { flag: "-r / --read", desc: "Read data FROM the drive into the buffer" },
+              { flag: "-w / --write", desc: "Write data TO the drive from the buffer" },
+              { flag: "--input-file=FILE", desc: "Read input data from a binary file (for -w commands)" },
             ].map((f) => (
               <div key={f.flag} className="bg-story-surface rounded-lg p-3">
                 <code className="text-text-code font-mono text-xs">{f.flag}</code>
                 <span className="text-text-muted"> — {f.desc}</span>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Data transfer direction */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+          <div className="text-text-primary font-semibold text-sm mb-3">
+            Data Transfer Direction &mdash; -r vs -w
+          </div>
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            <em className="text-text-primary">Many vendor commands transfer data between
+            the host and drive.</em> The <code className="text-text-code">-r</code> and{" "}
+            <code className="text-text-code">-w</code> flags control the direction, and{" "}
+            <code className="text-text-code">--data-len</code> sets how much data to
+            transfer:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+            <div className="bg-story-surface rounded-xl p-4">
+              <div className="text-nvme-green font-mono font-bold text-xs mb-1">
+                -r (read from drive)
+              </div>
+              <p className="text-text-muted text-xs leading-relaxed">
+                The drive sends data back to the host. nvme-cli allocates a buffer
+                of <code className="text-text-code">--data-len</code> bytes and prints
+                the returned data to stdout. You can redirect it to a file with{" "}
+                <code className="text-text-code">&gt; output.bin</code>.
+              </p>
+              <p className="text-text-muted text-[10px] italic mt-1">
+                Use case: reading vendor-specific health data, internal logs, or
+                diagnostic registers.
+              </p>
+            </div>
+            <div className="bg-story-surface rounded-xl p-4">
+              <div className="text-nvme-blue font-mono font-bold text-xs mb-1">
+                -w (write to drive)
+              </div>
+              <p className="text-text-muted text-xs leading-relaxed">
+                The host sends data to the drive. Use{" "}
+                <code className="text-text-code">--input-file=data.bin</code> to load
+                data from a binary file. The file must be at least{" "}
+                <code className="text-text-code">--data-len</code> bytes.
+              </p>
+              <p className="text-text-muted text-[10px] italic mt-1">
+                Use case: sending vendor-specific configuration, firmware patches, or
+                calibration data.
+              </p>
+            </div>
+          </div>
+          <NvmeCliBlock
+            command="nvme admin-passthru /dev/nvme0 --opcode=0xC0 --cdw10=0x1 --data-len=4096 -r > vendor_health.bin"
+            note="Read 4096 bytes of vendor health data and save to a binary file"
+          />
+          <div className="mt-2">
+            <NvmeCliBlock
+              command="nvme admin-passthru /dev/nvme0 --opcode=0xC1 --cdw10=0x2 --data-len=512 -w --input-file=config.bin"
+              note="Send 512 bytes of configuration data from a file to the drive"
+            />
           </div>
         </div>
 

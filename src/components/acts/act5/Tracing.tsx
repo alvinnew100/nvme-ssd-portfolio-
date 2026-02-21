@@ -38,10 +38,10 @@ export default function Tracing() {
         </p>
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           <em className="text-text-primary">How does ftrace work internally?</em> The
-          Linux kernel has tracepoints — pre-defined instrumentation hooks in the source
-          code. When you enable a tracepoint, the kernel writes a record to a ring buffer
-          every time that code path executes. Reading the trace pipe gives you a real-time
-          stream of these records, timestamped to microsecond precision.
+          Linux kernel has tracepoints — pre-defined instrumentation hooks compiled into
+          the source code. When you enable a tracepoint, the kernel writes a record to a
+          ring buffer every time that code path executes. Reading the trace pipe gives you
+          a stream of these records, timestamped to microsecond precision.
         </p>
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           <em className="text-text-primary">Why is this useful?</em>
@@ -61,7 +61,7 @@ export default function Tracing() {
             right queue)
           </li>
           <li>
-            <strong className="text-text-primary">Learning</strong> — watch real NVMe
+            <strong className="text-text-primary">Learning</strong> — watch NVMe
             traffic to understand how the kernel driver translates filesystem operations
             into NVMe commands
           </li>
@@ -83,9 +83,8 @@ export default function Tracing() {
               </div>
               <p className="text-text-muted text-xs leading-relaxed">
                 Fires when a command is <em>submitted</em> — the SQE is placed into
-                the submission queue. The kernel decodes the command and logs it with
-                human-readable field names (not raw CDW hex values). For a read command,
-                you&apos;ll see the starting LBA, number of blocks, and control flags.
+                the submission queue. Logs the opcode, queue ID, namespace, command ID,
+                and all CDW fields (the command&apos;s raw parameters in hex).
               </p>
             </div>
             <div className="bg-story-surface rounded-xl p-4">
@@ -130,6 +129,64 @@ export default function Tracing() {
           </div>
         </div>
 
+        {/* ─── Block Layer Operation Flags ─── */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+          <div className="text-text-primary font-semibold text-sm mb-3">
+            Block Layer Operation Flags — What R, WS, DS Mean
+          </div>
+          <p className="text-text-secondary text-xs leading-relaxed mb-4">
+            <em className="text-text-primary">In block layer trace output, you&apos;ll
+            see short letter codes for the operation type.</em> These are combinations
+            of the base operation and modifier flags:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-4">
+            {[
+              { flag: "R", meaning: "Read", desc: "A read request. The kernel is asking the device to return data from the given sector range." },
+              { flag: "W", meaning: "Write", desc: "A write request. The kernel is sending data to the device to be stored at the given sector range." },
+              { flag: "D", meaning: "Discard", desc: "A discard (TRIM) request. The kernel is telling the device that these sectors are no longer needed. Maps to the NVMe Dataset Management command." },
+              { flag: "F", meaning: "Flush", desc: "A flush request. Forces the device to commit all cached data to persistent storage. Maps to the NVMe Flush command." },
+              { flag: "N", meaning: "None", desc: "No operation. Usually a metadata-only or barrier request with no data transfer." },
+            ].map((f) => (
+              <div key={f.flag} className="bg-story-surface rounded-xl p-3">
+                <div className="flex items-center gap-2 mb-1">
+                  <code className="text-nvme-green font-mono font-bold text-sm">{f.flag}</code>
+                  <span className="text-text-primary text-xs font-semibold">{f.meaning}</span>
+                </div>
+                <p className="text-text-muted text-[10px] leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            <em className="text-text-primary">But you&apos;ll often see two-letter codes
+            like RS, WS, or DS. What does the S mean?</em> The second letter is a{" "}
+            <strong className="text-text-primary">modifier flag</strong> that gets appended
+            to the base operation:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {[
+              { flag: "S (Sync)", example: "RS, WS, DS", desc: "Synchronous — the request must be completed in order with other sync requests. Filesystem metadata writes are often sync to ensure consistency." },
+              { flag: "M (Meta)", example: "RM, WM", desc: "Metadata — this I/O is for filesystem metadata (inodes, journal), not user data. Useful for distinguishing app I/O from filesystem overhead." },
+              { flag: "A (Ahead)", example: "RA", desc: "Read-ahead — the kernel is speculatively reading data it thinks you'll need soon. Triggered by sequential access patterns." },
+              { flag: "FUA (Force Unit Access)", example: "WFUA", desc: "Bypasses the drive's write cache. The data must be written to persistent NAND before the command completes. Maps to the FUA bit in the NVMe Write command." },
+            ].map((f) => (
+              <div key={f.flag} className="bg-story-surface rounded-xl p-3">
+                <div className="flex items-center gap-2 mb-1">
+                  <code className="text-nvme-blue font-mono font-bold text-xs">{f.flag}</code>
+                  <span className="text-text-muted text-[10px] font-mono">(e.g., {f.example})</span>
+                </div>
+                <p className="text-text-muted text-[10px] leading-relaxed">{f.desc}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-text-muted text-[10px] mt-3 italic leading-relaxed">
+            <em>So &ldquo;DS&rdquo; means a synchronous discard (TRIM) request, and
+            &ldquo;RS&rdquo; means a synchronous read.</em> These flags tell you not
+            just <em>what</em> the kernel is doing, but <em>how urgently</em> — sync
+            requests can&apos;t be reordered, while async ones can be batched and
+            optimized by the I/O scheduler.
+          </p>
+        </div>
+
         {/* ─── Enable Tracing ─── */}
         <div className="space-y-4 mb-6">
           <CodeBlock
@@ -154,9 +211,6 @@ echo 1 > /sys/kernel/debug/tracing/events/block/block_rq_complete/enable
 # Or enable ALL block events at once
 echo 1 > /sys/kernel/debug/tracing/events/block/enable
 
-# Filter to only your NVMe device (optional — reduces noise)
-echo 'common_pid > 0' > /sys/kernel/debug/tracing/events/block/filter
-
 # Read the combined trace (NVMe + block events interleaved by timestamp)
 cat /sys/kernel/debug/tracing/trace_pipe`}
           />
@@ -176,59 +230,40 @@ cat trace_pipe                           # stream output`}
           />
         </div>
 
-        {/* ─── Real NVMe Trace Output ─── */}
+        {/* ─── NVMe Trace Output ─── */}
         <div className="mb-6">
           <h4 className="text-lg font-bold text-text-primary mb-3">
-            Real NVMe Trace Output
+            NVMe Trace Output
           </h4>
           <p className="text-text-secondary text-sm mb-3 leading-relaxed max-w-3xl">
-            <em className="text-text-primary">The kernel decodes NVMe commands into
-            human-readable fields.</em> Here&apos;s what the output actually looks like
-            for a 4K read at LBA 0 (8 sectors):
+            <em className="text-text-primary">The NVMe tracepoint logs each command with
+            its raw CDW (Command Dword) values in hex.</em> This is the format you&apos;ll
+            see when reading trace_pipe. The examples below are constructed based on the
+            kernel&apos;s tracepoint format definition — the same structure you&apos;d
+            see on a live system. You can paste them into the{" "}
+            <strong className="text-text-primary">Trace Decoder</strong> tool below to
+            decode the CDW fields:
           </p>
 
           <TerminalBlock
-            title="nvme trace output — 4K read command"
+            title="nvme trace output — Read and Write commands"
             lines={[
               "# tracer: nop",
-              "#                                _-----=> irqs-off/BH-disabled",
-              "#                               / _----=> need-resched",
-              "#                              | / _---=> hardirq/softirq",
-              "#                              || / _--=> preempt-depth",
-              "#                              ||| / _-=> migrate-disable",
-              "#                              |||| /     delay",
               "#           TASK-PID     CPU#  |||||  TIMESTAMP  FUNCTION",
               "#              | |         |   |||||     |         |",
-              "  fio-18234   [003] d..1. 284731.205: nvme_setup_cmd: nvme0n1: io_cmd_read slba=0, len=7, ctrl=0x0, dsmgmt=0, reftag=0",
-              "  fio-18234   [003] d..1. 284731.312: nvme_complete_rq: nvme0n1: cmdid=0, res=0x0, retries=0, flags=0x0, status=0x0",
+              "     fio-18234   [003] d..1.  2847.331205: nvme_setup_cmd: nvme0n1: qid=1, cmdid=0, nsid=1, cdw10=0x00000000, cdw11=0x00000000, cdw12=0x00000007, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x02",
+              "     fio-18234   [003] d..1.  2847.331312: nvme_complete_rq: nvme0n1: qid=1, cmdid=0, res=0x0, retries=0, flags=0x0, status=0x0",
+              "     fio-18234   [005] d..1.  2847.331450: nvme_setup_cmd: nvme0n1: qid=2, cmdid=1, nsid=1, cdw10=0x00001000, cdw11=0x00000000, cdw12=0x400000ff, cdw13=0x00000000, cdw14=0x00000000, cdw15=0x00000000, opcode=0x01",
+              "     fio-18234   [005] d..1.  2847.331823: nvme_complete_rq: nvme0n1: qid=2, cmdid=1, res=0x0, retries=0, flags=0x0, status=0x0",
             ]}
           />
 
-          <p className="text-text-secondary text-xs mt-3 mb-4 leading-relaxed max-w-3xl">
-            <em className="text-text-primary">Note:</em> The kernel decodes{" "}
-            <code className="text-text-code">opcode 0x02</code> into{" "}
-            <code className="text-text-code">io_cmd_read</code> and shows the command
-            fields by name. <code className="text-text-code">slba=0</code> is the
-            starting LBA, <code className="text-text-code">len=7</code> means 8 blocks
-            (0-indexed, so len=7 means 8). For writes you&apos;ll see{" "}
-            <code className="text-text-code">io_cmd_write</code> with the same fields.
+          <p className="text-text-muted text-xs mt-3 mb-4 leading-relaxed max-w-3xl">
+            <em>Note:</em> Newer kernel versions may show a more decoded format (e.g.,{" "}
+            <code className="text-text-code">io_cmd_read slba=0, len=7</code> instead of
+            raw CDW hex). The trace decoder tool below works with the CDW format shown
+            above. The sample traces you can load in the decoder also use this format.
           </p>
-
-          <TerminalBlock
-            title="nvme trace output — write command"
-            lines={[
-              "  fio-18234   [005] d..1. 284731.450: nvme_setup_cmd: nvme0n1: io_cmd_write slba=4096, len=255, ctrl=0x0, dsmgmt=0, reftag=0",
-              "  fio-18234   [005] d..1. 284731.823: nvme_complete_rq: nvme0n1: cmdid=1, res=0x0, retries=0, flags=0x0, status=0x0",
-            ]}
-          />
-
-          <TerminalBlock
-            title="nvme trace output — admin identify command"
-            lines={[
-              "  nvme-19001  [000] d..1. 284735.112: nvme_setup_cmd: nvme0: admin_cmd_identify cns=1, ctrlid=0, nsid=0",
-              "  nvme-19001  [000] d..1. 284735.245: nvme_complete_rq: nvme0: cmdid=5, res=0x0, retries=0, flags=0x0, status=0x0",
-            ]}
-          />
         </div>
 
         {/* ─── Block Layer Trace Output ─── */}
@@ -238,18 +273,29 @@ cat trace_pipe                           # stream output`}
           </h4>
           <p className="text-text-secondary text-sm mb-3 leading-relaxed max-w-3xl">
             <em className="text-text-primary">Block layer events use a different
-            format</em> — they show the device, sector number, size, and operation type:
+            format.</em> They show the device major:minor, operation flags, byte size,
+            starting sector, and sector count:
           </p>
 
           <TerminalBlock
-            title="block layer trace output"
+            title="block layer trace output — notice the operation flags"
             lines={[
-              "  fio-18234   [003] d..1. 284731.190: block_rq_issue: 259,0 R 4096 0 + 8 [fio]",
-              "  fio-18234   [003] d..1. 284731.312: block_rq_complete: 259,0 R () 0 + 8 [0]",
-              "  fio-18234   [005] d..1. 284731.440: block_rq_issue: 259,0 W 4096 32768 + 256 [fio]",
-              "  fio-18234   [005] d..1. 284731.823: block_rq_complete: 259,0 W () 32768 + 256 [0]",
+              "     fio-18234   [003] d..1.  2847.331190: block_rq_issue: 259,0 R 4096 0 + 8 [fio]",
+              "     fio-18234   [003] d..1.  2847.331312: block_rq_complete: 259,0 R () 0 + 8 [0]",
+              "     fio-18234   [005] d..1.  2847.331440: block_rq_issue: 259,0 WS 131072 32768 + 256 [fio]",
+              "     fio-18234   [005] d..1.  2847.331823: block_rq_complete: 259,0 WS () 32768 + 256 [0]",
+              "  fstrim-5678   [000] ....  2847.502345: block_rq_issue: 259,0 DS 0 0 + 2097152 [fstrim]",
+              "  fstrim-5678   [000] ....  2847.502567: block_rq_complete: 259,0 DS () 0 + 2097152 [0]",
             ]}
           />
+          <p className="text-text-muted text-xs mt-3 mb-4 leading-relaxed max-w-3xl">
+            <em>Notice the flags:</em>{" "}
+            <code className="text-text-code">R</code> = async read,{" "}
+            <code className="text-text-code">WS</code> = synchronous write,{" "}
+            <code className="text-text-code">DS</code> = synchronous discard (TRIM).
+            The sync flag (S) means the request must complete in order — it can&apos;t
+            be reordered past other sync requests.
+          </p>
         </div>
 
         {/* ─── Trace Line Anatomy ─── */}
@@ -261,11 +307,11 @@ cat trace_pipe                           # stream output`}
             <span className="text-nvme-amber">fio-18234</span>{" "}
             <span className="text-text-muted">[003]</span>{" "}
             <span className="text-text-muted">d..1.</span>{" "}
-            <span className="text-nvme-violet">284731.205</span>:{" "}
+            <span className="text-nvme-violet">2847.331205</span>:{" "}
             <span className="text-nvme-green">nvme_setup_cmd</span>:{" "}
             <span className="text-text-primary">nvme0n1</span>:{" "}
-            <span className="text-nvme-blue">io_cmd_read</span>{" "}
-            <span className="text-text-secondary">slba=0, len=7, ctrl=0x0</span>
+            <span className="text-nvme-blue">qid=1</span>,{" "}
+            <span className="text-text-secondary">cdw10=0x00000000, ... opcode=0x02</span>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
             <div className="bg-story-surface rounded-lg p-3">
@@ -292,7 +338,7 @@ cat trace_pipe                           # stream output`}
               </p>
             </div>
             <div className="bg-story-surface rounded-lg p-3">
-              <span className="text-nvme-violet font-mono font-bold">284731.205</span>
+              <span className="text-nvme-violet font-mono font-bold">2847.331205</span>
               <p className="text-text-muted mt-1">
                 Timestamp in seconds since boot (with microsecond precision). The
                 difference between setup and complete timestamps gives you the
@@ -307,11 +353,11 @@ cat trace_pipe                           # stream output`}
               </p>
             </div>
             <div className="bg-story-surface rounded-lg p-3">
-              <span className="text-nvme-blue font-mono font-bold">io_cmd_read</span>
+              <span className="text-text-secondary font-mono font-bold">opcode=0x02</span>
               <p className="text-text-muted mt-1">
-                The decoded command name. The kernel translates the opcode into a
-                human-readable name: io_cmd_read (0x02), io_cmd_write (0x01),
-                io_cmd_flush (0x00), admin_cmd_identify, etc.
+                The NVMe opcode. 0x02 = Read, 0x01 = Write, 0x00 = Flush, 0x09 = Dataset
+                Management (TRIM). The CDW fields contain the command parameters — paste
+                the line into the Trace Decoder to decode them.
               </p>
             </div>
           </div>
@@ -326,7 +372,7 @@ cat trace_pipe                           # stream output`}
             <span className="text-nvme-amber">fio-18234</span>{" "}
             <span className="text-text-muted">[003]</span>{" "}
             <span className="text-text-muted">d..1.</span>{" "}
-            <span className="text-nvme-violet">284731.190</span>:{" "}
+            <span className="text-nvme-violet">2847.331190</span>:{" "}
             <span className="text-nvme-green">block_rq_issue</span>:{" "}
             <span className="text-text-primary">259,0</span>{" "}
             <span className="text-nvme-blue">R</span>{" "}
@@ -342,10 +388,11 @@ cat trace_pipe                           # stream output`}
               </p>
             </div>
             <div className="bg-story-surface rounded-lg p-3">
-              <span className="text-nvme-blue font-mono font-bold">R / W / D</span>
+              <span className="text-nvme-blue font-mono font-bold">R / WS / DS / ...</span>
               <p className="text-text-muted mt-1">
-                Operation type: R = Read, W = Write, D = Discard (TRIM).
-                Some kernels show additional flags like RS (read sync) or WS (write sync).
+                Operation type + modifier flags. See the flag reference above. R = async
+                read, WS = sync write, DS = sync discard, RA = read-ahead, WFUA = write
+                with Force Unit Access.
               </p>
             </div>
             <div className="bg-story-surface rounded-lg p-3">
@@ -359,8 +406,8 @@ cat trace_pipe                           # stream output`}
               <span className="text-text-secondary font-mono font-bold">0 + 8</span>
               <p className="text-text-muted mt-1">
                 Sector address and count. Sector 0, 8 sectors (each sector = 512 bytes,
-                so 8 × 512 = 4096 bytes). This matches the NVMe trace&apos;s slba=0, len=7
-                (0-indexed).
+                so 8 &times; 512 = 4096 bytes). <em>This maps to the NVMe trace&apos;s
+                cdw10 (SLBA) and cdw12 (NLB) fields.</em>
               </p>
             </div>
           </div>
@@ -378,22 +425,22 @@ cat trace_pipe                           # stream output`}
           <div className="space-y-2 text-xs font-mono mb-4">
             <div className="flex justify-between bg-story-surface rounded-lg p-3">
               <span className="text-nvme-violet">block_rq_issue</span>
-              <span className="text-text-secondary">284731.190</span>
+              <span className="text-text-secondary">2847.331190</span>
               <span className="text-text-muted">Block layer sends to driver</span>
             </div>
             <div className="flex justify-between bg-story-surface rounded-lg p-3">
               <span className="text-nvme-green">nvme_setup_cmd</span>
-              <span className="text-text-secondary">284731.205</span>
+              <span className="text-text-secondary">2847.331205</span>
               <span className="text-text-muted">Driver submits to SQ</span>
             </div>
             <div className="flex justify-between bg-story-surface rounded-lg p-3">
               <span className="text-nvme-blue">nvme_complete_rq</span>
-              <span className="text-text-secondary">284731.312</span>
+              <span className="text-text-secondary">2847.331312</span>
               <span className="text-text-muted">Drive completes, CQE posted</span>
             </div>
             <div className="flex justify-between bg-story-surface rounded-lg p-3">
               <span className="text-nvme-violet">block_rq_complete</span>
-              <span className="text-text-secondary">284731.312</span>
+              <span className="text-text-secondary">2847.331312</span>
               <span className="text-text-muted">Block layer marks complete</span>
             </div>
           </div>
@@ -401,7 +448,7 @@ cat trace_pipe                           # stream output`}
             <div className="bg-nvme-violet/5 rounded-lg p-3 border border-nvme-violet/20">
               <span className="text-nvme-violet font-bold">Driver overhead</span>
               <div className="text-text-muted text-[10px] mt-1">
-                rq_issue → setup_cmd = <strong>15μs</strong>
+                rq_issue &rarr; setup_cmd = <strong>15&micro;s</strong>
               </div>
               <p className="text-text-muted text-[10px]">
                 Time the NVMe driver spent preparing the SQE
@@ -410,7 +457,7 @@ cat trace_pipe                           # stream output`}
             <div className="bg-nvme-green/5 rounded-lg p-3 border border-nvme-green/20">
               <span className="text-nvme-green font-bold">Device latency</span>
               <div className="text-text-muted text-[10px] mt-1">
-                setup_cmd → complete_rq = <strong>107μs</strong>
+                setup_cmd &rarr; complete_rq = <strong>107&micro;s</strong>
               </div>
               <p className="text-text-muted text-[10px]">
                 Time the SSD took to execute the command
@@ -419,7 +466,7 @@ cat trace_pipe                           # stream output`}
             <div className="bg-nvme-blue/5 rounded-lg p-3 border border-nvme-blue/20">
               <span className="text-nvme-blue font-bold">Total I/O time</span>
               <div className="text-text-muted text-[10px] mt-1">
-                rq_issue → rq_complete = <strong>122μs</strong>
+                rq_issue &rarr; rq_complete = <strong>122&micro;s</strong>
               </div>
               <p className="text-text-muted text-[10px]">
                 End-to-end from block layer&apos;s perspective
@@ -443,19 +490,6 @@ cat trace_pipe                           # stream output`}
           <div className="space-y-3">
             <div>
               <div className="text-text-primary text-xs font-semibold mb-1">
-                Trace only writes (filter by command)
-              </div>
-              <CodeBlock
-                title=""
-                language="bash"
-                code={`# Filter NVMe traces to only show write commands
-echo 'flags & 1' > /sys/kernel/debug/tracing/events/nvme/nvme_setup_cmd/filter
-# To remove filter:
-echo 0 > /sys/kernel/debug/tracing/events/nvme/nvme_setup_cmd/filter`}
-              />
-            </div>
-            <div>
-              <div className="text-text-primary text-xs font-semibold mb-1">
                 Save trace to file for analysis
               </div>
               <CodeBlock
@@ -465,8 +499,8 @@ echo 0 > /sys/kernel/debug/tracing/events/nvme/nvme_setup_cmd/filter`}
 timeout 10 cat /sys/kernel/debug/tracing/trace_pipe > /tmp/nvme_trace.txt
 # Then analyze: count commands by type, find slow completions, etc.
 grep 'nvme_setup_cmd' /tmp/nvme_trace.txt | wc -l    # total commands
-grep 'io_cmd_write' /tmp/nvme_trace.txt | wc -l       # write commands
-grep 'status=0x4' /tmp/nvme_trace.txt                  # errors (status != 0)`}
+grep 'opcode=0x01' /tmp/nvme_trace.txt | wc -l        # write commands
+grep -v 'status=0x0' /tmp/nvme_trace.txt | grep 'complete_rq'  # errors`}
               />
             </div>
             <div>
@@ -476,7 +510,7 @@ grep 'status=0x4' /tmp/nvme_trace.txt                  # errors (status != 0)`}
               <CodeBlock
                 title=""
                 language="bash"
-                code={`# Always disable when done — tracing has overhead
+                code={`# Always disable when done — tracing adds overhead
 echo 0 > /sys/kernel/debug/tracing/events/nvme/enable
 echo 0 > /sys/kernel/debug/tracing/events/block/enable
 echo 0 > /sys/kernel/debug/tracing/tracing_on`}
@@ -493,9 +527,9 @@ echo 0 > /sys/kernel/debug/tracing/tracing_on`}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
             {[
               { q: "Why is my app slow?", a: "Compare block_rq_issue to nvme_complete_rq timestamps. If device latency is normal but total I/O time is high, the bottleneck is in the kernel I/O path, not the SSD." },
-              { q: "Is my filesystem sending TRIMs?", a: "Look for 'D' (discard) in block_rq_issue events, or admin_cmd_dsm in NVMe events. If absent, TRIM might not be enabled (check mount options for 'discard' or run fstrim)." },
+              { q: "Is my filesystem sending TRIMs?", a: "Look for 'DS' (discard sync) in block_rq_issue events, or opcode=0x09 in NVMe events. If absent, TRIM might not be enabled (check mount options for 'discard' or run fstrim)." },
               { q: "Which queue is busiest?", a: "NVMe events include qid. Count events per queue ID — ideally balanced across all I/O queues (one per CPU core). Imbalance means some cores are doing more I/O." },
-              { q: "Are there errors?", a: "Look for nvme_complete_rq lines where status ≠ 0x0. Status codes: 0x0=success, 0x2=invalid field, 0x4=data transfer error, 0x5=aborted by power loss." },
+              { q: "Are there errors?", a: "Look for nvme_complete_rq lines where status ≠ 0x0. Status codes: 0x0=success, 0x2=invalid field, 0x4=data transfer error, 0x5=aborted." },
               { q: "Is the I/O scheduler merging requests?", a: "Enable block_rq_merge events. Many merges mean your app is doing sequential I/O that the scheduler is combining. Few merges mean random I/O." },
               { q: "Is GC causing latency spikes?", a: "Look for write commands with suddenly higher completion times (>1ms when normal is <200μs). These spikes often correlate with foreground garbage collection." },
             ].map((item) => (
