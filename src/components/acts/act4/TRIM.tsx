@@ -123,8 +123,9 @@ export default function TRIM() {
           When you delete a file, the filesystem marks those LBAs as free in its own
           records. <em className="text-text-primary">But it doesn&apos;t tell the
           SSD.</em> Why would it? The filesystem just updates its own metadata. The
-          SSD still thinks those pages hold valid data and will waste time and writes
-          copying them during garbage collection. <strong className="text-text-primary">
+          SSD still thinks those pages hold valid data. During garbage collection,
+          it will waste time copying those &ldquo;valid&rdquo; pages to a new block &mdash;
+          burning through NAND write cycles for data that nobody needs anymore. <strong className="text-text-primary">
           This is the problem TRIM solves.</strong>
         </p>
 

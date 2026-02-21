@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
@@ -64,16 +65,79 @@ const COMMIT_ACTIONS = [
   },
 ];
 
-const FW_SLOTS = [
-  { slot: 1, label: "Slot 1", firmware: "v2.1.0", active: true, readonly: true },
-  { slot: 2, label: "Slot 2", firmware: "v2.0.3", active: false, readonly: false },
-  { slot: 3, label: "Slot 3", firmware: "v1.9.7", active: false, readonly: false },
-  { slot: 4, label: "Slot 4", firmware: "(empty)", active: false, readonly: false },
+interface SlotState {
+  slot: number;
+  firmware: string;
+  readonly: boolean;
+}
+
+const INITIAL_SLOTS: SlotState[] = [
+  { slot: 1, firmware: "v2.1.0", readonly: true },
+  { slot: 2, firmware: "v2.0.3", readonly: false },
+  { slot: 3, firmware: "v1.9.7", readonly: false },
+  { slot: 4, firmware: "(empty)", readonly: false },
 ];
 
 export default function FirmwareUpdate() {
   const [activeCa, setActiveCa] = useState(1);
-  const [activeSlot, setActiveSlot] = useState(1);
+  const [targetSlot, setTargetSlot] = useState(2);
+  const [activeSlotNum, setActiveSlotNum] = useState(1);
+  const [pendingSlotNum, setPendingSlotNum] = useState<number | null>(null);
+  const [slots, setSlots] = useState<SlotState[]>(INITIAL_SLOTS);
+  const [workflowMsg, setWorkflowMsg] = useState<string | null>(null);
+
+  const applyCommit = () => {
+    const ca = COMMIT_ACTIONS[activeCa];
+    const slot = slots.find((s) => s.slot === targetSlot);
+    if (!slot) return;
+
+    if (slot.readonly && ca.needsDownload) {
+      setWorkflowMsg(`Slot ${targetSlot} is read-only — cannot download firmware here.`);
+      return;
+    }
+
+    const newSlots = [...slots];
+    const idx = newSlots.findIndex((s) => s.slot === targetSlot);
+
+    if (ca.needsDownload) {
+      newSlots[idx] = { ...newSlots[idx], firmware: "v2.2.0" };
+      setSlots(newSlots);
+    }
+
+    if (ca.active) {
+      // CA3 — immediate activation
+      setActiveSlotNum(targetSlot);
+      setPendingSlotNum(null);
+      setWorkflowMsg(`CA${ca.ca}: Downloaded v2.2.0 to Slot ${targetSlot} and activated immediately. Drive is now running v2.2.0.`);
+    } else if (ca.needsReset) {
+      // CA1 or CA2 — pending activation
+      setPendingSlotNum(targetSlot);
+      setWorkflowMsg(`CA${ca.ca}: ${ca.needsDownload ? `Downloaded v2.2.0 to Slot ${targetSlot}. ` : ""}Slot ${targetSlot} is marked for activation on next reset. Click "Reset Controller" to activate.`);
+    } else {
+      // CA0 — download only
+      setWorkflowMsg(`CA${ca.ca}: Downloaded v2.2.0 to Slot ${targetSlot}. No activation — drive continues running Slot ${activeSlotNum} firmware.`);
+      setPendingSlotNum(null);
+    }
+  };
+
+  const resetController = () => {
+    if (pendingSlotNum !== null) {
+      setActiveSlotNum(pendingSlotNum);
+      setWorkflowMsg(`Controller reset complete. Now running Slot ${pendingSlotNum} (${slots.find((s) => s.slot === pendingSlotNum)?.firmware}).`);
+      setPendingSlotNum(null);
+    } else {
+      setWorkflowMsg("Reset complete — no pending activation. Active slot unchanged.");
+    }
+  };
+
+  const resetDemo = () => {
+    setSlots(INITIAL_SLOTS);
+    setActiveSlotNum(1);
+    setPendingSlotNum(null);
+    setTargetSlot(2);
+    setActiveCa(1);
+    setWorkflowMsg(null);
+  };
 
   return (
     <SectionWrapper className="py-24 px-4">
@@ -114,51 +178,114 @@ export default function FirmwareUpdate() {
           </li>
         </ul>
 
-        {/* Firmware slots diagram */}
+        {/* Interactive firmware slot workflow */}
         <div className="bg-story-card rounded-2xl p-6 card-shadow mb-8">
           <div className="text-text-muted text-xs font-mono mb-4 uppercase tracking-wider">
-            Firmware Slot Layout — NVMe supports up to 7 slots
+            Interactive Firmware Slot Simulator
           </div>
           <p className="text-text-secondary text-xs mb-4 leading-relaxed">
             Think of firmware slots like save slots in a video game. Each slot holds a
-            different firmware version, and the drive can only <em>run</em> one at a time
-            (the &ldquo;active&rdquo; slot). Click a slot to select it as the target:
+            different firmware version, and the drive can only <em>run</em> one at a time.
+            Try it: select a target slot, choose a commit action, and click &ldquo;Apply&rdquo;
+            to see what happens.
           </p>
-          <div className="flex flex-wrap gap-3 justify-center mb-4">
-            {FW_SLOTS.map((slot) => (
-              <button
-                key={slot.slot}
-                onClick={() => setActiveSlot(slot.slot)}
-                className={`rounded-xl p-4 text-center transition-all border-2 min-w-[120px] ${
-                  activeSlot === slot.slot
-                    ? "border-nvme-blue bg-nvme-blue/5"
-                    : slot.active
-                    ? "border-nvme-green bg-nvme-green/5"
-                    : "border-story-border bg-story-surface"
-                }`}
-              >
-                <div className="font-mono font-bold text-sm text-text-primary">
-                  {slot.label}
-                </div>
-                <div className="text-xs text-text-code font-mono mt-1">
-                  {slot.firmware}
-                </div>
-                {slot.active && (
-                  <span className="inline-block mt-1 px-2 py-0.5 rounded-full text-[9px] font-mono bg-nvme-green/10 text-nvme-green">
-                    ACTIVE
-                  </span>
-                )}
-                {slot.readonly && (
-                  <span className="inline-block mt-1 px-2 py-0.5 rounded-full text-[9px] font-mono bg-nvme-amber/10 text-nvme-amber">
-                    READ-ONLY
-                  </span>
-                )}
-              </button>
-            ))}
+
+          {/* Slot visualization */}
+          <div className="flex flex-wrap gap-3 justify-center mb-5">
+            {slots.map((slot) => {
+              const isActive = slot.slot === activeSlotNum;
+              const isPending = slot.slot === pendingSlotNum;
+              const isTarget = slot.slot === targetSlot;
+              return (
+                <button
+                  key={slot.slot}
+                  onClick={() => setTargetSlot(slot.slot)}
+                  className={`rounded-xl p-4 text-center transition-all border-2 min-w-[120px] ${
+                    isTarget
+                      ? "border-nvme-blue bg-nvme-blue/5 shadow-md shadow-nvme-blue/10"
+                      : isActive
+                      ? "border-nvme-green bg-nvme-green/5"
+                      : "border-story-border bg-story-surface"
+                  }`}
+                >
+                  <div className="font-mono font-bold text-sm text-text-primary">
+                    Slot {slot.slot}
+                  </div>
+                  <div className="text-xs text-text-code font-mono mt-1">
+                    {slot.firmware}
+                  </div>
+                  <div className="flex flex-col items-center gap-0.5 mt-1.5">
+                    {isActive && (
+                      <span className="px-2 py-0.5 rounded-full text-[9px] font-mono bg-nvme-green/10 text-nvme-green">
+                        ACTIVE
+                      </span>
+                    )}
+                    {isPending && (
+                      <motion.span
+                        animate={{ opacity: [1, 0.4, 1] }}
+                        transition={{ duration: 1.5, repeat: Infinity }}
+                        className="px-2 py-0.5 rounded-full text-[9px] font-mono bg-nvme-amber/10 text-nvme-amber"
+                      >
+                        PENDING
+                      </motion.span>
+                    )}
+                    {slot.readonly && (
+                      <span className="px-2 py-0.5 rounded-full text-[9px] font-mono bg-story-surface text-text-muted">
+                        READ-ONLY
+                      </span>
+                    )}
+                    {isTarget && (
+                      <span className="px-2 py-0.5 rounded-full text-[9px] font-mono bg-nvme-blue/10 text-nvme-blue">
+                        TARGET
+                      </span>
+                    )}
+                  </div>
+                </button>
+              );
+            })}
           </div>
-          <p className="text-text-muted text-xs text-center">
-            Slot 1 is often read-only (factory firmware that can&apos;t be overwritten — your safety net).
-            Slots 2-7 are writable.
+
+          {/* Action buttons */}
+          <div className="flex flex-wrap gap-2 justify-center mb-4">
+            <button
+              onClick={applyCommit}
+              className="px-5 py-2.5 bg-nvme-blue text-white rounded-full text-xs font-semibold hover:shadow-lg transition-all active:scale-95"
+            >
+              Apply CA{activeCa} to Slot {targetSlot}
+            </button>
+            {pendingSlotNum !== null && (
+              <button
+                onClick={resetController}
+                className="px-5 py-2.5 bg-nvme-amber text-white rounded-full text-xs font-semibold hover:shadow-lg transition-all active:scale-95"
+              >
+                Reset Controller
+              </button>
+            )}
+            <button
+              onClick={resetDemo}
+              className="px-4 py-2.5 bg-story-surface text-text-muted rounded-full text-xs font-semibold hover:bg-story-border transition-all"
+            >
+              Reset Demo
+            </button>
+          </div>
+
+          {/* Workflow message */}
+          <AnimatePresence mode="wait">
+            {workflowMsg && (
+              <motion.div
+                key={workflowMsg}
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                className="text-xs font-mono text-text-secondary bg-story-surface rounded-xl p-3 text-center"
+              >
+                {workflowMsg}
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          <p className="text-text-muted text-[10px] text-center mt-3">
+            Slot 1 is often read-only (factory firmware — your safety net). Slots 2-7 are writable.
           </p>
         </div>
 

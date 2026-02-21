@@ -313,11 +313,66 @@ export default function Queues() {
             </div>
           </div>
 
-          {/* Step-by-step guide */}
-          <div className="bg-story-surface rounded-xl p-4 mb-4 text-xs text-text-secondary space-y-1">
-            <div><strong className="text-nvme-blue">Step 1:</strong> Click &ldquo;Submit Command&rdquo; — host writes a command to SQ at the tail pointer, then rings the doorbell</div>
-            <div><strong className="text-nvme-green">Step 2:</strong> Click &ldquo;Process&rdquo; — SSD reads command from SQ at head, executes it, writes result to CQ</div>
-            <div><strong className="text-nvme-violet">Step 3:</strong> Click &ldquo;Consume&rdquo; — host reads the result from CQ at head, updates CQ doorbell</div>
+          {/* Detailed step-by-step guide */}
+          <div className="bg-story-surface rounded-xl p-5 mb-4 text-xs space-y-3">
+            <div className="text-text-muted font-mono text-[10px] uppercase tracking-wider mb-2">
+              What to do &amp; what to observe at each step
+            </div>
+            <div className="space-y-3">
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="w-5 h-5 rounded-full bg-nvme-blue text-white flex items-center justify-center text-[10px] font-bold">1</span>
+                  <strong className="text-nvme-blue">Submit Command</strong>
+                </div>
+                <p className="text-text-secondary ml-7 leading-relaxed">
+                  Click this to simulate the host placing a command into the Submission Queue.
+                  <strong className="text-text-primary"> Watch the SQ ring:</strong> a new entry (C1, C2, etc.)
+                  appears at the <span className="text-nvme-amber font-mono">TAIL</span> position. The tail pointer
+                  advances clockwise. In real NVMe, the host then writes the new tail value to
+                  the SQ Tail Doorbell register — that&apos;s how the SSD knows new work arrived.
+                  <em className="text-text-primary"> Try clicking it 3-4 times</em> to queue up multiple
+                  commands and watch the tail chase around the ring.
+                </p>
+              </div>
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="w-5 h-5 rounded-full bg-nvme-green text-white flex items-center justify-center text-[10px] font-bold">2</span>
+                  <strong className="text-nvme-green">Process (SSD)</strong>
+                </div>
+                <p className="text-text-secondary ml-7 leading-relaxed">
+                  Click this to simulate the SSD fetching a command and completing it.
+                  <strong className="text-text-primary"> Watch both rings:</strong> the entry disappears from the
+                  SQ at the <span className="text-nvme-blue font-mono">HEAD</span> position (the SSD consumed it),
+                  and a matching result appears in the CQ. The SQ head advances, and the CQ tail advances.
+                  <em className="text-text-primary"> Notice:</em> commands are always consumed in order (FIFO) —
+                  the SSD reads from HEAD, not from any random slot.
+                </p>
+              </div>
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="w-5 h-5 rounded-full bg-nvme-violet text-white flex items-center justify-center text-[10px] font-bold">3</span>
+                  <strong className="text-nvme-violet">Consume Result</strong>
+                </div>
+                <p className="text-text-secondary ml-7 leading-relaxed">
+                  Click this to simulate the host reading a completion entry.
+                  <strong className="text-text-primary"> Watch the CQ ring:</strong> the result is removed from the
+                  CQ head position and the head advances. The host then writes the new CQ head to the
+                  CQ Head Doorbell — telling the SSD &ldquo;I&apos;ve read up to this point, you can
+                  reuse those slots.&rdquo;
+                </p>
+              </div>
+            </div>
+            <div className="border-t border-story-border pt-3 mt-3">
+              <div className="text-text-muted font-mono text-[10px] uppercase tracking-wider mb-1.5">
+                Experiments to try
+              </div>
+              <div className="text-text-secondary space-y-1 leading-relaxed">
+                <div>&bull; Submit 8 commands without processing any — the SQ fills up and rejects the 9th (queue full)</div>
+                <div>&bull; Submit 3, process 3, consume 3 — watch the full lifecycle: SQ → SSD → CQ → Host</div>
+                <div>&bull; Submit 5, process only 2 — watch how HEAD and TAIL have a gap (the pending commands)</div>
+                <div>&bull; Fill SQ, process all, but don&apos;t consume — CQ fills up, blocking new completions</div>
+              </div>
+            </div>
           </div>
 
           {/* Control buttons */}

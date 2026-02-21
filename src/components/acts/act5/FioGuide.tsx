@@ -9,34 +9,36 @@ const FIO_OPTIONS: {
   name: string;
   flag: string;
   desc: string;
+  why: string;
   values: string;
+  gotcha?: string;
   category: string;
 }[] = [
-  { name: "Job Name", flag: "--name=", desc: "Identifies this job in output. You can have multiple jobs in one file.", values: "any string", category: "basic" },
-  { name: "Filename", flag: "--filename=", desc: "Device or file to test. Use raw block device for direct SSD testing.", values: "/dev/nvme0n1, /tmp/fio.dat", category: "basic" },
-  { name: "I/O Engine", flag: "--ioengine=", desc: "How fio submits I/O. io_uring is fastest on Linux 5.1+, libaio is traditional async.", values: "io_uring, libaio, sync, psync", category: "basic" },
-  { name: "Read/Write", flag: "--rw=", desc: "I/O pattern. Sequential vs random, read vs write vs mixed.", values: "read, write, randread, randwrite, randrw, readwrite", category: "basic" },
-  { name: "Block Size", flag: "--bs=", desc: "I/O request size. 4k for IOPS testing, 128k-1M for throughput.", values: "4k, 8k, 64k, 128k, 1m", category: "basic" },
-  { name: "I/O Depth", flag: "--iodepth=", desc: "Number of I/O requests in flight. NVMe shines at high QD (32-256).", values: "1, 4, 16, 32, 64, 128, 256", category: "queue" },
-  { name: "Num Jobs", flag: "--numjobs=", desc: "Parallel workers. Each gets its own I/O queue. Use with --group_reporting.", values: "1, 4, 8, 16", category: "queue" },
-  { name: "Direct I/O", flag: "--direct=", desc: "Bypass OS page cache. Must be 1 for raw SSD benchmarking.", values: "0 (cached), 1 (direct)", category: "important" },
-  { name: "Runtime", flag: "--runtime=", desc: "How long to run. Use time_based to stop after this duration.", values: "30s, 60s, 120s, 300s", category: "important" },
-  { name: "Time Based", flag: "--time_based", desc: "Run for the full runtime even if the file is exhausted.", values: "flag (no value)", category: "important" },
-  { name: "Size", flag: "--size=", desc: "Total I/O to perform, or file size if creating a test file.", values: "1g, 10g, 100g, 100%", category: "important" },
-  { name: "Group Reporting", flag: "--group_reporting", desc: "Aggregate stats across all numjobs into one summary.", values: "flag (no value)", category: "output" },
-  { name: "Ramp Time", flag: "--ramp_time=", desc: "Warmup period before stats collection begins. Lets the drive reach steady state.", values: "5s, 10s, 30s", category: "advanced" },
-  { name: "Norandommap", flag: "--norandommap", desc: "Don't track which blocks were accessed. Faster for large random tests.", values: "flag (no value)", category: "advanced" },
-  { name: "RW Mix Read", flag: "--rwmixread=", desc: "Percentage of reads in mixed workload (randrw). Rest is writes.", values: "70, 50, 30", category: "advanced" },
-  { name: "IO Depth Batch", flag: "--iodepth_batch=", desc: "Submit this many I/Os at once. Improves batching efficiency.", values: "8, 16, 32", category: "advanced" },
-  { name: "IO Depth Batch Complete", flag: "--iodepth_batch_complete_min=", desc: "Wait for at least this many completions before submitting more.", values: "1, 8, 16", category: "advanced" },
-  { name: "Verify", flag: "--verify=", desc: "Data integrity check. Writes patterns, reads back and verifies.", values: "md5, crc32c, sha256, pattern", category: "verification" },
-  { name: "Latency Target", flag: "--latency_target=", desc: "Target latency in usec. Fio adjusts QD to maintain this.", values: "500, 1000, 5000", category: "advanced" },
+  { name: "Job Name", flag: "--name=", desc: "Identifies this job in output. You can have multiple jobs in one fio config file.", why: "When running multiple workloads (e.g., reads and writes simultaneously), the name lets you tell which stats belong to which job.", values: "any string", category: "basic" },
+  { name: "Filename", flag: "--filename=", desc: "Device or file to test. Use raw block device for direct SSD testing.", why: "Testing a raw block device (/dev/nvme0n1) bypasses the filesystem entirely — you're measuring the SSD directly. Testing a file path (/tmp/fio.dat) includes filesystem overhead, which is more realistic for application benchmarks.", values: "/dev/nvme0n1, /tmp/fio.dat", gotcha: "Using a raw device DESTROYS all data on it. Triple-check the device name. Use 'lsblk' to verify.", category: "basic" },
+  { name: "I/O Engine", flag: "--ioengine=", desc: "How fio submits I/O to the kernel.", why: "io_uring is the modern, fastest option (Linux 5.1+). It uses shared ring buffers between userspace and kernel — no system call overhead per I/O. libaio is the traditional async engine. sync means one I/O at a time (useless for benchmarking SSDs). The engine you choose determines the maximum achievable performance.", values: "io_uring, libaio, sync, psync", gotcha: "If you use 'sync', iodepth is forced to 1 — you can't test deep queues.", category: "basic" },
+  { name: "Read/Write Pattern", flag: "--rw=", desc: "The I/O pattern to generate.", why: "SSDs perform very differently depending on the pattern. Sequential reads can hit 7 GB/s on PCIe 4.0, but random reads at QD1 might only do 15,000 IOPS. Testing only sequential reads and claiming '7 GB/s' is misleading if your workload is random.", values: "read, write, randread, randwrite, randrw, readwrite", category: "basic" },
+  { name: "Block Size", flag: "--bs=", desc: "Size of each I/O request.", why: "Block size determines whether you measure IOPS or throughput. At 4K, you're measuring how many small operations the SSD can handle (IOPS). At 128K-1M, you're measuring raw bandwidth. Real databases use 4K-16K, file copies use 128K+, and video streaming uses 1M+. Match your block size to your actual workload.", values: "4k, 8k, 64k, 128k, 1m", gotcha: "Using bs=4k for a throughput test gives misleadingly low MB/s numbers. Using bs=1m for an IOPS test gives misleadingly high IOPS numbers.", category: "basic" },
+  { name: "I/O Depth", flag: "--iodepth=", desc: "Number of I/O requests in flight simultaneously.", why: "This is perhaps the most important fio parameter for NVMe. Remember from Act 2: NVMe has deep queues (up to 65K entries). An SSD has multiple NAND chips that can work in parallel. At iodepth=1, you're only using one chip at a time — the SSD is mostly idle. At iodepth=128, you're keeping many chips busy simultaneously. NVMe drives can be 10-20x faster at high queue depth vs QD1.", values: "1, 4, 16, 32, 64, 128, 256", gotcha: "High iodepth with sync engine does nothing — sync can only have 1 in flight. Use io_uring or libaio.", category: "queue" },
+  { name: "Num Jobs", flag: "--numjobs=", desc: "Number of parallel worker threads/processes.", why: "Each job gets its own I/O queue. Remember: NVMe creates one queue pair per CPU core. With numjobs=4 and iodepth=32, you have 4 threads × 32 = 128 total I/Os in flight. This simulates multi-threaded applications like databases.", values: "1, 4, 8, 16", gotcha: "numjobs × iodepth = total I/Os in flight. 16 jobs × 256 depth = 4096 in flight — that might overwhelm your system.", category: "queue" },
+  { name: "Direct I/O", flag: "--direct=", desc: "Bypass the OS page cache.", why: "Without direct=1, your I/O goes through Linux's page cache (RAM). Reads hit the cache and return at RAM speed (~10 GB/s), not SSD speed. Writes get buffered in RAM and flushed later. You'd be measuring your RAM, not your SSD. direct=1 forces I/O to go straight to the device.", values: "0 (cached), 1 (direct)", gotcha: "Forgetting direct=1 is the #1 fio mistake. Your results will look impossibly fast because you're reading from RAM.", category: "important" },
+  { name: "Runtime", flag: "--runtime=", desc: "Maximum test duration.", why: "Short tests (5-10s) measure burst performance — often from the SSD's SLC cache, which is much faster than the underlying TLC/QLC NAND. To see true sustained performance, run for at least 60 seconds for reads and 120+ seconds for writes (to exhaust the SLC cache). Enterprise testing runs for 30+ minutes.", values: "30s, 60s, 120s, 300s", category: "important" },
+  { name: "Time Based", flag: "--time_based", desc: "Keep running for the full runtime even if the test file/device is exhausted.", why: "Without this, fio might finish early if 'size' worth of I/O completes before runtime expires. With time_based, fio loops and keeps going until the clock runs out.", values: "flag (no value)", category: "important" },
+  { name: "Size", flag: "--size=", desc: "Total amount of I/O to generate, or the size of the test file.", why: "For raw device testing, this limits how much of the device fio accesses. Using size=100% means fio can access the entire device (all LBAs). Using size=1g means fio only writes to the first 1GB — the SSD's SLC cache can absorb that easily, giving unrealistically high numbers.", values: "1g, 10g, 100g, 100%", gotcha: "Testing with size=1g on a 1TB drive only touches 0.1% of the NAND. The SLC cache handles it all — you'll never see real TLC performance.", category: "important" },
+  { name: "Group Reporting", flag: "--group_reporting", desc: "Aggregate statistics across all numjobs into one summary.", why: "Without this, fio prints separate stats for each job. With 16 jobs, that's 16 blocks of output. group_reporting gives you one clean summary with total IOPS and bandwidth.", values: "flag (no value)", category: "output" },
+  { name: "Ramp Time", flag: "--ramp_time=", desc: "Warmup period — I/O runs but stats aren't collected.", why: "When a drive is idle, the first few seconds of I/O may show irregular performance: the controller is waking up, caches are filling, GC might kick in. Ramp time lets the drive reach steady state before you start measuring. Enterprise benchmarks use 30-60s ramp time.", values: "5s, 10s, 30s", category: "advanced" },
+  { name: "Norandommap", flag: "--norandommap", desc: "Don't track which blocks were accessed during random I/O.", why: "By default, fio ensures every block is accessed exactly once during random I/O (using a bitmap). For large devices, this bitmap uses significant memory. norandommap uses true random addressing — some blocks might be hit multiple times, some never. For benchmarking, this is fine and uses less memory.", values: "flag (no value)", category: "advanced" },
+  { name: "RW Mix Read", flag: "--rwmixread=", desc: "Percentage of reads in a mixed (randrw) workload.", why: "Real applications aren't pure reads or pure writes — they're mixed. A typical database is 70-80% reads, 20-30% writes. Email servers might be 50/50. Testing with the right mix reveals how the SSD handles concurrent read/write operations, which stresses the controller more than pure workloads.", values: "70, 50, 30", category: "advanced" },
+  { name: "IO Depth Batch", flag: "--iodepth_batch=", desc: "Submit this many I/Os at once before waiting for completions.", why: "Instead of submitting one I/O and immediately checking for completions, batch submission lets you amortize the system call overhead. Submit 16 at once, then check for completions — more efficient for io_uring and libaio.", values: "8, 16, 32", category: "advanced" },
+  { name: "IO Depth Batch Complete", flag: "--iodepth_batch_complete_min=", desc: "Wait for at least this many completions before submitting more.", why: "Controls the balance between submission and completion. Setting this to 1 means 'submit a new batch as soon as any I/O completes.' Setting it higher means 'wait for more completions before submitting' — reducing CPU overhead but potentially leaving the SSD idle briefly.", values: "1, 8, 16", category: "advanced" },
+  { name: "Verify", flag: "--verify=", desc: "Data integrity verification — writes patterns, reads back, and verifies.", why: "Detects silent data corruption. fio writes known patterns (checksummed), then reads them back and verifies the checksum matches. If the SSD corrupts data silently (no error status, but wrong data), this catches it. Essential for qualifying new SSDs or testing after firmware updates.", values: "md5, crc32c, sha256, pattern", category: "verification" },
+  { name: "Latency Target", flag: "--latency_target=", desc: "Target latency in microseconds. fio automatically adjusts queue depth.", why: "Instead of 'what's the max IOPS at QD128?', this answers 'what's the max IOPS while keeping latency under 500μs?' This is how real SLAs work — you care about both throughput AND latency. fio starts at high QD and backs off until latency meets the target.", values: "500, 1000, 5000", category: "advanced" },
 ];
 
 const PRESETS = [
   {
     name: "4K Random Read (IOPS)",
-    desc: "Standard IOPS benchmark. High queue depth to saturate the SSD.",
+    desc: "Standard IOPS benchmark. High queue depth to saturate the SSD. This is the headline number on SSD spec sheets.",
     cmd: `fio --name=4k-randread \\
   --filename=/dev/nvme0n1 \\
   --ioengine=io_uring \\
@@ -52,7 +54,7 @@ const PRESETS = [
   },
   {
     name: "4K Random Write (IOPS)",
-    desc: "Write IOPS. Watch for steady-state degradation after SLC cache fills.",
+    desc: "Write IOPS. Run for 120s+ to exhaust the SLC cache and see true TLC/QLC write speed.",
     cmd: `fio --name=4k-randwrite \\
   --filename=/dev/nvme0n1 \\
   --ioengine=io_uring \\
@@ -68,7 +70,7 @@ const PRESETS = [
   --norandommap`,
   },
   {
-    name: "128K Sequential Read (Throughput)",
+    name: "128K Sequential Read (BW)",
     desc: "Maximum sequential bandwidth. Larger block size saturates PCIe lanes.",
     cmd: `fio --name=seq-read \\
   --filename=/dev/nvme0n1 \\
@@ -101,7 +103,7 @@ const PRESETS = [
   },
   {
     name: "QD=1 Latency Test",
-    desc: "Measures raw device latency at low queue depth. No parallelism.",
+    desc: "Measures raw device latency — one I/O at a time. No parallelism. This is the 'speed of light' for the SSD.",
     cmd: `fio --name=latency \\
   --filename=/dev/nvme0n1 \\
   --ioengine=io_uring \\
@@ -116,7 +118,7 @@ const PRESETS = [
   },
   {
     name: "Data Integrity Verify",
-    desc: "Write patterns then read back and verify. Catches silent corruption.",
+    desc: "Writes data patterns, reads back and verifies checksums. Catches silent corruption.",
     cmd: `fio --name=verify \\
   --filename=/dev/nvme0n1 \\
   --ioengine=io_uring \\
@@ -160,6 +162,13 @@ export default function FioGuide() {
           and how many requests are in flight simultaneously.
         </p>
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          <em className="text-text-primary">Why can&apos;t you just copy a large file
+          and time it?</em> Because file copies are sequential reads and writes through
+          the filesystem — they only test one dimension of SSD performance. A database
+          server doing 10,000 random 4K reads per second has completely different needs
+          than a video editor streaming 2 GB/s sequentially.
+        </p>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           <strong className="text-text-primary">fio</strong> (Flexible I/O Tester)
           is the industry-standard tool for answering these questions. It lets you
           simulate any workload pattern and measures three critical metrics:
@@ -167,11 +176,19 @@ export default function FioGuide() {
         <ul className="text-text-secondary mb-4 leading-relaxed max-w-3xl list-disc ml-5 space-y-1">
           <li><strong className="text-text-primary">IOPS</strong> — I/O Operations Per Second. How many individual read/write operations per second. The key metric for small random I/O (like database workloads).</li>
           <li><strong className="text-text-primary">Bandwidth (BW)</strong> — MB/s or GB/s. How fast data flows. The key metric for large sequential I/O (like video streaming or file copies).</li>
-          <li><strong className="text-text-primary">Latency</strong> — How long each operation takes. The p99 (99th percentile) matters more than the average because one slow request can stall your application.</li>
+          <li><strong className="text-text-primary">Latency</strong> — How long each operation takes. <em className="text-text-primary">Why does the 99th percentile matter more than the average?</em> Because if your average latency is 100μs but the p99 is 10ms, one in every 100 requests is 100x slower — and that one slow request can stall your entire application pipeline.</li>
         </ul>
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
+          <em className="text-text-primary">But wait — IOPS and bandwidth are related,
+          right?</em> Yes! IOPS × block_size = bandwidth. If you do 1,000,000 IOPS at
+          4K, that&apos;s 4 GB/s bandwidth. If you do 50,000 IOPS at 128K, that&apos;s
+          6.4 GB/s. The SSD has a maximum for both — it can&apos;t exceed its IOPS limit
+          OR its bandwidth limit, whichever it hits first.
+        </p>
         <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
           fio works by running &ldquo;jobs&rdquo; — you tell it what I/O pattern to
           generate, and it hammers the drive while collecting detailed statistics.
+          Let&apos;s explore the presets first, then dive into what each parameter does.
         </p>
 
         {/* Preset commands */}
@@ -209,36 +226,110 @@ export default function FioGuide() {
           </div>
         </div>
 
+        {/* SLC Cache + Steady State explanation */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-8">
+          <div className="text-text-primary font-semibold text-sm mb-3">
+            The SLC Cache Trap &mdash; Why Short Benchmarks Lie
+          </div>
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            <em className="text-text-primary">Why does my SSD benchmark show 5 GB/s
+            for the first 30 seconds, then drop to 1.5 GB/s?</em> Because most consumer
+            SSDs have an <strong className="text-text-primary">SLC cache</strong> — a
+            portion of the TLC/QLC NAND that temporarily operates in faster SLC mode
+            (1 bit per cell instead of 3-4). Writes go to this fast cache first.
+          </p>
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            <em className="text-text-primary">But the SLC cache has a finite size</em>{" "}
+            (typically 10-100 GB depending on the drive and how full it is). Once it
+            fills up, writes fall back to direct TLC/QLC programming — which is 2-5x
+            slower. Short benchmarks only measure cache speed. To see real sustained
+            performance, you need to:
+          </p>
+          <div className="space-y-1.5 text-text-secondary text-xs mb-3">
+            <div className="flex items-start gap-2">
+              <span className="text-nvme-blue flex-shrink-0">1.</span>
+              <span>Run writes for <strong>120+ seconds</strong> to exhaust the SLC cache</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-nvme-blue flex-shrink-0">2.</span>
+              <span>Use <strong>ramp_time=30s</strong> to skip the cache burst phase</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-nvme-blue flex-shrink-0">3.</span>
+              <span>Use <strong>size=100%</strong> to access the full drive (not just the first GB)</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <span className="text-nvme-blue flex-shrink-0">4.</span>
+              <span>Pre-fill the drive with data before testing (so the SLC cache is already busy)</span>
+            </div>
+          </div>
+          <p className="text-text-muted text-[10px] italic">
+            Enterprise SSDs with large over-provisioning have bigger SLC caches and more
+            consistent performance. But even they have limits — steady-state testing is the
+            only way to know the real sustained performance.
+          </p>
+        </div>
+
+        {/* Common Mistakes */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-8">
+          <div className="text-text-primary font-semibold text-sm mb-3">
+            Common fio Mistakes &mdash; And Why They Give Wrong Results
+          </div>
+          <div className="space-y-3">
+            {[
+              { mistake: "Forgetting --direct=1", result: "You measure RAM speed (10+ GB/s reads), not SSD speed", fix: "Always use --direct=1 for raw device testing" },
+              { mistake: "Using sync engine with high iodepth", result: "iodepth is silently capped to 1 — you measure QD1 latency, not throughput", fix: "Use --ioengine=io_uring (or libaio) for async I/O" },
+              { mistake: "Testing only 1GB on a 1TB drive", result: "SLC cache absorbs everything — writes appear 3-5x faster than sustained", fix: "Use --size=100% or pre-fill the drive before testing" },
+              { mistake: "5-second runtime for write test", result: "You only see SLC cache speed, not steady-state TLC/QLC performance", fix: "Use --runtime=120s or longer, with --ramp_time=10s" },
+              { mistake: "Single thread, low queue depth", result: "SSD sits mostly idle — only one NAND chip busy at a time", fix: "Use --numjobs=4 --iodepth=32 for realistic multi-queue load" },
+              { mistake: "Testing on a filesystem, not raw device", result: "Filesystem overhead (journaling, metadata) adds latency and reduces throughput", fix: "Test raw /dev/nvme0n1 for pure SSD performance" },
+            ].map((item) => (
+              <div key={item.mistake} className="bg-story-surface rounded-xl p-3">
+                <div className="flex items-start gap-2">
+                  <span className="text-nvme-red text-xs flex-shrink-0 mt-0.5">✗</span>
+                  <div>
+                    <span className="text-text-primary text-xs font-semibold">{item.mistake}</span>
+                    <p className="text-text-muted text-[10px] mt-0.5">Result: {item.result}</p>
+                    <p className="text-nvme-green text-[10px] mt-0.5">Fix: {item.fix}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Option reference */}
         <div className="mb-8">
           <div className="flex items-center justify-between mb-4">
             <div className="text-text-muted text-xs font-mono uppercase tracking-wider">
-              fio Option Reference
+              fio Option Reference — with explanations
             </div>
             <button
               onClick={() => setShowAllOptions(!showAllOptions)}
               className="text-xs text-nvme-blue hover:underline font-mono"
             >
-              {showAllOptions ? "Show less" : "Show all options"}
+              {showAllOptions ? "Filter by category" : "Show all options"}
             </button>
           </div>
 
           {/* Category tabs */}
-          <div className="flex flex-wrap gap-1 mb-4">
-            {CATEGORIES.map((cat) => (
-              <button
-                key={cat.key}
-                onClick={() => setActiveCategory(cat.key)}
-                className={`px-3 py-1.5 rounded-lg text-[11px] font-mono transition-all ${
-                  activeCategory === cat.key
-                    ? "bg-nvme-blue/10 text-nvme-blue border border-nvme-blue/30"
-                    : "bg-story-surface text-text-muted hover:text-text-secondary"
-                }`}
-              >
-                {cat.label}
-              </button>
-            ))}
-          </div>
+          {!showAllOptions && (
+            <div className="flex flex-wrap gap-1 mb-4">
+              {CATEGORIES.map((cat) => (
+                <button
+                  key={cat.key}
+                  onClick={() => setActiveCategory(cat.key)}
+                  className={`px-3 py-1.5 rounded-lg text-[11px] font-mono transition-all ${
+                    activeCategory === cat.key
+                      ? "bg-nvme-blue/10 text-nvme-blue border border-nvme-blue/30"
+                      : "bg-story-surface text-text-muted hover:text-text-secondary"
+                  }`}
+                >
+                  {cat.label}
+                </button>
+              ))}
+            </div>
+          )}
 
           <div className="space-y-2">
             {FIO_OPTIONS
@@ -251,7 +342,13 @@ export default function FioGuide() {
                     </code>
                     <div className="flex-1 min-w-0">
                       <div className="text-text-primary text-sm font-semibold">{opt.name}</div>
-                      <p className="text-text-muted text-xs mt-0.5">{opt.desc}</p>
+                      <p className="text-text-secondary text-xs mt-0.5">{opt.desc}</p>
+                      <p className="text-nvme-violet text-[10px] mt-1 italic">{opt.why}</p>
+                      {opt.gotcha && (
+                        <p className="text-nvme-amber text-[10px] mt-1">
+                          <strong>Watch out:</strong> {opt.gotcha}
+                        </p>
+                      )}
                       <div className="mt-1">
                         <span className="text-[10px] text-text-muted">Values: </span>
                         <span className="text-[10px] text-text-code font-mono">{opt.values}</span>
@@ -266,8 +363,12 @@ export default function FioGuide() {
         {/* Understanding fio output */}
         <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
           <div className="text-text-primary font-semibold mb-3">
-            Reading fio Output
+            Reading fio Output &mdash; What Each Number Means
           </div>
+          <p className="text-text-secondary text-xs mb-4 leading-relaxed">
+            fio&apos;s output looks intimidating, but once you know what each line means,
+            it tells you everything about your SSD&apos;s behavior:
+          </p>
           <pre className="text-xs bg-story-dark rounded-xl p-4 overflow-x-auto font-mono text-white/90 mb-4">
 {`  read: IOPS=985k, BW=3847MiB/s (4034MB/s)(225GiB/60001msec)
     slat (nsec): min=900, max=123456, avg=1523.45, stdev=892.31
@@ -279,39 +380,109 @@ export default function FioGuide() {
      | 99.00th=[  293], 99.50th=[  343], 99.90th=[  523],
      | 99.95th=[  668], 99.99th=[ 1942]`}
           </pre>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs mb-4">
             <div className="bg-story-surface rounded-lg p-3">
-              <span className="text-nvme-green font-mono font-bold">IOPS</span>
-              <span className="text-text-muted"> = I/O operations per second. The headline number for random 4K.</span>
+              <span className="text-nvme-green font-mono font-bold">IOPS=985k</span>
+              <p className="text-text-muted mt-1">
+                985,000 I/O operations per second. This is the headline number for
+                random 4K benchmarks. <em>How to know if this is good?</em> Consumer
+                NVMe SSDs typically reach 500K-1M IOPS; enterprise drives can exceed 2M.
+              </p>
             </div>
             <div className="bg-story-surface rounded-lg p-3">
-              <span className="text-nvme-green font-mono font-bold">BW</span>
-              <span className="text-text-muted"> = Bandwidth. The headline number for sequential workloads.</span>
+              <span className="text-nvme-green font-mono font-bold">BW=3847MiB/s</span>
+              <p className="text-text-muted mt-1">
+                3.85 GB/s bandwidth. The headline number for sequential benchmarks.
+                PCIe 4.0 x4 theoretical max is ~7 GB/s. PCIe 3.0 x4 caps at ~3.5 GB/s.
+              </p>
             </div>
             <div className="bg-story-surface rounded-lg p-3">
-              <span className="text-nvme-blue font-mono font-bold">slat</span>
-              <span className="text-text-muted"> = Submission latency. Time from fio submit to kernel.</span>
+              <span className="text-nvme-blue font-mono font-bold">slat (submission latency)</span>
+              <p className="text-text-muted mt-1">
+                Time from fio calling the kernel to the request being submitted.
+                Measured in nanoseconds. Should be very low (~1-2μs). If high,
+                there&apos;s overhead in the I/O path (filesystem, scheduler).
+              </p>
             </div>
             <div className="bg-story-surface rounded-lg p-3">
-              <span className="text-nvme-blue font-mono font-bold">clat</span>
-              <span className="text-text-muted"> = Completion latency. Kernel to completion. This is what matters.</span>
+              <span className="text-nvme-blue font-mono font-bold">clat (completion latency)</span>
+              <p className="text-text-muted mt-1">
+                Time from submission to the device completing the I/O. <em>This is the
+                most important latency number</em> — it measures actual SSD response time.
+                For 4K reads: &lt;100μs is excellent, 100-200μs is good, &gt;500μs needs investigation.
+              </p>
             </div>
             <div className="bg-story-surface rounded-lg p-3">
-              <span className="text-nvme-violet font-mono font-bold">lat</span>
-              <span className="text-text-muted"> = Total latency (slat + clat). End-to-end from fio&apos;s perspective.</span>
+              <span className="text-nvme-violet font-mono font-bold">lat (total latency)</span>
+              <p className="text-text-muted mt-1">
+                slat + clat = total end-to-end latency from fio&apos;s perspective.
+                In most cases, lat ≈ clat because slat is tiny.
+              </p>
             </div>
             <div className="bg-story-surface rounded-lg p-3">
-              <span className="text-nvme-amber font-mono font-bold">p99/p99.9</span>
-              <span className="text-text-muted"> = Tail latency. More important than averages for real workloads.</span>
+              <span className="text-nvme-amber font-mono font-bold">p99 / p99.9 / p99.99</span>
+              <p className="text-text-muted mt-1">
+                Tail latency percentiles. <em>p99=293μs means 99% of requests completed
+                in under 293μs.</em> The remaining 1% were slower. Look at p99.9 and p99.99
+                for the worst outliers — these are often GC stalls or thermal throttling.
+              </p>
+            </div>
+          </div>
+          <p className="text-text-muted text-[10px] italic">
+            <em>Why does stdev (standard deviation) matter?</em> Low stdev means consistent
+            performance — every I/O takes about the same time. High stdev means some I/Os are
+            much slower than average, indicating inconsistency (GC, thermal throttling, or
+            contention).
+          </p>
+        </div>
+
+        {/* Steady state explanation */}
+        <div className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
+          <div className="text-text-primary font-semibold text-sm mb-3">
+            Burst vs Steady State &mdash; Two Very Different Numbers
+          </div>
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            <em className="text-text-primary">If you run two fio tests on the same
+            drive and get wildly different results, what went wrong?</em> Probably
+            nothing — you measured two different things:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="bg-story-surface rounded-xl p-4">
+              <div className="text-nvme-green font-mono font-bold text-xs mb-2">
+                Burst Performance
+              </div>
+              <p className="text-text-muted text-xs leading-relaxed mb-2">
+                Fresh drive, SLC cache not full, GC not active. This is what
+                spec sheets advertise. Typically 2-5x higher than steady state
+                for write workloads.
+              </p>
+              <p className="text-text-muted text-[10px] italic">
+                Relevant for: boot times, app launches, short file transfers
+              </p>
+            </div>
+            <div className="bg-story-surface rounded-xl p-4">
+              <div className="text-nvme-amber font-mono font-bold text-xs mb-2">
+                Steady State Performance
+              </div>
+              <p className="text-text-muted text-xs leading-relaxed mb-2">
+                Drive is mostly full, SLC cache exhausted, GC running continuously.
+                This is real-world performance under sustained load. The only
+                number that matters for servers and databases.
+              </p>
+              <p className="text-text-muted text-[10px] italic">
+                Relevant for: databases, servers, video editing, VM hosts
+              </p>
             </div>
           </div>
         </div>
 
-        <InfoCard variant="warning" title="Always use --direct=1">
-          Without direct=1, I/O goes through the Linux page cache. You&apos;ll
-          measure RAM speed, not SSD speed. For raw device testing, always set{" "}
-          <code className="text-text-code">--direct=1</code> and use the block device
-          (<code className="text-text-code">/dev/nvme0n1</code>), not a filesystem path.
+        <InfoCard variant="warning" title="CAUTION: fio on raw devices destroys data">
+          Using <code className="text-text-code">--filename=/dev/nvme0n1</code> writes
+          directly to the block device, overwriting ALL data — filesystem, partitions,
+          everything. <em>Always double-check the device name with{" "}
+          <code className="text-text-code">lsblk</code> before running fio.</em> For
+          safe testing, use a file path (<code className="text-text-code">--filename=/tmp/fio.dat</code>)
+          instead — slightly less accurate but won&apos;t destroy your data.
         </InfoCard>
       </div>
     </SectionWrapper>
