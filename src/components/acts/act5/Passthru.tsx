@@ -774,6 +774,13 @@ export default function Passthru() {
           <div className="text-text-primary font-semibold text-sm mb-3">
             Reading a Hexdump
           </div>
+          <p className="text-text-secondary text-xs leading-relaxed mb-3">
+            A <strong className="text-text-primary">DWord</strong> (Double Word) is always{" "}
+            <strong className="text-text-primary">4 bytes</strong>. The number is just an index
+            — CDW10 means &ldquo;the 10th dword&rdquo; (bytes 40–43), not 10 bytes.
+            An NVMe SQ entry is 16 DWords &times; 4 bytes = 64 bytes. Vendor data structures
+            also use 4-byte alignment — each field below spans exactly one dword.
+          </p>
           <p className="text-text-secondary text-xs leading-relaxed mb-4">
             An <strong className="text-text-primary">offset</strong> is just a position
             — how many bytes from the start of the data. Byte 0 is at offset 0, byte 16
