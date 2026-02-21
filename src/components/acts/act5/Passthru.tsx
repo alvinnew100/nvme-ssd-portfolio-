@@ -316,15 +316,21 @@ const HEX_DATA = [
 
 const HEX_FIELDS: { start: number; end: number; name: string; raw: string; decoded: string }[] = [
   { start: 0x00, end: 0x03, name: "Magic signature", raw: "56 45 4e 44", decoded: "ASCII: \"VEND\"" },
-  { start: 0x04, end: 0x05, name: "Version", raw: "01 00", decoded: "0x0001 → 1" },
-  { start: 0x06, end: 0x07, name: "Structure type", raw: "02 00", decoded: "0x0002 → 2 (health)" },
+  { start: 0x04, end: 0x07, name: "Version + Structure type", raw: "01 00 02 00", decoded: "Version = 0x0001 → 1, Type = 0x0002 → 2 (health)" },
   { start: 0x08, end: 0x0B, name: "NAND writes (GB)", raw: "00 10 00 00", decoded: "0x00001000 → 4096 GB" },
   { start: 0x0C, end: 0x0F, name: "Temperature", raw: "a4 03 00 00", decoded: "0x000003A4 → 932 (93.2°C)" },
   { start: 0x10, end: 0x13, name: "Power-on hours", raw: "e8 03 00 00", decoded: "0x000003E8 → 1000 hrs" },
   { start: 0x14, end: 0x17, name: "Reserved", raw: "00 00 00 00", decoded: "—" },
   { start: 0x18, end: 0x1B, name: "Percentage used", raw: "64 00 00 00", decoded: "0x00000064 → 100%" },
+  { start: 0x1C, end: 0x1F, name: "Reserved", raw: "00 00 00 00", decoded: "—" },
   { start: 0x20, end: 0x23, name: "Error count", raw: "25 04 00 00", decoded: "0x00000425 → 1061" },
   { start: 0x24, end: 0x27, name: "Available spare", raw: "c8 00 00 00", decoded: "0x000000C8 → 200 (100%)" },
+  { start: 0x28, end: 0x2B, name: "Reserved", raw: "00 00 00 00", decoded: "—" },
+  { start: 0x2C, end: 0x2F, name: "Reserved", raw: "00 00 00 00", decoded: "—" },
+  { start: 0x30, end: 0x33, name: "Reserved", raw: "00 00 00 00", decoded: "—" },
+  { start: 0x34, end: 0x37, name: "Reserved", raw: "00 00 00 00", decoded: "—" },
+  { start: 0x38, end: 0x3B, name: "Reserved", raw: "00 00 00 00", decoded: "—" },
+  { start: 0x3C, end: 0x3F, name: "Reserved", raw: "00 00 00 00", decoded: "—" },
 ];
 
 const HEX_PRESETS = [
@@ -385,7 +391,7 @@ function HexdumpExplorer() {
                 <span className="text-nvme-violet w-[72px] flex-shrink-0 select-none">
                   {rowOffset.toString(16).padStart(8, "0")}
                 </span>
-                {/* Hex bytes */}
+                {/* Hex bytes — grouped by dwords (4 bytes) */}
                 <span className="flex-shrink-0">
                   {rowBytes.map((byte, col) => {
                     const offset = rowOffset + col;
@@ -405,7 +411,9 @@ function HexdumpExplorer() {
                           {byte}
                         </motion.span>
                         {col === 7 ? (
-                          <span className="text-white/20">{" "} </span>
+                          <span className="text-white/20">{"  "}</span>
+                        ) : col < 15 && col % 4 === 3 ? (
+                          <span className="text-white/10">{" "} </span>
                         ) : col < 15 ? (
                           <span className="text-white/10"> </span>
                         ) : null}
