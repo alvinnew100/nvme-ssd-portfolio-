@@ -3,8 +3,7 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
-import FillInBlank from "@/components/story/FillInBlank";
-import KnowledgeCheck from "@/components/story/KnowledgeCheck";
+import RevealCard from "@/components/story/RevealCard";
 import { CELL_TYPES } from "./nandData";
 
 function EnduranceVisual({ activeCell }: { activeCell: number }) {
@@ -208,20 +207,17 @@ export default function NandEndurance() {
 
         <EnduranceVisual activeCell={activeCell} />
 
-        <FillInBlank
+        <RevealCard
           id="act1-endurance-fill1"
-          prompt="A TLC cell can endure approximately {blank} P/E cycles."
-          blanks={[{ answer: "3000", tolerance: 1000, placeholder: "?" }]}
-          explanation="TLC cells typically survive ~3,000 P/E cycles. SLC is ~100K, MLC ~10K, and QLC ~1K. The more voltage levels, the faster the oxide degrades."
+          prompt="How would you estimate TLC endurance from first principles, knowing that SLC endures ~100K cycles and each additional bit per cell roughly reduces endurance by an order of magnitude? What physical mechanism drives this relationship?"
+          answer="SLC (~100K P/E cycles) has 2 voltage levels with wide margins. Each additional bit doubles the voltage levels and roughly halves the margin between them: MLC (4 levels, ~10K cycles), TLC (8 levels, ~3K cycles), QLC (16 levels, ~1K cycles). TLC endures approximately 3,000 P/E cycles. The physical mechanism is oxide degradation: each erase cycle's high-voltage pulse permanently traps a few electrons in the tunnel oxide. With SLC's wide margins, the cell tolerates substantial threshold voltage shifts before misreads occur. With TLC's 8 tightly-packed levels, even small voltage shifts push distributions into neighboring states. The relationship isn't perfectly geometric because ECC and read-retry algorithms partially compensate for increased error rates."
           hint="More bits per cell means more voltage levels, which stresses the oxide layer faster."
         />
 
-        <KnowledgeCheck
+        <RevealCard
           id="act1-endurance-kc1"
-          question="What physically causes a NAND cell to wear out?"
-          options={["Electrons trapped in oxide insulator", "The silicon substrate melts"]}
-          correctIndex={0}
-          explanation="Each high-voltage erase cycle pushes electrons through the oxide insulator. Some get permanently stuck (charge trapping), making the oxide leaky. Eventually, the floating gate can't hold charge at precise enough levels to distinguish between states."
+          prompt="A colleague says 'NAND cells wear out because the silicon melts from repeated writes.' When is this wrong, and what is the actual physical degradation mechanism? How does it manifest as observable symptoms?"
+          answer="This is entirely wrong — silicon doesn't melt at normal operating temperatures (its melting point is 1,414C). The actual mechanism is oxide degradation through charge trapping. Each high-voltage erase cycle (~20V) forces electrons through the thin tunnel oxide via Fowler-Nordheim tunneling. Some electrons become permanently trapped in defect sites within the oxide layer itself. Over thousands of cycles, these trapped charges make the oxide increasingly 'leaky,' causing two observable symptoms: (1) the floating gate loses charge faster (reduced data retention), and (2) the threshold voltage distributions widen and shift, causing the controller to misread voltage levels. The symptoms manifest as increasing bit error rates in SMART data, more frequent ECC corrections, and eventually uncorrectable read errors."
           hint="Think about which cell type stores more bits and therefore has more voltage levels to distinguish."
         />
       </div>

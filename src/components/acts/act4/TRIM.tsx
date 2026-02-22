@@ -7,7 +7,7 @@ import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import QuizCard from "@/components/story/QuizCard";
+import RevealCard from "@/components/story/RevealCard";
 
 /* ─── GC animation data ─── */
 type PageState = "valid" | "stale" | "free";
@@ -562,15 +562,10 @@ export default function TRIM() {
           10-20% free space for consistent performance.</em>
         </InfoCard>
 
-        <QuizCard
+        <RevealCard
           id="act4-trim-quiz1"
-          question="What problem does TRIM solve?"
-          options={[
-            { text: "Speeds up sequential reads", explanation: "TRIM doesn't directly affect read speed. Its benefit is about write performance and endurance." },
-            { text: "Tells the SSD which blocks are no longer in use, reducing GC overhead", correct: true, explanation: "Correct! When you delete a file, the OS knows those LBAs are free, but the SSD doesn't — it still sees them as valid data. TRIM bridges this gap by telling the SSD which LBAs are no longer needed, allowing it to mark pages as stale and improve GC efficiency." },
-            { text: "Encrypts data at rest", explanation: "Encryption is handled by different mechanisms (TCG Opal, AES). TRIM is about space management." },
-            { text: "Increases the drive's physical capacity", explanation: "TRIM doesn't add capacity. It helps the SSD manage existing free space more efficiently." },
-          ]}
+          prompt="A colleague says: 'TRIM is optional — the SSD works fine without it.' Under what conditions is this true, and when does it fail catastrophically? Trace the chain of consequences when TRIM is absent on a heavily-used drive."
+          answer="Without TRIM, the SSD has no way to know when files are deleted — the filesystem marks LBAs as free internally, but the SSD still considers those pages valid. On a lightly-used drive with plenty of free space, this barely matters because GC has enough free blocks to work with. But as the drive fills up, consequences cascade: GC must copy 'valid' pages that are actually dead data, dramatically increasing write amplification. More GC writes means faster NAND wear. Fewer free blocks forces foreground GC, which blocks host I/O and causes latency spikes. Eventually the drive enters a vicious cycle — high WAF, degraded performance, and shortened lifespan. TRIM breaks this cycle by telling the SSD which pages are stale, so GC skips them entirely."
         />
       </div>
     </SectionWrapper>

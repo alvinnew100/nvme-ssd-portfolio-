@@ -6,7 +6,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
 import InfoCard from "@/components/story/InfoCard";
-import QuizCard from "@/components/story/QuizCard";
+import RevealCard from "@/components/story/RevealCard";
 
 const STATUS_CODES = [
   { code: "0x0000", meaning: "Successful Completion", type: "Generic", hint: "Everything worked as expected" },
@@ -212,15 +212,10 @@ export default function ErrorHandling() {
           fire alarm that sits silent until there&apos;s smoke.
         </InfoCard>
 
-        <QuizCard
+        <RevealCard
           id="act3-errors-quiz1"
-          question="A completion entry has Status Code Type (SCT) = 0 and Status Code (SC) = 0. What does this mean?"
-          options={[
-            { text: "Successful completion", correct: true, explanation: "Correct! SCT=0 (Generic Command Status) with SC=0 means the command completed successfully. This is the most common completion status you'll see." },
-            { text: "Invalid opcode", explanation: "Invalid opcode would be SCT=0, SC=1. SC=0 means success." },
-            { text: "Namespace not ready", explanation: "Namespace Not Ready is a different status code. SCT=0/SC=0 is success." },
-            { text: "Internal device error", explanation: "Internal errors use different status codes. The all-zeros status means everything went fine." },
-          ]}
+          prompt="An NVMe driver receives a completion entry with DNR=0 (Do Not Retry = false) and a media error status code. A colleague says 'just retry it forever until it works.' Under what conditions is this a terrible strategy, and how should a production driver actually handle retryable errors?"
+          answer="Retrying forever is dangerous for several reasons: (1) If the NAND page has a marginal ECC issue, repeated reads can actually worsen bit errors through read disturb — each read attempt stresses neighboring cells. (2) Infinite retries block the queue slot, preventing other commands from completing. With thousands of pending I/Os, one stuck retry loop can cascade into a system-wide hang. (3) Some 'retryable' errors are actually transient-then-permanent — the SSD may return DNR=0 initially because it's still attempting internal recovery, but the data may ultimately be unrecoverable. A production driver should: set a maximum retry count (Linux NVMe uses ~3-5 retries), implement exponential backoff between retries, escalate to the upper layer (filesystem/application) after exhausting retries so it can take corrective action (like reading from a RAID mirror or reporting the error to the user), and log every retry for diagnostic purposes. The DNR bit is a hint, not a guarantee — DNR=0 means 'a retry might help,' not 'a retry will definitely work.'"
         />
       </div>
     </SectionWrapper>

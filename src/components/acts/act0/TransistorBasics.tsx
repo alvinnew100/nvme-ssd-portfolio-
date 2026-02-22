@@ -5,7 +5,6 @@ import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import RevealCard from "@/components/story/RevealCard";
-import KnowledgeCheck from "@/components/story/KnowledgeCheck";
 
 function TransistorDiagram() {
   const ref = useRef<HTMLDivElement>(null);
@@ -204,12 +203,10 @@ export default function TransistorBasics() {
           hint="Think about what turns current flow on and off at the smallest scale."
         />
 
-        <KnowledgeCheck
+        <RevealCard
           id="act0-transistor-kc1"
-          question="What makes a NAND cell different from a regular transistor?"
-          options={["Floating gate that traps charge", "It uses more power"]}
-          correctIndex={0}
-          explanation="A NAND cell has a floating gate — an extra insulated layer that traps electrons even without power. Regular transistors forget their state immediately when voltage is removed."
+          prompt="Why is a regular transistor useless for long-term data storage? What specific structural addition does a NAND cell have that solves this, and what would happen if that structure degraded?"
+          answer="A regular transistor loses its state the instant power is removed — current either flows or it doesn't, with no memory. A NAND cell adds a floating gate, an extra conductive layer surrounded by oxide insulation that physically traps electrons. These trapped electrons shift the transistor's threshold voltage, encoding data that persists without power. If the oxide insulator degrades (from repeated program/erase cycles), electrons leak out or get stuck in the oxide itself, causing the cell to misread its stored voltage level — this is exactly how NAND cells wear out over time."
           hint="Consider which component acts as the fundamental on/off switch in all digital circuits."
         />
       </div>

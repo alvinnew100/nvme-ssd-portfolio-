@@ -5,7 +5,7 @@ import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
-import KnowledgeCheck from "@/components/story/KnowledgeCheck";
+import RevealCard from "@/components/story/RevealCard";
 
 const IO_CMDS = [
   {
@@ -168,13 +168,11 @@ export default function IOCommands() {
           bugs in NVMe driver development.
         </InfoCard>
 
-        <KnowledgeCheck
+        <RevealCard
           id="act3-io-kc1"
-          question="Which I/O command ensures data has been persisted to non-volatile storage?"
-          options={["Flush", "Read"]}
-          correctIndex={0}
-          explanation="The Flush command forces all data in the SSD's volatile write buffer (DRAM cache) to be written to NAND flash. This guarantees persistence — critical for databases and filesystems that need crash consistency."
-          hint="Consider the difference between reading data and writing data in terms of NVMe opcodes."
+          prompt="A database completes a Write command and gets a successful completion entry back. Power is lost one second later. Is the data guaranteed to be on NAND? What additional step is needed for crash consistency, and why doesn't NVMe guarantee persistence on every write by default?"
+          answer="A successful Write completion does NOT guarantee data is on NAND — it may still be sitting in the SSD's volatile DRAM write cache. The Flush command (opcode 0x00) forces all cached data to be committed to non-volatile NAND flash. Databases issue Flush after every transaction commit to ensure crash consistency. NVMe doesn't guarantee persistence on every write by default because the DRAM write cache dramatically improves performance — DRAM writes complete in microseconds while NAND programming takes hundreds of microseconds. Flushing after every single write would negate this benefit. Instead, NVMe gives the host control: use normal writes for speed, and issue Flush (or set the FUA bit on individual writes) when persistence is critical. This lets the application choose the right tradeoff between speed and durability."
+          hint="Consider what happens to data in the SSD's volatile write cache during a power loss."
         />
       </div>
     </SectionWrapper>

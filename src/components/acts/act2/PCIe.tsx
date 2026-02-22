@@ -6,7 +6,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import QuizCard from "@/components/story/QuizCard";
+import RevealCard from "@/components/story/RevealCard";
 
 const GENS = [
   { gen: "Gen 1", gts: 2.5, encoding: "8b/10b", year: 2003 },
@@ -567,15 +567,10 @@ export default function PCIe() {
           both the current speed (e.g., 16 GT/s) and width (e.g., x4).
         </InfoCard>
 
-        <QuizCard
+        <RevealCard
           id="act2-pcie-quiz1"
-          question="What is the approximate usable bandwidth of PCIe Gen 4 x4?"
-          options={[
-            { text: "~3.9 GB/s", explanation: "That's closer to PCIe Gen 3 x4. Gen 4 doubles the per-lane speed." },
-            { text: "~7.9 GB/s", correct: true, explanation: "Correct! PCIe Gen 4 runs at 16 GT/s per lane. With 128b/130b encoding and 4 lanes: 16 \u00d7 4 \u00d7 (128/130) / 8 \u2248 7.88 GB/s usable bandwidth." },
-            { text: "~16 GB/s", explanation: "That would be PCIe Gen 4 x8 or Gen 5 x4. The x4 configuration provides roughly half that." },
-            { text: "~32 GB/s", explanation: "That's closer to PCIe Gen 5 x8. Way more than a typical NVMe SSD uses." },
-          ]}
+          prompt="Your NVMe SSD spec sheet says 'PCIe Gen 4 x4' but advertises 'up to 7 GB/s.' Why isn't it 16 GB/s (since Gen 4 is 16 GT/s per lane times 4 lanes = 64 GT/s)? Walk through the math that explains the gap between raw signaling rate and usable bandwidth."
+          answer="PCIe Gen 4 runs at 16 GT/s per lane. With 4 lanes that's 64 GT/s raw. But each 'transfer' is just 1 bit (including encoding overhead). Gen 4 uses 128b/130b encoding, meaning for every 130 bits transmitted, only 128 carry actual data — about 98.5% efficiency. So: 64 GT/s × (128/130) = ~63.02 Gbit/s of usable data. Divide by 8 to convert bits to bytes: ~7.88 GB/s. That's why SSD specs say 'up to 7 GB/s' — it's the theoretical maximum of the PCIe link after encoding overhead. The remaining gap comes from protocol overhead (TLP headers, flow control) and the SSD controller's own limitations."
           hint="PCIe Gen 4 runs at 16 GT/s per lane. With 4 lanes and 128b/130b encoding overhead..."
         />
       </div>

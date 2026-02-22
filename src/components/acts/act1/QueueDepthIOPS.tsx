@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import TermDefinition from "@/components/story/TermDefinition";
-import FillInBlank from "@/components/story/FillInBlank";
+import RevealCard from "@/components/story/RevealCard";
 
 function QueueDepthDiagram() {
   const ref = useRef(null);
@@ -116,11 +116,10 @@ export default function QueueDepthIOPS() {
 
         <QueueDepthDiagram />
 
-        <FillInBlank
+        <RevealCard
           id="act1-qd-fill1"
-          prompt="At QD1, a typical NVMe SSD achieves about {blank}K IOPS."
-          blanks={[{ answer: "15", tolerance: 5, placeholder: "?" }]}
-          explanation="At QD1 (single command in flight), a typical NVMe SSD achieves ~10-20K IOPS. The SSD can only process one command at a time, leaving most NAND dies idle."
+          prompt="Why does a typical NVMe SSD achieve only ~15K IOPS at QD1 despite being capable of 250K+ IOPS at higher queue depths? What specific hardware resources are being wasted at QD1, and why can't the controller optimize around this?"
+          answer="At QD1 (single command in flight), the SSD achieves only ~10-20K IOPS because only one NAND die is active at a time while all others sit idle. A typical SSD has 8-16 dies across 4-8 channels, each capable of independent operation — but with only one command pending, the controller can only read from one die while the rest wait. The IOPS at QD1 is essentially 1 / (single_read_latency), where a NAND page read takes ~50-100us, giving ~10-20K IOPS. The controller can't optimize around this because it has no advance knowledge of what the host will request next — it must wait for each command to complete before receiving the next one. At QD32, 32 commands are in-flight simultaneously, allowing the controller to dispatch reads across many dies in parallel, multiplying throughput while each individual read still takes the same ~50-100us."
           hint="IOPS x block_size = bandwidth. Work backwards from the given values."
         />
 

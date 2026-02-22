@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import QuizCard from "@/components/story/QuizCard";
+import RevealCard from "@/components/story/RevealCard";
 
 /* ─── SSD Architecture Diagram ─── */
 function SsdDiagram() {
@@ -242,15 +242,10 @@ export default function SsdOverview() {
           </div>
         </div>
 
-        <QuizCard
+        <RevealCard
           id="act1-ssd-quiz1"
-          question="What is the main role of the SSD controller?"
-          options={[
-            { text: "Store data directly in its own memory", explanation: "The controller doesn't store user data — it orchestrates data flow to/from NAND chips." },
-            { text: "Runs firmware managing address mapping, ECC, wear leveling, host communication", correct: true, explanation: "Correct! The controller is the 'brain' of the SSD. It runs firmware that handles the FTL (address mapping), error correction (ECC), wear leveling, garbage collection, and the NVMe protocol for host communication." },
-            { text: "Convert between different file formats", explanation: "File formats are handled by the OS filesystem, not the SSD controller." },
-            { text: "Provide power to the NAND chips", explanation: "Power management is handled by voltage regulators, not the main controller logic." },
-          ]}
+          prompt="Why does an SSD need its own dedicated processor and RAM, essentially making it a 'computer within a computer'? What would happen if the host CPU had to manage all of these responsibilities directly?"
+          answer="The SSD controller is a full SoC (System-on-Chip) running firmware that handles FTL address mapping, ECC error correction, wear leveling, garbage collection, and NVMe protocol processing. It needs its own processor (often ARM Cortex-R cores) because these tasks are enormously complex and time-critical — the FTL must translate every single I/O into physical addresses, ECC must correct bit errors on every read, and GC must run continuously in the background. If the host CPU managed this directly, it would waste enormous cycles on microsecond-level NAND timing, consume massive bandwidth shuttling mapping tables over PCIe, and every SSD internal operation (GC, wear leveling) would stall host applications. The dedicated DRAM caches the FTL mapping table (~4 bytes per LBA, so ~4 GB for a 1 TB drive) for O(1) address lookups — without it, every read would require an extra NAND access just to find the mapping, roughly doubling latency."
         />
       </div>
     </SectionWrapper>

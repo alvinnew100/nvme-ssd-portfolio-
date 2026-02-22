@@ -6,7 +6,7 @@ import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import KnowledgeCheck from "@/components/story/KnowledgeCheck";
+import RevealCard from "@/components/story/RevealCard";
 
 const FIO_OPTIONS: {
   name: string;
@@ -631,13 +631,11 @@ numjobs=2`}
           instead — slightly less accurate but won&apos;t destroy your data.
         </InfoCard>
 
-        <KnowledgeCheck
+        <RevealCard
           id="act5-fio-kc1"
-          question="Which fio parameter controls queue depth?"
-          options={["--iodepth", "--bs"]}
-          correctIndex={0}
-          explanation="--iodepth sets how many I/O operations fio keeps in-flight simultaneously (queue depth). --bs sets the block size (e.g., 4k, 128k) for each I/O operation."
-          hint="This fio parameter controls how many I/O operations are in-flight simultaneously."
+          prompt="A benchmark shows an NVMe SSD doing 50,000 IOPS at QD1 but 900,000 IOPS at QD128. Why does increasing queue depth improve performance by 18x? What is happening inside the SSD at the hardware level that explains this massive difference?"
+          answer="At QD1 (iodepth=1), only one I/O request is in flight at a time. The SSD has multiple NAND dies connected across several channels (typically 4-8), but only one die is active — the rest sit idle waiting. The host sends a request, waits for the SSD to read from a single die (~50-100us), gets the response, then sends the next. At QD128, 128 requests are in flight simultaneously. The SSD's controller can distribute these across all NAND channels and dies in parallel — while one die is reading, others are already processing different requests. This channel-level parallelism is the key: an 8-channel controller with 2 dies per channel can theoretically serve 16 requests simultaneously. Additionally, deeper queues allow the controller's internal scheduler to reorder requests for optimal NAND access patterns, reducing die conflicts and improving throughput. The relationship is IOPS x block_size = bandwidth, so at QD128 with 4K blocks: 900K x 4K = 3.6 GB/s — approaching the PCIe lane limit."
+          hint="Think about what's happening at the NAND channel and die level inside the SSD."
         />
       </div>
     </SectionWrapper>

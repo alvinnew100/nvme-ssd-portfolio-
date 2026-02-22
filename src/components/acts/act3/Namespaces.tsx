@@ -7,7 +7,7 @@ import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
-import QuizCard from "@/components/story/QuizCard";
+import RevealCard from "@/components/story/RevealCard";
 
 function NamespaceDiagram() {
   const ref = useRef(null);
@@ -147,15 +147,10 @@ export default function Namespaces() {
           <code className="text-text-code">Namespace Attachment</code> (opcode 0x15).
         </InfoCard>
 
-        <QuizCard
+        <RevealCard
           id="act3-ns-quiz1"
-          question="An NVMe namespace is most similar to which concept?"
-          options={[
-            { text: "A hard drive partition", correct: true, explanation: "Correct! Like partitions, namespaces divide a drive's storage into independent logical units. Each namespace has its own LBA range, can have different block sizes, and can be independently formatted." },
-            { text: "A RAID array", explanation: "RAID combines multiple drives. A namespace is a logical division within a single drive." },
-            { text: "A filesystem", explanation: "Filesystems (ext4, NTFS) organize files on top of namespaces/partitions. Namespaces are lower-level." },
-            { text: "A PCIe lane", explanation: "PCIe lanes are physical data paths. Namespaces are logical storage divisions." },
-          ]}
+          prompt="In a data center running 50 virtual machines on a single server with one NVMe SSD, why would you use multiple namespaces instead of simply creating 50 partitions on a single namespace? What does namespace-level isolation give you that partition-level isolation does not?"
+          answer="Namespaces provide hardware-level isolation that partitions cannot. With partitions, all VMs share the same namespace — a misbehaving VM could issue a Format NVM command or write to wrong LBAs and corrupt another VM's partition, because the SSD sees it all as one address space. With separate namespaces, each VM gets its own NSID with an independent LBA range starting at 0. The SSD hardware enforces that commands targeting NSID 2 cannot touch data in NSID 3 — the isolation is at the NVMe protocol level, not just a software convention. Additionally, different namespaces can have different LBA formats (one VM might need 512-byte sectors for legacy compatibility while another uses 4KB), different protection settings (T10-PI for critical workloads), and can be independently formatted or secure-erased without affecting other namespaces. Combined with SR-IOV, each VM can get a dedicated virtual NVMe controller mapped to its namespace — achieving near-native I/O performance without hypervisor involvement on the data path."
         />
       </div>
     </SectionWrapper>

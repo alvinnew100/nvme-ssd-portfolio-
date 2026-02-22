@@ -7,7 +7,7 @@ import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import KnowledgeCheck from "@/components/story/KnowledgeCheck";
+import RevealCard from "@/components/story/RevealCard";
 
 function EraseComparisonVisual() {
   const ref = useRef(null);
@@ -180,13 +180,11 @@ export default function FormatSanitize() {
           capacities.
         </InfoCard>
 
-        <KnowledgeCheck
+        <RevealCard
           id="act4-format-kc1"
-          question="Which operation is cryptographically secure for data erasure?"
-          options={["Format NVM", "Sanitize"]}
-          correctIndex={1}
-          explanation="Sanitize provides cryptographic erase guarantees — it ensures all user data (including unmapped/over-provisioned areas) is permanently irrecoverable. Format NVM only affects the visible namespace and may leave data in over-provisioned areas."
-          hint="Consider which operation is more thorough: format changes the logical structure, sanitize destroys all data."
+          prompt="Your company is decommissioning 500 SSDs that held customer financial data. A junior engineer suggests using 'nvme format' on each drive. Why is this insufficient, and what would you recommend instead? What data could remain recoverable after a format?"
+          answer="Format NVM only resets the namespace's logical mapping — it may leave data physically intact in NAND cells, especially in over-provisioned areas, spare blocks, and unmapped regions that the format command doesn't touch. A determined attacker with NAND chip readers could potentially recover data from these areas. For drives holding regulated data (financial, medical, PII), you need Sanitize — specifically Crypto Erase (SANACT=4) if the drives are self-encrypting, or Block Erase (SANACT=2) otherwise. Crypto Erase destroys the internal encryption key, making all data on the entire NVM subsystem — including over-provisioned and unmapped areas — cryptographically unrecoverable in under a second. This meets NIST 800-88 guidelines for media sanitization."
+          hint="Consider which areas of the SSD are touched by format versus sanitize — think about over-provisioned space and unmapped blocks."
         />
       </div>
     </SectionWrapper>

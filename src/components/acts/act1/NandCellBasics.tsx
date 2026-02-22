@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import KnowledgeCheck from "@/components/story/KnowledgeCheck";
+import RevealCard from "@/components/story/RevealCard";
 import { CELL_TYPES, bellCurve } from "./nandData";
 
 /* ─── Floating Gate Cross-Section ─── */
@@ -338,12 +338,10 @@ export default function NandCellBasics() {
         {/* Voltage threshold distribution diagram */}
         <VoltageDistributionDiagram activeCell={activeCell} onSelectCell={setActiveCell} />
 
-        <KnowledgeCheck
+        <RevealCard
           id="act1-nandbasics-kc1"
-          question="Can electrons leak from the floating gate over time?"
-          options={["Yes", "No"]}
-          correctIndex={0}
-          explanation="Yes — over months to years, electrons can slowly tunnel through the oxide insulator. This is called 'charge leakage' or 'data retention loss.' It's why SSDs have a data retention spec (typically 1-10 years depending on wear) and why powered-off SSDs can eventually lose data."
+          prompt="Under what conditions do electrons leak from the floating gate, and what are the consequences for a powered-off SSD sitting on a shelf for years? How does prior wear affect this?"
+          answer="Electrons slowly tunnel through the oxide insulator via quantum mechanical tunneling — a process called charge leakage or data retention loss. The rate depends heavily on temperature (heat provides energy for tunneling) and oxide degradation from prior P/E cycles. A fresh SSD can retain data for 10+ years at room temperature, but a heavily worn SSD (near its endurance limit) may only retain data for months because its oxide is damaged and leakier. This is why enterprise SSDs have stricter data retention specs at higher temperatures, and why it's risky to use a worn SSD for archival cold storage. Powered-on SSDs periodically refresh data (read and rewrite) to counteract leakage."
           hint="The name of each NAND type indicates how many bits each cell stores."
         />
       </div>

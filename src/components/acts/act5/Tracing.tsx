@@ -6,7 +6,7 @@ import CodeBlock from "@/components/story/CodeBlock";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import KnowledgeCheck from "@/components/story/KnowledgeCheck";
+import RevealCard from "@/components/story/RevealCard";
 
 export default function Tracing() {
   return (
@@ -907,13 +907,11 @@ echo 0 > /sys/kernel/debug/tracing/tracing_on`}
           tracepoints</em> — they just present the data differently.
         </InfoCard>
 
-        <KnowledgeCheck
+        <RevealCard
           id="act5-tracing-kc1"
-          question="Which tool traces block-level I/O events?"
-          options={["blktrace", "ftrace"]}
-          correctIndex={0}
-          explanation="blktrace captures block-layer I/O events (requests, completions, merges) specific to storage devices. ftrace is a more general kernel function tracer that can trace any kernel function calls, including but not limited to I/O paths."
-          hint="Tracing captures the sequence of NVMe commands and their completions."
+          prompt="Your application reports 200 microsecond average I/O latency, but users complain about intermittent slowness. How would you use ftrace and blktrace together to pinpoint whether the bottleneck is in the kernel I/O stack or the SSD itself? What specific timestamps would you compare?"
+          answer="Enable both NVMe and block layer trace events simultaneously. For each I/O, compare three key timestamps: (1) block_rq_issue — when the block layer hands the request to the NVMe driver, (2) nvme_setup_cmd — when the driver submits the command to the SSD's submission queue, and (3) nvme_complete_rq — when the SSD posts the completion. The gap between rq_issue and setup_cmd reveals driver/software overhead. The gap between setup_cmd and complete_rq is the actual SSD device latency. If device latency spikes to milliseconds during normal sub-100us operations, the SSD is likely doing foreground garbage collection or thermal throttling. If device latency is stable but total latency is high, the bottleneck is in the I/O scheduler, filesystem journaling, or queue contention. Look for patterns: spikes correlating with write bursts suggest GC, while steady high latency on one qid suggests CPU affinity issues."
+          hint="Think about comparing timestamps at different layers of the I/O stack."
         />
       </div>
     </SectionWrapper>

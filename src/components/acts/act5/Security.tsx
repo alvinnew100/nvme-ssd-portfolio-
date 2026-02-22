@@ -6,7 +6,7 @@ import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import QuizCard from "@/components/story/QuizCard";
+import RevealCard from "@/components/story/RevealCard";
 
 const SEDUTIL_COMMANDS = [
   {
@@ -603,15 +603,10 @@ export default function Security() {
           decommissioning, that&apos;s invaluable.
         </InfoCard>
 
-        <QuizCard
+        <RevealCard
           id="act5-security-quiz1"
-          question="How do TCG Opal self-encrypting drives (SEDs) provide instant secure erase?"
-          options={[
-            { text: "They overwrite every cell with zeros", explanation: "Physical overwrite of all cells would take minutes to hours. SEDs use a much faster approach." },
-            { text: "They destroy the encryption key, making all data unreadable", correct: true, explanation: "Correct! SEDs encrypt all data with an internal key. To 'erase' the drive, the controller simply destroys the encryption key. Without the key, all data on NAND is cryptographically unreadable — instant and complete." },
-            { text: "They physically damage the NAND cells", explanation: "Physical damage isn't how secure erase works. The data remains on NAND but becomes cryptographically inaccessible." },
-            { text: "They format the drive's partition table", explanation: "Formatting only removes filesystem metadata. The actual data could still be recovered without encryption." },
-          ]}
+          prompt="A self-encrypting drive (SED) with TCG Opal can 'erase' a 4 TB drive in under one second via crypto erase. How is this possible when physically erasing 4 TB of NAND cells would take minutes? Walk through the key hierarchy and explain exactly what happens during a crypto erase."
+          answer="The SED encrypts ALL data written to NAND using a Data Encryption Key (DEK) — a randomly generated AES-256 key stored securely in the controller chip. The DEK itself is encrypted by a Key Encryption Key (KEK) derived from your password. During a crypto erase, the controller doesn't touch the NAND at all. It simply generates a new random DEK and discards the old one. Since every bit on the NAND was encrypted with the old DEK, and that key no longer exists anywhere, the encrypted data is now indistinguishable from random noise — cryptographically unrecoverable even with direct NAND chip access. This takes microseconds because it only involves destroying one 256-bit key, regardless of drive capacity. The two-level key hierarchy (DEK + KEK) also explains why you can change your password without re-encrypting the entire drive — only the KEK wrapping needs to be updated, while the DEK stays the same."
         />
       </div>
     </SectionWrapper>

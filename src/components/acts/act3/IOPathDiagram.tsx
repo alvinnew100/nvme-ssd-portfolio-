@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import FillInBlank from "@/components/story/FillInBlank";
+import RevealCard from "@/components/story/RevealCard";
 
 const IO_LAYERS = [
   {
@@ -315,12 +315,11 @@ export default function IOPathDiagram() {
           </div>
         </div>
 
-        <FillInBlank
+        <RevealCard
           id="act3-iopath-fill1"
-          prompt="The NAND read operation accounts for approximately {blank}% of total I/O latency."
-          blanks={[{ answer: "87", tolerance: 5, placeholder: "?" }]}
-          explanation="NAND read latency (~70μs for TLC) dominates the total I/O path (~80μs), accounting for roughly 87% of the time. Software layers (filesystem, block layer, driver) add minimal overhead."
-          hint="Trace the path from application to SSD: which queue does the command enter first?"
+          prompt="Given that the NAND read dominates total I/O latency, why do kernel optimizations like io_uring and bypass techniques like SPDK still matter? If the bottleneck is NAND physics, shouldn't software overhead be irrelevant?"
+          answer="NAND read latency (~70us for TLC) accounts for roughly 87% of a single 4KB read at queue depth 1. But software overhead matters enormously at scale. At high queue depths (hundreds of concurrent I/Os), the SSD's internal parallelism hides NAND latency — multiple dies read simultaneously, so the effective per-IO latency drops. At that point, software overhead (syscall cost, context switches, lock contention, interrupt handling) becomes the bottleneck. io_uring reduces syscall overhead by batching submissions and completions in shared ring buffers. SPDK bypasses the kernel entirely, eliminating context switches and interrupt overhead. These optimizations don't speed up a single NAND read, but they dramatically increase throughput (IOPS) when the SSD is handling thousands of concurrent requests — which is exactly how enterprise workloads operate. The 87% figure only tells the story at queue depth 1; at queue depth 128, software overhead can account for over half the total time."
+          hint="Consider what happens to the latency breakdown when the SSD is handling hundreds of concurrent commands."
         />
       </div>
     </SectionWrapper>

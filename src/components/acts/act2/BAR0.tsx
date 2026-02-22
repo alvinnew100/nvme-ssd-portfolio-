@@ -6,7 +6,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import KnowledgeCheck from "@/components/story/KnowledgeCheck";
+import RevealCard from "@/components/story/RevealCard";
 
 const REGISTERS = [
   { offset: "0x00", name: "CAP", size: "8B", desc: "Controller Capabilities — how many queue entries the drive supports, timing limits, and doorbell spacing", color: "#635bff" },
@@ -261,12 +261,10 @@ export default function BAR0() {
           the maximum the drive supports.
         </InfoCard>
 
-        <KnowledgeCheck
+        <RevealCard
           id="act2-bar0-kc1"
-          question="Is BAR0 accessed via special I/O ports?"
-          options={["True", "False"]}
-          correctIndex={1}
-          explanation="BAR0 uses Memory-Mapped I/O (MMIO), not I/O ports. The SSD's registers are mapped to normal memory addresses so the CPU reads/writes them as if they were RAM."
+          prompt="A colleague claims that NVMe devices use I/O ports (like legacy PCI devices) to access BAR0 registers. Explain why this is wrong and what mechanism is actually used."
+          answer="BAR0 uses Memory-Mapped I/O (MMIO), not I/O ports. The SSD's hardware registers are mapped into the CPU's physical address space, so the CPU reads and writes them using normal memory instructions (MOV) rather than special IN/OUT port instructions. MMIO is faster and more flexible than I/O ports — it works with the CPU's memory controller and caching infrastructure, and doesn't require the limited 64KB I/O port address space that legacy PCI devices used."
           hint="BAR0 registers are accessed through a specific memory I/O technique."
         />
       </div>

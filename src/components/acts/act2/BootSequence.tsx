@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
-import DragSortChallenge from "@/components/story/DragSortChallenge";
+import RevealCard from "@/components/story/RevealCard";
 
 const BOOT_STEPS = [
   {
@@ -316,18 +316,10 @@ export default function BootSequence() {
           </p>
         </div>
 
-        <DragSortChallenge
+        <RevealCard
           id="act2-boot-drag1"
-          prompt="Order the NVMe boot sequence steps:"
-          items={[
-            { id: "enum", label: "PCIe Enumeration", detail: "BIOS/UEFI discovers the device" },
-            { id: "bar", label: "BAR0 Assignment", detail: "Map registers to memory addresses" },
-            { id: "admin", label: "Create Admin Queues", detail: "Set up AQA, ASQ, ACQ registers" },
-            { id: "enable", label: "Enable Controller", detail: "Set CC.EN = 1, wait for CSTS.RDY" },
-            { id: "identify", label: "Identify Controller", detail: "Query device capabilities" },
-            { id: "ioq", label: "Create I/O Queues", detail: "Set up submission/completion queue pairs" },
-          ]}
-          correctOrder={["enum", "bar", "admin", "enable", "identify", "ioq"]}
+          prompt="If the NVMe driver tried to submit I/O commands before creating the I/O queues — or tried to create queues before enabling the controller — what would happen? Explain why the boot sequence must follow a strict order and what depends on what."
+          answer="The boot sequence is a dependency chain where each step requires the previous one: (1) PCIe Enumeration must happen first — the BIOS scans the bus to discover devices. Without this, the CPU doesn't know the SSD exists. (2) BAR0 Assignment maps the SSD's registers to memory addresses. Without BAR0, there's no way to access the controller's registers. (3) Admin Queue creation (writing AQA, ASQ, ACQ registers) sets up the communication channel. Without admin queues, there's no way to send any commands at all. (4) Enabling the controller (CC.EN=1) powers up the SSD's command processing engine. Before this, the SSD ignores queue contents. (5) Identify Controller queries capabilities — the driver needs to know queue limits before creating I/O queues. (6) Finally, I/O Queue creation gives the driver high-speed data channels. If you tried to submit I/O commands before this step, there would be no I/O queues to put them in. Each step builds on the last — skip any step and the subsequent steps fail or produce undefined behavior."
           hint="Think about what the host needs to set up before it can send any NVMe commands."
         />
       </div>

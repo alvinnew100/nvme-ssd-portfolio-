@@ -4,8 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
-import FillInBlank from "@/components/story/FillInBlank";
-import KnowledgeCheck from "@/components/story/KnowledgeCheck";
+import RevealCard from "@/components/story/RevealCard";
 
 function BusDiagram() {
   const ref = useRef<HTMLDivElement>(null);
@@ -130,20 +129,17 @@ export default function WhatIsABus() {
           7+ GB/s — over 10x faster — because PCIe has more lanes and faster per-lane speeds.
         </p>
 
-        <FillInBlank
+        <RevealCard
           id="act0-bus-fill1"
-          prompt="PCIe 4.0 x4 provides approximately {blank} GB/s of usable bandwidth."
-          blanks={[{ answer: "7", tolerance: 1, placeholder: "?" }]}
-          explanation="PCIe 4.0 runs at ~16 GT/s per lane. With 128b/130b encoding and 4 lanes, that's roughly 7.88 GB/s usable."
+          prompt="How would you derive the usable bandwidth of PCIe 4.0 x4 from first principles? What encoding overhead must you account for, and why does it exist?"
+          answer="PCIe 4.0 runs at 16 GT/s (gigatransfers per second) per lane. With 4 lanes (x4), that's 64 GT/s raw. PCIe 4.0 uses 128b/130b encoding — for every 128 bits of payload, 2 bits of overhead are added for clock recovery and error detection. So usable bandwidth = 64 GT/s x (128/130) x (1 byte / 8 bits) = ~7.88 GB/s. The encoding overhead exists because without embedded clock transitions, the receiver can't distinguish data from noise at these speeds."
           hint="The answer relates to the number of bits that can travel simultaneously on a bus."
         />
 
-        <KnowledgeCheck
+        <RevealCard
           id="act0-bus-kc1"
-          question="Adding more PCIe lanes increases the speed of each lane."
-          options={["True", "False"]}
-          correctIndex={1}
-          explanation="Each lane runs at the same speed (set by the PCIe generation). More lanes increase total bandwidth by adding parallel paths, not by making individual lanes faster."
+          prompt="A colleague says 'adding more PCIe lanes makes each lane faster.' When is this true and when does it fail? What actually changes when you go from x1 to x4?"
+          answer="This is never true — each lane runs at the same speed, determined solely by the PCIe generation (e.g., 16 GT/s for Gen 4). Adding lanes increases total bandwidth by providing parallel paths for data, not by speeding up individual lanes. Going from x1 to x4 quadruples the aggregate bandwidth (from ~2 GB/s to ~8 GB/s for Gen 4) because four independent data streams flow simultaneously. The per-lane speed only changes when you upgrade the PCIe generation itself (e.g., Gen 3 at 8 GT/s to Gen 4 at 16 GT/s)."
           hint="Consider which bus type connects directly to high-speed devices like GPUs and SSDs."
         />
       </div>

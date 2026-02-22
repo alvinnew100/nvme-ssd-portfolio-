@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import KnowledgeCheck from "@/components/story/KnowledgeCheck";
+import RevealCard from "@/components/story/RevealCard";
 
 interface TraceEvent {
   id: number;
@@ -113,8 +113,6 @@ export default function BusTrace() {
 
           {/* Bus trace area — all events shown */}
           <div className="relative border-l-2 border-r-2 border-dashed border-story-border mx-[15%]">
-            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-story-border" />
-
             {TRACE_SCENARIO.map((evt, idx) => (
               <motion.div
                 key={evt.id}
@@ -151,7 +149,7 @@ export default function BusTrace() {
 
                 <div className="flex items-start gap-2 px-2 mt-1">
                   <div className="w-12 flex-shrink-0" />
-                  <div className="flex-1">
+                  <div className="flex-1 bg-story-card relative z-10 rounded-lg p-2">
                     <div className="flex items-center gap-2">
                       <span
                         className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full"
@@ -205,12 +203,10 @@ export default function BusTrace() {
           </div>
         </div>
 
-        <KnowledgeCheck
+        <RevealCard
           id="act2-bustrace-kc1"
-          question="Which PCIe transaction type carries a data payload back from the device?"
-          options={["CplD (Completion with Data)", "MWr (Memory Write)"]}
-          correctIndex={0}
-          explanation="CplD (Completion with Data) is how the SSD returns read data to the host. It completes a previously issued MRd (Memory Read) request. MWr is used by the SSD for DMA writes to host memory."
+          prompt="In the bus trace, you see both 'DMA Read' (the SSD fetching from host RAM) and 'DMA Write' (the SSD writing to host RAM). Under the hood, these map to different PCIe TLP types. Why does PCIe need separate transaction types for device-initiated reads vs. writes, and what would break if it only had one?"
+          answer="PCIe uses different TLP types because reads and writes have fundamentally different flow control needs. A DMA Write from the SSD is a Memory Write (MWr) TLP — it's a 'posted' transaction, meaning the SSD fires it and doesn't wait for acknowledgment. This is fast but one-directional. A DMA Read is a Memory Read (MRd) request TLP — the SSD asks the host 'give me data at this address,' and the host responds with a Completion with Data (CplD) TLP containing the requested bytes. This is a split transaction: request goes one way, data comes back later. If PCIe only had writes, the SSD couldn't fetch commands from the host's Submission Queue (it needs to read host RAM). If it only had reads, the SSD couldn't deliver data or post completion entries (it needs to write to host RAM). The split design also allows the bus to stay busy — while the SSD waits for a read completion, other writes and requests can flow through the PCIe lanes."
           hint="Consider which bus transaction type lets the SSD access host memory independently."
         />
       </div>

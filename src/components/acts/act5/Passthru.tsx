@@ -8,7 +8,7 @@ import CodeBlock from "@/components/story/CodeBlock";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import KnowledgeCheck from "@/components/story/KnowledgeCheck";
+import RevealCard from "@/components/story/RevealCard";
 
 /* ─── Helpers ─── */
 const HEX_DIGITS = "0123456789ABCDEF";
@@ -1218,13 +1218,11 @@ nvme admin-passthru /dev/nvme0 \\
           brick a drive.</strong> Only send commands when you know exactly what they do.
         </InfoCard>
 
-        <KnowledgeCheck
+        <RevealCard
           id="act5-passthru-kc1"
-          question="What are NVMe passthru commands primarily used for?"
-          options={["Vendor-specific operations", "Standard read/write"]}
-          correctIndex={0}
-          explanation="Passthru allows sending raw NVMe commands directly to the drive, bypassing normal OS abstractions. This is primarily used for vendor-specific diagnostic commands, firmware-level debugging, and operations not covered by the standard NVMe command set."
-          hint="NVMe passthrough lets you send raw NVMe commands directly to the drive."
+          prompt="Why does the NVMe specification reserve opcode ranges (0xC0-0xFF for admin, 0x80-0xFF for I/O) for vendor-specific commands instead of standardizing everything? What would break if every diagnostic and tuning command had to go through the NVMe standards process?"
+          answer="The NVMe spec defines the universal interface — what every SSD must do (read, write, TRIM, SMART). But each vendor's internal implementation is radically different: Samsung's garbage collection algorithm, Intel's wear-leveling strategy, and WD's error recovery are all proprietary trade secrets. Standardizing internal diagnostics would require vendors to expose their firmware architecture, stifling innovation and competitive differentiation. The reserved opcode ranges solve this elegantly: vendors get a sandbox to implement proprietary features (internal telemetry, per-die error rates, GC tuning, manufacturing test modes) without conflicting with standard commands. Passthru provides the mechanism to send these raw commands via nvme-cli, with the user manually specifying opcode and CDW values from the vendor's internal documentation. The tradeoff is portability — vendor commands only work on that vendor's drives. But for SSD test engineers and firmware developers, this direct access to the controller's internals is essential for debugging, qualification testing, and performance tuning that standard SMART data can't provide."
+          hint="Think about why vendors need proprietary commands that aren't part of the NVMe standard."
         />
       </div>
     </SectionWrapper>

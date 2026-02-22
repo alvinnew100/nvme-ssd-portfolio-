@@ -6,7 +6,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import QuizCard from "@/components/story/QuizCard";
+import RevealCard from "@/components/story/RevealCard";
 
 const CELL_ENDURANCE = [
   { type: "SLC", pe: "~100,000", color: "#00d4aa", analogy: "A thick marker — lots of writes before it runs out" },
@@ -217,15 +217,10 @@ export default function WearLeveling() {
           This is one of the hardest tradeoffs in SSD firmware design.
         </InfoCard>
 
-        <QuizCard
+        <RevealCard
           id="act4-wear-quiz1"
-          question="What is the key difference between static and dynamic wear leveling?"
-          options={[
-            { text: "Static is faster than dynamic", explanation: "Speed isn't the differentiator. It's about which data gets moved." },
-            { text: "Dynamic only moves hot data; static also moves cold data from low-wear blocks", correct: true, explanation: "Correct! Dynamic wear leveling spreads writes by picking the lowest-wear free block for new writes. Static wear leveling goes further — it periodically moves cold (rarely-updated) data off low-wear blocks, freeing those blocks for hot data. This prevents cold data from hoarding low-wear blocks." },
-            { text: "Static only works with SLC cells", explanation: "Both types work with all cell types. The difference is in their data movement strategy." },
-            { text: "Dynamic uses more power", explanation: "Power consumption isn't the key difference. It's about whether cold data gets redistributed." },
-          ]}
+          prompt="An SSD uses only dynamic wear leveling. Over time, certain blocks that hold rarely-updated OS files have very low erase counts while frequently-written blocks are nearing their P/E limit. Why is this happening, and what would static wear leveling do differently?"
+          answer="Dynamic wear leveling only ensures new writes go to the least-worn free block. It never touches cold data sitting on low-wear blocks. Over time, blocks holding rarely-updated data (OS files, static configs) accumulate very low erase counts while hot blocks exhaust their P/E cycles. Static wear leveling solves this by periodically moving cold data off low-wear blocks to high-wear blocks, then using the freed low-wear blocks for new hot writes. This forces all blocks to share the wear burden evenly. The tradeoff is that moving cold data generates additional NAND writes (increasing WAF), so the FTL must balance wear uniformity against write amplification."
         />
       </div>
     </SectionWrapper>

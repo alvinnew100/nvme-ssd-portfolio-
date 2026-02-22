@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import QuizCard from "@/components/story/QuizCard";
+import RevealCard from "@/components/story/RevealCard";
 
 const INITIAL_MAP = [
   { lba: 0, pba: 12, valid: true },
@@ -381,15 +381,10 @@ export default function FTLMapping() {
 
         <OutOfPlaceWriteVisual />
 
-        <QuizCard
+        <RevealCard
           id="act1-ftl-quiz1"
-          question="Why does the SSD write to a NEW page instead of overwriting the old one?"
-          options={[
-            { text: "Overwriting is slower", explanation: "While it would be slower, the real reason is a physical hardware limitation." },
-            { text: "NAND pages can't be overwritten — erasing is block-level", correct: true, explanation: "Correct! NAND flash can only be programmed (written) once per erase cycle, and erasing must happen at the block level (128-256 pages). To avoid erasing an entire block just to update one page, the FTL writes to a fresh page and updates the mapping table." },
-            { text: "It uses less power", explanation: "Power isn't the main concern. The physical write constraint of NAND makes out-of-place writes necessary." },
-            { text: "The old page might be corrupted", explanation: "Corruption isn't the primary reason. It's a fundamental NAND constraint: you can't reprogram a page without erasing the whole block first." },
-          ]}
+          prompt="Why is out-of-place writing not merely a software optimization but an absolute physical necessity for NAND flash? What would need to change at the silicon level to allow in-place overwrites?"
+          answer="NAND flash pages can only be programmed (written) once per erase cycle — once electrons are pushed into the floating gate, you can't selectively add more to change the stored value. You can only remove electrons via a high-voltage erase, which affects the entire block (128-256 pages). To overwrite a single page in place, you'd need to erase its entire block first, destroying all other data in that block. The FTL avoids this by writing updated data to a fresh, pre-erased page and updating the mapping table to redirect the LBA to the new location. To enable true in-place overwrites, the silicon would need per-page erase capability — which would require electrically isolating each page's cells on separate substrate wells, dramatically increasing die area and manufacturing complexity. This is why no NAND flash supports in-place overwrites; it's a fundamental physical limitation, not a design choice."
         />
       </div>
     </SectionWrapper>

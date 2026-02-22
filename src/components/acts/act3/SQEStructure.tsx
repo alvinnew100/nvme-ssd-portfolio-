@@ -7,7 +7,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
 import { getAdminCommands } from "@/lib/nvme/decoder";
-import FillInBlank from "@/components/story/FillInBlank";
+import RevealCard from "@/components/story/RevealCard";
 
 const SQEntryVisualizer = dynamic(
   () => import("@/components/commands/SQEntryVisualizer"),
@@ -202,11 +202,10 @@ export default function SQEStructure() {
           </p>
         </div>
 
-        <FillInBlank
+        <RevealCard
           id="act3-sqe-fill1"
-          prompt="An NVMe Submission Queue Entry (SQE) is {blank} bytes."
-          blanks={[{ answer: "64", placeholder: "?" }]}
-          explanation="Every NVMe command is exactly 64 bytes (16 DWords × 4 bytes each), providing a fixed-size format for all command types."
+          prompt="Why does the NVMe specification mandate that every Submission Queue Entry be exactly the same fixed size, rather than allowing variable-length commands that could be more space-efficient for simple operations?"
+          answer="Every NVMe command is exactly 64 bytes (16 DWords x 4 bytes each). A fixed-size format is essential for a circular queue to work efficiently: the controller can calculate the address of any entry instantly using simple pointer arithmetic (base + index x 64). With variable-length entries, the controller would need to parse each entry to find the next one, destroying the O(1) random access that makes NVMe queues fast. Fixed size also means the DMA engine can fetch commands in predictable chunks, and the host driver can calculate queue fullness by simple pointer comparison. The tradeoff is that simple commands (like Flush, which needs almost no parameters) waste space — but at 64 bytes per entry, the waste is negligible compared to the performance gained from predictable memory layout. This is the same reason CPU cache lines and memory pages are fixed-size."
           hint="Each submission queue entry has a fixed size defined by the NVMe specification."
         />
       </div>

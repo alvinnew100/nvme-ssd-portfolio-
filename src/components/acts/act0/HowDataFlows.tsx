@@ -5,8 +5,7 @@ import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import InfoCard from "@/components/story/InfoCard";
-import DragSortChallenge from "@/components/story/DragSortChallenge";
-import QuizCard from "@/components/story/QuizCard";
+import RevealCard from "@/components/story/RevealCard";
 
 function DataFlowDiagram() {
   const ref = useRef<HTMLDivElement>(null);
@@ -176,30 +175,17 @@ export default function HowDataFlows() {
           in this pipeline. The entire NVMe protocol is designed to make this flow as fast as possible.
         </InfoCard>
 
-        <DragSortChallenge
+        <RevealCard
           id="act0-dataflow-drag1"
-          prompt="Order the I/O path from application to NAND flash:"
-          items={[
-            { id: "app", label: "Application", detail: 'read("photo.jpg")' },
-            { id: "os", label: "OS / Kernel", detail: "Filesystem + Block Layer" },
-            { id: "driver", label: "NVMe Driver", detail: "Places command in queue" },
-            { id: "pcie", label: "PCIe Bus", detail: "Doorbell + DMA transfer" },
-            { id: "controller", label: "SSD Controller", detail: "Processes command" },
-            { id: "nand", label: "NAND Flash", detail: "Returns data" },
-          ]}
-          correctOrder={["app", "os", "driver", "pcie", "controller", "nand"]}
+          prompt="If the NVMe driver placed a command directly on the PCIe bus before the OS kernel processed the file read request, what would go wrong? Why must these I/O layers execute in a specific order?"
+          answer="The I/O path must flow: Application > OS/Kernel > NVMe Driver > PCIe Bus > SSD Controller > NAND Flash. If the driver bypassed the OS, it wouldn't know which logical block addresses (LBAs) correspond to the requested file — the filesystem layer in the kernel is responsible for translating filenames into LBA ranges. Without that translation, the driver would send garbage addresses to the SSD. Similarly, the NVMe driver must format the request into a proper NVMe submission queue entry before the PCIe bus can carry it, and the SSD controller must decode that command before it can address the correct NAND dies. Each layer depends on the output of the layer above it."
           hint="Think about the layers from software (top) down to hardware (bottom)."
         />
 
-        <QuizCard
+        <RevealCard
           id="act0-dataflow-quiz1"
-          question="How does the CPU communicate with the SSD in Memory-Mapped I/O (MMIO)?"
-          options={[
-            { text: "By sending special I/O port commands", explanation: "I/O ports are an older mechanism. NVMe uses memory-mapped I/O instead." },
-            { text: "By reading/writing to mapped memory addresses", correct: true, explanation: "Correct! MMIO maps device registers to normal memory addresses. The CPU reads/writes these addresses as if they were RAM, but the hardware routes them to the SSD's registers." },
-            { text: "By using USB packets", explanation: "USB is a different interface entirely. NVMe SSDs connect via PCIe." },
-            { text: "By directly accessing NAND chips", explanation: "The CPU never accesses NAND directly — it communicates through the SSD controller via PCIe/MMIO." },
-          ]}
+          prompt="Why is it elegant that the CPU 'doesn't know' it's talking to an SSD when using Memory-Mapped I/O? What would the alternative look like, and why would it be worse?"
+          answer="In MMIO, the SSD's control registers are mapped to normal memory addresses. The CPU reads and writes these addresses as if they were RAM, but the hardware silently routes those accesses to the SSD's registers via PCIe. This is elegant because the CPU uses the same load/store instructions it already knows — no special I/O instructions needed. The alternative (port-mapped I/O using IN/OUT instructions) requires separate address spaces, special privilege levels, and can't leverage the CPU's existing memory infrastructure like caches and TLBs. MMIO also scales better: any number of devices can be mapped into the vast 64-bit address space, whereas I/O ports are limited to a 16-bit address range (65,536 ports total)."
         />
       </div>
     </SectionWrapper>

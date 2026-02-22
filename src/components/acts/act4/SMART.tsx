@@ -6,7 +6,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import KnowledgeCheck from "@/components/story/KnowledgeCheck";
+import RevealCard from "@/components/story/RevealCard";
 
 const SMART_FIELDS = [
   { name: "Critical Warning", value: "0x00", status: "ok" as const, explain: "A bitmask of critical warnings. 0 means nothing is wrong. If any bit is set, it means: spare capacity low (bit 0), temperature exceeded (bit 1), reliability degraded (bit 2), read-only mode (bit 3), or backup device failed (bit 4)." },
@@ -141,13 +141,11 @@ export default function SMART() {
           </div>
         </div>
 
-        <KnowledgeCheck
+        <RevealCard
           id="act4-smart-kc1"
-          question="Which SMART field tracks how much of the drive's lifespan has been used?"
-          options={["Percentage Used", "Data Units Written"]}
-          correctIndex={0}
-          explanation="Percentage Used estimates the drive's consumed lifespan based on actual usage vs. rated endurance. 100% means the drive has reached its rated endurance (but may still function). Data Units Written just counts total writes without comparing to rated limits."
-          hint="SMART stands for Self-Monitoring, Analysis and Reporting Technology."
+          prompt="You see two SMART fields: 'Percentage Used: 80%' and 'Data Units Written: 50 TB' on a drive rated for 600 TBW. Why don't these two numbers tell the same story? What hidden factor explains the discrepancy?"
+          answer="Data Units Written (50 TB) only counts host-initiated writes — what the OS sent to the SSD. But Percentage Used (80%) reflects the actual NAND wear, which includes all internal writes: garbage collection copies, wear-leveling page moves, metadata updates, and FTL journaling. The discrepancy reveals a Write Amplification Factor of roughly (80% of 600 TBW) / 50 TB = 480 / 50 = 9.6x. This means for every byte the host wrote, the SSD internally wrote nearly 10 bytes to NAND. The drive is wearing out far faster than the host write volume alone suggests — likely due to heavy random writes, a nearly-full drive, or missing TRIM support."
+          hint="Consider what 'Percentage Used' is actually measuring versus what 'Data Units Written' counts."
         />
       </div>
     </SectionWrapper>

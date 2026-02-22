@@ -7,8 +7,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import QuizCard from "@/components/story/QuizCard";
-import FillInBlank from "@/components/story/FillInBlank";
+import RevealCard from "@/components/story/RevealCard";
 
 const DATA_SCALE = [
   { name: "1 bit", detail: "0 or 1", w: 1.5 },
@@ -207,23 +206,17 @@ export default function Binary() {
         {/* Data scale ladder */}
         <DataScaleLadder />
 
-        <QuizCard
+        <RevealCard
           id="act1-binary-quiz1"
-          question="What is the decimal value of binary 10110010?"
-          options={[
-            { text: "162", explanation: "Check your bit weights again: 128+32+16+2 = 178." },
-            { text: "178", correct: true, explanation: "Correct! 10110010 = 128+32+16+2 = 178. Each '1' bit adds its positional weight (128, 64, 32, 16, 8, 4, 2, 1)." },
-            { text: "194", explanation: "That's not right. Try adding the weights: bit 7 (128) + bit 5 (32) + bit 4 (16) + bit 1 (2)." },
-            { text: "210", explanation: "Too high. Remember the bits from left to right are: 128, 64, 32, 16, 8, 4, 2, 1." },
-          ]}
+          prompt="How would you convert the binary number 10110010 to decimal from first principles? Why does each bit position have a specific 'weight,' and what pattern do those weights follow?"
+          answer="Each bit position represents a power of 2, doubling from right to left: 1, 2, 4, 8, 16, 32, 64, 128. This is because binary is base-2 — each digit position is worth 2^n where n is the position (starting from 0 on the right). For 10110010: bit 7 (128) + bit 5 (32) + bit 4 (16) + bit 1 (2) = 178. The weights follow powers of 2 because that's the fundamental property of positional numeral systems — just as decimal digits have weights of 1, 10, 100, 1000 (powers of 10), binary digits have weights of 1, 2, 4, 8 (powers of 2)."
           hint="The bit positions from left to right have weights: 128, 64, 32, 16, 8, 4, 2, 1. Add up the weights where the bit is 1."
         />
 
-        <FillInBlank
+        <RevealCard
           id="act1-binary-fill1"
-          prompt="1 KB equals {blank} bytes."
-          blanks={[{ answer: "1024", placeholder: "?" }]}
-          explanation="1 KB = 2^10 = 1,024 bytes. Computer memory uses powers of 2, not powers of 10."
+          prompt="Why is 1 KB exactly 1,024 bytes instead of 1,000? What fundamental property of computer hardware makes powers of 2 the natural unit, and when does this convention cause real-world confusion?"
+          answer="1 KB = 2^10 = 1,024 bytes because computer memory is built from binary circuits — address lines double the addressable space with each addition (1 line = 2 addresses, 2 lines = 4, 10 lines = 1,024). Using powers of 2 aligns with hardware reality. This causes real-world confusion because storage manufacturers use the SI definition (1 KB = 1,000 bytes), so a '1 TB' drive has 1,000,000,000,000 bytes but the OS reports ~931 GiB (using binary gibibytes). The IEC introduced unambiguous prefixes — KiB (1,024), MiB (1,048,576), GiB (1,073,741,824) — but adoption is inconsistent."
           hint="Remember: each bit position doubles in value from right to left (1, 2, 4, 8...)."
         />
       </div>

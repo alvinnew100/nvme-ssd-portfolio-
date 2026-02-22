@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
-import KnowledgeCheck from "@/components/story/KnowledgeCheck";
+import RevealCard from "@/components/story/RevealCard";
 
 const TEST_LEVELS = [
   { label: "Compliance", desc: "Does the drive follow the NVMe spec? Correct error codes, proper behavior for edge cases, all mandatory commands work.", color: "#ed5f74", w: "160px" },
@@ -110,13 +110,11 @@ export default function Testing() {
           (Performance Test Specification) defines standard preconditioning procedures.
         </InfoCard>
 
-        <KnowledgeCheck
+        <RevealCard
           id="act5-testing-kc1"
-          question="What does steady-state testing measure?"
-          options={["Performance after GC stabilizes", "Maximum burst speed"]}
-          correctIndex={0}
-          explanation="Steady-state testing measures performance after the SSD has filled up and garbage collection is continuously running. This reflects real-world sustained performance, unlike burst benchmarks that only test fresh/empty drive performance."
-          hint="Think about which testing approach validates the drive against the NVMe specification."
+          prompt="A vendor claims their SSD delivers 1,000,000 random write IOPS. You run a 10-second fio test and confirm the number. But after deploying it in a database server, sustained write IOPS drops to 200,000. What went wrong with your testing methodology, and how would you design a test that predicts real-world performance?"
+          answer="The 10-second test only measured burst performance — the SSD's SLC cache absorbed all writes at maximum speed. Once the SLC cache fills (typically 10-100 GB depending on drive fullness), writes fall back to direct TLC/QLC programming, which is 3-5x slower. Meanwhile, garbage collection kicks in to reclaim blocks, competing with host writes for NAND bandwidth. To measure real-world sustained performance, you need: (1) Precondition the drive by filling it with random writes (2x the drive capacity) to force GC into steady state. (2) Run tests for 120+ seconds with ramp_time=30s to skip the SLC cache burst. (3) Use size=100% so fio accesses the entire drive, not just a small region the SLC cache can cover. (4) Monitor p99 and p99.9 latency, not just average — GC causes periodic latency spikes that averages hide. The SNIA Performance Test Specification defines standard preconditioning procedures for exactly this reason."
+          hint="Think about the SLC cache, garbage collection, and the difference between burst and steady-state performance."
         />
       </div>
     </SectionWrapper>

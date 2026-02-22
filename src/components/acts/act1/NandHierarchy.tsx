@@ -4,8 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
-import DragSortChallenge from "@/components/story/DragSortChallenge";
-import QuizCard from "@/components/story/QuizCard";
+import RevealCard from "@/components/story/RevealCard";
 
 const LEVELS = [
   {
@@ -184,29 +183,17 @@ export default function NandHierarchy() {
             next section.
           </p>
 
-          <DragSortChallenge
+          <RevealCard
             id="act1-hierarchy-drag1"
-            prompt="Order the NAND hierarchy from smallest to largest:"
-            items={[
-              { id: "page", label: "Page", detail: "4-16 KB — smallest read/write unit" },
-              { id: "block", label: "Block", detail: "128-256 pages — smallest erase unit" },
-              { id: "plane", label: "Plane", detail: "~1,000 blocks — parallel unit" },
-              { id: "die", label: "Die", detail: "2-4 planes — one silicon chip" },
-              { id: "package", label: "Package", detail: "1-16 dies — physical chip" },
-            ]}
-            correctOrder={["page", "block", "plane", "die", "package"]}
+            prompt="If the erase unit (block) were the same size as the write unit (page), how would SSD design change? What complexity exists solely because of this size mismatch?"
+            answer="The NAND hierarchy from smallest to largest is: Page (4-16 KB, read/write unit) < Block (128-256 pages, erase unit) < Plane (~1,000 blocks, parallel unit) < Die (2-4 planes, one silicon chip) < Package (1-16 dies, physical chip). If erase and write units were the same size, we could eliminate the Flash Translation Layer's out-of-place write scheme entirely — data could be overwritten in place like DRAM. This would also eliminate garbage collection (no stale pages to clean up), write amplification (no need to copy valid pages before erasing), and most of wear leveling's complexity. The mismatch exists because NAND physics requires a high-voltage bulk erase that affects all cells sharing a common substrate region — you can't isolate a single page's cells for erasure."
             hint="Think from the smallest unit of data up to the physical chip you can hold."
           />
 
-          <QuizCard
+          <RevealCard
             id="act1-hierarchy-quiz1"
-            question="Why can't you erase a single NAND page?"
-            options={[
-              { text: "Pages are too small to address individually", explanation: "Pages can be addressed individually for reads and writes — just not for erases." },
-              { text: "The high-voltage erase pulse affects all cells in the block", correct: true, explanation: "Correct! Erasing requires a high-voltage pulse that physically affects all cells sharing the same substrate region (the block). It's a hardware limitation of how NAND flash is manufactured." },
-              { text: "The FTL doesn't support page-level erases", explanation: "It's not a firmware limitation — it's a physical hardware constraint of NAND flash design." },
-              { text: "It would take too long", explanation: "Speed isn't the issue. The erase voltage physically affects the entire block due to how cells are wired together." },
-            ]}
+            prompt="Is the block-level erase constraint a firmware limitation that could be fixed with better software, or a physical hardware constraint? What exactly happens at the silicon level during an erase operation that makes page-level erasure impossible?"
+            answer="It is a fundamental physical hardware constraint, not a firmware limitation. During an erase operation, a high voltage (~20V) is applied to the substrate (p-well) while the control gates are grounded. This creates a strong electric field that pulls electrons out of the floating gates via Fowler-Nordheim tunneling. The critical point is that all cells within a block share the same p-well substrate region — so when you apply the erase voltage, it affects every cell in that block simultaneously. You cannot selectively voltage-isolate individual pages within a block because they are physically connected to the same substrate. This is an inherent consequence of how NAND flash arrays are manufactured on silicon."
           />
         </div>
       </div>

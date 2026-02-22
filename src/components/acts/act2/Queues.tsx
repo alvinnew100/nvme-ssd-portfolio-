@@ -6,7 +6,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import QuizCard from "@/components/story/QuizCard";
+import RevealCard from "@/components/story/RevealCard";
 
 const QUEUE_SIZE = 8;
 
@@ -526,15 +526,10 @@ export default function Queues() {
           pointers for every completion check.
         </InfoCard>
 
-        <QuizCard
+        <RevealCard
           id="act2-queues-quiz1"
-          question="What happens when the Submission Queue tail pointer catches the head pointer?"
-          options={[
-            { text: "The queue resets automatically", explanation: "NVMe queues don't auto-reset. The head/tail pointers wrap around." },
-            { text: "The queue is full \u2014 no more commands can be submitted", correct: true, explanation: "Correct! When tail catches head, the circular buffer is full. The host must wait for the controller to process commands (advancing the head) before submitting more." },
-            { text: "Commands are dropped silently", explanation: "NVMe doesn't silently drop commands. The host driver prevents overflow." },
-            { text: "An interrupt fires", explanation: "Interrupts fire on completion, not on queue full. The host driver tracks available slots." },
-          ]}
+          prompt="Imagine the NVMe driver keeps submitting commands without checking how full the Submission Queue is. What happens when the tail pointer catches the head pointer, and why doesn't NVMe have a hardware mechanism to auto-recover from this?"
+          answer="When the tail pointer catches the head pointer, the circular buffer is full — there are no free slots left. The host must wait for the controller to process commands (which advances the head pointer, freeing slots) before submitting more. NVMe doesn't auto-recover because the host driver is responsible for tracking available queue depth. The driver maintains a local count of in-flight commands and never advances the tail past the head. If the driver had a bug and overwrote an unprocessed entry, the original command would be lost and the replacement would be corrupted — leading to data loss or controller errors. This design keeps hardware simple and puts flow control responsibility on the software, which can make smarter scheduling decisions."
         />
       </div>
     </SectionWrapper>

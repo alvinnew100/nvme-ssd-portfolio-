@@ -7,7 +7,7 @@ import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import KnowledgeCheck from "@/components/story/KnowledgeCheck";
+import RevealCard from "@/components/story/RevealCard";
 
 const COMMIT_ACTIONS = [
   {
@@ -577,13 +577,11 @@ export default function FirmwareUpdate() {
           stable power during updates, and never overwrite your only working firmware slot.
         </InfoCard>
 
-        <KnowledgeCheck
+        <RevealCard
           id="act5-fw-kc1"
-          question="Do firmware updates typically preserve user data?"
-          options={["Yes", "No"]}
-          correctIndex={0}
-          explanation="Most firmware updates preserve user data — they only update the controller's firmware code, not the NAND contents. However, it's always recommended to back up data before firmware updates as a precaution, since a failed update could brick the drive."
-          hint="Firmware updates can be applied in different ways — some require a reset, some don't."
+          prompt="You need to update firmware on 1,000 production NVMe SSDs in a data center with zero data loss and minimal downtime. Walk through your strategy: which Commit Action would you use, why multiple firmware slots matter, and what's your rollback plan if the new firmware has a bug?"
+          answer="Use CA1 (download + activate on next reset) for maximum safety and control. First, verify all drives have at least 2 writable firmware slots using 'nvme id-ctrl | grep FRMW'. Stage the new firmware into slot 2 (keeping the current working firmware in slot 1) across all 1,000 drives during business hours — this causes no disruption since CA1 doesn't activate until reset. Then during a maintenance window, reset drives in rolling batches (e.g., 50 at a time) to activate the new firmware. After each batch, verify with 'nvme fw-log' that the new firmware is active and run a quick health check (SMART log, basic I/O test). If the new firmware causes issues in any batch, use CA2 to reactivate slot 1 (the old firmware) on affected drives — no re-download needed since the old image is still in its slot. This is exactly why multiple slots exist: slot 1 (often read-only factory firmware) acts as an ultimate safety net, while writable slots let you stage, test, and roll back without risk. Never use CA3 (immediate activation) across a fleet — if it causes a bug, you have no controlled rollback window."
+          hint="Think about the different Commit Actions and how firmware slots enable safe rollback."
         />
       </div>
     </SectionWrapper>

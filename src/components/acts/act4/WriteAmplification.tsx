@@ -5,7 +5,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import FillInBlank from "@/components/story/FillInBlank";
+import RevealCard from "@/components/story/RevealCard";
 
 export default function WriteAmplification() {
   const [hostWritesGB, setHostWritesGB] = useState(100);
@@ -225,11 +225,10 @@ export default function WriteAmplification() {
           </code> and note the values before and after.
         </InfoCard>
 
-        <FillInBlank
+        <RevealCard
           id="act4-waf-fill1"
-          prompt="If the host writes 100 GB but the SSD writes 300 GB to NAND, the WAF is {blank}."
-          blanks={[{ answer: "3", tolerance: 0, placeholder: "?" }]}
-          explanation="WAF (Write Amplification Factor) = NAND writes / Host writes = 300 / 100 = 3. A WAF of 3 means for every 1 GB the host writes, the SSD internally writes 3 GB due to GC copying valid pages."
+          prompt="An SSD benchmark reports 100 GB of host writes but the SSD's internal NAND write counter shows 300 GB. Derive the Write Amplification Factor and explain what's causing the extra writes."
+          answer="WAF = NAND writes / Host writes = 300 GB / 100 GB = 3.0. The extra 200 GB comes from garbage collection: when the SSD needs to reclaim blocks, it must read valid pages from partially-empty blocks, write them to new blocks, then erase the old blocks. Each GC cycle amplifies writes. Other contributors include metadata updates, wear-leveling page moves, and write-ahead logging in the FTL. A WAF of 3 means the NAND is wearing out 3x faster than the host workload alone would suggest."
           hint="WAF = actual NAND writes / host writes. A WAF of 1.0 means no amplification."
         />
       </div>

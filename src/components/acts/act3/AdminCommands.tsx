@@ -6,7 +6,7 @@ import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import { getAdminCommands } from "@/lib/nvme/decoder";
-import KnowledgeCheck from "@/components/story/KnowledgeCheck";
+import RevealCard from "@/components/story/RevealCard";
 
 const CATEGORY_COLORS: Record<string, string> = {
   "Discovery": "#00d4aa",
@@ -271,13 +271,11 @@ export default function AdminCommands() {
           </div>
         </div>
 
-        <KnowledgeCheck
+        <RevealCard
           id="act3-admin-kc1"
-          question="Can Admin commands transfer user data (file contents)?"
-          options={["Yes", "No"]}
-          correctIndex={1}
-          explanation="Admin commands handle device management — identifying the controller, creating queues, getting logs, etc. User data transfer (reads/writes) is handled exclusively by I/O commands submitted to I/O queues."
-          hint="Think about which command retrieves the drive's identity and capabilities."
+          prompt="Why does NVMe separate admin commands from I/O commands into different queues, rather than mixing them all into a single queue? Under what conditions would a shared queue become a serious problem?"
+          answer="Admin commands handle device management — identifying the controller, creating queues, getting logs, updating firmware — while I/O commands handle user data transfer (reads and writes). NVMe separates them because the admin queue is a 'priority lifeline' that must always remain responsive. If admin and I/O commands shared a queue, a burst of thousands of I/O operations could starve critical management commands. Imagine needing to check drive health during a heavy database workload — if your health-check command is stuck behind 64K pending reads, you can't diagnose the problem. Worse, if you need to abort a stuck I/O command or reset a queue, you need a separate channel to issue that abort. The admin queue (QID 0) is always available and never competes with data traffic. This separation also simplifies the controller's internal scheduling — it can prioritize admin commands and guarantee they complete within a bounded time."
+          hint="Think about what happens when I/O queues are saturated and you need to issue a management command."
         />
       </div>
     </SectionWrapper>

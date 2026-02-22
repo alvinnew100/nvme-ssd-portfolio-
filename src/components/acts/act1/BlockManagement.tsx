@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import QuizCard from "@/components/story/QuizCard";
+import RevealCard from "@/components/story/RevealCard";
 
 /* ─── Block Types Diagram — Interactive ─── */
 type BlockType = "source" | "dynamic" | "static" | "spare" | "dynamicSpare" | "staticSpare";
@@ -359,15 +359,10 @@ export default function BlockManagement() {
           </div>
         </div>
 
-        <QuizCard
+        <RevealCard
           id="act1-block-quiz1"
-          question="How does the garbage collector decide which block to erase first?"
-          options={[
-            { text: "Oldest block (highest erase count)", explanation: "Erase count affects wear leveling decisions, not GC source block selection." },
-            { text: "Block with the lowest VPC (fewest valid pages)", correct: true, explanation: "Correct! The GC engine picks the block with the lowest Valid Page Count because it requires copying the fewest valid pages — minimizing write amplification. Fewer copies = less wear = faster reclamation." },
-            { text: "Random selection", explanation: "Random selection would be highly inefficient. The GC is optimized to minimize writes." },
-            { text: "Block with the most free pages", explanation: "Free pages within a block can't be individually reclaimed — the entire block must be erased. VPC tells us how many valid pages need copying." },
-          ]}
+          prompt="Why does the garbage collector prioritize blocks with the fewest valid pages rather than the oldest blocks or random blocks? What metric does it optimize, and what would happen if it chose blocks randomly instead?"
+          answer="The GC engine picks the block with the lowest VPC (Valid Page Count) because it must copy all valid pages to a new block before erasing. Choosing the block with the fewest valid pages minimizes write amplification — the ratio of actual NAND writes to host-requested writes. A block with VPC=2 out of 256 pages requires copying only 2 pages to reclaim 254 free pages (excellent efficiency). A block with VPC=250 would require copying 250 pages to reclaim only 6 pages (terrible efficiency). Random selection would average these extremes, dramatically increasing write amplification, which accelerates wear and reduces the drive's effective lifespan. The GC maintains a VPC table in DRAM for O(1) lookup of the best candidate. Erase count, by contrast, is used for wear leveling decisions, not GC source selection — these are separate optimization goals."
         />
       </div>
     </SectionWrapper>

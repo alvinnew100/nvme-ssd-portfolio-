@@ -7,7 +7,7 @@ import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import KnowledgeCheck from "@/components/story/KnowledgeCheck";
+import RevealCard from "@/components/story/RevealCard";
 
 interface Filesystem {
   name: string;
@@ -512,13 +512,11 @@ export default function Filesystems() {
           amplification but also improves crash consistency.
         </InfoCard>
 
-        <KnowledgeCheck
+        <RevealCard
           id="act5-fs-kc1"
-          question="What is the most common Linux filesystem for NVMe SSDs?"
-          options={["ext4", "NTFS"]}
-          correctIndex={0}
-          explanation="ext4 is the default and most widely-used Linux filesystem. It supports TRIM/discard, has mature tooling, and works well with NVMe SSDs. NTFS is a Windows filesystem."
-          hint="Consider how the filesystem translates file operations into block device I/O."
+          prompt="Why does the choice of filesystem matter for NVMe SSD performance and longevity? Consider what happens at the intersection of filesystem behavior (journaling, CoW, TRIM) and the SSD's internal operations (FTL, GC, wear leveling)."
+          answer="The filesystem sits directly above the block layer and determines how file operations translate into NVMe commands. This choice impacts the SSD in several critical ways: (1) TRIM support — ext4 and XFS send discard commands to inform the SSD about deleted data, reducing GC overhead and WAF. Without TRIM, the SSD wastes writes preserving dead data. (2) Write patterns — Btrfs uses copy-on-write, which means the SSD's FTL also does out-of-place writes, creating double indirection that can increase WAF. Ext4's in-place updates with journaling produce different patterns. (3) Journaling overhead — ext4's journal writes add extra NAND wear. The 'ordered' mode journals only metadata, while 'journal' mode doubles all writes. (4) Alignment — modern filesystems use 4K-aligned I/O matching the SSD's internal page size, avoiding read-modify-write penalties. The right choice depends on your workload: ext4 for general use, XFS for large files and parallel I/O, Btrfs when you need snapshots and checksums."
+          hint="Think about TRIM support, write patterns, and journaling overhead."
         />
 
       </div>

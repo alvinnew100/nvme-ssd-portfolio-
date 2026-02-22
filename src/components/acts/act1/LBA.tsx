@@ -6,8 +6,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import QuizCard from "@/components/story/QuizCard";
-import FillInBlank from "@/components/story/FillInBlank";
+import RevealCard from "@/components/story/RevealCard";
 
 const BLOCK_COUNT = 24;
 
@@ -272,22 +271,16 @@ export default function LBA() {
           switch) using <code className="text-text-code">nvme id-ns</code>.
         </InfoCard>
 
-        <QuizCard
+        <RevealCard
           id="act1-lba-quiz1"
-          question="Why does the OS use logical addresses (LBAs) instead of physical NAND addresses?"
-          options={[
-            { text: "Physical addresses are too long to store", explanation: "Address length isn't the main reason. LBAs can be just as long." },
-            { text: "The SSD moves data internally, so physical addresses would break", correct: true, explanation: "Correct! The SSD constantly moves data for wear leveling, garbage collection, and error recovery. If the OS used physical addresses, every internal move would break the OS's references. LBAs provide a stable abstraction." },
-            { text: "LBAs are faster to compute", explanation: "Speed of address computation isn't the issue. The key is that physical locations change." },
-            { text: "Physical addresses don't exist on SSDs", explanation: "Physical addresses do exist — the SSD's internal firmware uses them. They're just hidden from the OS." },
-          ]}
+          prompt="Why would it be disastrous for the OS to directly address physical NAND locations? What fundamental SSD behavior makes an abstraction layer like LBAs essential?"
+          answer="The SSD constantly moves data internally for wear leveling, garbage collection, and error recovery. If the OS used physical NAND addresses, every internal data relocation would invalidate the OS's references, causing data corruption or loss. LBAs provide a stable abstraction — the FTL (Flash Translation Layer) maintains a mapping table that translates fixed LBAs to changing physical locations, so the OS never needs to know where data actually lives on NAND. This decoupling also allows the SSD to optimize data placement for performance (e.g., striping across channels) and reliability (e.g., moving data away from failing cells) without any OS involvement. The LBA interface is essentially a contract: the OS says 'store this at address 42' and the SSD guarantees it can retrieve it from address 42, regardless of how many times the physical location changes internally."
         />
 
-        <FillInBlank
+        <RevealCard
           id="act1-lba-fill1"
-          prompt="A 1 TB drive with 512-byte LBAs has approximately {blank} billion LBAs."
-          blanks={[{ answer: "1.95", tolerance: 0.1, placeholder: "?" }]}
-          explanation="1 TB = 1,000,000,000,000 bytes. Divided by 512 bytes per LBA = ~1,953,125,000 LBAs, or approximately 1.95 billion."
+          prompt="How would you derive the total number of LBAs on a 1 TB drive with 512-byte sectors from first principles? Why does the choice of sector size (512B vs 4KB) matter for the FTL's memory overhead?"
+          answer="1 TB = 1,000,000,000,000 bytes. Dividing by 512 bytes per LBA gives ~1,953,125,000 LBAs, or approximately 1.95 billion. This sector size choice has a massive impact on FTL overhead: the mapping table stores one physical address per LBA (typically 4 bytes each). With 512-byte LBAs, the table needs ~1.95 billion x 4 bytes = ~7.8 GB of DRAM — enormous. With 4KB LBAs, the same drive has only ~244 million LBAs, requiring ~976 MB of DRAM — 8x less. This is why 4KB-native drives are more efficient: fewer LBAs means a smaller mapping table, less DRAM needed, and faster table lookups. It also explains why DRAM-less SSDs using HMB (Host Memory Buffer) strongly prefer 4KB sectors."
           hint="Each sector is 512 bytes. Divide the total capacity by the sector size."
         />
       </div>

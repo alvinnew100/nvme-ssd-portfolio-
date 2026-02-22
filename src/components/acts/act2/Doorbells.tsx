@@ -6,7 +6,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
-import KnowledgeCheck from "@/components/story/KnowledgeCheck";
+import RevealCard from "@/components/story/RevealCard";
 
 const DOORBELLS = [
   { offset: "0x1000", label: "Admin SQ Tail Doorbell", type: "sq" as const, qid: 0 },
@@ -183,12 +183,10 @@ export default function Doorbells() {
           and improves VM performance significantly.
         </InfoCard>
 
-        <KnowledgeCheck
+        <RevealCard
           id="act2-doorbells-kc1"
-          question="Who rings the doorbell \u2014 the host CPU or the SSD controller?"
-          options={["Host CPU", "SSD Controller"]}
-          correctIndex={0}
-          explanation="The host CPU writes to the doorbell register (via MMIO) to notify the SSD controller that new commands have been placed in the submission queue. The controller then processes them."
+          prompt="If the SSD controller were responsible for polling the Submission Queue instead of relying on the host to ring a doorbell, what performance and power problems would arise? Why does NVMe use the doorbell model instead?"
+          answer="The host CPU writes to the doorbell register (via MMIO) to notify the SSD controller that new commands have been placed in the submission queue. If the SSD polled the queue instead, it would waste PCIe bandwidth by constantly issuing DMA reads to check for new entries — burning power and consuming bus cycles even when no commands are pending. The doorbell model is event-driven: the SSD sleeps until the host writes to the doorbell register, which costs exactly one PCIe Memory Write TLP (4 bytes). Even better, the host can batch multiple commands into the SQ and ring the doorbell once, triggering the SSD to process the entire batch. This is why NVMe achieves millions of IOPS with minimal CPU overhead — the notification cost is amortized across many commands."
           hint="Think about how the host CPU notifies the SSD that new commands are waiting."
         />
       </div>
