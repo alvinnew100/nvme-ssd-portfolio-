@@ -174,6 +174,7 @@ export default function IOCommands() {
           options={["Flush", "Read"]}
           correctIndex={0}
           explanation="The Flush command forces all data in the SSD's volatile write buffer (DRAM cache) to be written to NAND flash. This guarantees persistence — critical for databases and filesystems that need crash consistency."
+          hint="Consider the difference between reading data and writing data in terms of NVMe opcodes."
         />
       </div>
     </SectionWrapper>

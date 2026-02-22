@@ -518,6 +518,7 @@ export default function Filesystems() {
           options={["ext4", "NTFS"]}
           correctIndex={0}
           explanation="ext4 is the default and most widely-used Linux filesystem. It supports TRIM/discard, has mature tooling, and works well with NVMe SSDs. NTFS is a Windows filesystem."
+          hint="Consider how the filesystem translates file operations into block device I/O."
         />
 
       </div>

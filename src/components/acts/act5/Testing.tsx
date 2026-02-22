@@ -116,6 +116,7 @@ export default function Testing() {
           options={["Performance after GC stabilizes", "Maximum burst speed"]}
           correctIndex={0}
           explanation="Steady-state testing measures performance after the SSD has filled up and garbage collection is continuously running. This reflects real-world sustained performance, unlike burst benchmarks that only test fresh/empty drive performance."
+          hint="Think about which testing approach validates the drive against the NVMe specification."
         />
       </div>
     </SectionWrapper>

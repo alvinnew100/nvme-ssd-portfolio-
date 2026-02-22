@@ -267,6 +267,7 @@ export default function BAR0() {
           options={["True", "False"]}
           correctIndex={1}
           explanation="BAR0 uses Memory-Mapped I/O (MMIO), not I/O ports. The SSD's registers are mapped to normal memory addresses so the CPU reads/writes them as if they were RAM."
+          hint="BAR0 registers are accessed through a specific memory I/O technique."
         />
       </div>
     </SectionWrapper>

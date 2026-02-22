@@ -224,6 +224,7 @@ export default function Binary() {
           prompt="1 KB equals {blank} bytes."
           blanks={[{ answer: "1024", placeholder: "?" }]}
           explanation="1 KB = 2^10 = 1,024 bytes. Computer memory uses powers of 2, not powers of 10."
+          hint="Remember: each bit position doubles in value from right to left (1, 2, 4, 8...)."
         />
       </div>
     </SectionWrapper>

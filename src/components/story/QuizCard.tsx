@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, type ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useProgressStore } from "@/store/progressStore";
 import confetti from "canvas-confetti";
@@ -16,10 +16,12 @@ interface QuizCardProps {
   question: string;
   options: QuizOption[];
   hint?: string;
+  diagram?: ReactNode;
+  diagramCaption?: string;
 }
 
-export default function QuizCard({ id, question, options, hint }: QuizCardProps) {
-  const { markComplete, recordAttempt, isComplete } = useProgressStore();
+export default function QuizCard({ id, question, options, hint, diagram, diagramCaption }: QuizCardProps) {
+  const { markComplete, recordAttempt, resetChallenge, isComplete } = useProgressStore();
   const alreadyDone = isComplete(id);
 
   const [selected, setSelected] = useState<number | null>(null);
@@ -58,10 +60,16 @@ export default function QuizCard({ id, question, options, hint }: QuizCardProps)
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <div>
+          <div className="flex-1">
             <div className="text-text-primary text-sm font-semibold">{question}</div>
             <div className="text-nvme-green text-xs mt-0.5">Completed</div>
           </div>
+          <button
+            onClick={() => resetChallenge(id)}
+            className="text-text-muted text-xs hover:text-text-secondary transition-colors"
+          >
+            Reset
+          </button>
         </div>
       </div>
     );
@@ -77,6 +85,17 @@ export default function QuizCard({ id, question, options, hint }: QuizCardProps)
         </div>
         <div className="text-text-primary text-sm font-semibold">{question}</div>
       </div>
+
+      {diagram && (
+        <div className="mb-4 rounded-xl overflow-hidden border border-story-border">
+          {diagram}
+          {diagramCaption && (
+            <div className="text-text-muted text-xs text-center py-2 bg-story-surface">
+              {diagramCaption}
+            </div>
+          )}
+        </div>
+      )}
 
       <div className="space-y-2 mb-4">
         {options.map((opt, i) => {

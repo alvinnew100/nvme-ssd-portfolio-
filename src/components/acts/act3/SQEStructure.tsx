@@ -207,6 +207,7 @@ export default function SQEStructure() {
           prompt="An NVMe Submission Queue Entry (SQE) is {blank} bytes."
           blanks={[{ answer: "64", placeholder: "?" }]}
           explanation="Every NVMe command is exactly 64 bytes (16 DWords × 4 bytes each), providing a fixed-size format for all command types."
+          hint="Each submission queue entry has a fixed size defined by the NVMe specification."
         />
       </div>
     </SectionWrapper>

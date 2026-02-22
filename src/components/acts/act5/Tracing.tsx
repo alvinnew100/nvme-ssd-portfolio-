@@ -913,6 +913,7 @@ echo 0 > /sys/kernel/debug/tracing/tracing_on`}
           options={["blktrace", "ftrace"]}
           correctIndex={0}
           explanation="blktrace captures block-layer I/O events (requests, completions, merges) specific to storage devices. ftrace is a more general kernel function tracer that can trace any kernel function calls, including but not limited to I/O paths."
+          hint="Tracing captures the sequence of NVMe commands and their completions."
         />
       </div>
     </SectionWrapper>

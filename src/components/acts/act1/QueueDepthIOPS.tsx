@@ -121,6 +121,7 @@ export default function QueueDepthIOPS() {
           prompt="At QD1, a typical NVMe SSD achieves about {blank}K IOPS."
           blanks={[{ answer: "15", tolerance: 5, placeholder: "?" }]}
           explanation="At QD1 (single command in flight), a typical NVMe SSD achieves ~10-20K IOPS. The SSD can only process one command at a time, leaving most NAND dies idle."
+          hint="IOPS x block_size = bandwidth. Work backwards from the given values."
         />
 
         <div className="bg-story-card rounded-2xl p-6 card-shadow">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { motion } from "framer-motion";
 import { useProgressStore } from "@/store/progressStore";
 import confetti from "canvas-confetti";
@@ -17,6 +17,9 @@ interface FillInBlankProps {
   prompt: string; // Use {blank} or {blank0}, {blank1} etc. for blanks
   blanks: BlankDef[];
   explanation?: string;
+  hint?: string;
+  diagram?: ReactNode;
+  diagramCaption?: string;
 }
 
 function normalize(s: string) {
@@ -40,14 +43,15 @@ function checkAnswer(input: string, blank: BlankDef): boolean {
   return norm === answer;
 }
 
-export default function FillInBlank({ id, prompt, blanks, explanation }: FillInBlankProps) {
-  const { markComplete, recordAttempt, isComplete } = useProgressStore();
+export default function FillInBlank({ id, prompt, blanks, explanation, hint, diagram, diagramCaption }: FillInBlankProps) {
+  const { markComplete, recordAttempt, resetChallenge, isComplete } = useProgressStore();
   const alreadyDone = isComplete(id);
 
   const [values, setValues] = useState<string[]>(blanks.map(() => ""));
   const [checked, setChecked] = useState(false);
   const [results, setResults] = useState<boolean[]>([]);
   const [shaking, setShaking] = useState(false);
+  const [showHint, setShowHint] = useState(false);
 
   const handleCheck = () => {
     const res = blanks.map((blank, i) => checkAnswer(values[i], blank));
@@ -83,8 +87,14 @@ export default function FillInBlank({ id, prompt, blanks, explanation }: FillInB
           <svg className="w-4 h-4 text-nvme-green flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
-          <span className="text-text-secondary text-sm">{prompt.replace(/\{blank\d?\}/g, (_) => "___")}</span>
+          <span className="text-text-secondary text-sm flex-1">{prompt.replace(/\{blank\d?\}/g, (_) => "___")}</span>
           <span className="text-nvme-green text-xs">Completed</span>
+          <button
+            onClick={() => resetChallenge(id)}
+            className="text-text-muted text-xs hover:text-text-secondary transition-colors"
+          >
+            Reset
+          </button>
         </div>
       </div>
     );
@@ -100,6 +110,17 @@ export default function FillInBlank({ id, prompt, blanks, explanation }: FillInB
       animate={shaking ? { x: [0, -6, 6, -4, 4, 0] } : {}}
       transition={{ duration: 0.4 }}
     >
+      {diagram && (
+        <div className="mb-4 rounded-xl overflow-hidden border border-story-border">
+          {diagram}
+          {diagramCaption && (
+            <div className="text-text-muted text-xs text-center py-2 bg-story-surface">
+              {diagramCaption}
+            </div>
+          )}
+        </div>
+      )}
+
       <div className="flex items-start gap-3 mb-4">
         <div className="w-8 h-8 rounded-full bg-nvme-blue/10 flex items-center justify-center flex-shrink-0">
           <svg className="w-4 h-4 text-nvme-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -151,6 +172,20 @@ export default function FillInBlank({ id, prompt, blanks, explanation }: FillInB
       )}
 
       <div className="ml-11">
+        {hint && !allCorrect && (
+          <div className="mb-3">
+            {showHint ? (
+              <p className="text-text-muted text-xs italic bg-nvme-amber/5 rounded-lg p-3 border border-nvme-amber/20">
+                {hint}
+              </p>
+            ) : (
+              <button onClick={() => setShowHint(true)} className="text-nvme-amber text-xs hover:underline">
+                Show hint
+              </button>
+            )}
+          </div>
+        )}
+
         {!allCorrect && (
           <button
             onClick={checked ? handleRetry : handleCheck}

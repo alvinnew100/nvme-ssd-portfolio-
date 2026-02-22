@@ -637,6 +637,7 @@ numjobs=2`}
           options={["--iodepth", "--bs"]}
           correctIndex={0}
           explanation="--iodepth sets how many I/O operations fio keeps in-flight simultaneously (queue depth). --bs sets the block size (e.g., 4k, 128k) for each I/O operation."
+          hint="This fio parameter controls how many I/O operations are in-flight simultaneously."
         />
       </div>
     </SectionWrapper>

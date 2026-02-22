@@ -211,6 +211,7 @@ export default function BusTrace() {
           options={["CplD (Completion with Data)", "MWr (Memory Write)"]}
           correctIndex={0}
           explanation="CplD (Completion with Data) is how the SSD returns read data to the host. It completes a previously issued MRd (Memory Read) request. MWr is used by the SSD for DMA writes to host memory."
+          hint="Consider which bus transaction type lets the SSD access host memory independently."
         />
       </div>
     </SectionWrapper>

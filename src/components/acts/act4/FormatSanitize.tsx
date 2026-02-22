@@ -186,6 +186,7 @@ export default function FormatSanitize() {
           options={["Format NVM", "Sanitize"]}
           correctIndex={1}
           explanation="Sanitize provides cryptographic erase guarantees — it ensures all user data (including unmapped/over-provisioned areas) is permanently irrecoverable. Format NVM only affects the visible namespace and may leave data in over-provisioned areas."
+          hint="Consider which operation is more thorough: format changes the logical structure, sanitize destroys all data."
         />
       </div>
     </SectionWrapper>

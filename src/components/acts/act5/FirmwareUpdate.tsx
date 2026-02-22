@@ -583,6 +583,7 @@ export default function FirmwareUpdate() {
           options={["Yes", "No"]}
           correctIndex={0}
           explanation="Most firmware updates preserve user data — they only update the controller's firmware code, not the NAND contents. However, it's always recommended to back up data before firmware updates as a precaution, since a failed update could brick the drive."
+          hint="Firmware updates can be applied in different ways — some require a reset, some don't."
         />
       </div>
     </SectionWrapper>

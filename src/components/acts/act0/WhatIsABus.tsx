@@ -135,6 +135,7 @@ export default function WhatIsABus() {
           prompt="PCIe 4.0 x4 provides approximately {blank} GB/s of usable bandwidth."
           blanks={[{ answer: "7", tolerance: 1, placeholder: "?" }]}
           explanation="PCIe 4.0 runs at ~16 GT/s per lane. With 128b/130b encoding and 4 lanes, that's roughly 7.88 GB/s usable."
+          hint="The answer relates to the number of bits that can travel simultaneously on a bus."
         />
 
         <KnowledgeCheck
@@ -143,6 +144,7 @@ export default function WhatIsABus() {
           options={["True", "False"]}
           correctIndex={1}
           explanation="Each lane runs at the same speed (set by the PCIe generation). More lanes increase total bandwidth by adding parallel paths, not by making individual lanes faster."
+          hint="Consider which bus type connects directly to high-speed devices like GPUs and SSDs."
         />
       </div>
     </SectionWrapper>

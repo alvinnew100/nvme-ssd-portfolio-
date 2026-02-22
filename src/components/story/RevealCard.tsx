@@ -9,16 +9,26 @@ interface RevealCardProps {
   prompt: string;
   answer: ReactNode;
   answerPreview?: string;
+  hint?: string;
+  diagram?: ReactNode;
+  diagramCaption?: string;
 }
 
-export default function RevealCard({ id, prompt, answer, answerPreview }: RevealCardProps) {
-  const { markComplete, isComplete } = useProgressStore();
+export default function RevealCard({ id, prompt, answer, answerPreview, hint, diagram, diagramCaption }: RevealCardProps) {
+  const { markComplete, resetChallenge, isComplete } = useProgressStore();
   const alreadyDone = isComplete(id);
   const [revealed, setRevealed] = useState(alreadyDone);
+  const [showHint, setShowHint] = useState(false);
 
   const handleReveal = () => {
     setRevealed(true);
     markComplete(id);
+  };
+
+  const handleReset = () => {
+    setRevealed(false);
+    setShowHint(false);
+    resetChallenge(id);
   };
 
   return (
@@ -30,8 +40,27 @@ export default function RevealCard({ id, prompt, answer, answerPreview }: Reveal
             <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
           </svg>
         </div>
-        <div className="text-text-primary text-sm font-semibold">{prompt}</div>
+        <div className="text-text-primary text-sm font-semibold flex-1">{prompt}</div>
+        {revealed && (
+          <button
+            onClick={handleReset}
+            className="text-text-muted text-xs hover:text-text-secondary transition-colors"
+          >
+            Reset
+          </button>
+        )}
       </div>
+
+      {diagram && (
+        <div className="mb-4 ml-11 rounded-xl overflow-hidden border border-story-border">
+          {diagram}
+          {diagramCaption && (
+            <div className="text-text-muted text-xs text-center py-2 bg-story-surface">
+              {diagramCaption}
+            </div>
+          )}
+        </div>
+      )}
 
       <div className="relative ml-11">
         <AnimatePresence mode="wait">
@@ -46,6 +75,21 @@ export default function RevealCard({ id, prompt, answer, answerPreview }: Reveal
                   {answerPreview}
                 </div>
               )}
+
+              {hint && (
+                <div className="mb-3">
+                  {showHint ? (
+                    <p className="text-text-muted text-xs italic bg-nvme-amber/5 rounded-lg p-3 border border-nvme-amber/20">
+                      {hint}
+                    </p>
+                  ) : (
+                    <button onClick={() => setShowHint(true)} className="text-nvme-amber text-xs hover:underline">
+                      Show hint
+                    </button>
+                  )}
+                </div>
+              )}
+
               <button
                 onClick={handleReveal}
                 className="px-5 py-2 rounded-lg text-sm font-semibold bg-nvme-amber/10 text-nvme-amber border border-nvme-amber/20 hover:bg-nvme-amber/20 transition-all mt-2"

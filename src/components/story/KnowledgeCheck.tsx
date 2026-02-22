@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useProgressStore } from "@/store/progressStore";
 
@@ -10,6 +10,9 @@ interface KnowledgeCheckProps {
   options: [string, string];
   correctIndex: 0 | 1;
   explanation: string;
+  hint?: string;
+  diagram?: ReactNode;
+  diagramCaption?: string;
 }
 
 export default function KnowledgeCheck({
@@ -18,10 +21,14 @@ export default function KnowledgeCheck({
   options,
   correctIndex,
   explanation,
+  hint,
+  diagram,
+  diagramCaption,
 }: KnowledgeCheckProps) {
-  const { markComplete, recordAttempt, isComplete } = useProgressStore();
+  const { markComplete, recordAttempt, resetChallenge, isComplete } = useProgressStore();
   const alreadyDone = isComplete(id);
   const [answered, setAnswered] = useState<number | null>(null);
+  const [showHint, setShowHint] = useState(false);
 
   const handleClick = (i: number) => {
     if (answered !== null) return;
@@ -39,7 +46,13 @@ export default function KnowledgeCheck({
           <svg className="w-4 h-4 text-nvme-green flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
-          <span className="text-text-secondary text-sm">{question}</span>
+          <span className="text-text-secondary text-sm flex-1">{question}</span>
+          <button
+            onClick={() => resetChallenge(id)}
+            className="text-text-muted text-xs hover:text-text-secondary transition-colors"
+          >
+            Reset
+          </button>
         </div>
       </div>
     );
@@ -48,6 +61,17 @@ export default function KnowledgeCheck({
   return (
     <div className="bg-nvme-violet/5 border border-nvme-violet/20 rounded-xl p-4 my-4">
       <div className="text-text-primary text-sm font-medium mb-3">{question}</div>
+
+      {diagram && (
+        <div className="mb-3 rounded-xl overflow-hidden border border-story-border">
+          {diagram}
+          {diagramCaption && (
+            <div className="text-text-muted text-xs text-center py-2 bg-story-surface">
+              {diagramCaption}
+            </div>
+          )}
+        </div>
+      )}
 
       <div className="flex gap-2 mb-2">
         {options.map((opt, i) => {
@@ -69,6 +93,20 @@ export default function KnowledgeCheck({
           );
         })}
       </div>
+
+      {hint && answered === null && (
+        <div className="mb-2">
+          {showHint ? (
+            <p className="text-text-muted text-xs italic bg-nvme-amber/5 rounded-lg p-3 border border-nvme-amber/20">
+              {hint}
+            </p>
+          ) : (
+            <button onClick={() => setShowHint(true)} className="text-nvme-amber text-xs hover:underline">
+              Show hint
+            </button>
+          )}
+        </div>
+      )}
 
       <AnimatePresence>
         {answered !== null && (

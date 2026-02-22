@@ -213,6 +213,7 @@ export default function NandEndurance() {
           prompt="A TLC cell can endure approximately {blank} P/E cycles."
           blanks={[{ answer: "3000", tolerance: 1000, placeholder: "?" }]}
           explanation="TLC cells typically survive ~3,000 P/E cycles. SLC is ~100K, MLC ~10K, and QLC ~1K. The more voltage levels, the faster the oxide degrades."
+          hint="More bits per cell means more voltage levels, which stresses the oxide layer faster."
         />
 
         <KnowledgeCheck
@@ -221,6 +222,7 @@ export default function NandEndurance() {
           options={["Electrons trapped in oxide insulator", "The silicon substrate melts"]}
           correctIndex={0}
           explanation="Each high-voltage erase cycle pushes electrons through the oxide insulator. Some get permanently stuck (charge trapping), making the oxide leaky. Eventually, the floating gate can't hold charge at precise enough levels to distinguish between states."
+          hint="Think about which cell type stores more bits and therefore has more voltage levels to distinguish."
         />
       </div>
     </SectionWrapper>

@@ -288,6 +288,7 @@ export default function LBA() {
           prompt="A 1 TB drive with 512-byte LBAs has approximately {blank} billion LBAs."
           blanks={[{ answer: "1.95", tolerance: 0.1, placeholder: "?" }]}
           explanation="1 TB = 1,000,000,000,000 bytes. Divided by 512 bytes per LBA = ~1,953,125,000 LBAs, or approximately 1.95 billion."
+          hint="Each sector is 512 bytes. Divide the total capacity by the sector size."
         />
       </div>
     </SectionWrapper>

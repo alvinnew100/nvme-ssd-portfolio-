@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, type ReactNode } from "react";
 import {
   DndContext,
   closestCenter,
@@ -35,6 +35,8 @@ interface DragSortChallengeProps {
   items: DragItem[];
   correctOrder: string[];
   hint?: string;
+  diagram?: ReactNode;
+  diagramCaption?: string;
 }
 
 function SortableItem({
@@ -101,8 +103,10 @@ export default function DragSortChallenge({
   items: initialItems,
   correctOrder,
   hint,
+  diagram,
+  diagramCaption,
 }: DragSortChallengeProps) {
-  const { markComplete, recordAttempt, isComplete } = useProgressStore();
+  const { markComplete, recordAttempt, resetChallenge, isComplete } = useProgressStore();
   const alreadyDone = isComplete(id);
 
   // Shuffle items on first render (but consistently)
@@ -179,10 +183,16 @@ export default function DragSortChallenge({
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <div>
+          <div className="flex-1">
             <div className="text-text-primary text-sm font-semibold">{prompt}</div>
             <div className="text-nvme-green text-xs mt-0.5">Completed</div>
           </div>
+          <button
+            onClick={() => resetChallenge(id)}
+            className="text-text-muted text-xs hover:text-text-secondary transition-colors"
+          >
+            Reset
+          </button>
         </div>
       </div>
     );
@@ -198,6 +208,17 @@ export default function DragSortChallenge({
         </div>
         <div className="text-text-primary text-sm font-semibold">{prompt}</div>
       </div>
+
+      {diagram && (
+        <div className="mb-4 rounded-xl overflow-hidden border border-story-border">
+          {diagram}
+          {diagramCaption && (
+            <div className="text-text-muted text-xs text-center py-2 bg-story-surface">
+              {diagramCaption}
+            </div>
+          )}
+        </div>
+      )}
 
       <DndContext
         sensors={sensors}

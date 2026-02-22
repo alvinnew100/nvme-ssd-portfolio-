@@ -147,6 +147,7 @@ export default function SMART() {
           options={["Percentage Used", "Data Units Written"]}
           correctIndex={0}
           explanation="Percentage Used estimates the drive's consumed lifespan based on actual usage vs. rated endurance. 100% means the drive has reached its rated endurance (but may still function). Data Units Written just counts total writes without comparing to rated limits."
+          hint="SMART stands for Self-Monitoring, Analysis and Reporting Technology."
         />
       </div>
     </SectionWrapper>

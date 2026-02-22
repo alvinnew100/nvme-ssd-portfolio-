@@ -189,6 +189,7 @@ export default function Doorbells() {
           options={["Host CPU", "SSD Controller"]}
           correctIndex={0}
           explanation="The host CPU writes to the doorbell register (via MMIO) to notify the SSD controller that new commands have been placed in the submission queue. The controller then processes them."
+          hint="Think about how the host CPU notifies the SSD that new commands are waiting."
         />
       </div>
     </SectionWrapper>

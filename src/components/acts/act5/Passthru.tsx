@@ -1224,6 +1224,7 @@ nvme admin-passthru /dev/nvme0 \\
           options={["Vendor-specific operations", "Standard read/write"]}
           correctIndex={0}
           explanation="Passthru allows sending raw NVMe commands directly to the drive, bypassing normal OS abstractions. This is primarily used for vendor-specific diagnostic commands, firmware-level debugging, and operations not covered by the standard NVMe command set."
+          hint="NVMe passthrough lets you send raw NVMe commands directly to the drive."
         />
       </div>
     </SectionWrapper>

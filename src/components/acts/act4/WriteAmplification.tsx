@@ -230,6 +230,7 @@ export default function WriteAmplification() {
           prompt="If the host writes 100 GB but the SSD writes 300 GB to NAND, the WAF is {blank}."
           blanks={[{ answer: "3", tolerance: 0, placeholder: "?" }]}
           explanation="WAF (Write Amplification Factor) = NAND writes / Host writes = 300 / 100 = 3. A WAF of 3 means for every 1 GB the host writes, the SSD internally writes 3 GB due to GC copying valid pages."
+          hint="WAF = actual NAND writes / host writes. A WAF of 1.0 means no amplification."
         />
       </div>
     </SectionWrapper>

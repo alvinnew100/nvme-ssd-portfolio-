@@ -110,6 +110,7 @@ export default function WhatIsStorage() {
           options={["RAM", "SSD"]}
           correctIndex={0}
           explanation="RAM (DRAM) has access times of 50-100 nanoseconds, while SSDs take 10-100 microseconds — about 1,000x slower. That's why RAM is used for active data and SSDs for persistent storage."
+          hint="Think about which type keeps data even when the power is turned off."
         />
 
         <DragSortChallenge

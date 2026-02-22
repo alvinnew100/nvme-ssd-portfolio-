@@ -163,6 +163,7 @@ export default function Identify() {
           options={["Yes", "No"]}
           correctIndex={1}
           explanation="Identify Controller (CNS=1) returns device-wide information like model number, firmware version, and maximum queue entries. For per-namespace data (like capacity and LBA format), you need Identify Namespace (CNS=0)."
+          hint="The Identify command returns a data structure describing the controller or namespace."
         />
       </div>
     </SectionWrapper>

@@ -320,6 +320,7 @@ export default function IOPathDiagram() {
           prompt="The NAND read operation accounts for approximately {blank}% of total I/O latency."
           blanks={[{ answer: "87", tolerance: 5, placeholder: "?" }]}
           explanation="NAND read latency (~70μs for TLC) dominates the total I/O path (~80μs), accounting for roughly 87% of the time. Software layers (filesystem, block layer, driver) add minimal overhead."
+          hint="Trace the path from application to SSD: which queue does the command enter first?"
         />
       </div>
     </SectionWrapper>

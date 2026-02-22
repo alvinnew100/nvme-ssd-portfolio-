@@ -277,6 +277,7 @@ export default function AdminCommands() {
           options={["Yes", "No"]}
           correctIndex={1}
           explanation="Admin commands handle device management — identifying the controller, creating queues, getting logs, etc. User data transfer (reads/writes) is handled exclusively by I/O commands submitted to I/O queues."
+          hint="Think about which command retrieves the drive's identity and capabilities."
         />
       </div>
     </SectionWrapper>

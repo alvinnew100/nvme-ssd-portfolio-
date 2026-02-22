@@ -344,6 +344,7 @@ export default function NandCellBasics() {
           options={["Yes", "No"]}
           correctIndex={0}
           explanation="Yes — over months to years, electrons can slowly tunnel through the oxide insulator. This is called 'charge leakage' or 'data retention loss.' It's why SSDs have a data retention spec (typically 1-10 years depending on wear) and why powered-off SSDs can eventually lose data."
+          hint="The name of each NAND type indicates how many bits each cell stores."
         />
       </div>
     </SectionWrapper>
