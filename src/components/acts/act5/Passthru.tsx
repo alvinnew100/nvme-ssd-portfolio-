@@ -6,6 +6,8 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import CodeBlock from "@/components/story/CodeBlock";
 import InfoCard from "@/components/story/InfoCard";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 /* ─── Helpers ─── */
 const HEX_DIGITS = "0123456789ABCDEF";
@@ -581,6 +583,9 @@ export default function Passthru() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Vendor Passthrough &mdash; The Secret Menu
         </h3>
+
+        <AnalogyCard concept="Passthru Is a Direct Line to the SSD" analogy="NVMe passthru lets you send raw commands directly to the SSD, bypassing the normal kernel drivers. It's like having a direct phone line to the SSD controller — you can send any command, including vendor-specific ones that aren't part of the standard NVMe spec. Useful for firmware diagnostics, testing, and accessing hidden features." />
+        <TermDefinition term="NVMe Passthru" definition="A mechanism (via nvme-cli or /dev/nvmeX ioctl) to send raw NVMe admin or I/O commands directly to the controller, bypassing filesystem and block layer abstractions. Enables vendor-specific commands and low-level diagnostics." />
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           We&apos;ve covered NVMe&apos;s <em>standard</em> commands — the ones defined

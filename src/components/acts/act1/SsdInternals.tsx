@@ -3,6 +3,8 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 /* ─── Block Types Diagram — Interactive ─── */
 type BlockType = "source" | "dynamic" | "static" | "spare" | "dynamicSpare" | "staticSpare";
@@ -385,6 +387,15 @@ export default function SsdInternals() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           SSD Internals — Block Types, VPC, and Queue Depth
         </h3>
+        <AnalogyCard
+          concept="Block Management Is Like a Parking Garage"
+          analogy="Think of NAND blocks as parking spaces in a garage. Some are actively being used (dynamic blocks), some hold cars that never move (static/cold blocks), and some are kept empty in reserve (spare blocks). The garage manager (FTL) tracks which spaces have the most abandoned cars (low VPC) and periodically clears them out (garbage collection) to free up space."
+        />
+
+        <TermDefinition term="VPC (Valid Page Count)" definition="The number of pages in a NAND block that still contain current, referenced data. Lower VPC means fewer valid pages to copy during garbage collection, making that block a more efficient candidate for reclamation." />
+
+        <TermDefinition term="IOPS (I/O Operations Per Second)" definition="A measure of how many read or write operations a storage device can complete per second. Higher queue depth generally increases IOPS by keeping more NAND dies busy in parallel." />
+
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           The controller&apos;s FTL firmware manages thousands of NAND blocks. To understand
           how <strong className="text-text-primary">garbage collection</strong>,{" "}

@@ -4,6 +4,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 const QUEUE_SIZE = 8;
 
@@ -234,6 +236,9 @@ export default function Queues() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           How Commands Are Sent &mdash; Submission &amp; Completion Queues
         </h3>
+        <AnalogyCard concept="Queues Are Like Restaurant Order Slips" analogy="The Submission Queue (SQ) is the order counter — the host places command 'slips' there. The Completion Queue (CQ) is the pickup counter — the SSD places results there. Head and tail pointers track who's next, and the phase bit prevents confusion when the circular buffer wraps around." />
+        <TermDefinition term="SQ (Submission Queue)" definition="A circular buffer in host RAM where the CPU places NVMe commands (64-byte entries) for the SSD to process. Each I/O queue pair has one SQ." />
+        <TermDefinition term="CQ (Completion Queue)" definition="A circular buffer in host RAM where the SSD places completion entries (16-byte) after processing commands. The phase bit flips each time the queue wraps to indicate fresh entries." />
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           We know the SSD has a control panel (BAR0 registers) and a high-speed

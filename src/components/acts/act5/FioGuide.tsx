@@ -4,6 +4,8 @@ import { useState } from "react";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 const FIO_OPTIONS: {
   name: string;
@@ -156,6 +158,9 @@ export default function FioGuide() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Benchmarking with fio &mdash; Measuring Your SSD
         </h3>
+        <AnalogyCard concept="fio Is a Storage Stress-Tester" analogy="fio (Flexible I/O tester) is like a gym workout program for your SSD. You specify the exercise (random reads, sequential writes, mixed), the intensity (queue depth, number of jobs), and the duration. fio runs the workout and reports how the SSD performed — IOPS, bandwidth, and latency percentiles." />
+        <TermDefinition term="fio (Flexible I/O Tester)" definition="The industry-standard open-source tool for benchmarking and stress-testing storage devices. Supports custom workload definitions: I/O pattern, block size, queue depth, thread count, and duration. Results include IOPS, bandwidth, and latency histograms." />
+
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           We&apos;ve set up a filesystem and mounted our NVMe drive. Now the
           question: <em className="text-text-primary">how fast is it actually?</em>{" "}

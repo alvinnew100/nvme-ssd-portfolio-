@@ -4,6 +4,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 const DOORBELLS = [
   { offset: "0x1000", label: "Admin SQ Tail Doorbell", type: "sq" as const, qid: 0 },
@@ -26,6 +28,8 @@ export default function Doorbells() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Ringing the Doorbell &mdash; How the SSD Knows There&apos;s Work
         </h3>
+        <AnalogyCard concept="Doorbells Are Notification Buzzers" analogy="After the host writes a command to the SQ, it 'rings the doorbell' — a simple register write that tells the SSD 'hey, there's new work.' Without the doorbell, the SSD would have to constantly poll the queue to check for new commands." />
+        <TermDefinition term="Doorbell Register" definition="A 32-bit register in BAR0 that the host writes to notify the SSD of new SQ entries or consumed CQ entries. Each queue pair has two doorbell registers — one for submissions, one for completions." />
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           We&apos;ve seen that the host places commands in the Submission Queue (SQ)

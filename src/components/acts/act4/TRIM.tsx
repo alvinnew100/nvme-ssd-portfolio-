@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 /* ─── GC animation data ─── */
 type PageState = "valid" | "stale" | "free";
@@ -98,6 +100,14 @@ export default function TRIM() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           TRIM and GC &mdash; Keeping the SSD Fast
         </h3>
+        <AnalogyCard
+          concept="TRIM Bridges the Information Gap"
+          analogy="When you delete a file, the filesystem marks those blocks as free — but the SSD doesn't know this. Without TRIM, the SSD thinks those blocks still contain valid data and wastes effort preserving them during garbage collection. TRIM is the message that says 'hey, these LBAs are no longer needed — you can erase them whenever.'"
+        />
+
+        <TermDefinition term="TRIM (Dataset Management)" definition="An NVMe command (opcode 0x09) that tells the SSD which LBAs are no longer in use by the filesystem. This allows the SSD to mark those pages as invalid immediately, improving garbage collection efficiency and reducing write amplification." />
+
+        <TermDefinition term="Garbage Collection (GC)" definition="A background process in the SSD firmware that reclaims space from blocks containing stale/invalid pages. GC copies valid pages to a new block, then erases the old block to create free space for new writes." />
 
         {/* ─── Section 1: The Problem ─── */}
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">

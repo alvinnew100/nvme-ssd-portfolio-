@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
+import AnalogyCard from "@/components/story/AnalogyCard";
 
 const BOOT_STEPS = [
   {
@@ -180,6 +181,7 @@ export default function BootSequence() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           From Power-On to First I/O &mdash; The Boot Sequence
         </h3>
+        <AnalogyCard concept="Boot Is Like Opening a Restaurant" analogy="Before the SSD can serve I/O commands, it goes through a startup ritual — like a restaurant opening for the day. First, the host discovers the SSD on the PCIe bus (finding the building). Then it reads BAR0 (checking the menu). Then it creates admin queues (setting up the kitchen). Then it identifies the controller and creates I/O queues (hiring staff and opening for customers)." />
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           Now we know all the building blocks: PCIe is the highway, BAR0 is the
           control panel, and queues carry commands. <em className="text-text-primary">

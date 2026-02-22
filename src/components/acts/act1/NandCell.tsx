@@ -3,6 +3,8 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 const CELL_TYPES = [
   {
@@ -531,6 +533,13 @@ export default function NandCell() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           How an SSD Actually Stores a Bit
         </h3>
+
+        <AnalogyCard
+          concept="NAND Cells Are Tiny Charge Buckets"
+          analogy="Each NAND memory cell is like a tiny bucket that holds electrical charge. To store a '1', push charge into the bucket. To store a '0', leave it empty. The bucket is surrounded by insulation so the charge can't escape — that's why SSDs keep your data when power is off."
+        />
+
+        <TermDefinition term="NAND Flash Memory" definition="The type of non-volatile memory used in SSDs. Named after the NAND logic gate used in its circuit design. Stores data as electrical charges trapped in microscopic floating-gate transistors." />
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           Now we know that data is made of bits (0s and 1s) and that drives organize

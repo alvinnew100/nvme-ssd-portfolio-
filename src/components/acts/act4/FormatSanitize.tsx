@@ -5,6 +5,8 @@ import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 function EraseComparisonVisual() {
   const ref = useRef(null);
@@ -71,6 +73,14 @@ export default function FormatSanitize() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Erasing the Drive &mdash; Format NVM vs Sanitize
         </h3>
+        <AnalogyCard
+          concept="Format vs Sanitize: Quick Clean vs Deep Clean"
+          analogy="Format NVM is like reformatting a USB drive — it resets the namespace's LBA mapping and optionally erases user data. It's fast but may leave data recoverable in NAND. Sanitize is a deep clean that cryptographically or physically destroys all data — including unmapped pages and overprovisioned space. Use Format for routine resets, Sanitize when data must be irrecoverable."
+        />
+
+        <TermDefinition term="Format NVM" definition="An admin command that resets a namespace — changes block size, metadata format, or protection settings. Can optionally erase user data, but doesn't guarantee all physical NAND is wiped." />
+
+        <TermDefinition term="Sanitize" definition="An admin command that irreversibly destroys ALL data on the entire SSD — including unmapped areas, spare blocks, and controller caches. Three methods: Block Erase (NAND erase all blocks), Crypto Erase (destroy encryption key), Overwrite (write pattern to all locations)." />
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           Sometimes you need to erase an SSD — maybe you&apos;re repurposing it,

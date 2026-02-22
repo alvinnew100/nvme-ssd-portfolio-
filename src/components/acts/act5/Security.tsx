@@ -4,6 +4,8 @@ import { useState } from "react";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 const SEDUTIL_COMMANDS = [
   {
@@ -90,6 +92,10 @@ export default function Security() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Security &mdash; Protecting Data at the Hardware Level
         </h3>
+
+        <AnalogyCard concept="SSD Security Has Three Layers" analogy="SSD security is like securing a vault: encryption (scrambles data so stolen NAND chips are unreadable), authentication (only authorized users can unlock the drive), and sanitization (irreversibly destroy data when decommissioning). TCG Opal provides hardware-based encryption with user/admin passwords." />
+        <TermDefinition term="TCG Opal" definition="A standard for hardware-based full-disk encryption built into the SSD controller. Uses a Data Encryption Key (DEK) to encrypt all data written to NAND, and an Authentication Key (AK) to lock/unlock the drive." />
+        <TermDefinition term="DEK (Data Encryption Key)" definition="The symmetric key (typically AES-256) used to encrypt/decrypt all data on the SSD. Stored securely in the controller. Crypto-erasing the DEK instantly makes all data on the drive unrecoverable." />
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           So far, we&apos;ve talked about reading, writing, erasing, and updating

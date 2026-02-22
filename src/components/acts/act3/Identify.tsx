@@ -3,6 +3,8 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import TerminalBlock from "@/components/story/TerminalBlock";
 import InfoCard from "@/components/story/InfoCard";
@@ -67,6 +69,15 @@ export default function Identify() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           The First Question &mdash; &ldquo;Who Are You?&rdquo;
         </h3>
+
+        <AnalogyCard
+          concept="Identify Is the SSD's ID Card"
+          analogy="The Identify command asks the SSD 'who are you and what can you do?' — like checking someone's ID card. Identify Controller returns the SSD's model, serial number, firmware version, and capabilities. Identify Namespace returns details about a specific storage partition."
+        />
+
+        <p className="text-text-secondary mb-2 leading-relaxed max-w-3xl">
+          <TermDefinition term="CNS (Controller or Namespace Structure)" definition="A field in the Identify command that specifies what information to return. CNS=1 returns controller info, CNS=0 returns namespace info. Think of it as choosing which 'page' of the ID card to read." />
+        </p>
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           During boot, we saw that the NVMe driver sends an Identify command as its

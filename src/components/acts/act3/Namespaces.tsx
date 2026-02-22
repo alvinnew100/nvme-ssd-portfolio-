@@ -3,6 +3,8 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
 
@@ -77,6 +79,15 @@ export default function Namespaces() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Namespaces &mdash; Splitting One Drive into Many
         </h3>
+
+        <AnalogyCard
+          concept="Namespaces Are Logical Partitions"
+          analogy="An NVMe namespace is like a partition on a hard drive — it's a logical division of the SSD's storage. Most consumer SSDs have just one namespace (NSID 1) that spans the whole drive. Enterprise SSDs may have multiple namespaces to isolate workloads, each with its own LBA range and format."
+        />
+
+        <p className="text-text-secondary mb-2 leading-relaxed max-w-3xl">
+          <TermDefinition term="Namespace (NSID)" definition="A logical storage container within an NVMe SSD. Each namespace has its own LBA range, block size, and metadata settings. NSID 0 is reserved for broadcast (all namespaces), NSID 1+ are specific namespaces." />
+        </p>
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           In Lesson 1, we learned about LBAs — numbered mailboxes that address the

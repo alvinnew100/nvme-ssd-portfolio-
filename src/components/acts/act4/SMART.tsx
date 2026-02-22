@@ -4,6 +4,8 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 const SMART_FIELDS = [
   { name: "Critical Warning", value: "0x00", status: "ok" as const, explain: "A bitmask of critical warnings. 0 means nothing is wrong. If any bit is set, it means: spare capacity low (bit 0), temperature exceeded (bit 1), reliability degraded (bit 2), read-only mode (bit 3), or backup device failed (bit 4)." },
@@ -32,6 +34,14 @@ export default function SMART() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Is Your Drive Healthy? &mdash; SMART Monitoring
         </h3>
+        <AnalogyCard
+          concept="SMART Is the SSD's Health Dashboard"
+          analogy="SMART (Self-Monitoring, Analysis, and Reporting Technology) is like a fitness tracker for your SSD. It continuously monitors 14 health metrics — temperature, wear level, error counts, power-on hours. You can read these at any time using 'nvme smart-log /dev/nvme0' to check if your drive is healthy or approaching end-of-life."
+        />
+
+        <TermDefinition term="SMART" definition="Self-Monitoring, Analysis, and Reporting Technology — a built-in health monitoring system in storage devices. Reports metrics like temperature, wear percentage, error counts, and power-on hours through standardized log pages." />
+
+        <TermDefinition term="Percentage Used" definition="A SMART field (0-255%) estimating how much of the SSD's rated endurance has been consumed. 100% means the drive has used its rated TBW. Values above 100% mean the drive has exceeded its warranty endurance but may still function." />
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           Just like you go to a doctor for a checkup, your SSD has a built-in

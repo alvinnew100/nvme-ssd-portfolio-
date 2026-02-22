@@ -4,6 +4,8 @@ import { useState, useMemo, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 const BLOCK_COUNT = 24;
 
@@ -101,6 +103,13 @@ export default function LBA() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Addressing Storage &mdash; LBA
         </h3>
+
+        <AnalogyCard
+          concept="LBA Is Like Numbered Mailboxes"
+          analogy="Imagine a very long row of numbered mailboxes. Each mailbox holds a small, fixed amount of data. To read or write data, you just say 'give me mailbox #42' — you don't need to know where it physically sits. The SSD handles the physical location internally."
+        />
+
+        <TermDefinition term="LBA (Logical Block Addressing)" definition="A numbering system that divides the entire storage drive into fixed-size blocks, numbered starting from 0. 'Logical' means these are virtual addresses — the OS uses them, but the SSD maps them to physical NAND locations internally." />
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           We know data is made of bits and bytes. But an SSD holds a trillion bytes

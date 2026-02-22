@@ -4,6 +4,8 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 const REGISTERS = [
   { offset: "0x00", name: "CAP", size: "8B", desc: "Controller Capabilities — how many queue entries the drive supports, timing limits, and doorbell spacing", color: "#635bff" },
@@ -98,6 +100,9 @@ export default function BAR0() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           The Control Panel &mdash; BAR0 Registers
         </h3>
+        <AnalogyCard concept="BAR0 Is the SSD's Control Panel" analogy="BAR0 is like a control panel mounted on the front of the SSD. Each register is a button or dial — one enables the controller, another reports status, another sets queue sizes. The CPU accesses these 'buttons' by reading/writing specific memory addresses." />
+        <TermDefinition term="BAR0 (Base Address Register 0)" definition="A region of memory-mapped I/O space assigned to the SSD during PCIe enumeration. Contains the NVMe controller's registers — the CPU reads and writes these addresses to configure and control the SSD." />
+        <TermDefinition term="MMIO (Memory-Mapped I/O)" definition="A technique where hardware device registers are mapped into the CPU's normal memory address space. The CPU accesses devices by reading/writing to specific memory addresses, just like accessing RAM." />
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           We just learned that PCIe connects the SSD to your computer like a highway.

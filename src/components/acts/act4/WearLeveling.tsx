@@ -4,6 +4,8 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 const CELL_ENDURANCE = [
   { type: "SLC", pe: "~100,000", color: "#00d4aa", analogy: "A thick marker — lots of writes before it runs out" },
@@ -80,6 +82,14 @@ export default function WearLeveling() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Wear Leveling &mdash; Making Every Block Last
         </h3>
+        <AnalogyCard
+          concept="Wear Leveling Spreads the Load"
+          analogy="Without wear leveling, frequently-written blocks would wear out quickly while rarely-written blocks stay fresh — like some lanes on a highway getting potholes while others stay pristine. Dynamic wear leveling picks the least-worn free block for new writes. Static wear leveling goes further: it periodically moves cold (rarely updated) data off low-wear blocks, forcing those blocks to take some hot writes too."
+        />
+
+        <TermDefinition term="Dynamic Wear Leveling" definition="Ensures new writes go to the free block with the lowest erase count. Effective for hot data, but cold data blocks that are never rewritten will accumulate a growing erase count gap." />
+
+        <TermDefinition term="Static Wear Leveling" definition="Periodically moves cold (rarely written) data from low-wear blocks to high-wear blocks, then uses the freed low-wear blocks for new writes. Prevents cold blocks from hoarding low erase counts while hot blocks wear out." />
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           In Lesson 2, we learned that each NAND cell type has a different number of

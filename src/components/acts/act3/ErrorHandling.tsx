@@ -3,6 +3,8 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 import InfoCard from "@/components/story/InfoCard";
 
 const STATUS_CODES = [
@@ -97,6 +99,16 @@ export default function ErrorHandling() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           When Things Go Wrong &mdash; Error Handling
         </h3>
+
+        <AnalogyCard
+          concept="CQ Status Codes Are Error Reports"
+          analogy="When the SSD finishes a command, it writes a 16-byte completion entry to the CQ. The status field is like a report card — 0x0 means success, anything else is an error code telling you exactly what went wrong and whether the command can be retried."
+        />
+
+        <p className="text-text-secondary mb-2 leading-relaxed max-w-3xl">
+          <TermDefinition term="CQE (Completion Queue Entry)" definition="A 16-byte structure the SSD writes to the CQ after processing a command. Contains the command ID (to match the original request), a status code, and the phase bit." />{" "}
+          <TermDefinition term="SCT (Status Code Type)" definition="A 3-bit field in the CQE that categorizes the error: 0 = Generic, 1 = Command Specific, 2 = Media Error, 3 = Path Related. Combined with SC (Status Code) for the full error identification." />
+        </p>
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           We&apos;ve seen how commands are sent (via SQ) and results come back (via

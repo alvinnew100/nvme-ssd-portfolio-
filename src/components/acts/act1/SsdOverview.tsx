@@ -3,6 +3,8 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 /* ─── SSD Architecture Diagram ─── */
 function SsdDiagram() {
@@ -146,6 +148,13 @@ export default function SsdOverview() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Inside the SSD — The Complete Picture
         </h3>
+        <AnalogyCard
+          concept="An SSD Is a Mini-Computer"
+          analogy="An SSD isn't just a storage chip — it's a complete mini-computer with its own processor (controller), its own RAM (DRAM), and its own storage (NAND flash). The controller runs firmware that manages all the complexity: translating addresses, fixing errors, balancing wear, and talking to your computer over PCIe."
+        />
+
+        <TermDefinition term="SSD Controller" definition="The 'brain' of the SSD — a specialized processor (often ARM Cortex-R cores) that runs firmware to manage address mapping, error correction, wear leveling, and communication with the host computer." />
+
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           So far we&apos;ve seen the building blocks: bits, bytes, LBAs, and NAND cells
           organized into pages, blocks, and dies. <em className="text-text-primary">But

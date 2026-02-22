@@ -4,6 +4,8 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import TerminalBlock from "@/components/story/TerminalBlock";
 import CodeBlock from "@/components/story/CodeBlock";
 import InfoCard from "@/components/story/InfoCard";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 export default function Tracing() {
   return (
@@ -12,6 +14,10 @@ export default function Tracing() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           ftrace NVMe Tracing &mdash; Watching Commands in Real Time
         </h3>
+
+        <AnalogyCard concept="Tracing Shows What's Really Happening" analogy="Tracing tools (ftrace, blktrace, perf) are like putting sensors on every step of the I/O path. They show exactly how long each layer takes, where bottlenecks occur, and which operations are being queued. Essential for diagnosing 'the SSD feels slow' problems — usually the bottleneck isn't the SSD itself." />
+        <TermDefinition term="ftrace" definition="Linux's built-in function tracer. Can trace kernel functions related to NVMe and block I/O with nanosecond precision. Accessed via /sys/kernel/debug/tracing/ or the trace-cmd wrapper." />
+        <TermDefinition term="blktrace" definition="A specialized Linux tool that records all block I/O events (queue, merge, issue, complete) for a specific device. Combined with blkparse, it shows the complete lifecycle of each I/O request through the block layer." />
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           We&apos;ve learned how NVMe commands work: the host writes a 64-byte

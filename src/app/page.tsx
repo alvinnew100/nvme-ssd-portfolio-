@@ -4,8 +4,14 @@ import dynamic from "next/dynamic";
 import LessonDivider from "@/components/story/ActDivider";
 import LessonObjectives from "@/components/story/LessonObjectives";
 
-// Lesson 1 — Bits, Bytes, and Addressing
+// Primer — Foundations
 import Hero from "@/components/acts/act1/Hero";
+import WhatIsStorage from "@/components/acts/act0/WhatIsStorage";
+import WhatIsABus from "@/components/acts/act0/WhatIsABus";
+import HowDataFlows from "@/components/acts/act0/HowDataFlows";
+import TransistorBasics from "@/components/acts/act0/TransistorBasics";
+
+// Lesson 1 — Bits, Bytes, and Addressing
 import Binary from "@/components/acts/act1/Binary";
 import LBA from "@/components/acts/act1/LBA";
 
@@ -86,6 +92,19 @@ export default function HomePage() {
     <div>
       {/* ===================== HERO ===================== */}
       <Hero />
+
+      {/* ===================== PRIMER: FOUNDATIONS ===================== */}
+      <LessonDivider lesson={0} title="Computer & Storage Foundations" id="lesson-0" />
+      <LessonObjectives objectives={[
+        "Understand the storage hierarchy (registers, cache, RAM, SSD, HDD) and why it exists",
+        "Understand what a bus is and why PCIe matters for SSD performance",
+        "Trace the path data takes from an SSD to the CPU and back",
+        "Understand what a transistor is and how it relates to NAND flash storage",
+      ]} />
+      <div id="sec-storage"><WhatIsStorage /></div>
+      <div id="sec-bus"><WhatIsABus /></div>
+      <div id="sec-data-flow"><HowDataFlows /></div>
+      <div id="sec-transistor"><TransistorBasics /></div>
 
       {/* ===================== LESSON 1: BITS, BYTES, AND ADDRESSING ===================== */}
       <LessonDivider lesson={1} title="Bits, Bytes, and Addressing" id="lesson-1" />

@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
+import AnalogyCard from "@/components/story/AnalogyCard";
 
 const LEVELS = [
   {
@@ -131,6 +132,11 @@ export default function NandHierarchy() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           How NAND Cells Are Organized
         </h3>
+        <AnalogyCard
+          concept="NAND Hierarchy Is Like a Library"
+          analogy="Pages are like sheets of paper (you read/write one at a time). Blocks are notebooks (you can only shred a whole notebook at once). Planes are bookshelves (multiple notebooks accessible in parallel). Dies are library floors (each operates independently). Packages are the building (containing everything in one physical chip)."
+        />
+
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           A single NAND cell is microscopic — it stores just 1 to 4 bits. <em className="text-text-primary">
           So how do you get from a tiny cell to a 1 TB drive?</em> By organizing

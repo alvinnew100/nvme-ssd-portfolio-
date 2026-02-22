@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
+import AnalogyCard from "@/components/story/AnalogyCard";
 
 const TEST_LEVELS = [
   { label: "Compliance", desc: "Does the drive follow the NVMe spec? Correct error codes, proper behavior for edge cases, all mandatory commands work.", color: "#ed5f74", w: "160px" },
@@ -50,6 +51,8 @@ export default function Testing() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           SSD Testing &mdash; Beyond Simple Benchmarks
         </h3>
+
+        <AnalogyCard concept="SSD Testing Has Three Pillars" analogy="Testing an SSD is like testing a car: correctness testing (does it drive straight?), performance testing (how fast and how well does it handle?), and endurance testing (how long before something breaks?). Each category uses different tools and approaches." />
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           Running fio gives you performance numbers. But <em className="text-text-primary">

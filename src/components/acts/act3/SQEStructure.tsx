@@ -4,6 +4,8 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import dynamic from "next/dynamic";
 import SectionWrapper from "@/components/story/SectionWrapper";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 import { getAdminCommands } from "@/lib/nvme/decoder";
 
 const SQEntryVisualizer = dynamic(
@@ -74,6 +76,17 @@ export default function SQEStructure() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           What&apos;s Inside a Command? &mdash; The 64-Byte SQ Entry
         </h3>
+
+        <AnalogyCard
+          concept="An SQE Is a Structured Order Form"
+          analogy="Every NVMe command is a 64-byte form with specific fields in specific positions. DWord 0 always contains the opcode (what to do) and command ID (tracking number). DWords 6-9 contain data buffer addresses. DWords 10-15 are command-specific parameters. It's like a standardized order form where every field has a fixed position."
+        />
+
+        <p className="text-text-secondary mb-2 leading-relaxed max-w-3xl">
+          <TermDefinition term="SQE (Submission Queue Entry)" definition="A 64-byte data structure that represents one NVMe command. Contains 16 DWords (32-bit fields) specifying the opcode, namespace, data pointers, and command-specific parameters." />{" "}
+          <TermDefinition term="DWord" definition="A 32-bit (4-byte) field in an NVMe command structure. DWord 0 = bytes 0-3, DWord 1 = bytes 4-7, etc. The 64-byte SQE contains DWords 0 through 15." />{" "}
+          <TermDefinition term="Opcode" definition="A number in DWord 0 that tells the SSD what operation to perform. For example: 0x01 = Write, 0x02 = Read, 0x06 = Identify." />
+        </p>
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           In Lesson 6, we learned that commands go into the Submission Queue. But what

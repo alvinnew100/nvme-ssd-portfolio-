@@ -5,6 +5,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 const DATA_SCALE = [
   { name: "1 bit", detail: "0 or 1", w: 1.5 },
@@ -71,6 +73,13 @@ export default function Binary() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Everything Starts with a Bit
         </h3>
+        <AnalogyCard
+          concept="A Bit Is a Light Switch"
+          analogy="Every piece of data — photos, videos, documents, apps — is made of billions of tiny on/off switches called bits. Off is 0, on is 1. That's it. Everything your computer does comes down to billions of these simple yes/no decisions."
+        />
+
+        <TermDefinition term="Bit" definition="The smallest unit of data in computing — a single 0 or 1. Short for 'binary digit.' Every other unit of data (bytes, kilobytes, etc.) is built from groups of bits." />
+
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           Think of a light switch. It&apos;s either <strong className="text-text-primary">
           off</strong> or <strong className="text-text-primary">on</strong>. That&apos;s
@@ -93,6 +102,9 @@ export default function Binary() {
           something more complex, like a letter or a number?</em> By grouping{" "}
           <strong className="text-text-primary">8 bits together</strong> into a{" "}
           <strong className="text-text-primary">byte</strong>.
+        </p>
+        <TermDefinition term="Byte" definition="A group of 8 bits. Can represent 256 different values (2^8). One byte is enough for a single letter, a small number, or one color channel in an image." />
+        <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           A byte can represent 256 different values (2&times;2&times;2&times;2&times;2&times;2&times;2&times;2
           = 256), which is enough for a single letter, a small number, or a single
           color channel in an image.

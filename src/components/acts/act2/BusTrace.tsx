@@ -3,6 +3,8 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 interface TraceEvent {
   id: number;
@@ -35,6 +37,9 @@ export default function BusTrace() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Seeing It All in Action &mdash; A PCIe Bus Trace
         </h3>
+        <AnalogyCard concept="A Bus Trace Is an X-Ray of Data Flow" analogy="A PCIe bus trace captures every transaction between the host and SSD — like a security camera recording every package that passes through a mail sorting facility. You can see doorbell writes, DMA transfers, and interrupt signals at the individual packet level." />
+        <TermDefinition term="DMA (Direct Memory Access)" definition="A mechanism where the SSD reads from or writes to host RAM directly, without involving the CPU for each byte. The SSD's DMA engine fetches commands from SQs and delivers data/completions — this is what makes NVMe fast." />
+        <TermDefinition term="MSI-X (Message Signaled Interrupts - Extended)" definition="A modern interrupt mechanism where the SSD notifies the CPU by writing a small message to a specific memory address, rather than using a physical interrupt pin. Allows per-queue interrupt steering to specific CPU cores." />
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           We&apos;ve learned all the concepts separately — PCIe, BAR0, queues, and
           doorbells. Now let&apos;s see how they work <em>together</em> during a

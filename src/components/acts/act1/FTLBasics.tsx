@@ -4,6 +4,8 @@ import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 const INITIAL_MAP = [
   { lba: 0, pba: 12, valid: true },
@@ -228,6 +230,13 @@ export default function FTLBasics() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           The Flash Translation Layer (FTL)
         </h3>
+        <AnalogyCard
+          concept="The FTL Is a Library Card Catalog"
+          analogy="Imagine a library that can't erase single pages — only whole shelves. When you update a book, the librarian writes the new version on a fresh shelf, updates the card catalog to point there, and marks the old copy as 'outdated.' Later, a cleanup crew (garbage collection) moves valid books off shelves with too many outdated copies, then clears those shelves for reuse."
+        />
+
+        <TermDefinition term="FTL (Flash Translation Layer)" definition="The firmware inside the SSD controller that translates logical addresses (LBAs from the host) to physical NAND page locations. It handles out-of-place writes, garbage collection, and wear leveling — all invisible to the host operating system." />
+
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           Remember the &ldquo;shredding the whole notebook&rdquo; problem from the
           hierarchy section? You can write individual pages, but erasing requires wiping

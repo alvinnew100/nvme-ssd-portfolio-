@@ -1,6 +1,8 @@
 "use client";
 
 import SectionWrapper from "@/components/story/SectionWrapper";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
 
@@ -86,6 +88,16 @@ export default function IOCommands() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           I/O Commands &mdash; Reading and Writing Your Data
         </h3>
+
+        <AnalogyCard
+          concept="I/O Commands Move Your Data"
+          analogy="While admin commands manage the SSD, I/O commands are the workhorses that actually read and write your data. A Read command says 'give me N blocks starting at LBA X.' A Write command says 'store this data at LBA X.' These flow through I/O queues (not the admin queue) for maximum parallelism."
+        />
+
+        <p className="text-text-secondary mb-2 leading-relaxed max-w-3xl">
+          <TermDefinition term="NLB (Number of Logical Blocks)" definition="A field in Read/Write commands specifying how many LBAs to transfer. NLB is 0-indexed, so NLB=0 means 1 block, NLB=7 means 8 blocks." />{" "}
+          <TermDefinition term="SLBA (Starting Logical Block Address)" definition="The first LBA to read from or write to. Combined with NLB, it defines the complete range: 'read NLB+1 blocks starting at SLBA.'" />
+        </p>
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           Admin commands manage the drive. <strong className="text-text-primary">

@@ -5,6 +5,8 @@ import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 interface Filesystem {
   name: string;
@@ -174,6 +176,11 @@ export default function Filesystems() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Filesystems &mdash; How Files Become LBAs
         </h3>
+
+        <AnalogyCard concept="Filesystems Translate Files to Blocks" analogy="A filesystem is like a librarian's catalog system — it translates human-readable names (photo.jpg, report.pdf) into specific storage locations (LBAs). Different filesystems (ext4, XFS, Btrfs) use different organization strategies, affecting how well they work with SSDs." />
+        <TermDefinition term="ext4" definition="The default Linux filesystem. Uses extents (contiguous block ranges) for efficient allocation. Supports TRIM/discard for SSDs. Good general-purpose choice." />
+        <TermDefinition term="XFS" definition="A high-performance filesystem optimized for large files and parallel I/O. Excels at sequential workloads and scales well on multi-core systems. Often preferred for database and media storage." />
+        <TermDefinition term="Btrfs" definition="A copy-on-write (CoW) filesystem with built-in snapshots, compression, and RAID support. CoW writes create new copies instead of overwriting — similar to how SSDs do out-of-place writes internally." />
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           So far, we&apos;ve been talking about LBAs — numbered blocks on the SSD.

@@ -4,6 +4,8 @@ import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 const GENS = [
   { gen: "Gen 1", gts: 2.5, encoding: "8b/10b", year: 2003 },
@@ -242,6 +244,10 @@ export default function PCIe() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           How the SSD Connects to Your Computer — PCIe
         </h3>
+        <AnalogyCard concept="PCIe Is a Multi-Lane Highway" analogy="Each PCIe lane is like a lane on a highway. A x4 link means 4 lanes — data flows in both directions simultaneously. Link speed (GT/s) is the speed limit. The total bandwidth = lanes × speed limit × encoding efficiency." />
+        <TermDefinition term="PCIe (Peripheral Component Interconnect Express)" definition="A high-speed serial bus standard for connecting hardware devices (SSDs, GPUs, NICs) to the CPU. Data travels in 'lanes' — each lane is an independent bidirectional link." />
+        <TermDefinition term="GT/s (Gigatransfers per second)" definition="The raw signaling rate of a PCIe lane. Gen 3 = 8 GT/s, Gen 4 = 16 GT/s, Gen 5 = 32 GT/s. Actual usable bandwidth is lower due to encoding overhead (128b/130b for Gen 3+)." />
+        <TermDefinition term="TLP (Transaction Layer Packet)" definition="The basic unit of data transfer over PCIe. Every NVMe operation (doorbell ring, DMA transfer, interrupt) is carried inside a TLP." />
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           In earlier lessons we looked inside the SSD — its cells, pages, blocks, controller, and
           FTL. But how does the SSD actually talk to your computer&apos;s CPU and memory?

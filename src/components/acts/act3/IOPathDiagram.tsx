@@ -3,6 +3,8 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 const IO_LAYERS = [
   {
@@ -186,6 +188,16 @@ export default function IOPathDiagram() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           The Complete Journey &mdash; From read() to NAND and Back
         </h3>
+
+        <AnalogyCard
+          concept="The I/O Path Is a 10-Layer Relay Race"
+          analogy="A single 4KB read passes through 10 layers: application → syscall → VFS → filesystem → block layer → NVMe driver → PCIe bus → SSD controller → NAND flash → and back up. The NAND read itself takes ~50μs (about 87% of total latency). Everything else combined is just overhead."
+        />
+
+        <p className="text-text-secondary mb-2 leading-relaxed max-w-3xl">
+          <TermDefinition term="VFS (Virtual File System)" definition="A Linux kernel abstraction layer that provides a uniform interface for all filesystems (ext4, XFS, Btrfs, etc.). Applications call open/read/write, and VFS routes the request to the correct filesystem driver." />
+        </p>
+
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           Now that we understand all the protocol pieces — commands, queues,
           doorbells, completions — let&apos;s trace the <em className="text-text-primary">

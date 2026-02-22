@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import SectionWrapper from "@/components/story/SectionWrapper";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import { getAdminCommands } from "@/lib/nvme/decoder";
 
@@ -152,6 +154,15 @@ export default function AdminCommands() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Admin Commands &mdash; Managing the Drive
         </h3>
+
+        <AnalogyCard
+          concept="Admin Commands Are Management Controls"
+          analogy="Admin commands are like the control room operations of a building — creating queues, reading logs, updating firmware, checking health. They manage the SSD itself rather than reading/writing user data. Admin commands go through the Admin Submission Queue (ASQ), which is always queue pair 0."
+        />
+
+        <p className="text-text-secondary mb-2 leading-relaxed max-w-3xl">
+          <TermDefinition term="Admin Queue" definition="Queue pair 0 — the first and mandatory queue created during NVMe initialization. Used exclusively for management commands (Identify, Create I/O Queue, Get Log Page, etc.), not for data transfer." />
+        </p>
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           So far we&apos;ve seen the Identify command — the first question the driver

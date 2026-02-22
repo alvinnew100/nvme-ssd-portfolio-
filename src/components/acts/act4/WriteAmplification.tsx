@@ -3,6 +3,8 @@
 import { useState } from "react";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 export default function WriteAmplification() {
   const [hostWritesGB, setHostWritesGB] = useState(100);
@@ -22,6 +24,12 @@ export default function WriteAmplification() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Write Amplification &mdash; The Hidden Cost of Writing
         </h3>
+        <AnalogyCard
+          concept="Write Amplification Is Wasted Effort"
+          analogy="Imagine you want to change one sentence in a book, but you have to rewrite the entire chapter. That's write amplification — the SSD writes more data to NAND than the host actually requested. A WAF of 3.0 means for every 1 GB the host writes, the SSD internally writes 3 GB (due to GC copying valid pages, metadata updates, etc.)."
+        />
+
+        <TermDefinition term="WAF (Write Amplification Factor)" definition="The ratio of actual NAND writes to host-requested writes. WAF = NAND writes / Host writes. Ideal WAF is 1.0 (no amplification). Real-world WAF ranges from 1.1 (sequential, TRIM-enabled) to 10+ (random writes, full drive, no TRIM). Lower WAF means better endurance and performance." />
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           We just learned that garbage collection copies valid pages when reclaiming

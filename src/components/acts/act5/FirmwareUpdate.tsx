@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
+import AnalogyCard from "@/components/story/AnalogyCard";
+import TermDefinition from "@/components/story/TermDefinition";
 
 const COMMIT_ACTIONS = [
   {
@@ -145,6 +147,9 @@ export default function FirmwareUpdate() {
         <h3 className="text-2xl font-bold text-text-primary mb-4">
           Firmware Updates &mdash; Upgrading the SSD&apos;s Brain
         </h3>
+
+        <AnalogyCard concept="Firmware Updates Are Brain Surgery" analogy="Updating SSD firmware is like updating the operating system on a computer — the SSD's controller has its own software (firmware) that manages all operations. Firmware updates can fix bugs, improve performance, or add features. But a failed update can brick the drive, so most SSDs support dual-bank firmware (two copies) for safe rollback." />
+        <TermDefinition term="Firmware" definition="The software that runs on the SSD controller's embedded processor. Manages the FTL, error correction, wear leveling, command processing, and all other SSD operations. Stored in a dedicated NAND region and loaded into controller SRAM at boot." />
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           Remember the <strong className="text-text-primary">SSD controller</strong> from

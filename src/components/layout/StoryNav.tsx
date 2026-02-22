@@ -11,82 +11,89 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
+  // Primer: Foundations
+  { id: "lesson-0", label: "Primer", isLesson: true, lessonNum: 0, lessonIndex: 0 },
+  { id: "sec-storage", label: "What Is Storage", lessonIndex: 0 },
+  { id: "sec-bus", label: "What Is a Bus", lessonIndex: 0 },
+  { id: "sec-data-flow", label: "How Data Flows", lessonIndex: 0 },
+  { id: "sec-transistor", label: "Transistors", lessonIndex: 0 },
+
   // Lesson 1: Bits, Bytes, and Addressing
-  { id: "lesson-1", label: "Bits & Addressing", isLesson: true, lessonNum: 1, lessonIndex: 0 },
-  { id: "sec-binary", label: "Binary", lessonIndex: 0 },
-  { id: "sec-lba", label: "LBA", lessonIndex: 0 },
+  { id: "lesson-1", label: "Bits & Addressing", isLesson: true, lessonNum: 1, lessonIndex: 1 },
+  { id: "sec-binary", label: "Binary", lessonIndex: 1 },
+  { id: "sec-lba", label: "LBA", lessonIndex: 1 },
 
   // Lesson 2: NAND Flash Memory
-  { id: "lesson-2", label: "NAND Flash", isLesson: true, lessonNum: 2, lessonIndex: 1 },
-  { id: "sec-nand", label: "NAND Cells", lessonIndex: 1 },
-  { id: "sec-nand-hierarchy", label: "NAND Hierarchy", lessonIndex: 1 },
+  { id: "lesson-2", label: "NAND Flash", isLesson: true, lessonNum: 2, lessonIndex: 2 },
+  { id: "sec-nand", label: "NAND Cells", lessonIndex: 2 },
+  { id: "sec-nand-hierarchy", label: "NAND Hierarchy", lessonIndex: 2 },
 
   // Lesson 3: SSD Architecture and FTL
-  { id: "lesson-3", label: "SSD & FTL", isLesson: true, lessonNum: 3, lessonIndex: 2 },
-  { id: "sec-ssd", label: "SSD Overview", lessonIndex: 2 },
-  { id: "sec-ftl", label: "FTL", lessonIndex: 2 },
+  { id: "lesson-3", label: "SSD & FTL", isLesson: true, lessonNum: 3, lessonIndex: 3 },
+  { id: "sec-ssd", label: "SSD Overview", lessonIndex: 3 },
+  { id: "sec-ftl", label: "FTL", lessonIndex: 3 },
 
   // Lesson 4: SSD Internals — Block Management
-  { id: "lesson-4", label: "SSD Internals", isLesson: true, lessonNum: 4, lessonIndex: 3 },
-  { id: "sec-vpc", label: "VPC & Blocks", lessonIndex: 3 },
+  { id: "lesson-4", label: "SSD Internals", isLesson: true, lessonNum: 4, lessonIndex: 4 },
+  { id: "sec-vpc", label: "VPC & Blocks", lessonIndex: 4 },
 
   // Lesson 5: PCIe — The Highway
-  { id: "lesson-5", label: "PCIe", isLesson: true, lessonNum: 5, lessonIndex: 4 },
-  { id: "sec-pcie", label: "PCIe", lessonIndex: 4 },
+  { id: "lesson-5", label: "PCIe", isLesson: true, lessonNum: 5, lessonIndex: 5 },
+  { id: "sec-pcie", label: "PCIe", lessonIndex: 5 },
 
   // Lesson 6: BAR0, Queues, and Doorbells
-  { id: "lesson-6", label: "BAR0 & Queues", isLesson: true, lessonNum: 6, lessonIndex: 5 },
-  { id: "sec-bar0", label: "BAR0 Registers", lessonIndex: 5 },
-  { id: "sec-queues", label: "Queues", lessonIndex: 5 },
-  { id: "sec-doorbells", label: "Doorbells", lessonIndex: 5 },
+  { id: "lesson-6", label: "BAR0 & Queues", isLesson: true, lessonNum: 6, lessonIndex: 6 },
+  { id: "sec-bar0", label: "BAR0 Registers", lessonIndex: 6 },
+  { id: "sec-queues", label: "Queues", lessonIndex: 6 },
+  { id: "sec-doorbells", label: "Doorbells", lessonIndex: 6 },
 
   // Lesson 7: Boot Sequence and Bus Trace
-  { id: "lesson-7", label: "Boot & Bus Trace", isLesson: true, lessonNum: 7, lessonIndex: 6 },
-  { id: "sec-boot", label: "Boot Sequence", lessonIndex: 6 },
-  { id: "sec-bus-trace", label: "Bus Trace", lessonIndex: 6 },
+  { id: "lesson-7", label: "Boot & Bus Trace", isLesson: true, lessonNum: 7, lessonIndex: 7 },
+  { id: "sec-boot", label: "Boot Sequence", lessonIndex: 7 },
+  { id: "sec-bus-trace", label: "Bus Trace", lessonIndex: 7 },
 
   // Lesson 8: Command Structure
-  { id: "lesson-8", label: "Command Structure", isLesson: true, lessonNum: 8, lessonIndex: 7 },
-  { id: "sec-sqe", label: "SQE Structure", lessonIndex: 7 },
-  { id: "sec-identify", label: "Identify", lessonIndex: 7 },
-  { id: "sec-namespaces", label: "Namespaces", lessonIndex: 7 },
+  { id: "lesson-8", label: "Command Structure", isLesson: true, lessonNum: 8, lessonIndex: 8 },
+  { id: "sec-sqe", label: "SQE Structure", lessonIndex: 8 },
+  { id: "sec-identify", label: "Identify", lessonIndex: 8 },
+  { id: "sec-namespaces", label: "Namespaces", lessonIndex: 8 },
 
   // Lesson 9: NVMe Commands
-  { id: "lesson-9", label: "NVMe Commands", isLesson: true, lessonNum: 9, lessonIndex: 8 },
-  { id: "sec-admin-cmds", label: "Admin Cmds", lessonIndex: 8 },
-  { id: "sec-io-cmds", label: "I/O Cmds", lessonIndex: 8 },
+  { id: "lesson-9", label: "NVMe Commands", isLesson: true, lessonNum: 9, lessonIndex: 9 },
+  { id: "sec-admin-cmds", label: "Admin Cmds", lessonIndex: 9 },
+  { id: "sec-io-cmds", label: "I/O Cmds", lessonIndex: 9 },
 
   // Lesson 10: Error Handling and I/O Path
-  { id: "lesson-10", label: "Errors & I/O Path", isLesson: true, lessonNum: 10, lessonIndex: 9 },
-  { id: "sec-errors", label: "Errors", lessonIndex: 9 },
-  { id: "sec-io-path", label: "I/O Path", lessonIndex: 9 },
+  { id: "lesson-10", label: "Errors & I/O Path", isLesson: true, lessonNum: 10, lessonIndex: 10 },
+  { id: "sec-errors", label: "Errors", lessonIndex: 10 },
+  { id: "sec-io-path", label: "I/O Path", lessonIndex: 10 },
 
   // Lesson 11: SMART, TRIM, and Drive Health
-  { id: "lesson-11", label: "Drive Health", isLesson: true, lessonNum: 11, lessonIndex: 10 },
-  { id: "sec-smart", label: "SMART", lessonIndex: 10 },
-  { id: "sec-trim", label: "TRIM & GC", lessonIndex: 10 },
-  { id: "sec-waf", label: "Write Amplification", lessonIndex: 10 },
-  { id: "sec-format-sanitize", label: "Format & Sanitize", lessonIndex: 10 },
-  { id: "sec-wear", label: "Wear Leveling", lessonIndex: 10 },
+  { id: "lesson-11", label: "Drive Health", isLesson: true, lessonNum: 11, lessonIndex: 11 },
+  { id: "sec-smart", label: "SMART", lessonIndex: 11 },
+  { id: "sec-trim", label: "TRIM & GC", lessonIndex: 11 },
+  { id: "sec-waf", label: "Write Amplification", lessonIndex: 11 },
+  { id: "sec-format-sanitize", label: "Format & Sanitize", lessonIndex: 11 },
+  { id: "sec-wear", label: "Wear Leveling", lessonIndex: 11 },
 
   // Lesson 12: Storage Stack and Testing
-  { id: "lesson-12", label: "Storage & Testing", isLesson: true, lessonNum: 12, lessonIndex: 11 },
-  { id: "sec-filesystems", label: "Filesystems", lessonIndex: 11 },
-  { id: "sec-fio", label: "fio Guide", lessonIndex: 11 },
-  { id: "sec-testing", label: "Testing", lessonIndex: 11 },
+  { id: "lesson-12", label: "Storage & Testing", isLesson: true, lessonNum: 12, lessonIndex: 12 },
+  { id: "sec-filesystems", label: "Filesystems", lessonIndex: 12 },
+  { id: "sec-fio", label: "fio Guide", lessonIndex: 12 },
+  { id: "sec-testing", label: "Testing", lessonIndex: 12 },
 
   // Lesson 13: Advanced Features and Tools
-  { id: "lesson-13", label: "Advanced & Tools", isLesson: true, lessonNum: 13, lessonIndex: 12 },
-  { id: "sec-firmware", label: "Firmware", lessonIndex: 12 },
-  { id: "sec-security", label: "Security", lessonIndex: 12 },
-  { id: "sec-passthru", label: "Passthru", lessonIndex: 12 },
-  { id: "sec-tracing", label: "Tracing", lessonIndex: 12 },
-  { id: "sec-command-ref", label: "Command Ref", lessonIndex: 12 },
-  { id: "sec-playground", label: "Playground", lessonIndex: 12 },
+  { id: "lesson-13", label: "Advanced & Tools", isLesson: true, lessonNum: 13, lessonIndex: 13 },
+  { id: "sec-firmware", label: "Firmware", lessonIndex: 13 },
+  { id: "sec-security", label: "Security", lessonIndex: 13 },
+  { id: "sec-passthru", label: "Passthru", lessonIndex: 13 },
+  { id: "sec-tracing", label: "Tracing", lessonIndex: 13 },
+  { id: "sec-command-ref", label: "Command Ref", lessonIndex: 13 },
+  { id: "sec-playground", label: "Playground", lessonIndex: 13 },
 ];
 
 export default function StoryNav() {
-  const [activeId, setActiveId] = useState("lesson-1");
+  const [activeId, setActiveId] = useState("lesson-0");
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const activeItem = NAV_ITEMS.find((n) => n.id === activeId);
@@ -157,7 +164,7 @@ export default function StoryNav() {
                     }`}
                   />
                   <span className="text-[11px] font-semibold truncate">
-                    {item.lessonNum}. {item.label}
+                    {item.lessonNum === 0 ? item.label : `${item.lessonNum}. ${item.label}`}
                   </span>
                 </button>
               );
@@ -200,7 +207,7 @@ export default function StoryNav() {
           onClick={() => setMobileOpen(!mobileOpen)}
           className="absolute bottom-4 right-4 bg-story-card border border-story-border rounded-full px-4 py-2 text-xs text-text-secondary font-mono shadow-lg shadow-black/5"
         >
-          Lesson {activeLessonIndex + 1} / {totalLessons}
+          {activeLessonIndex === 0 ? "Primer" : `Lesson ${activeLessonIndex}`} / {totalLessons}
         </button>
       </div>
 
@@ -230,7 +237,11 @@ export default function StoryNav() {
                       }`
                 }`}
               >
-                {item.isLesson ? `${item.lessonNum}. ${item.label}` : item.label}
+                {item.isLesson
+                  ? item.lessonNum === 0
+                    ? item.label
+                    : `${item.lessonNum}. ${item.label}`
+                  : item.label}
               </button>
             ))}
           </div>
