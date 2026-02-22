@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import QuizCard from "@/components/story/QuizCard";
 
 /* ─── Block Types Diagram — Interactive ─── */
 type BlockType = "source" | "dynamic" | "static" | "spare" | "dynamicSpare" | "staticSpare";
@@ -223,92 +224,6 @@ function VpcDiagram() {
   );
 }
 
-/* ─── Queue Depth Diagram ─── */
-function QueueDepthDiagram() {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true });
-
-  const depths = [
-    { qd: 1, iops: 15000, latency: "70\u03BCs", pct: 6 },
-    { qd: 4, iops: 55000, latency: "73\u03BCs", pct: 22 },
-    { qd: 8, iops: 100000, latency: "80\u03BCs", pct: 40 },
-    { qd: 16, iops: 160000, latency: "100\u03BCs", pct: 64 },
-    { qd: 32, iops: 220000, latency: "145\u03BCs", pct: 88 },
-    { qd: 64, iops: 250000, latency: "256\u03BCs", pct: 100 },
-  ];
-
-  return (
-    <div ref={ref} className="bg-story-card rounded-2xl p-6 card-shadow mb-6">
-      <div className="text-text-muted text-xs font-mono mb-2 uppercase tracking-wider">
-        Queue Depth — Filling the Pipeline
-      </div>
-      <p className="text-text-secondary text-xs mb-4 leading-relaxed">
-        <strong className="text-text-primary">Queue Depth (QD)</strong> is how many commands are
-        in-flight simultaneously — submitted to the SSD but not yet completed. A single
-        NVMe submission queue can hold up to 65,535 entries. Higher QD lets the SSD&apos;s
-        controller keep all its NAND dies busy in parallel.
-      </p>
-
-      <div className="space-y-2 mb-4">
-        {depths.map((d, i) => (
-          <motion.div
-            key={d.qd}
-            className="flex items-center gap-3"
-            initial={{ opacity: 0, x: -10 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ delay: i * 0.08, duration: 0.3 }}
-          >
-            <div className="text-[10px] font-mono text-text-muted w-10 text-right flex-shrink-0">QD{d.qd}</div>
-            <div className="flex-1 flex items-center gap-2">
-              <motion.div
-                className="h-5 rounded flex items-center justify-end pr-2"
-                style={{
-                  backgroundColor: `${i < 3 ? "#00d4aa" : i < 5 ? "#f5a623" : "#e05d6f"}20`,
-                  borderLeft: `3px solid ${i < 3 ? "#00d4aa" : i < 5 ? "#f5a623" : "#e05d6f"}`,
-                }}
-                initial={{ width: 0 }}
-                animate={inView ? { width: `${d.pct}%` } : {}}
-                transition={{ delay: i * 0.08 + 0.15, duration: 0.5, ease: "easeOut" }}
-              >
-                <span className="text-[8px] font-mono font-bold text-text-primary whitespace-nowrap">
-                  {(d.iops / 1000).toFixed(0)}K IOPS
-                </span>
-              </motion.div>
-              <span className="text-[8px] font-mono text-text-muted flex-shrink-0">{d.latency} avg</span>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
-        <div className="bg-story-surface rounded-lg p-3">
-          <div className="text-nvme-green font-mono font-bold text-[10px] mb-1">QD1 — Single Command</div>
-          <p className="text-text-muted text-[10px] leading-relaxed">
-            Only 1 command in-flight. The CPU waits idle while the SSD reads NAND.
-            Most NAND dies are idle. Measures <em>pure latency</em> but wastes bandwidth.
-          </p>
-        </div>
-        <div className="bg-story-surface rounded-lg p-3">
-          <div className="text-nvme-amber font-mono font-bold text-[10px] mb-1">QD16-32 — Sweet Spot</div>
-          <p className="text-text-muted text-[10px] leading-relaxed">
-            Enough commands to keep most NAND dies busy. Latency increases slightly
-            but IOPS scales dramatically. This is the typical operating range for
-            high-performance storage workloads.
-          </p>
-        </div>
-        <div className="bg-story-surface rounded-lg p-3">
-          <div className="text-nvme-red font-mono font-bold text-[10px] mb-1">QD64+ — Diminishing Returns</div>
-          <p className="text-text-muted text-[10px] leading-relaxed">
-            All dies are saturated — adding more commands just increases queue wait
-            time. Latency climbs steeply while IOPS barely improves. The SSD is at
-            maximum throughput.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 /* ─── GC Block Lifecycle Flow ─── */
 function GcBlockLifecycle() {
   const ref = useRef(null);
@@ -380,12 +295,12 @@ function GcBlockLifecycle() {
 }
 
 /* ─── Main Component ─── */
-export default function SsdInternals() {
+export default function BlockManagement() {
   return (
     <SectionWrapper className="py-24 px-4">
       <div className="max-w-4xl mx-auto">
         <h3 className="text-2xl font-bold text-text-primary mb-4">
-          SSD Internals — Block Types, VPC, and Queue Depth
+          Block Management — VPC, Block Types, and GC
         </h3>
         <AnalogyCard
           concept="Block Management Is Like a Parking Garage"
@@ -393,8 +308,6 @@ export default function SsdInternals() {
         />
 
         <TermDefinition term="VPC (Valid Page Count)" definition="The number of pages in a NAND block that still contain current, referenced data. Lower VPC means fewer valid pages to copy during garbage collection, making that block a more efficient candidate for reclamation." />
-
-        <TermDefinition term="IOPS (I/O Operations Per Second)" definition="A measure of how many read or write operations a storage device can complete per second. Higher queue depth generally increases IOPS by keeping more NAND dies busy in parallel." />
 
         <p className="text-text-secondary mb-4 leading-relaxed max-w-3xl">
           The controller&apos;s FTL firmware manages thousands of NAND blocks. To understand
@@ -412,17 +325,9 @@ export default function SsdInternals() {
           and write amplification.
         </p>
 
-        {/* VPC Diagram */}
         <VpcDiagram />
-
-        {/* Block Types */}
         <BlockTypeDiagram />
-
-        {/* GC Block Lifecycle */}
         <GcBlockLifecycle />
-
-        {/* Queue Depth */}
-        <QueueDepthDiagram />
 
         {/* Connection card */}
         <div className="bg-story-card rounded-2xl p-6 card-shadow">
@@ -451,17 +356,19 @@ export default function SsdInternals() {
                 <em className="text-text-secondary"> See Lesson 11: Wear Leveling for details.</em>
               </span>
             </div>
-            <div className="flex items-start gap-2 bg-story-surface rounded-lg p-3">
-              <div className="w-2 h-2 rounded-full bg-nvme-amber flex-shrink-0 mt-1" />
-              <span className="text-text-muted">
-                <strong className="text-text-primary">Queue depth</strong> determines how
-                well the controller can parallelize work across NAND dies. Higher QD =
-                more parallelism = higher IOPS, but also higher latency.
-                <em className="text-text-secondary"> See Lesson 6: Queues for how SQ/CQ enable this.</em>
-              </span>
-            </div>
           </div>
         </div>
+
+        <QuizCard
+          id="act1-block-quiz1"
+          question="How does the garbage collector decide which block to erase first?"
+          options={[
+            { text: "Oldest block (highest erase count)", explanation: "Erase count affects wear leveling decisions, not GC source block selection." },
+            { text: "Block with the lowest VPC (fewest valid pages)", correct: true, explanation: "Correct! The GC engine picks the block with the lowest Valid Page Count because it requires copying the fewest valid pages — minimizing write amplification. Fewer copies = less wear = faster reclamation." },
+            { text: "Random selection", explanation: "Random selection would be highly inefficient. The GC is optimized to minimize writes." },
+            { text: "Block with the most free pages", explanation: "Free pages within a block can't be individually reclaimed — the entire block must be erased. VPC tells us how many valid pages need copying." },
+          ]}
+        />
       </div>
     </SectionWrapper>
   );

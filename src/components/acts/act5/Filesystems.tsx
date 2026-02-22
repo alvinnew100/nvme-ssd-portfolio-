@@ -7,6 +7,7 @@ import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import KnowledgeCheck from "@/components/story/KnowledgeCheck";
 
 interface Filesystem {
   name: string;
@@ -510,6 +511,14 @@ export default function Filesystems() {
           twice — once by Btrfs and once by the FTL. This can increase write
           amplification but also improves crash consistency.
         </InfoCard>
+
+        <KnowledgeCheck
+          id="act5-fs-kc1"
+          question="What is the most common Linux filesystem for NVMe SSDs?"
+          options={["ext4", "NTFS"]}
+          correctIndex={0}
+          explanation="ext4 is the default and most widely-used Linux filesystem. It supports TRIM/discard, has mature tooling, and works well with NVMe SSDs. NTFS is a Windows filesystem."
+        />
 
       </div>
     </SectionWrapper>

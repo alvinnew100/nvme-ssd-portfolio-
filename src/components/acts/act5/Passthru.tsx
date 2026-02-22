@@ -8,6 +8,7 @@ import CodeBlock from "@/components/story/CodeBlock";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import KnowledgeCheck from "@/components/story/KnowledgeCheck";
 
 /* ─── Helpers ─── */
 const HEX_DIGITS = "0123456789ABCDEF";
@@ -1216,6 +1217,14 @@ nvme admin-passthru /dev/nvme0 \\
           <strong>Sending incorrect passthru commands can cause unexpected behavior or
           brick a drive.</strong> Only send commands when you know exactly what they do.
         </InfoCard>
+
+        <KnowledgeCheck
+          id="act5-passthru-kc1"
+          question="What are NVMe passthru commands primarily used for?"
+          options={["Vendor-specific operations", "Standard read/write"]}
+          correctIndex={0}
+          explanation="Passthru allows sending raw NVMe commands directly to the drive, bypassing normal OS abstractions. This is primarily used for vendor-specific diagnostic commands, firmware-level debugging, and operations not covered by the standard NVMe command set."
+        />
       </div>
     </SectionWrapper>
   );

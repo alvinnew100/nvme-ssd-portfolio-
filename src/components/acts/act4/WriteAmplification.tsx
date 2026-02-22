@@ -5,6 +5,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import FillInBlank from "@/components/story/FillInBlank";
 
 export default function WriteAmplification() {
   const [hostWritesGB, setHostWritesGB] = useState(100);
@@ -223,6 +224,13 @@ export default function WriteAmplification() {
           host writes. Run <code className="text-text-code">nvme smart-log /dev/nvme0
           </code> and note the values before and after.
         </InfoCard>
+
+        <FillInBlank
+          id="act4-waf-fill1"
+          prompt="If the host writes 100 GB but the SSD writes 300 GB to NAND, the WAF is {blank}."
+          blanks={[{ answer: "3", tolerance: 0, placeholder: "?" }]}
+          explanation="WAF (Write Amplification Factor) = NAND writes / Host writes = 300 / 100 = 3. A WAF of 3 means for every 1 GB the host writes, the SSD internally writes 3 GB due to GC copying valid pages."
+        />
       </div>
     </SectionWrapper>
   );

@@ -6,6 +6,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import KnowledgeCheck from "@/components/story/KnowledgeCheck";
 
 const SMART_FIELDS = [
   { name: "Critical Warning", value: "0x00", status: "ok" as const, explain: "A bitmask of critical warnings. 0 means nothing is wrong. If any bit is set, it means: spare capacity low (bit 0), temperature exceeded (bit 1), reliability degraded (bit 2), read-only mode (bit 3), or backup device failed (bit 4)." },
@@ -139,6 +140,14 @@ export default function SMART() {
             </div>
           </div>
         </div>
+
+        <KnowledgeCheck
+          id="act4-smart-kc1"
+          question="Which SMART field tracks how much of the drive's lifespan has been used?"
+          options={["Percentage Used", "Data Units Written"]}
+          correctIndex={0}
+          explanation="Percentage Used estimates the drive's consumed lifespan based on actual usage vs. rated endurance. 100% means the drive has reached its rated endurance (but may still function). Data Units Written just counts total writes without comparing to rated limits."
+        />
       </div>
     </SectionWrapper>
   );

@@ -7,6 +7,8 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import QuizCard from "@/components/story/QuizCard";
+import FillInBlank from "@/components/story/FillInBlank";
 
 const DATA_SCALE = [
   { name: "1 bit", detail: "0 or 1", w: 1.5 },
@@ -204,6 +206,25 @@ export default function Binary() {
 
         {/* Data scale ladder */}
         <DataScaleLadder />
+
+        <QuizCard
+          id="act1-binary-quiz1"
+          question="What is the decimal value of binary 10110010?"
+          options={[
+            { text: "162", explanation: "Check your bit weights again: 128+32+16+2 = 178." },
+            { text: "178", correct: true, explanation: "Correct! 10110010 = 128+32+16+2 = 178. Each '1' bit adds its positional weight (128, 64, 32, 16, 8, 4, 2, 1)." },
+            { text: "194", explanation: "That's not right. Try adding the weights: bit 7 (128) + bit 5 (32) + bit 4 (16) + bit 1 (2)." },
+            { text: "210", explanation: "Too high. Remember the bits from left to right are: 128, 64, 32, 16, 8, 4, 2, 1." },
+          ]}
+          hint="The bit positions from left to right have weights: 128, 64, 32, 16, 8, 4, 2, 1. Add up the weights where the bit is 1."
+        />
+
+        <FillInBlank
+          id="act1-binary-fill1"
+          prompt="1 KB equals {blank} bytes."
+          blanks={[{ answer: "1024", placeholder: "?" }]}
+          explanation="1 KB = 2^10 = 1,024 bytes. Computer memory uses powers of 2, not powers of 10."
+        />
       </div>
     </SectionWrapper>
   );

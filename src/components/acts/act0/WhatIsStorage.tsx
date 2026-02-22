@@ -4,6 +4,8 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
+import KnowledgeCheck from "@/components/story/KnowledgeCheck";
+import DragSortChallenge from "@/components/story/DragSortChallenge";
 
 function StorageHierarchyDiagram() {
   const ref = useRef<HTMLDivElement>(null);
@@ -97,10 +99,32 @@ export default function WhatIsStorage() {
           (thousands of times faster than HDDs for random access), have no moving parts, and are
           energy-efficient.
         </p>
-        <p className="text-text-secondary leading-relaxed">
+        <p className="text-text-secondary leading-relaxed mb-6">
           But before we dive into how SSDs work, we need to understand the highway they use to talk
           to the rest of the computer — the <strong className="text-text-primary">bus</strong>.
         </p>
+
+        <KnowledgeCheck
+          id="act0-storage-kc1"
+          question="Which is faster: RAM or an SSD?"
+          options={["RAM", "SSD"]}
+          correctIndex={0}
+          explanation="RAM (DRAM) has access times of 50-100 nanoseconds, while SSDs take 10-100 microseconds — about 1,000x slower. That's why RAM is used for active data and SSDs for persistent storage."
+        />
+
+        <DragSortChallenge
+          id="act0-storage-drag1"
+          prompt="Order these storage types from fastest to slowest:"
+          items={[
+            { id: "registers", label: "CPU Registers", detail: "< 1 ns" },
+            { id: "cache", label: "L1/L2/L3 Cache", detail: "1-10 ns" },
+            { id: "ram", label: "RAM (DRAM)", detail: "50-100 ns" },
+            { id: "ssd", label: "SSD (NAND Flash)", detail: "10-100 \u00B5s" },
+            { id: "hdd", label: "Hard Disk (HDD)", detail: "5-10 ms" },
+          ]}
+          correctOrder={["registers", "cache", "ram", "ssd", "hdd"]}
+          hint="Think of the storage hierarchy pyramid — faster and smaller at the top, slower and bigger at the bottom."
+        />
       </div>
     </SectionWrapper>
   );

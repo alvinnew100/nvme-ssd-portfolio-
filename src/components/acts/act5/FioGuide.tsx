@@ -6,6 +6,7 @@ import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import KnowledgeCheck from "@/components/story/KnowledgeCheck";
 
 const FIO_OPTIONS: {
   name: string;
@@ -629,6 +630,14 @@ numjobs=2`}
           safe testing, use a file path (<code className="text-text-code">--filename=/tmp/fio.dat</code>)
           instead — slightly less accurate but won&apos;t destroy your data.
         </InfoCard>
+
+        <KnowledgeCheck
+          id="act5-fio-kc1"
+          question="Which fio parameter controls queue depth?"
+          options={["--iodepth", "--bs"]}
+          correctIndex={0}
+          explanation="--iodepth sets how many I/O operations fio keeps in-flight simultaneously (queue depth). --bs sets the block size (e.g., 4k, 128k) for each I/O operation."
+        />
       </div>
     </SectionWrapper>
   );

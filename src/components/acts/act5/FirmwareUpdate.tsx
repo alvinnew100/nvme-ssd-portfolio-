@@ -7,6 +7,7 @@ import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import KnowledgeCheck from "@/components/story/KnowledgeCheck";
 
 const COMMIT_ACTIONS = [
   {
@@ -575,6 +576,14 @@ export default function FirmwareUpdate() {
           often have dual-boot firmware so they can always fall back. Always ensure
           stable power during updates, and never overwrite your only working firmware slot.
         </InfoCard>
+
+        <KnowledgeCheck
+          id="act5-fw-kc1"
+          question="Do firmware updates typically preserve user data?"
+          options={["Yes", "No"]}
+          correctIndex={0}
+          explanation="Most firmware updates preserve user data — they only update the controller's firmware code, not the NAND contents. However, it's always recommended to back up data before firmware updates as a precaution, since a failed update could brick the drive."
+        />
       </div>
     </SectionWrapper>
   );

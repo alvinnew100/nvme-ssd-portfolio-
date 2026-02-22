@@ -6,6 +6,8 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import QuizCard from "@/components/story/QuizCard";
+import FillInBlank from "@/components/story/FillInBlank";
 
 const BLOCK_COUNT = 24;
 
@@ -269,6 +271,24 @@ export default function LBA() {
           sectors avoids this entirely. You can check what your drive supports (and
           switch) using <code className="text-text-code">nvme id-ns</code>.
         </InfoCard>
+
+        <QuizCard
+          id="act1-lba-quiz1"
+          question="Why does the OS use logical addresses (LBAs) instead of physical NAND addresses?"
+          options={[
+            { text: "Physical addresses are too long to store", explanation: "Address length isn't the main reason. LBAs can be just as long." },
+            { text: "The SSD moves data internally, so physical addresses would break", correct: true, explanation: "Correct! The SSD constantly moves data for wear leveling, garbage collection, and error recovery. If the OS used physical addresses, every internal move would break the OS's references. LBAs provide a stable abstraction." },
+            { text: "LBAs are faster to compute", explanation: "Speed of address computation isn't the issue. The key is that physical locations change." },
+            { text: "Physical addresses don't exist on SSDs", explanation: "Physical addresses do exist — the SSD's internal firmware uses them. They're just hidden from the OS." },
+          ]}
+        />
+
+        <FillInBlank
+          id="act1-lba-fill1"
+          prompt="A 1 TB drive with 512-byte LBAs has approximately {blank} billion LBAs."
+          blanks={[{ answer: "1.95", tolerance: 0.1, placeholder: "?" }]}
+          explanation="1 TB = 1,000,000,000,000 bytes. Divided by 512 bytes per LBA = ~1,953,125,000 LBAs, or approximately 1.95 billion."
+        />
       </div>
     </SectionWrapper>
   );

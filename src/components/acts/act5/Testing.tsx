@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
+import KnowledgeCheck from "@/components/story/KnowledgeCheck";
 
 const TEST_LEVELS = [
   { label: "Compliance", desc: "Does the drive follow the NVMe spec? Correct error codes, proper behavior for edge cases, all mandatory commands work.", color: "#ed5f74", w: "160px" },
@@ -108,6 +109,14 @@ export default function Testing() {
           before measuring production-representative performance. The SNIA PTS
           (Performance Test Specification) defines standard preconditioning procedures.
         </InfoCard>
+
+        <KnowledgeCheck
+          id="act5-testing-kc1"
+          question="What does steady-state testing measure?"
+          options={["Performance after GC stabilizes", "Maximum burst speed"]}
+          correctIndex={0}
+          explanation="Steady-state testing measures performance after the SSD has filled up and garbage collection is continuously running. This reflects real-world sustained performance, unlike burst benchmarks that only test fresh/empty drive performance."
+        />
       </div>
     </SectionWrapper>
   );

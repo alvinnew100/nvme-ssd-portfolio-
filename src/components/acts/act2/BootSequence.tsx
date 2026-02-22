@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
+import DragSortChallenge from "@/components/story/DragSortChallenge";
 
 const BOOT_STEPS = [
   {
@@ -314,6 +315,21 @@ export default function BootSequence() {
             drives from Samsung, WD, Intel, or any other manufacturer.
           </p>
         </div>
+
+        <DragSortChallenge
+          id="act2-boot-drag1"
+          prompt="Order the NVMe boot sequence steps:"
+          items={[
+            { id: "enum", label: "PCIe Enumeration", detail: "BIOS/UEFI discovers the device" },
+            { id: "bar", label: "BAR0 Assignment", detail: "Map registers to memory addresses" },
+            { id: "admin", label: "Create Admin Queues", detail: "Set up AQA, ASQ, ACQ registers" },
+            { id: "enable", label: "Enable Controller", detail: "Set CC.EN = 1, wait for CSTS.RDY" },
+            { id: "identify", label: "Identify Controller", detail: "Query device capabilities" },
+            { id: "ioq", label: "Create I/O Queues", detail: "Set up submission/completion queue pairs" },
+          ]}
+          correctOrder={["enum", "bar", "admin", "enable", "identify", "ioq"]}
+          hint="Think about what the host needs to set up before it can send any NVMe commands."
+        />
       </div>
     </SectionWrapper>
   );

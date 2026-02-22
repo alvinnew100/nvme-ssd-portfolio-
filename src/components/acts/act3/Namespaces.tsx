@@ -7,6 +7,7 @@ import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
+import QuizCard from "@/components/story/QuizCard";
 
 function NamespaceDiagram() {
   const ref = useRef(null);
@@ -145,6 +146,17 @@ export default function Namespaces() {
           <code className="text-text-code">Namespace Management</code> (opcode 0x0D) and{" "}
           <code className="text-text-code">Namespace Attachment</code> (opcode 0x15).
         </InfoCard>
+
+        <QuizCard
+          id="act3-ns-quiz1"
+          question="An NVMe namespace is most similar to which concept?"
+          options={[
+            { text: "A hard drive partition", correct: true, explanation: "Correct! Like partitions, namespaces divide a drive's storage into independent logical units. Each namespace has its own LBA range, can have different block sizes, and can be independently formatted." },
+            { text: "A RAID array", explanation: "RAID combines multiple drives. A namespace is a logical division within a single drive." },
+            { text: "A filesystem", explanation: "Filesystems (ext4, NTFS) organize files on top of namespaces/partitions. Namespaces are lower-level." },
+            { text: "A PCIe lane", explanation: "PCIe lanes are physical data paths. Namespaces are logical storage divisions." },
+          ]}
+        />
       </div>
     </SectionWrapper>
   );

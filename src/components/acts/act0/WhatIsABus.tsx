@@ -4,6 +4,8 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
+import FillInBlank from "@/components/story/FillInBlank";
+import KnowledgeCheck from "@/components/story/KnowledgeCheck";
 
 function BusDiagram() {
   const ref = useRef<HTMLDivElement>(null);
@@ -122,11 +124,26 @@ export default function WhatIsABus() {
           bus, and the bus delivers it. We&apos;ll learn the details of these packets (called TLPs —
           Transaction Layer Packets) in Lesson 5.
         </p>
-        <p className="text-text-secondary leading-relaxed">
+        <p className="text-text-secondary leading-relaxed mb-6">
           The key takeaway: <strong className="text-text-primary">the bus is the bottleneck</strong>. Old
           SATA SSDs were limited by the SATA bus (~600 MB/s). NVMe SSDs use PCIe and can reach
           7+ GB/s — over 10x faster — because PCIe has more lanes and faster per-lane speeds.
         </p>
+
+        <FillInBlank
+          id="act0-bus-fill1"
+          prompt="PCIe 4.0 x4 provides approximately {blank} GB/s of usable bandwidth."
+          blanks={[{ answer: "7", tolerance: 1, placeholder: "?" }]}
+          explanation="PCIe 4.0 runs at ~16 GT/s per lane. With 128b/130b encoding and 4 lanes, that's roughly 7.88 GB/s usable."
+        />
+
+        <KnowledgeCheck
+          id="act0-bus-kc1"
+          question="Adding more PCIe lanes increases the speed of each lane."
+          options={["True", "False"]}
+          correctIndex={1}
+          explanation="Each lane runs at the same speed (set by the PCIe generation). More lanes increase total bandwidth by adding parallel paths, not by making individual lanes faster."
+        />
       </div>
     </SectionWrapper>
   );

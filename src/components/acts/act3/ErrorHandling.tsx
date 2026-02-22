@@ -6,6 +6,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
 import InfoCard from "@/components/story/InfoCard";
+import QuizCard from "@/components/story/QuizCard";
 
 const STATUS_CODES = [
   { code: "0x0000", meaning: "Successful Completion", type: "Generic", hint: "Everything worked as expected" },
@@ -210,6 +211,17 @@ export default function ErrorHandling() {
           them and only completes one when something important happens — like a
           fire alarm that sits silent until there&apos;s smoke.
         </InfoCard>
+
+        <QuizCard
+          id="act3-errors-quiz1"
+          question="A completion entry has Status Code Type (SCT) = 0 and Status Code (SC) = 0. What does this mean?"
+          options={[
+            { text: "Successful completion", correct: true, explanation: "Correct! SCT=0 (Generic Command Status) with SC=0 means the command completed successfully. This is the most common completion status you'll see." },
+            { text: "Invalid opcode", explanation: "Invalid opcode would be SCT=0, SC=1. SC=0 means success." },
+            { text: "Namespace not ready", explanation: "Namespace Not Ready is a different status code. SCT=0/SC=0 is success." },
+            { text: "Internal device error", explanation: "Internal errors use different status codes. The all-zeros status means everything went fine." },
+          ]}
+        />
       </div>
     </SectionWrapper>
   );

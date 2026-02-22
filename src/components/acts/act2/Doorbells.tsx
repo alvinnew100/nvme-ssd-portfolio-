@@ -6,6 +6,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import KnowledgeCheck from "@/components/story/KnowledgeCheck";
 
 const DOORBELLS = [
   { offset: "0x1000", label: "Admin SQ Tail Doorbell", type: "sq" as const, qid: 0 },
@@ -181,6 +182,14 @@ export default function Doorbells() {
           periodically polls the RAM location. This eliminates the costly MMIO trap
           and improves VM performance significantly.
         </InfoCard>
+
+        <KnowledgeCheck
+          id="act2-doorbells-kc1"
+          question="Who rings the doorbell \u2014 the host CPU or the SSD controller?"
+          options={["Host CPU", "SSD Controller"]}
+          correctIndex={0}
+          explanation="The host CPU writes to the doorbell register (via MMIO) to notify the SSD controller that new commands have been placed in the submission queue. The controller then processes them."
+        />
       </div>
     </SectionWrapper>
   );

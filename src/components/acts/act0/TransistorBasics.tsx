@@ -4,6 +4,8 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
+import RevealCard from "@/components/story/RevealCard";
+import KnowledgeCheck from "@/components/story/KnowledgeCheck";
 
 function TransistorDiagram() {
   const ref = useRef<HTMLDivElement>(null);
@@ -188,11 +190,26 @@ export default function TransistorBasics() {
 
         <ScaleDiagram />
 
-        <p className="text-text-secondary leading-relaxed">
+        <p className="text-text-secondary leading-relaxed mb-6">
           Modern SSDs contain trillions of these transistor cells, organized into a precise hierarchy
           (pages, blocks, planes, dies) that we&apos;ll learn about next. Understanding that they&apos;re
           all just tiny charge-trapping switches is the key intuition.
         </p>
+
+        <RevealCard
+          id="act0-transistor-reveal1"
+          prompt="How many transistor cells does a modern 1TB SSD contain?"
+          answerPreview="A very large number..."
+          answer={<span>Approximately <strong className="text-nvme-amber">~8 trillion</strong> NAND cells. Each cell stores one or more bits, and a 1TB drive needs about 8 trillion bits (1 TB = 8 Tb). With multi-bit cells (TLC stores 3 bits per cell), the actual transistor count is around 2.7 trillion.</span>}
+        />
+
+        <KnowledgeCheck
+          id="act0-transistor-kc1"
+          question="What makes a NAND cell different from a regular transistor?"
+          options={["Floating gate that traps charge", "It uses more power"]}
+          correctIndex={0}
+          explanation="A NAND cell has a floating gate — an extra insulated layer that traps electrons even without power. Regular transistors forget their state immediately when voltage is removed."
+        />
       </div>
     </SectionWrapper>
   );

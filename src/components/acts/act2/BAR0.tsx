@@ -6,6 +6,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import KnowledgeCheck from "@/components/story/KnowledgeCheck";
 
 const REGISTERS = [
   { offset: "0x00", name: "CAP", size: "8B", desc: "Controller Capabilities — how many queue entries the drive supports, timing limits, and doorbell spacing", color: "#635bff" },
@@ -259,6 +260,14 @@ export default function BAR0() {
           &times; 4 = ~0x1200 bytes total. The BIOS allocates enough space for
           the maximum the drive supports.
         </InfoCard>
+
+        <KnowledgeCheck
+          id="act2-bar0-kc1"
+          question="Is BAR0 accessed via special I/O ports?"
+          options={["True", "False"]}
+          correctIndex={1}
+          explanation="BAR0 uses Memory-Mapped I/O (MMIO), not I/O ports. The SSD's registers are mapped to normal memory addresses so the CPU reads/writes them as if they were RAM."
+        />
       </div>
     </SectionWrapper>
   );

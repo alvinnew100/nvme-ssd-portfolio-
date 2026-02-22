@@ -8,6 +8,7 @@ import TermDefinition from "@/components/story/TermDefinition";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import TerminalBlock from "@/components/story/TerminalBlock";
 import InfoCard from "@/components/story/InfoCard";
+import KnowledgeCheck from "@/components/story/KnowledgeCheck";
 
 function IdentifyCard() {
   const ref = useRef(null);
@@ -155,6 +156,14 @@ export default function Identify() {
             try to create more queues than the drive can handle.
           </InfoCard>
         </div>
+
+        <KnowledgeCheck
+          id="act3-identify-kc1"
+          question="Does Identify Controller return per-namespace data?"
+          options={["Yes", "No"]}
+          correctIndex={1}
+          explanation="Identify Controller (CNS=1) returns device-wide information like model number, firmware version, and maximum queue entries. For per-namespace data (like capacity and LBA format), you need Identify Namespace (CNS=0)."
+        />
       </div>
     </SectionWrapper>
   );

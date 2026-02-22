@@ -7,6 +7,7 @@ import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import QuizCard from "@/components/story/QuizCard";
 
 /* ─── GC animation data ─── */
 type PageState = "valid" | "stale" | "free";
@@ -560,6 +561,17 @@ export default function TRIM() {
           degrades significantly when nearly full. <em>General rule: keep at least
           10-20% free space for consistent performance.</em>
         </InfoCard>
+
+        <QuizCard
+          id="act4-trim-quiz1"
+          question="What problem does TRIM solve?"
+          options={[
+            { text: "Speeds up sequential reads", explanation: "TRIM doesn't directly affect read speed. Its benefit is about write performance and endurance." },
+            { text: "Tells the SSD which blocks are no longer in use, reducing GC overhead", correct: true, explanation: "Correct! When you delete a file, the OS knows those LBAs are free, but the SSD doesn't — it still sees them as valid data. TRIM bridges this gap by telling the SSD which LBAs are no longer needed, allowing it to mark pages as stale and improve GC efficiency." },
+            { text: "Encrypts data at rest", explanation: "Encryption is handled by different mechanisms (TCG Opal, AES). TRIM is about space management." },
+            { text: "Increases the drive's physical capacity", explanation: "TRIM doesn't add capacity. It helps the SSD manage existing free space more efficiently." },
+          ]}
+        />
       </div>
     </SectionWrapper>
   );

@@ -6,6 +6,7 @@ import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import QuizCard from "@/components/story/QuizCard";
 
 const SEDUTIL_COMMANDS = [
   {
@@ -601,6 +602,17 @@ export default function Security() {
           erase capability that software alone can&apos;t match — and for drive
           decommissioning, that&apos;s invaluable.
         </InfoCard>
+
+        <QuizCard
+          id="act5-security-quiz1"
+          question="How do TCG Opal self-encrypting drives (SEDs) provide instant secure erase?"
+          options={[
+            { text: "They overwrite every cell with zeros", explanation: "Physical overwrite of all cells would take minutes to hours. SEDs use a much faster approach." },
+            { text: "They destroy the encryption key, making all data unreadable", correct: true, explanation: "Correct! SEDs encrypt all data with an internal key. To 'erase' the drive, the controller simply destroys the encryption key. Without the key, all data on NAND is cryptographically unreadable — instant and complete." },
+            { text: "They physically damage the NAND cells", explanation: "Physical damage isn't how secure erase works. The data remains on NAND but becomes cryptographically inaccessible." },
+            { text: "They format the drive's partition table", explanation: "Formatting only removes filesystem metadata. The actual data could still be recovered without encryption." },
+          ]}
+        />
       </div>
     </SectionWrapper>
   );

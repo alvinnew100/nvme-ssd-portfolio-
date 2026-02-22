@@ -3,9 +3,9 @@
 import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
-import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import QuizCard from "@/components/story/QuizCard";
 
 const INITIAL_MAP = [
   { lba: 0, pba: 12, valid: true },
@@ -28,7 +28,6 @@ function L2POverviewVisual() {
         Logical-to-Physical Mapping &mdash; The Core Idea
       </div>
       <div className="flex flex-col sm:flex-row items-center gap-4 max-w-2xl mx-auto">
-        {/* Host / LBA side */}
         <motion.div
           className="flex-1 rounded-xl p-4 text-center bg-nvme-green/5 border-2 border-nvme-green/30"
           initial={{ opacity: 0, x: -20 }}
@@ -42,7 +41,6 @@ function L2POverviewVisual() {
           </div>
         </motion.div>
 
-        {/* Arrow 1 */}
         <motion.div
           className="text-nvme-violet"
           initial={{ opacity: 0, scale: 0 }}
@@ -57,7 +55,6 @@ function L2POverviewVisual() {
           </svg>
         </motion.div>
 
-        {/* FTL Table */}
         <motion.div
           className="flex-1 rounded-xl p-4 text-center bg-nvme-violet/5 border-2 border-nvme-violet/30"
           initial={{ opacity: 0, y: 10 }}
@@ -73,7 +70,6 @@ function L2POverviewVisual() {
           </div>
         </motion.div>
 
-        {/* Arrow 2 */}
         <motion.div
           className="text-nvme-violet"
           initial={{ opacity: 0, scale: 0 }}
@@ -88,7 +84,6 @@ function L2POverviewVisual() {
           </svg>
         </motion.div>
 
-        {/* NAND side */}
         <motion.div
           className="flex-1 rounded-xl p-4 text-center bg-nvme-amber/5 border-2 border-nvme-amber/30"
           initial={{ opacity: 0, x: 20 }}
@@ -177,7 +172,7 @@ function OutOfPlaceWriteVisual() {
                     <div className={`${colors.text} font-mono text-[10px] font-bold`}>P{page.id}</div>
                     <div className="text-text-muted text-[8px] font-mono">{page.content || "empty"}</div>
                     <div className={`${colors.text} text-[7px] font-mono mt-0.5`}>
-                      {page.state === "stale" ? "✕ stale" : page.state === "new" ? "★ new" : page.state === "valid" ? "✓ valid" : "○ free"}
+                      {page.state === "stale" ? "\u2715 stale" : page.state === "new" ? "\u2605 new" : page.state === "valid" ? "\u2713 valid" : "\u25CB free"}
                     </div>
                   </motion.div>
                 );
@@ -196,7 +191,7 @@ function OutOfPlaceWriteVisual() {
   );
 }
 
-export default function FTLBasics() {
+export default function FTLMapping() {
   const [ftlMap, setFtlMap] = useState(INITIAL_MAP);
   const [writeLog, setWriteLog] = useState<string[]>([]);
   const [selectedLba, setSelectedLba] = useState<number | null>(null);
@@ -256,13 +251,12 @@ export default function FTLBasics() {
           The old page still exists but now contains outdated data — it&apos;s
           called <strong className="text-text-primary">&ldquo;stale.&rdquo;</strong> Stale
           pages waste space. They&apos;ll be cleaned up later by a process called{" "}
-          <strong className="text-text-primary">garbage collection</strong> (covered in Lesson 11).
+          <strong className="text-text-primary">garbage collection</strong>.
         </p>
         <p className="text-text-secondary mb-8 leading-relaxed max-w-3xl">
           Let&apos;s see how this works visually, then try it yourself:
         </p>
 
-        {/* L2P overview diagram */}
         <L2POverviewVisual />
 
         {/* Usage instructions */}
@@ -303,7 +297,6 @@ export default function FTLBasics() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6">
-            {/* Logical side */}
             <div className="flex-1">
               <div className="text-nvme-green text-xs font-mono font-bold mb-2 text-center">
                 Logical Address (Host)
@@ -333,20 +326,14 @@ export default function FTLBasics() {
               </div>
             </div>
 
-            {/* Mapping arrows */}
             <div className="hidden sm:flex flex-col items-center justify-center gap-1">
-              <div className="text-nvme-violet text-[10px] font-mono font-bold">
-                FTL
-              </div>
-              <div className="text-nvme-violet text-[10px] font-mono font-bold">
-                MAP
-              </div>
+              <div className="text-nvme-violet text-[10px] font-mono font-bold">FTL</div>
+              <div className="text-nvme-violet text-[10px] font-mono font-bold">MAP</div>
               <svg width="40" height="60" viewBox="0 0 40 60">
                 <path d="M20 0 L20 45 L12 37 M20 45 L28 37" stroke="#7c5cfc" strokeWidth="2" fill="none" />
               </svg>
             </div>
 
-            {/* Physical side */}
             <div className="flex-1">
               <div className="text-nvme-amber text-xs font-mono font-bold mb-2 text-center">
                 Physical Page (NAND)
@@ -373,7 +360,6 @@ export default function FTLBasics() {
             </div>
           </div>
 
-          {/* Write log */}
           {writeLog.length > 0 && (
             <div className="mt-4 bg-story-dark rounded-xl p-4">
               <div className="text-white/40 text-[10px] font-mono mb-2">
@@ -393,48 +379,18 @@ export default function FTLBasics() {
           )}
         </div>
 
-        {/* Out-of-place write concept visual */}
         <OutOfPlaceWriteVisual />
 
-        {/* Key concepts */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-          <div className="bg-story-card rounded-xl p-4 card-shadow">
-            <div className="font-mono font-bold text-nvme-green text-sm mb-1">
-              Out-of-Place Write
-            </div>
-            <p className="text-text-muted text-xs">
-              Data is always written to a new page. The old mapping becomes stale.
-              This avoids the costly erase-before-write cycle.
-            </p>
-          </div>
-          <div className="bg-story-card rounded-xl p-4 card-shadow">
-            <div className="font-mono font-bold text-nvme-amber text-sm mb-1">
-              Garbage Collection
-            </div>
-            <p className="text-text-muted text-xs">
-              When free pages run low, the FTL copies valid pages from a block with
-              many stale pages, then erases the entire block to reclaim space.
-            </p>
-          </div>
-          <div className="bg-story-card rounded-xl p-4 card-shadow">
-            <div className="font-mono font-bold text-nvme-violet text-sm mb-1">
-              L2P Table
-            </div>
-            <p className="text-text-muted text-xs">
-              The logical-to-physical mapping table. Stored in DRAM for speed
-              (4 bytes per LBA = ~4 GB for a 1 TB drive). Persisted to NAND on
-              power-off.
-            </p>
-          </div>
-        </div>
-
-        <InfoCard variant="note" title="Why FTL matters for performance">
-          Every random write creates stale pages. When the FTL runs low on free blocks,
-          garbage collection kicks in, copying valid data and erasing blocks. This
-          background activity competes with host I/O and causes the &ldquo;performance
-          cliff&rdquo; seen in steady-state benchmarks. TRIM helps by telling the FTL
-          which pages are truly free.
-        </InfoCard>
+        <QuizCard
+          id="act1-ftl-quiz1"
+          question="Why does the SSD write to a NEW page instead of overwriting the old one?"
+          options={[
+            { text: "Overwriting is slower", explanation: "While it would be slower, the real reason is a physical hardware limitation." },
+            { text: "NAND pages can't be overwritten — erasing is block-level", correct: true, explanation: "Correct! NAND flash can only be programmed (written) once per erase cycle, and erasing must happen at the block level (128-256 pages). To avoid erasing an entire block just to update one page, the FTL writes to a fresh page and updates the mapping table." },
+            { text: "It uses less power", explanation: "Power isn't the main concern. The physical write constraint of NAND makes out-of-place writes necessary." },
+            { text: "The old page might be corrupted", explanation: "Corruption isn't the primary reason. It's a fundamental NAND constraint: you can't reprogram a page without erasing the whole block first." },
+          ]}
+        />
       </div>
     </SectionWrapper>
   );

@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import FillInBlank from "@/components/story/FillInBlank";
 
 const IO_LAYERS = [
   {
@@ -313,6 +314,13 @@ export default function IOPathDiagram() {
             </p>
           </div>
         </div>
+
+        <FillInBlank
+          id="act3-iopath-fill1"
+          prompt="The NAND read operation accounts for approximately {blank}% of total I/O latency."
+          blanks={[{ answer: "87", tolerance: 5, placeholder: "?" }]}
+          explanation="NAND read latency (~70μs for TLC) dominates the total I/O path (~80μs), accounting for roughly 87% of the time. Software layers (filesystem, block layer, driver) add minimal overhead."
+        />
       </div>
     </SectionWrapper>
   );

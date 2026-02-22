@@ -7,6 +7,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
 import { getAdminCommands } from "@/lib/nvme/decoder";
+import FillInBlank from "@/components/story/FillInBlank";
 
 const SQEntryVisualizer = dynamic(
   () => import("@/components/commands/SQEntryVisualizer"),
@@ -200,6 +201,13 @@ export default function SQEStructure() {
             unit of communication between your computer and the SSD.
           </p>
         </div>
+
+        <FillInBlank
+          id="act3-sqe-fill1"
+          prompt="An NVMe Submission Queue Entry (SQE) is {blank} bytes."
+          blanks={[{ answer: "64", placeholder: "?" }]}
+          explanation="Every NVMe command is exactly 64 bytes (16 DWords × 4 bytes each), providing a fixed-size format for all command types."
+        />
       </div>
     </SectionWrapper>
   );

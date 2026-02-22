@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import KnowledgeCheck from "@/components/story/KnowledgeCheck";
 
 interface TraceEvent {
   id: number;
@@ -203,6 +204,14 @@ export default function BusTrace() {
             </p>
           </div>
         </div>
+
+        <KnowledgeCheck
+          id="act2-bustrace-kc1"
+          question="Which PCIe transaction type carries a data payload back from the device?"
+          options={["CplD (Completion with Data)", "MWr (Memory Write)"]}
+          correctIndex={0}
+          explanation="CplD (Completion with Data) is how the SSD returns read data to the host. It completes a previously issued MRd (Memory Read) request. MWr is used by the SSD for DMA writes to host memory."
+        />
       </div>
     </SectionWrapper>
   );

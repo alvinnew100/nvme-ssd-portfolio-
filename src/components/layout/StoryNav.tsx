@@ -25,17 +25,21 @@ const NAV_ITEMS: NavItem[] = [
 
   // Lesson 2: NAND Flash Memory
   { id: "lesson-2", label: "NAND Flash", isLesson: true, lessonNum: 2, lessonIndex: 2 },
-  { id: "sec-nand", label: "NAND Cells", lessonIndex: 2 },
+  { id: "sec-nand-basics", label: "NAND Basics", lessonIndex: 2 },
+  { id: "sec-nand-types", label: "Cell Types", lessonIndex: 2 },
+  { id: "sec-nand-endurance", label: "Endurance", lessonIndex: 2 },
   { id: "sec-nand-hierarchy", label: "NAND Hierarchy", lessonIndex: 2 },
 
   // Lesson 3: SSD Architecture and FTL
   { id: "lesson-3", label: "SSD & FTL", isLesson: true, lessonNum: 3, lessonIndex: 3 },
   { id: "sec-ssd", label: "SSD Overview", lessonIndex: 3 },
   { id: "sec-ftl", label: "FTL", lessonIndex: 3 },
+  { id: "sec-gc", label: "Garbage Collection", lessonIndex: 3 },
 
   // Lesson 4: SSD Internals — Block Management
   { id: "lesson-4", label: "SSD Internals", isLesson: true, lessonNum: 4, lessonIndex: 4 },
-  { id: "sec-vpc", label: "VPC & Blocks", lessonIndex: 4 },
+  { id: "sec-vpc", label: "Block Mgmt", lessonIndex: 4 },
+  { id: "sec-qd", label: "Queue Depth", lessonIndex: 4 },
 
   // Lesson 5: PCIe — The Highway
   { id: "lesson-5", label: "PCIe", isLesson: true, lessonNum: 5, lessonIndex: 5 },

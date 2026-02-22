@@ -5,6 +5,7 @@ import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
+import KnowledgeCheck from "@/components/story/KnowledgeCheck";
 
 const IO_CMDS = [
   {
@@ -166,6 +167,14 @@ export default function IOCommands() {
           By being 0-based, you get 65536 blocks. This is a common source of off-by-one
           bugs in NVMe driver development.
         </InfoCard>
+
+        <KnowledgeCheck
+          id="act3-io-kc1"
+          question="Which I/O command ensures data has been persisted to non-volatile storage?"
+          options={["Flush", "Read"]}
+          correctIndex={0}
+          explanation="The Flush command forces all data in the SSD's volatile write buffer (DRAM cache) to be written to NAND flash. This guarantees persistence — critical for databases and filesystems that need crash consistency."
+        />
       </div>
     </SectionWrapper>
   );

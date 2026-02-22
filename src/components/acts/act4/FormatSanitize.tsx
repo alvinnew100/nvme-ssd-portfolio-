@@ -7,6 +7,7 @@ import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import KnowledgeCheck from "@/components/story/KnowledgeCheck";
 
 function EraseComparisonVisual() {
   const ref = useRef(null);
@@ -178,6 +179,14 @@ export default function FormatSanitize() {
           Enterprise drives may take hours for overwrite sanitize on large
           capacities.
         </InfoCard>
+
+        <KnowledgeCheck
+          id="act4-format-kc1"
+          question="Which operation is cryptographically secure for data erasure?"
+          options={["Format NVM", "Sanitize"]}
+          correctIndex={1}
+          explanation="Sanitize provides cryptographic erase guarantees — it ensures all user data (including unmapped/over-provisioned areas) is permanently irrecoverable. Format NVM only affects the visible namespace and may leave data in over-provisioned areas."
+        />
       </div>
     </SectionWrapper>
   );

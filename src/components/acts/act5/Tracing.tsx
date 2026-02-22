@@ -6,6 +6,7 @@ import CodeBlock from "@/components/story/CodeBlock";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import KnowledgeCheck from "@/components/story/KnowledgeCheck";
 
 export default function Tracing() {
   return (
@@ -905,6 +906,14 @@ echo 0 > /sys/kernel/debug/tracing/tracing_on`}
           <em className="text-text-primary">All three read from the same kernel
           tracepoints</em> — they just present the data differently.
         </InfoCard>
+
+        <KnowledgeCheck
+          id="act5-tracing-kc1"
+          question="Which tool traces block-level I/O events?"
+          options={["blktrace", "ftrace"]}
+          correctIndex={0}
+          explanation="blktrace captures block-layer I/O events (requests, completions, merges) specific to storage devices. ftrace is a more general kernel function tracer that can trace any kernel function calls, including but not limited to I/O paths."
+        />
       </div>
     </SectionWrapper>
   );

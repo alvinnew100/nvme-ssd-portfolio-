@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import LessonDivider from "@/components/story/ActDivider";
 import LessonObjectives from "@/components/story/LessonObjectives";
+import ProgressBar from "@/components/story/ProgressBar";
 
 // Primer — Foundations
 import Hero from "@/components/acts/act1/Hero";
@@ -16,15 +17,19 @@ import Binary from "@/components/acts/act1/Binary";
 import LBA from "@/components/acts/act1/LBA";
 
 // Lesson 2 — NAND Flash Memory
-import NandCell from "@/components/acts/act1/NandCell";
+import NandCellBasics from "@/components/acts/act1/NandCellBasics";
+import NandCellTypes from "@/components/acts/act1/NandCellTypes";
+import NandEndurance from "@/components/acts/act1/NandEndurance";
 import NandHierarchy from "@/components/acts/act1/NandHierarchy";
 
 // Lesson 3 — SSD Architecture and FTL
 import SsdOverview from "@/components/acts/act1/SsdOverview";
-import FTLBasics from "@/components/acts/act1/FTLBasics";
+import FTLMapping from "@/components/acts/act1/FTLMapping";
+import GarbageCollection from "@/components/acts/act1/GarbageCollection";
 
 // Lesson 4 — SSD Internals
-import SsdInternals from "@/components/acts/act1/SsdInternals";
+import BlockManagement from "@/components/acts/act1/BlockManagement";
+import QueueDepthIOPS from "@/components/acts/act1/QueueDepthIOPS";
 
 // Lesson 5 — PCIe
 import PCIe from "@/components/acts/act2/PCIe";
@@ -101,6 +106,7 @@ export default function HomePage() {
         "Trace the path data takes from an SSD to the CPU and back",
         "Understand what a transistor is and how it relates to NAND flash storage",
       ]} />
+      <ProgressBar actPrefix="act0-" total={9} />
       <div id="sec-storage"><WhatIsStorage /></div>
       <div id="sec-bus"><WhatIsABus /></div>
       <div id="sec-data-flow"><HowDataFlows /></div>
@@ -113,6 +119,7 @@ export default function HomePage() {
         "Understand the data size hierarchy from bits to terabytes",
         "Understand how LBA (Logical Block Addressing) provides a uniform interface to storage devices",
       ]} />
+      <ProgressBar actPrefix="act1-" total={18} />
       <div id="sec-binary"><Binary /></div>
       <div id="sec-lba"><LBA /></div>
 
@@ -121,9 +128,12 @@ export default function HomePage() {
       <LessonObjectives objectives={[
         "Understand how NAND cells store data using charge levels in floating-gate transistors",
         "Compare SLC, MLC, TLC, and QLC tradeoffs (capacity vs speed vs endurance vs cost)",
+        "Understand NAND cell endurance (P/E cycles) and why cell type determines drive lifespan",
         "Understand the page/block/plane/die physical hierarchy and why erases are block-level",
       ]} />
-      <div id="sec-nand"><NandCell /></div>
+      <div id="sec-nand-basics"><NandCellBasics /></div>
+      <div id="sec-nand-types"><NandCellTypes /></div>
+      <div id="sec-nand-endurance"><NandEndurance /></div>
       <div id="sec-nand-hierarchy"><NandHierarchy /></div>
 
       {/* ===================== LESSON 3: SSD ARCHITECTURE AND FTL ===================== */}
@@ -132,9 +142,11 @@ export default function HomePage() {
         "Identify the major SSD components (controller, DRAM, NAND) and their roles",
         "Understand how the FTL maps logical to physical addresses (L2P mapping)",
         "Understand why out-of-place writes are necessary and how they create stale pages",
+        "Understand garbage collection: why it exists and how it reclaims space",
       ]} />
       <div id="sec-ssd"><SsdOverview /></div>
-      <div id="sec-ftl"><FTLBasics /></div>
+      <div id="sec-ftl"><FTLMapping /></div>
+      <div id="sec-gc"><GarbageCollection /></div>
 
       {/* ===================== LESSON 4: SSD INTERNALS ===================== */}
       <LessonDivider lesson={4} title="SSD Internals — Block Management" id="lesson-4" />
@@ -144,7 +156,8 @@ export default function HomePage() {
         "Trace the block lifecycle from spare through garbage collection and back to the free pool",
         "Understand queue depth and its impact on IOPS, latency, and NAND die utilization",
       ]} />
-      <div id="sec-vpc"><SsdInternals /></div>
+      <div id="sec-vpc"><BlockManagement /></div>
+      <div id="sec-qd"><QueueDepthIOPS /></div>
 
       {/* ===================== LESSON 5: PCIe — THE HIGHWAY ===================== */}
       <LessonDivider lesson={5} title="PCIe — The Highway" id="lesson-5" />

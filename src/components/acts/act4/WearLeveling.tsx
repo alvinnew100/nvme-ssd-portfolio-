@@ -6,6 +6,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import QuizCard from "@/components/story/QuizCard";
 
 const CELL_ENDURANCE = [
   { type: "SLC", pe: "~100,000", color: "#00d4aa", analogy: "A thick marker — lots of writes before it runs out" },
@@ -215,6 +216,17 @@ export default function WearLeveling() {
           amplification — aggressively moving data evens wear but costs more writes.
           This is one of the hardest tradeoffs in SSD firmware design.
         </InfoCard>
+
+        <QuizCard
+          id="act4-wear-quiz1"
+          question="What is the key difference between static and dynamic wear leveling?"
+          options={[
+            { text: "Static is faster than dynamic", explanation: "Speed isn't the differentiator. It's about which data gets moved." },
+            { text: "Dynamic only moves hot data; static also moves cold data from low-wear blocks", correct: true, explanation: "Correct! Dynamic wear leveling spreads writes by picking the lowest-wear free block for new writes. Static wear leveling goes further — it periodically moves cold (rarely-updated) data off low-wear blocks, freeing those blocks for hot data. This prevents cold data from hoarding low-wear blocks." },
+            { text: "Static only works with SLC cells", explanation: "Both types work with all cell types. The difference is in their data movement strategy." },
+            { text: "Dynamic uses more power", explanation: "Power consumption isn't the key difference. It's about whether cold data gets redistributed." },
+          ]}
+        />
       </div>
     </SectionWrapper>
   );

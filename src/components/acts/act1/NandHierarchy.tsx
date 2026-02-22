@@ -4,6 +4,8 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
+import DragSortChallenge from "@/components/story/DragSortChallenge";
+import QuizCard from "@/components/story/QuizCard";
 
 const LEVELS = [
   {
@@ -181,6 +183,31 @@ export default function NandHierarchy() {
             Flash Translation Layer (FTL)</strong> solves. Let&apos;s see how in the
             next section.
           </p>
+
+          <DragSortChallenge
+            id="act1-hierarchy-drag1"
+            prompt="Order the NAND hierarchy from smallest to largest:"
+            items={[
+              { id: "page", label: "Page", detail: "4-16 KB — smallest read/write unit" },
+              { id: "block", label: "Block", detail: "128-256 pages — smallest erase unit" },
+              { id: "plane", label: "Plane", detail: "~1,000 blocks — parallel unit" },
+              { id: "die", label: "Die", detail: "2-4 planes — one silicon chip" },
+              { id: "package", label: "Package", detail: "1-16 dies — physical chip" },
+            ]}
+            correctOrder={["page", "block", "plane", "die", "package"]}
+            hint="Think from the smallest unit of data up to the physical chip you can hold."
+          />
+
+          <QuizCard
+            id="act1-hierarchy-quiz1"
+            question="Why can't you erase a single NAND page?"
+            options={[
+              { text: "Pages are too small to address individually", explanation: "Pages can be addressed individually for reads and writes — just not for erases." },
+              { text: "The high-voltage erase pulse affects all cells in the block", correct: true, explanation: "Correct! Erasing requires a high-voltage pulse that physically affects all cells sharing the same substrate region (the block). It's a hardware limitation of how NAND flash is manufactured." },
+              { text: "The FTL doesn't support page-level erases", explanation: "It's not a firmware limitation — it's a physical hardware constraint of NAND flash design." },
+              { text: "It would take too long", explanation: "Speed isn't the issue. The erase voltage physically affects the entire block due to how cells are wired together." },
+            ]}
+          />
         </div>
       </div>
     </SectionWrapper>

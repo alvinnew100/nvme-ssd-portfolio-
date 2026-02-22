@@ -6,6 +6,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import QuizCard from "@/components/story/QuizCard";
 
 const GENS = [
   { gen: "Gen 1", gts: 2.5, encoding: "8b/10b", year: 2003 },
@@ -565,6 +566,18 @@ export default function PCIe() {
           <code className="text-text-code">lspci -vv | grep &quot;LnkSta&quot;</code> — it shows
           both the current speed (e.g., 16 GT/s) and width (e.g., x4).
         </InfoCard>
+
+        <QuizCard
+          id="act2-pcie-quiz1"
+          question="What is the approximate usable bandwidth of PCIe Gen 4 x4?"
+          options={[
+            { text: "~3.9 GB/s", explanation: "That's closer to PCIe Gen 3 x4. Gen 4 doubles the per-lane speed." },
+            { text: "~7.9 GB/s", correct: true, explanation: "Correct! PCIe Gen 4 runs at 16 GT/s per lane. With 128b/130b encoding and 4 lanes: 16 \u00d7 4 \u00d7 (128/130) / 8 \u2248 7.88 GB/s usable bandwidth." },
+            { text: "~16 GB/s", explanation: "That would be PCIe Gen 4 x8 or Gen 5 x4. The x4 configuration provides roughly half that." },
+            { text: "~32 GB/s", explanation: "That's closer to PCIe Gen 5 x8. Way more than a typical NVMe SSD uses." },
+          ]}
+          hint="PCIe Gen 4 runs at 16 GT/s per lane. With 4 lanes and 128b/130b encoding overhead..."
+        />
       </div>
     </SectionWrapper>
   );

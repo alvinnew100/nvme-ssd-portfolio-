@@ -6,6 +6,7 @@ import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
 import NvmeCliBlock from "@/components/story/NvmeCliBlock";
 import { getAdminCommands } from "@/lib/nvme/decoder";
+import KnowledgeCheck from "@/components/story/KnowledgeCheck";
 
 const CATEGORY_COLORS: Record<string, string> = {
   "Discovery": "#00d4aa",
@@ -269,6 +270,14 @@ export default function AdminCommands() {
             <NvmeCliBlock command="nvme list" note="List all NVMe devices in the system" />
           </div>
         </div>
+
+        <KnowledgeCheck
+          id="act3-admin-kc1"
+          question="Can Admin commands transfer user data (file contents)?"
+          options={["Yes", "No"]}
+          correctIndex={1}
+          explanation="Admin commands handle device management — identifying the controller, creating queues, getting logs, etc. User data transfer (reads/writes) is handled exclusively by I/O commands submitted to I/O queues."
+        />
       </div>
     </SectionWrapper>
   );

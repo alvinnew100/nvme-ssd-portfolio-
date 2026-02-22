@@ -5,6 +5,8 @@ import { motion, useInView } from "framer-motion";
 import SectionWrapper from "@/components/story/SectionWrapper";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import InfoCard from "@/components/story/InfoCard";
+import DragSortChallenge from "@/components/story/DragSortChallenge";
+import QuizCard from "@/components/story/QuizCard";
 
 function DataFlowDiagram() {
   const ref = useRef<HTMLDivElement>(null);
@@ -173,6 +175,32 @@ export default function HowDataFlows() {
           queues, doorbells, DMA, and interrupts in later lessons, you&apos;ll know exactly where they fit
           in this pipeline. The entire NVMe protocol is designed to make this flow as fast as possible.
         </InfoCard>
+
+        <DragSortChallenge
+          id="act0-dataflow-drag1"
+          prompt="Order the I/O path from application to NAND flash:"
+          items={[
+            { id: "app", label: "Application", detail: 'read("photo.jpg")' },
+            { id: "os", label: "OS / Kernel", detail: "Filesystem + Block Layer" },
+            { id: "driver", label: "NVMe Driver", detail: "Places command in queue" },
+            { id: "pcie", label: "PCIe Bus", detail: "Doorbell + DMA transfer" },
+            { id: "controller", label: "SSD Controller", detail: "Processes command" },
+            { id: "nand", label: "NAND Flash", detail: "Returns data" },
+          ]}
+          correctOrder={["app", "os", "driver", "pcie", "controller", "nand"]}
+          hint="Think about the layers from software (top) down to hardware (bottom)."
+        />
+
+        <QuizCard
+          id="act0-dataflow-quiz1"
+          question="How does the CPU communicate with the SSD in Memory-Mapped I/O (MMIO)?"
+          options={[
+            { text: "By sending special I/O port commands", explanation: "I/O ports are an older mechanism. NVMe uses memory-mapped I/O instead." },
+            { text: "By reading/writing to mapped memory addresses", correct: true, explanation: "Correct! MMIO maps device registers to normal memory addresses. The CPU reads/writes these addresses as if they were RAM, but the hardware routes them to the SSD's registers." },
+            { text: "By using USB packets", explanation: "USB is a different interface entirely. NVMe SSDs connect via PCIe." },
+            { text: "By directly accessing NAND chips", explanation: "The CPU never accesses NAND directly — it communicates through the SSD controller via PCIe/MMIO." },
+          ]}
+        />
       </div>
     </SectionWrapper>
   );

@@ -6,6 +6,7 @@ import SectionWrapper from "@/components/story/SectionWrapper";
 import InfoCard from "@/components/story/InfoCard";
 import AnalogyCard from "@/components/story/AnalogyCard";
 import TermDefinition from "@/components/story/TermDefinition";
+import QuizCard from "@/components/story/QuizCard";
 
 const QUEUE_SIZE = 8;
 
@@ -524,6 +525,17 @@ export default function Queues() {
           the expected phase. This avoids the overhead of comparing head/tail
           pointers for every completion check.
         </InfoCard>
+
+        <QuizCard
+          id="act2-queues-quiz1"
+          question="What happens when the Submission Queue tail pointer catches the head pointer?"
+          options={[
+            { text: "The queue resets automatically", explanation: "NVMe queues don't auto-reset. The head/tail pointers wrap around." },
+            { text: "The queue is full \u2014 no more commands can be submitted", correct: true, explanation: "Correct! When tail catches head, the circular buffer is full. The host must wait for the controller to process commands (advancing the head) before submitting more." },
+            { text: "Commands are dropped silently", explanation: "NVMe doesn't silently drop commands. The host driver prevents overflow." },
+            { text: "An interrupt fires", explanation: "Interrupts fire on completion, not on queue full. The host driver tracks available slots." },
+          ]}
+        />
       </div>
     </SectionWrapper>
   );
