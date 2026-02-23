@@ -54,6 +54,9 @@ function getState() {
   return useVoiceoverStore.getState();
 }
 
+/** Base path from Next.js config (for static file URLs) */
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 /** Metadata cache (module-level to survive re-renders) */
 const metadataCache: Record<string, SectionMetadata> = {};
 
@@ -67,7 +70,7 @@ async function fetchMetadata(sectionId: string): Promise<SectionMetadata | null>
   }
 
   try {
-    const res = await fetch(`/audio/metadata/${sectionId}.json`);
+    const res = await fetch(`${BASE_PATH}/audio/metadata/${sectionId}.json`);
     if (!res.ok) {
       console.error(`[voiceover] Metadata fetch failed for ${sectionId}: ${res.status}`);
       return null;
@@ -196,7 +199,7 @@ export function useVoiceover(): VoiceoverHook {
     // Only change source if needed
     const currentSrc = audio.src || "";
     if (!currentSrc.includes(sectionId)) {
-      audio.src = meta.audioFile;
+      audio.src = `${BASE_PATH}${meta.audioFile}`;
       audio.playbackRate = s.playbackRate;
     }
 

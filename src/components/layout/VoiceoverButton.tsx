@@ -85,7 +85,8 @@ export default function VoiceoverButton() {
 
   // Load manifest for section picker
   useEffect(() => {
-    fetch("/audio/metadata/manifest.json")
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+    fetch(`${basePath}/audio/metadata/manifest.json`)
       .then((r) => r.ok ? r.json() : null)
       .then((data) => {
         if (data?.sections) setManifest(data.sections);
