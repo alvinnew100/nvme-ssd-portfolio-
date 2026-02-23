@@ -114,7 +114,7 @@ interface VoiceoverHook {
   skipBackward: () => void;
   setPlaybackRate: (rate: number) => void;
   seekToTime: (timeMs: number) => void;
-  playFromBlock: (sectionId: string, blockIndex: number) => void;
+  playFromText: (sectionId: string, clickedText: string) => void;
 }
 
 export function useVoiceover(): VoiceoverHook {
@@ -304,15 +304,52 @@ export function useVoiceover(): VoiceoverHook {
     getState().setCurrentTime(timeMs);
   }, []);
 
-  /** Play a specific section starting from a specific block index */
-  const playFromBlock = useCallback((sectionId: string, blockIndex: number) => {
+  /** Find best matching block by comparing text content */
+  function findBlockByText(blocks: TextBlock[], clickedText: string): TextBlock | null {
+    // Normalize: lowercase, collapse whitespace, trim
+    const normalize = (s: string) => s.toLowerCase().replace(/\s+/g, " ").trim();
+    const clicked = normalize(clickedText);
+    if (clicked.length < 5) return null;
+
+    // Try exact match first
+    for (const block of blocks) {
+      if (normalize(block.text) === clicked) return block;
+    }
+
+    // Try prefix match (first 60 chars)
+    const prefix = clicked.slice(0, 60);
+    for (const block of blocks) {
+      if (normalize(block.text).startsWith(prefix)) return block;
+    }
+
+    // Try substring containment (clicked text is inside a block)
+    for (const block of blocks) {
+      if (normalize(block.text).includes(prefix)) return block;
+    }
+
+    // Try reverse containment (block text is inside clicked text)
+    for (const block of blocks) {
+      const blockNorm = normalize(block.text);
+      if (blockNorm.length > 10 && clicked.includes(blockNorm.slice(0, 60))) return block;
+    }
+
+    return null;
+  }
+
+  /** Play a section starting from the block matching the clicked text */
+  const playFromText = useCallback((sectionId: string, clickedText: string) => {
     (async () => {
       const meta = await fetchMetadata(sectionId);
       if (!meta) return;
 
-      const block = meta.blocks[blockIndex];
-      if (!block) return;
+      const block = findBlockByText(meta.blocks, clickedText);
+      if (!block) {
+        // Fallback: just play from the beginning of the section
+        playSection(sectionId);
+        return;
+      }
 
+      const blockIndex = meta.blocks.indexOf(block);
       const audio = getAudio();
       const s = getState();
 
@@ -333,7 +370,7 @@ export function useVoiceover(): VoiceoverHook {
         if (playPromise) await playPromise;
         audio.currentTime = block.beginMs / 1000;
       } catch (err) {
-        console.error("[voiceover] playFromBlock failed:", err);
+        console.error("[voiceover] playFromText failed:", err);
         getState().setPlaying(false);
       }
     })();
@@ -365,6 +402,6 @@ export function useVoiceover(): VoiceoverHook {
     skipBackward,
     setPlaybackRate,
     seekToTime,
-    playFromBlock,
+    playFromText,
   };
 }

@@ -288,21 +288,22 @@ export default function VoiceoverButton() {
           )}
         </AnimatePresence>
 
+        {/* Sections list button */}
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="w-8 h-8 rounded-full bg-story-card border border-story-border shadow-lg text-text-secondary hover:text-text-primary flex items-center justify-center transition-colors"
+          title="Browse sections"
+        >
+          <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z" />
+          </svg>
+        </button>
+
         {/* Main play/pause button with progress ring */}
         <button
-          onClick={(e) => {
-            if (e.shiftKey || e.metaKey) {
-              setIsExpanded(!isExpanded);
-            } else {
-              togglePlay();
-            }
-          }}
-          onContextMenu={(e) => {
-            e.preventDefault();
-            setIsExpanded(!isExpanded);
-          }}
-          className="relative w-12 h-12 rounded-full bg-nvme-blue text-white shadow-lg shadow-nvme-blue/25 hover:shadow-xl hover:shadow-nvme-blue/30 transition-all active:scale-95 flex items-center justify-center group"
-          title={isPlaying ? "Pause voiceover" : "Play voiceover (right-click for sections)"}
+          onClick={togglePlay}
+          className="relative w-12 h-12 rounded-full bg-nvme-blue text-white shadow-lg shadow-nvme-blue/25 hover:shadow-xl hover:shadow-nvme-blue/30 transition-all active:scale-95 flex items-center justify-center"
+          title={isPlaying ? "Pause voiceover" : "Play voiceover"}
         >
           {/* Progress ring */}
           <svg className="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 48 48">
@@ -339,9 +340,6 @@ export default function VoiceoverButton() {
               <path d="M8 5v14l11-7z" />
             </svg>
           )}
-
-          {/* Expand indicator dot */}
-          <span className="absolute -top-0.5 -right-0.5 w-3 h-3 rounded-full bg-nvme-amber border-2 border-white opacity-0 group-hover:opacity-100 transition-opacity" />
         </button>
 
         {/* Skip forward (visible when playing) */}
