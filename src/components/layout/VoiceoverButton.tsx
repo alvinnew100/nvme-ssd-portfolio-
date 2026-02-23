@@ -74,7 +74,6 @@ export default function VoiceoverButton() {
     skipForward,
     skipBackward,
     setPlaybackRate,
-    seekToTime,
   } = useVoiceover();
 
   const activeSection = useActiveSection();
@@ -120,13 +119,15 @@ export default function VoiceoverButton() {
 
   const handleSectionClick = useCallback(
     (sectionId: string) => {
-      play(sectionId);
       setIsExpanded(false);
       // Scroll to the section on the page
       const el = document.getElementById(sectionId);
       if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        const y = el.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: y, behavior: "smooth" });
       }
+      // Start playing (same pattern as click-to-play)
+      play(sectionId);
     },
     [play]
   );

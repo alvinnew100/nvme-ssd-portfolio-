@@ -5,13 +5,11 @@ import { useVoiceoverStore } from "@/store/voiceoverStore";
 import { useActiveSection, SECTION_IDS } from "@/hooks/useActiveSection";
 import type { SectionMetadata, TextBlock } from "@/types/voiceover";
 
-/** Binary search for the active block at a given time. */
 function findActiveBlock(blocks: TextBlock[], timeMs: number): number {
   if (blocks.length === 0) return -1;
   let lo = 0;
   let hi = blocks.length - 1;
   let result = -1;
-
   while (lo <= hi) {
     const mid = (lo + hi) >>> 1;
     if (blocks[mid].beginMs <= timeMs) {
@@ -21,71 +19,36 @@ function findActiveBlock(blocks: TextBlock[], timeMs: number): number {
       hi = mid - 1;
     }
   }
-
-  if (result >= 0 && blocks[result].endMs >= timeMs) {
-    return result;
-  }
+  if (result >= 0 && blocks[result].endMs >= timeMs) return result;
   return result;
 }
 
-/** Find the active word index within a block at a given time. */
-function findActiveWord(block: TextBlock, timeMs: number): number {
-  const ts = block.timestamps;
-  if (!ts || ts.length === 0) return -1;
-  let lo = 0;
-  let hi = ts.length - 1;
-  let result = -1;
-
-  while (lo <= hi) {
-    const mid = (lo + hi) >>> 1;
-    if (ts[mid].begin <= timeMs) {
-      result = mid;
-      lo = mid + 1;
-    } else {
-      hi = mid - 1;
-    }
-  }
-
-  return result;
-}
-
-/** Helper to get fresh store state (avoids stale closures) */
 function getState() {
   return useVoiceoverStore.getState();
 }
 
-/** Base path from Next.js config (for static file URLs) */
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
-
-/** Metadata cache (module-level to survive re-renders) */
 const metadataCache: Record<string, SectionMetadata> = {};
 
 async function fetchMetadata(sectionId: string): Promise<SectionMetadata | null> {
   if (metadataCache[sectionId]) return metadataCache[sectionId];
-
   const existing = getState().getMetadata(sectionId);
   if (existing) {
     metadataCache[sectionId] = existing;
     return existing;
   }
-
   try {
     const res = await fetch(`${BASE_PATH}/audio/metadata/${sectionId}.json`);
-    if (!res.ok) {
-      console.error(`[voiceover] Metadata fetch failed for ${sectionId}: ${res.status}`);
-      return null;
-    }
+    if (!res.ok) return null;
     const meta: SectionMetadata = await res.json();
     metadataCache[sectionId] = meta;
     getState().loadMetadata(sectionId, meta);
     return meta;
-  } catch (err) {
-    console.error(`[voiceover] Metadata error for ${sectionId}:`, err);
+  } catch {
     return null;
   }
 }
 
-/** Get or create the shared audio element */
 function getAudio(): HTMLAudioElement {
   let el = document.getElementById("voiceover-audio") as HTMLAudioElement;
   if (!el) {
@@ -97,12 +60,69 @@ function getAudio(): HTMLAudioElement {
   return el;
 }
 
+/**
+ * Core play function — used by everything.
+ * Loads metadata, sets source, plays, and seeks to the given time.
+ */
+async function startPlayback(sectionId: string, seekMs: number, blockIndex: number) {
+  const meta = await fetchMetadata(sectionId);
+  if (!meta) return;
+
+  const audio = getAudio();
+  const s = getState();
+
+  // Always set source (ensures correct file)
+  const currentSrc = audio.src || "";
+  if (!currentSrc.includes(sectionId)) {
+    audio.src = `${BASE_PATH}${meta.audioFile}`;
+  }
+  audio.playbackRate = s.playbackRate;
+
+  s.setCurrentSection(sectionId);
+  s.setCurrentBlockIndex(blockIndex);
+  s.setCurrentTime(seekMs);
+  s.setPlaying(true);
+
+  try {
+    const p = audio.play();
+    if (p) await p;
+    // Seek after play starts (avoids seeking before load)
+    if (seekMs > 0) {
+      audio.currentTime = seekMs / 1000;
+    }
+  } catch (err) {
+    console.error("[voiceover] Play failed:", err);
+    getState().setPlaying(false);
+  }
+}
+
+/** Text matching for click-to-play */
+function findBlockByText(blocks: TextBlock[], clickedText: string): TextBlock | null {
+  const normalize = (s: string) => s.toLowerCase().replace(/\s+/g, " ").trim();
+  const clicked = normalize(clickedText);
+  if (clicked.length < 5) return null;
+
+  for (const block of blocks) {
+    if (normalize(block.text) === clicked) return block;
+  }
+  const prefix = clicked.slice(0, 60);
+  for (const block of blocks) {
+    if (normalize(block.text).startsWith(prefix)) return block;
+  }
+  for (const block of blocks) {
+    if (normalize(block.text).includes(prefix)) return block;
+  }
+  for (const block of blocks) {
+    const bn = normalize(block.text);
+    if (bn.length > 10 && clicked.includes(bn.slice(0, 60))) return block;
+  }
+  return null;
+}
+
 interface VoiceoverHook {
   isPlaying: boolean;
   currentSectionId: string | null;
   activeBlockIndex: number;
-  activeWordIndex: number;
-  activeBlock: TextBlock | null;
   totalBlocks: number;
   currentTimeMs: number;
   totalDurationMs: number;
@@ -113,7 +133,6 @@ interface VoiceoverHook {
   skipForward: () => void;
   skipBackward: () => void;
   setPlaybackRate: (rate: number) => void;
-  seekToTime: (timeMs: number) => void;
   playFromText: (sectionId: string, clickedText: string) => void;
 }
 
@@ -122,12 +141,10 @@ export function useVoiceover(): VoiceoverHook {
   const activeSection = useActiveSection();
   const animFrameRef = useRef<number>(0);
   const activeSectionRef = useRef<string | null>(null);
-  const lastSectionRef = useRef<string | null>(null);
 
-  // Keep activeSectionRef in sync
   activeSectionRef.current = activeSection;
 
-  // Attach ended listener once
+  // Ended listener
   useEffect(() => {
     const audio = getAudio();
     const onEnded = () => {
@@ -144,23 +161,19 @@ export function useVoiceover(): VoiceoverHook {
     getAudio().playbackRate = store.playbackRate;
   }, [store.playbackRate]);
 
-  // Time update loop at ~60fps
+  // Time update loop
   useEffect(() => {
     if (!store.isPlaying) {
       cancelAnimationFrame(animFrameRef.current);
       return;
     }
-
     const tick = () => {
       const audio = getAudio();
       if (!audio.paused) {
         const timeMs = audio.currentTime * 1000;
         const s = getState();
         s.setCurrentTime(timeMs);
-
-        const meta = s.currentSectionId
-          ? s.getMetadata(s.currentSectionId)
-          : undefined;
+        const meta = s.currentSectionId ? s.getMetadata(s.currentSectionId) : undefined;
         if (meta) {
           const blockIdx = findActiveBlock(meta.blocks, timeMs);
           if (blockIdx !== s.currentBlockIndex && blockIdx >= 0) {
@@ -170,103 +183,41 @@ export function useVoiceover(): VoiceoverHook {
       }
       animFrameRef.current = requestAnimationFrame(tick);
     };
-
     animFrameRef.current = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(animFrameRef.current);
   }, [store.isPlaying, store.currentSectionId]);
 
-  // Auto-switch section when user scrolls to a new section
-  useEffect(() => {
-    if (!activeSection || activeSection === lastSectionRef.current) return;
-    lastSectionRef.current = activeSection;
+  // No auto-switch on scroll — user controls section manually
 
+  const play = useCallback((sectionId?: string) => {
     const s = getState();
-    if (s.isPlaying && s.currentSectionId !== activeSection) {
-      if (s.currentSectionId) {
-        s.saveResumePosition(s.currentSectionId);
-      }
-      playSection(activeSection);
-    }
-  }, [activeSection]);
-
-  /** Core: load metadata, set audio source, and play */
-  async function playSection(sectionId: string) {
-    const meta = await fetchMetadata(sectionId);
-    if (!meta) return;
-
-    const audio = getAudio();
-    const s = getState();
-
-    // Only change source if needed
-    const currentSrc = audio.src || "";
-    if (!currentSrc.includes(sectionId)) {
-      audio.src = `${BASE_PATH}${meta.audioFile}`;
-      audio.playbackRate = s.playbackRate;
-    }
-
-    s.setCurrentSection(sectionId);
-
-    // Resume from saved position
-    const resume = s.getResumePosition(sectionId);
-    if (resume && resume.timeMs > 0) {
-      s.setCurrentBlockIndex(resume.blockIndex);
-      s.setCurrentTime(resume.timeMs);
-    } else {
-      s.setCurrentBlockIndex(0);
-      s.setCurrentTime(0);
-    }
-
-    try {
-      // Set playing state immediately so UI updates
-      s.setPlaying(true);
-
-      const playPromise = audio.play();
-      if (playPromise) {
-        await playPromise;
-      }
-
-      // Seek to resume position after playback starts (avoids seeking before load)
-      if (resume && resume.timeMs > 0) {
-        audio.currentTime = resume.timeMs / 1000;
-      }
-    } catch (err) {
-      console.error("[voiceover] Play failed:", err);
-      getState().setPlaying(false);
-    }
-  }
-
-  const play = useCallback(
-    (sectionId?: string) => {
-      const s = getState();
-      const targetSection =
-        sectionId ||
-        activeSectionRef.current ||
-        s.currentSectionId ||
-        SECTION_IDS[0];
-
-      if (!targetSection) return;
-      playSection(targetSection);
-    },
-    []
-  );
+    const target = sectionId || activeSectionRef.current || s.currentSectionId || SECTION_IDS[0];
+    if (!target) return;
+    startPlayback(target, 0, 0);
+  }, []);
 
   const pause = useCallback(() => {
-    const audio = getAudio();
-    audio.pause();
-    const s = getState();
-    if (s.currentSectionId) {
-      s.saveResumePosition(s.currentSectionId);
-    }
-    s.setPlaying(false);
+    getAudio().pause();
+    getState().setPlaying(false);
   }, []);
 
   const togglePlay = useCallback(() => {
-    if (getState().isPlaying) {
-      pause();
+    const s = getState();
+    if (s.isPlaying) {
+      getAudio().pause();
+      s.setPlaying(false);
     } else {
-      play();
+      // If already have a section loaded and paused, resume from current position
+      const audio = getAudio();
+      if (s.currentSectionId && audio.src && audio.src.includes(s.currentSectionId)) {
+        s.setPlaying(true);
+        audio.play().catch(() => getState().setPlaying(false));
+      } else {
+        const target = activeSectionRef.current || s.currentSectionId || SECTION_IDS[0];
+        if (target) startPlayback(target, 0, 0);
+      }
     }
-  }, [play, pause]);
+  }, []);
 
   const skipForward = useCallback(() => {
     const s = getState();
@@ -299,44 +250,6 @@ export function useVoiceover(): VoiceoverHook {
     getAudio().playbackRate = rate;
   }, []);
 
-  const seekToTime = useCallback((timeMs: number) => {
-    getAudio().currentTime = timeMs / 1000;
-    getState().setCurrentTime(timeMs);
-  }, []);
-
-  /** Find best matching block by comparing text content */
-  function findBlockByText(blocks: TextBlock[], clickedText: string): TextBlock | null {
-    // Normalize: lowercase, collapse whitespace, trim
-    const normalize = (s: string) => s.toLowerCase().replace(/\s+/g, " ").trim();
-    const clicked = normalize(clickedText);
-    if (clicked.length < 5) return null;
-
-    // Try exact match first
-    for (const block of blocks) {
-      if (normalize(block.text) === clicked) return block;
-    }
-
-    // Try prefix match (first 60 chars)
-    const prefix = clicked.slice(0, 60);
-    for (const block of blocks) {
-      if (normalize(block.text).startsWith(prefix)) return block;
-    }
-
-    // Try substring containment (clicked text is inside a block)
-    for (const block of blocks) {
-      if (normalize(block.text).includes(prefix)) return block;
-    }
-
-    // Try reverse containment (block text is inside clicked text)
-    for (const block of blocks) {
-      const blockNorm = normalize(block.text);
-      if (blockNorm.length > 10 && clicked.includes(blockNorm.slice(0, 60))) return block;
-    }
-
-    return null;
-  }
-
-  /** Play a section starting from the block matching the clicked text */
   const playFromText = useCallback((sectionId: string, clickedText: string) => {
     (async () => {
       const meta = await fetchMetadata(sectionId);
@@ -344,53 +257,24 @@ export function useVoiceover(): VoiceoverHook {
 
       const block = findBlockByText(meta.blocks, clickedText);
       if (!block) {
-        // Fallback: just play from the beginning of the section
-        playSection(sectionId);
+        startPlayback(sectionId, 0, 0);
         return;
       }
 
       const blockIndex = meta.blocks.indexOf(block);
-      const audio = getAudio();
-      const s = getState();
-
-      // Set source if needed
-      const currentSrc = audio.src || "";
-      if (!currentSrc.includes(sectionId)) {
-        audio.src = `${BASE_PATH}${meta.audioFile}`;
-        audio.playbackRate = s.playbackRate;
-      }
-
-      s.setCurrentSection(sectionId);
-      s.setCurrentBlockIndex(blockIndex);
-      s.setCurrentTime(block.beginMs);
-
-      try {
-        s.setPlaying(true);
-        const playPromise = audio.play();
-        if (playPromise) await playPromise;
-        audio.currentTime = block.beginMs / 1000;
-      } catch (err) {
-        console.error("[voiceover] playFromText failed:", err);
-        getState().setPlaying(false);
-      }
+      startPlayback(sectionId, block.beginMs, blockIndex);
     })();
   }, []);
 
-  // Derive active word
+  // Derived state
   const meta = store.currentSectionId
     ? store.getMetadata(store.currentSectionId)
     : undefined;
-  const activeBlock = meta?.blocks[store.currentBlockIndex] ?? null;
-  const activeWordIndex = activeBlock
-    ? findActiveWord(activeBlock, store.currentTimeMs)
-    : -1;
 
   return {
     isPlaying: store.isPlaying,
     currentSectionId: store.currentSectionId,
     activeBlockIndex: store.currentBlockIndex,
-    activeWordIndex,
-    activeBlock,
     totalBlocks: meta?.blocks.length ?? 0,
     currentTimeMs: store.currentTimeMs,
     totalDurationMs: meta?.totalDurationMs ?? 0,
@@ -401,7 +285,6 @@ export function useVoiceover(): VoiceoverHook {
     skipForward,
     skipBackward,
     setPlaybackRate,
-    seekToTime,
     playFromText,
   };
 }
