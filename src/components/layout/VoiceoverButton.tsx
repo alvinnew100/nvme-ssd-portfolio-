@@ -122,6 +122,11 @@ export default function VoiceoverButton() {
     (sectionId: string) => {
       play(sectionId);
       setIsExpanded(false);
+      // Scroll to the section on the page
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     },
     [play]
   );
