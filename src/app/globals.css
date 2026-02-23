@@ -138,6 +138,29 @@ code {
   box-shadow: 0 4px 16px rgba(45, 42, 36, 0.10), 0 12px 32px rgba(45, 42, 36, 0.06);
 }
 
+/* Voiceover highlight — active narrated block */
+[data-vo-active="true"] {
+  border-left: 3px solid #635bff;
+  padding-left: 12px;
+  background-color: rgba(99, 91, 255, 0.04);
+  border-radius: 4px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+[data-vo-active="true"]::before {
+  content: "";
+  display: none;
+}
+
+@keyframes voiceover-pulse {
+  0%, 100% { border-left-color: #635bff; }
+  50% { border-left-color: rgba(99, 91, 255, 0.4); }
+}
+
+[data-vo-active="true"] {
+  animation: voiceover-pulse 2s ease-in-out infinite;
+}
+
 /* Gradient text utility */
 .gradient-text {
   background: linear-gradient(135deg, #635bff 0%, #00b894 100%);

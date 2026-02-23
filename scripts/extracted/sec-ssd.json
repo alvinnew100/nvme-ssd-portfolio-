@@ -1,0 +1,46 @@
+{
+  "sectionId": "sec-ssd",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Inside the SSD — The Complete Picture",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: An SSD Is a Mini-Computer. An SSD isn't just a storage chip — it's a complete mini-computer with its own processor (controller), its own RAM (DRAM), and its own storage (NAND flash). The controller runs firmware that manages all the complexity: translating addresses, fixing errors, balancing wear, and talking to your computer over PCIe.",
+      "blockIndex": 1
+    },
+    {
+      "type": "term",
+      "text": "SSD Controller: The 'brain' of the SSD — a specialized processor (often ARM Cortex-R cores) that runs firmware to manage address mapping, error correction, wear leveling, and communication with the host computer.",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "So far we've seen the building blocks: bits, bytes, LBAs, and NAND cells organized into pages, blocks, and dies. But how do all these pieces fit together inside an actual SSD? An SSD isn't just a pile of NAND chips — it's a complete mini-computer.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "Why does an SSD need to be a computer? Because someone has to manage all the complexity we just learned about — translating LBAs to physical pages, choosing which cells to write to, handling the read/write vs erase size mismatch, fixing bit errors, monitoring wear. That management software needs a processor, memory, and interfaces, just like a computer.",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "An SSD has three main parts:",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "The diagram below shows how these parts connect. The host computer talks to the controller through the PCIe bus (covered in the next lesson), and the controller manages everything else.",
+      "blockIndex": 6
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: Why does an SSD need its own dedicated processor and RAM, essentially making it a 'computer within a computer'? What would happen if the host CPU had to manage all of these responsibilities directly? The answer: The SSD controller is a full SoC (System-on-Chip) running firmware that handles FTL address mapping, ECC error correction, wear leveling, garbage collection, and NVMe protocol processing. It needs its own processor (often ARM Cortex-R cores) because these tasks are enormously complex and time-critical — the FTL must translate every single I/O into physical addresses, ECC must correct bit errors on every read, and GC must run continuously in the background. If the host CPU managed this directly, it would waste enormous cycles on microsecond-level NAND timing, consume massive bandwidth shuttling mapping tables over PCIe, and every SSD internal operation (GC, wear leveling) would stall host applications. The dedicated DRAM caches the FTL mapping table (~4 bytes per LBA, so ~4 GB for a 1 TB drive) for O(1) address lookups — without it, every read would require an extra NAND access just to find the mapping, roughly doubling latency.",
+      "requiresReveal": true,
+      "blockIndex": 7
+    }
+  ]
+}

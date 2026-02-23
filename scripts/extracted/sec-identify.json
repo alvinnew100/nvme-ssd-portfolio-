@@ -1,0 +1,46 @@
+{
+  "sectionId": "sec-identify",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "The First Question — &ldquo;Who Are You?&rdquo;",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: Identify Is the SSD's ID Card. The Identify command asks the SSD 'who are you and what can you do?' — like checking someone's ID card. Identify Controller returns the SSD's model, serial number, firmware version, and capabilities. Identify Namespace returns details about a specific storage partition.",
+      "blockIndex": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "During boot, we saw that the NVMe driver sends an Identify command as its very first question. But why is this necessary?",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "Think about meeting someone new. Before you can work together, you need to know: What's your name? What can you do? What are your limits? The Identify command (opcode 0x06) asks exactly these questions. It returns a 4,096-byte data structure — essentially the drive's &ldquo;resume.&rdquo;",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "What does the driver learn? The drive's model name, serial number, firmware version, maximum queue size, supported features, and much more. Without this information, the driver can't properly configure the drive.",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "You can send this command yourself using nvme-cli. The id-ctrl subcommand is a shortcut for &ldquo;Identify Controller&rdquo;:",
+      "blockIndex": 5
+    },
+    {
+      "type": "info",
+      "text": "Why does the driver need to know queue limits?: The driver wants to create as many I/O queues as possible (ideally one per CPU core). But the drive has a limit — maybe it supports 128 queues maximum. The Identify data tells the driver this limit so it doesn't try to create more queues than the drive can handle.",
+      "blockIndex": 6
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: Why does NVMe split the Identify command into separate Controller (CNS=1) and Namespace (CNS=0) variants, instead of returning all information in a single response? What would go wrong with a 'return everything' approach? The answer: Identify Controller (CNS=1) returns device-wide information — model number, firmware version, maximum queue entries, and supported features. Identify Namespace (CNS=0) returns per-namespace data — capacity, LBA format, and protection settings. They're separate because: (1) A single controller can have hundreds of namespaces. Returning all namespace data in one response would require a massive, variable-size buffer — but NVMe Identify always returns exactly 4,096 bytes for simplicity and predictability. (2) The driver needs controller info first (during boot) to know the device's limits before it even asks about namespaces. (3) Namespace info can change at runtime (namespaces can be created, deleted, or resized), while controller info is mostly static. Separating them lets the driver re-query just the namespace data when a change occurs, without re-fetching the entire controller identity. The CNS field is the selector — like choosing which page of an ID card to read.",
+      "requiresReveal": true,
+      "blockIndex": 7
+    }
+  ]
+}

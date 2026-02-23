@@ -1,0 +1,2695 @@
+{
+  "sectionId": "sec-namespaces",
+  "audioFile": "/audio/sections/sec-namespaces.mp3",
+  "totalDurationMs": 217680,
+  "fileSizeBytes": 3483264,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "Namespaces — Splitting One Drive into Many",
+      "beginMs": 60,
+      "endMs": 3580,
+      "timestamps": [
+        {
+          "word": "Namespaces",
+          "begin": 60,
+          "end": 840
+        },
+        {
+          "word": "Splitting",
+          "begin": 1440,
+          "end": 1800
+        },
+        {
+          "word": "One",
+          "begin": 1860,
+          "end": 2040
+        },
+        {
+          "word": "Drive",
+          "begin": 2080,
+          "end": 2500
+        },
+        {
+          "word": "into",
+          "begin": 2640,
+          "end": 2780
+        },
+        {
+          "word": "Many",
+          "begin": 2880,
+          "end": 3060
+        },
+        {
+          "word": "Analogy:",
+          "begin": 3140,
+          "end": 3580
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: Namespaces Are Logical Partitions. An NVMe namespace is like a partition on a hard drive — it's a logical division of the SSD's storage. Most consumer SSDs have just one namespace (NSID 1) that spans the whole drive. Enterprise SSDs may have multiple namespaces to isolate workloads, each with its own LBA range and format.",
+      "beginMs": 4200,
+      "endMs": 29440,
+      "timestamps": [
+        {
+          "word": "Namespaces",
+          "begin": 4200,
+          "end": 5200
+        },
+        {
+          "word": "Are",
+          "begin": 5240,
+          "end": 5260
+        },
+        {
+          "word": "Logical",
+          "begin": 5360,
+          "end": 5680
+        },
+        {
+          "word": "Partitions.",
+          "begin": 5680,
+          "end": 6400
+        },
+        {
+          "word": "An",
+          "begin": 8160,
+          "end": 8240
+        },
+        {
+          "word": "NVMe",
+          "begin": 8340,
+          "end": 8900
+        },
+        {
+          "word": "namespace",
+          "begin": 9040,
+          "end": 9640
+        },
+        {
+          "word": "is",
+          "begin": 9680,
+          "end": 9780
+        },
+        {
+          "word": "like",
+          "begin": 9800,
+          "end": 9920
+        },
+        {
+          "word": "a",
+          "begin": 9940,
+          "end": 9960
+        },
+        {
+          "word": "partition",
+          "begin": 10040,
+          "end": 10540
+        },
+        {
+          "word": "on",
+          "begin": 10580,
+          "end": 10680
+        },
+        {
+          "word": "a",
+          "begin": 10680,
+          "end": 10700
+        },
+        {
+          "word": "hard",
+          "begin": 10780,
+          "end": 11020
+        },
+        {
+          "word": "drive",
+          "begin": 11020,
+          "end": 11360
+        },
+        {
+          "word": "it's",
+          "begin": 11680,
+          "end": 11780
+        },
+        {
+          "word": "a",
+          "begin": 11800,
+          "end": 11840
+        },
+        {
+          "word": "logical",
+          "begin": 11900,
+          "end": 12280
+        },
+        {
+          "word": "division",
+          "begin": 12360,
+          "end": 12780
+        },
+        {
+          "word": "of",
+          "begin": 12820,
+          "end": 12880
+        },
+        {
+          "word": "the",
+          "begin": 12920,
+          "end": 12960
+        },
+        {
+          "word": "SSD's",
+          "begin": 13080,
+          "end": 13500
+        },
+        {
+          "word": "storage.",
+          "begin": 13680,
+          "end": 14160
+        },
+        {
+          "word": "Most",
+          "begin": 14820,
+          "end": 15080
+        },
+        {
+          "word": "consumer",
+          "begin": 15120,
+          "end": 15540
+        },
+        {
+          "word": "SSDs",
+          "begin": 15640,
+          "end": 16180
+        },
+        {
+          "word": "have",
+          "begin": 16200,
+          "end": 16320
+        },
+        {
+          "word": "just",
+          "begin": 16379,
+          "end": 16580
+        },
+        {
+          "word": "one",
+          "begin": 16660,
+          "end": 16880
+        },
+        {
+          "word": "namespace",
+          "begin": 16940,
+          "end": 17580
+        },
+        {
+          "word": "(NSID",
+          "begin": 17900,
+          "end": 18960
+        },
+        {
+          "word": "1)",
+          "begin": 19120,
+          "end": 19400
+        },
+        {
+          "word": "that",
+          "begin": 19720,
+          "end": 19860
+        },
+        {
+          "word": "spans",
+          "begin": 19900,
+          "end": 20200
+        },
+        {
+          "word": "the",
+          "begin": 20240,
+          "end": 20300
+        },
+        {
+          "word": "whole",
+          "begin": 20300,
+          "end": 20600
+        },
+        {
+          "word": "drive.",
+          "begin": 20680,
+          "end": 21100
+        },
+        {
+          "word": "Enterprise",
+          "begin": 22240,
+          "end": 22680
+        },
+        {
+          "word": "SSDs",
+          "begin": 22800,
+          "end": 23480
+        },
+        {
+          "word": "may",
+          "begin": 23560,
+          "end": 23620
+        },
+        {
+          "word": "have",
+          "begin": 23680,
+          "end": 23820
+        },
+        {
+          "word": "multiple",
+          "begin": 23880,
+          "end": 24220
+        },
+        {
+          "word": "namespaces",
+          "begin": 24300,
+          "end": 24940
+        },
+        {
+          "word": "to",
+          "begin": 25000,
+          "end": 25040
+        },
+        {
+          "word": "isolate",
+          "begin": 25140,
+          "end": 25520
+        },
+        {
+          "word": "workloads,",
+          "begin": 25580,
+          "end": 26140
+        },
+        {
+          "word": "each",
+          "begin": 26460,
+          "end": 26620
+        },
+        {
+          "word": "with",
+          "begin": 26680,
+          "end": 26780
+        },
+        {
+          "word": "its",
+          "begin": 26800,
+          "end": 26920
+        },
+        {
+          "word": "own",
+          "begin": 27020,
+          "end": 27180
+        },
+        {
+          "word": "LBA",
+          "begin": 27280,
+          "end": 27640
+        },
+        {
+          "word": "range",
+          "begin": 27800,
+          "end": 28160
+        },
+        {
+          "word": "and",
+          "begin": 28240,
+          "end": 28320
+        },
+        {
+          "word": "format.",
+          "begin": 28380,
+          "end": 28860
+        },
+        {
+          "word": "In",
+          "begin": 29360,
+          "end": 29440
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "paragraph",
+      "text": "In Lesson 1, we learned about LBAs — numbered mailboxes that address the drive's storage. But here's a question: what if you want one physical drive to act like multiple separate drives?",
+      "beginMs": 29440,
+      "endMs": 41720,
+      "timestamps": [
+        {
+          "word": "Lesson",
+          "begin": 29440,
+          "end": 29600
+        },
+        {
+          "word": "1,",
+          "begin": 29700,
+          "end": 29840
+        },
+        {
+          "word": "we",
+          "begin": 29920,
+          "end": 30000
+        },
+        {
+          "word": "learned",
+          "begin": 30160,
+          "end": 30400
+        },
+        {
+          "word": "about",
+          "begin": 30420,
+          "end": 30760
+        },
+        {
+          "word": "LBAs",
+          "begin": 30780,
+          "end": 32000
+        },
+        {
+          "word": "numbered",
+          "begin": 32420,
+          "end": 32720
+        },
+        {
+          "word": "mailboxes",
+          "begin": 32759,
+          "end": 33480
+        },
+        {
+          "word": "that",
+          "begin": 33540,
+          "end": 33660
+        },
+        {
+          "word": "address",
+          "begin": 33660,
+          "end": 34020
+        },
+        {
+          "word": "the",
+          "begin": 34080,
+          "end": 34120
+        },
+        {
+          "word": "drive's",
+          "begin": 34180,
+          "end": 34500
+        },
+        {
+          "word": "storage.",
+          "begin": 34500,
+          "end": 34940
+        },
+        {
+          "word": "But",
+          "begin": 36080,
+          "end": 36160
+        },
+        {
+          "word": "here's",
+          "begin": 36200,
+          "end": 36420
+        },
+        {
+          "word": "a",
+          "begin": 36420,
+          "end": 36540
+        },
+        {
+          "word": "question:",
+          "begin": 36560,
+          "end": 37000
+        },
+        {
+          "word": "what",
+          "begin": 37500,
+          "end": 37620
+        },
+        {
+          "word": "if",
+          "begin": 37640,
+          "end": 37760
+        },
+        {
+          "word": "you",
+          "begin": 37760,
+          "end": 37820
+        },
+        {
+          "word": "want",
+          "begin": 37900,
+          "end": 38060
+        },
+        {
+          "word": "one",
+          "begin": 38120,
+          "end": 38320
+        },
+        {
+          "word": "physical",
+          "begin": 38400,
+          "end": 38800
+        },
+        {
+          "word": "drive",
+          "begin": 38800,
+          "end": 39060
+        },
+        {
+          "word": "to",
+          "begin": 39120,
+          "end": 39160
+        },
+        {
+          "word": "act",
+          "begin": 39300,
+          "end": 39480
+        },
+        {
+          "word": "like",
+          "begin": 39500,
+          "end": 39660
+        },
+        {
+          "word": "multiple",
+          "begin": 39760,
+          "end": 40100
+        },
+        {
+          "word": "separate",
+          "begin": 40220,
+          "end": 40500
+        },
+        {
+          "word": "drives?",
+          "begin": 40540,
+          "end": 40920
+        },
+        {
+          "word": "Think",
+          "begin": 41560,
+          "end": 41720
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "Think of a building with separate offices. The building is one physical structure, but each office has its own door, its own lock, and its own address. Tenants in office 1 can't access files in office 2 — they're isolated.",
+      "beginMs": 41740,
+      "endMs": 57220,
+      "timestamps": [
+        {
+          "word": "of",
+          "begin": 41740,
+          "end": 41820
+        },
+        {
+          "word": "a",
+          "begin": 41840,
+          "end": 41860
+        },
+        {
+          "word": "building",
+          "begin": 41940,
+          "end": 42300
+        },
+        {
+          "word": "with",
+          "begin": 42340,
+          "end": 42440
+        },
+        {
+          "word": "separate",
+          "begin": 42520,
+          "end": 42820
+        },
+        {
+          "word": "offices.",
+          "begin": 42880,
+          "end": 43400
+        },
+        {
+          "word": "The",
+          "begin": 43960,
+          "end": 44020
+        },
+        {
+          "word": "building",
+          "begin": 44080,
+          "end": 44420
+        },
+        {
+          "word": "is",
+          "begin": 44440,
+          "end": 44540
+        },
+        {
+          "word": "one",
+          "begin": 44600,
+          "end": 44760
+        },
+        {
+          "word": "physical",
+          "begin": 44840,
+          "end": 45220
+        },
+        {
+          "word": "structure,",
+          "begin": 45260,
+          "end": 45580
+        },
+        {
+          "word": "but",
+          "begin": 46180,
+          "end": 46280
+        },
+        {
+          "word": "each",
+          "begin": 46360,
+          "end": 46520
+        },
+        {
+          "word": "office",
+          "begin": 46620,
+          "end": 46920
+        },
+        {
+          "word": "has",
+          "begin": 46940,
+          "end": 47100
+        },
+        {
+          "word": "its",
+          "begin": 47120,
+          "end": 47240
+        },
+        {
+          "word": "own",
+          "begin": 47300,
+          "end": 47440
+        },
+        {
+          "word": "door,",
+          "begin": 47500,
+          "end": 48320
+        },
+        {
+          "word": "its",
+          "begin": 48380,
+          "end": 48600
+        },
+        {
+          "word": "own",
+          "begin": 48640,
+          "end": 49320
+        },
+        {
+          "word": "lock,",
+          "begin": 49320,
+          "end": 49460
+        },
+        {
+          "word": "and",
+          "begin": 49520,
+          "end": 49640
+        },
+        {
+          "word": "its",
+          "begin": 49700,
+          "end": 49900
+        },
+        {
+          "word": "own",
+          "begin": 49900,
+          "end": 51020
+        },
+        {
+          "word": "address.",
+          "begin": 51020,
+          "end": 51220
+        },
+        {
+          "word": "Tenants",
+          "begin": 51260,
+          "end": 51700
+        },
+        {
+          "word": "in",
+          "begin": 51720,
+          "end": 51980
+        },
+        {
+          "word": "office",
+          "begin": 52060,
+          "end": 52400
+        },
+        {
+          "word": "1",
+          "begin": 52400,
+          "end": 52640
+        },
+        {
+          "word": "can't",
+          "begin": 52700,
+          "end": 52980
+        },
+        {
+          "word": "access",
+          "begin": 53040,
+          "end": 53260
+        },
+        {
+          "word": "files",
+          "begin": 53360,
+          "end": 53620
+        },
+        {
+          "word": "in",
+          "begin": 53700,
+          "end": 54340
+        },
+        {
+          "word": "office",
+          "begin": 54480,
+          "end": 54780
+        },
+        {
+          "word": "2",
+          "begin": 54800,
+          "end": 54960
+        },
+        {
+          "word": "they're",
+          "begin": 55060,
+          "end": 56080
+        },
+        {
+          "word": "isolated.",
+          "begin": 56100,
+          "end": 57060
+        },
+        {
+          "word": "An",
+          "begin": 57140,
+          "end": 57220
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "An NVMe namespace is like one of those offices. It's a logical chunk of the SSD with its own set of LBAs, its own size, and its own LBA format (block size). Most consumer SSDs have a single namespace (the whole drive is one big office), but enterprise drives can split into many — each namespace can even have a different block size.",
+      "beginMs": 57260,
+      "endMs": 78680,
+      "timestamps": [
+        {
+          "word": "NVMe",
+          "begin": 57260,
+          "end": 57600
+        },
+        {
+          "word": "like",
+          "begin": 57260,
+          "end": 57420
+        },
+        {
+          "word": "one",
+          "begin": 57460,
+          "end": 57580
+        },
+        {
+          "word": "of",
+          "begin": 57580,
+          "end": 57660
+        },
+        {
+          "word": "those",
+          "begin": 57680,
+          "end": 57860
+        },
+        {
+          "word": "offices.",
+          "begin": 57900,
+          "end": 58440
+        },
+        {
+          "word": "It's",
+          "begin": 59040,
+          "end": 59140
+        },
+        {
+          "word": "a",
+          "begin": 59160,
+          "end": 59300
+        },
+        {
+          "word": "logical",
+          "begin": 59300,
+          "end": 59680
+        },
+        {
+          "word": "chunk",
+          "begin": 59780,
+          "end": 60020
+        },
+        {
+          "word": "of",
+          "begin": 60020,
+          "end": 60100
+        },
+        {
+          "word": "the",
+          "begin": 60120,
+          "end": 60180
+        },
+        {
+          "word": "SSD",
+          "begin": 60240,
+          "end": 60680
+        },
+        {
+          "word": "with",
+          "begin": 60960,
+          "end": 61080
+        },
+        {
+          "word": "its",
+          "begin": 61100,
+          "end": 61220
+        },
+        {
+          "word": "own",
+          "begin": 61320,
+          "end": 61480
+        },
+        {
+          "word": "set",
+          "begin": 61560,
+          "end": 63020
+        },
+        {
+          "word": "of",
+          "begin": 63120,
+          "end": 63380
+        },
+        {
+          "word": "its",
+          "begin": 63440,
+          "end": 63800
+        },
+        {
+          "word": "own",
+          "begin": 64160,
+          "end": 64239
+        },
+        {
+          "word": "size,",
+          "begin": 64239,
+          "end": 64379
+        },
+        {
+          "word": "and",
+          "begin": 64379,
+          "end": 64720
+        },
+        {
+          "word": "its",
+          "begin": 64819,
+          "end": 65019
+        },
+        {
+          "word": "own",
+          "begin": 65040,
+          "end": 65340
+        },
+        {
+          "word": "LBA",
+          "begin": 65340,
+          "end": 65780
+        },
+        {
+          "word": "format",
+          "begin": 65800,
+          "end": 66420
+        },
+        {
+          "word": "(block",
+          "begin": 65800,
+          "end": 66000
+        },
+        {
+          "word": "size).",
+          "begin": 66060,
+          "end": 66420
+        },
+        {
+          "word": "Most",
+          "begin": 67040,
+          "end": 67320
+        },
+        {
+          "word": "consumer",
+          "begin": 67380,
+          "end": 67840
+        },
+        {
+          "word": "SSDs",
+          "begin": 67860,
+          "end": 68440
+        },
+        {
+          "word": "have",
+          "begin": 68460,
+          "end": 68580
+        },
+        {
+          "word": "a",
+          "begin": 68580,
+          "end": 68620
+        },
+        {
+          "word": "single",
+          "begin": 68760,
+          "end": 68980
+        },
+        {
+          "word": "namespace",
+          "begin": 69080,
+          "end": 69700
+        },
+        {
+          "word": "(the",
+          "begin": 70040,
+          "end": 70080
+        },
+        {
+          "word": "whole",
+          "begin": 70160,
+          "end": 70360
+        },
+        {
+          "word": "drive",
+          "begin": 70440,
+          "end": 70800
+        },
+        {
+          "word": "is",
+          "begin": 70840,
+          "end": 70940
+        },
+        {
+          "word": "one",
+          "begin": 71020,
+          "end": 71180
+        },
+        {
+          "word": "big",
+          "begin": 71260,
+          "end": 71420
+        },
+        {
+          "word": "office),",
+          "begin": 71500,
+          "end": 71940
+        },
+        {
+          "word": "but",
+          "begin": 72400,
+          "end": 72500
+        },
+        {
+          "word": "enterprise",
+          "begin": 72600,
+          "end": 73040
+        },
+        {
+          "word": "drives",
+          "begin": 73100,
+          "end": 73460
+        },
+        {
+          "word": "can",
+          "begin": 73520,
+          "end": 73620
+        },
+        {
+          "word": "split",
+          "begin": 73680,
+          "end": 73920
+        },
+        {
+          "word": "into",
+          "begin": 73960,
+          "end": 74120
+        },
+        {
+          "word": "many",
+          "begin": 74220,
+          "end": 74420
+        },
+        {
+          "word": "each",
+          "begin": 74420,
+          "end": 75120
+        },
+        {
+          "word": "namespace",
+          "begin": 75220,
+          "end": 75760
+        },
+        {
+          "word": "can",
+          "begin": 75800,
+          "end": 75920
+        },
+        {
+          "word": "even",
+          "begin": 76000,
+          "end": 76180
+        },
+        {
+          "word": "have",
+          "begin": 76200,
+          "end": 76340
+        },
+        {
+          "word": "a",
+          "begin": 76360,
+          "end": 76380
+        },
+        {
+          "word": "different",
+          "begin": 76440,
+          "end": 76700
+        },
+        {
+          "word": "block",
+          "begin": 76740,
+          "end": 76980
+        },
+        {
+          "word": "size.",
+          "begin": 77020,
+          "end": 77360
+        },
+        {
+          "word": "Why",
+          "begin": 78060,
+          "end": 78140
+        },
+        {
+          "word": "would",
+          "begin": 78260,
+          "end": 78380
+        },
+        {
+          "word": "you",
+          "begin": 78400,
+          "end": 78440
+        },
+        {
+          "word": "want",
+          "begin": 78500,
+          "end": 78680
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "Why would you want multiple namespaces? In a data center, you might give different virtual machines different namespaces — each VM sees its own &ldquo;drive&rdquo; but they all share one physical SSD. This is more efficient than having separate drives for each VM.",
+      "beginMs": 78720,
+      "endMs": 96480,
+      "timestamps": [
+        {
+          "word": "multiple",
+          "begin": 78720,
+          "end": 79140
+        },
+        {
+          "word": "namespaces?",
+          "begin": 79140,
+          "end": 79880
+        },
+        {
+          "word": "In",
+          "begin": 80420,
+          "end": 80500
+        },
+        {
+          "word": "a",
+          "begin": 80520,
+          "end": 80540
+        },
+        {
+          "word": "data",
+          "begin": 80620,
+          "end": 80840
+        },
+        {
+          "word": "center,",
+          "begin": 80940,
+          "end": 81700
+        },
+        {
+          "word": "you",
+          "begin": 81700,
+          "end": 81740
+        },
+        {
+          "word": "might",
+          "begin": 81800,
+          "end": 81980
+        },
+        {
+          "word": "give",
+          "begin": 82020,
+          "end": 82160
+        },
+        {
+          "word": "different",
+          "begin": 82220,
+          "end": 82520
+        },
+        {
+          "word": "virtual",
+          "begin": 82560,
+          "end": 82840
+        },
+        {
+          "word": "machines",
+          "begin": 82920,
+          "end": 83360
+        },
+        {
+          "word": "different",
+          "begin": 83420,
+          "end": 83680
+        },
+        {
+          "word": "namespaces",
+          "begin": 83680,
+          "end": 84520
+        },
+        {
+          "word": "each",
+          "begin": 84940,
+          "end": 85080
+        },
+        {
+          "word": "VM",
+          "begin": 85160,
+          "end": 85520
+        },
+        {
+          "word": "sees",
+          "begin": 85660,
+          "end": 85860
+        },
+        {
+          "word": "its",
+          "begin": 85880,
+          "end": 86400
+        },
+        {
+          "word": "own",
+          "begin": 86520,
+          "end": 87260
+        },
+        {
+          "word": "&ldquo;drive&rdquo;",
+          "begin": 87800,
+          "end": 89060
+        },
+        {
+          "word": "but",
+          "begin": 89760,
+          "end": 89840
+        },
+        {
+          "word": "they",
+          "begin": 89860,
+          "end": 89940
+        },
+        {
+          "word": "all",
+          "begin": 90100,
+          "end": 90220
+        },
+        {
+          "word": "share",
+          "begin": 90320,
+          "end": 90440
+        },
+        {
+          "word": "one",
+          "begin": 90660,
+          "end": 90860
+        },
+        {
+          "word": "physical",
+          "begin": 90960,
+          "end": 91300
+        },
+        {
+          "word": "SSD.",
+          "begin": 91520,
+          "end": 92080
+        },
+        {
+          "word": "This",
+          "begin": 92900,
+          "end": 93060
+        },
+        {
+          "word": "is",
+          "begin": 93080,
+          "end": 93180
+        },
+        {
+          "word": "more",
+          "begin": 93240,
+          "end": 93380
+        },
+        {
+          "word": "efficient",
+          "begin": 93380,
+          "end": 93840
+        },
+        {
+          "word": "than",
+          "begin": 93880,
+          "end": 93980
+        },
+        {
+          "word": "having",
+          "begin": 94020,
+          "end": 94260
+        },
+        {
+          "word": "separate",
+          "begin": 94360,
+          "end": 94660
+        },
+        {
+          "word": "drives",
+          "begin": 94700,
+          "end": 95080
+        },
+        {
+          "word": "for",
+          "begin": 95140,
+          "end": 95200
+        },
+        {
+          "word": "each",
+          "begin": 95340,
+          "end": 95480
+        },
+        {
+          "word": "VM.",
+          "begin": 95560,
+          "end": 95900
+        },
+        {
+          "word": "Remember",
+          "begin": 96180,
+          "end": 96480
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "Remember CDW1 in the 64-byte command structure? That's the Namespace ID (NSID). Every read, write, and TRIM command must specify which namespace it's targeting. For a drive with a single namespace, it's always NSID=1. The SSD rejects commands with an invalid NSID.",
+      "beginMs": 96600,
+      "endMs": 116160,
+      "timestamps": [
+        {
+          "word": "CDW1",
+          "begin": 96600,
+          "end": 97420
+        },
+        {
+          "word": "in",
+          "begin": 97520,
+          "end": 97600
+        },
+        {
+          "word": "the",
+          "begin": 97600,
+          "end": 97660
+        },
+        {
+          "word": "64-byte",
+          "begin": 97760,
+          "end": 98520
+        },
+        {
+          "word": "command",
+          "begin": 98560,
+          "end": 98900
+        },
+        {
+          "word": "structure?",
+          "begin": 98900,
+          "end": 99700
+        },
+        {
+          "word": "That's",
+          "begin": 99700,
+          "end": 99900
+        },
+        {
+          "word": "the",
+          "begin": 99940,
+          "end": 100000
+        },
+        {
+          "word": "Namespace",
+          "begin": 100060,
+          "end": 100660
+        },
+        {
+          "word": "ID",
+          "begin": 100740,
+          "end": 100940
+        },
+        {
+          "word": "(NSID).",
+          "begin": 101120,
+          "end": 102220
+        },
+        {
+          "word": "Every",
+          "begin": 102760,
+          "end": 102960
+        },
+        {
+          "word": "read,",
+          "begin": 103140,
+          "end": 103420
+        },
+        {
+          "word": "write,",
+          "begin": 103600,
+          "end": 105020
+        },
+        {
+          "word": "and",
+          "begin": 105060,
+          "end": 105140
+        },
+        {
+          "word": "command",
+          "begin": 105180,
+          "end": 105400
+        },
+        {
+          "word": "must",
+          "begin": 105560,
+          "end": 105760
+        },
+        {
+          "word": "specify",
+          "begin": 105780,
+          "end": 106200
+        },
+        {
+          "word": "which",
+          "begin": 106340,
+          "end": 106520
+        },
+        {
+          "word": "namespace",
+          "begin": 106600,
+          "end": 107100
+        },
+        {
+          "word": "it's",
+          "begin": 107200,
+          "end": 107320
+        },
+        {
+          "word": "targeting.",
+          "begin": 107360,
+          "end": 107800
+        },
+        {
+          "word": "For",
+          "begin": 107960,
+          "end": 108080
+        },
+        {
+          "word": "a",
+          "begin": 108100,
+          "end": 108120
+        },
+        {
+          "word": "drive",
+          "begin": 108200,
+          "end": 108540
+        },
+        {
+          "word": "with",
+          "begin": 108540,
+          "end": 108640
+        },
+        {
+          "word": "a",
+          "begin": 108660,
+          "end": 108680
+        },
+        {
+          "word": "single",
+          "begin": 108820,
+          "end": 109020
+        },
+        {
+          "word": "namespace,",
+          "begin": 109140,
+          "end": 110680
+        },
+        {
+          "word": "it's",
+          "begin": 110680,
+          "end": 111420
+        },
+        {
+          "word": "always",
+          "begin": 111680,
+          "end": 112040
+        },
+        {
+          "word": "NSID=1.",
+          "begin": 112120,
+          "end": 113220
+        },
+        {
+          "word": "The",
+          "begin": 113280,
+          "end": 113360
+        },
+        {
+          "word": "rejects",
+          "begin": 113560,
+          "end": 113960
+        },
+        {
+          "word": "commands",
+          "begin": 114020,
+          "end": 114480
+        },
+        {
+          "word": "with",
+          "begin": 114500,
+          "end": 114540
+        },
+        {
+          "word": "an",
+          "begin": 114540,
+          "end": 114620
+        },
+        {
+          "word": "invalid",
+          "begin": 114640,
+          "end": 114960
+        },
+        {
+          "word": "NSID.",
+          "begin": 114980,
+          "end": 115360
+        },
+        {
+          "word": "Creating",
+          "begin": 115460,
+          "end": 115760
+        },
+        {
+          "word": "and",
+          "begin": 115860,
+          "end": 116160
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "info",
+      "text": "Creating and deleting namespaces: Enterprise drives support admin commands to create, delete, attach, and detach namespaces on the fly. You can carve a 2 TB drive into four 500 GB namespaces, each with its own LBA format. The commands are Namespace Management (opcode 0x0D) and Namespace Attachment (opcode 0x15).",
+      "beginMs": 116560,
+      "endMs": 138500,
+      "timestamps": [
+        {
+          "word": "deleting",
+          "begin": 116560,
+          "end": 117000
+        },
+        {
+          "word": "namespaces:",
+          "begin": 117040,
+          "end": 117420
+        },
+        {
+          "word": "Enterprise",
+          "begin": 117440,
+          "end": 118540
+        },
+        {
+          "word": "drives",
+          "begin": 118580,
+          "end": 118960
+        },
+        {
+          "word": "support",
+          "begin": 118960,
+          "end": 119320
+        },
+        {
+          "word": "admin",
+          "begin": 119360,
+          "end": 119740
+        },
+        {
+          "word": "commands",
+          "begin": 119820,
+          "end": 120380
+        },
+        {
+          "word": "to",
+          "begin": 120440,
+          "end": 120500
+        },
+        {
+          "word": "create,",
+          "begin": 120660,
+          "end": 121120
+        },
+        {
+          "word": "delete,",
+          "begin": 121160,
+          "end": 121820
+        },
+        {
+          "word": "attach,",
+          "begin": 121840,
+          "end": 122520
+        },
+        {
+          "word": "and",
+          "begin": 122620,
+          "end": 123040
+        },
+        {
+          "word": "detach",
+          "begin": 123100,
+          "end": 123520
+        },
+        {
+          "word": "namespaces",
+          "begin": 123600,
+          "end": 124260
+        },
+        {
+          "word": "on",
+          "begin": 124360,
+          "end": 124460
+        },
+        {
+          "word": "the",
+          "begin": 124460,
+          "end": 124520
+        },
+        {
+          "word": "fly.",
+          "begin": 124580,
+          "end": 124720
+        },
+        {
+          "word": "You",
+          "begin": 124980,
+          "end": 125020
+        },
+        {
+          "word": "can",
+          "begin": 125080,
+          "end": 125180
+        },
+        {
+          "word": "carve",
+          "begin": 125220,
+          "end": 125460
+        },
+        {
+          "word": "a",
+          "begin": 125460,
+          "end": 125580
+        },
+        {
+          "word": "2",
+          "begin": 125580,
+          "end": 125680
+        },
+        {
+          "word": "TB",
+          "begin": 125800,
+          "end": 126240
+        },
+        {
+          "word": "drive",
+          "begin": 126260,
+          "end": 126620
+        },
+        {
+          "word": "into",
+          "begin": 126660,
+          "end": 126800
+        },
+        {
+          "word": "four",
+          "begin": 126920,
+          "end": 127480
+        },
+        {
+          "word": "500",
+          "begin": 127480,
+          "end": 127700
+        },
+        {
+          "word": "GB",
+          "begin": 127740,
+          "end": 128199
+        },
+        {
+          "word": "namespaces,",
+          "begin": 128280,
+          "end": 129000
+        },
+        {
+          "word": "each",
+          "begin": 129199,
+          "end": 129360
+        },
+        {
+          "word": "with",
+          "begin": 129419,
+          "end": 129520
+        },
+        {
+          "word": "its",
+          "begin": 129520,
+          "end": 129639
+        },
+        {
+          "word": "own",
+          "begin": 129720,
+          "end": 129880
+        },
+        {
+          "word": "LBA",
+          "begin": 129960,
+          "end": 130259
+        },
+        {
+          "word": "format.",
+          "begin": 130419,
+          "end": 130860
+        },
+        {
+          "word": "The",
+          "begin": 131120,
+          "end": 131160
+        },
+        {
+          "word": "commands",
+          "begin": 131200,
+          "end": 131600
+        },
+        {
+          "word": "are",
+          "begin": 131600,
+          "end": 131660
+        },
+        {
+          "word": "Namespace",
+          "begin": 131840,
+          "end": 132420
+        },
+        {
+          "word": "Management",
+          "begin": 132500,
+          "end": 132960
+        },
+        {
+          "word": "(opcode",
+          "begin": 133060,
+          "end": 133500
+        },
+        {
+          "word": "0x0D)",
+          "begin": 133580,
+          "end": 134760
+        },
+        {
+          "word": "and",
+          "begin": 135160,
+          "end": 135260
+        },
+        {
+          "word": "Namespace",
+          "begin": 135360,
+          "end": 135940
+        },
+        {
+          "word": "Attachment",
+          "begin": 135980,
+          "end": 136540
+        },
+        {
+          "word": "(opcode",
+          "begin": 136640,
+          "end": 137080
+        },
+        {
+          "word": "0x15).",
+          "begin": 137140,
+          "end": 138500
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "reveal",
+      "text": "Knowledge check: In a data center running 50 virtual machines on a single server with one NVMe SSD, why would you use multiple namespaces instead of simply creating 50 partitions on a single namespace? What does namespace-level isolation give you that partition-level isolation does not? The answer: Namespaces provide hardware-level isolation that partitions cannot. With partitions, all VMs share the same namespace — a misbehaving VM could issue a Format NVM command or write to wrong LBAs and corrupt another VM's partition, because the SSD sees it all as one address space. With separate namespaces, each VM gets its own NSID with an independent LBA range starting at 0. The SSD hardware enforces that commands targeting NSID 2 cannot touch data in NSID 3 — the isolation is at the NVMe protocol level, not just a software convention. Additionally, different namespaces can have different LBA formats (one VM might need 512-byte sectors for legacy compatibility while another uses 4KB), different protection settings (T10-PI for critical workloads), and can be independently formatted or secure-erased without affecting other namespaces. Combined with SR-IOV, each VM can get a dedicated virtual NVMe controller mapped to its namespace — achieving near-native I/O performance without hypervisor involvement on the data path.",
+      "beginMs": 138720,
+      "endMs": 217480,
+      "timestamps": [
+        {
+          "word": "Knowledge",
+          "begin": 138720,
+          "end": 139040
+        },
+        {
+          "word": "check:",
+          "begin": 139140,
+          "end": 139400
+        },
+        {
+          "word": "In",
+          "begin": 139640,
+          "end": 139720
+        },
+        {
+          "word": "a",
+          "begin": 139740,
+          "end": 139760
+        },
+        {
+          "word": "data",
+          "begin": 139840,
+          "end": 140040
+        },
+        {
+          "word": "center",
+          "begin": 140140,
+          "end": 140580
+        },
+        {
+          "word": "running",
+          "begin": 140600,
+          "end": 140800
+        },
+        {
+          "word": "50",
+          "begin": 140880,
+          "end": 141140
+        },
+        {
+          "word": "virtual",
+          "begin": 141220,
+          "end": 141560
+        },
+        {
+          "word": "machines",
+          "begin": 141620,
+          "end": 142060
+        },
+        {
+          "word": "on",
+          "begin": 142140,
+          "end": 141800
+        },
+        {
+          "word": "a",
+          "begin": 141840,
+          "end": 142060
+        },
+        {
+          "word": "single",
+          "begin": 142140,
+          "end": 142400
+        },
+        {
+          "word": "server",
+          "begin": 142520,
+          "end": 143280
+        },
+        {
+          "word": "with",
+          "begin": 143280,
+          "end": 143780
+        },
+        {
+          "word": "one",
+          "begin": 143880,
+          "end": 144020
+        },
+        {
+          "word": "SSD,",
+          "begin": 144040,
+          "end": 144980
+        },
+        {
+          "word": "why",
+          "begin": 145280,
+          "end": 145340
+        },
+        {
+          "word": "would",
+          "begin": 145440,
+          "end": 145560
+        },
+        {
+          "word": "you",
+          "begin": 145560,
+          "end": 145700
+        },
+        {
+          "word": "use",
+          "begin": 145700,
+          "end": 145880
+        },
+        {
+          "word": "multiple",
+          "begin": 145940,
+          "end": 146280
+        },
+        {
+          "word": "namespaces",
+          "begin": 146360,
+          "end": 147060
+        },
+        {
+          "word": "instead",
+          "begin": 147140,
+          "end": 147460
+        },
+        {
+          "word": "of",
+          "begin": 147460,
+          "end": 147540
+        },
+        {
+          "word": "simply",
+          "begin": 147600,
+          "end": 147840
+        },
+        {
+          "word": "creating",
+          "begin": 147920,
+          "end": 148280
+        },
+        {
+          "word": "50",
+          "begin": 148380,
+          "end": 148600
+        },
+        {
+          "word": "partitions",
+          "begin": 148700,
+          "end": 149280
+        },
+        {
+          "word": "on",
+          "begin": 149340,
+          "end": 149420
+        },
+        {
+          "word": "a",
+          "begin": 149440,
+          "end": 149460
+        },
+        {
+          "word": "single",
+          "begin": 149560,
+          "end": 149760
+        },
+        {
+          "word": "namespace?",
+          "begin": 149860,
+          "end": 150480
+        },
+        {
+          "word": "What",
+          "begin": 150700,
+          "end": 150840
+        },
+        {
+          "word": "does",
+          "begin": 150860,
+          "end": 151000
+        },
+        {
+          "word": "namespace-level",
+          "begin": 151060,
+          "end": 151760
+        },
+        {
+          "word": "isolation",
+          "begin": 151760,
+          "end": 152480
+        },
+        {
+          "word": "give",
+          "begin": 152540,
+          "end": 152680
+        },
+        {
+          "word": "you",
+          "begin": 152700,
+          "end": 152760
+        },
+        {
+          "word": "that",
+          "begin": 152880,
+          "end": 153000
+        },
+        {
+          "word": "partition-level",
+          "begin": 153040,
+          "end": 153780
+        },
+        {
+          "word": "isolation",
+          "begin": 153880,
+          "end": 154440
+        },
+        {
+          "word": "does",
+          "begin": 154480,
+          "end": 154640
+        },
+        {
+          "word": "not?",
+          "begin": 154680,
+          "end": 155000
+        },
+        {
+          "word": "The",
+          "begin": 155300,
+          "end": 155360
+        },
+        {
+          "word": "answer:",
+          "begin": 155460,
+          "end": 155720
+        },
+        {
+          "word": "Namespaces",
+          "begin": 156140,
+          "end": 156780
+        },
+        {
+          "word": "provide",
+          "begin": 156840,
+          "end": 157140
+        },
+        {
+          "word": "hardware-level",
+          "begin": 157220,
+          "end": 157840
+        },
+        {
+          "word": "isolation",
+          "begin": 157920,
+          "end": 158520
+        },
+        {
+          "word": "that",
+          "begin": 158600,
+          "end": 158700
+        },
+        {
+          "word": "partitions",
+          "begin": 158740,
+          "end": 159260
+        },
+        {
+          "word": "cannot.",
+          "begin": 159320,
+          "end": 159740
+        },
+        {
+          "word": "With",
+          "begin": 159920,
+          "end": 160020
+        },
+        {
+          "word": "partitions,",
+          "begin": 160080,
+          "end": 160740
+        },
+        {
+          "word": "all",
+          "begin": 160980,
+          "end": 161100
+        },
+        {
+          "word": "VMs",
+          "begin": 161180,
+          "end": 161560
+        },
+        {
+          "word": "share",
+          "begin": 161640,
+          "end": 161800
+        },
+        {
+          "word": "the",
+          "begin": 161860,
+          "end": 161900
+        },
+        {
+          "word": "same",
+          "begin": 162000,
+          "end": 162200
+        },
+        {
+          "word": "namespace",
+          "begin": 162240,
+          "end": 162860
+        },
+        {
+          "word": "a",
+          "begin": 163120,
+          "end": 163140
+        },
+        {
+          "word": "misbehaving",
+          "begin": 163200,
+          "end": 163780
+        },
+        {
+          "word": "VM",
+          "begin": 163840,
+          "end": 164140
+        },
+        {
+          "word": "could",
+          "begin": 164220,
+          "end": 164340
+        },
+        {
+          "word": "issue",
+          "begin": 164400,
+          "end": 164600
+        },
+        {
+          "word": "a",
+          "begin": 164680,
+          "end": 164720
+        },
+        {
+          "word": "Format",
+          "begin": 164800,
+          "end": 165120
+        },
+        {
+          "word": "NVM",
+          "begin": 165180,
+          "end": 165540
+        },
+        {
+          "word": "command",
+          "begin": 165600,
+          "end": 166040
+        },
+        {
+          "word": "or",
+          "begin": 166340,
+          "end": 166360
+        },
+        {
+          "word": "write",
+          "begin": 166800,
+          "end": 166960
+        },
+        {
+          "word": "to",
+          "begin": 167000,
+          "end": 167080
+        },
+        {
+          "word": "wrong",
+          "begin": 167160,
+          "end": 167380
+        },
+        {
+          "word": "LBAs",
+          "begin": 167480,
+          "end": 168020
+        },
+        {
+          "word": "and",
+          "begin": 168100,
+          "end": 168180
+        },
+        {
+          "word": "corrupt",
+          "begin": 168220,
+          "end": 168580
+        },
+        {
+          "word": "another",
+          "begin": 168620,
+          "end": 168880
+        },
+        {
+          "word": "VM's",
+          "begin": 168960,
+          "end": 169280
+        },
+        {
+          "word": "partition,",
+          "begin": 169340,
+          "end": 169860
+        },
+        {
+          "word": "because",
+          "begin": 170160,
+          "end": 170380
+        },
+        {
+          "word": "the",
+          "begin": 170380,
+          "end": 170480
+        },
+        {
+          "word": "SSD",
+          "begin": 170560,
+          "end": 171000
+        },
+        {
+          "word": "sees",
+          "begin": 171140,
+          "end": 171320
+        },
+        {
+          "word": "it",
+          "begin": 171340,
+          "end": 171400
+        },
+        {
+          "word": "all",
+          "begin": 171400,
+          "end": 171580
+        },
+        {
+          "word": "as",
+          "begin": 171640,
+          "end": 171740
+        },
+        {
+          "word": "one",
+          "begin": 171800,
+          "end": 171960
+        },
+        {
+          "word": "address",
+          "begin": 172020,
+          "end": 172200
+        },
+        {
+          "word": "space.",
+          "begin": 172300,
+          "end": 172720
+        },
+        {
+          "word": "With",
+          "begin": 172860,
+          "end": 172960
+        },
+        {
+          "word": "separate",
+          "begin": 173040,
+          "end": 173320
+        },
+        {
+          "word": "namespaces,",
+          "begin": 173340,
+          "end": 174080
+        },
+        {
+          "word": "each",
+          "begin": 174300,
+          "end": 174440
+        },
+        {
+          "word": "VM",
+          "begin": 174520,
+          "end": 174800
+        },
+        {
+          "word": "gets",
+          "begin": 174860,
+          "end": 175040
+        },
+        {
+          "word": "its",
+          "begin": 175080,
+          "end": 175200
+        },
+        {
+          "word": "own",
+          "begin": 175260,
+          "end": 175380
+        },
+        {
+          "word": "NSID",
+          "begin": 175480,
+          "end": 175960
+        },
+        {
+          "word": "with",
+          "begin": 176000,
+          "end": 176240
+        },
+        {
+          "word": "an",
+          "begin": 176240,
+          "end": 176340
+        },
+        {
+          "word": "independent",
+          "begin": 176360,
+          "end": 176880
+        },
+        {
+          "word": "LBA",
+          "begin": 176900,
+          "end": 177240
+        },
+        {
+          "word": "range",
+          "begin": 177260,
+          "end": 177780
+        },
+        {
+          "word": "starting",
+          "begin": 177840,
+          "end": 178140
+        },
+        {
+          "word": "at",
+          "begin": 178160,
+          "end": 178280
+        },
+        {
+          "word": "0.",
+          "begin": 178340,
+          "end": 179100
+        },
+        {
+          "word": "The",
+          "begin": 179200,
+          "end": 179220
+        },
+        {
+          "word": "SSD",
+          "begin": 179240,
+          "end": 179480
+        },
+        {
+          "word": "hardware",
+          "begin": 179560,
+          "end": 179980
+        },
+        {
+          "word": "enforces",
+          "begin": 179980,
+          "end": 180500
+        },
+        {
+          "word": "that",
+          "begin": 180540,
+          "end": 180660
+        },
+        {
+          "word": "commands",
+          "begin": 180720,
+          "end": 181160
+        },
+        {
+          "word": "targeting",
+          "begin": 181220,
+          "end": 181600
+        },
+        {
+          "word": "NSID",
+          "begin": 181700,
+          "end": 182200
+        },
+        {
+          "word": "2",
+          "begin": 182320,
+          "end": 182420
+        },
+        {
+          "word": "cannot",
+          "begin": 182540,
+          "end": 182760
+        },
+        {
+          "word": "touch",
+          "begin": 182900,
+          "end": 183260
+        },
+        {
+          "word": "data",
+          "begin": 183340,
+          "end": 183740
+        },
+        {
+          "word": "in",
+          "begin": 183780,
+          "end": 183800
+        },
+        {
+          "word": "NSID",
+          "begin": 183840,
+          "end": 184220
+        },
+        {
+          "word": "3",
+          "begin": 184360,
+          "end": 184520
+        },
+        {
+          "word": "the",
+          "begin": 184920,
+          "end": 184980
+        },
+        {
+          "word": "isolation",
+          "begin": 185040,
+          "end": 185600
+        },
+        {
+          "word": "is",
+          "begin": 185620,
+          "end": 185720
+        },
+        {
+          "word": "at",
+          "begin": 185760,
+          "end": 185900
+        },
+        {
+          "word": "the",
+          "begin": 185920,
+          "end": 185940
+        },
+        {
+          "word": "NVMe",
+          "begin": 186040,
+          "end": 186500
+        },
+        {
+          "word": "protocol",
+          "begin": 186620,
+          "end": 187120
+        },
+        {
+          "word": "level,",
+          "begin": 187160,
+          "end": 187320
+        },
+        {
+          "word": "not",
+          "begin": 187520,
+          "end": 187680
+        },
+        {
+          "word": "just",
+          "begin": 187720,
+          "end": 187940
+        },
+        {
+          "word": "a",
+          "begin": 187960,
+          "end": 187980
+        },
+        {
+          "word": "software",
+          "begin": 188060,
+          "end": 188400
+        },
+        {
+          "word": "convention.",
+          "begin": 188520,
+          "end": 189080
+        },
+        {
+          "word": "Additionally,",
+          "begin": 189240,
+          "end": 189720
+        },
+        {
+          "word": "different",
+          "begin": 189960,
+          "end": 190260
+        },
+        {
+          "word": "namespaces",
+          "begin": 190280,
+          "end": 190920
+        },
+        {
+          "word": "can",
+          "begin": 190960,
+          "end": 191080
+        },
+        {
+          "word": "have",
+          "begin": 191100,
+          "end": 191240
+        },
+        {
+          "word": "different",
+          "begin": 191280,
+          "end": 191560
+        },
+        {
+          "word": "LBA",
+          "begin": 191560,
+          "end": 191340
+        },
+        {
+          "word": "formats",
+          "begin": 191420,
+          "end": 191840
+        },
+        {
+          "word": "(one",
+          "begin": 191940,
+          "end": 192180
+        },
+        {
+          "word": "VM",
+          "begin": 192280,
+          "end": 192760
+        },
+        {
+          "word": "might",
+          "begin": 192800,
+          "end": 193080
+        },
+        {
+          "word": "512-byte",
+          "begin": 193120,
+          "end": 194060
+        },
+        {
+          "word": "sectors",
+          "begin": 194060,
+          "end": 194460
+        },
+        {
+          "word": "for",
+          "begin": 194520,
+          "end": 194700
+        },
+        {
+          "word": "legacy",
+          "begin": 194760,
+          "end": 195140
+        },
+        {
+          "word": "compatibility",
+          "begin": 195180,
+          "end": 196020
+        },
+        {
+          "word": "while",
+          "begin": 196080,
+          "end": 196200
+        },
+        {
+          "word": "another",
+          "begin": 196220,
+          "end": 196880
+        },
+        {
+          "word": "uses",
+          "begin": 196900,
+          "end": 197320
+        },
+        {
+          "word": "4KB),",
+          "begin": 197320,
+          "end": 197600
+        },
+        {
+          "word": "different",
+          "begin": 197660,
+          "end": 198680
+        },
+        {
+          "word": "protection",
+          "begin": 198740,
+          "end": 198940
+        },
+        {
+          "word": "settings",
+          "begin": 198940,
+          "end": 199220
+        },
+        {
+          "word": "(T10-PI",
+          "begin": 199240,
+          "end": 200200
+        },
+        {
+          "word": "for",
+          "begin": 200240,
+          "end": 200460
+        },
+        {
+          "word": "critical",
+          "begin": 200520,
+          "end": 201200
+        },
+        {
+          "word": "workloads),",
+          "begin": 201240,
+          "end": 202020
+        },
+        {
+          "word": "and",
+          "begin": 202220,
+          "end": 202340
+        },
+        {
+          "word": "can",
+          "begin": 202340,
+          "end": 202440
+        },
+        {
+          "word": "be",
+          "begin": 202480,
+          "end": 202520
+        },
+        {
+          "word": "independently",
+          "begin": 202640,
+          "end": 203180
+        },
+        {
+          "word": "formatted",
+          "begin": 203300,
+          "end": 203780
+        },
+        {
+          "word": "or",
+          "begin": 203860,
+          "end": 203880
+        },
+        {
+          "word": "secure-erased",
+          "begin": 204020,
+          "end": 204720
+        },
+        {
+          "word": "without",
+          "begin": 204740,
+          "end": 205020
+        },
+        {
+          "word": "affecting",
+          "begin": 205020,
+          "end": 205400
+        },
+        {
+          "word": "other",
+          "begin": 205440,
+          "end": 205560
+        },
+        {
+          "word": "namespaces.",
+          "begin": 205640,
+          "end": 206360
+        },
+        {
+          "word": "Combined",
+          "begin": 206680,
+          "end": 207220
+        },
+        {
+          "word": "with",
+          "begin": 207300,
+          "end": 207460
+        },
+        {
+          "word": "SR-IOV,",
+          "begin": 207500,
+          "end": 208360
+        },
+        {
+          "word": "each",
+          "begin": 208800,
+          "end": 209060
+        },
+        {
+          "word": "VM",
+          "begin": 209080,
+          "end": 209360
+        },
+        {
+          "word": "can",
+          "begin": 209420,
+          "end": 209540
+        },
+        {
+          "word": "get",
+          "begin": 209560,
+          "end": 209600
+        },
+        {
+          "word": "a",
+          "begin": 209600,
+          "end": 209720
+        },
+        {
+          "word": "dedicated",
+          "begin": 209800,
+          "end": 210320
+        },
+        {
+          "word": "virtual",
+          "begin": 210360,
+          "end": 210880
+        },
+        {
+          "word": "NVMe",
+          "begin": 210940,
+          "end": 211360
+        },
+        {
+          "word": "controller",
+          "begin": 211460,
+          "end": 211880
+        },
+        {
+          "word": "mapped",
+          "begin": 211980,
+          "end": 212200
+        },
+        {
+          "word": "to",
+          "begin": 212200,
+          "end": 212320
+        },
+        {
+          "word": "its",
+          "begin": 212360,
+          "end": 212480
+        },
+        {
+          "word": "namespace",
+          "begin": 212540,
+          "end": 213160
+        },
+        {
+          "word": "achieving",
+          "begin": 213440,
+          "end": 213860
+        },
+        {
+          "word": "near-native",
+          "begin": 213920,
+          "end": 214380
+        },
+        {
+          "word": "I/O",
+          "begin": 214460,
+          "end": 214620
+        },
+        {
+          "word": "performance",
+          "begin": 214720,
+          "end": 215260
+        },
+        {
+          "word": "without",
+          "begin": 215300,
+          "end": 215560
+        },
+        {
+          "word": "hypervisor",
+          "begin": 215580,
+          "end": 216160
+        },
+        {
+          "word": "involvement",
+          "begin": 216160,
+          "end": 216660
+        },
+        {
+          "word": "on",
+          "begin": 216700,
+          "end": 216780
+        },
+        {
+          "word": "the",
+          "begin": 216780,
+          "end": 216840
+        },
+        {
+          "word": "data",
+          "begin": 216900,
+          "end": 217080
+        },
+        {
+          "word": "path.",
+          "begin": 217140,
+          "end": 217480
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

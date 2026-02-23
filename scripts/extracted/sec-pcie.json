@@ -1,0 +1,91 @@
+{
+  "sectionId": "sec-pcie",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "The golden contacts on the bottom of an M.2 SSD are the edge connector — they plug directly into the M.2 slot on your motherboard. Each contact (&ldquo;tooth&rdquo;) carries a specific signal. The M-key notch (the gap in the contacts) ensures you can only insert the SSD in the correct orientation, and identifies it as an NVMe device (not SATA).",
+      "blockIndex": 0
+    },
+    {
+      "type": "paragraph",
+      "text": "Each PCIe lane uses 4 physical contacts: TX+/TX- (transmit differential pair) and RX+/RX- (receive differential pair). The differential signaling (two wires carrying opposite signals) allows the receiver to cancel out noise — this is how PCIe achieves multi-GHz speeds over a short PCB trace. An x4 NVMe SSD uses 4 lanes = 16 signal contacts + ground, power, clock, and control pins. The M-key notch (pins 16-38 are absent) prevents inserting a SATA M.2 drive into an NVMe-only slot.",
+      "blockIndex": 1
+    },
+    {
+      "type": "heading",
+      "text": "How the SSD Connects to Your Computer — PCIe",
+      "blockIndex": 2
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: PCIe Is a Multi-Lane Highway. Each PCIe lane is like a lane on a highway. A x4 link means 4 lanes — data flows in both directions simultaneously. Link speed (GT/s) is the speed limit. The total bandwidth = lanes × speed limit × encoding efficiency.",
+      "blockIndex": 3
+    },
+    {
+      "type": "term",
+      "text": "PCIe (Peripheral Component Interconnect Express): A high-speed serial bus standard for connecting hardware devices (SSDs, GPUs, NICs) to the CPU. Data travels in 'lanes' — each lane is an independent bidirectional link.",
+      "blockIndex": 4
+    },
+    {
+      "type": "term",
+      "text": "GT/s (Gigatransfers per second): The raw signaling rate of a PCIe lane. Gen 3 = 8 GT/s, Gen 4 = 16 GT/s, Gen 5 = 32 GT/s. Actual usable bandwidth is lower due to encoding overhead (128b/130b for Gen 3+).",
+      "blockIndex": 5
+    },
+    {
+      "type": "term",
+      "text": "TLP (Transaction Layer Packet): The basic unit of data transfer over PCIe. Every NVMe operation (doorbell ring, DMA transfer, interrupt) is carried inside a TLP.",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "In earlier lessons we looked inside the SSD — its cells, pages, blocks, controller, and FTL. But how does the SSD actually talk to your computer's CPU and memory? Through a high-speed connection called PCIe (Peripheral Component Interconnect Express).",
+      "blockIndex": 7
+    },
+    {
+      "type": "paragraph",
+      "text": "Think of PCIe as a multi-lane highway between the CPU and the SSD. Each lane is like one lane on the highway — data flows in both directions simultaneously. An NVMe SSD typically uses 4 lanes (written as &ldquo;x4&rdquo;), and newer generations of PCIe make each lane faster.",
+      "blockIndex": 8
+    },
+    {
+      "type": "paragraph",
+      "text": "How many lanes the device uses simultaneously. Written as &ldquo;x4&rdquo; (pronounced &ldquo;by four&rdquo;). Each lane is an independent bidirectional data path. An NVMe SSD uses x4 (4 lanes). A GPU typically uses x16 (16 lanes). More lanes = more parallel data paths = more bandwidth. When you see &ldquo;PCIe x4&rdquo; in an SSD spec, that's the link width.",
+      "blockIndex": 9
+    },
+    {
+      "type": "paragraph",
+      "text": "How fast each lane transfers data, measured in GT/s (Giga-Transfers per second). Each &ldquo;transfer&rdquo; sends 1 bit. PCIe Gen 4 runs at 16 GT/s per lane — meaning each lane toggles its signal 16 billion times per second. When SSD specs say &ldquo;PCIe Gen 4&rdquo;, they're referring to the link speed.",
+      "blockIndex": 10
+    },
+    {
+      "type": "paragraph",
+      "text": "Total bandwidth = link speed × link width. A &ldquo;PCIe Gen 4 x4&rdquo; SSD means: 16 GT/s per lane × 4 lanes = 64 GT/s raw. After encoding overhead, that's about ~7.88 GB/s of usable bandwidth. This is why SSD specs advertise &ldquo;up to 7 GB/s&rdquo; — it's the theoretical maximum of the PCIe link.",
+      "blockIndex": 11
+    },
+    {
+      "type": "paragraph",
+      "text": "Use the calculator below to see how bandwidth scales with generation and lane count:",
+      "blockIndex": 12
+    },
+    {
+      "type": "paragraph",
+      "text": "Why encoding overhead? Each &ldquo;transfer&rdquo; in GT/s sends 1 raw bit (including encoding overhead). We multiply by the encoding efficiency to get usable data bits, then divide by 8 to convert bits to bytes.",
+      "blockIndex": 13
+    },
+    {
+      "type": "paragraph",
+      "text": "Data moves through PCIe in TLPs — the packets that flow through the lanes above. Every NVMe interaction is one or more TLPs.",
+      "blockIndex": 14
+    },
+    {
+      "type": "info",
+      "text": "PCIe link negotiation: When the SSD powers on, the PCIe link doesn't just start at full speed. The SSD and motherboard perform link training — they negotiate the fastest speed and widest link both sides support. If your M.2 slot only has 2 PCIe lanes wired, an x4 SSD will run at x2 (half bandwidth). You can check the negotiated link with: lspci -vv | grep \"LnkSta\" — it shows both the current speed (e.g., 16 GT/s) and width (e.g., x4).",
+      "blockIndex": 15
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: Your NVMe SSD spec sheet says 'PCIe Gen 4 x4' but advertises 'up to 7 GB/s.' Why isn't it 16 GB/s (since Gen 4 is 16 GT/s per lane times 4 lanes = 64 GT/s)? Walk through the math that explains the gap between raw signaling rate and usable bandwidth. The answer: PCIe Gen 4 runs at 16 GT/s per lane. With 4 lanes that's 64 GT/s raw. But each 'transfer' is just 1 bit (including encoding overhead). Gen 4 uses 128b/130b encoding, meaning for every 130 bits transmitted, only 128 carry actual data — about 98.5% efficiency. So: 64 GT/s × (128/130) = ~63.02 Gbit/s of usable data. Divide by 8 to convert bits to bytes: ~7.88 GB/s. That's why SSD specs say 'up to 7 GB/s' — it's the theoretical maximum of the PCIe link after encoding overhead. The remaining gap comes from protocol overhead (TLP headers, flow control) and the SSD controller's own limitations.",
+      "requiresReveal": true,
+      "blockIndex": 16
+    }
+  ]
+}

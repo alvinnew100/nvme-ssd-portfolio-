@@ -1,0 +1,3151 @@
+{
+  "sectionId": "sec-nand-hierarchy",
+  "audioFile": "/audio/sections/sec-nand-hierarchy.mp3",
+  "totalDurationMs": 232920,
+  "fileSizeBytes": 3727104,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "How NAND Cells Are Organized",
+      "beginMs": 20,
+      "endMs": 1520,
+      "timestamps": [
+        {
+          "word": "How",
+          "begin": 20,
+          "end": 100
+        },
+        {
+          "word": "NAND",
+          "begin": 260,
+          "end": 500
+        },
+        {
+          "word": "Cells",
+          "begin": 580,
+          "end": 840
+        },
+        {
+          "word": "Are",
+          "begin": 880,
+          "end": 900
+        },
+        {
+          "word": "Organized",
+          "begin": 1060,
+          "end": 1520
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: NAND Hierarchy Is Like a Library. Pages are like sheets of paper (you read/write one at a time). Blocks are notebooks (you can only shred a whole notebook at once). Planes are bookshelves (multiple notebooks accessible in parallel). Dies are library floors (each operates independently). Packages are the building (containing everything in one physical chip).",
+      "beginMs": 1580,
+      "endMs": 27560,
+      "timestamps": [
+        {
+          "word": "Analogy:",
+          "begin": 1580,
+          "end": 2040
+        },
+        {
+          "word": "NAND",
+          "begin": 2440,
+          "end": 2720
+        },
+        {
+          "word": "Hierarchy",
+          "begin": 2760,
+          "end": 3340
+        },
+        {
+          "word": "Is",
+          "begin": 3400,
+          "end": 3500
+        },
+        {
+          "word": "Like",
+          "begin": 3520,
+          "end": 3680
+        },
+        {
+          "word": "a",
+          "begin": 3700,
+          "end": 3800
+        },
+        {
+          "word": "Library.",
+          "begin": 3800,
+          "end": 4260
+        },
+        {
+          "word": "Pages",
+          "begin": 4960,
+          "end": 5320
+        },
+        {
+          "word": "are",
+          "begin": 5360,
+          "end": 5380
+        },
+        {
+          "word": "like",
+          "begin": 5460,
+          "end": 5720
+        },
+        {
+          "word": "sheets",
+          "begin": 5720,
+          "end": 5940
+        },
+        {
+          "word": "of",
+          "begin": 5960,
+          "end": 6020
+        },
+        {
+          "word": "paper",
+          "begin": 6080,
+          "end": 6440
+        },
+        {
+          "word": "(you",
+          "begin": 6440,
+          "end": 6500
+        },
+        {
+          "word": "read/write",
+          "begin": 6580,
+          "end": 7920
+        },
+        {
+          "word": "one",
+          "begin": 7960,
+          "end": 8039
+        },
+        {
+          "word": "at",
+          "begin": 8060,
+          "end": 8180
+        },
+        {
+          "word": "a",
+          "begin": 8260,
+          "end": 8480
+        },
+        {
+          "word": "time).",
+          "begin": 9700,
+          "end": 10020
+        },
+        {
+          "word": "Blocks",
+          "begin": 10020,
+          "end": 10100
+        },
+        {
+          "word": "are",
+          "begin": 10140,
+          "end": 10160
+        },
+        {
+          "word": "notebooks",
+          "begin": 10280,
+          "end": 10740
+        },
+        {
+          "word": "(you",
+          "begin": 10760,
+          "end": 10800
+        },
+        {
+          "word": "can",
+          "begin": 10860,
+          "end": 10980
+        },
+        {
+          "word": "only",
+          "begin": 11100,
+          "end": 11280
+        },
+        {
+          "word": "shred",
+          "begin": 11420,
+          "end": 11680
+        },
+        {
+          "word": "a",
+          "begin": 11760,
+          "end": 11980
+        },
+        {
+          "word": "whole",
+          "begin": 12040,
+          "end": 12060
+        },
+        {
+          "word": "notebook",
+          "begin": 12140,
+          "end": 12500
+        },
+        {
+          "word": "at",
+          "begin": 12520,
+          "end": 12600
+        },
+        {
+          "word": "once).",
+          "begin": 12660,
+          "end": 13020
+        },
+        {
+          "word": "Planes",
+          "begin": 13560,
+          "end": 13920
+        },
+        {
+          "word": "are",
+          "begin": 14000,
+          "end": 14020
+        },
+        {
+          "word": "bookshelves",
+          "begin": 14160,
+          "end": 14780
+        },
+        {
+          "word": "(multiple",
+          "begin": 14880,
+          "end": 15240
+        },
+        {
+          "word": "notebooks",
+          "begin": 15340,
+          "end": 15800
+        },
+        {
+          "word": "accessible",
+          "begin": 15920,
+          "end": 16600
+        },
+        {
+          "word": "in",
+          "begin": 16600,
+          "end": 16620
+        },
+        {
+          "word": "parallel).",
+          "begin": 16660,
+          "end": 17140
+        },
+        {
+          "word": "Dies",
+          "begin": 19160,
+          "end": 19640
+        },
+        {
+          "word": "are",
+          "begin": 19680,
+          "end": 19860
+        },
+        {
+          "word": "library",
+          "begin": 19860,
+          "end": 20000
+        },
+        {
+          "word": "floors",
+          "begin": 20140,
+          "end": 20500
+        },
+        {
+          "word": "(each",
+          "begin": 20620,
+          "end": 20760
+        },
+        {
+          "word": "operates",
+          "begin": 20880,
+          "end": 21320
+        },
+        {
+          "word": "independently).",
+          "begin": 21380,
+          "end": 22000
+        },
+        {
+          "word": "Packages",
+          "begin": 24160,
+          "end": 24760
+        },
+        {
+          "word": "are",
+          "begin": 24760,
+          "end": 24800
+        },
+        {
+          "word": "the",
+          "begin": 24880,
+          "end": 25020
+        },
+        {
+          "word": "building",
+          "begin": 24880,
+          "end": 25200
+        },
+        {
+          "word": "(containing",
+          "begin": 25240,
+          "end": 25700
+        },
+        {
+          "word": "everything",
+          "begin": 25800,
+          "end": 26300
+        },
+        {
+          "word": "in",
+          "begin": 26400,
+          "end": 26480
+        },
+        {
+          "word": "one",
+          "begin": 26560,
+          "end": 26760
+        },
+        {
+          "word": "physical",
+          "begin": 26840,
+          "end": 27140
+        },
+        {
+          "word": "chip).",
+          "begin": 27280,
+          "end": 27560
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "paragraph",
+      "text": "A single NAND cell is microscopic — it stores just 1 to 4 bits. So how do you get from a tiny cell to a 1 TB drive? By organizing billions of cells into a strict hierarchy, like a library system: pages in notebooks, notebooks on shelves, shelves on floors, floors in a building.",
+      "beginMs": 28200,
+      "endMs": 47380,
+      "timestamps": [
+        {
+          "word": "A",
+          "begin": 28200,
+          "end": 28220
+        },
+        {
+          "word": "single",
+          "begin": 28360,
+          "end": 28600
+        },
+        {
+          "word": "NAND",
+          "begin": 28720,
+          "end": 28980
+        },
+        {
+          "word": "cell",
+          "begin": 29100,
+          "end": 29320
+        },
+        {
+          "word": "is",
+          "begin": 29420,
+          "end": 29500
+        },
+        {
+          "word": "microscopic",
+          "begin": 29500,
+          "end": 30360
+        },
+        {
+          "word": "it",
+          "begin": 30720,
+          "end": 30820
+        },
+        {
+          "word": "stores",
+          "begin": 30880,
+          "end": 31200
+        },
+        {
+          "word": "just",
+          "begin": 31260,
+          "end": 31440
+        },
+        {
+          "word": "1",
+          "begin": 31500,
+          "end": 31680
+        },
+        {
+          "word": "to",
+          "begin": 31720,
+          "end": 31760
+        },
+        {
+          "word": "4",
+          "begin": 31840,
+          "end": 31920
+        },
+        {
+          "word": "bits.",
+          "begin": 32080,
+          "end": 32420
+        },
+        {
+          "word": "So",
+          "begin": 32880,
+          "end": 33040
+        },
+        {
+          "word": "how",
+          "begin": 33040,
+          "end": 33240
+        },
+        {
+          "word": "do",
+          "begin": 33260,
+          "end": 33280
+        },
+        {
+          "word": "you",
+          "begin": 33280,
+          "end": 33340
+        },
+        {
+          "word": "get",
+          "begin": 33420,
+          "end": 33560
+        },
+        {
+          "word": "from",
+          "begin": 33560,
+          "end": 33760
+        },
+        {
+          "word": "a",
+          "begin": 33780,
+          "end": 33800
+        },
+        {
+          "word": "tiny",
+          "begin": 33880,
+          "end": 34160
+        },
+        {
+          "word": "cell",
+          "begin": 34300,
+          "end": 34500
+        },
+        {
+          "word": "to",
+          "begin": 34500,
+          "end": 34680
+        },
+        {
+          "word": "a",
+          "begin": 34760,
+          "end": 34780
+        },
+        {
+          "word": "1",
+          "begin": 34880,
+          "end": 35060
+        },
+        {
+          "word": "TB",
+          "begin": 35120,
+          "end": 35660
+        },
+        {
+          "word": "drive?",
+          "begin": 35660,
+          "end": 36060
+        },
+        {
+          "word": "By",
+          "begin": 36720,
+          "end": 36800
+        },
+        {
+          "word": "organizing",
+          "begin": 36960,
+          "end": 37520
+        },
+        {
+          "word": "billions",
+          "begin": 37620,
+          "end": 38000
+        },
+        {
+          "word": "of",
+          "begin": 38020,
+          "end": 38120
+        },
+        {
+          "word": "cells",
+          "begin": 38200,
+          "end": 38540
+        },
+        {
+          "word": "into",
+          "begin": 38580,
+          "end": 38740
+        },
+        {
+          "word": "a",
+          "begin": 38780,
+          "end": 38800
+        },
+        {
+          "word": "strict",
+          "begin": 38880,
+          "end": 39140
+        },
+        {
+          "word": "hierarchy,",
+          "begin": 39140,
+          "end": 39700
+        },
+        {
+          "word": "like",
+          "begin": 39700,
+          "end": 40260
+        },
+        {
+          "word": "a",
+          "begin": 40280,
+          "end": 40300
+        },
+        {
+          "word": "library",
+          "begin": 40380,
+          "end": 40800
+        },
+        {
+          "word": "system:",
+          "begin": 40920,
+          "end": 41300
+        },
+        {
+          "word": "pages",
+          "begin": 41620,
+          "end": 41960
+        },
+        {
+          "word": "in",
+          "begin": 41980,
+          "end": 42080
+        },
+        {
+          "word": "notebooks,",
+          "begin": 42120,
+          "end": 42680
+        },
+        {
+          "word": "notebooks",
+          "begin": 42920,
+          "end": 43320
+        },
+        {
+          "word": "on",
+          "begin": 43360,
+          "end": 43460
+        },
+        {
+          "word": "shelves,",
+          "begin": 43560,
+          "end": 43980
+        },
+        {
+          "word": "shelves",
+          "begin": 44260,
+          "end": 44560
+        },
+        {
+          "word": "on",
+          "begin": 44600,
+          "end": 44700
+        },
+        {
+          "word": "floors,",
+          "begin": 44800,
+          "end": 45220
+        },
+        {
+          "word": "floors",
+          "begin": 45520,
+          "end": 45840
+        },
+        {
+          "word": "in",
+          "begin": 45880,
+          "end": 45940
+        },
+        {
+          "word": "a",
+          "begin": 45960,
+          "end": 45980
+        },
+        {
+          "word": "building.",
+          "begin": 46060,
+          "end": 46440
+        },
+        {
+          "word": "Why",
+          "begin": 47280,
+          "end": 47380
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "Why does this hierarchy matter? Because it explains the most important rule of flash memory: you can read and write individual pages, but you can only erase entire blocks . This mismatch between write size and erase size is the root cause of many SSD behaviors we'll explore later. But why can't you erase a single page? Because of how NAND physics works — erasing requires a high voltage pulse that affects all cells connected to the same block's circuitry.",
+      "beginMs": 47500,
+      "endMs": 74740,
+      "timestamps": [
+        {
+          "word": "does",
+          "begin": 47500,
+          "end": 47620
+        },
+        {
+          "word": "this",
+          "begin": 47660,
+          "end": 47820
+        },
+        {
+          "word": "hierarchy",
+          "begin": 47860,
+          "end": 48240
+        },
+        {
+          "word": "matter?",
+          "begin": 48340,
+          "end": 48600
+        },
+        {
+          "word": "Because",
+          "begin": 49280,
+          "end": 49540
+        },
+        {
+          "word": "it",
+          "begin": 49560,
+          "end": 49620
+        },
+        {
+          "word": "explains",
+          "begin": 49640,
+          "end": 50100
+        },
+        {
+          "word": "the",
+          "begin": 50120,
+          "end": 50160
+        },
+        {
+          "word": "most",
+          "begin": 50200,
+          "end": 50580
+        },
+        {
+          "word": "important",
+          "begin": 50600,
+          "end": 51060
+        },
+        {
+          "word": "rule",
+          "begin": 51120,
+          "end": 51340
+        },
+        {
+          "word": "of",
+          "begin": 51340,
+          "end": 51420
+        },
+        {
+          "word": "flash",
+          "begin": 51460,
+          "end": 51760
+        },
+        {
+          "word": "memory:",
+          "begin": 51820,
+          "end": 52120
+        },
+        {
+          "word": "you",
+          "begin": 52460,
+          "end": 52520
+        },
+        {
+          "word": "can",
+          "begin": 52600,
+          "end": 52720
+        },
+        {
+          "word": "read",
+          "begin": 52800,
+          "end": 53000
+        },
+        {
+          "word": "and",
+          "begin": 53020,
+          "end": 53120
+        },
+        {
+          "word": "write",
+          "begin": 53160,
+          "end": 53360
+        },
+        {
+          "word": "individual",
+          "begin": 53440,
+          "end": 53920
+        },
+        {
+          "word": "pages,",
+          "begin": 54000,
+          "end": 54760
+        },
+        {
+          "word": "but",
+          "begin": 54760,
+          "end": 54800
+        },
+        {
+          "word": "you",
+          "begin": 54800,
+          "end": 54860
+        },
+        {
+          "word": "can",
+          "begin": 54920,
+          "end": 55020
+        },
+        {
+          "word": "only",
+          "begin": 55120,
+          "end": 55300
+        },
+        {
+          "word": "erase",
+          "begin": 55300,
+          "end": 55740
+        },
+        {
+          "word": "entire",
+          "begin": 55760,
+          "end": 56120
+        },
+        {
+          "word": "blocks",
+          "begin": 56220,
+          "end": 56660
+        },
+        {
+          "word": "This",
+          "begin": 57400,
+          "end": 57580
+        },
+        {
+          "word": "mismatch",
+          "begin": 57640,
+          "end": 58120
+        },
+        {
+          "word": "between",
+          "begin": 58180,
+          "end": 58480
+        },
+        {
+          "word": "write",
+          "begin": 58480,
+          "end": 58780
+        },
+        {
+          "word": "size",
+          "begin": 58860,
+          "end": 59160
+        },
+        {
+          "word": "and",
+          "begin": 59240,
+          "end": 59320
+        },
+        {
+          "word": "erase",
+          "begin": 59320,
+          "end": 59640
+        },
+        {
+          "word": "size",
+          "begin": 59680,
+          "end": 60000
+        },
+        {
+          "word": "is",
+          "begin": 60080,
+          "end": 60160
+        },
+        {
+          "word": "the",
+          "begin": 60200,
+          "end": 60260
+        },
+        {
+          "word": "root",
+          "begin": 60340,
+          "end": 60500
+        },
+        {
+          "word": "cause",
+          "begin": 60500,
+          "end": 60500
+        },
+        {
+          "word": "of",
+          "begin": 60500,
+          "end": 60520
+        },
+        {
+          "word": "many",
+          "begin": 60560,
+          "end": 60900
+        },
+        {
+          "word": "SSD",
+          "begin": 60940,
+          "end": 61380
+        },
+        {
+          "word": "behaviors",
+          "begin": 61480,
+          "end": 62420
+        },
+        {
+          "word": "we'll",
+          "begin": 62480,
+          "end": 62580
+        },
+        {
+          "word": "explore",
+          "begin": 62600,
+          "end": 62920
+        },
+        {
+          "word": "later.",
+          "begin": 63080,
+          "end": 63320
+        },
+        {
+          "word": "But",
+          "begin": 63960,
+          "end": 64040
+        },
+        {
+          "word": "why",
+          "begin": 64099,
+          "end": 64340
+        },
+        {
+          "word": "can't",
+          "begin": 64340,
+          "end": 64540
+        },
+        {
+          "word": "you",
+          "begin": 64560,
+          "end": 64599
+        },
+        {
+          "word": "erase",
+          "begin": 64599,
+          "end": 65060
+        },
+        {
+          "word": "a",
+          "begin": 65080,
+          "end": 65099
+        },
+        {
+          "word": "single",
+          "begin": 65220,
+          "end": 65540
+        },
+        {
+          "word": "page?",
+          "begin": 65540,
+          "end": 65940
+        },
+        {
+          "word": "Because",
+          "begin": 66560,
+          "end": 66880
+        },
+        {
+          "word": "of",
+          "begin": 66900,
+          "end": 67000
+        },
+        {
+          "word": "how",
+          "begin": 67020,
+          "end": 67120
+        },
+        {
+          "word": "NAND",
+          "begin": 67260,
+          "end": 67520
+        },
+        {
+          "word": "physics",
+          "begin": 67600,
+          "end": 67940
+        },
+        {
+          "word": "works",
+          "begin": 68000,
+          "end": 68420
+        },
+        {
+          "word": "erasing",
+          "begin": 68680,
+          "end": 69140
+        },
+        {
+          "word": "requires",
+          "begin": 69160,
+          "end": 69620
+        },
+        {
+          "word": "a",
+          "begin": 69640,
+          "end": 69680
+        },
+        {
+          "word": "high",
+          "begin": 69760,
+          "end": 69860
+        },
+        {
+          "word": "voltage",
+          "begin": 70000,
+          "end": 70360
+        },
+        {
+          "word": "pulse",
+          "begin": 70440,
+          "end": 70780
+        },
+        {
+          "word": "that",
+          "begin": 70880,
+          "end": 71000
+        },
+        {
+          "word": "affects",
+          "begin": 71000,
+          "end": 71360
+        },
+        {
+          "word": "all",
+          "begin": 71480,
+          "end": 71600
+        },
+        {
+          "word": "cells",
+          "begin": 71720,
+          "end": 72000
+        },
+        {
+          "word": "connected",
+          "begin": 72060,
+          "end": 72480
+        },
+        {
+          "word": "to",
+          "begin": 72520,
+          "end": 72580
+        },
+        {
+          "word": "the",
+          "begin": 72620,
+          "end": 72680
+        },
+        {
+          "word": "same",
+          "begin": 72800,
+          "end": 73020
+        },
+        {
+          "word": "block's",
+          "begin": 73060,
+          "end": 73340
+        },
+        {
+          "word": "circuitry.",
+          "begin": 73440,
+          "end": 73860
+        },
+        {
+          "word": "You",
+          "begin": 74460,
+          "end": 74520
+        },
+        {
+          "word": "can",
+          "begin": 74600,
+          "end": 74740
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "You can read or write to a single page (4-16 KB), but erasing must happen at the block level (hundreds of pages at once). Imagine needing to shred an entire notebook just to correct one page — that's the constraint the SSD's firmware must work around.",
+      "beginMs": 74820,
+      "endMs": 89680,
+      "timestamps": [
+        {
+          "word": "read",
+          "begin": 74820,
+          "end": 74980
+        },
+        {
+          "word": "or",
+          "begin": 75020,
+          "end": 75040
+        },
+        {
+          "word": "write",
+          "begin": 75160,
+          "end": 75420
+        },
+        {
+          "word": "to",
+          "begin": 75420,
+          "end": 75480
+        },
+        {
+          "word": "a",
+          "begin": 75560,
+          "end": 75580
+        },
+        {
+          "word": "single",
+          "begin": 75700,
+          "end": 75920
+        },
+        {
+          "word": "page",
+          "begin": 76020,
+          "end": 76280
+        },
+        {
+          "word": "KB),",
+          "begin": 76380,
+          "end": 77780
+        },
+        {
+          "word": "but",
+          "begin": 78180,
+          "end": 78280
+        },
+        {
+          "word": "erasing",
+          "begin": 78300,
+          "end": 78760
+        },
+        {
+          "word": "must",
+          "begin": 78820,
+          "end": 79040
+        },
+        {
+          "word": "happen",
+          "begin": 79080,
+          "end": 79340
+        },
+        {
+          "word": "at",
+          "begin": 79340,
+          "end": 79400
+        },
+        {
+          "word": "the",
+          "begin": 79400,
+          "end": 79600
+        },
+        {
+          "word": "block",
+          "begin": 79660,
+          "end": 79940
+        },
+        {
+          "word": "level",
+          "begin": 80000,
+          "end": 80180
+        },
+        {
+          "word": "(hundreds",
+          "begin": 80320,
+          "end": 80680
+        },
+        {
+          "word": "of",
+          "begin": 80700,
+          "end": 80760
+        },
+        {
+          "word": "pages",
+          "begin": 80820,
+          "end": 81180
+        },
+        {
+          "word": "at",
+          "begin": 81200,
+          "end": 81280
+        },
+        {
+          "word": "once).",
+          "begin": 81340,
+          "end": 81700
+        },
+        {
+          "word": "Imagine",
+          "begin": 82200,
+          "end": 82600
+        },
+        {
+          "word": "needing",
+          "begin": 82620,
+          "end": 82840
+        },
+        {
+          "word": "to",
+          "begin": 82880,
+          "end": 82920
+        },
+        {
+          "word": "shred",
+          "begin": 83020,
+          "end": 83240
+        },
+        {
+          "word": "an",
+          "begin": 83260,
+          "end": 83340
+        },
+        {
+          "word": "entire",
+          "begin": 83360,
+          "end": 83720
+        },
+        {
+          "word": "notebook",
+          "begin": 83820,
+          "end": 84180
+        },
+        {
+          "word": "just",
+          "begin": 84260,
+          "end": 84560
+        },
+        {
+          "word": "to",
+          "begin": 84620,
+          "end": 84760
+        },
+        {
+          "word": "correct",
+          "begin": 84620,
+          "end": 84940
+        },
+        {
+          "word": "one",
+          "begin": 85000,
+          "end": 85160
+        },
+        {
+          "word": "page",
+          "begin": 85220,
+          "end": 85580
+        },
+        {
+          "word": "that's",
+          "begin": 85920,
+          "end": 86120
+        },
+        {
+          "word": "the",
+          "begin": 86120,
+          "end": 86240
+        },
+        {
+          "word": "constraint",
+          "begin": 86300,
+          "end": 86780
+        },
+        {
+          "word": "the",
+          "begin": 86800,
+          "end": 86860
+        },
+        {
+          "word": "SSD's",
+          "begin": 86980,
+          "end": 87540
+        },
+        {
+          "word": "firmware",
+          "begin": 87620,
+          "end": 87900
+        },
+        {
+          "word": "must",
+          "begin": 88020,
+          "end": 88220
+        },
+        {
+          "word": "work",
+          "begin": 88280,
+          "end": 88480
+        },
+        {
+          "word": "around.",
+          "begin": 88500,
+          "end": 88900
+        },
+        {
+          "word": "So",
+          "begin": 89380,
+          "end": 89460
+        },
+        {
+          "word": "what",
+          "begin": 89540,
+          "end": 89680
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "So what happens when you want to change just one page's data? The SSD can't erase that one page — it would destroy the other 127+ pages in the same block. Instead, it writes the new data to a different free page and updates a mapping table. The old page becomes &ldquo;stale.&rdquo;",
+      "beginMs": 89700,
+      "endMs": 107660,
+      "timestamps": [
+        {
+          "word": "happens",
+          "begin": 89700,
+          "end": 90080
+        },
+        {
+          "word": "when",
+          "begin": 90120,
+          "end": 90220
+        },
+        {
+          "word": "you",
+          "begin": 90220,
+          "end": 90280
+        },
+        {
+          "word": "want",
+          "begin": 90340,
+          "end": 90520
+        },
+        {
+          "word": "to",
+          "begin": 90600,
+          "end": 90720
+        },
+        {
+          "word": "change",
+          "begin": 90800,
+          "end": 91140
+        },
+        {
+          "word": "just",
+          "begin": 91180,
+          "end": 91500
+        },
+        {
+          "word": "one",
+          "begin": 91500,
+          "end": 91760
+        },
+        {
+          "word": "page's",
+          "begin": 91500,
+          "end": 91860
+        },
+        {
+          "word": "data?",
+          "begin": 91920,
+          "end": 92160
+        },
+        {
+          "word": "The",
+          "begin": 92480,
+          "end": 93000
+        },
+        {
+          "word": "can't",
+          "begin": 93160,
+          "end": 93380
+        },
+        {
+          "word": "erase",
+          "begin": 93400,
+          "end": 93640
+        },
+        {
+          "word": "that",
+          "begin": 93680,
+          "end": 93800
+        },
+        {
+          "word": "one",
+          "begin": 93820,
+          "end": 93960
+        },
+        {
+          "word": "page",
+          "begin": 93960,
+          "end": 94420
+        },
+        {
+          "word": "it",
+          "begin": 94680,
+          "end": 94740
+        },
+        {
+          "word": "would",
+          "begin": 94760,
+          "end": 94860
+        },
+        {
+          "word": "destroy",
+          "begin": 94880,
+          "end": 95140
+        },
+        {
+          "word": "the",
+          "begin": 95160,
+          "end": 94940
+        },
+        {
+          "word": "other",
+          "begin": 95020,
+          "end": 95360
+        },
+        {
+          "word": "127+",
+          "begin": 95380,
+          "end": 96960
+        },
+        {
+          "word": "pages",
+          "begin": 97000,
+          "end": 97440
+        },
+        {
+          "word": "in",
+          "begin": 97640,
+          "end": 97720
+        },
+        {
+          "word": "the",
+          "begin": 97720,
+          "end": 97760
+        },
+        {
+          "word": "same",
+          "begin": 97860,
+          "end": 98080
+        },
+        {
+          "word": "block.",
+          "begin": 98140,
+          "end": 98540
+        },
+        {
+          "word": "Instead,",
+          "begin": 99160,
+          "end": 99580
+        },
+        {
+          "word": "it",
+          "begin": 99640,
+          "end": 99720
+        },
+        {
+          "word": "writes",
+          "begin": 99760,
+          "end": 100020
+        },
+        {
+          "word": "the",
+          "begin": 100060,
+          "end": 100120
+        },
+        {
+          "word": "new",
+          "begin": 100180,
+          "end": 100260
+        },
+        {
+          "word": "data",
+          "begin": 100360,
+          "end": 100600
+        },
+        {
+          "word": "to",
+          "begin": 100700,
+          "end": 100760
+        },
+        {
+          "word": "a",
+          "begin": 100800,
+          "end": 100840
+        },
+        {
+          "word": "different",
+          "begin": 100880,
+          "end": 101140
+        },
+        {
+          "word": "free",
+          "begin": 101220,
+          "end": 101320
+        },
+        {
+          "word": "page",
+          "begin": 101440,
+          "end": 101780
+        },
+        {
+          "word": "and",
+          "begin": 102040,
+          "end": 102120
+        },
+        {
+          "word": "updates",
+          "begin": 102140,
+          "end": 102620
+        },
+        {
+          "word": "a",
+          "begin": 102660,
+          "end": 102840
+        },
+        {
+          "word": "mapping",
+          "begin": 102660,
+          "end": 102900
+        },
+        {
+          "word": "table.",
+          "begin": 102980,
+          "end": 103220
+        },
+        {
+          "word": "The",
+          "begin": 103740,
+          "end": 103800
+        },
+        {
+          "word": "old",
+          "begin": 103880,
+          "end": 104020
+        },
+        {
+          "word": "page",
+          "begin": 104080,
+          "end": 104320
+        },
+        {
+          "word": "becomes",
+          "begin": 104380,
+          "end": 105400
+        },
+        {
+          "word": "&ldquo;stale.&rdquo;",
+          "begin": 105800,
+          "end": 106920
+        },
+        {
+          "word": "But",
+          "begin": 107320,
+          "end": 107440
+        },
+        {
+          "word": "then",
+          "begin": 107460,
+          "end": 107660
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "But then stale pages pile up — who cleans them? That's exactly the problem the Flash Translation Layer (FTL) solves. Let's see how in the next section.",
+      "beginMs": 107660,
+      "endMs": 117020,
+      "timestamps": [
+        {
+          "word": "stale",
+          "begin": 107660,
+          "end": 108040
+        },
+        {
+          "word": "pages",
+          "begin": 108100,
+          "end": 108420
+        },
+        {
+          "word": "pile",
+          "begin": 108480,
+          "end": 108780
+        },
+        {
+          "word": "up",
+          "begin": 108840,
+          "end": 109060
+        },
+        {
+          "word": "who",
+          "begin": 109320,
+          "end": 109380
+        },
+        {
+          "word": "cleans",
+          "begin": 109500,
+          "end": 109820
+        },
+        {
+          "word": "them?",
+          "begin": 109820,
+          "end": 110080
+        },
+        {
+          "word": "That's",
+          "begin": 110740,
+          "end": 110940
+        },
+        {
+          "word": "exactly",
+          "begin": 110960,
+          "end": 111360
+        },
+        {
+          "word": "the",
+          "begin": 111400,
+          "end": 111460
+        },
+        {
+          "word": "problem",
+          "begin": 111520,
+          "end": 111880
+        },
+        {
+          "word": "the",
+          "begin": 111900,
+          "end": 111940
+        },
+        {
+          "word": "Flash",
+          "begin": 112000,
+          "end": 112280
+        },
+        {
+          "word": "Translation",
+          "begin": 112320,
+          "end": 112840
+        },
+        {
+          "word": "Layer",
+          "begin": 112900,
+          "end": 113080
+        },
+        {
+          "word": "(FTL)",
+          "begin": 113200,
+          "end": 113600
+        },
+        {
+          "word": "solves.",
+          "begin": 113600,
+          "end": 113700
+        },
+        {
+          "word": "Let's",
+          "begin": 113740,
+          "end": 113940
+        },
+        {
+          "word": "see",
+          "begin": 114040,
+          "end": 114180
+        },
+        {
+          "word": "how",
+          "begin": 114860,
+          "end": 114920
+        },
+        {
+          "word": "in",
+          "begin": 114980,
+          "end": 115020
+        },
+        {
+          "word": "the",
+          "begin": 115080,
+          "end": 115140
+        },
+        {
+          "word": "next",
+          "begin": 115240,
+          "end": 115480
+        },
+        {
+          "word": "section.",
+          "begin": 115480,
+          "end": 116280
+        },
+        {
+          "word": "Knowledge",
+          "begin": 116740,
+          "end": 117020
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "reveal",
+      "text": "Knowledge check: If the erase unit (block) were the same size as the write unit (page), how would SSD design change? What complexity exists solely because of this size mismatch? The answer: The NAND hierarchy from smallest to largest is: Page (4-16 KB, read/write unit) < Block (128-256 pages, erase unit) < Plane (~1,000 blocks, parallel unit) < Die (2-4 planes, one silicon chip) < Package (1-16 dies, physical chip). If erase and write units were the same size, we could eliminate the Flash Translation Layer's out-of-place write scheme entirely — data could be overwritten in place like DRAM. This would also eliminate garbage collection (no stale pages to clean up), write amplification (no need to copy valid pages before erasing), and most of wear leveling's complexity. The mismatch exists because NAND physics requires a high-voltage bulk erase that affects all cells sharing a common substrate region — you can't isolate a single page's cells for erasure.",
+      "beginMs": 117140,
+      "endMs": 182900,
+      "timestamps": [
+        {
+          "word": "check:",
+          "begin": 117140,
+          "end": 117420
+        },
+        {
+          "word": "If",
+          "begin": 117760,
+          "end": 117840
+        },
+        {
+          "word": "the",
+          "begin": 117880,
+          "end": 117920
+        },
+        {
+          "word": "erase",
+          "begin": 117980,
+          "end": 118300
+        },
+        {
+          "word": "unit",
+          "begin": 118340,
+          "end": 118540
+        },
+        {
+          "word": "(block)",
+          "begin": 118580,
+          "end": 118860
+        },
+        {
+          "word": "were",
+          "begin": 118900,
+          "end": 118940
+        },
+        {
+          "word": "the",
+          "begin": 119000,
+          "end": 119040
+        },
+        {
+          "word": "same",
+          "begin": 119120,
+          "end": 119320
+        },
+        {
+          "word": "size",
+          "begin": 119400,
+          "end": 119700
+        },
+        {
+          "word": "as",
+          "begin": 119720,
+          "end": 119800
+        },
+        {
+          "word": "the",
+          "begin": 119840,
+          "end": 119880
+        },
+        {
+          "word": "write",
+          "begin": 119940,
+          "end": 120140
+        },
+        {
+          "word": "unit",
+          "begin": 120160,
+          "end": 120380
+        },
+        {
+          "word": "(page),",
+          "begin": 120400,
+          "end": 121000
+        },
+        {
+          "word": "how",
+          "begin": 121000,
+          "end": 121160
+        },
+        {
+          "word": "would",
+          "begin": 121160,
+          "end": 121260
+        },
+        {
+          "word": "SSD",
+          "begin": 121320,
+          "end": 121720
+        },
+        {
+          "word": "design",
+          "begin": 121820,
+          "end": 122160
+        },
+        {
+          "word": "change?",
+          "begin": 122220,
+          "end": 122540
+        },
+        {
+          "word": "What",
+          "begin": 123200,
+          "end": 123320
+        },
+        {
+          "word": "complexity",
+          "begin": 123360,
+          "end": 123920
+        },
+        {
+          "word": "exists",
+          "begin": 123980,
+          "end": 124420
+        },
+        {
+          "word": "solely",
+          "begin": 124420,
+          "end": 124820
+        },
+        {
+          "word": "because",
+          "begin": 124880,
+          "end": 125160
+        },
+        {
+          "word": "of",
+          "begin": 125160,
+          "end": 125240
+        },
+        {
+          "word": "this",
+          "begin": 125260,
+          "end": 125400
+        },
+        {
+          "word": "size",
+          "begin": 125460,
+          "end": 125720
+        },
+        {
+          "word": "mismatch?",
+          "begin": 125760,
+          "end": 126260
+        },
+        {
+          "word": "The",
+          "begin": 126680,
+          "end": 126740
+        },
+        {
+          "word": "answer:",
+          "begin": 126820,
+          "end": 127500
+        },
+        {
+          "word": "The",
+          "begin": 127500,
+          "end": 127540
+        },
+        {
+          "word": "NAND",
+          "begin": 127620,
+          "end": 127840
+        },
+        {
+          "word": "hierarchy",
+          "begin": 127840,
+          "end": 128440
+        },
+        {
+          "word": "from",
+          "begin": 128560,
+          "end": 128680
+        },
+        {
+          "word": "smallest",
+          "begin": 128759,
+          "end": 129180
+        },
+        {
+          "word": "to",
+          "begin": 129180,
+          "end": 129240
+        },
+        {
+          "word": "largest",
+          "begin": 129280,
+          "end": 129680
+        },
+        {
+          "word": "is:",
+          "begin": 129780,
+          "end": 130039
+        },
+        {
+          "word": "Page",
+          "begin": 130419,
+          "end": 130660
+        },
+        {
+          "word": "KB,",
+          "begin": 130759,
+          "end": 132160
+        },
+        {
+          "word": "read/write",
+          "begin": 132620,
+          "end": 133080
+        },
+        {
+          "word": "unit)",
+          "begin": 133080,
+          "end": 133780
+        },
+        {
+          "word": "Block",
+          "begin": 133820,
+          "end": 134100
+        },
+        {
+          "word": "(128-256",
+          "begin": 134140,
+          "end": 135940
+        },
+        {
+          "word": "pages,",
+          "begin": 136000,
+          "end": 136460
+        },
+        {
+          "word": "erase",
+          "begin": 136920,
+          "end": 137320
+        },
+        {
+          "word": "unit)",
+          "begin": 137320,
+          "end": 137940
+        },
+        {
+          "word": "Plane",
+          "begin": 138000,
+          "end": 138340
+        },
+        {
+          "word": "(~1,000",
+          "begin": 138360,
+          "end": 139560
+        },
+        {
+          "word": "blocks,",
+          "begin": 139620,
+          "end": 140060
+        },
+        {
+          "word": "parallel",
+          "begin": 140560,
+          "end": 140940
+        },
+        {
+          "word": "unit)",
+          "begin": 141000,
+          "end": 142280
+        },
+        {
+          "word": "Die",
+          "begin": 142380,
+          "end": 142460
+        },
+        {
+          "word": "planes,",
+          "begin": 142620,
+          "end": 143100
+        },
+        {
+          "word": "one",
+          "begin": 143580,
+          "end": 143720
+        },
+        {
+          "word": "silicon",
+          "begin": 143820,
+          "end": 144160
+        },
+        {
+          "word": "chip)",
+          "begin": 144260,
+          "end": 144360
+        },
+        {
+          "word": "Package",
+          "begin": 144460,
+          "end": 144780
+        },
+        {
+          "word": "(1-16",
+          "begin": 144780,
+          "end": 145480
+        },
+        {
+          "word": "dies,",
+          "begin": 145500,
+          "end": 145780
+        },
+        {
+          "word": "physical",
+          "begin": 145780,
+          "end": 146120
+        },
+        {
+          "word": "chip).",
+          "begin": 146440,
+          "end": 147580
+        },
+        {
+          "word": "If",
+          "begin": 148300,
+          "end": 148400
+        },
+        {
+          "word": "erase",
+          "begin": 148440,
+          "end": 148780
+        },
+        {
+          "word": "and",
+          "begin": 148800,
+          "end": 148900
+        },
+        {
+          "word": "write",
+          "begin": 148940,
+          "end": 149120
+        },
+        {
+          "word": "units",
+          "begin": 149160,
+          "end": 149420
+        },
+        {
+          "word": "were",
+          "begin": 149460,
+          "end": 149520
+        },
+        {
+          "word": "the",
+          "begin": 149560,
+          "end": 149620
+        },
+        {
+          "word": "same",
+          "begin": 149700,
+          "end": 149900
+        },
+        {
+          "word": "size,",
+          "begin": 149980,
+          "end": 150360
+        },
+        {
+          "word": "we",
+          "begin": 150800,
+          "end": 150860
+        },
+        {
+          "word": "could",
+          "begin": 150940,
+          "end": 151040
+        },
+        {
+          "word": "eliminate",
+          "begin": 151060,
+          "end": 151540
+        },
+        {
+          "word": "the",
+          "begin": 151540,
+          "end": 151600
+        },
+        {
+          "word": "Flash",
+          "begin": 151700,
+          "end": 151960
+        },
+        {
+          "word": "Translation",
+          "begin": 152020,
+          "end": 152600
+        },
+        {
+          "word": "Layer's",
+          "begin": 152600,
+          "end": 153000
+        },
+        {
+          "word": "out-of-place",
+          "begin": 153080,
+          "end": 153580
+        },
+        {
+          "word": "write",
+          "begin": 153660,
+          "end": 153860
+        },
+        {
+          "word": "scheme",
+          "begin": 153920,
+          "end": 154160
+        },
+        {
+          "word": "entirely",
+          "begin": 154180,
+          "end": 154680
+        },
+        {
+          "word": "data",
+          "begin": 155240,
+          "end": 155460
+        },
+        {
+          "word": "could",
+          "begin": 155540,
+          "end": 155640
+        },
+        {
+          "word": "be",
+          "begin": 155680,
+          "end": 155720
+        },
+        {
+          "word": "overwritten",
+          "begin": 155840,
+          "end": 156300
+        },
+        {
+          "word": "in",
+          "begin": 156340,
+          "end": 156400
+        },
+        {
+          "word": "place",
+          "begin": 156460,
+          "end": 156780
+        },
+        {
+          "word": "like",
+          "begin": 156840,
+          "end": 156980
+        },
+        {
+          "word": "DRAM.",
+          "begin": 157060,
+          "end": 157500
+        },
+        {
+          "word": "This",
+          "begin": 158200,
+          "end": 158340
+        },
+        {
+          "word": "would",
+          "begin": 158380,
+          "end": 158480
+        },
+        {
+          "word": "also",
+          "begin": 158580,
+          "end": 158820
+        },
+        {
+          "word": "eliminate",
+          "begin": 158900,
+          "end": 159360
+        },
+        {
+          "word": "garbage",
+          "begin": 159400,
+          "end": 159720
+        },
+        {
+          "word": "collection",
+          "begin": 159780,
+          "end": 160280
+        },
+        {
+          "word": "(no",
+          "begin": 160280,
+          "end": 160680
+        },
+        {
+          "word": "stale",
+          "begin": 160840,
+          "end": 161080
+        },
+        {
+          "word": "pages",
+          "begin": 161160,
+          "end": 161740
+        },
+        {
+          "word": "to",
+          "begin": 161780,
+          "end": 161840
+        },
+        {
+          "word": "clean",
+          "begin": 161780,
+          "end": 161940
+        },
+        {
+          "word": "up),",
+          "begin": 161980,
+          "end": 162180
+        },
+        {
+          "word": "write",
+          "begin": 162560,
+          "end": 162760
+        },
+        {
+          "word": "amplification",
+          "begin": 162840,
+          "end": 163600
+        },
+        {
+          "word": "(no",
+          "begin": 163980,
+          "end": 164060
+        },
+        {
+          "word": "need",
+          "begin": 164180,
+          "end": 164340
+        },
+        {
+          "word": "to",
+          "begin": 164380,
+          "end": 164440
+        },
+        {
+          "word": "copy",
+          "begin": 164500,
+          "end": 164760
+        },
+        {
+          "word": "valid",
+          "begin": 164840,
+          "end": 165140
+        },
+        {
+          "word": "pages",
+          "begin": 165200,
+          "end": 165620
+        },
+        {
+          "word": "before",
+          "begin": 165680,
+          "end": 166100
+        },
+        {
+          "word": "erasing),",
+          "begin": 166120,
+          "end": 166500
+        },
+        {
+          "word": "and",
+          "begin": 166840,
+          "end": 166920
+        },
+        {
+          "word": "most",
+          "begin": 166980,
+          "end": 167220
+        },
+        {
+          "word": "of",
+          "begin": 167240,
+          "end": 167340
+        },
+        {
+          "word": "wear",
+          "begin": 167360,
+          "end": 167420
+        },
+        {
+          "word": "leveling's",
+          "begin": 167560,
+          "end": 167940
+        },
+        {
+          "word": "complexity.",
+          "begin": 167980,
+          "end": 168540
+        },
+        {
+          "word": "The",
+          "begin": 169360,
+          "end": 169400
+        },
+        {
+          "word": "mismatch",
+          "begin": 169460,
+          "end": 169880
+        },
+        {
+          "word": "exists",
+          "begin": 169920,
+          "end": 170440
+        },
+        {
+          "word": "because",
+          "begin": 170500,
+          "end": 170760
+        },
+        {
+          "word": "NAND",
+          "begin": 170840,
+          "end": 171100
+        },
+        {
+          "word": "physics",
+          "begin": 171200,
+          "end": 171540
+        },
+        {
+          "word": "requires",
+          "begin": 171580,
+          "end": 172060
+        },
+        {
+          "word": "a",
+          "begin": 172080,
+          "end": 172200
+        },
+        {
+          "word": "high-voltage",
+          "begin": 172200,
+          "end": 172800
+        },
+        {
+          "word": "bulk",
+          "begin": 172900,
+          "end": 173100
+        },
+        {
+          "word": "erase",
+          "begin": 173160,
+          "end": 173340
+        },
+        {
+          "word": "that",
+          "begin": 173840,
+          "end": 173960
+        },
+        {
+          "word": "affects",
+          "begin": 173960,
+          "end": 174280
+        },
+        {
+          "word": "all",
+          "begin": 174400,
+          "end": 174520
+        },
+        {
+          "word": "cells",
+          "begin": 174640,
+          "end": 174900
+        },
+        {
+          "word": "sharing",
+          "begin": 174980,
+          "end": 175260
+        },
+        {
+          "word": "a",
+          "begin": 175280,
+          "end": 175300
+        },
+        {
+          "word": "common",
+          "begin": 175380,
+          "end": 175700
+        },
+        {
+          "word": "substrate",
+          "begin": 175800,
+          "end": 176240
+        },
+        {
+          "word": "region",
+          "begin": 176280,
+          "end": 176620
+        },
+        {
+          "word": "you",
+          "begin": 176900,
+          "end": 176960
+        },
+        {
+          "word": "can't",
+          "begin": 177040,
+          "end": 177260
+        },
+        {
+          "word": "isolate",
+          "begin": 177260,
+          "end": 177900
+        },
+        {
+          "word": "a",
+          "begin": 177920,
+          "end": 177580
+        },
+        {
+          "word": "single",
+          "begin": 177620,
+          "end": 178000
+        },
+        {
+          "word": "page's",
+          "begin": 178020,
+          "end": 178520
+        },
+        {
+          "word": "cells",
+          "begin": 178580,
+          "end": 178860
+        },
+        {
+          "word": "for",
+          "begin": 178920,
+          "end": 179020
+        },
+        {
+          "word": "erasure.",
+          "begin": 179020,
+          "end": 179400
+        },
+        {
+          "word": "Knowledge",
+          "begin": 180220,
+          "end": 180640
+        },
+        {
+          "word": "check:",
+          "begin": 180680,
+          "end": 181180
+        },
+        {
+          "word": "Is",
+          "begin": 181180,
+          "end": 181260
+        },
+        {
+          "word": "the",
+          "begin": 181300,
+          "end": 181340
+        },
+        {
+          "word": "block-level",
+          "begin": 181420,
+          "end": 181960
+        },
+        {
+          "word": "erase",
+          "begin": 182020,
+          "end": 182380
+        },
+        {
+          "word": "constraint",
+          "begin": 182380,
+          "end": 182820
+        },
+        {
+          "word": "a",
+          "begin": 182880,
+          "end": 182900
+        }
+      ],
+      "requiresReveal": true
+    },
+    {
+      "blockIndex": 8,
+      "type": "reveal",
+      "text": "Knowledge check: Is the block-level erase constraint a firmware limitation that could be fixed with better software, or a physical hardware constraint? What exactly happens at the silicon level during an erase operation that makes page-level erasure impossible? The answer: It is a fundamental physical hardware constraint, not a firmware limitation. During an erase operation, a high voltage (~20V) is applied to the substrate (p-well) while the control gates are grounded. This creates a strong electric field that pulls electrons out of the floating gates via Fowler-Nordheim tunneling. The critical point is that all cells within a block share the same p-well substrate region — so when you apply the erase voltage, it affects every cell in that block simultaneously. You cannot selectively voltage-isolate individual pages within a block because they are physically connected to the same substrate. This is an inherent consequence of how NAND flash arrays are manufactured on silicon.",
+      "beginMs": 183020,
+      "endMs": 232760,
+      "timestamps": [
+        {
+          "word": "firmware",
+          "begin": 183020,
+          "end": 183440
+        },
+        {
+          "word": "limitation",
+          "begin": 183440,
+          "end": 184000
+        },
+        {
+          "word": "that",
+          "begin": 184040,
+          "end": 184120
+        },
+        {
+          "word": "could",
+          "begin": 184160,
+          "end": 184280
+        },
+        {
+          "word": "be",
+          "begin": 184300,
+          "end": 184360
+        },
+        {
+          "word": "fixed",
+          "begin": 184480,
+          "end": 184740
+        },
+        {
+          "word": "with",
+          "begin": 184780,
+          "end": 184880
+        },
+        {
+          "word": "better",
+          "begin": 184940,
+          "end": 185100
+        },
+        {
+          "word": "software,",
+          "begin": 185220,
+          "end": 185580
+        },
+        {
+          "word": "or",
+          "begin": 186100,
+          "end": 186180
+        },
+        {
+          "word": "a",
+          "begin": 186200,
+          "end": 186220
+        },
+        {
+          "word": "physical",
+          "begin": 186320,
+          "end": 186740
+        },
+        {
+          "word": "hardware",
+          "begin": 186740,
+          "end": 187000
+        },
+        {
+          "word": "constraint?",
+          "begin": 187140,
+          "end": 187620
+        },
+        {
+          "word": "What",
+          "begin": 188300,
+          "end": 188420
+        },
+        {
+          "word": "exactly",
+          "begin": 188440,
+          "end": 188840
+        },
+        {
+          "word": "happens",
+          "begin": 188900,
+          "end": 189280
+        },
+        {
+          "word": "at",
+          "begin": 189300,
+          "end": 189380
+        },
+        {
+          "word": "the",
+          "begin": 189400,
+          "end": 189460
+        },
+        {
+          "word": "silicon",
+          "begin": 189540,
+          "end": 189880
+        },
+        {
+          "word": "level",
+          "begin": 189920,
+          "end": 190100
+        },
+        {
+          "word": "during",
+          "begin": 190200,
+          "end": 190420
+        },
+        {
+          "word": "an",
+          "begin": 190420,
+          "end": 190500
+        },
+        {
+          "word": "erase",
+          "begin": 190500,
+          "end": 190820
+        },
+        {
+          "word": "operation",
+          "begin": 190860,
+          "end": 191420
+        },
+        {
+          "word": "that",
+          "begin": 191500,
+          "end": 191620
+        },
+        {
+          "word": "makes",
+          "begin": 191620,
+          "end": 191820
+        },
+        {
+          "word": "page-level",
+          "begin": 191880,
+          "end": 192340
+        },
+        {
+          "word": "erasure",
+          "begin": 192340,
+          "end": 192680
+        },
+        {
+          "word": "impossible?",
+          "begin": 192800,
+          "end": 193360
+        },
+        {
+          "word": "The",
+          "begin": 193840,
+          "end": 193880
+        },
+        {
+          "word": "answer:",
+          "begin": 193980,
+          "end": 194720
+        },
+        {
+          "word": "It",
+          "begin": 194720,
+          "end": 194740
+        },
+        {
+          "word": "is",
+          "begin": 194740,
+          "end": 194820
+        },
+        {
+          "word": "a",
+          "begin": 194820,
+          "end": 195000
+        },
+        {
+          "word": "fundamental",
+          "begin": 195000,
+          "end": 195580
+        },
+        {
+          "word": "physical",
+          "begin": 195580,
+          "end": 195980
+        },
+        {
+          "word": "hardware",
+          "begin": 195980,
+          "end": 196260
+        },
+        {
+          "word": "constraint,",
+          "begin": 196360,
+          "end": 196860
+        },
+        {
+          "word": "not",
+          "begin": 197180,
+          "end": 197340
+        },
+        {
+          "word": "a",
+          "begin": 197340,
+          "end": 197360
+        },
+        {
+          "word": "firmware",
+          "begin": 197480,
+          "end": 197880
+        },
+        {
+          "word": "limitation.",
+          "begin": 197880,
+          "end": 198500
+        },
+        {
+          "word": "During",
+          "begin": 198700,
+          "end": 198900
+        },
+        {
+          "word": "an",
+          "begin": 198920,
+          "end": 198980
+        },
+        {
+          "word": "erase",
+          "begin": 199000,
+          "end": 199300
+        },
+        {
+          "word": "operation,",
+          "begin": 199340,
+          "end": 199940
+        },
+        {
+          "word": "a",
+          "begin": 200160,
+          "end": 200340
+        },
+        {
+          "word": "high",
+          "begin": 200480,
+          "end": 200500
+        },
+        {
+          "word": "voltage",
+          "begin": 200500,
+          "end": 200860
+        },
+        {
+          "word": "(~20V)",
+          "begin": 200980,
+          "end": 201920
+        },
+        {
+          "word": "is",
+          "begin": 202160,
+          "end": 202260
+        },
+        {
+          "word": "applied",
+          "begin": 202280,
+          "end": 202640
+        },
+        {
+          "word": "to",
+          "begin": 202680,
+          "end": 202720
+        },
+        {
+          "word": "the",
+          "begin": 202760,
+          "end": 202800
+        },
+        {
+          "word": "substrate",
+          "begin": 202920,
+          "end": 203400
+        },
+        {
+          "word": "(p-well)",
+          "begin": 203460,
+          "end": 203960
+        },
+        {
+          "word": "while",
+          "begin": 204220,
+          "end": 204500
+        },
+        {
+          "word": "the",
+          "begin": 204500,
+          "end": 204540
+        },
+        {
+          "word": "control",
+          "begin": 204540,
+          "end": 204860
+        },
+        {
+          "word": "gates",
+          "begin": 204920,
+          "end": 205160
+        },
+        {
+          "word": "are",
+          "begin": 205200,
+          "end": 205220
+        },
+        {
+          "word": "grounded.",
+          "begin": 205300,
+          "end": 205800
+        },
+        {
+          "word": "This",
+          "begin": 206160,
+          "end": 206320
+        },
+        {
+          "word": "creates",
+          "begin": 206380,
+          "end": 206680
+        },
+        {
+          "word": "a",
+          "begin": 206720,
+          "end": 206740
+        },
+        {
+          "word": "strong",
+          "begin": 206840,
+          "end": 207160
+        },
+        {
+          "word": "electric",
+          "begin": 207180,
+          "end": 207580
+        },
+        {
+          "word": "field",
+          "begin": 207660,
+          "end": 207960
+        },
+        {
+          "word": "that",
+          "begin": 208000,
+          "end": 208120
+        },
+        {
+          "word": "pulls",
+          "begin": 208160,
+          "end": 208440
+        },
+        {
+          "word": "electrons",
+          "begin": 208460,
+          "end": 208980
+        },
+        {
+          "word": "out",
+          "begin": 209020,
+          "end": 208800
+        },
+        {
+          "word": "of",
+          "begin": 208820,
+          "end": 208980
+        },
+        {
+          "word": "the",
+          "begin": 209020,
+          "end": 209280
+        },
+        {
+          "word": "floating",
+          "begin": 209300,
+          "end": 209800
+        },
+        {
+          "word": "gates",
+          "begin": 209860,
+          "end": 210180
+        },
+        {
+          "word": "via",
+          "begin": 210280,
+          "end": 210420
+        },
+        {
+          "word": "Fowler-Nordheim",
+          "begin": 210540,
+          "end": 211360
+        },
+        {
+          "word": "tunneling.",
+          "begin": 211440,
+          "end": 211880
+        },
+        {
+          "word": "The",
+          "begin": 212200,
+          "end": 212260
+        },
+        {
+          "word": "critical",
+          "begin": 212320,
+          "end": 212620
+        },
+        {
+          "word": "point",
+          "begin": 212720,
+          "end": 213020
+        },
+        {
+          "word": "is",
+          "begin": 213080,
+          "end": 213180
+        },
+        {
+          "word": "that",
+          "begin": 213220,
+          "end": 213340
+        },
+        {
+          "word": "all",
+          "begin": 213340,
+          "end": 213340
+        },
+        {
+          "word": "cells",
+          "begin": 213340,
+          "end": 213740
+        },
+        {
+          "word": "within",
+          "begin": 213760,
+          "end": 214000
+        },
+        {
+          "word": "a",
+          "begin": 214040,
+          "end": 214080
+        },
+        {
+          "word": "block",
+          "begin": 214120,
+          "end": 214400
+        },
+        {
+          "word": "share",
+          "begin": 214440,
+          "end": 214740
+        },
+        {
+          "word": "the",
+          "begin": 214840,
+          "end": 214920
+        },
+        {
+          "word": "same",
+          "begin": 215020,
+          "end": 215420
+        },
+        {
+          "word": "p-well",
+          "begin": 215500,
+          "end": 215880
+        },
+        {
+          "word": "substrate",
+          "begin": 216020,
+          "end": 216440
+        },
+        {
+          "word": "region",
+          "begin": 216500,
+          "end": 216840
+        },
+        {
+          "word": "so",
+          "begin": 217140,
+          "end": 217200
+        },
+        {
+          "word": "when",
+          "begin": 217240,
+          "end": 217380
+        },
+        {
+          "word": "you",
+          "begin": 217380,
+          "end": 217440
+        },
+        {
+          "word": "apply",
+          "begin": 217500,
+          "end": 217720
+        },
+        {
+          "word": "the",
+          "begin": 217840,
+          "end": 217900
+        },
+        {
+          "word": "erase",
+          "begin": 217960,
+          "end": 218260
+        },
+        {
+          "word": "voltage,",
+          "begin": 218320,
+          "end": 218740
+        },
+        {
+          "word": "it",
+          "begin": 219040,
+          "end": 219100
+        },
+        {
+          "word": "affects",
+          "begin": 219100,
+          "end": 219440
+        },
+        {
+          "word": "every",
+          "begin": 219560,
+          "end": 219720
+        },
+        {
+          "word": "cell",
+          "begin": 219720,
+          "end": 219940
+        },
+        {
+          "word": "in",
+          "begin": 219960,
+          "end": 220000
+        },
+        {
+          "word": "that",
+          "begin": 220080,
+          "end": 220200
+        },
+        {
+          "word": "block",
+          "begin": 220220,
+          "end": 220740
+        },
+        {
+          "word": "simultaneously.",
+          "begin": 220820,
+          "end": 221640
+        },
+        {
+          "word": "You",
+          "begin": 221900,
+          "end": 221940
+        },
+        {
+          "word": "cannot",
+          "begin": 222000,
+          "end": 222340
+        },
+        {
+          "word": "selectively",
+          "begin": 222340,
+          "end": 222880
+        },
+        {
+          "word": "voltage-isolate",
+          "begin": 222960,
+          "end": 223760
+        },
+        {
+          "word": "individual",
+          "begin": 223820,
+          "end": 224340
+        },
+        {
+          "word": "pages",
+          "begin": 224340,
+          "end": 224740
+        },
+        {
+          "word": "within",
+          "begin": 224780,
+          "end": 224980
+        },
+        {
+          "word": "a",
+          "begin": 225000,
+          "end": 225120
+        },
+        {
+          "word": "block",
+          "begin": 225140,
+          "end": 225440
+        },
+        {
+          "word": "because",
+          "begin": 225680,
+          "end": 225900
+        },
+        {
+          "word": "they",
+          "begin": 225940,
+          "end": 226000
+        },
+        {
+          "word": "are",
+          "begin": 226060,
+          "end": 226080
+        },
+        {
+          "word": "physically",
+          "begin": 226220,
+          "end": 226560
+        },
+        {
+          "word": "connected",
+          "begin": 226620,
+          "end": 227020
+        },
+        {
+          "word": "to",
+          "begin": 227060,
+          "end": 227120
+        },
+        {
+          "word": "the",
+          "begin": 227160,
+          "end": 227200
+        },
+        {
+          "word": "same",
+          "begin": 227300,
+          "end": 227500
+        },
+        {
+          "word": "substrate.",
+          "begin": 227580,
+          "end": 228100
+        },
+        {
+          "word": "This",
+          "begin": 228660,
+          "end": 228820
+        },
+        {
+          "word": "is",
+          "begin": 228840,
+          "end": 228940
+        },
+        {
+          "word": "an",
+          "begin": 228960,
+          "end": 229040
+        },
+        {
+          "word": "inherent",
+          "begin": 229080,
+          "end": 229440
+        },
+        {
+          "word": "consequence",
+          "begin": 229480,
+          "end": 230060
+        },
+        {
+          "word": "of",
+          "begin": 230080,
+          "end": 230160
+        },
+        {
+          "word": "how",
+          "begin": 230140,
+          "end": 230260
+        },
+        {
+          "word": "NAND",
+          "begin": 230420,
+          "end": 230680
+        },
+        {
+          "word": "flash",
+          "begin": 230760,
+          "end": 231020
+        },
+        {
+          "word": "arrays",
+          "begin": 231040,
+          "end": 231340
+        },
+        {
+          "word": "are",
+          "begin": 231360,
+          "end": 231380
+        },
+        {
+          "word": "manufactured",
+          "begin": 231460,
+          "end": 232120
+        },
+        {
+          "word": "on",
+          "begin": 232140,
+          "end": 232240
+        },
+        {
+          "word": "silicon.",
+          "begin": 232340,
+          "end": 232760
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

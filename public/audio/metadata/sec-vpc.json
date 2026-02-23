@@ -1,0 +1,2325 @@
+{
+  "sectionId": "sec-vpc",
+  "audioFile": "/audio/sections/sec-vpc.mp3",
+  "totalDurationMs": 169960,
+  "fileSizeBytes": 2719872,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "paragraph",
+      "text": "Every block has a VPC (Valid Page Count) — how many of its pages still contain current, referenced data. Lower VPC = fewer pages to copy during GC = less write amplification. The GC engine maintains a VPC table and picks the block with the lowest VPC as the source block.",
+      "beginMs": 40,
+      "endMs": 17080,
+      "timestamps": [
+        {
+          "word": "Every",
+          "begin": 40,
+          "end": 240
+        },
+        {
+          "word": "block",
+          "begin": 340,
+          "end": 620
+        },
+        {
+          "word": "has",
+          "begin": 660,
+          "end": 800
+        },
+        {
+          "word": "a",
+          "begin": 800,
+          "end": 840
+        },
+        {
+          "word": "VPC",
+          "begin": 840,
+          "end": 1380
+        },
+        {
+          "word": "(Valid",
+          "begin": 1540,
+          "end": 1820
+        },
+        {
+          "word": "Page",
+          "begin": 1880,
+          "end": 2180
+        },
+        {
+          "word": "Count)",
+          "begin": 2180,
+          "end": 2460
+        },
+        {
+          "word": "how",
+          "begin": 2680,
+          "end": 2760
+        },
+        {
+          "word": "many",
+          "begin": 2860,
+          "end": 3020
+        },
+        {
+          "word": "of",
+          "begin": 3080,
+          "end": 3160
+        },
+        {
+          "word": "its",
+          "begin": 3160,
+          "end": 3440
+        },
+        {
+          "word": "pages",
+          "begin": 3560,
+          "end": 3960
+        },
+        {
+          "word": "still",
+          "begin": 3980,
+          "end": 4180
+        },
+        {
+          "word": "contain",
+          "begin": 4220,
+          "end": 4800
+        },
+        {
+          "word": "current,",
+          "begin": 4860,
+          "end": 5340
+        },
+        {
+          "word": "referenced",
+          "begin": 5340,
+          "end": 5560
+        },
+        {
+          "word": "data.",
+          "begin": 5620,
+          "end": 5860
+        },
+        {
+          "word": "Lower",
+          "begin": 6240,
+          "end": 6480
+        },
+        {
+          "word": "VPC",
+          "begin": 6620,
+          "end": 6860
+        },
+        {
+          "word": "=",
+          "begin": 7040,
+          "end": 7560
+        },
+        {
+          "word": "fewer",
+          "begin": 7560,
+          "end": 7720
+        },
+        {
+          "word": "pages",
+          "begin": 7800,
+          "end": 8240
+        },
+        {
+          "word": "to",
+          "begin": 8300,
+          "end": 8400
+        },
+        {
+          "word": "copy",
+          "begin": 8300,
+          "end": 8560
+        },
+        {
+          "word": "during",
+          "begin": 8660,
+          "end": 8860
+        },
+        {
+          "word": "GC",
+          "begin": 8860,
+          "end": 9680
+        },
+        {
+          "word": "=",
+          "begin": 9700,
+          "end": 10220
+        },
+        {
+          "word": "less",
+          "begin": 10260,
+          "end": 10360
+        },
+        {
+          "word": "write",
+          "begin": 10360,
+          "end": 10400
+        },
+        {
+          "word": "amplification.",
+          "begin": 10440,
+          "end": 10960
+        },
+        {
+          "word": "The",
+          "begin": 11120,
+          "end": 11160
+        },
+        {
+          "word": "GC",
+          "begin": 11260,
+          "end": 11560
+        },
+        {
+          "word": "engine",
+          "begin": 11680,
+          "end": 11980
+        },
+        {
+          "word": "maintains",
+          "begin": 12040,
+          "end": 12600
+        },
+        {
+          "word": "a",
+          "begin": 12640,
+          "end": 12660
+        },
+        {
+          "word": "VPC",
+          "begin": 12740,
+          "end": 13200
+        },
+        {
+          "word": "table",
+          "begin": 13300,
+          "end": 13860
+        },
+        {
+          "word": "and",
+          "begin": 13900,
+          "end": 13980
+        },
+        {
+          "word": "picks",
+          "begin": 13980,
+          "end": 14200
+        },
+        {
+          "word": "the",
+          "begin": 13980,
+          "end": 14020
+        },
+        {
+          "word": "block",
+          "begin": 14080,
+          "end": 14380
+        },
+        {
+          "word": "with",
+          "begin": 14400,
+          "end": 14480
+        },
+        {
+          "word": "the",
+          "begin": 14520,
+          "end": 14580
+        },
+        {
+          "word": "lowest",
+          "begin": 14680,
+          "end": 15000
+        },
+        {
+          "word": "VPC",
+          "begin": 15060,
+          "end": 15520
+        },
+        {
+          "word": "as",
+          "begin": 15720,
+          "end": 15840
+        },
+        {
+          "word": "the",
+          "begin": 15880,
+          "end": 15920
+        },
+        {
+          "word": "source",
+          "begin": 16020,
+          "end": 16239
+        },
+        {
+          "word": "block.",
+          "begin": 16320,
+          "end": 16620
+        },
+        {
+          "word": "Every",
+          "begin": 16920,
+          "end": 17080
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "paragraph",
+      "text": "Every NAND block cycles through these stages. Understanding this lifecycle is key to understanding GC, wear leveling, and TRIM — they all operate on blocks at different stages.",
+      "beginMs": 17080,
+      "endMs": 27020,
+      "timestamps": [
+        {
+          "word": "NAND",
+          "begin": 17080,
+          "end": 17500
+        },
+        {
+          "word": "block",
+          "begin": 17560,
+          "end": 17880
+        },
+        {
+          "word": "cycles",
+          "begin": 17960,
+          "end": 18320
+        },
+        {
+          "word": "through",
+          "begin": 18360,
+          "end": 18440
+        },
+        {
+          "word": "these",
+          "begin": 18520,
+          "end": 18680
+        },
+        {
+          "word": "stages.",
+          "begin": 18700,
+          "end": 19220
+        },
+        {
+          "word": "Understanding",
+          "begin": 19400,
+          "end": 20020
+        },
+        {
+          "word": "this",
+          "begin": 20060,
+          "end": 20200
+        },
+        {
+          "word": "lifecycle",
+          "begin": 20240,
+          "end": 20720
+        },
+        {
+          "word": "is",
+          "begin": 20840,
+          "end": 20940
+        },
+        {
+          "word": "key",
+          "begin": 21000,
+          "end": 21120
+        },
+        {
+          "word": "to",
+          "begin": 21240,
+          "end": 21300
+        },
+        {
+          "word": "understanding",
+          "begin": 21380,
+          "end": 21960
+        },
+        {
+          "word": "GC,",
+          "begin": 22040,
+          "end": 22360
+        },
+        {
+          "word": "wear",
+          "begin": 22780,
+          "end": 22920
+        },
+        {
+          "word": "leveling,",
+          "begin": 22980,
+          "end": 23360
+        },
+        {
+          "word": "and",
+          "begin": 23440,
+          "end": 23600
+        },
+        {
+          "word": "TRIM",
+          "begin": 23600,
+          "end": 23900
+        },
+        {
+          "word": "they",
+          "begin": 24200,
+          "end": 24240
+        },
+        {
+          "word": "all",
+          "begin": 24380,
+          "end": 24520
+        },
+        {
+          "word": "operate",
+          "begin": 24600,
+          "end": 24960
+        },
+        {
+          "word": "on",
+          "begin": 25000,
+          "end": 25080
+        },
+        {
+          "word": "blocks",
+          "begin": 25140,
+          "end": 25480
+        },
+        {
+          "word": "at",
+          "begin": 25500,
+          "end": 25600
+        },
+        {
+          "word": "different",
+          "begin": 25620,
+          "end": 25900
+        },
+        {
+          "word": "stages.",
+          "begin": 25900,
+          "end": 26500
+        },
+        {
+          "word": "Block",
+          "begin": 26800,
+          "end": 27020
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "heading",
+      "text": "Block Management — VPC, Block Types, and GC",
+      "beginMs": 28840,
+      "endMs": 32299,
+      "timestamps": [
+        {
+          "word": "Block",
+          "begin": 28840,
+          "end": 29060
+        },
+        {
+          "word": "Types,",
+          "begin": 29120,
+          "end": 29500
+        },
+        {
+          "word": "and",
+          "begin": 29840,
+          "end": 29960
+        },
+        {
+          "word": "GC",
+          "begin": 29960,
+          "end": 30340
+        },
+        {
+          "word": "Analogy:",
+          "begin": 30400,
+          "end": 30880
+        },
+        {
+          "word": "Block",
+          "begin": 31280,
+          "end": 31540
+        },
+        {
+          "word": "Management",
+          "begin": 31600,
+          "end": 32100
+        },
+        {
+          "word": "Is",
+          "begin": 32200,
+          "end": 32299
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "analogy",
+      "text": "Analogy: Block Management Is Like a Parking Garage. Think of NAND blocks as parking spaces in a garage. Some are actively being used (dynamic blocks), some hold cars that never move (static/cold blocks), and some are kept empty in reserve (spare blocks). The garage manager (FTL) tracks which spaces have the most abandoned cars (low VPC) and periodically clears them out (garbage collection) to free up space.",
+      "beginMs": 32340,
+      "endMs": 53200,
+      "timestamps": [
+        {
+          "word": "Like",
+          "begin": 32340,
+          "end": 32500
+        },
+        {
+          "word": "a",
+          "begin": 32520,
+          "end": 32619
+        },
+        {
+          "word": "Parking",
+          "begin": 32619,
+          "end": 32960
+        },
+        {
+          "word": "Garage.",
+          "begin": 32980,
+          "end": 33440
+        },
+        {
+          "word": "Think",
+          "begin": 33580,
+          "end": 33760
+        },
+        {
+          "word": "of",
+          "begin": 33780,
+          "end": 33860
+        },
+        {
+          "word": "NAND",
+          "begin": 33860,
+          "end": 34160
+        },
+        {
+          "word": "blocks",
+          "begin": 34240,
+          "end": 34600
+        },
+        {
+          "word": "as",
+          "begin": 34660,
+          "end": 34740
+        },
+        {
+          "word": "parking",
+          "begin": 34820,
+          "end": 35120
+        },
+        {
+          "word": "spaces",
+          "begin": 35180,
+          "end": 35700
+        },
+        {
+          "word": "in",
+          "begin": 35700,
+          "end": 35800
+        },
+        {
+          "word": "a",
+          "begin": 35820,
+          "end": 35980
+        },
+        {
+          "word": "garage.",
+          "begin": 36220,
+          "end": 37140
+        },
+        {
+          "word": "Some",
+          "begin": 37180,
+          "end": 37360
+        },
+        {
+          "word": "are",
+          "begin": 37380,
+          "end": 37540
+        },
+        {
+          "word": "actively",
+          "begin": 37540,
+          "end": 37980
+        },
+        {
+          "word": "being",
+          "begin": 38000,
+          "end": 38200
+        },
+        {
+          "word": "used",
+          "begin": 38220,
+          "end": 38340
+        },
+        {
+          "word": "(dynamic",
+          "begin": 38020,
+          "end": 38460
+        },
+        {
+          "word": "blocks),",
+          "begin": 38520,
+          "end": 38940
+        },
+        {
+          "word": "some",
+          "begin": 39260,
+          "end": 39440
+        },
+        {
+          "word": "hold",
+          "begin": 39460,
+          "end": 39660
+        },
+        {
+          "word": "cars",
+          "begin": 39720,
+          "end": 40000
+        },
+        {
+          "word": "that",
+          "begin": 40040,
+          "end": 40180
+        },
+        {
+          "word": "never",
+          "begin": 40220,
+          "end": 40420
+        },
+        {
+          "word": "move",
+          "begin": 40520,
+          "end": 40680
+        },
+        {
+          "word": "(static/cold",
+          "begin": 40680,
+          "end": 41480
+        },
+        {
+          "word": "blocks),",
+          "begin": 41540,
+          "end": 41940
+        },
+        {
+          "word": "and",
+          "begin": 42240,
+          "end": 42340
+        },
+        {
+          "word": "some",
+          "begin": 42420,
+          "end": 42580
+        },
+        {
+          "word": "are",
+          "begin": 42620,
+          "end": 42640
+        },
+        {
+          "word": "kept",
+          "begin": 42740,
+          "end": 42960
+        },
+        {
+          "word": "empty",
+          "begin": 43060,
+          "end": 43280
+        },
+        {
+          "word": "in",
+          "begin": 43360,
+          "end": 43440
+        },
+        {
+          "word": "reserve",
+          "begin": 43480,
+          "end": 43820
+        },
+        {
+          "word": "(spare",
+          "begin": 43900,
+          "end": 44120
+        },
+        {
+          "word": "blocks).",
+          "begin": 44180,
+          "end": 44620
+        },
+        {
+          "word": "The",
+          "begin": 44760,
+          "end": 44800
+        },
+        {
+          "word": "garage",
+          "begin": 44840,
+          "end": 45200
+        },
+        {
+          "word": "manager",
+          "begin": 45260,
+          "end": 45740
+        },
+        {
+          "word": "(FTL)",
+          "begin": 45740,
+          "end": 46240
+        },
+        {
+          "word": "tracks",
+          "begin": 46360,
+          "end": 46660
+        },
+        {
+          "word": "which",
+          "begin": 46700,
+          "end": 46840
+        },
+        {
+          "word": "spaces",
+          "begin": 46900,
+          "end": 47320
+        },
+        {
+          "word": "have",
+          "begin": 47340,
+          "end": 47480
+        },
+        {
+          "word": "the",
+          "begin": 47520,
+          "end": 47560
+        },
+        {
+          "word": "most",
+          "begin": 47640,
+          "end": 47880
+        },
+        {
+          "word": "abandoned",
+          "begin": 47900,
+          "end": 48380
+        },
+        {
+          "word": "cars",
+          "begin": 48380,
+          "end": 48940
+        },
+        {
+          "word": "(low",
+          "begin": 48940,
+          "end": 49000
+        },
+        {
+          "word": "VPC)",
+          "begin": 49160,
+          "end": 49660
+        },
+        {
+          "word": "and",
+          "begin": 50020,
+          "end": 50100
+        },
+        {
+          "word": "periodically",
+          "begin": 50140,
+          "end": 50740
+        },
+        {
+          "word": "clears",
+          "begin": 50840,
+          "end": 51160
+        },
+        {
+          "word": "them",
+          "begin": 51160,
+          "end": 51280
+        },
+        {
+          "word": "out",
+          "begin": 51320,
+          "end": 51460
+        },
+        {
+          "word": "(garbage",
+          "begin": 51500,
+          "end": 51900
+        },
+        {
+          "word": "collection)",
+          "begin": 51900,
+          "end": 52260
+        },
+        {
+          "word": "to",
+          "begin": 52300,
+          "end": 52360
+        },
+        {
+          "word": "free",
+          "begin": 52460,
+          "end": 52560
+        },
+        {
+          "word": "up",
+          "begin": 52620,
+          "end": 52740
+        },
+        {
+          "word": "space.",
+          "begin": 52800,
+          "end": 53200
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "term",
+      "text": "VPC (Valid Page Count): The number of pages in a NAND block that still contain current, referenced data. Lower VPC means fewer valid pages to copy during garbage collection, making that block a more efficient candidate for reclamation.",
+      "beginMs": 53400,
+      "endMs": 66020,
+      "timestamps": [
+        {
+          "word": "VPC",
+          "begin": 53400,
+          "end": 53880
+        },
+        {
+          "word": "(Valid",
+          "begin": 54020,
+          "end": 54300
+        },
+        {
+          "word": "Page",
+          "begin": 54360,
+          "end": 54600
+        },
+        {
+          "word": "Count):",
+          "begin": 54660,
+          "end": 54960
+        },
+        {
+          "word": "The",
+          "begin": 55140,
+          "end": 55200
+        },
+        {
+          "word": "number",
+          "begin": 55260,
+          "end": 55480
+        },
+        {
+          "word": "of",
+          "begin": 55480,
+          "end": 55580
+        },
+        {
+          "word": "pages",
+          "begin": 55640,
+          "end": 56020
+        },
+        {
+          "word": "in",
+          "begin": 56040,
+          "end": 56120
+        },
+        {
+          "word": "a",
+          "begin": 56140,
+          "end": 56320
+        },
+        {
+          "word": "NAND",
+          "begin": 56400,
+          "end": 56480
+        },
+        {
+          "word": "block",
+          "begin": 56540,
+          "end": 56800
+        },
+        {
+          "word": "that",
+          "begin": 56840,
+          "end": 56980
+        },
+        {
+          "word": "still",
+          "begin": 57040,
+          "end": 57200
+        },
+        {
+          "word": "contain",
+          "begin": 57260,
+          "end": 57640
+        },
+        {
+          "word": "current,",
+          "begin": 57700,
+          "end": 58020
+        },
+        {
+          "word": "referenced",
+          "begin": 58140,
+          "end": 58520
+        },
+        {
+          "word": "data.",
+          "begin": 58620,
+          "end": 58840
+        },
+        {
+          "word": "Lower",
+          "begin": 59260,
+          "end": 59440
+        },
+        {
+          "word": "VPC",
+          "begin": 59560,
+          "end": 60040
+        },
+        {
+          "word": "means",
+          "begin": 60200,
+          "end": 60420
+        },
+        {
+          "word": "fewer",
+          "begin": 60520,
+          "end": 60700
+        },
+        {
+          "word": "valid",
+          "begin": 60800,
+          "end": 61060
+        },
+        {
+          "word": "pages",
+          "begin": 61120,
+          "end": 61480
+        },
+        {
+          "word": "to",
+          "begin": 61540,
+          "end": 61580
+        },
+        {
+          "word": "copy",
+          "begin": 61660,
+          "end": 61920
+        },
+        {
+          "word": "during",
+          "begin": 62020,
+          "end": 62220
+        },
+        {
+          "word": "garbage",
+          "begin": 62260,
+          "end": 62560
+        },
+        {
+          "word": "collection,",
+          "begin": 62620,
+          "end": 63060
+        },
+        {
+          "word": "making",
+          "begin": 63060,
+          "end": 63600
+        },
+        {
+          "word": "that",
+          "begin": 63640,
+          "end": 63780
+        },
+        {
+          "word": "block",
+          "begin": 63840,
+          "end": 64080
+        },
+        {
+          "word": "a",
+          "begin": 64099,
+          "end": 64120
+        },
+        {
+          "word": "more",
+          "begin": 64180,
+          "end": 64340
+        },
+        {
+          "word": "efficient",
+          "begin": 64360,
+          "end": 64720
+        },
+        {
+          "word": "candidate",
+          "begin": 64780,
+          "end": 65180
+        },
+        {
+          "word": "for",
+          "begin": 65220,
+          "end": 65280
+        },
+        {
+          "word": "reclamation.",
+          "begin": 65360,
+          "end": 66020
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "The controller's FTL firmware manages thousands of NAND blocks. To understand how garbage collection, wear leveling, and TRIM work (covered in Lesson 11), you need to understand how the FTL classifies and manages these blocks.",
+      "beginMs": 66200,
+      "endMs": 78400,
+      "timestamps": [
+        {
+          "word": "The",
+          "begin": 66200,
+          "end": 66240
+        },
+        {
+          "word": "controller's",
+          "begin": 66300,
+          "end": 66840
+        },
+        {
+          "word": "FTL",
+          "begin": 66920,
+          "end": 67320
+        },
+        {
+          "word": "firmware",
+          "begin": 67440,
+          "end": 67740
+        },
+        {
+          "word": "manages",
+          "begin": 67900,
+          "end": 68300
+        },
+        {
+          "word": "thousands",
+          "begin": 68300,
+          "end": 68820
+        },
+        {
+          "word": "of",
+          "begin": 68840,
+          "end": 68940
+        },
+        {
+          "word": "NAND",
+          "begin": 68980,
+          "end": 69220
+        },
+        {
+          "word": "blocks.",
+          "begin": 69280,
+          "end": 69680
+        },
+        {
+          "word": "To",
+          "begin": 69980,
+          "end": 70040
+        },
+        {
+          "word": "understand",
+          "begin": 70120,
+          "end": 70620
+        },
+        {
+          "word": "how",
+          "begin": 70640,
+          "end": 70720
+        },
+        {
+          "word": "garbage",
+          "begin": 70840,
+          "end": 71160
+        },
+        {
+          "word": "collection,",
+          "begin": 71220,
+          "end": 71660
+        },
+        {
+          "word": "wear",
+          "begin": 71920,
+          "end": 72180
+        },
+        {
+          "word": "leveling,",
+          "begin": 72180,
+          "end": 72560
+        },
+        {
+          "word": "and",
+          "begin": 72720,
+          "end": 72800
+        },
+        {
+          "word": "TRIM",
+          "begin": 72880,
+          "end": 73100
+        },
+        {
+          "word": "work",
+          "begin": 73160,
+          "end": 73380
+        },
+        {
+          "word": "(covered",
+          "begin": 73500,
+          "end": 73780
+        },
+        {
+          "word": "in",
+          "begin": 73800,
+          "end": 73880
+        },
+        {
+          "word": "Lesson",
+          "begin": 73920,
+          "end": 74200
+        },
+        {
+          "word": "11),",
+          "begin": 74220,
+          "end": 74600
+        },
+        {
+          "word": "you",
+          "begin": 74300,
+          "end": 74380
+        },
+        {
+          "word": "need",
+          "begin": 74440,
+          "end": 74600
+        },
+        {
+          "word": "to",
+          "begin": 74780,
+          "end": 74480
+        },
+        {
+          "word": "understand",
+          "begin": 74500,
+          "end": 75080
+        },
+        {
+          "word": "how",
+          "begin": 75080,
+          "end": 75200
+        },
+        {
+          "word": "the",
+          "begin": 75220,
+          "end": 75280
+        },
+        {
+          "word": "FTL",
+          "begin": 75300,
+          "end": 75640
+        },
+        {
+          "word": "classifies",
+          "begin": 75640,
+          "end": 76280
+        },
+        {
+          "word": "and",
+          "begin": 76360,
+          "end": 76540
+        },
+        {
+          "word": "manages",
+          "begin": 76540,
+          "end": 77160
+        },
+        {
+          "word": "these",
+          "begin": 77220,
+          "end": 77300
+        },
+        {
+          "word": "blocks.",
+          "begin": 77360,
+          "end": 78400
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "Why does block classification matter? Because the FTL makes different decisions for different block types — where to write new data, what to move during wear leveling, and which blocks to erase during garbage collection. These decisions directly affect performance, endurance, and write amplification.",
+      "beginMs": 78580,
+      "endMs": 94000,
+      "timestamps": [
+        {
+          "word": "Why",
+          "begin": 78580,
+          "end": 78660
+        },
+        {
+          "word": "does",
+          "begin": 78780,
+          "end": 78920
+        },
+        {
+          "word": "block",
+          "begin": 78980,
+          "end": 79140
+        },
+        {
+          "word": "classification",
+          "begin": 79140,
+          "end": 79900
+        },
+        {
+          "word": "matter?",
+          "begin": 79960,
+          "end": 80180
+        },
+        {
+          "word": "Because",
+          "begin": 80640,
+          "end": 80880
+        },
+        {
+          "word": "the",
+          "begin": 80880,
+          "end": 80940
+        },
+        {
+          "word": "FTL",
+          "begin": 81040,
+          "end": 81500
+        },
+        {
+          "word": "makes",
+          "begin": 81580,
+          "end": 81780
+        },
+        {
+          "word": "different",
+          "begin": 81840,
+          "end": 82100
+        },
+        {
+          "word": "decisions",
+          "begin": 82120,
+          "end": 82560
+        },
+        {
+          "word": "for",
+          "begin": 82600,
+          "end": 82660
+        },
+        {
+          "word": "different",
+          "begin": 82740,
+          "end": 83020
+        },
+        {
+          "word": "block",
+          "begin": 83060,
+          "end": 83300
+        },
+        {
+          "word": "types",
+          "begin": 83360,
+          "end": 83780
+        },
+        {
+          "word": "where",
+          "begin": 84120,
+          "end": 84240
+        },
+        {
+          "word": "to",
+          "begin": 84280,
+          "end": 84320
+        },
+        {
+          "word": "write",
+          "begin": 84380,
+          "end": 84580
+        },
+        {
+          "word": "new",
+          "begin": 84620,
+          "end": 84680
+        },
+        {
+          "word": "data,",
+          "begin": 84800,
+          "end": 85060
+        },
+        {
+          "word": "what",
+          "begin": 85520,
+          "end": 85620
+        },
+        {
+          "word": "to",
+          "begin": 85660,
+          "end": 85720
+        },
+        {
+          "word": "move",
+          "begin": 85780,
+          "end": 85940
+        },
+        {
+          "word": "during",
+          "begin": 85980,
+          "end": 86180
+        },
+        {
+          "word": "wear",
+          "begin": 86240,
+          "end": 86320
+        },
+        {
+          "word": "leveling,",
+          "begin": 86460,
+          "end": 86880
+        },
+        {
+          "word": "and",
+          "begin": 87040,
+          "end": 87140
+        },
+        {
+          "word": "which",
+          "begin": 87200,
+          "end": 87460
+        },
+        {
+          "word": "blocks",
+          "begin": 87460,
+          "end": 87700
+        },
+        {
+          "word": "to",
+          "begin": 87760,
+          "end": 87820
+        },
+        {
+          "word": "erase",
+          "begin": 87880,
+          "end": 88160
+        },
+        {
+          "word": "during",
+          "begin": 88220,
+          "end": 88420
+        },
+        {
+          "word": "garbage",
+          "begin": 88460,
+          "end": 88780
+        },
+        {
+          "word": "collection.",
+          "begin": 88840,
+          "end": 89320
+        },
+        {
+          "word": "These",
+          "begin": 89480,
+          "end": 89660
+        },
+        {
+          "word": "decisions",
+          "begin": 89700,
+          "end": 90140
+        },
+        {
+          "word": "directly",
+          "begin": 90200,
+          "end": 90600
+        },
+        {
+          "word": "affect",
+          "begin": 90640,
+          "end": 90960
+        },
+        {
+          "word": "performance,",
+          "begin": 91040,
+          "end": 91660
+        },
+        {
+          "word": "endurance,",
+          "begin": 91780,
+          "end": 92320
+        },
+        {
+          "word": "and",
+          "begin": 92440,
+          "end": 92540
+        },
+        {
+          "word": "write",
+          "begin": 92580,
+          "end": 92780
+        },
+        {
+          "word": "amplification.",
+          "begin": 92860,
+          "end": 93640
+        },
+        {
+          "word": "These",
+          "begin": 93840,
+          "end": 94000
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "These concepts form the foundation of SSD performance and longevity:",
+      "beginMs": 94060,
+      "endMs": 97380,
+      "timestamps": [
+        {
+          "word": "concepts",
+          "begin": 94060,
+          "end": 94520
+        },
+        {
+          "word": "form",
+          "begin": 94580,
+          "end": 94760
+        },
+        {
+          "word": "the",
+          "begin": 94800,
+          "end": 94840
+        },
+        {
+          "word": "foundation",
+          "begin": 94900,
+          "end": 95400
+        },
+        {
+          "word": "of",
+          "begin": 95420,
+          "end": 95500
+        },
+        {
+          "word": "SSD",
+          "begin": 95600,
+          "end": 96020
+        },
+        {
+          "word": "performance",
+          "begin": 96120,
+          "end": 96680
+        },
+        {
+          "word": "and",
+          "begin": 96760,
+          "end": 96840
+        },
+        {
+          "word": "longevity:",
+          "begin": 96880,
+          "end": 97380
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "reveal",
+      "text": "Knowledge check: Why does the garbage collector prioritize blocks with the fewest valid pages rather than the oldest blocks or random blocks? What metric does it optimize, and what would happen if it chose blocks randomly instead? The answer: The GC engine picks the block with the lowest VPC (Valid Page Count) because it must copy all valid pages to a new block before erasing. Choosing the block with the fewest valid pages minimizes write amplification — the ratio of actual NAND writes to host-requested writes. A block with VPC=2 out of 256 pages requires copying only 2 pages to reclaim 254 free pages (excellent efficiency). A block with VPC=250 would require copying 250 pages to reclaim only 6 pages (terrible efficiency). Random selection would average these extremes, dramatically increasing write amplification, which accelerates wear and reduces the drive's effective lifespan. The GC maintains a VPC table in DRAM for O(1) lookup of the best candidate. Erase count, by contrast, is used for wear leveling decisions, not GC source selection — these are separate optimization goals.",
+      "beginMs": 97720,
+      "endMs": 169820,
+      "timestamps": [
+        {
+          "word": "Knowledge",
+          "begin": 97720,
+          "end": 97960
+        },
+        {
+          "word": "check:",
+          "begin": 98020,
+          "end": 98420
+        },
+        {
+          "word": "Why",
+          "begin": 98660,
+          "end": 98740
+        },
+        {
+          "word": "does",
+          "begin": 98820,
+          "end": 98960
+        },
+        {
+          "word": "the",
+          "begin": 98980,
+          "end": 99040
+        },
+        {
+          "word": "garbage",
+          "begin": 99080,
+          "end": 99400
+        },
+        {
+          "word": "collector",
+          "begin": 99460,
+          "end": 99800
+        },
+        {
+          "word": "prioritize",
+          "begin": 99900,
+          "end": 100500
+        },
+        {
+          "word": "blocks",
+          "begin": 100580,
+          "end": 100980
+        },
+        {
+          "word": "with",
+          "begin": 101020,
+          "end": 101120
+        },
+        {
+          "word": "the",
+          "begin": 101160,
+          "end": 101220
+        },
+        {
+          "word": "fewest",
+          "begin": 101320,
+          "end": 101680
+        },
+        {
+          "word": "valid",
+          "begin": 101720,
+          "end": 102020
+        },
+        {
+          "word": "pages",
+          "begin": 102080,
+          "end": 102540
+        },
+        {
+          "word": "rather",
+          "begin": 102700,
+          "end": 102920
+        },
+        {
+          "word": "than",
+          "begin": 102980,
+          "end": 103100
+        },
+        {
+          "word": "the",
+          "begin": 103120,
+          "end": 103160
+        },
+        {
+          "word": "oldest",
+          "begin": 103280,
+          "end": 103560
+        },
+        {
+          "word": "blocks",
+          "begin": 103560,
+          "end": 104000
+        },
+        {
+          "word": "or",
+          "begin": 104100,
+          "end": 104260
+        },
+        {
+          "word": "random",
+          "begin": 104300,
+          "end": 104580
+        },
+        {
+          "word": "blocks?",
+          "begin": 104620,
+          "end": 105020
+        },
+        {
+          "word": "What",
+          "begin": 105320,
+          "end": 105440
+        },
+        {
+          "word": "metric",
+          "begin": 105440,
+          "end": 105680
+        },
+        {
+          "word": "does",
+          "begin": 105680,
+          "end": 105740
+        },
+        {
+          "word": "it",
+          "begin": 105740,
+          "end": 105900
+        },
+        {
+          "word": "optimize,",
+          "begin": 105920,
+          "end": 106340
+        },
+        {
+          "word": "and",
+          "begin": 106360,
+          "end": 106720
+        },
+        {
+          "word": "what",
+          "begin": 106940,
+          "end": 107020
+        },
+        {
+          "word": "would",
+          "begin": 107060,
+          "end": 107160
+        },
+        {
+          "word": "happen",
+          "begin": 107160,
+          "end": 107300
+        },
+        {
+          "word": "if",
+          "begin": 107340,
+          "end": 107380
+        },
+        {
+          "word": "it",
+          "begin": 107420,
+          "end": 107620
+        },
+        {
+          "word": "chose",
+          "begin": 107660,
+          "end": 108200
+        },
+        {
+          "word": "blocks",
+          "begin": 108260,
+          "end": 108580
+        },
+        {
+          "word": "randomly",
+          "begin": 108640,
+          "end": 109060
+        },
+        {
+          "word": "instead?",
+          "begin": 109120,
+          "end": 109620
+        },
+        {
+          "word": "The",
+          "begin": 109620,
+          "end": 110140
+        },
+        {
+          "word": "answer:",
+          "begin": 110280,
+          "end": 110560
+        },
+        {
+          "word": "The",
+          "begin": 111080,
+          "end": 111140
+        },
+        {
+          "word": "GC",
+          "begin": 111220,
+          "end": 111560
+        },
+        {
+          "word": "engine",
+          "begin": 111720,
+          "end": 112000
+        },
+        {
+          "word": "picks",
+          "begin": 112080,
+          "end": 112280
+        },
+        {
+          "word": "the",
+          "begin": 112340,
+          "end": 112380
+        },
+        {
+          "word": "block",
+          "begin": 112440,
+          "end": 112780
+        },
+        {
+          "word": "with",
+          "begin": 112880,
+          "end": 113040
+        },
+        {
+          "word": "the",
+          "begin": 113060,
+          "end": 113080
+        },
+        {
+          "word": "lowest",
+          "begin": 113180,
+          "end": 114140
+        },
+        {
+          "word": "VPC",
+          "begin": 114300,
+          "end": 114600
+        },
+        {
+          "word": "Page",
+          "begin": 114660,
+          "end": 114900
+        },
+        {
+          "word": "Count)",
+          "begin": 114980,
+          "end": 115260
+        },
+        {
+          "word": "because",
+          "begin": 115480,
+          "end": 115700
+        },
+        {
+          "word": "it",
+          "begin": 115720,
+          "end": 115780
+        },
+        {
+          "word": "must",
+          "begin": 115780,
+          "end": 116020
+        },
+        {
+          "word": "copy",
+          "begin": 116080,
+          "end": 116400
+        },
+        {
+          "word": "all",
+          "begin": 116180,
+          "end": 116340
+        },
+        {
+          "word": "valid",
+          "begin": 116380,
+          "end": 117000
+        },
+        {
+          "word": "pages",
+          "begin": 117000,
+          "end": 117580
+        },
+        {
+          "word": "to",
+          "begin": 117640,
+          "end": 117700
+        },
+        {
+          "word": "a",
+          "begin": 117760,
+          "end": 117780
+        },
+        {
+          "word": "new",
+          "begin": 117860,
+          "end": 117920
+        },
+        {
+          "word": "block",
+          "begin": 118040,
+          "end": 118340
+        },
+        {
+          "word": "before",
+          "begin": 118460,
+          "end": 118680
+        },
+        {
+          "word": "erasing.",
+          "begin": 118880,
+          "end": 119320
+        },
+        {
+          "word": "Choosing",
+          "begin": 119620,
+          "end": 119960
+        },
+        {
+          "word": "the",
+          "begin": 119980,
+          "end": 120040
+        },
+        {
+          "word": "block",
+          "begin": 120100,
+          "end": 120440
+        },
+        {
+          "word": "with",
+          "begin": 120560,
+          "end": 120700
+        },
+        {
+          "word": "the",
+          "begin": 120700,
+          "end": 120740
+        },
+        {
+          "word": "fewest",
+          "begin": 120840,
+          "end": 121180
+        },
+        {
+          "word": "valid",
+          "begin": 121240,
+          "end": 121520
+        },
+        {
+          "word": "pages",
+          "begin": 121560,
+          "end": 122000
+        },
+        {
+          "word": "minimizes",
+          "begin": 122080,
+          "end": 122640
+        },
+        {
+          "word": "write",
+          "begin": 122700,
+          "end": 122920
+        },
+        {
+          "word": "amplification",
+          "begin": 123020,
+          "end": 123880
+        },
+        {
+          "word": "the",
+          "begin": 124200,
+          "end": 124260
+        },
+        {
+          "word": "ratio",
+          "begin": 124340,
+          "end": 124900
+        },
+        {
+          "word": "of",
+          "begin": 124980,
+          "end": 125120
+        },
+        {
+          "word": "actual",
+          "begin": 124980,
+          "end": 125320
+        },
+        {
+          "word": "NAND",
+          "begin": 125420,
+          "end": 125760
+        },
+        {
+          "word": "writes",
+          "begin": 125940,
+          "end": 126220
+        },
+        {
+          "word": "to",
+          "begin": 126280,
+          "end": 126320
+        },
+        {
+          "word": "host-requested",
+          "begin": 126420,
+          "end": 127260
+        },
+        {
+          "word": "writes.",
+          "begin": 127320,
+          "end": 127720
+        },
+        {
+          "word": "A",
+          "begin": 128039,
+          "end": 128060
+        },
+        {
+          "word": "block",
+          "begin": 128139,
+          "end": 128440
+        },
+        {
+          "word": "with",
+          "begin": 128460,
+          "end": 128580
+        },
+        {
+          "word": "VPC=2",
+          "begin": 128660,
+          "end": 129900
+        },
+        {
+          "word": "out",
+          "begin": 130020,
+          "end": 130280
+        },
+        {
+          "word": "of",
+          "begin": 130340,
+          "end": 130440
+        },
+        {
+          "word": "256",
+          "begin": 130440,
+          "end": 131240
+        },
+        {
+          "word": "pages",
+          "begin": 131300,
+          "end": 131800
+        },
+        {
+          "word": "requires",
+          "begin": 132160,
+          "end": 132700
+        },
+        {
+          "word": "copying",
+          "begin": 132700,
+          "end": 133140
+        },
+        {
+          "word": "only",
+          "begin": 133140,
+          "end": 133440
+        },
+        {
+          "word": "2",
+          "begin": 133580,
+          "end": 133700
+        },
+        {
+          "word": "pages",
+          "begin": 133800,
+          "end": 134300
+        },
+        {
+          "word": "to",
+          "begin": 134540,
+          "end": 134620
+        },
+        {
+          "word": "reclaim",
+          "begin": 134680,
+          "end": 135380
+        },
+        {
+          "word": "254",
+          "begin": 135380,
+          "end": 136380
+        },
+        {
+          "word": "free",
+          "begin": 136380,
+          "end": 136440
+        },
+        {
+          "word": "pages",
+          "begin": 136540,
+          "end": 137000
+        },
+        {
+          "word": "(excellent",
+          "begin": 137120,
+          "end": 137520
+        },
+        {
+          "word": "efficiency).",
+          "begin": 137560,
+          "end": 138060
+        },
+        {
+          "word": "A",
+          "begin": 138080,
+          "end": 138560
+        },
+        {
+          "word": "block",
+          "begin": 138640,
+          "end": 138940
+        },
+        {
+          "word": "with",
+          "begin": 138960,
+          "end": 139080
+        },
+        {
+          "word": "VPC=250",
+          "begin": 139160,
+          "end": 141080
+        },
+        {
+          "word": "would",
+          "begin": 141240,
+          "end": 141360
+        },
+        {
+          "word": "require",
+          "begin": 141400,
+          "end": 141780
+        },
+        {
+          "word": "copying",
+          "begin": 141900,
+          "end": 142400
+        },
+        {
+          "word": "250",
+          "begin": 142540,
+          "end": 143300
+        },
+        {
+          "word": "pages",
+          "begin": 143380,
+          "end": 143840
+        },
+        {
+          "word": "to",
+          "begin": 143920,
+          "end": 144000
+        },
+        {
+          "word": "reclaim",
+          "begin": 144060,
+          "end": 144480
+        },
+        {
+          "word": "only",
+          "begin": 144600,
+          "end": 144780
+        },
+        {
+          "word": "6",
+          "begin": 144920,
+          "end": 145100
+        },
+        {
+          "word": "pages",
+          "begin": 145160,
+          "end": 145580
+        },
+        {
+          "word": "(terrible",
+          "begin": 145640,
+          "end": 146000
+        },
+        {
+          "word": "efficiency).",
+          "begin": 146080,
+          "end": 146640
+        },
+        {
+          "word": "Random",
+          "begin": 146940,
+          "end": 147240
+        },
+        {
+          "word": "selection",
+          "begin": 147320,
+          "end": 147780
+        },
+        {
+          "word": "would",
+          "begin": 147840,
+          "end": 147940
+        },
+        {
+          "word": "average",
+          "begin": 148040,
+          "end": 148360
+        },
+        {
+          "word": "these",
+          "begin": 148420,
+          "end": 148600
+        },
+        {
+          "word": "extremes,",
+          "begin": 148620,
+          "end": 149220
+        },
+        {
+          "word": "dramatically",
+          "begin": 149640,
+          "end": 150120
+        },
+        {
+          "word": "increasing",
+          "begin": 150240,
+          "end": 150780
+        },
+        {
+          "word": "write",
+          "begin": 150860,
+          "end": 151060
+        },
+        {
+          "word": "amplification,",
+          "begin": 151140,
+          "end": 151980
+        },
+        {
+          "word": "which",
+          "begin": 152340,
+          "end": 152460
+        },
+        {
+          "word": "accelerates",
+          "begin": 152480,
+          "end": 153080
+        },
+        {
+          "word": "wear",
+          "begin": 153160,
+          "end": 153260
+        },
+        {
+          "word": "and",
+          "begin": 153580,
+          "end": 153660
+        },
+        {
+          "word": "reduces",
+          "begin": 153700,
+          "end": 154160
+        },
+        {
+          "word": "the",
+          "begin": 154200,
+          "end": 154260
+        },
+        {
+          "word": "drive's",
+          "begin": 154320,
+          "end": 154720
+        },
+        {
+          "word": "effective",
+          "begin": 154740,
+          "end": 155160
+        },
+        {
+          "word": "lifespan.",
+          "begin": 155220,
+          "end": 155780
+        },
+        {
+          "word": "The",
+          "begin": 156160,
+          "end": 156200
+        },
+        {
+          "word": "GC",
+          "begin": 156280,
+          "end": 156580
+        },
+        {
+          "word": "maintains",
+          "begin": 156680,
+          "end": 157260
+        },
+        {
+          "word": "a",
+          "begin": 157280,
+          "end": 157300
+        },
+        {
+          "word": "VPC",
+          "begin": 157380,
+          "end": 157880
+        },
+        {
+          "word": "table",
+          "begin": 157980,
+          "end": 159000
+        },
+        {
+          "word": "in",
+          "begin": 159140,
+          "end": 159340
+        },
+        {
+          "word": "for",
+          "begin": 159640,
+          "end": 159860
+        },
+        {
+          "word": "O(1)",
+          "begin": 160000,
+          "end": 160180
+        },
+        {
+          "word": "lookup",
+          "begin": 160240,
+          "end": 160560
+        },
+        {
+          "word": "of",
+          "begin": 160600,
+          "end": 160680
+        },
+        {
+          "word": "the",
+          "begin": 160720,
+          "end": 160760
+        },
+        {
+          "word": "best",
+          "begin": 160820,
+          "end": 161040
+        },
+        {
+          "word": "candidate.",
+          "begin": 161080,
+          "end": 161620
+        },
+        {
+          "word": "Erase",
+          "begin": 161820,
+          "end": 162160
+        },
+        {
+          "word": "count,",
+          "begin": 162200,
+          "end": 162460
+        },
+        {
+          "word": "by",
+          "begin": 162500,
+          "end": 162560
+        },
+        {
+          "word": "contrast,",
+          "begin": 162680,
+          "end": 163360
+        },
+        {
+          "word": "is",
+          "begin": 163640,
+          "end": 163760
+        },
+        {
+          "word": "used",
+          "begin": 163800,
+          "end": 164100
+        },
+        {
+          "word": "for",
+          "begin": 164160,
+          "end": 164240
+        },
+        {
+          "word": "wear",
+          "begin": 164360,
+          "end": 164440
+        },
+        {
+          "word": "leveling",
+          "begin": 164620,
+          "end": 164980
+        },
+        {
+          "word": "decisions,",
+          "begin": 165020,
+          "end": 165620
+        },
+        {
+          "word": "not",
+          "begin": 165960,
+          "end": 166160
+        },
+        {
+          "word": "GC",
+          "begin": 166220,
+          "end": 166740
+        },
+        {
+          "word": "source",
+          "begin": 166880,
+          "end": 166900
+        },
+        {
+          "word": "selection",
+          "begin": 166940,
+          "end": 167460
+        },
+        {
+          "word": "these",
+          "begin": 167800,
+          "end": 168000
+        },
+        {
+          "word": "are",
+          "begin": 168040,
+          "end": 168060
+        },
+        {
+          "word": "separate",
+          "begin": 168220,
+          "end": 168560
+        },
+        {
+          "word": "optimization",
+          "begin": 168660,
+          "end": 169340
+        },
+        {
+          "word": "goals.",
+          "begin": 169420,
+          "end": 169820
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

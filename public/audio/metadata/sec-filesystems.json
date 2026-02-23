@@ -1,0 +1,4241 @@
+{
+  "sectionId": "sec-filesystems",
+  "audioFile": "/audio/sections/sec-filesystems.mp3",
+  "totalDurationMs": 357560,
+  "fileSizeBytes": 5721984,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "Filesystems — How Files Become LBAs",
+      "beginMs": 20,
+      "endMs": 2920,
+      "timestamps": [
+        {
+          "word": "Filesystems",
+          "begin": 20,
+          "end": 840
+        },
+        {
+          "word": "How",
+          "begin": 1040,
+          "end": 1120
+        },
+        {
+          "word": "Files",
+          "begin": 1280,
+          "end": 1600
+        },
+        {
+          "word": "Become",
+          "begin": 1620,
+          "end": 1920
+        },
+        {
+          "word": "LBAs",
+          "begin": 2000,
+          "end": 2460
+        },
+        {
+          "word": "Analogy:",
+          "begin": 2480,
+          "end": 2920
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: Filesystems Translate Files to Blocks. A filesystem is like a librarian's catalog system — it translates human-readable names (photo.jpg, report.pdf) into specific storage locations (LBAs). Different filesystems (ext4, XFS, Btrfs) use different organization strategies, affecting how well they work with SSDs.",
+      "beginMs": 3400,
+      "endMs": 27440,
+      "timestamps": [
+        {
+          "word": "Filesystems",
+          "begin": 3400,
+          "end": 4080
+        },
+        {
+          "word": "Translate",
+          "begin": 4140,
+          "end": 4560
+        },
+        {
+          "word": "Files",
+          "begin": 4640,
+          "end": 5000
+        },
+        {
+          "word": "to",
+          "begin": 5040,
+          "end": 5100
+        },
+        {
+          "word": "Blocks.",
+          "begin": 5180,
+          "end": 5580
+        },
+        {
+          "word": "A",
+          "begin": 6240,
+          "end": 6260
+        },
+        {
+          "word": "filesystem",
+          "begin": 6360,
+          "end": 6980
+        },
+        {
+          "word": "is",
+          "begin": 7040,
+          "end": 7140
+        },
+        {
+          "word": "like",
+          "begin": 7140,
+          "end": 7280
+        },
+        {
+          "word": "a",
+          "begin": 7300,
+          "end": 7320
+        },
+        {
+          "word": "librarian's",
+          "begin": 7360,
+          "end": 7980
+        },
+        {
+          "word": "catalog",
+          "begin": 8039,
+          "end": 8480
+        },
+        {
+          "word": "system",
+          "begin": 8560,
+          "end": 8940
+        },
+        {
+          "word": "it",
+          "begin": 9200,
+          "end": 9260
+        },
+        {
+          "word": "translates",
+          "begin": 9280,
+          "end": 9820
+        },
+        {
+          "word": "human-readable",
+          "begin": 9880,
+          "end": 10480
+        },
+        {
+          "word": "names",
+          "begin": 10600,
+          "end": 11700
+        },
+        {
+          "word": "(photo.jpg,",
+          "begin": 11760,
+          "end": 12260
+        },
+        {
+          "word": "report.pdf)",
+          "begin": 12680,
+          "end": 13840
+        },
+        {
+          "word": "into",
+          "begin": 14000,
+          "end": 14120
+        },
+        {
+          "word": "specific",
+          "begin": 14200,
+          "end": 14660
+        },
+        {
+          "word": "storage",
+          "begin": 14720,
+          "end": 15040
+        },
+        {
+          "word": "locations",
+          "begin": 15080,
+          "end": 15660
+        },
+        {
+          "word": "(LBAs).",
+          "begin": 15760,
+          "end": 16379
+        },
+        {
+          "word": "Different",
+          "begin": 17120,
+          "end": 17400
+        },
+        {
+          "word": "filesystems",
+          "begin": 17460,
+          "end": 18220
+        },
+        {
+          "word": "Btrfs)",
+          "begin": 18300,
+          "end": 20900
+        },
+        {
+          "word": "use",
+          "begin": 21100,
+          "end": 21280
+        },
+        {
+          "word": "different",
+          "begin": 21340,
+          "end": 21600
+        },
+        {
+          "word": "organization",
+          "begin": 21680,
+          "end": 22320
+        },
+        {
+          "word": "strategies,",
+          "begin": 22380,
+          "end": 22980
+        },
+        {
+          "word": "affecting",
+          "begin": 23220,
+          "end": 23640
+        },
+        {
+          "word": "how",
+          "begin": 23660,
+          "end": 23740
+        },
+        {
+          "word": "well",
+          "begin": 23840,
+          "end": 23980
+        },
+        {
+          "word": "they",
+          "begin": 24040,
+          "end": 24440
+        },
+        {
+          "word": "work",
+          "begin": 24480,
+          "end": 24840
+        },
+        {
+          "word": "with",
+          "begin": 24880,
+          "end": 25440
+        },
+        {
+          "word": "SSDs.",
+          "begin": 26120,
+          "end": 26320
+        },
+        {
+          "word": "ext4:",
+          "begin": 26420,
+          "end": 26960
+        },
+        {
+          "word": "The",
+          "begin": 27040,
+          "end": 27080
+        },
+        {
+          "word": "default",
+          "begin": 27040,
+          "end": 27440
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "term",
+      "text": "ext4: The default Linux filesystem. Uses extents (contiguous block ranges) for efficient allocation. Supports TRIM/discard for SSDs. Good general-purpose choice.",
+      "beginMs": 27480,
+      "endMs": 38180,
+      "timestamps": [
+        {
+          "word": "Linux",
+          "begin": 27480,
+          "end": 27760
+        },
+        {
+          "word": "filesystem.",
+          "begin": 27820,
+          "end": 28520
+        },
+        {
+          "word": "Uses",
+          "begin": 29120,
+          "end": 29420
+        },
+        {
+          "word": "extents",
+          "begin": 29440,
+          "end": 29880
+        },
+        {
+          "word": "(contiguous",
+          "begin": 29940,
+          "end": 30480
+        },
+        {
+          "word": "block",
+          "begin": 30560,
+          "end": 30780
+        },
+        {
+          "word": "ranges)",
+          "begin": 30840,
+          "end": 31280
+        },
+        {
+          "word": "for",
+          "begin": 31360,
+          "end": 31460
+        },
+        {
+          "word": "efficient",
+          "begin": 31480,
+          "end": 31880
+        },
+        {
+          "word": "allocation.",
+          "begin": 31940,
+          "end": 32560
+        },
+        {
+          "word": "Supports",
+          "begin": 33240,
+          "end": 33660
+        },
+        {
+          "word": "TRIM/discard",
+          "begin": 33740,
+          "end": 34600
+        },
+        {
+          "word": "for",
+          "begin": 34640,
+          "end": 34720
+        },
+        {
+          "word": "SSDs.",
+          "begin": 34840,
+          "end": 35280
+        },
+        {
+          "word": "Good",
+          "begin": 35520,
+          "end": 36220
+        },
+        {
+          "word": "general-purpose",
+          "begin": 36220,
+          "end": 37000
+        },
+        {
+          "word": "choice.",
+          "begin": 37060,
+          "end": 38180
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "term",
+      "text": "XFS: A high-performance filesystem optimized for large files and parallel I/O. Excels at sequential workloads and scales well on multi-core systems. Often preferred for database and media storage.",
+      "beginMs": 38220,
+      "endMs": 51560,
+      "timestamps": [
+        {
+          "word": "XFS:",
+          "begin": 38220,
+          "end": 39260
+        },
+        {
+          "word": "A",
+          "begin": 39260,
+          "end": 39320
+        },
+        {
+          "word": "high-performance",
+          "begin": 39400,
+          "end": 40320
+        },
+        {
+          "word": "filesystem",
+          "begin": 40320,
+          "end": 40820
+        },
+        {
+          "word": "optimized",
+          "begin": 40860,
+          "end": 41500
+        },
+        {
+          "word": "for",
+          "begin": 41580,
+          "end": 41660
+        },
+        {
+          "word": "large",
+          "begin": 42000,
+          "end": 42240
+        },
+        {
+          "word": "files",
+          "begin": 42320,
+          "end": 42520
+        },
+        {
+          "word": "and",
+          "begin": 42540,
+          "end": 42740
+        },
+        {
+          "word": "parallel",
+          "begin": 42880,
+          "end": 44100
+        },
+        {
+          "word": "I/O.",
+          "begin": 44100,
+          "end": 44600
+        },
+        {
+          "word": "Excels",
+          "begin": 44600,
+          "end": 44920
+        },
+        {
+          "word": "at",
+          "begin": 44940,
+          "end": 45100
+        },
+        {
+          "word": "sequential",
+          "begin": 45140,
+          "end": 45640
+        },
+        {
+          "word": "workloads",
+          "begin": 45700,
+          "end": 46200
+        },
+        {
+          "word": "and",
+          "begin": 46240,
+          "end": 46440
+        },
+        {
+          "word": "scales",
+          "begin": 46460,
+          "end": 46960
+        },
+        {
+          "word": "well",
+          "begin": 46980,
+          "end": 47180
+        },
+        {
+          "word": "on",
+          "begin": 47200,
+          "end": 47320
+        },
+        {
+          "word": "systems.",
+          "begin": 47200,
+          "end": 47480
+        },
+        {
+          "word": "Often",
+          "begin": 47780,
+          "end": 48040
+        },
+        {
+          "word": "preferred",
+          "begin": 48100,
+          "end": 48480
+        },
+        {
+          "word": "for",
+          "begin": 48540,
+          "end": 48600
+        },
+        {
+          "word": "database",
+          "begin": 48680,
+          "end": 49200
+        },
+        {
+          "word": "and",
+          "begin": 49280,
+          "end": 49360
+        },
+        {
+          "word": "media",
+          "begin": 49360,
+          "end": 49660
+        },
+        {
+          "word": "storage.",
+          "begin": 49740,
+          "end": 50200
+        },
+        {
+          "word": "Btrfs:",
+          "begin": 50740,
+          "end": 51560
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "term",
+      "text": "Btrfs: A copy-on-write (CoW) filesystem with built-in snapshots, compression, and RAID support. CoW writes create new copies instead of overwriting — similar to how SSDs do out-of-place writes internally.",
+      "beginMs": 51820,
+      "endMs": 64420,
+      "timestamps": [
+        {
+          "word": "A",
+          "begin": 51820,
+          "end": 51940
+        },
+        {
+          "word": "copy-on-write",
+          "begin": 51940,
+          "end": 52740
+        },
+        {
+          "word": "(CoW)",
+          "begin": 52800,
+          "end": 53240
+        },
+        {
+          "word": "filesystem",
+          "begin": 53340,
+          "end": 54020
+        },
+        {
+          "word": "with",
+          "begin": 54120,
+          "end": 54240
+        },
+        {
+          "word": "built-in",
+          "begin": 54320,
+          "end": 54660
+        },
+        {
+          "word": "snapshots,",
+          "begin": 54740,
+          "end": 55400
+        },
+        {
+          "word": "compression,",
+          "begin": 55560,
+          "end": 56120
+        },
+        {
+          "word": "and",
+          "begin": 56220,
+          "end": 56320
+        },
+        {
+          "word": "RAID",
+          "begin": 56360,
+          "end": 56560
+        },
+        {
+          "word": "support.",
+          "begin": 56600,
+          "end": 57080
+        },
+        {
+          "word": "CoW",
+          "begin": 57500,
+          "end": 57920
+        },
+        {
+          "word": "writes",
+          "begin": 58040,
+          "end": 58300
+        },
+        {
+          "word": "create",
+          "begin": 58380,
+          "end": 58700
+        },
+        {
+          "word": "new",
+          "begin": 58740,
+          "end": 58820
+        },
+        {
+          "word": "copies",
+          "begin": 58940,
+          "end": 59380
+        },
+        {
+          "word": "instead",
+          "begin": 59440,
+          "end": 59780
+        },
+        {
+          "word": "of",
+          "begin": 59780,
+          "end": 59860
+        },
+        {
+          "word": "overwriting",
+          "begin": 59940,
+          "end": 60480
+        },
+        {
+          "word": "similar",
+          "begin": 60760,
+          "end": 61020
+        },
+        {
+          "word": "to",
+          "begin": 61100,
+          "end": 61140
+        },
+        {
+          "word": "how",
+          "begin": 61180,
+          "end": 61280
+        },
+        {
+          "word": "SSDs",
+          "begin": 61460,
+          "end": 62040
+        },
+        {
+          "word": "do",
+          "begin": 62120,
+          "end": 62180
+        },
+        {
+          "word": "out-of-place",
+          "begin": 62320,
+          "end": 62800
+        },
+        {
+          "word": "writes",
+          "begin": 62880,
+          "end": 63120
+        },
+        {
+          "word": "internally.",
+          "begin": 63140,
+          "end": 63640
+        },
+        {
+          "word": "So",
+          "begin": 64200,
+          "end": 64420
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "So far, we've been talking about LBAs — numbered blocks on the SSD. But when you save a document, you don't think in LBAs. You think in files and folders. Who translates between the two?",
+      "beginMs": 64420,
+      "endMs": 75560,
+      "timestamps": [
+        {
+          "word": "far,",
+          "begin": 64420,
+          "end": 64720
+        },
+        {
+          "word": "we've",
+          "begin": 64739,
+          "end": 64840
+        },
+        {
+          "word": "been",
+          "begin": 64879,
+          "end": 64980
+        },
+        {
+          "word": "talking",
+          "begin": 65019,
+          "end": 65360
+        },
+        {
+          "word": "about",
+          "begin": 65379,
+          "end": 65620
+        },
+        {
+          "word": "LBAs",
+          "begin": 65720,
+          "end": 66400
+        },
+        {
+          "word": "numbered",
+          "begin": 66700,
+          "end": 66960
+        },
+        {
+          "word": "blocks",
+          "begin": 67020,
+          "end": 67400
+        },
+        {
+          "word": "on",
+          "begin": 67480,
+          "end": 67580
+        },
+        {
+          "word": "the",
+          "begin": 67580,
+          "end": 67640
+        },
+        {
+          "word": "SSD.",
+          "begin": 67720,
+          "end": 68180
+        },
+        {
+          "word": "But",
+          "begin": 68760,
+          "end": 68840
+        },
+        {
+          "word": "when",
+          "begin": 68860,
+          "end": 69000
+        },
+        {
+          "word": "you",
+          "begin": 69000,
+          "end": 69040
+        },
+        {
+          "word": "save",
+          "begin": 69160,
+          "end": 69340
+        },
+        {
+          "word": "a",
+          "begin": 69340,
+          "end": 69360
+        },
+        {
+          "word": "document,",
+          "begin": 69420,
+          "end": 69920
+        },
+        {
+          "word": "you",
+          "begin": 70040,
+          "end": 70100
+        },
+        {
+          "word": "don't",
+          "begin": 70160,
+          "end": 70360
+        },
+        {
+          "word": "think",
+          "begin": 70400,
+          "end": 70580
+        },
+        {
+          "word": "in",
+          "begin": 70580,
+          "end": 70660
+        },
+        {
+          "word": "LBAs.",
+          "begin": 70760,
+          "end": 71440
+        },
+        {
+          "word": "You",
+          "begin": 71780,
+          "end": 71820
+        },
+        {
+          "word": "think",
+          "begin": 71920,
+          "end": 72100
+        },
+        {
+          "word": "in",
+          "begin": 72120,
+          "end": 72200
+        },
+        {
+          "word": "files",
+          "begin": 72300,
+          "end": 72680
+        },
+        {
+          "word": "and",
+          "begin": 72700,
+          "end": 72780
+        },
+        {
+          "word": "folders.",
+          "begin": 72860,
+          "end": 73740
+        },
+        {
+          "word": "Who",
+          "begin": 73740,
+          "end": 73800
+        },
+        {
+          "word": "translates",
+          "begin": 73880,
+          "end": 74400
+        },
+        {
+          "word": "between",
+          "begin": 74440,
+          "end": 74760
+        },
+        {
+          "word": "the",
+          "begin": 74760,
+          "end": 74820
+        },
+        {
+          "word": "two?",
+          "begin": 74900,
+          "end": 75000
+        },
+        {
+          "word": "The",
+          "begin": 75520,
+          "end": 75560
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "The filesystem. It's a layer of software that turns file operations (open, read, write, delete) into block I/O commands (NVMe Read, Write, TRIM). It tracks which LBAs belong to which file, manages free space, and handles crash recovery.",
+      "beginMs": 75660,
+      "endMs": 95640,
+      "timestamps": [
+        {
+          "word": "filesystem.",
+          "begin": 75660,
+          "end": 76400
+        },
+        {
+          "word": "It's",
+          "begin": 76840,
+          "end": 76960
+        },
+        {
+          "word": "a",
+          "begin": 77000,
+          "end": 77020
+        },
+        {
+          "word": "layer",
+          "begin": 77100,
+          "end": 77620
+        },
+        {
+          "word": "of",
+          "begin": 77680,
+          "end": 77840
+        },
+        {
+          "word": "software",
+          "begin": 77880,
+          "end": 78620
+        },
+        {
+          "word": "that",
+          "begin": 78660,
+          "end": 78700
+        },
+        {
+          "word": "turns",
+          "begin": 78780,
+          "end": 79140
+        },
+        {
+          "word": "file",
+          "begin": 79240,
+          "end": 79580
+        },
+        {
+          "word": "operations",
+          "begin": 79240,
+          "end": 79700
+        },
+        {
+          "word": "(open,",
+          "begin": 79800,
+          "end": 80140
+        },
+        {
+          "word": "read,",
+          "begin": 80500,
+          "end": 80820
+        },
+        {
+          "word": "write,",
+          "begin": 81100,
+          "end": 81400
+        },
+        {
+          "word": "delete)",
+          "begin": 81640,
+          "end": 82000
+        },
+        {
+          "word": "into",
+          "begin": 82080,
+          "end": 82240
+        },
+        {
+          "word": "block",
+          "begin": 82320,
+          "end": 82620
+        },
+        {
+          "word": "I/O",
+          "begin": 82740,
+          "end": 83060
+        },
+        {
+          "word": "commands",
+          "begin": 83060,
+          "end": 83600
+        },
+        {
+          "word": "TRIM).",
+          "begin": 83920,
+          "end": 88640
+        },
+        {
+          "word": "It",
+          "begin": 88920,
+          "end": 88980
+        },
+        {
+          "word": "tracks",
+          "begin": 88980,
+          "end": 89400
+        },
+        {
+          "word": "which",
+          "begin": 89440,
+          "end": 89560
+        },
+        {
+          "word": "LBAs",
+          "begin": 89680,
+          "end": 90380
+        },
+        {
+          "word": "belong",
+          "begin": 90460,
+          "end": 90800
+        },
+        {
+          "word": "to",
+          "begin": 90860,
+          "end": 90920
+        },
+        {
+          "word": "which",
+          "begin": 90980,
+          "end": 91260
+        },
+        {
+          "word": "file,",
+          "begin": 91260,
+          "end": 91520
+        },
+        {
+          "word": "manages",
+          "begin": 91960,
+          "end": 92400
+        },
+        {
+          "word": "free",
+          "begin": 92480,
+          "end": 92560
+        },
+        {
+          "word": "space,",
+          "begin": 92700,
+          "end": 93140
+        },
+        {
+          "word": "and",
+          "begin": 93420,
+          "end": 93500
+        },
+        {
+          "word": "handles",
+          "begin": 93540,
+          "end": 93920
+        },
+        {
+          "word": "crash",
+          "begin": 93980,
+          "end": 94280
+        },
+        {
+          "word": "recovery.",
+          "begin": 94320,
+          "end": 94760
+        },
+        {
+          "word": "Why",
+          "begin": 95260,
+          "end": 95340
+        },
+        {
+          "word": "does",
+          "begin": 95440,
+          "end": 95560
+        },
+        {
+          "word": "the",
+          "begin": 95600,
+          "end": 95640
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "Why does the filesystem choice matter for NVMe? Because different filesystems interact differently with the SSD's internals:",
+      "beginMs": 95720,
+      "endMs": 101180,
+      "timestamps": [
+        {
+          "word": "filesystem",
+          "begin": 95720,
+          "end": 96320
+        },
+        {
+          "word": "choice",
+          "begin": 96420,
+          "end": 96700
+        },
+        {
+          "word": "matter",
+          "begin": 96760,
+          "end": 96960
+        },
+        {
+          "word": "for",
+          "begin": 97080,
+          "end": 97140
+        },
+        {
+          "word": "NVMe?",
+          "begin": 97280,
+          "end": 97900
+        },
+        {
+          "word": "Because",
+          "begin": 98140,
+          "end": 98440
+        },
+        {
+          "word": "different",
+          "begin": 98480,
+          "end": 98720
+        },
+        {
+          "word": "filesystems",
+          "begin": 98760,
+          "end": 99400
+        },
+        {
+          "word": "interact",
+          "begin": 99480,
+          "end": 99840
+        },
+        {
+          "word": "differently",
+          "begin": 99880,
+          "end": 100180
+        },
+        {
+          "word": "with",
+          "begin": 100180,
+          "end": 100220
+        },
+        {
+          "word": "the",
+          "begin": 100300,
+          "end": 100320
+        },
+        {
+          "word": "SSD's",
+          "begin": 100320,
+          "end": 100460
+        },
+        {
+          "word": "internals:",
+          "begin": 100560,
+          "end": 101180
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "paragraph",
+      "text": "Before comparing filesystems, let's define the terms you'll see in the table below. Each of these concepts solves a specific problem:",
+      "beginMs": 101220,
+      "endMs": 108520,
+      "timestamps": [
+        {
+          "word": "Before",
+          "begin": 101220,
+          "end": 101700
+        },
+        {
+          "word": "comparing",
+          "begin": 102120,
+          "end": 102780
+        },
+        {
+          "word": "filesystems,",
+          "begin": 102860,
+          "end": 103600
+        },
+        {
+          "word": "let's",
+          "begin": 102920,
+          "end": 103180
+        },
+        {
+          "word": "define",
+          "begin": 103220,
+          "end": 103520
+        },
+        {
+          "word": "the",
+          "begin": 103580,
+          "end": 103600
+        },
+        {
+          "word": "terms",
+          "begin": 103960,
+          "end": 104120
+        },
+        {
+          "word": "you'll",
+          "begin": 104160,
+          "end": 104200
+        },
+        {
+          "word": "see",
+          "begin": 104280,
+          "end": 104340
+        },
+        {
+          "word": "in",
+          "begin": 104440,
+          "end": 104480
+        },
+        {
+          "word": "the",
+          "begin": 104480,
+          "end": 104520
+        },
+        {
+          "word": "table",
+          "begin": 104580,
+          "end": 104940
+        },
+        {
+          "word": "below.",
+          "begin": 104940,
+          "end": 105300
+        },
+        {
+          "word": "Each",
+          "begin": 105320,
+          "end": 105380
+        },
+        {
+          "word": "of",
+          "begin": 105380,
+          "end": 105560
+        },
+        {
+          "word": "these",
+          "begin": 105620,
+          "end": 105820
+        },
+        {
+          "word": "concepts",
+          "begin": 105880,
+          "end": 107140
+        },
+        {
+          "word": "solves",
+          "begin": 107180,
+          "end": 107580
+        },
+        {
+          "word": "a",
+          "begin": 107580,
+          "end": 107620
+        },
+        {
+          "word": "specific",
+          "begin": 107620,
+          "end": 108100
+        },
+        {
+          "word": "problem:",
+          "begin": 108160,
+          "end": 108520
+        }
+      ]
+    },
+    {
+      "blockIndex": 9,
+      "type": "paragraph",
+      "text": "Data about your data. When you save a file, the filesystem stores not just the file contents but also: who owns it, when it was created/modified, its size, and which LBAs it occupies on the SSD. This bookkeeping data IS the metadata. Without it, the filesystem wouldn't know where your files are.",
+      "beginMs": 108580,
+      "endMs": 129740,
+      "timestamps": [
+        {
+          "word": "Data",
+          "begin": 108580,
+          "end": 108920
+        },
+        {
+          "word": "about",
+          "begin": 109000,
+          "end": 109840
+        },
+        {
+          "word": "your",
+          "begin": 109860,
+          "end": 110200
+        },
+        {
+          "word": "data.",
+          "begin": 110280,
+          "end": 110700
+        },
+        {
+          "word": "When",
+          "begin": 111220,
+          "end": 111340
+        },
+        {
+          "word": "you",
+          "begin": 111340,
+          "end": 111400
+        },
+        {
+          "word": "save",
+          "begin": 111500,
+          "end": 111700
+        },
+        {
+          "word": "a",
+          "begin": 111720,
+          "end": 111740
+        },
+        {
+          "word": "file,",
+          "begin": 111840,
+          "end": 112600
+        },
+        {
+          "word": "the",
+          "begin": 112680,
+          "end": 112760
+        },
+        {
+          "word": "filesystem",
+          "begin": 112680,
+          "end": 113260
+        },
+        {
+          "word": "stores",
+          "begin": 113320,
+          "end": 113620
+        },
+        {
+          "word": "not",
+          "begin": 113680,
+          "end": 113860
+        },
+        {
+          "word": "just",
+          "begin": 113900,
+          "end": 114060
+        },
+        {
+          "word": "the",
+          "begin": 114080,
+          "end": 114120
+        },
+        {
+          "word": "file",
+          "begin": 114200,
+          "end": 114420
+        },
+        {
+          "word": "contents",
+          "begin": 114500,
+          "end": 115080
+        },
+        {
+          "word": "but",
+          "begin": 115440,
+          "end": 115540
+        },
+        {
+          "word": "also:",
+          "begin": 115580,
+          "end": 116160
+        },
+        {
+          "word": "who",
+          "begin": 116160,
+          "end": 116220
+        },
+        {
+          "word": "owns",
+          "begin": 116380,
+          "end": 116600
+        },
+        {
+          "word": "it,",
+          "begin": 116640,
+          "end": 116800
+        },
+        {
+          "word": "when",
+          "begin": 117200,
+          "end": 117320
+        },
+        {
+          "word": "it",
+          "begin": 117320,
+          "end": 117340
+        },
+        {
+          "word": "was",
+          "begin": 117400,
+          "end": 117500
+        },
+        {
+          "word": "created/modified,",
+          "begin": 117560,
+          "end": 119440
+        },
+        {
+          "word": "its",
+          "begin": 119440,
+          "end": 120220
+        },
+        {
+          "word": "size,",
+          "begin": 120280,
+          "end": 120840
+        },
+        {
+          "word": "and",
+          "begin": 121240,
+          "end": 121320
+        },
+        {
+          "word": "which",
+          "begin": 121360,
+          "end": 121520
+        },
+        {
+          "word": "LBAs",
+          "begin": 121600,
+          "end": 122160
+        },
+        {
+          "word": "it",
+          "begin": 122180,
+          "end": 122260
+        },
+        {
+          "word": "occupies",
+          "begin": 122320,
+          "end": 122820
+        },
+        {
+          "word": "on",
+          "begin": 122860,
+          "end": 122960
+        },
+        {
+          "word": "the",
+          "begin": 122960,
+          "end": 123000
+        },
+        {
+          "word": "SSD.",
+          "begin": 123100,
+          "end": 123540
+        },
+        {
+          "word": "This",
+          "begin": 124240,
+          "end": 124380
+        },
+        {
+          "word": "bookkeeping",
+          "begin": 124440,
+          "end": 124880
+        },
+        {
+          "word": "data",
+          "begin": 124940,
+          "end": 125160
+        },
+        {
+          "word": "IS",
+          "begin": 125340,
+          "end": 125460
+        },
+        {
+          "word": "the",
+          "begin": 125500,
+          "end": 125560
+        },
+        {
+          "word": "metadata.",
+          "begin": 125640,
+          "end": 126120
+        },
+        {
+          "word": "Without",
+          "begin": 126600,
+          "end": 127060
+        },
+        {
+          "word": "it,",
+          "begin": 127060,
+          "end": 127080
+        },
+        {
+          "word": "the",
+          "begin": 127220,
+          "end": 127260
+        },
+        {
+          "word": "filesystem",
+          "begin": 127340,
+          "end": 127920
+        },
+        {
+          "word": "wouldn't",
+          "begin": 127960,
+          "end": 128139
+        },
+        {
+          "word": "know",
+          "begin": 128139,
+          "end": 128220
+        },
+        {
+          "word": "where",
+          "begin": 128220,
+          "end": 128419
+        },
+        {
+          "word": "your",
+          "begin": 128440,
+          "end": 128580
+        },
+        {
+          "word": "files",
+          "begin": 128680,
+          "end": 129000
+        },
+        {
+          "word": "are.",
+          "begin": 129060,
+          "end": 129740
+        }
+      ]
+    },
+    {
+      "blockIndex": 10,
+      "type": "paragraph",
+      "text": "A crash-safety mechanism. Before the filesystem makes any change (writing a file, renaming, deleting), it first writes a note to a special area called the &ldquo;journal&rdquo; describing what it's about to do. If power is lost mid-operation, the system checks the journal on boot and either completes or rolls back the pending change. Without journaling (ext2), recovery requires scanning the entire drive — which can take minutes.",
+      "beginMs": 129820,
+      "endMs": 155020,
+      "timestamps": [
+        {
+          "word": "A",
+          "begin": 129820,
+          "end": 129919
+        },
+        {
+          "word": "crash-safety",
+          "begin": 129820,
+          "end": 130500
+        },
+        {
+          "word": "mechanism.",
+          "begin": 130560,
+          "end": 131100
+        },
+        {
+          "word": "Before",
+          "begin": 131500,
+          "end": 131820
+        },
+        {
+          "word": "the",
+          "begin": 131820,
+          "end": 131860
+        },
+        {
+          "word": "filesystem",
+          "begin": 131940,
+          "end": 132540
+        },
+        {
+          "word": "makes",
+          "begin": 132580,
+          "end": 132800
+        },
+        {
+          "word": "any",
+          "begin": 132880,
+          "end": 133000
+        },
+        {
+          "word": "change",
+          "begin": 133100,
+          "end": 133380
+        },
+        {
+          "word": "(writing",
+          "begin": 133440,
+          "end": 133680
+        },
+        {
+          "word": "a",
+          "begin": 133700,
+          "end": 133720
+        },
+        {
+          "word": "file,",
+          "begin": 133820,
+          "end": 134080
+        },
+        {
+          "word": "renaming,",
+          "begin": 134440,
+          "end": 134980
+        },
+        {
+          "word": "deleting),",
+          "begin": 135160,
+          "end": 135640
+        },
+        {
+          "word": "it",
+          "begin": 135980,
+          "end": 136060
+        },
+        {
+          "word": "first",
+          "begin": 136140,
+          "end": 136400
+        },
+        {
+          "word": "writes",
+          "begin": 136440,
+          "end": 136640
+        },
+        {
+          "word": "a",
+          "begin": 136680,
+          "end": 136700
+        },
+        {
+          "word": "note",
+          "begin": 136760,
+          "end": 136940
+        },
+        {
+          "word": "to",
+          "begin": 136980,
+          "end": 137040
+        },
+        {
+          "word": "a",
+          "begin": 137080,
+          "end": 137120
+        },
+        {
+          "word": "special",
+          "begin": 137180,
+          "end": 137520
+        },
+        {
+          "word": "area",
+          "begin": 137620,
+          "end": 137860
+        },
+        {
+          "word": "called",
+          "begin": 137940,
+          "end": 138140
+        },
+        {
+          "word": "the",
+          "begin": 138160,
+          "end": 139020
+        },
+        {
+          "word": "&ldquo;journal&rdquo;",
+          "begin": 139380,
+          "end": 140260
+        },
+        {
+          "word": "describing",
+          "begin": 140660,
+          "end": 141160
+        },
+        {
+          "word": "what",
+          "begin": 141180,
+          "end": 141300
+        },
+        {
+          "word": "it's",
+          "begin": 141300,
+          "end": 141420
+        },
+        {
+          "word": "about",
+          "begin": 141420,
+          "end": 141740
+        },
+        {
+          "word": "to",
+          "begin": 141800,
+          "end": 141880
+        },
+        {
+          "word": "do.",
+          "begin": 141800,
+          "end": 141880
+        },
+        {
+          "word": "If",
+          "begin": 142420,
+          "end": 142520
+        },
+        {
+          "word": "power",
+          "begin": 142560,
+          "end": 142880
+        },
+        {
+          "word": "is",
+          "begin": 142900,
+          "end": 143000
+        },
+        {
+          "word": "lost",
+          "begin": 143040,
+          "end": 143320
+        },
+        {
+          "word": "mid-operation,",
+          "begin": 143380,
+          "end": 144160
+        },
+        {
+          "word": "the",
+          "begin": 144320,
+          "end": 144380
+        },
+        {
+          "word": "system",
+          "begin": 144460,
+          "end": 144740
+        },
+        {
+          "word": "checks",
+          "begin": 144820,
+          "end": 145040
+        },
+        {
+          "word": "the",
+          "begin": 145080,
+          "end": 145120
+        },
+        {
+          "word": "journal",
+          "begin": 145200,
+          "end": 145420
+        },
+        {
+          "word": "on",
+          "begin": 145520,
+          "end": 145620
+        },
+        {
+          "word": "boot",
+          "begin": 145680,
+          "end": 145940
+        },
+        {
+          "word": "and",
+          "begin": 146060,
+          "end": 146300
+        },
+        {
+          "word": "either",
+          "begin": 146320,
+          "end": 146340
+        },
+        {
+          "word": "completes",
+          "begin": 146420,
+          "end": 146920
+        },
+        {
+          "word": "or",
+          "begin": 147020,
+          "end": 147040
+        },
+        {
+          "word": "rolls",
+          "begin": 147160,
+          "end": 147400
+        },
+        {
+          "word": "back",
+          "begin": 147460,
+          "end": 147660
+        },
+        {
+          "word": "the",
+          "begin": 147700,
+          "end": 147760
+        },
+        {
+          "word": "pending",
+          "begin": 147820,
+          "end": 148100
+        },
+        {
+          "word": "change.",
+          "begin": 148180,
+          "end": 149100
+        },
+        {
+          "word": "Without",
+          "begin": 149100,
+          "end": 149360
+        },
+        {
+          "word": "journaling",
+          "begin": 149360,
+          "end": 149800
+        },
+        {
+          "word": "(ext2),",
+          "begin": 149880,
+          "end": 150420
+        },
+        {
+          "word": "recovery",
+          "begin": 150880,
+          "end": 151320
+        },
+        {
+          "word": "requires",
+          "begin": 151400,
+          "end": 151860
+        },
+        {
+          "word": "scanning",
+          "begin": 151920,
+          "end": 152260
+        },
+        {
+          "word": "the",
+          "begin": 152320,
+          "end": 152360
+        },
+        {
+          "word": "entire",
+          "begin": 152420,
+          "end": 153020
+        },
+        {
+          "word": "drive",
+          "begin": 153260,
+          "end": 153660
+        },
+        {
+          "word": "which",
+          "begin": 153720,
+          "end": 153960
+        },
+        {
+          "word": "can",
+          "begin": 154040,
+          "end": 154160
+        },
+        {
+          "word": "take",
+          "begin": 154040,
+          "end": 154060
+        },
+        {
+          "word": "minutes.",
+          "begin": 154140,
+          "end": 154500
+        },
+        {
+          "word": "Instead",
+          "begin": 154720,
+          "end": 155020
+        }
+      ]
+    },
+    {
+      "blockIndex": 11,
+      "type": "paragraph",
+      "text": "Instead of overwriting data in place, the filesystem writes the new version to a different location and updates the pointer. Sound familiar? It's the same principle as the SSD's FTL from Lesson 3! Btrfs does this at the filesystem level. Benefits: old versions of data are preserved (enabling snapshots), and partial writes can never corrupt existing data.",
+      "beginMs": 155040,
+      "endMs": 174860,
+      "timestamps": [
+        {
+          "word": "of",
+          "begin": 155040,
+          "end": 155120
+        },
+        {
+          "word": "overwriting",
+          "begin": 155160,
+          "end": 155640
+        },
+        {
+          "word": "data",
+          "begin": 155700,
+          "end": 156020
+        },
+        {
+          "word": "in",
+          "begin": 156020,
+          "end": 156080
+        },
+        {
+          "word": "place,",
+          "begin": 156140,
+          "end": 156880
+        },
+        {
+          "word": "the",
+          "begin": 156960,
+          "end": 157040
+        },
+        {
+          "word": "filesystem",
+          "begin": 156960,
+          "end": 157560
+        },
+        {
+          "word": "writes",
+          "begin": 157620,
+          "end": 157920
+        },
+        {
+          "word": "the",
+          "begin": 157920,
+          "end": 157960
+        },
+        {
+          "word": "new",
+          "begin": 158020,
+          "end": 158100
+        },
+        {
+          "word": "version",
+          "begin": 158200,
+          "end": 158540
+        },
+        {
+          "word": "to",
+          "begin": 158580,
+          "end": 158660
+        },
+        {
+          "word": "a",
+          "begin": 158720,
+          "end": 158740
+        },
+        {
+          "word": "different",
+          "begin": 158800,
+          "end": 159060
+        },
+        {
+          "word": "location",
+          "begin": 159060,
+          "end": 159620
+        },
+        {
+          "word": "and",
+          "begin": 159720,
+          "end": 159800
+        },
+        {
+          "word": "updates",
+          "begin": 159880,
+          "end": 160300
+        },
+        {
+          "word": "the",
+          "begin": 160300,
+          "end": 160340
+        },
+        {
+          "word": "pointer.",
+          "begin": 160400,
+          "end": 160720
+        },
+        {
+          "word": "Sound",
+          "begin": 161260,
+          "end": 161520
+        },
+        {
+          "word": "familiar?",
+          "begin": 161520,
+          "end": 161800
+        },
+        {
+          "word": "It's",
+          "begin": 161800,
+          "end": 162420
+        },
+        {
+          "word": "the",
+          "begin": 162460,
+          "end": 162500
+        },
+        {
+          "word": "same",
+          "begin": 162600,
+          "end": 162780
+        },
+        {
+          "word": "principle",
+          "begin": 162840,
+          "end": 163200
+        },
+        {
+          "word": "as",
+          "begin": 163300,
+          "end": 163380
+        },
+        {
+          "word": "the",
+          "begin": 163420,
+          "end": 163480
+        },
+        {
+          "word": "SSD's",
+          "begin": 163560,
+          "end": 164120
+        },
+        {
+          "word": "FTL",
+          "begin": 164200,
+          "end": 164560
+        },
+        {
+          "word": "from",
+          "begin": 164760,
+          "end": 164880
+        },
+        {
+          "word": "Lesson",
+          "begin": 164920,
+          "end": 165180
+        },
+        {
+          "word": "3!",
+          "begin": 165260,
+          "end": 165400
+        },
+        {
+          "word": "Btrfs",
+          "begin": 166060,
+          "end": 166720
+        },
+        {
+          "word": "does",
+          "begin": 166760,
+          "end": 167040
+        },
+        {
+          "word": "this",
+          "begin": 167100,
+          "end": 167240
+        },
+        {
+          "word": "at",
+          "begin": 167280,
+          "end": 167300
+        },
+        {
+          "word": "the",
+          "begin": 167400,
+          "end": 167420
+        },
+        {
+          "word": "filesystem",
+          "begin": 167420,
+          "end": 167820
+        },
+        {
+          "word": "level.",
+          "begin": 167860,
+          "end": 168040
+        },
+        {
+          "word": "Benefits:",
+          "begin": 168440,
+          "end": 169020
+        },
+        {
+          "word": "old",
+          "begin": 169440,
+          "end": 169600
+        },
+        {
+          "word": "versions",
+          "begin": 169640,
+          "end": 169980
+        },
+        {
+          "word": "of",
+          "begin": 170000,
+          "end": 170060
+        },
+        {
+          "word": "data",
+          "begin": 170060,
+          "end": 170340
+        },
+        {
+          "word": "are",
+          "begin": 170340,
+          "end": 170500
+        },
+        {
+          "word": "preserved",
+          "begin": 170600,
+          "end": 171040
+        },
+        {
+          "word": "(enabling",
+          "begin": 171060,
+          "end": 171500
+        },
+        {
+          "word": "snapshots),",
+          "begin": 171580,
+          "end": 172240
+        },
+        {
+          "word": "and",
+          "begin": 172540,
+          "end": 172620
+        },
+        {
+          "word": "partial",
+          "begin": 172680,
+          "end": 172960
+        },
+        {
+          "word": "writes",
+          "begin": 173060,
+          "end": 173320
+        },
+        {
+          "word": "can",
+          "begin": 173380,
+          "end": 173480
+        },
+        {
+          "word": "never",
+          "begin": 173540,
+          "end": 173720
+        },
+        {
+          "word": "corrupt",
+          "begin": 173820,
+          "end": 174160
+        },
+        {
+          "word": "existing",
+          "begin": 174180,
+          "end": 174620
+        },
+        {
+          "word": "data.",
+          "begin": 174680,
+          "end": 174860
+        }
+      ]
+    },
+    {
+      "blockIndex": 12,
+      "type": "paragraph",
+      "text": "A small mathematical fingerprint computed from your data. Every time data is read back, the filesystem recomputes the checksum and compares it. If they don't match, the data was silently corrupted (bit rot). Without checksums (ext4 on data), corruption goes undetected until the file is actually used and looks wrong.",
+      "beginMs": 174900,
+      "endMs": 192840,
+      "timestamps": [
+        {
+          "word": "A",
+          "begin": 174900,
+          "end": 175520
+        },
+        {
+          "word": "small",
+          "begin": 175620,
+          "end": 175880
+        },
+        {
+          "word": "mathematical",
+          "begin": 175940,
+          "end": 176480
+        },
+        {
+          "word": "fingerprint",
+          "begin": 176600,
+          "end": 177120
+        },
+        {
+          "word": "computed",
+          "begin": 177180,
+          "end": 177440
+        },
+        {
+          "word": "from",
+          "begin": 177500,
+          "end": 177440
+        },
+        {
+          "word": "your",
+          "begin": 177500,
+          "end": 177620
+        },
+        {
+          "word": "data.",
+          "begin": 177680,
+          "end": 178280
+        },
+        {
+          "word": "Every",
+          "begin": 178640,
+          "end": 178800
+        },
+        {
+          "word": "time",
+          "begin": 178860,
+          "end": 179080
+        },
+        {
+          "word": "data",
+          "begin": 179120,
+          "end": 179320
+        },
+        {
+          "word": "is",
+          "begin": 179380,
+          "end": 179480
+        },
+        {
+          "word": "read",
+          "begin": 179540,
+          "end": 179680
+        },
+        {
+          "word": "back,",
+          "begin": 179740,
+          "end": 180060
+        },
+        {
+          "word": "the",
+          "begin": 180320,
+          "end": 180360
+        },
+        {
+          "word": "filesystem",
+          "begin": 180460,
+          "end": 181080
+        },
+        {
+          "word": "recomputes",
+          "begin": 181140,
+          "end": 181680
+        },
+        {
+          "word": "the",
+          "begin": 181720,
+          "end": 181780
+        },
+        {
+          "word": "checksum",
+          "begin": 181860,
+          "end": 182300
+        },
+        {
+          "word": "and",
+          "begin": 182380,
+          "end": 182460
+        },
+        {
+          "word": "compares",
+          "begin": 182500,
+          "end": 182920
+        },
+        {
+          "word": "it.",
+          "begin": 182940,
+          "end": 183100
+        },
+        {
+          "word": "If",
+          "begin": 183580,
+          "end": 183680
+        },
+        {
+          "word": "they",
+          "begin": 183700,
+          "end": 183760
+        },
+        {
+          "word": "don't",
+          "begin": 183860,
+          "end": 184060
+        },
+        {
+          "word": "match,",
+          "begin": 184100,
+          "end": 184480
+        },
+        {
+          "word": "the",
+          "begin": 184480,
+          "end": 184520
+        },
+        {
+          "word": "data",
+          "begin": 184600,
+          "end": 184820
+        },
+        {
+          "word": "was",
+          "begin": 184860,
+          "end": 185000
+        },
+        {
+          "word": "silently",
+          "begin": 185040,
+          "end": 185340
+        },
+        {
+          "word": "corrupted",
+          "begin": 185340,
+          "end": 185640
+        },
+        {
+          "word": "(bit",
+          "begin": 185680,
+          "end": 185800
+        },
+        {
+          "word": "rot).",
+          "begin": 185840,
+          "end": 186540
+        },
+        {
+          "word": "Without",
+          "begin": 186900,
+          "end": 187200
+        },
+        {
+          "word": "checksums",
+          "begin": 187200,
+          "end": 187720
+        },
+        {
+          "word": "(ext4",
+          "begin": 187800,
+          "end": 188360
+        },
+        {
+          "word": "on",
+          "begin": 188380,
+          "end": 188480
+        },
+        {
+          "word": "data),",
+          "begin": 188520,
+          "end": 188740
+        },
+        {
+          "word": "corruption",
+          "begin": 189000,
+          "end": 189460
+        },
+        {
+          "word": "goes",
+          "begin": 189520,
+          "end": 189720
+        },
+        {
+          "word": "undetected",
+          "begin": 189800,
+          "end": 190400
+        },
+        {
+          "word": "until",
+          "begin": 190480,
+          "end": 190680
+        },
+        {
+          "word": "the",
+          "begin": 190720,
+          "end": 190760
+        },
+        {
+          "word": "file",
+          "begin": 190840,
+          "end": 191120
+        },
+        {
+          "word": "is",
+          "begin": 191140,
+          "end": 191240
+        },
+        {
+          "word": "actually",
+          "begin": 191300,
+          "end": 191600
+        },
+        {
+          "word": "used",
+          "begin": 191700,
+          "end": 192020
+        },
+        {
+          "word": "and",
+          "begin": 192080,
+          "end": 192180
+        },
+        {
+          "word": "looks",
+          "begin": 192220,
+          "end": 192440
+        },
+        {
+          "word": "wrong.",
+          "begin": 192520,
+          "end": 192840
+        }
+      ]
+    },
+    {
+      "blockIndex": 13,
+      "type": "paragraph",
+      "text": "A frozen-in-time copy of the filesystem. With CoW, creating a snapshot is nearly instant — you just tell the filesystem &ldquo;preserve all current pointers.&rdquo; New writes go to new locations, while the snapshot still points to the old data. Used for: backups (snapshot before updating), rollbacks (revert to last known good state), and testing (snapshot, experiment, revert).",
+      "beginMs": 193360,
+      "endMs": 216260,
+      "timestamps": [
+        {
+          "word": "A",
+          "begin": 193360,
+          "end": 193400
+        },
+        {
+          "word": "frozen-in-time",
+          "begin": 193480,
+          "end": 194220
+        },
+        {
+          "word": "copy",
+          "begin": 194280,
+          "end": 194560
+        },
+        {
+          "word": "of",
+          "begin": 194680,
+          "end": 194740
+        },
+        {
+          "word": "the",
+          "begin": 194780,
+          "end": 194820
+        },
+        {
+          "word": "filesystem.",
+          "begin": 194900,
+          "end": 195560
+        },
+        {
+          "word": "With",
+          "begin": 195760,
+          "end": 195860
+        },
+        {
+          "word": "CoW,",
+          "begin": 195860,
+          "end": 196380
+        },
+        {
+          "word": "creating",
+          "begin": 196700,
+          "end": 197020
+        },
+        {
+          "word": "a",
+          "begin": 197040,
+          "end": 197060
+        },
+        {
+          "word": "snapshot",
+          "begin": 197120,
+          "end": 197640
+        },
+        {
+          "word": "is",
+          "begin": 197700,
+          "end": 197800
+        },
+        {
+          "word": "nearly",
+          "begin": 197840,
+          "end": 198080
+        },
+        {
+          "word": "instant",
+          "begin": 198160,
+          "end": 198560
+        },
+        {
+          "word": "you",
+          "begin": 198800,
+          "end": 198840
+        },
+        {
+          "word": "just",
+          "begin": 198900,
+          "end": 199040
+        },
+        {
+          "word": "tell",
+          "begin": 199100,
+          "end": 199240
+        },
+        {
+          "word": "the",
+          "begin": 199280,
+          "end": 199320
+        },
+        {
+          "word": "filesystem",
+          "begin": 199400,
+          "end": 200040
+        },
+        {
+          "word": "&ldquo;preserve",
+          "begin": 200160,
+          "end": 201320
+        },
+        {
+          "word": "all",
+          "begin": 201360,
+          "end": 201760
+        },
+        {
+          "word": "current",
+          "begin": 201840,
+          "end": 202120
+        },
+        {
+          "word": "pointers.&rdquo;",
+          "begin": 202160,
+          "end": 203580
+        },
+        {
+          "word": "New",
+          "begin": 204040,
+          "end": 204100
+        },
+        {
+          "word": "writes",
+          "begin": 204220,
+          "end": 204480
+        },
+        {
+          "word": "go",
+          "begin": 204520,
+          "end": 204760
+        },
+        {
+          "word": "to",
+          "begin": 204840,
+          "end": 204900
+        },
+        {
+          "word": "new",
+          "begin": 204980,
+          "end": 205000
+        },
+        {
+          "word": "locations,",
+          "begin": 205000,
+          "end": 205640
+        },
+        {
+          "word": "while",
+          "begin": 205860,
+          "end": 205960
+        },
+        {
+          "word": "the",
+          "begin": 206000,
+          "end": 206040
+        },
+        {
+          "word": "snapshot",
+          "begin": 206120,
+          "end": 206680
+        },
+        {
+          "word": "still",
+          "begin": 206720,
+          "end": 206900
+        },
+        {
+          "word": "points",
+          "begin": 206980,
+          "end": 207260
+        },
+        {
+          "word": "to",
+          "begin": 207300,
+          "end": 207340
+        },
+        {
+          "word": "the",
+          "begin": 207400,
+          "end": 207440
+        },
+        {
+          "word": "old",
+          "begin": 207540,
+          "end": 207700
+        },
+        {
+          "word": "data.",
+          "begin": 207740,
+          "end": 207960
+        },
+        {
+          "word": "Used",
+          "begin": 208180,
+          "end": 208440
+        },
+        {
+          "word": "for:",
+          "begin": 208500,
+          "end": 208580
+        },
+        {
+          "word": "backups",
+          "begin": 209080,
+          "end": 209400
+        },
+        {
+          "word": "(snapshot",
+          "begin": 209460,
+          "end": 210000
+        },
+        {
+          "word": "before",
+          "begin": 210060,
+          "end": 210340
+        },
+        {
+          "word": "updating),",
+          "begin": 210420,
+          "end": 210860
+        },
+        {
+          "word": "rollbacks",
+          "begin": 210860,
+          "end": 211660
+        },
+        {
+          "word": "(revert",
+          "begin": 211720,
+          "end": 212020
+        },
+        {
+          "word": "to",
+          "begin": 212020,
+          "end": 212160
+        },
+        {
+          "word": "last",
+          "begin": 212240,
+          "end": 212540
+        },
+        {
+          "word": "known",
+          "begin": 212540,
+          "end": 212800
+        },
+        {
+          "word": "good",
+          "begin": 212860,
+          "end": 213000
+        },
+        {
+          "word": "state),",
+          "begin": 213000,
+          "end": 213180
+        },
+        {
+          "word": "and",
+          "begin": 213220,
+          "end": 213760
+        },
+        {
+          "word": "testing",
+          "begin": 213800,
+          "end": 214160
+        },
+        {
+          "word": "(snapshot,",
+          "begin": 214220,
+          "end": 214780
+        },
+        {
+          "word": "experiment,",
+          "begin": 215020,
+          "end": 215600
+        },
+        {
+          "word": "revert).",
+          "begin": 215600,
+          "end": 215900
+        },
+        {
+          "word": "The",
+          "begin": 215980,
+          "end": 216260
+        }
+      ]
+    },
+    {
+      "blockIndex": 14,
+      "type": "paragraph",
+      "text": "The filesystem automatically compresses data before writing to NAND and decompresses when reading. Btrfs supports zstd, lzo, and zlib. Benefits: less data written to the SSD (less wear, more effective capacity), and reads can be faster because less data needs to come off the NAND (decompression is fast on modern CPUs). Downside: uses CPU time.",
+      "beginMs": 216600,
+      "endMs": 238840,
+      "timestamps": [
+        {
+          "word": "filesystem",
+          "begin": 216600,
+          "end": 217360
+        },
+        {
+          "word": "automatically",
+          "begin": 217440,
+          "end": 217960
+        },
+        {
+          "word": "compresses",
+          "begin": 218040,
+          "end": 218540
+        },
+        {
+          "word": "data",
+          "begin": 218600,
+          "end": 218820
+        },
+        {
+          "word": "before",
+          "begin": 219120,
+          "end": 219320
+        },
+        {
+          "word": "writing",
+          "begin": 219440,
+          "end": 219700
+        },
+        {
+          "word": "to",
+          "begin": 219760,
+          "end": 219840
+        },
+        {
+          "word": "NAND",
+          "begin": 219900,
+          "end": 220240
+        },
+        {
+          "word": "and",
+          "begin": 220360,
+          "end": 220460
+        },
+        {
+          "word": "decompresses",
+          "begin": 220500,
+          "end": 221160
+        },
+        {
+          "word": "when",
+          "begin": 221200,
+          "end": 221320
+        },
+        {
+          "word": "reading.",
+          "begin": 221380,
+          "end": 221680
+        },
+        {
+          "word": "Btrfs",
+          "begin": 221880,
+          "end": 222360
+        },
+        {
+          "word": "supports",
+          "begin": 222420,
+          "end": 222700
+        },
+        {
+          "word": "zstd,",
+          "begin": 222780,
+          "end": 223300
+        },
+        {
+          "word": "lzo,",
+          "begin": 223720,
+          "end": 224340
+        },
+        {
+          "word": "and",
+          "begin": 224400,
+          "end": 224440
+        },
+        {
+          "word": "zlib.",
+          "begin": 224500,
+          "end": 224860
+        },
+        {
+          "word": "Benefits:",
+          "begin": 225180,
+          "end": 225760
+        },
+        {
+          "word": "less",
+          "begin": 226120,
+          "end": 226320
+        },
+        {
+          "word": "data",
+          "begin": 226380,
+          "end": 226600
+        },
+        {
+          "word": "written",
+          "begin": 226700,
+          "end": 226920
+        },
+        {
+          "word": "to",
+          "begin": 226980,
+          "end": 227040
+        },
+        {
+          "word": "the",
+          "begin": 227080,
+          "end": 227260
+        },
+        {
+          "word": "SSD",
+          "begin": 227260,
+          "end": 227640
+        },
+        {
+          "word": "(less",
+          "begin": 227740,
+          "end": 227940
+        },
+        {
+          "word": "wear,",
+          "begin": 228020,
+          "end": 228100
+        },
+        {
+          "word": "more",
+          "begin": 228600,
+          "end": 228740
+        },
+        {
+          "word": "effective",
+          "begin": 228740,
+          "end": 229160
+        },
+        {
+          "word": "capacity),",
+          "begin": 229200,
+          "end": 229720
+        },
+        {
+          "word": "and",
+          "begin": 230180,
+          "end": 230280
+        },
+        {
+          "word": "reads",
+          "begin": 230340,
+          "end": 230620
+        },
+        {
+          "word": "can",
+          "begin": 230680,
+          "end": 230800
+        },
+        {
+          "word": "be",
+          "begin": 230820,
+          "end": 230880
+        },
+        {
+          "word": "faster",
+          "begin": 230980,
+          "end": 231340
+        },
+        {
+          "word": "because",
+          "begin": 231680,
+          "end": 231940
+        },
+        {
+          "word": "less",
+          "begin": 231980,
+          "end": 232160
+        },
+        {
+          "word": "data",
+          "begin": 232220,
+          "end": 232440
+        },
+        {
+          "word": "needs",
+          "begin": 232540,
+          "end": 232760
+        },
+        {
+          "word": "to",
+          "begin": 232800,
+          "end": 232860
+        },
+        {
+          "word": "come",
+          "begin": 232920,
+          "end": 233080
+        },
+        {
+          "word": "off",
+          "begin": 233140,
+          "end": 233320
+        },
+        {
+          "word": "the",
+          "begin": 233380,
+          "end": 233440
+        },
+        {
+          "word": "NAND",
+          "begin": 233520,
+          "end": 233800
+        },
+        {
+          "word": "(decompression",
+          "begin": 233900,
+          "end": 234600
+        },
+        {
+          "word": "is",
+          "begin": 234600,
+          "end": 233960
+        },
+        {
+          "word": "fast",
+          "begin": 234060,
+          "end": 234220
+        },
+        {
+          "word": "on",
+          "begin": 234240,
+          "end": 234280
+        },
+        {
+          "word": "modern",
+          "begin": 234300,
+          "end": 234600
+        },
+        {
+          "word": "CPUs).",
+          "begin": 234600,
+          "end": 235220
+        },
+        {
+          "word": "Downside:",
+          "begin": 235240,
+          "end": 235520
+        },
+        {
+          "word": "uses",
+          "begin": 235580,
+          "end": 235720
+        },
+        {
+          "word": "CPU",
+          "begin": 235800,
+          "end": 236460
+        },
+        {
+          "word": "time.",
+          "begin": 236800,
+          "end": 238840
+        }
+      ]
+    },
+    {
+      "blockIndex": 15,
+      "type": "paragraph",
+      "text": "In the comparison table, you'll see TRIM support labeled as &ldquo;Basic&rdquo; or &ldquo;Full.&rdquo; Here's what each level means and how TRIM can be delivered to the SSD:",
+      "beginMs": 239040,
+      "endMs": 251400,
+      "timestamps": [
+        {
+          "word": "In",
+          "begin": 239040,
+          "end": 239120
+        },
+        {
+          "word": "the",
+          "begin": 239120,
+          "end": 239180
+        },
+        {
+          "word": "comparison",
+          "begin": 239220,
+          "end": 239740
+        },
+        {
+          "word": "table,",
+          "begin": 239780,
+          "end": 240040
+        },
+        {
+          "word": "you'll",
+          "begin": 240360,
+          "end": 240460
+        },
+        {
+          "word": "see",
+          "begin": 240540,
+          "end": 240620
+        },
+        {
+          "word": "TRIM",
+          "begin": 240720,
+          "end": 240940
+        },
+        {
+          "word": "support",
+          "begin": 241020,
+          "end": 241380
+        },
+        {
+          "word": "labeled",
+          "begin": 241460,
+          "end": 241800
+        },
+        {
+          "word": "as",
+          "begin": 241900,
+          "end": 242140
+        },
+        {
+          "word": "each",
+          "begin": 242260,
+          "end": 242360
+        },
+        {
+          "word": "be",
+          "begin": 242360,
+          "end": 242400
+        },
+        {
+          "word": "SSD:",
+          "begin": 242520,
+          "end": 243060
+        },
+        {
+          "word": "FTL",
+          "begin": 243160,
+          "end": 243680
+        },
+        {
+          "word": "double",
+          "begin": 244000,
+          "end": 244260
+        },
+        {
+          "word": "indirection:",
+          "begin": 244320,
+          "end": 244940
+        },
+        {
+          "word": "Here's",
+          "begin": 245120,
+          "end": 245360
+        },
+        {
+          "word": "an",
+          "begin": 245380,
+          "end": 245460
+        },
+        {
+          "word": "interesting",
+          "begin": 245500,
+          "end": 245900
+        },
+        {
+          "word": "parallel:",
+          "begin": 245960,
+          "end": 246380
+        },
+        {
+          "word": "Btrfs",
+          "begin": 246720,
+          "end": 248060
+        },
+        {
+          "word": "uses",
+          "begin": 248300,
+          "end": 248660
+        },
+        {
+          "word": "copy-on-write",
+          "begin": 248720,
+          "end": 249680
+        },
+        {
+          "word": "to",
+          "begin": 249780,
+          "end": 249860
+        },
+        {
+          "word": "avoid",
+          "begin": 249920,
+          "end": 250240
+        },
+        {
+          "word": "overwriting",
+          "begin": 250360,
+          "end": 250920
+        },
+        {
+          "word": "data",
+          "begin": 250980,
+          "end": 251400
+        }
+      ]
+    },
+    {
+      "blockIndex": 16,
+      "type": "info",
+      "text": "Btrfs CoW and the SSD's FTL — double indirection: Here's an interesting parallel: Btrfs uses copy-on-write to avoid overwriting data in place. The SSD's FTL does the same thing at the hardware level. So with Btrfs on an NVMe SSD, writes are redirected twice — once by Btrfs and once by the FTL. This can increase write amplification but also improves crash consistency.",
+      "beginMs": 252400,
+      "endMs": 274660,
+      "timestamps": [
+        {
+          "word": "The",
+          "begin": 252400,
+          "end": 252440
+        },
+        {
+          "word": "SSD's",
+          "begin": 252540,
+          "end": 253100
+        },
+        {
+          "word": "FTL",
+          "begin": 253200,
+          "end": 253720
+        },
+        {
+          "word": "does",
+          "begin": 253800,
+          "end": 253960
+        },
+        {
+          "word": "the",
+          "begin": 254000,
+          "end": 254040
+        },
+        {
+          "word": "same",
+          "begin": 254160,
+          "end": 254380
+        },
+        {
+          "word": "thing",
+          "begin": 254480,
+          "end": 254680
+        },
+        {
+          "word": "at",
+          "begin": 254740,
+          "end": 254840
+        },
+        {
+          "word": "the",
+          "begin": 254840,
+          "end": 254880
+        },
+        {
+          "word": "hardware",
+          "begin": 254940,
+          "end": 255240
+        },
+        {
+          "word": "level.",
+          "begin": 255340,
+          "end": 255540
+        },
+        {
+          "word": "So",
+          "begin": 255940,
+          "end": 256079
+        },
+        {
+          "word": "with",
+          "begin": 256079,
+          "end": 256180
+        },
+        {
+          "word": "Btrfs",
+          "begin": 256279,
+          "end": 257380
+        },
+        {
+          "word": "on",
+          "begin": 257519,
+          "end": 257620
+        },
+        {
+          "word": "an",
+          "begin": 257640,
+          "end": 257720
+        },
+        {
+          "word": "NVMe",
+          "begin": 257839,
+          "end": 258279
+        },
+        {
+          "word": "SSD,",
+          "begin": 258459,
+          "end": 258899
+        },
+        {
+          "word": "writes",
+          "begin": 259399,
+          "end": 259660
+        },
+        {
+          "word": "are",
+          "begin": 259700,
+          "end": 259720
+        },
+        {
+          "word": "redirected",
+          "begin": 259820,
+          "end": 260339
+        },
+        {
+          "word": "twice",
+          "begin": 260399,
+          "end": 260820
+        },
+        {
+          "word": "once",
+          "begin": 261200,
+          "end": 261399
+        },
+        {
+          "word": "by",
+          "begin": 261459,
+          "end": 261519
+        },
+        {
+          "word": "Btrfs",
+          "begin": 261640,
+          "end": 262340
+        },
+        {
+          "word": "and",
+          "begin": 262680,
+          "end": 262780
+        },
+        {
+          "word": "once",
+          "begin": 262860,
+          "end": 263120
+        },
+        {
+          "word": "by",
+          "begin": 263180,
+          "end": 263260
+        },
+        {
+          "word": "the",
+          "begin": 263340,
+          "end": 263400
+        },
+        {
+          "word": "FTL.",
+          "begin": 263500,
+          "end": 264020
+        },
+        {
+          "word": "This",
+          "begin": 264240,
+          "end": 264400
+        },
+        {
+          "word": "can",
+          "begin": 264440,
+          "end": 264540
+        },
+        {
+          "word": "increase",
+          "begin": 264540,
+          "end": 264920
+        },
+        {
+          "word": "write",
+          "begin": 265000,
+          "end": 265180
+        },
+        {
+          "word": "amplification",
+          "begin": 265260,
+          "end": 266000
+        },
+        {
+          "word": "but",
+          "begin": 266060,
+          "end": 266180
+        },
+        {
+          "word": "also",
+          "begin": 266280,
+          "end": 266580
+        },
+        {
+          "word": "improves",
+          "begin": 266580,
+          "end": 267000
+        },
+        {
+          "word": "crash",
+          "begin": 267060,
+          "end": 267320
+        },
+        {
+          "word": "consistency.",
+          "begin": 267380,
+          "end": 268000
+        },
+        {
+          "word": "Knowledge",
+          "begin": 268280,
+          "end": 268500
+        },
+        {
+          "word": "check:",
+          "begin": 268560,
+          "end": 268880
+        },
+        {
+          "word": "Why",
+          "begin": 268940,
+          "end": 269180
+        },
+        {
+          "word": "does",
+          "begin": 269220,
+          "end": 269280
+        },
+        {
+          "word": "the",
+          "begin": 269280,
+          "end": 269320
+        },
+        {
+          "word": "choice",
+          "begin": 269380,
+          "end": 269680
+        },
+        {
+          "word": "of",
+          "begin": 269680,
+          "end": 269760
+        },
+        {
+          "word": "filesystem",
+          "begin": 269760,
+          "end": 270340
+        },
+        {
+          "word": "matter",
+          "begin": 270380,
+          "end": 270560
+        },
+        {
+          "word": "for",
+          "begin": 270660,
+          "end": 270720
+        },
+        {
+          "word": "NVMe",
+          "begin": 270840,
+          "end": 271280
+        },
+        {
+          "word": "SSD",
+          "begin": 271440,
+          "end": 271860
+        },
+        {
+          "word": "performance",
+          "begin": 271980,
+          "end": 272480
+        },
+        {
+          "word": "and",
+          "begin": 272520,
+          "end": 272600
+        },
+        {
+          "word": "longevity?",
+          "begin": 272620,
+          "end": 273100
+        },
+        {
+          "word": "Consider",
+          "begin": 273640,
+          "end": 274020
+        },
+        {
+          "word": "what",
+          "begin": 274020,
+          "end": 274120
+        },
+        {
+          "word": "happens",
+          "begin": 274140,
+          "end": 274500
+        },
+        {
+          "word": "at",
+          "begin": 274520,
+          "end": 274620
+        },
+        {
+          "word": "the",
+          "begin": 274620,
+          "end": 274660
+        }
+      ]
+    },
+    {
+      "blockIndex": 17,
+      "type": "reveal",
+      "text": "Knowledge check: Why does the choice of filesystem matter for NVMe SSD performance and longevity? Consider what happens at the intersection of filesystem behavior (journaling, CoW, TRIM) and the SSD's internal operations (FTL, GC, wear leveling). The answer: The filesystem sits directly above the block layer and determines how file operations translate into NVMe commands. This choice impacts the SSD in several critical ways: (1) TRIM support — ext4 and XFS send discard commands to inform the SSD about deleted data, reducing GC overhead and WAF. Without TRIM, the SSD wastes writes preserving dead data. (2) Write patterns — Btrfs uses copy-on-write, which means the SSD's FTL also does out-of-place writes, creating double indirection that can increase WAF. Ext4's in-place updates with journaling produce different patterns. (3) Journaling overhead — ext4's journal writes add extra NAND wear. The 'ordered' mode journals only metadata, while 'journal' mode doubles all writes. (4) Alignment — modern filesystems use 4K-aligned I/O matching the SSD's internal page size, avoiding read-modify-write penalties. The right choice depends on your workload: ext4 for general use, XFS for large files and parallel I/O, Btrfs when you need snapshots and checksums.",
+      "beginMs": 275300,
+      "endMs": 357320,
+      "timestamps": [
+        {
+          "word": "of",
+          "begin": 275300,
+          "end": 275380
+        },
+        {
+          "word": "filesystem",
+          "begin": 275440,
+          "end": 276080
+        },
+        {
+          "word": "behavior",
+          "begin": 276100,
+          "end": 276440
+        },
+        {
+          "word": "(journaling,",
+          "begin": 276540,
+          "end": 276960
+        },
+        {
+          "word": "CoW,",
+          "begin": 277120,
+          "end": 277680
+        },
+        {
+          "word": "TRIM)",
+          "begin": 277840,
+          "end": 278160
+        },
+        {
+          "word": "and",
+          "begin": 278240,
+          "end": 278320
+        },
+        {
+          "word": "the",
+          "begin": 278340,
+          "end": 278400
+        },
+        {
+          "word": "SSD's",
+          "begin": 278500,
+          "end": 279100
+        },
+        {
+          "word": "internal",
+          "begin": 279180,
+          "end": 279500
+        },
+        {
+          "word": "operations",
+          "begin": 279600,
+          "end": 280140
+        },
+        {
+          "word": "(FTL,",
+          "begin": 280200,
+          "end": 280140
+        },
+        {
+          "word": "GC,",
+          "begin": 280200,
+          "end": 280580
+        },
+        {
+          "word": "wear",
+          "begin": 280640,
+          "end": 281960
+        },
+        {
+          "word": "leveling).",
+          "begin": 282100,
+          "end": 282480
+        },
+        {
+          "word": "The",
+          "begin": 282760,
+          "end": 282820
+        },
+        {
+          "word": "answer:",
+          "begin": 282940,
+          "end": 283340
+        },
+        {
+          "word": "The",
+          "begin": 283340,
+          "end": 283380
+        },
+        {
+          "word": "filesystem",
+          "begin": 283460,
+          "end": 284080
+        },
+        {
+          "word": "sits",
+          "begin": 284200,
+          "end": 284400
+        },
+        {
+          "word": "directly",
+          "begin": 284460,
+          "end": 284820
+        },
+        {
+          "word": "above",
+          "begin": 284820,
+          "end": 285120
+        },
+        {
+          "word": "the",
+          "begin": 285140,
+          "end": 285200
+        },
+        {
+          "word": "block",
+          "begin": 285260,
+          "end": 285500
+        },
+        {
+          "word": "layer",
+          "begin": 285540,
+          "end": 285980
+        },
+        {
+          "word": "and",
+          "begin": 285980,
+          "end": 286180
+        },
+        {
+          "word": "determines",
+          "begin": 285980,
+          "end": 286420
+        },
+        {
+          "word": "how",
+          "begin": 286440,
+          "end": 286520
+        },
+        {
+          "word": "file",
+          "begin": 286660,
+          "end": 286900
+        },
+        {
+          "word": "operations",
+          "begin": 286940,
+          "end": 287500
+        },
+        {
+          "word": "translate",
+          "begin": 287560,
+          "end": 288040
+        },
+        {
+          "word": "into",
+          "begin": 288100,
+          "end": 288260
+        },
+        {
+          "word": "NVMe",
+          "begin": 288380,
+          "end": 288820
+        },
+        {
+          "word": "commands.",
+          "begin": 288940,
+          "end": 289420
+        },
+        {
+          "word": "This",
+          "begin": 289740,
+          "end": 289900
+        },
+        {
+          "word": "choice",
+          "begin": 289940,
+          "end": 290200
+        },
+        {
+          "word": "impacts",
+          "begin": 290280,
+          "end": 290640
+        },
+        {
+          "word": "the",
+          "begin": 290680,
+          "end": 290720
+        },
+        {
+          "word": "SSD",
+          "begin": 290840,
+          "end": 291280
+        },
+        {
+          "word": "in",
+          "begin": 291460,
+          "end": 291540
+        },
+        {
+          "word": "several",
+          "begin": 291660,
+          "end": 291920
+        },
+        {
+          "word": "critical",
+          "begin": 292000,
+          "end": 292320
+        },
+        {
+          "word": "ways:",
+          "begin": 292420,
+          "end": 292760
+        },
+        {
+          "word": "(1)",
+          "begin": 293120,
+          "end": 293280
+        },
+        {
+          "word": "TRIM",
+          "begin": 293360,
+          "end": 293560
+        },
+        {
+          "word": "support",
+          "begin": 293640,
+          "end": 294100
+        },
+        {
+          "word": "ext4",
+          "begin": 294360,
+          "end": 294780
+        },
+        {
+          "word": "and",
+          "begin": 295120,
+          "end": 295240
+        },
+        {
+          "word": "XFS",
+          "begin": 295400,
+          "end": 296040
+        },
+        {
+          "word": "send",
+          "begin": 296260,
+          "end": 296460
+        },
+        {
+          "word": "discard",
+          "begin": 296520,
+          "end": 296960
+        },
+        {
+          "word": "commands",
+          "begin": 297020,
+          "end": 297440
+        },
+        {
+          "word": "to",
+          "begin": 297500,
+          "end": 297580
+        },
+        {
+          "word": "inform",
+          "begin": 297640,
+          "end": 298060
+        },
+        {
+          "word": "the",
+          "begin": 298060,
+          "end": 298100
+        },
+        {
+          "word": "SSD",
+          "begin": 298160,
+          "end": 298580
+        },
+        {
+          "word": "about",
+          "begin": 298720,
+          "end": 298940
+        },
+        {
+          "word": "deleted",
+          "begin": 298980,
+          "end": 299320
+        },
+        {
+          "word": "data,",
+          "begin": 299320,
+          "end": 299620
+        },
+        {
+          "word": "reducing",
+          "begin": 302740,
+          "end": 303160
+        },
+        {
+          "word": "GC",
+          "begin": 303220,
+          "end": 303520
+        },
+        {
+          "word": "overhead",
+          "begin": 303640,
+          "end": 304080
+        },
+        {
+          "word": "and",
+          "begin": 304180,
+          "end": 304260
+        },
+        {
+          "word": "WAF.",
+          "begin": 304320,
+          "end": 304700
+        },
+        {
+          "word": "Without",
+          "begin": 305600,
+          "end": 305880
+        },
+        {
+          "word": "TRIM,",
+          "begin": 305920,
+          "end": 306220
+        },
+        {
+          "word": "the",
+          "begin": 306380,
+          "end": 306420
+        },
+        {
+          "word": "SSD",
+          "begin": 306520,
+          "end": 306900
+        },
+        {
+          "word": "wastes",
+          "begin": 307020,
+          "end": 307360
+        },
+        {
+          "word": "writes",
+          "begin": 307460,
+          "end": 307680
+        },
+        {
+          "word": "preserving",
+          "begin": 307760,
+          "end": 308160
+        },
+        {
+          "word": "dead",
+          "begin": 308200,
+          "end": 308360
+        },
+        {
+          "word": "data.",
+          "begin": 308400,
+          "end": 308640
+        },
+        {
+          "word": "(2)",
+          "begin": 309360,
+          "end": 309460
+        },
+        {
+          "word": "Write",
+          "begin": 309640,
+          "end": 309840
+        },
+        {
+          "word": "patterns",
+          "begin": 309880,
+          "end": 310400
+        },
+        {
+          "word": "Btrfs",
+          "begin": 312000,
+          "end": 312700
+        },
+        {
+          "word": "uses",
+          "begin": 312720,
+          "end": 312820
+        },
+        {
+          "word": "copy-on-write,",
+          "begin": 312880,
+          "end": 313680
+        },
+        {
+          "word": "which",
+          "begin": 314640,
+          "end": 314840
+        },
+        {
+          "word": "means",
+          "begin": 314840,
+          "end": 315020
+        },
+        {
+          "word": "the",
+          "begin": 315060,
+          "end": 315100
+        },
+        {
+          "word": "SSD's",
+          "begin": 315200,
+          "end": 315760
+        },
+        {
+          "word": "FTL",
+          "begin": 315880,
+          "end": 316420
+        },
+        {
+          "word": "also",
+          "begin": 316580,
+          "end": 316780
+        },
+        {
+          "word": "does",
+          "begin": 316860,
+          "end": 317040
+        },
+        {
+          "word": "out-of-place",
+          "begin": 317140,
+          "end": 317640
+        },
+        {
+          "word": "writes,",
+          "begin": 317700,
+          "end": 318040
+        },
+        {
+          "word": "creating",
+          "begin": 319020,
+          "end": 319380
+        },
+        {
+          "word": "double",
+          "begin": 319460,
+          "end": 319660
+        },
+        {
+          "word": "indirection",
+          "begin": 319800,
+          "end": 320400
+        },
+        {
+          "word": "that",
+          "begin": 320480,
+          "end": 320600
+        },
+        {
+          "word": "can",
+          "begin": 320640,
+          "end": 320760
+        },
+        {
+          "word": "increase",
+          "begin": 320780,
+          "end": 321180
+        },
+        {
+          "word": "WAF.",
+          "begin": 321260,
+          "end": 321620
+        },
+        {
+          "word": "Ext4's",
+          "begin": 323320,
+          "end": 323840
+        },
+        {
+          "word": "in-place",
+          "begin": 323920,
+          "end": 324300
+        },
+        {
+          "word": "updates",
+          "begin": 324360,
+          "end": 324740
+        },
+        {
+          "word": "with",
+          "begin": 324780,
+          "end": 324880
+        },
+        {
+          "word": "journaling",
+          "begin": 324960,
+          "end": 325320
+        },
+        {
+          "word": "produce",
+          "begin": 325380,
+          "end": 325680
+        },
+        {
+          "word": "different",
+          "begin": 325740,
+          "end": 326000
+        },
+        {
+          "word": "patterns.",
+          "begin": 326040,
+          "end": 326540
+        },
+        {
+          "word": "(3)",
+          "begin": 327200,
+          "end": 327320
+        },
+        {
+          "word": "Journaling",
+          "begin": 327460,
+          "end": 327820
+        },
+        {
+          "word": "overhead",
+          "begin": 327900,
+          "end": 328340
+        },
+        {
+          "word": "ext4's",
+          "begin": 328760,
+          "end": 329260
+        },
+        {
+          "word": "journal",
+          "begin": 329260,
+          "end": 329560
+        },
+        {
+          "word": "writes",
+          "begin": 329680,
+          "end": 329920
+        },
+        {
+          "word": "add",
+          "begin": 330060,
+          "end": 330240
+        },
+        {
+          "word": "extra",
+          "begin": 330340,
+          "end": 330560
+        },
+        {
+          "word": "NAND",
+          "begin": 330560,
+          "end": 330680
+        },
+        {
+          "word": "wear.",
+          "begin": 330720,
+          "end": 330900
+        },
+        {
+          "word": "The",
+          "begin": 330900,
+          "end": 330980
+        },
+        {
+          "word": "'ordered'",
+          "begin": 331020,
+          "end": 332460
+        },
+        {
+          "word": "mode",
+          "begin": 332560,
+          "end": 332880
+        },
+        {
+          "word": "journals",
+          "begin": 332880,
+          "end": 333579
+        },
+        {
+          "word": "only",
+          "begin": 333579,
+          "end": 333640
+        },
+        {
+          "word": "metadata,",
+          "begin": 333740,
+          "end": 334180
+        },
+        {
+          "word": "while",
+          "begin": 334880,
+          "end": 335020
+        },
+        {
+          "word": "'journal'",
+          "begin": 335120,
+          "end": 335320
+        },
+        {
+          "word": "mode",
+          "begin": 335460,
+          "end": 335700
+        },
+        {
+          "word": "doubles",
+          "begin": 335760,
+          "end": 336120
+        },
+        {
+          "word": "all",
+          "begin": 336240,
+          "end": 336360
+        },
+        {
+          "word": "writes.",
+          "begin": 336440,
+          "end": 336820
+        },
+        {
+          "word": "(4)",
+          "begin": 337300,
+          "end": 337620
+        },
+        {
+          "word": "Alignment",
+          "begin": 337620,
+          "end": 338200
+        },
+        {
+          "word": "modern",
+          "begin": 338520,
+          "end": 338780
+        },
+        {
+          "word": "filesystems",
+          "begin": 338860,
+          "end": 339640
+        },
+        {
+          "word": "use",
+          "begin": 339680,
+          "end": 339880
+        },
+        {
+          "word": "I/O",
+          "begin": 339980,
+          "end": 341300
+        },
+        {
+          "word": "matching",
+          "begin": 341460,
+          "end": 341840
+        },
+        {
+          "word": "the",
+          "begin": 341880,
+          "end": 341940
+        },
+        {
+          "word": "SSD's",
+          "begin": 342080,
+          "end": 342780
+        },
+        {
+          "word": "internal",
+          "begin": 342920,
+          "end": 343280
+        },
+        {
+          "word": "page",
+          "begin": 343380,
+          "end": 343800
+        },
+        {
+          "word": "size,",
+          "begin": 344060,
+          "end": 345100
+        },
+        {
+          "word": "avoiding",
+          "begin": 345120,
+          "end": 345680
+        },
+        {
+          "word": "read-modify-write",
+          "begin": 345740,
+          "end": 346380
+        },
+        {
+          "word": "penalties.",
+          "begin": 346440,
+          "end": 347060
+        },
+        {
+          "word": "The",
+          "begin": 347520,
+          "end": 347560
+        },
+        {
+          "word": "right",
+          "begin": 347620,
+          "end": 347780
+        },
+        {
+          "word": "choice",
+          "begin": 347780,
+          "end": 348140
+        },
+        {
+          "word": "depends",
+          "begin": 348200,
+          "end": 348520
+        },
+        {
+          "word": "on",
+          "begin": 348540,
+          "end": 348640
+        },
+        {
+          "word": "your",
+          "begin": 348660,
+          "end": 348840
+        },
+        {
+          "word": "workload:",
+          "begin": 348840,
+          "end": 349320
+        },
+        {
+          "word": "ext4",
+          "begin": 349600,
+          "end": 350540
+        },
+        {
+          "word": "for",
+          "begin": 350580,
+          "end": 350640
+        },
+        {
+          "word": "general",
+          "begin": 350640,
+          "end": 351100
+        },
+        {
+          "word": "use,",
+          "begin": 351480,
+          "end": 351720
+        },
+        {
+          "word": "XFS",
+          "begin": 351760,
+          "end": 352480
+        },
+        {
+          "word": "for",
+          "begin": 352560,
+          "end": 352640
+        },
+        {
+          "word": "large",
+          "begin": 352940,
+          "end": 353220
+        },
+        {
+          "word": "files",
+          "begin": 353280,
+          "end": 353640
+        },
+        {
+          "word": "and",
+          "begin": 353780,
+          "end": 354520
+        },
+        {
+          "word": "parallel",
+          "begin": 354540,
+          "end": 355240
+        },
+        {
+          "word": "I/O,",
+          "begin": 355480,
+          "end": 355640
+        },
+        {
+          "word": "Btrfs",
+          "begin": 355700,
+          "end": 356220
+        },
+        {
+          "word": "when",
+          "begin": 356280,
+          "end": 356440
+        },
+        {
+          "word": "you",
+          "begin": 356460,
+          "end": 356580
+        },
+        {
+          "word": "need",
+          "begin": 356620,
+          "end": 356660
+        },
+        {
+          "word": "snapshots",
+          "begin": 356720,
+          "end": 356980
+        },
+        {
+          "word": "and",
+          "begin": 357020,
+          "end": 357160
+        },
+        {
+          "word": "checksums.",
+          "begin": 357280,
+          "end": 357320
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

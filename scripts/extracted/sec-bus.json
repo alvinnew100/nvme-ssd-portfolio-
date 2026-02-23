@@ -1,0 +1,47 @@
+{
+  "sectionId": "sec-bus",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "What Is a Bus?",
+      "blockIndex": 0
+    },
+    {
+      "type": "paragraph",
+      "text": "A bus is the data highway that connects the different parts of your computer together. The CPU, RAM, SSD, GPU, and other devices all need to send data to each other — the bus is the road system that makes this possible.",
+      "blockIndex": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "Why does this matter for SSDs? Because no matter how fast the SSD's internal NAND chips are, data still has to travel over the bus to reach the CPU. The bus speed sets the upper limit on how fast data can move. Modern NVMe SSDs use a bus called PCIe (Peripheral Component Interconnect Express), which is the fastest bus available for storage devices.",
+      "blockIndex": 2
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: PCIe Is a Multi-Lane Highway. If data is cars, then PCIe is a multi-lane highway. Each 'lane' is an independent path for data. An NVMe SSD typically uses 4 lanes (called 'x4'). Adding lanes is like widening the highway — more traffic can flow simultaneously, even though each car drives at the same speed limit.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "Data travels over the bus in small chunks called packets. When the SSD needs to send data to the CPU, it packages the data into a packet, puts it on the bus, and the bus delivers it. We'll learn the details of these packets (called TLPs — Transaction Layer Packets) in Lesson 5.",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "The key takeaway: the bus is the bottleneck. Old SATA SSDs were limited by the SATA bus (~600 MB/s). NVMe SSDs use PCIe and can reach 7+ GB/s — over 10x faster — because PCIe has more lanes and faster per-lane speeds.",
+      "blockIndex": 5
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: How would you derive the usable bandwidth of PCIe 4.0 x4 from first principles? What encoding overhead must you account for, and why does it exist? The answer: PCIe 4.0 runs at 16 GT/s (gigatransfers per second) per lane. With 4 lanes (x4), that's 64 GT/s raw. PCIe 4.0 uses 128b/130b encoding — for every 128 bits of payload, 2 bits of overhead are added for clock recovery and error detection. So usable bandwidth = 64 GT/s x (128/130) x (1 byte / 8 bits) = ~7.88 GB/s. The encoding overhead exists because without embedded clock transitions, the receiver can't distinguish data from noise at these speeds.",
+      "requiresReveal": true,
+      "blockIndex": 6
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: A colleague says 'adding more PCIe lanes makes each lane faster.' When is this true and when does it fail? What actually changes when you go from x1 to x4? The answer: This is never true — each lane runs at the same speed, determined solely by the PCIe generation (e.g., 16 GT/s for Gen 4). Adding lanes increases total bandwidth by providing parallel paths for data, not by speeding up individual lanes. Going from x1 to x4 quadruples the aggregate bandwidth (from ~2 GB/s to ~8 GB/s for Gen 4) because four independent data streams flow simultaneously. The per-lane speed only changes when you upgrade the PCIe generation itself (e.g., Gen 3 at 8 GT/s to Gen 4 at 16 GT/s).",
+      "requiresReveal": true,
+      "blockIndex": 7
+    }
+  ]
+}

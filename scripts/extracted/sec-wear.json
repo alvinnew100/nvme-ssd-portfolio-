@@ -1,0 +1,71 @@
+{
+  "sectionId": "sec-wear",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Wear Leveling — Making Every Block Last",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: Wear Leveling Spreads the Load. Without wear leveling, frequently-written blocks would wear out quickly while rarely-written blocks stay fresh — like some lanes on a highway getting potholes while others stay pristine. Dynamic wear leveling picks the least-worn free block for new writes. Static wear leveling goes further: it periodically moves cold (rarely updated) data off low-wear blocks, forcing those blocks to take some hot writes too.",
+      "blockIndex": 1
+    },
+    {
+      "type": "term",
+      "text": "Dynamic Wear Leveling: Ensures new writes go to the free block with the lowest erase count. Effective for hot data, but cold data blocks that are never rewritten will accumulate a growing erase count gap.",
+      "blockIndex": 2
+    },
+    {
+      "type": "term",
+      "text": "Static Wear Leveling: Periodically moves cold (rarely written) data from low-wear blocks to high-wear blocks, then uses the freed low-wear blocks for new writes. Prevents cold blocks from hoarding low erase counts while hot blocks wear out.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "In Lesson 2, we learned that each NAND cell type has a different number of voltage levels (SLC=2, MLC=4, TLC=8, QLC=16). But there's a consequence we haven't discussed yet: the more voltage levels you pack into a cell, the faster it wears out.",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "Every time a NAND block is erased and reprogrammed, the oxide insulation around the floating gate degrades slightly. After enough cycles, the cell can no longer reliably hold charge. This limit is called the P/E (Program/Erase) cycle count:",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "Here's the problem: if the SSD always wrote to the same blocks (e.g., the OS swap partition), those blocks would wear out quickly while others sit barely used. The drive would fail long before its rated lifetime.",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "Wear leveling solves this. The SSD's controller distributes writes across all blocks as evenly as possible, so no single block dies prematurely. Think of it like rotating tires on a car — you wear them evenly so they all last longer.",
+      "blockIndex": 7
+    },
+    {
+      "type": "paragraph",
+      "text": "When writing new data, the FTL picks a dynamic spare block with the lowest erase count as the next write target. The block that receives these hot writes becomes a dynamic block. This is simple and effective for actively written data.",
+      "blockIndex": 8
+    },
+    {
+      "type": "paragraph",
+      "text": "Periodically moves cold data from low-wear static blocks to high-wear static spare blocks. The old static block (now empty) returns to the spare pool. This frees up fresh blocks for hot writes.",
+      "blockIndex": 9
+    },
+    {
+      "type": "paragraph",
+      "text": "TBW (Terabytes Written) is the manufacturer's rated endurance — how much data you can write before the drive is expected to start failing. For a 1 TB TLC SSD, a typical rating is 600 TBW. You can check current usage in SMART:",
+      "blockIndex": 10
+    },
+    {
+      "type": "info",
+      "text": "Wear leveling + WAF — the connection: Wear leveling and write amplification are interconnected. Static wear leveling involves moving data, which is additional NAND writes (increasing WAF). The FTL must balance wear uniformity against write amplification — aggressively moving data evens wear but costs more writes. This is one of the hardest tradeoffs in SSD firmware design.",
+      "blockIndex": 11
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: An SSD uses only dynamic wear leveling. Over time, certain blocks that hold rarely-updated OS files have very low erase counts while frequently-written blocks are nearing their P/E limit. Why is this happening, and what would static wear leveling do differently? The answer: Dynamic wear leveling only ensures new writes go to the least-worn free block. It never touches cold data sitting on low-wear blocks. Over time, blocks holding rarely-updated data (OS files, static configs) accumulate very low erase counts while hot blocks exhaust their P/E cycles. Static wear leveling solves this by periodically moving cold data off low-wear blocks to high-wear blocks, then using the freed low-wear blocks for new hot writes. This forces all blocks to share the wear burden evenly. The tradeoff is that moving cold data generates additional NAND writes (increasing WAF), so the FTL must balance wear uniformity against write amplification.",
+      "requiresReveal": true,
+      "blockIndex": 12
+    }
+  ]
+}

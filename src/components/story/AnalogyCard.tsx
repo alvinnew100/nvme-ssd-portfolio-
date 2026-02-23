@@ -5,7 +5,7 @@ interface AnalogyCardProps {
 
 export default function AnalogyCard({ concept, analogy }: AnalogyCardProps) {
   return (
-    <div className="bg-nvme-green/5 border border-nvme-green/20 rounded-xl p-5 my-6">
+    <div data-vo="analogy" className="bg-nvme-green/5 border border-nvme-green/20 rounded-xl p-5 my-6">
       <div className="flex gap-3">
         <div className="flex-shrink-0 w-8 h-8 rounded-full bg-nvme-green/10 flex items-center justify-center">
           <svg

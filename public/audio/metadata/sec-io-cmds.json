@@ -1,0 +1,2116 @@
+{
+  "sectionId": "sec-io-cmds",
+  "audioFile": "/audio/sections/sec-io-cmds.mp3",
+  "totalDurationMs": 167600,
+  "fileSizeBytes": 2682240,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "I/O Commands — Reading and Writing Your Data",
+      "beginMs": 60,
+      "endMs": 2860,
+      "timestamps": [
+        {
+          "word": "I/O",
+          "begin": 60,
+          "end": 480
+        },
+        {
+          "word": "Commands",
+          "begin": 540,
+          "end": 960
+        },
+        {
+          "word": "Reading",
+          "begin": 1220,
+          "end": 1480
+        },
+        {
+          "word": "and",
+          "begin": 1500,
+          "end": 1600
+        },
+        {
+          "word": "Writing",
+          "begin": 1640,
+          "end": 1940
+        },
+        {
+          "word": "Your",
+          "begin": 1960,
+          "end": 2020
+        },
+        {
+          "word": "Data",
+          "begin": 2100,
+          "end": 2300
+        },
+        {
+          "word": "Analogy:",
+          "begin": 2400,
+          "end": 2860
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: I/O Commands Move Your Data. While admin commands manage the SSD, I/O commands are the workhorses that actually read and write your data. A Read command says 'give me N blocks starting at LBA X.' A Write command says 'store this data at LBA X.' These flow through I/O queues (not the admin queue) for maximum parallelism.",
+      "beginMs": 3280,
+      "endMs": 24940,
+      "timestamps": [
+        {
+          "word": "I/O",
+          "begin": 3280,
+          "end": 3720
+        },
+        {
+          "word": "Commands",
+          "begin": 3720,
+          "end": 4040
+        },
+        {
+          "word": "Move",
+          "begin": 4100,
+          "end": 4280
+        },
+        {
+          "word": "Your",
+          "begin": 4300,
+          "end": 4360
+        },
+        {
+          "word": "Data.",
+          "begin": 4440,
+          "end": 4660
+        },
+        {
+          "word": "While",
+          "begin": 5060,
+          "end": 5220
+        },
+        {
+          "word": "admin",
+          "begin": 5320,
+          "end": 5620
+        },
+        {
+          "word": "commands",
+          "begin": 5680,
+          "end": 6100
+        },
+        {
+          "word": "manage",
+          "begin": 6160,
+          "end": 6460
+        },
+        {
+          "word": "the",
+          "begin": 6520,
+          "end": 6560
+        },
+        {
+          "word": "SSD,",
+          "begin": 6640,
+          "end": 7080
+        },
+        {
+          "word": "I/O",
+          "begin": 7520,
+          "end": 8320
+        },
+        {
+          "word": "commands",
+          "begin": 8380,
+          "end": 8740
+        },
+        {
+          "word": "are",
+          "begin": 8760,
+          "end": 8980
+        },
+        {
+          "word": "the",
+          "begin": 9040,
+          "end": 9140
+        },
+        {
+          "word": "workhorses",
+          "begin": 9180,
+          "end": 9800
+        },
+        {
+          "word": "that",
+          "begin": 9940,
+          "end": 10120
+        },
+        {
+          "word": "actually",
+          "begin": 10160,
+          "end": 10400
+        },
+        {
+          "word": "read",
+          "begin": 10500,
+          "end": 10680
+        },
+        {
+          "word": "and",
+          "begin": 10720,
+          "end": 11140
+        },
+        {
+          "word": "write",
+          "begin": 11220,
+          "end": 11440
+        },
+        {
+          "word": "your",
+          "begin": 11500,
+          "end": 11580
+        },
+        {
+          "word": "data.",
+          "begin": 11620,
+          "end": 12000
+        },
+        {
+          "word": "A",
+          "begin": 12040,
+          "end": 12540
+        },
+        {
+          "word": "Read",
+          "begin": 12560,
+          "end": 12680
+        },
+        {
+          "word": "command",
+          "begin": 12680,
+          "end": 13200
+        },
+        {
+          "word": "says",
+          "begin": 13220,
+          "end": 13300
+        },
+        {
+          "word": "'give",
+          "begin": 13480,
+          "end": 13740
+        },
+        {
+          "word": "me",
+          "begin": 13780,
+          "end": 13960
+        },
+        {
+          "word": "N",
+          "begin": 13980,
+          "end": 14080
+        },
+        {
+          "word": "starting",
+          "begin": 13980,
+          "end": 14080
+        },
+        {
+          "word": "at",
+          "begin": 14120,
+          "end": 14220
+        },
+        {
+          "word": "LBA",
+          "begin": 14320,
+          "end": 14700
+        },
+        {
+          "word": "X.'",
+          "begin": 14900,
+          "end": 15220
+        },
+        {
+          "word": "A",
+          "begin": 15440,
+          "end": 15460
+        },
+        {
+          "word": "Write",
+          "begin": 15540,
+          "end": 15760
+        },
+        {
+          "word": "command",
+          "begin": 15800,
+          "end": 17040
+        },
+        {
+          "word": "says",
+          "begin": 17220,
+          "end": 17380
+        },
+        {
+          "word": "data",
+          "begin": 17460,
+          "end": 18020
+        },
+        {
+          "word": "at",
+          "begin": 18120,
+          "end": 18240
+        },
+        {
+          "word": "LBA",
+          "begin": 18320,
+          "end": 18540
+        },
+        {
+          "word": "X.'",
+          "begin": 18700,
+          "end": 19000
+        },
+        {
+          "word": "These",
+          "begin": 19360,
+          "end": 19560
+        },
+        {
+          "word": "flow",
+          "begin": 19640,
+          "end": 19760
+        },
+        {
+          "word": "through",
+          "begin": 19920,
+          "end": 20000
+        },
+        {
+          "word": "I/O",
+          "begin": 20200,
+          "end": 20380
+        },
+        {
+          "word": "queues",
+          "begin": 20540,
+          "end": 20880
+        },
+        {
+          "word": "(not",
+          "begin": 20960,
+          "end": 21120
+        },
+        {
+          "word": "the",
+          "begin": 21160,
+          "end": 21220
+        },
+        {
+          "word": "admin",
+          "begin": 21340,
+          "end": 21660
+        },
+        {
+          "word": "queue)",
+          "begin": 21720,
+          "end": 21840
+        },
+        {
+          "word": "for",
+          "begin": 22060,
+          "end": 22120
+        },
+        {
+          "word": "maximum",
+          "begin": 22200,
+          "end": 22660
+        },
+        {
+          "word": "parallelism.",
+          "begin": 22720,
+          "end": 23420
+        },
+        {
+          "word": "Admin",
+          "begin": 23740,
+          "end": 24040
+        },
+        {
+          "word": "commands",
+          "begin": 24100,
+          "end": 24540
+        },
+        {
+          "word": "manage",
+          "begin": 24620,
+          "end": 24940
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "paragraph",
+      "text": "Admin commands manage the drive. I/O commands handle your actual data — they're the workhorses of NVMe. Every file you open, every save, every download ultimately becomes one or more I/O commands.",
+      "beginMs": 26080,
+      "endMs": 40760,
+      "timestamps": [
+        {
+          "word": "commands",
+          "begin": 26080,
+          "end": 26500
+        },
+        {
+          "word": "handle",
+          "begin": 26540,
+          "end": 26820
+        },
+        {
+          "word": "your",
+          "begin": 26860,
+          "end": 26920
+        },
+        {
+          "word": "actual",
+          "begin": 27060,
+          "end": 27380
+        },
+        {
+          "word": "data",
+          "begin": 27440,
+          "end": 28140
+        },
+        {
+          "word": "they're",
+          "begin": 28240,
+          "end": 28440
+        },
+        {
+          "word": "the",
+          "begin": 28240,
+          "end": 28280
+        },
+        {
+          "word": "workhorses",
+          "begin": 28360,
+          "end": 29480
+        },
+        {
+          "word": "of",
+          "begin": 29580,
+          "end": 29720
+        },
+        {
+          "word": "NVMe.",
+          "begin": 29760,
+          "end": 29780
+        },
+        {
+          "word": "Every",
+          "begin": 30080,
+          "end": 30240
+        },
+        {
+          "word": "file",
+          "begin": 30360,
+          "end": 30620
+        },
+        {
+          "word": "you",
+          "begin": 30660,
+          "end": 30720
+        },
+        {
+          "word": "open,",
+          "begin": 30840,
+          "end": 31160
+        },
+        {
+          "word": "every",
+          "begin": 31480,
+          "end": 31660
+        },
+        {
+          "word": "save,",
+          "begin": 31780,
+          "end": 32119
+        },
+        {
+          "word": "every",
+          "begin": 32420,
+          "end": 32600
+        },
+        {
+          "word": "download",
+          "begin": 32700,
+          "end": 33200
+        },
+        {
+          "word": "ultimately",
+          "begin": 33320,
+          "end": 33740
+        },
+        {
+          "word": "becomes",
+          "begin": 33820,
+          "end": 34240
+        },
+        {
+          "word": "one",
+          "begin": 34300,
+          "end": 34460
+        },
+        {
+          "word": "or",
+          "begin": 34480,
+          "end": 34620
+        },
+        {
+          "word": "more",
+          "begin": 34620,
+          "end": 35260
+        },
+        {
+          "word": "I/O",
+          "begin": 35280,
+          "end": 36340
+        },
+        {
+          "word": "commands.",
+          "begin": 36480,
+          "end": 36880
+        },
+        {
+          "word": "I/O",
+          "begin": 36920,
+          "end": 37320
+        },
+        {
+          "word": "commands",
+          "begin": 37560,
+          "end": 37840
+        },
+        {
+          "word": "use",
+          "begin": 37880,
+          "end": 38060
+        },
+        {
+          "word": "queues",
+          "begin": 38200,
+          "end": 38640
+        },
+        {
+          "word": "with",
+          "begin": 38680,
+          "end": 40660
+        },
+        {
+          "word": "QID",
+          "begin": 40700,
+          "end": 40760
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "I/O commands use queues with QID &ge; 1 (the I/O queues created during boot, one per CPU core). Each command targets a specific namespace (NSID in CDW1) and specifies a range of LBAs.",
+      "beginMs": 41220,
+      "endMs": 55040,
+      "timestamps": [
+        {
+          "word": "I/O",
+          "begin": 41220,
+          "end": 41760
+        },
+        {
+          "word": "queues",
+          "begin": 41840,
+          "end": 42260
+        },
+        {
+          "word": "per",
+          "begin": 41840,
+          "end": 41920
+        },
+        {
+          "word": "CPU",
+          "begin": 42060,
+          "end": 42460
+        },
+        {
+          "word": "core).",
+          "begin": 42600,
+          "end": 42700
+        },
+        {
+          "word": "Each",
+          "begin": 42960,
+          "end": 43120
+        },
+        {
+          "word": "command",
+          "begin": 43180,
+          "end": 43520
+        },
+        {
+          "word": "targets",
+          "begin": 43560,
+          "end": 43920
+        },
+        {
+          "word": "a",
+          "begin": 43940,
+          "end": 43960
+        },
+        {
+          "word": "specific",
+          "begin": 44040,
+          "end": 44520
+        },
+        {
+          "word": "namespace",
+          "begin": 44580,
+          "end": 45200
+        },
+        {
+          "word": "(NSID",
+          "begin": 45380,
+          "end": 46140
+        },
+        {
+          "word": "in",
+          "begin": 46360,
+          "end": 46440
+        },
+        {
+          "word": "CDW1)",
+          "begin": 46540,
+          "end": 47500
+        },
+        {
+          "word": "and",
+          "begin": 47820,
+          "end": 47920
+        },
+        {
+          "word": "specifies",
+          "begin": 47960,
+          "end": 48520
+        },
+        {
+          "word": "a",
+          "begin": 48540,
+          "end": 48560
+        },
+        {
+          "word": "range",
+          "begin": 48640,
+          "end": 49460
+        },
+        {
+          "word": "of",
+          "begin": 49600,
+          "end": 49880
+        },
+        {
+          "word": "Each",
+          "begin": 50220,
+          "end": 50360
+        },
+        {
+          "word": "command",
+          "begin": 50400,
+          "end": 50700
+        },
+        {
+          "word": "below",
+          "begin": 50740,
+          "end": 51180
+        },
+        {
+          "word": "shows",
+          "begin": 51300,
+          "end": 51480
+        },
+        {
+          "word": "what",
+          "begin": 51480,
+          "end": 51580
+        },
+        {
+          "word": "it",
+          "begin": 51620,
+          "end": 51640
+        },
+        {
+          "word": "does,",
+          "begin": 51640,
+          "end": 51960
+        },
+        {
+          "word": "why",
+          "begin": 52160,
+          "end": 52460
+        },
+        {
+          "word": "it",
+          "begin": 52480,
+          "end": 52500
+        },
+        {
+          "word": "exists,",
+          "begin": 52540,
+          "end": 53020
+        },
+        {
+          "word": "and",
+          "begin": 53320,
+          "end": 53400
+        },
+        {
+          "word": "the",
+          "begin": 53400,
+          "end": 53460
+        },
+        {
+          "word": "nvme-cli",
+          "begin": 53540,
+          "end": 54580
+        },
+        {
+          "word": "terminal",
+          "begin": 54740,
+          "end": 55040
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "Each command below shows what it does, why it exists, and the nvme-cli terminal command you'd type to run it:",
+      "beginMs": 55140,
+      "endMs": 64780,
+      "timestamps": [
+        {
+          "word": "command",
+          "begin": 55140,
+          "end": 55540
+        },
+        {
+          "word": "you'd",
+          "begin": 55540,
+          "end": 55600
+        },
+        {
+          "word": "type",
+          "begin": 55720,
+          "end": 55940
+        },
+        {
+          "word": "to",
+          "begin": 55980,
+          "end": 56040
+        },
+        {
+          "word": "run",
+          "begin": 56100,
+          "end": 56280
+        },
+        {
+          "word": "it:",
+          "begin": 56300,
+          "end": 56460
+        },
+        {
+          "word": "Some",
+          "begin": 56840,
+          "end": 57020
+        },
+        {
+          "word": "SSD",
+          "begin": 57120,
+          "end": 57440
+        },
+        {
+          "word": "vendors",
+          "begin": 57480,
+          "end": 58000
+        },
+        {
+          "word": "add",
+          "begin": 58080,
+          "end": 58160
+        },
+        {
+          "word": "proprietary",
+          "begin": 58200,
+          "end": 58880
+        },
+        {
+          "word": "I/O",
+          "begin": 59020,
+          "end": 59200
+        },
+        {
+          "word": "commands",
+          "begin": 59320,
+          "end": 59760
+        },
+        {
+          "word": "(opcodes",
+          "begin": 59880,
+          "end": 60340
+        },
+        {
+          "word": "0x80-0xFF)",
+          "begin": 60500,
+          "end": 62960
+        },
+        {
+          "word": "for",
+          "begin": 63240,
+          "end": 63300
+        },
+        {
+          "word": "special",
+          "begin": 63400,
+          "end": 63680
+        },
+        {
+          "word": "diagnostics",
+          "begin": 63780,
+          "end": 64519
+        },
+        {
+          "word": "or",
+          "begin": 64599,
+          "end": 64780
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "Some SSD vendors add proprietary I/O commands (opcodes 0x80-0xFF) for special diagnostics or features. The io-passthru command lets you send any opcode with raw CDW values — it's like having a skeleton key:",
+      "beginMs": 64780,
+      "endMs": 71620,
+      "timestamps": [
+        {
+          "word": "features.",
+          "begin": 64780,
+          "end": 65260
+        },
+        {
+          "word": "The",
+          "begin": 65560,
+          "end": 65600
+        },
+        {
+          "word": "io-passthru",
+          "begin": 65600,
+          "end": 66440
+        },
+        {
+          "word": "command",
+          "begin": 66540,
+          "end": 66940
+        },
+        {
+          "word": "lets",
+          "begin": 67000,
+          "end": 67200
+        },
+        {
+          "word": "you",
+          "begin": 67220,
+          "end": 67260
+        },
+        {
+          "word": "send",
+          "begin": 67360,
+          "end": 67540
+        },
+        {
+          "word": "any",
+          "begin": 67640,
+          "end": 67760
+        },
+        {
+          "word": "opcode",
+          "begin": 67880,
+          "end": 68340
+        },
+        {
+          "word": "with",
+          "begin": 68380,
+          "end": 68500
+        },
+        {
+          "word": "raw",
+          "begin": 68580,
+          "end": 68660
+        },
+        {
+          "word": "CDW",
+          "begin": 68920,
+          "end": 69420
+        },
+        {
+          "word": "values",
+          "begin": 69500,
+          "end": 69980
+        },
+        {
+          "word": "it's",
+          "begin": 70280,
+          "end": 70400
+        },
+        {
+          "word": "like",
+          "begin": 70440,
+          "end": 70640
+        },
+        {
+          "word": "having",
+          "begin": 70640,
+          "end": 70860
+        },
+        {
+          "word": "a",
+          "begin": 70880,
+          "end": 70900
+        },
+        {
+          "word": "skeleton",
+          "begin": 71000,
+          "end": 71420
+        },
+        {
+          "word": "key:",
+          "begin": 71420,
+          "end": 71440
+        },
+        {
+          "word": "The",
+          "begin": 71500,
+          "end": 71620
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "info",
+      "text": "The 0-based NLB gotcha: NLB (Number of Logical Blocks) is 0-based: a value of 0 means 1 block, 7 means 8 blocks. Why? Because NLB is stored in 16 bits, giving a range of 0-65535. If it were 1-based, the maximum would be 65535 blocks. By being 0-based, you get 65536 blocks. This is a common source of off-by-one bugs in NVMe driver development.",
+      "beginMs": 72000,
+      "endMs": 103280,
+      "timestamps": [
+        {
+          "word": "0-based",
+          "begin": 72000,
+          "end": 72800
+        },
+        {
+          "word": "NLB",
+          "begin": 72880,
+          "end": 73260
+        },
+        {
+          "word": "gotcha:",
+          "begin": 73380,
+          "end": 73760
+        },
+        {
+          "word": "NLB",
+          "begin": 74120,
+          "end": 74500
+        },
+        {
+          "word": "(Number",
+          "begin": 74620,
+          "end": 74900
+        },
+        {
+          "word": "of",
+          "begin": 74920,
+          "end": 75020
+        },
+        {
+          "word": "Logical",
+          "begin": 75060,
+          "end": 75440
+        },
+        {
+          "word": "Blocks)",
+          "begin": 75520,
+          "end": 75880
+        },
+        {
+          "word": "is",
+          "begin": 76000,
+          "end": 76100
+        },
+        {
+          "word": "0-based:",
+          "begin": 76160,
+          "end": 76840
+        },
+        {
+          "word": "a",
+          "begin": 77120,
+          "end": 77160
+        },
+        {
+          "word": "value",
+          "begin": 77220,
+          "end": 77520
+        },
+        {
+          "word": "of",
+          "begin": 77600,
+          "end": 77700
+        },
+        {
+          "word": "0",
+          "begin": 77760,
+          "end": 78020
+        },
+        {
+          "word": "means",
+          "begin": 78160,
+          "end": 78380
+        },
+        {
+          "word": "1",
+          "begin": 78440,
+          "end": 78600
+        },
+        {
+          "word": "block,",
+          "begin": 78680,
+          "end": 79020
+        },
+        {
+          "word": "7",
+          "begin": 79340,
+          "end": 79640
+        },
+        {
+          "word": "means",
+          "begin": 79680,
+          "end": 79900
+        },
+        {
+          "word": "8",
+          "begin": 79940,
+          "end": 80060
+        },
+        {
+          "word": "blocks.",
+          "begin": 80120,
+          "end": 80560
+        },
+        {
+          "word": "Why?",
+          "begin": 80880,
+          "end": 80960
+        },
+        {
+          "word": "Because",
+          "begin": 81360,
+          "end": 81680
+        },
+        {
+          "word": "NLB",
+          "begin": 81740,
+          "end": 82140
+        },
+        {
+          "word": "is",
+          "begin": 82360,
+          "end": 82460
+        },
+        {
+          "word": "stored",
+          "begin": 82480,
+          "end": 82740
+        },
+        {
+          "word": "in",
+          "begin": 82740,
+          "end": 82820
+        },
+        {
+          "word": "16",
+          "begin": 82920,
+          "end": 83360
+        },
+        {
+          "word": "bits,",
+          "begin": 83440,
+          "end": 83740
+        },
+        {
+          "word": "giving",
+          "begin": 84040,
+          "end": 84260
+        },
+        {
+          "word": "a",
+          "begin": 84280,
+          "end": 84300
+        },
+        {
+          "word": "range",
+          "begin": 84380,
+          "end": 84840
+        },
+        {
+          "word": "of",
+          "begin": 84880,
+          "end": 85040
+        },
+        {
+          "word": "0-65535.",
+          "begin": 84880,
+          "end": 88420
+        },
+        {
+          "word": "If",
+          "begin": 88760,
+          "end": 88880
+        },
+        {
+          "word": "it",
+          "begin": 88900,
+          "end": 88980
+        },
+        {
+          "word": "were",
+          "begin": 89000,
+          "end": 89060
+        },
+        {
+          "word": "1-based,",
+          "begin": 89180,
+          "end": 89760
+        },
+        {
+          "word": "the",
+          "begin": 90040,
+          "end": 90080
+        },
+        {
+          "word": "maximum",
+          "begin": 90140,
+          "end": 90620
+        },
+        {
+          "word": "would",
+          "begin": 90640,
+          "end": 90760
+        },
+        {
+          "word": "be",
+          "begin": 90780,
+          "end": 90840
+        },
+        {
+          "word": "65535",
+          "begin": 90960,
+          "end": 93460
+        },
+        {
+          "word": "blocks.",
+          "begin": 93520,
+          "end": 93960
+        },
+        {
+          "word": "By",
+          "begin": 94260,
+          "end": 94320
+        },
+        {
+          "word": "being",
+          "begin": 94420,
+          "end": 94600
+        },
+        {
+          "word": "0-based,",
+          "begin": 94680,
+          "end": 95340
+        },
+        {
+          "word": "you",
+          "begin": 95600,
+          "end": 95660
+        },
+        {
+          "word": "get",
+          "begin": 95720,
+          "end": 95880
+        },
+        {
+          "word": "65536",
+          "begin": 95960,
+          "end": 98420
+        },
+        {
+          "word": "blocks.",
+          "begin": 98500,
+          "end": 98900
+        },
+        {
+          "word": "This",
+          "begin": 99200,
+          "end": 99340
+        },
+        {
+          "word": "is",
+          "begin": 99360,
+          "end": 99440
+        },
+        {
+          "word": "a",
+          "begin": 99460,
+          "end": 99480
+        },
+        {
+          "word": "common",
+          "begin": 99540,
+          "end": 99860
+        },
+        {
+          "word": "source",
+          "begin": 99960,
+          "end": 100220
+        },
+        {
+          "word": "of",
+          "begin": 100240,
+          "end": 100340
+        },
+        {
+          "word": "off-by-one",
+          "begin": 100440,
+          "end": 100960
+        },
+        {
+          "word": "bugs",
+          "begin": 101040,
+          "end": 101860
+        },
+        {
+          "word": "in",
+          "begin": 102020,
+          "end": 102120
+        },
+        {
+          "word": "NVMe",
+          "begin": 102220,
+          "end": 102240
+        },
+        {
+          "word": "driver",
+          "begin": 102360,
+          "end": 102640
+        },
+        {
+          "word": "development.",
+          "begin": 102700,
+          "end": 103280
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "reveal",
+      "text": "Knowledge check: A database completes a Write command and gets a successful completion entry back. Power is lost one second later. Is the data guaranteed to be on NAND? What additional step is needed for crash consistency, and why doesn't NVMe guarantee persistence on every write by default? The answer: A successful Write completion does NOT guarantee data is on NAND — it may still be sitting in the SSD's volatile DRAM write cache. The Flush command (opcode 0x00) forces all cached data to be committed to non-volatile NAND flash. Databases issue Flush after every transaction commit to ensure crash consistency. NVMe doesn't guarantee persistence on every write by default because the DRAM write cache dramatically improves performance — DRAM writes complete in microseconds while NAND programming takes hundreds of microseconds. Flushing after every single write would negate this benefit. Instead, NVMe gives the host control: use normal writes for speed, and issue Flush (or set the FUA bit on individual writes) when persistence is critical. This lets the application choose the right tradeoff between speed and durability.",
+      "beginMs": 103460,
+      "endMs": 167440,
+      "timestamps": [
+        {
+          "word": "Knowledge",
+          "begin": 103460,
+          "end": 103740
+        },
+        {
+          "word": "check:",
+          "begin": 103820,
+          "end": 104120
+        },
+        {
+          "word": "A",
+          "begin": 104360,
+          "end": 104380
+        },
+        {
+          "word": "database",
+          "begin": 104440,
+          "end": 104840
+        },
+        {
+          "word": "completes",
+          "begin": 104880,
+          "end": 105280
+        },
+        {
+          "word": "a",
+          "begin": 105320,
+          "end": 105340
+        },
+        {
+          "word": "Write",
+          "begin": 105420,
+          "end": 105600
+        },
+        {
+          "word": "command",
+          "begin": 105640,
+          "end": 106060
+        },
+        {
+          "word": "and",
+          "begin": 106100,
+          "end": 106180
+        },
+        {
+          "word": "gets",
+          "begin": 106220,
+          "end": 106400
+        },
+        {
+          "word": "a",
+          "begin": 106420,
+          "end": 106440
+        },
+        {
+          "word": "successful",
+          "begin": 106520,
+          "end": 107000
+        },
+        {
+          "word": "completion",
+          "begin": 107100,
+          "end": 107580
+        },
+        {
+          "word": "entry",
+          "begin": 107660,
+          "end": 107880
+        },
+        {
+          "word": "back.",
+          "begin": 107960,
+          "end": 108260
+        },
+        {
+          "word": "Power",
+          "begin": 108720,
+          "end": 109020
+        },
+        {
+          "word": "is",
+          "begin": 109020,
+          "end": 109100
+        },
+        {
+          "word": "lost",
+          "begin": 109160,
+          "end": 109400
+        },
+        {
+          "word": "one",
+          "begin": 109460,
+          "end": 109600
+        },
+        {
+          "word": "second",
+          "begin": 109680,
+          "end": 109940
+        },
+        {
+          "word": "later.",
+          "begin": 109940,
+          "end": 110200
+        },
+        {
+          "word": "Is",
+          "begin": 111080,
+          "end": 111160
+        },
+        {
+          "word": "the",
+          "begin": 111200,
+          "end": 111260
+        },
+        {
+          "word": "data",
+          "begin": 111320,
+          "end": 111540
+        },
+        {
+          "word": "guaranteed",
+          "begin": 111620,
+          "end": 112100
+        },
+        {
+          "word": "to",
+          "begin": 112120,
+          "end": 112160
+        },
+        {
+          "word": "be",
+          "begin": 112200,
+          "end": 112240
+        },
+        {
+          "word": "on",
+          "begin": 112320,
+          "end": 112440
+        },
+        {
+          "word": "NAND?",
+          "begin": 112480,
+          "end": 112840
+        },
+        {
+          "word": "What",
+          "begin": 113440,
+          "end": 113560
+        },
+        {
+          "word": "additional",
+          "begin": 113580,
+          "end": 113940
+        },
+        {
+          "word": "step",
+          "begin": 114020,
+          "end": 114260
+        },
+        {
+          "word": "is",
+          "begin": 114280,
+          "end": 114360
+        },
+        {
+          "word": "needed",
+          "begin": 114400,
+          "end": 114620
+        },
+        {
+          "word": "for",
+          "begin": 114660,
+          "end": 114720
+        },
+        {
+          "word": "crash",
+          "begin": 114800,
+          "end": 115060
+        },
+        {
+          "word": "consistency,",
+          "begin": 115120,
+          "end": 115700
+        },
+        {
+          "word": "and",
+          "begin": 115700,
+          "end": 116040
+        },
+        {
+          "word": "why",
+          "begin": 116100,
+          "end": 116180
+        },
+        {
+          "word": "doesn't",
+          "begin": 116320,
+          "end": 116540
+        },
+        {
+          "word": "NVMe",
+          "begin": 116600,
+          "end": 117060
+        },
+        {
+          "word": "guarantee",
+          "begin": 117180,
+          "end": 117560
+        },
+        {
+          "word": "persistence",
+          "begin": 117660,
+          "end": 118200
+        },
+        {
+          "word": "on",
+          "begin": 118240,
+          "end": 118340
+        },
+        {
+          "word": "every",
+          "begin": 118420,
+          "end": 118560
+        },
+        {
+          "word": "write",
+          "begin": 118660,
+          "end": 118860
+        },
+        {
+          "word": "by",
+          "begin": 118880,
+          "end": 118940
+        },
+        {
+          "word": "default?",
+          "begin": 119040,
+          "end": 119480
+        },
+        {
+          "word": "The",
+          "begin": 120040,
+          "end": 120100
+        },
+        {
+          "word": "answer:",
+          "begin": 120220,
+          "end": 120820
+        },
+        {
+          "word": "A",
+          "begin": 120900,
+          "end": 120960
+        },
+        {
+          "word": "successful",
+          "begin": 120900,
+          "end": 121360
+        },
+        {
+          "word": "Write",
+          "begin": 121460,
+          "end": 121640
+        },
+        {
+          "word": "completion",
+          "begin": 121680,
+          "end": 122140
+        },
+        {
+          "word": "does",
+          "begin": 122180,
+          "end": 122300
+        },
+        {
+          "word": "NOT",
+          "begin": 122360,
+          "end": 122560
+        },
+        {
+          "word": "guarantee",
+          "begin": 122600,
+          "end": 123000
+        },
+        {
+          "word": "data",
+          "begin": 123100,
+          "end": 123300
+        },
+        {
+          "word": "is",
+          "begin": 123400,
+          "end": 123500
+        },
+        {
+          "word": "on",
+          "begin": 123540,
+          "end": 123680
+        },
+        {
+          "word": "NAND",
+          "begin": 123720,
+          "end": 124080
+        },
+        {
+          "word": "it",
+          "begin": 124480,
+          "end": 124560
+        },
+        {
+          "word": "may",
+          "begin": 124560,
+          "end": 124700
+        },
+        {
+          "word": "still",
+          "begin": 124840,
+          "end": 125000
+        },
+        {
+          "word": "be",
+          "begin": 125060,
+          "end": 125120
+        },
+        {
+          "word": "sitting",
+          "begin": 125240,
+          "end": 125480
+        },
+        {
+          "word": "in",
+          "begin": 125500,
+          "end": 125580
+        },
+        {
+          "word": "the",
+          "begin": 125580,
+          "end": 125640
+        },
+        {
+          "word": "SSD's",
+          "begin": 125740,
+          "end": 126300
+        },
+        {
+          "word": "volatile",
+          "begin": 126360,
+          "end": 126680
+        },
+        {
+          "word": "DRAM",
+          "begin": 126800,
+          "end": 127180
+        },
+        {
+          "word": "write",
+          "begin": 127220,
+          "end": 127460
+        },
+        {
+          "word": "cache.",
+          "begin": 127460,
+          "end": 127840
+        },
+        {
+          "word": "The",
+          "begin": 128320,
+          "end": 128360
+        },
+        {
+          "word": "Flush",
+          "begin": 128440,
+          "end": 128680
+        },
+        {
+          "word": "command",
+          "begin": 128740,
+          "end": 129199
+        },
+        {
+          "word": "(opcode",
+          "begin": 129479,
+          "end": 129919
+        },
+        {
+          "word": "0x00)",
+          "begin": 129960,
+          "end": 130780
+        },
+        {
+          "word": "forces",
+          "begin": 130780,
+          "end": 131120
+        },
+        {
+          "word": "all",
+          "begin": 131240,
+          "end": 131380
+        },
+        {
+          "word": "cached",
+          "begin": 131460,
+          "end": 131720
+        },
+        {
+          "word": "data",
+          "begin": 131800,
+          "end": 132000
+        },
+        {
+          "word": "to",
+          "begin": 132140,
+          "end": 132200
+        },
+        {
+          "word": "be",
+          "begin": 132240,
+          "end": 132300
+        },
+        {
+          "word": "committed",
+          "begin": 132360,
+          "end": 132720
+        },
+        {
+          "word": "to",
+          "begin": 132760,
+          "end": 132820
+        },
+        {
+          "word": "non-volatile",
+          "begin": 132920,
+          "end": 133520
+        },
+        {
+          "word": "NAND",
+          "begin": 133660,
+          "end": 133920
+        },
+        {
+          "word": "flash.",
+          "begin": 134000,
+          "end": 134380
+        },
+        {
+          "word": "Databases",
+          "begin": 134760,
+          "end": 135400
+        },
+        {
+          "word": "issue",
+          "begin": 135480,
+          "end": 135660
+        },
+        {
+          "word": "Flush",
+          "begin": 135780,
+          "end": 136080
+        },
+        {
+          "word": "after",
+          "begin": 136160,
+          "end": 136360
+        },
+        {
+          "word": "every",
+          "begin": 136500,
+          "end": 136680
+        },
+        {
+          "word": "transaction",
+          "begin": 136780,
+          "end": 137420
+        },
+        {
+          "word": "commit",
+          "begin": 137500,
+          "end": 137800
+        },
+        {
+          "word": "to",
+          "begin": 137800,
+          "end": 137960
+        },
+        {
+          "word": "ensure",
+          "begin": 138020,
+          "end": 138280
+        },
+        {
+          "word": "crash",
+          "begin": 138420,
+          "end": 138700
+        },
+        {
+          "word": "consistency.",
+          "begin": 138760,
+          "end": 139440
+        },
+        {
+          "word": "NVMe",
+          "begin": 139880,
+          "end": 140400
+        },
+        {
+          "word": "doesn't",
+          "begin": 140560,
+          "end": 140840
+        },
+        {
+          "word": "guarantee",
+          "begin": 140880,
+          "end": 141260
+        },
+        {
+          "word": "persistence",
+          "begin": 141380,
+          "end": 141960
+        },
+        {
+          "word": "on",
+          "begin": 142020,
+          "end": 142120
+        },
+        {
+          "word": "every",
+          "begin": 142200,
+          "end": 142360
+        },
+        {
+          "word": "write",
+          "begin": 142480,
+          "end": 142680
+        },
+        {
+          "word": "by",
+          "begin": 142720,
+          "end": 142780
+        },
+        {
+          "word": "default",
+          "begin": 142900,
+          "end": 143400
+        },
+        {
+          "word": "because",
+          "begin": 143520,
+          "end": 143740
+        },
+        {
+          "word": "the",
+          "begin": 143760,
+          "end": 143820
+        },
+        {
+          "word": "DRAM",
+          "begin": 143880,
+          "end": 144280
+        },
+        {
+          "word": "write",
+          "begin": 144340,
+          "end": 144520
+        },
+        {
+          "word": "cache",
+          "begin": 144520,
+          "end": 144880
+        },
+        {
+          "word": "dramatically",
+          "begin": 144940,
+          "end": 145480
+        },
+        {
+          "word": "improves",
+          "begin": 145560,
+          "end": 145960
+        },
+        {
+          "word": "performance",
+          "begin": 146020,
+          "end": 146660
+        },
+        {
+          "word": "DRAM",
+          "begin": 147040,
+          "end": 147400
+        },
+        {
+          "word": "writes",
+          "begin": 147460,
+          "end": 147700
+        },
+        {
+          "word": "complete",
+          "begin": 147760,
+          "end": 148160
+        },
+        {
+          "word": "in",
+          "begin": 148200,
+          "end": 148260
+        },
+        {
+          "word": "microseconds",
+          "begin": 148320,
+          "end": 149080
+        },
+        {
+          "word": "while",
+          "begin": 149120,
+          "end": 149240
+        },
+        {
+          "word": "NAND",
+          "begin": 149320,
+          "end": 149580
+        },
+        {
+          "word": "programming",
+          "begin": 149640,
+          "end": 150120
+        },
+        {
+          "word": "takes",
+          "begin": 150180,
+          "end": 150400
+        },
+        {
+          "word": "hundreds",
+          "begin": 150460,
+          "end": 150820
+        },
+        {
+          "word": "of",
+          "begin": 150840,
+          "end": 150920
+        },
+        {
+          "word": "microseconds.",
+          "begin": 150960,
+          "end": 151760
+        },
+        {
+          "word": "Flushing",
+          "begin": 151960,
+          "end": 152300
+        },
+        {
+          "word": "after",
+          "begin": 152340,
+          "end": 152520
+        },
+        {
+          "word": "every",
+          "begin": 152660,
+          "end": 152840
+        },
+        {
+          "word": "single",
+          "begin": 152940,
+          "end": 153180
+        },
+        {
+          "word": "write",
+          "begin": 153240,
+          "end": 153460
+        },
+        {
+          "word": "would",
+          "begin": 153500,
+          "end": 153620
+        },
+        {
+          "word": "negate",
+          "begin": 153640,
+          "end": 153980
+        },
+        {
+          "word": "this",
+          "begin": 153980,
+          "end": 154120
+        },
+        {
+          "word": "benefit.",
+          "begin": 154180,
+          "end": 154640
+        },
+        {
+          "word": "Instead,",
+          "begin": 154960,
+          "end": 155460
+        },
+        {
+          "word": "NVMe",
+          "begin": 155720,
+          "end": 156260
+        },
+        {
+          "word": "gives",
+          "begin": 156440,
+          "end": 156620
+        },
+        {
+          "word": "the",
+          "begin": 156660,
+          "end": 156700
+        },
+        {
+          "word": "host",
+          "begin": 156700,
+          "end": 157000
+        },
+        {
+          "word": "control:",
+          "begin": 157040,
+          "end": 157480
+        },
+        {
+          "word": "use",
+          "begin": 157740,
+          "end": 157960
+        },
+        {
+          "word": "normal",
+          "begin": 158020,
+          "end": 158280
+        },
+        {
+          "word": "writes",
+          "begin": 158380,
+          "end": 158700
+        },
+        {
+          "word": "for",
+          "begin": 158700,
+          "end": 158740
+        },
+        {
+          "word": "speed,",
+          "begin": 158840,
+          "end": 159240
+        },
+        {
+          "word": "and",
+          "begin": 159480,
+          "end": 159580
+        },
+        {
+          "word": "issue",
+          "begin": 159600,
+          "end": 159800
+        },
+        {
+          "word": "Flush",
+          "begin": 159920,
+          "end": 160160
+        },
+        {
+          "word": "(or",
+          "begin": 160200,
+          "end": 160220
+        },
+        {
+          "word": "set",
+          "begin": 160320,
+          "end": 160500
+        },
+        {
+          "word": "the",
+          "begin": 160500,
+          "end": 160680
+        },
+        {
+          "word": "FUA",
+          "begin": 160760,
+          "end": 160880
+        },
+        {
+          "word": "bit",
+          "begin": 160960,
+          "end": 160880
+        },
+        {
+          "word": "on",
+          "begin": 160960,
+          "end": 161140
+        },
+        {
+          "word": "individual",
+          "begin": 161180,
+          "end": 161860
+        },
+        {
+          "word": "writes)",
+          "begin": 161880,
+          "end": 162340
+        },
+        {
+          "word": "when",
+          "begin": 162400,
+          "end": 162500
+        },
+        {
+          "word": "persistence",
+          "begin": 162560,
+          "end": 163120
+        },
+        {
+          "word": "is",
+          "begin": 163160,
+          "end": 163240
+        },
+        {
+          "word": "critical.",
+          "begin": 163300,
+          "end": 163620
+        },
+        {
+          "word": "This",
+          "begin": 163920,
+          "end": 164080
+        },
+        {
+          "word": "lets",
+          "begin": 164120,
+          "end": 164280
+        },
+        {
+          "word": "the",
+          "begin": 164300,
+          "end": 164420
+        },
+        {
+          "word": "application",
+          "begin": 164500,
+          "end": 165080
+        },
+        {
+          "word": "choose",
+          "begin": 165140,
+          "end": 165400
+        },
+        {
+          "word": "the",
+          "begin": 165400,
+          "end": 165440
+        },
+        {
+          "word": "right",
+          "begin": 165500,
+          "end": 165680
+        },
+        {
+          "word": "tradeoff",
+          "begin": 165720,
+          "end": 166100
+        },
+        {
+          "word": "between",
+          "begin": 166160,
+          "end": 166440
+        },
+        {
+          "word": "speed",
+          "begin": 166520,
+          "end": 166820
+        },
+        {
+          "word": "and",
+          "begin": 166840,
+          "end": 166920
+        },
+        {
+          "word": "durability.",
+          "begin": 166940,
+          "end": 167440
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

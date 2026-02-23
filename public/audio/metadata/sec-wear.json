@@ -1,0 +1,3186 @@
+{
+  "sectionId": "sec-wear",
+  "audioFile": "/audio/sections/sec-wear.mp3",
+  "totalDurationMs": 224600,
+  "fileSizeBytes": 3594240,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "Wear Leveling — Making Every Block Last",
+      "beginMs": 20,
+      "endMs": 2460,
+      "timestamps": [
+        {
+          "word": "Wear",
+          "begin": 20,
+          "end": 200
+        },
+        {
+          "word": "Leveling",
+          "begin": 280,
+          "end": 680
+        },
+        {
+          "word": "Making",
+          "begin": 900,
+          "end": 1180
+        },
+        {
+          "word": "Every",
+          "begin": 1200,
+          "end": 1360
+        },
+        {
+          "word": "Block",
+          "begin": 1460,
+          "end": 1700
+        },
+        {
+          "word": "Last",
+          "begin": 1740,
+          "end": 2020
+        },
+        {
+          "word": "Analogy:",
+          "begin": 2040,
+          "end": 2460
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: Wear Leveling Spreads the Load. Without wear leveling, frequently-written blocks would wear out quickly while rarely-written blocks stay fresh — like some lanes on a highway getting potholes while others stay pristine. Dynamic wear leveling picks the least-worn free block for new writes. Static wear leveling goes further: it periodically moves cold (rarely updated) data off low-wear blocks, forcing those blocks to take some hot writes too.",
+      "beginMs": 2780,
+      "endMs": 25760,
+      "timestamps": [
+        {
+          "word": "Wear",
+          "begin": 2780,
+          "end": 2860
+        },
+        {
+          "word": "Leveling",
+          "begin": 3020,
+          "end": 3380
+        },
+        {
+          "word": "Spreads",
+          "begin": 3460,
+          "end": 3780
+        },
+        {
+          "word": "the",
+          "begin": 3840,
+          "end": 3880
+        },
+        {
+          "word": "Load.",
+          "begin": 3960,
+          "end": 4240
+        },
+        {
+          "word": "Without",
+          "begin": 4440,
+          "end": 4720
+        },
+        {
+          "word": "wear",
+          "begin": 4760,
+          "end": 4820
+        },
+        {
+          "word": "leveling,",
+          "begin": 4980,
+          "end": 5360
+        },
+        {
+          "word": "frequently-written",
+          "begin": 5460,
+          "end": 6020
+        },
+        {
+          "word": "blocks",
+          "begin": 6020,
+          "end": 5640
+        },
+        {
+          "word": "would",
+          "begin": 5640,
+          "end": 5740
+        },
+        {
+          "word": "wear",
+          "begin": 5740,
+          "end": 5900
+        },
+        {
+          "word": "out",
+          "begin": 5900,
+          "end": 5980
+        },
+        {
+          "word": "quickly",
+          "begin": 6000,
+          "end": 6120
+        },
+        {
+          "word": "while",
+          "begin": 6140,
+          "end": 6440
+        },
+        {
+          "word": "rarely-written",
+          "begin": 6480,
+          "end": 6960
+        },
+        {
+          "word": "blocks",
+          "begin": 7020,
+          "end": 7280
+        },
+        {
+          "word": "stay",
+          "begin": 7400,
+          "end": 7460
+        },
+        {
+          "word": "fresh",
+          "begin": 7520,
+          "end": 7940
+        },
+        {
+          "word": "like",
+          "begin": 8000,
+          "end": 8080
+        },
+        {
+          "word": "some",
+          "begin": 8119,
+          "end": 8180
+        },
+        {
+          "word": "lanes",
+          "begin": 8180,
+          "end": 8580
+        },
+        {
+          "word": "on",
+          "begin": 8580,
+          "end": 8640
+        },
+        {
+          "word": "a",
+          "begin": 8660,
+          "end": 8860
+        },
+        {
+          "word": "highway",
+          "begin": 8880,
+          "end": 9520
+        },
+        {
+          "word": "getting",
+          "begin": 9580,
+          "end": 9840
+        },
+        {
+          "word": "potholes",
+          "begin": 9900,
+          "end": 10280
+        },
+        {
+          "word": "while",
+          "begin": 10340,
+          "end": 10700
+        },
+        {
+          "word": "others",
+          "begin": 10720,
+          "end": 11040
+        },
+        {
+          "word": "stay",
+          "begin": 11100,
+          "end": 11340
+        },
+        {
+          "word": "pristine.",
+          "begin": 11400,
+          "end": 12680
+        },
+        {
+          "word": "Dynamic",
+          "begin": 12880,
+          "end": 13340
+        },
+        {
+          "word": "wear",
+          "begin": 13400,
+          "end": 13460
+        },
+        {
+          "word": "leveling",
+          "begin": 13600,
+          "end": 13960
+        },
+        {
+          "word": "picks",
+          "begin": 14040,
+          "end": 14240
+        },
+        {
+          "word": "the",
+          "begin": 14300,
+          "end": 14360
+        },
+        {
+          "word": "least-worn",
+          "begin": 14440,
+          "end": 14920
+        },
+        {
+          "word": "free",
+          "begin": 15000,
+          "end": 15120
+        },
+        {
+          "word": "block",
+          "begin": 15220,
+          "end": 15500
+        },
+        {
+          "word": "for",
+          "begin": 15560,
+          "end": 15620
+        },
+        {
+          "word": "new",
+          "begin": 15700,
+          "end": 15760
+        },
+        {
+          "word": "writes.",
+          "begin": 15880,
+          "end": 16239
+        },
+        {
+          "word": "Static",
+          "begin": 16840,
+          "end": 17220
+        },
+        {
+          "word": "wear",
+          "begin": 17260,
+          "end": 17340
+        },
+        {
+          "word": "leveling",
+          "begin": 17480,
+          "end": 17820
+        },
+        {
+          "word": "goes",
+          "begin": 17860,
+          "end": 18080
+        },
+        {
+          "word": "further:",
+          "begin": 18140,
+          "end": 18820
+        },
+        {
+          "word": "it",
+          "begin": 18840,
+          "end": 18860
+        },
+        {
+          "word": "periodically",
+          "begin": 18920,
+          "end": 19480
+        },
+        {
+          "word": "moves",
+          "begin": 19580,
+          "end": 19820
+        },
+        {
+          "word": "cold",
+          "begin": 19880,
+          "end": 20160
+        },
+        {
+          "word": "(rarely",
+          "begin": 20240,
+          "end": 20520
+        },
+        {
+          "word": "updated)",
+          "begin": 20620,
+          "end": 20980
+        },
+        {
+          "word": "data",
+          "begin": 21040,
+          "end": 21240
+        },
+        {
+          "word": "off",
+          "begin": 21360,
+          "end": 21500
+        },
+        {
+          "word": "low-wear",
+          "begin": 21560,
+          "end": 21800
+        },
+        {
+          "word": "blocks,",
+          "begin": 21940,
+          "end": 22380
+        },
+        {
+          "word": "forcing",
+          "begin": 22700,
+          "end": 23000
+        },
+        {
+          "word": "those",
+          "begin": 23040,
+          "end": 23280
+        },
+        {
+          "word": "blocks",
+          "begin": 23280,
+          "end": 23580
+        },
+        {
+          "word": "to",
+          "begin": 23620,
+          "end": 23680
+        },
+        {
+          "word": "take",
+          "begin": 23740,
+          "end": 23920
+        },
+        {
+          "word": "some",
+          "begin": 23960,
+          "end": 24060
+        },
+        {
+          "word": "hot",
+          "begin": 24100,
+          "end": 24280
+        },
+        {
+          "word": "writes",
+          "begin": 24320,
+          "end": 24580
+        },
+        {
+          "word": "too.",
+          "begin": 24640,
+          "end": 24740
+        },
+        {
+          "word": "Dynamic",
+          "begin": 25280,
+          "end": 25760
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "term",
+      "text": "Dynamic Wear Leveling: Ensures new writes go to the free block with the lowest erase count. Effective for hot data, but cold data blocks that are never rewritten will accumulate a growing erase count gap.",
+      "beginMs": 25800,
+      "endMs": 35740,
+      "timestamps": [
+        {
+          "word": "Wear",
+          "begin": 25800,
+          "end": 26060
+        },
+        {
+          "word": "Leveling:",
+          "begin": 26080,
+          "end": 26480
+        },
+        {
+          "word": "Ensures",
+          "begin": 26680,
+          "end": 27060
+        },
+        {
+          "word": "new",
+          "begin": 27120,
+          "end": 27180
+        },
+        {
+          "word": "writes",
+          "begin": 27300,
+          "end": 27560
+        },
+        {
+          "word": "go",
+          "begin": 27620,
+          "end": 27700
+        },
+        {
+          "word": "to",
+          "begin": 27760,
+          "end": 27800
+        },
+        {
+          "word": "the",
+          "begin": 27840,
+          "end": 27880
+        },
+        {
+          "word": "free",
+          "begin": 28000,
+          "end": 28100
+        },
+        {
+          "word": "block",
+          "begin": 28200,
+          "end": 28500
+        },
+        {
+          "word": "with",
+          "begin": 28520,
+          "end": 28600
+        },
+        {
+          "word": "the",
+          "begin": 28640,
+          "end": 28700
+        },
+        {
+          "word": "lowest",
+          "begin": 28780,
+          "end": 29100
+        },
+        {
+          "word": "erase",
+          "begin": 29120,
+          "end": 29420
+        },
+        {
+          "word": "count.",
+          "begin": 29460,
+          "end": 29760
+        },
+        {
+          "word": "Effective",
+          "begin": 30240,
+          "end": 30660
+        },
+        {
+          "word": "for",
+          "begin": 30720,
+          "end": 30780
+        },
+        {
+          "word": "hot",
+          "begin": 30880,
+          "end": 31080
+        },
+        {
+          "word": "data,",
+          "begin": 31120,
+          "end": 31360
+        },
+        {
+          "word": "but",
+          "begin": 31680,
+          "end": 31780
+        },
+        {
+          "word": "cold",
+          "begin": 31840,
+          "end": 32080
+        },
+        {
+          "word": "data",
+          "begin": 32119,
+          "end": 32320
+        },
+        {
+          "word": "blocks",
+          "begin": 32380,
+          "end": 32720
+        },
+        {
+          "word": "that",
+          "begin": 32740,
+          "end": 32840
+        },
+        {
+          "word": "are",
+          "begin": 32860,
+          "end": 32980
+        },
+        {
+          "word": "never",
+          "begin": 32980,
+          "end": 33140
+        },
+        {
+          "word": "rewritten",
+          "begin": 33240,
+          "end": 33580
+        },
+        {
+          "word": "will",
+          "begin": 33580,
+          "end": 33900
+        },
+        {
+          "word": "accumulate",
+          "begin": 33900,
+          "end": 34320
+        },
+        {
+          "word": "a",
+          "begin": 34360,
+          "end": 34480
+        },
+        {
+          "word": "growing",
+          "begin": 34560,
+          "end": 34840
+        },
+        {
+          "word": "erase",
+          "begin": 34860,
+          "end": 35160
+        },
+        {
+          "word": "count",
+          "begin": 35200,
+          "end": 35400
+        },
+        {
+          "word": "gap.",
+          "begin": 35440,
+          "end": 35740
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "term",
+      "text": "Static Wear Leveling: Periodically moves cold (rarely written) data from low-wear blocks to high-wear blocks, then uses the freed low-wear blocks for new writes. Prevents cold blocks from hoarding low erase counts while hot blocks wear out.",
+      "beginMs": 35980,
+      "endMs": 48820,
+      "timestamps": [
+        {
+          "word": "Static",
+          "begin": 35980,
+          "end": 36360
+        },
+        {
+          "word": "Wear",
+          "begin": 36400,
+          "end": 36660
+        },
+        {
+          "word": "Leveling:",
+          "begin": 36660,
+          "end": 37060
+        },
+        {
+          "word": "Periodically",
+          "begin": 37340,
+          "end": 37980
+        },
+        {
+          "word": "moves",
+          "begin": 38080,
+          "end": 38360
+        },
+        {
+          "word": "cold",
+          "begin": 38420,
+          "end": 38800
+        },
+        {
+          "word": "(rarely",
+          "begin": 38880,
+          "end": 39280
+        },
+        {
+          "word": "written)",
+          "begin": 39280,
+          "end": 39480
+        },
+        {
+          "word": "data",
+          "begin": 39540,
+          "end": 39780
+        },
+        {
+          "word": "from",
+          "begin": 39920,
+          "end": 40060
+        },
+        {
+          "word": "low-wear",
+          "begin": 40060,
+          "end": 40580
+        },
+        {
+          "word": "blocks",
+          "begin": 40600,
+          "end": 40920
+        },
+        {
+          "word": "to",
+          "begin": 40980,
+          "end": 41040
+        },
+        {
+          "word": "high-wear",
+          "begin": 41100,
+          "end": 41400
+        },
+        {
+          "word": "blocks,",
+          "begin": 41520,
+          "end": 41920
+        },
+        {
+          "word": "then",
+          "begin": 42200,
+          "end": 42340
+        },
+        {
+          "word": "uses",
+          "begin": 42380,
+          "end": 42580
+        },
+        {
+          "word": "the",
+          "begin": 42580,
+          "end": 42640
+        },
+        {
+          "word": "freed",
+          "begin": 42700,
+          "end": 42980
+        },
+        {
+          "word": "low-wear",
+          "begin": 42980,
+          "end": 43480
+        },
+        {
+          "word": "blocks",
+          "begin": 43600,
+          "end": 43940
+        },
+        {
+          "word": "for",
+          "begin": 44000,
+          "end": 44040
+        },
+        {
+          "word": "new",
+          "begin": 44120,
+          "end": 44180
+        },
+        {
+          "word": "writes.",
+          "begin": 44300,
+          "end": 44680
+        },
+        {
+          "word": "Prevents",
+          "begin": 45040,
+          "end": 45340
+        },
+        {
+          "word": "cold",
+          "begin": 45340,
+          "end": 45660
+        },
+        {
+          "word": "blocks",
+          "begin": 45700,
+          "end": 46020
+        },
+        {
+          "word": "from",
+          "begin": 46040,
+          "end": 46160
+        },
+        {
+          "word": "hoarding",
+          "begin": 46240,
+          "end": 46540
+        },
+        {
+          "word": "low",
+          "begin": 46600,
+          "end": 46660
+        },
+        {
+          "word": "erase",
+          "begin": 46760,
+          "end": 47080
+        },
+        {
+          "word": "counts",
+          "begin": 47120,
+          "end": 47460
+        },
+        {
+          "word": "while",
+          "begin": 47540,
+          "end": 47680
+        },
+        {
+          "word": "hot",
+          "begin": 47760,
+          "end": 47960
+        },
+        {
+          "word": "blocks",
+          "begin": 48000,
+          "end": 48320
+        },
+        {
+          "word": "wear",
+          "begin": 48360,
+          "end": 48540
+        },
+        {
+          "word": "out.",
+          "begin": 48580,
+          "end": 48820
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "In Lesson 2, we learned that each NAND cell type has a different number of voltage levels (SLC=2, MLC=4, TLC=8, QLC=16). But there's a consequence we haven't discussed yet: the more voltage levels you pack into a cell, the faster it wears out.",
+      "beginMs": 49040,
+      "endMs": 67920,
+      "timestamps": [
+        {
+          "word": "In",
+          "begin": 49040,
+          "end": 49140
+        },
+        {
+          "word": "Lesson",
+          "begin": 49180,
+          "end": 49460
+        },
+        {
+          "word": "2,",
+          "begin": 49460,
+          "end": 49680
+        },
+        {
+          "word": "we",
+          "begin": 50060,
+          "end": 50120
+        },
+        {
+          "word": "learned",
+          "begin": 50220,
+          "end": 50440
+        },
+        {
+          "word": "that",
+          "begin": 50440,
+          "end": 50560
+        },
+        {
+          "word": "each",
+          "begin": 50580,
+          "end": 50680
+        },
+        {
+          "word": "NAND",
+          "begin": 50780,
+          "end": 50960
+        },
+        {
+          "word": "cell",
+          "begin": 51060,
+          "end": 51280
+        },
+        {
+          "word": "type",
+          "begin": 51280,
+          "end": 51340
+        },
+        {
+          "word": "has",
+          "begin": 51420,
+          "end": 51580
+        },
+        {
+          "word": "a",
+          "begin": 51660,
+          "end": 51760
+        },
+        {
+          "word": "different",
+          "begin": 51900,
+          "end": 52120
+        },
+        {
+          "word": "number",
+          "begin": 52220,
+          "end": 52440
+        },
+        {
+          "word": "of",
+          "begin": 52440,
+          "end": 52480
+        },
+        {
+          "word": "voltage",
+          "begin": 52480,
+          "end": 52820
+        },
+        {
+          "word": "levels",
+          "begin": 52840,
+          "end": 53120
+        },
+        {
+          "word": "QLC=16).",
+          "begin": 53140,
+          "end": 61040
+        },
+        {
+          "word": "But",
+          "begin": 61320,
+          "end": 61480
+        },
+        {
+          "word": "there's",
+          "begin": 61560,
+          "end": 61700
+        },
+        {
+          "word": "a",
+          "begin": 61780,
+          "end": 61880
+        },
+        {
+          "word": "consequence",
+          "begin": 61780,
+          "end": 62260
+        },
+        {
+          "word": "we",
+          "begin": 62280,
+          "end": 62340
+        },
+        {
+          "word": "haven't",
+          "begin": 62400,
+          "end": 62620
+        },
+        {
+          "word": "discussed",
+          "begin": 62640,
+          "end": 63080
+        },
+        {
+          "word": "yet:",
+          "begin": 63100,
+          "end": 63320
+        },
+        {
+          "word": "the",
+          "begin": 63160,
+          "end": 63600
+        },
+        {
+          "word": "more",
+          "begin": 63680,
+          "end": 63760
+        },
+        {
+          "word": "voltage",
+          "begin": 63940,
+          "end": 64260
+        },
+        {
+          "word": "levels",
+          "begin": 64340,
+          "end": 64700
+        },
+        {
+          "word": "you",
+          "begin": 64700,
+          "end": 64739
+        },
+        {
+          "word": "pack",
+          "begin": 64800,
+          "end": 65060
+        },
+        {
+          "word": "into",
+          "begin": 65099,
+          "end": 65239
+        },
+        {
+          "word": "a",
+          "begin": 65300,
+          "end": 65319
+        },
+        {
+          "word": "cell,",
+          "begin": 65440,
+          "end": 65700
+        },
+        {
+          "word": "the",
+          "begin": 65960,
+          "end": 66000
+        },
+        {
+          "word": "faster",
+          "begin": 66100,
+          "end": 66480
+        },
+        {
+          "word": "it",
+          "begin": 66500,
+          "end": 66560
+        },
+        {
+          "word": "wears",
+          "begin": 66600,
+          "end": 66840
+        },
+        {
+          "word": "out.",
+          "begin": 66880,
+          "end": 67120
+        },
+        {
+          "word": "Every",
+          "begin": 67320,
+          "end": 67520
+        },
+        {
+          "word": "time",
+          "begin": 67620,
+          "end": 67880
+        },
+        {
+          "word": "a",
+          "begin": 67900,
+          "end": 67920
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "Every time a NAND block is erased and reprogrammed, the oxide insulation around the floating gate degrades slightly. After enough cycles, the cell can no longer reliably hold charge. This limit is called the P/E (Program/Erase) cycle count:",
+      "beginMs": 68020,
+      "endMs": 81720,
+      "timestamps": [
+        {
+          "word": "NAND",
+          "begin": 68020,
+          "end": 68280
+        },
+        {
+          "word": "block",
+          "begin": 68340,
+          "end": 68640
+        },
+        {
+          "word": "is",
+          "begin": 68700,
+          "end": 68800
+        },
+        {
+          "word": "erased",
+          "begin": 68820,
+          "end": 69300
+        },
+        {
+          "word": "and",
+          "begin": 69360,
+          "end": 69440
+        },
+        {
+          "word": "reprogrammed,",
+          "begin": 69500,
+          "end": 70260
+        },
+        {
+          "word": "the",
+          "begin": 70480,
+          "end": 70540
+        },
+        {
+          "word": "oxide",
+          "begin": 70640,
+          "end": 71040
+        },
+        {
+          "word": "insulation",
+          "begin": 71100,
+          "end": 71680
+        },
+        {
+          "word": "around",
+          "begin": 71700,
+          "end": 71980
+        },
+        {
+          "word": "the",
+          "begin": 71980,
+          "end": 72020
+        },
+        {
+          "word": "floating",
+          "begin": 72100,
+          "end": 72440
+        },
+        {
+          "word": "gate",
+          "begin": 72480,
+          "end": 72740
+        },
+        {
+          "word": "degrades",
+          "begin": 72880,
+          "end": 73280
+        },
+        {
+          "word": "slightly.",
+          "begin": 73340,
+          "end": 73680
+        },
+        {
+          "word": "After",
+          "begin": 74040,
+          "end": 74320
+        },
+        {
+          "word": "enough",
+          "begin": 74320,
+          "end": 74540
+        },
+        {
+          "word": "cycles,",
+          "begin": 74600,
+          "end": 75320
+        },
+        {
+          "word": "the",
+          "begin": 75420,
+          "end": 75500
+        },
+        {
+          "word": "cell",
+          "begin": 75420,
+          "end": 75580
+        },
+        {
+          "word": "can",
+          "begin": 75660,
+          "end": 75800
+        },
+        {
+          "word": "no",
+          "begin": 75840,
+          "end": 75920
+        },
+        {
+          "word": "longer",
+          "begin": 76040,
+          "end": 76300
+        },
+        {
+          "word": "reliably",
+          "begin": 76400,
+          "end": 76880
+        },
+        {
+          "word": "hold",
+          "begin": 76960,
+          "end": 77160
+        },
+        {
+          "word": "charge.",
+          "begin": 77160,
+          "end": 77640
+        },
+        {
+          "word": "This",
+          "begin": 77800,
+          "end": 77940
+        },
+        {
+          "word": "limit",
+          "begin": 78000,
+          "end": 78200
+        },
+        {
+          "word": "is",
+          "begin": 78200,
+          "end": 78320
+        },
+        {
+          "word": "called",
+          "begin": 78360,
+          "end": 78540
+        },
+        {
+          "word": "the",
+          "begin": 78380,
+          "end": 78520
+        },
+        {
+          "word": "P/E",
+          "begin": 78520,
+          "end": 79180
+        },
+        {
+          "word": "(Program/Erase)",
+          "begin": 79240,
+          "end": 80700
+        },
+        {
+          "word": "cycle",
+          "begin": 80740,
+          "end": 81460
+        },
+        {
+          "word": "count:",
+          "begin": 81460,
+          "end": 81720
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "Here's the problem: if the SSD always wrote to the same blocks (e.g., the OS swap partition), those blocks would wear out quickly while others sit barely used. The drive would fail long before its rated lifetime.",
+      "beginMs": 81720,
+      "endMs": 92240,
+      "timestamps": [
+        {
+          "word": "Here's",
+          "begin": 81720,
+          "end": 82320
+        },
+        {
+          "word": "the",
+          "begin": 82360,
+          "end": 82400
+        },
+        {
+          "word": "problem:",
+          "begin": 82520,
+          "end": 82940
+        },
+        {
+          "word": "if",
+          "begin": 83100,
+          "end": 83180
+        },
+        {
+          "word": "the",
+          "begin": 83220,
+          "end": 83280
+        },
+        {
+          "word": "SSD",
+          "begin": 83360,
+          "end": 83680
+        },
+        {
+          "word": "always",
+          "begin": 83700,
+          "end": 84180
+        },
+        {
+          "word": "wrote",
+          "begin": 84200,
+          "end": 84460
+        },
+        {
+          "word": "to",
+          "begin": 84540,
+          "end": 84700
+        },
+        {
+          "word": "the",
+          "begin": 84820,
+          "end": 84900
+        },
+        {
+          "word": "same",
+          "begin": 85020,
+          "end": 85340
+        },
+        {
+          "word": "blocks",
+          "begin": 85440,
+          "end": 85780
+        },
+        {
+          "word": "(e.g.,",
+          "begin": 85820,
+          "end": 86020
+        },
+        {
+          "word": "the",
+          "begin": 86100,
+          "end": 86180
+        },
+        {
+          "word": "OS",
+          "begin": 86260,
+          "end": 86820
+        },
+        {
+          "word": "swap",
+          "begin": 86880,
+          "end": 87080
+        },
+        {
+          "word": "partition),",
+          "begin": 87120,
+          "end": 87360
+        },
+        {
+          "word": "those",
+          "begin": 87440,
+          "end": 87600
+        },
+        {
+          "word": "blocks",
+          "begin": 87660,
+          "end": 87960
+        },
+        {
+          "word": "would",
+          "begin": 88060,
+          "end": 88200
+        },
+        {
+          "word": "wear",
+          "begin": 88300,
+          "end": 88400
+        },
+        {
+          "word": "out",
+          "begin": 88420,
+          "end": 88720
+        },
+        {
+          "word": "quickly",
+          "begin": 88720,
+          "end": 88800
+        },
+        {
+          "word": "while",
+          "begin": 88840,
+          "end": 89000
+        },
+        {
+          "word": "others",
+          "begin": 89000,
+          "end": 89020
+        },
+        {
+          "word": "sit",
+          "begin": 89020,
+          "end": 89040
+        },
+        {
+          "word": "barely",
+          "begin": 89140,
+          "end": 89160
+        },
+        {
+          "word": "used.",
+          "begin": 89160,
+          "end": 89580
+        },
+        {
+          "word": "The",
+          "begin": 89860,
+          "end": 89900
+        },
+        {
+          "word": "drive",
+          "begin": 89960,
+          "end": 90260
+        },
+        {
+          "word": "would",
+          "begin": 90280,
+          "end": 90380
+        },
+        {
+          "word": "fail",
+          "begin": 90440,
+          "end": 90640
+        },
+        {
+          "word": "long",
+          "begin": 90720,
+          "end": 90940
+        },
+        {
+          "word": "before",
+          "begin": 90980,
+          "end": 91240
+        },
+        {
+          "word": "its",
+          "begin": 91240,
+          "end": 91360
+        },
+        {
+          "word": "rated",
+          "begin": 91420,
+          "end": 91660
+        },
+        {
+          "word": "lifetime.",
+          "begin": 91660,
+          "end": 92240
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "Wear leveling solves this. The SSD's controller distributes writes across all blocks as evenly as possible, so no single block dies prematurely. Think of it like rotating tires on a car — you wear them evenly so they all last longer.",
+      "beginMs": 92560,
+      "endMs": 106400,
+      "timestamps": [
+        {
+          "word": "Wear",
+          "begin": 92560,
+          "end": 92640
+        },
+        {
+          "word": "leveling",
+          "begin": 92820,
+          "end": 93160
+        },
+        {
+          "word": "solves",
+          "begin": 93280,
+          "end": 93560
+        },
+        {
+          "word": "this.",
+          "begin": 93600,
+          "end": 93900
+        },
+        {
+          "word": "The",
+          "begin": 94280,
+          "end": 94320
+        },
+        {
+          "word": "SSD's",
+          "begin": 94440,
+          "end": 95020
+        },
+        {
+          "word": "controller",
+          "begin": 95060,
+          "end": 95480
+        },
+        {
+          "word": "distributes",
+          "begin": 95560,
+          "end": 96060
+        },
+        {
+          "word": "writes",
+          "begin": 96060,
+          "end": 96360
+        },
+        {
+          "word": "across",
+          "begin": 96380,
+          "end": 96720
+        },
+        {
+          "word": "all",
+          "begin": 96940,
+          "end": 96960
+        },
+        {
+          "word": "blocks",
+          "begin": 97020,
+          "end": 97380
+        },
+        {
+          "word": "as",
+          "begin": 97460,
+          "end": 97560
+        },
+        {
+          "word": "evenly",
+          "begin": 97680,
+          "end": 98000
+        },
+        {
+          "word": "as",
+          "begin": 98080,
+          "end": 98180
+        },
+        {
+          "word": "possible,",
+          "begin": 98240,
+          "end": 98640
+        },
+        {
+          "word": "so",
+          "begin": 99040,
+          "end": 99260
+        },
+        {
+          "word": "no",
+          "begin": 99420,
+          "end": 99580
+        },
+        {
+          "word": "single",
+          "begin": 99420,
+          "end": 99620
+        },
+        {
+          "word": "block",
+          "begin": 99720,
+          "end": 99980
+        },
+        {
+          "word": "dies",
+          "begin": 100040,
+          "end": 100280
+        },
+        {
+          "word": "prematurely.",
+          "begin": 100340,
+          "end": 100920
+        },
+        {
+          "word": "Think",
+          "begin": 101280,
+          "end": 101440
+        },
+        {
+          "word": "of",
+          "begin": 101460,
+          "end": 101540
+        },
+        {
+          "word": "it",
+          "begin": 101560,
+          "end": 101640
+        },
+        {
+          "word": "like",
+          "begin": 101660,
+          "end": 101820
+        },
+        {
+          "word": "rotating",
+          "begin": 101820,
+          "end": 102360
+        },
+        {
+          "word": "tires",
+          "begin": 102420,
+          "end": 102840
+        },
+        {
+          "word": "on",
+          "begin": 102860,
+          "end": 102940
+        },
+        {
+          "word": "a",
+          "begin": 102940,
+          "end": 102980
+        },
+        {
+          "word": "car",
+          "begin": 103060,
+          "end": 103640
+        },
+        {
+          "word": "you",
+          "begin": 103640,
+          "end": 103700
+        },
+        {
+          "word": "wear",
+          "begin": 103760,
+          "end": 103840
+        },
+        {
+          "word": "them",
+          "begin": 103980,
+          "end": 104100
+        },
+        {
+          "word": "evenly",
+          "begin": 104220,
+          "end": 104540
+        },
+        {
+          "word": "so",
+          "begin": 104700,
+          "end": 104760
+        },
+        {
+          "word": "they",
+          "begin": 104820,
+          "end": 105040
+        },
+        {
+          "word": "all",
+          "begin": 105120,
+          "end": 105140
+        },
+        {
+          "word": "last",
+          "begin": 105200,
+          "end": 105500
+        },
+        {
+          "word": "longer.",
+          "begin": 105540,
+          "end": 105820
+        },
+        {
+          "word": "When",
+          "begin": 106260,
+          "end": 106400
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "paragraph",
+      "text": "When writing new data, the FTL picks a dynamic spare block with the lowest erase count as the next write target. The block that receives these hot writes becomes a dynamic block. This is simple and effective for actively written data.",
+      "beginMs": 106440,
+      "endMs": 119560,
+      "timestamps": [
+        {
+          "word": "writing",
+          "begin": 106440,
+          "end": 106740
+        },
+        {
+          "word": "new",
+          "begin": 106780,
+          "end": 106840
+        },
+        {
+          "word": "data,",
+          "begin": 106960,
+          "end": 107200
+        },
+        {
+          "word": "the",
+          "begin": 107560,
+          "end": 107620
+        },
+        {
+          "word": "FTL",
+          "begin": 107740,
+          "end": 108260
+        },
+        {
+          "word": "picks",
+          "begin": 108360,
+          "end": 108580
+        },
+        {
+          "word": "a",
+          "begin": 108600,
+          "end": 108640
+        },
+        {
+          "word": "dynamic",
+          "begin": 108700,
+          "end": 109220
+        },
+        {
+          "word": "spare",
+          "begin": 109320,
+          "end": 109560
+        },
+        {
+          "word": "block",
+          "begin": 109660,
+          "end": 110000
+        },
+        {
+          "word": "with",
+          "begin": 110100,
+          "end": 110240
+        },
+        {
+          "word": "the",
+          "begin": 110240,
+          "end": 110280
+        },
+        {
+          "word": "lowest",
+          "begin": 110380,
+          "end": 110720
+        },
+        {
+          "word": "erase",
+          "begin": 110780,
+          "end": 111100
+        },
+        {
+          "word": "count",
+          "begin": 111160,
+          "end": 111460
+        },
+        {
+          "word": "as",
+          "begin": 111560,
+          "end": 111680
+        },
+        {
+          "word": "the",
+          "begin": 111720,
+          "end": 111760
+        },
+        {
+          "word": "next",
+          "begin": 111840,
+          "end": 112100
+        },
+        {
+          "word": "write",
+          "begin": 112180,
+          "end": 112360
+        },
+        {
+          "word": "target.",
+          "begin": 112400,
+          "end": 112860
+        },
+        {
+          "word": "The",
+          "begin": 113020,
+          "end": 113060
+        },
+        {
+          "word": "block",
+          "begin": 113140,
+          "end": 113440
+        },
+        {
+          "word": "that",
+          "begin": 113500,
+          "end": 113620
+        },
+        {
+          "word": "receives",
+          "begin": 113640,
+          "end": 114080
+        },
+        {
+          "word": "these",
+          "begin": 114120,
+          "end": 114280
+        },
+        {
+          "word": "hot",
+          "begin": 114340,
+          "end": 114580
+        },
+        {
+          "word": "writes",
+          "begin": 114620,
+          "end": 114960
+        },
+        {
+          "word": "becomes",
+          "begin": 115120,
+          "end": 115420
+        },
+        {
+          "word": "a",
+          "begin": 115440,
+          "end": 115460
+        },
+        {
+          "word": "dynamic",
+          "begin": 115540,
+          "end": 116060
+        },
+        {
+          "word": "block.",
+          "begin": 116120,
+          "end": 116460
+        },
+        {
+          "word": "This",
+          "begin": 116800,
+          "end": 116940
+        },
+        {
+          "word": "is",
+          "begin": 116980,
+          "end": 117080
+        },
+        {
+          "word": "simple",
+          "begin": 117140,
+          "end": 117400
+        },
+        {
+          "word": "and",
+          "begin": 117660,
+          "end": 117760
+        },
+        {
+          "word": "effective",
+          "begin": 117760,
+          "end": 118340
+        },
+        {
+          "word": "for",
+          "begin": 118440,
+          "end": 118500
+        },
+        {
+          "word": "actively",
+          "begin": 118700,
+          "end": 119100
+        },
+        {
+          "word": "written",
+          "begin": 119200,
+          "end": 119260
+        },
+        {
+          "word": "data.",
+          "begin": 119320,
+          "end": 119560
+        }
+      ]
+    },
+    {
+      "blockIndex": 9,
+      "type": "paragraph",
+      "text": "Periodically moves cold data from low-wear static blocks to high-wear static spare blocks. The old static block (now empty) returns to the spare pool. This frees up fresh blocks for hot writes.",
+      "beginMs": 119660,
+      "endMs": 131260,
+      "timestamps": [
+        {
+          "word": "Periodically",
+          "begin": 119660,
+          "end": 120820
+        },
+        {
+          "word": "moves",
+          "begin": 120920,
+          "end": 121160
+        },
+        {
+          "word": "cold",
+          "begin": 121240,
+          "end": 121500
+        },
+        {
+          "word": "data",
+          "begin": 121500,
+          "end": 121780
+        },
+        {
+          "word": "from",
+          "begin": 121880,
+          "end": 122040
+        },
+        {
+          "word": "low-wear",
+          "begin": 122140,
+          "end": 122440
+        },
+        {
+          "word": "static",
+          "begin": 122680,
+          "end": 123060
+        },
+        {
+          "word": "blocks",
+          "begin": 123120,
+          "end": 123540
+        },
+        {
+          "word": "to",
+          "begin": 123760,
+          "end": 123820
+        },
+        {
+          "word": "high-wear",
+          "begin": 123920,
+          "end": 124280
+        },
+        {
+          "word": "static",
+          "begin": 124480,
+          "end": 124820
+        },
+        {
+          "word": "spare",
+          "begin": 124880,
+          "end": 125040
+        },
+        {
+          "word": "blocks.",
+          "begin": 125180,
+          "end": 125600
+        },
+        {
+          "word": "The",
+          "begin": 125740,
+          "end": 125800
+        },
+        {
+          "word": "old",
+          "begin": 125940,
+          "end": 126260
+        },
+        {
+          "word": "static",
+          "begin": 126280,
+          "end": 126580
+        },
+        {
+          "word": "block",
+          "begin": 126640,
+          "end": 126920
+        },
+        {
+          "word": "(now",
+          "begin": 126980,
+          "end": 127280
+        },
+        {
+          "word": "empty)",
+          "begin": 127320,
+          "end": 127500
+        },
+        {
+          "word": "returns",
+          "begin": 127600,
+          "end": 128020
+        },
+        {
+          "word": "to",
+          "begin": 128060,
+          "end": 128120
+        },
+        {
+          "word": "the",
+          "begin": 128160,
+          "end": 128199
+        },
+        {
+          "word": "spare",
+          "begin": 128280,
+          "end": 128440
+        },
+        {
+          "word": "pool.",
+          "begin": 128620,
+          "end": 128880
+        },
+        {
+          "word": "This",
+          "begin": 129160,
+          "end": 129340
+        },
+        {
+          "word": "frees",
+          "begin": 129419,
+          "end": 129500
+        },
+        {
+          "word": "up",
+          "begin": 129500,
+          "end": 129780
+        },
+        {
+          "word": "fresh",
+          "begin": 129880,
+          "end": 130080
+        },
+        {
+          "word": "blocks",
+          "begin": 130160,
+          "end": 130460
+        },
+        {
+          "word": "for",
+          "begin": 130500,
+          "end": 130560
+        },
+        {
+          "word": "hot",
+          "begin": 130660,
+          "end": 130860
+        },
+        {
+          "word": "writes.",
+          "begin": 130900,
+          "end": 131260
+        }
+      ]
+    },
+    {
+      "blockIndex": 10,
+      "type": "paragraph",
+      "text": "TBW (Terabytes Written) is the manufacturer's rated endurance — how much data you can write before the drive is expected to start failing. For a 1 TB TLC SSD, a typical rating is 600 TBW. You can check current usage in SMART:",
+      "beginMs": 131640,
+      "endMs": 148400,
+      "timestamps": [
+        {
+          "word": "TBW",
+          "begin": 131640,
+          "end": 132320
+        },
+        {
+          "word": "(Terabytes",
+          "begin": 132420,
+          "end": 132960
+        },
+        {
+          "word": "Written)",
+          "begin": 133040,
+          "end": 133320
+        },
+        {
+          "word": "is",
+          "begin": 133480,
+          "end": 133560
+        },
+        {
+          "word": "the",
+          "begin": 133600,
+          "end": 133640
+        },
+        {
+          "word": "manufacturer's",
+          "begin": 133700,
+          "end": 134580
+        },
+        {
+          "word": "rated",
+          "begin": 134660,
+          "end": 134940
+        },
+        {
+          "word": "endurance",
+          "begin": 134960,
+          "end": 135540
+        },
+        {
+          "word": "how",
+          "begin": 135780,
+          "end": 135840
+        },
+        {
+          "word": "much",
+          "begin": 135920,
+          "end": 136060
+        },
+        {
+          "word": "data",
+          "begin": 136140,
+          "end": 136440
+        },
+        {
+          "word": "you",
+          "begin": 136440,
+          "end": 136500
+        },
+        {
+          "word": "can",
+          "begin": 136560,
+          "end": 136680
+        },
+        {
+          "word": "write",
+          "begin": 136740,
+          "end": 136940
+        },
+        {
+          "word": "before",
+          "begin": 136980,
+          "end": 137220
+        },
+        {
+          "word": "the",
+          "begin": 137340,
+          "end": 137400
+        },
+        {
+          "word": "drive",
+          "begin": 137460,
+          "end": 137740
+        },
+        {
+          "word": "is",
+          "begin": 137740,
+          "end": 137820
+        },
+        {
+          "word": "expected",
+          "begin": 137840,
+          "end": 138300
+        },
+        {
+          "word": "to",
+          "begin": 138340,
+          "end": 138400
+        },
+        {
+          "word": "start",
+          "begin": 138460,
+          "end": 138720
+        },
+        {
+          "word": "failing.",
+          "begin": 138800,
+          "end": 139180
+        },
+        {
+          "word": "For",
+          "begin": 139360,
+          "end": 139500
+        },
+        {
+          "word": "a",
+          "begin": 139500,
+          "end": 139540
+        },
+        {
+          "word": "1",
+          "begin": 139620,
+          "end": 139820
+        },
+        {
+          "word": "SSD,",
+          "begin": 139880,
+          "end": 141700
+        },
+        {
+          "word": "a",
+          "begin": 142200,
+          "end": 142220
+        },
+        {
+          "word": "typical",
+          "begin": 142300,
+          "end": 142600
+        },
+        {
+          "word": "rating",
+          "begin": 142720,
+          "end": 143000
+        },
+        {
+          "word": "is",
+          "begin": 143040,
+          "end": 143440
+        },
+        {
+          "word": "600",
+          "begin": 143460,
+          "end": 143720
+        },
+        {
+          "word": "TBW.",
+          "begin": 143760,
+          "end": 144400
+        },
+        {
+          "word": "You",
+          "begin": 144740,
+          "end": 144800
+        },
+        {
+          "word": "can",
+          "begin": 144860,
+          "end": 144960
+        },
+        {
+          "word": "check",
+          "begin": 145020,
+          "end": 145180
+        },
+        {
+          "word": "current",
+          "begin": 145180,
+          "end": 145540
+        },
+        {
+          "word": "usage",
+          "begin": 145580,
+          "end": 145940
+        },
+        {
+          "word": "in",
+          "begin": 146000,
+          "end": 146080
+        },
+        {
+          "word": "SMART:",
+          "begin": 146200,
+          "end": 146560
+        },
+        {
+          "word": "Wear",
+          "begin": 146920,
+          "end": 147000
+        },
+        {
+          "word": "leveling",
+          "begin": 147180,
+          "end": 147560
+        },
+        {
+          "word": "+",
+          "begin": 147640,
+          "end": 148400
+        }
+      ]
+    },
+    {
+      "blockIndex": 11,
+      "type": "info",
+      "text": "Wear leveling + WAF — the connection: Wear leveling and write amplification are interconnected. Static wear leveling involves moving data, which is additional NAND writes (increasing WAF). The FTL must balance wear uniformity against write amplification — aggressively moving data evens wear but costs more writes. This is one of the hardest tradeoffs in SSD firmware design.",
+      "beginMs": 150080,
+      "endMs": 172600,
+      "timestamps": [
+        {
+          "word": "Wear",
+          "begin": 150080,
+          "end": 150160
+        },
+        {
+          "word": "leveling",
+          "begin": 150360,
+          "end": 150760
+        },
+        {
+          "word": "and",
+          "begin": 150780,
+          "end": 150880
+        },
+        {
+          "word": "write",
+          "begin": 150920,
+          "end": 151120
+        },
+        {
+          "word": "amplification",
+          "begin": 151200,
+          "end": 151960
+        },
+        {
+          "word": "are",
+          "begin": 152000,
+          "end": 152020
+        },
+        {
+          "word": "interconnected.",
+          "begin": 152140,
+          "end": 152860
+        },
+        {
+          "word": "Static",
+          "begin": 153080,
+          "end": 153440
+        },
+        {
+          "word": "wear",
+          "begin": 153500,
+          "end": 153720
+        },
+        {
+          "word": "leveling",
+          "begin": 153720,
+          "end": 154100
+        },
+        {
+          "word": "involves",
+          "begin": 154140,
+          "end": 154580
+        },
+        {
+          "word": "moving",
+          "begin": 154640,
+          "end": 154920
+        },
+        {
+          "word": "data,",
+          "begin": 154960,
+          "end": 155220
+        },
+        {
+          "word": "which",
+          "begin": 155680,
+          "end": 155820
+        },
+        {
+          "word": "is",
+          "begin": 155840,
+          "end": 155940
+        },
+        {
+          "word": "additional",
+          "begin": 155960,
+          "end": 156560
+        },
+        {
+          "word": "NAND",
+          "begin": 156660,
+          "end": 156740
+        },
+        {
+          "word": "writes",
+          "begin": 156780,
+          "end": 157060
+        },
+        {
+          "word": "(increasing",
+          "begin": 157140,
+          "end": 157620
+        },
+        {
+          "word": "WAF).",
+          "begin": 157700,
+          "end": 158080
+        },
+        {
+          "word": "The",
+          "begin": 158360,
+          "end": 158420
+        },
+        {
+          "word": "FTL",
+          "begin": 158540,
+          "end": 159040
+        },
+        {
+          "word": "must",
+          "begin": 159120,
+          "end": 159340
+        },
+        {
+          "word": "balance",
+          "begin": 159380,
+          "end": 159680
+        },
+        {
+          "word": "wear",
+          "begin": 159720,
+          "end": 159920
+        },
+        {
+          "word": "uniformity",
+          "begin": 160100,
+          "end": 160660
+        },
+        {
+          "word": "against",
+          "begin": 160760,
+          "end": 161140
+        },
+        {
+          "word": "write",
+          "begin": 161200,
+          "end": 161400
+        },
+        {
+          "word": "amplification",
+          "begin": 161480,
+          "end": 162320
+        },
+        {
+          "word": "aggressively",
+          "begin": 162620,
+          "end": 163120
+        },
+        {
+          "word": "moving",
+          "begin": 163220,
+          "end": 163500
+        },
+        {
+          "word": "data",
+          "begin": 163540,
+          "end": 163780
+        },
+        {
+          "word": "evens",
+          "begin": 163940,
+          "end": 164220
+        },
+        {
+          "word": "wear",
+          "begin": 164280,
+          "end": 164380
+        },
+        {
+          "word": "but",
+          "begin": 164660,
+          "end": 164780
+        },
+        {
+          "word": "costs",
+          "begin": 164840,
+          "end": 165240
+        },
+        {
+          "word": "more",
+          "begin": 165300,
+          "end": 165380
+        },
+        {
+          "word": "writes.",
+          "begin": 165540,
+          "end": 165920
+        },
+        {
+          "word": "This",
+          "begin": 166160,
+          "end": 166320
+        },
+        {
+          "word": "is",
+          "begin": 166340,
+          "end": 166440
+        },
+        {
+          "word": "one",
+          "begin": 166480,
+          "end": 166600
+        },
+        {
+          "word": "of",
+          "begin": 166600,
+          "end": 166660
+        },
+        {
+          "word": "the",
+          "begin": 166700,
+          "end": 166740
+        },
+        {
+          "word": "hardest",
+          "begin": 166820,
+          "end": 167180
+        },
+        {
+          "word": "tradeoffs",
+          "begin": 167180,
+          "end": 167700
+        },
+        {
+          "word": "in",
+          "begin": 167760,
+          "end": 167840
+        },
+        {
+          "word": "SSD",
+          "begin": 167920,
+          "end": 168360
+        },
+        {
+          "word": "firmware",
+          "begin": 168520,
+          "end": 168920
+        },
+        {
+          "word": "design.",
+          "begin": 168920,
+          "end": 169360
+        },
+        {
+          "word": "Knowledge",
+          "begin": 169700,
+          "end": 170020
+        },
+        {
+          "word": "check:",
+          "begin": 170100,
+          "end": 170400
+        },
+        {
+          "word": "An",
+          "begin": 170640,
+          "end": 170720
+        },
+        {
+          "word": "SSD",
+          "begin": 170760,
+          "end": 171180
+        },
+        {
+          "word": "uses",
+          "begin": 171280,
+          "end": 171580
+        },
+        {
+          "word": "only",
+          "begin": 171680,
+          "end": 171880
+        },
+        {
+          "word": "dynamic",
+          "begin": 171960,
+          "end": 172460
+        },
+        {
+          "word": "wear",
+          "begin": 172520,
+          "end": 172600
+        }
+      ]
+    },
+    {
+      "blockIndex": 12,
+      "type": "reveal",
+      "text": "Knowledge check: An SSD uses only dynamic wear leveling. Over time, certain blocks that hold rarely-updated OS files have very low erase counts while frequently-written blocks are nearing their P/E limit. Why is this happening, and what would static wear leveling do differently? The answer: Dynamic wear leveling only ensures new writes go to the least-worn free block. It never touches cold data sitting on low-wear blocks. Over time, blocks holding rarely-updated data (OS files, static configs) accumulate very low erase counts while hot blocks exhaust their P/E cycles. Static wear leveling solves this by periodically moving cold data off low-wear blocks to high-wear blocks, then using the freed low-wear blocks for new hot writes. This forces all blocks to share the wear burden evenly. The tradeoff is that moving cold data generates additional NAND writes (increasing WAF), so the FTL must balance wear uniformity against write amplification.",
+      "beginMs": 172760,
+      "endMs": 224380,
+      "timestamps": [
+        {
+          "word": "leveling.",
+          "begin": 172760,
+          "end": 173160
+        },
+        {
+          "word": "Over",
+          "begin": 173340,
+          "end": 173940
+        },
+        {
+          "word": "time,",
+          "begin": 174240,
+          "end": 174380
+        },
+        {
+          "word": "certain",
+          "begin": 174380,
+          "end": 174520
+        },
+        {
+          "word": "blocks",
+          "begin": 174520,
+          "end": 174760
+        },
+        {
+          "word": "that",
+          "begin": 174800,
+          "end": 174900
+        },
+        {
+          "word": "hold",
+          "begin": 174940,
+          "end": 175140
+        },
+        {
+          "word": "rarely-updated",
+          "begin": 175180,
+          "end": 175980
+        },
+        {
+          "word": "OS",
+          "begin": 176060,
+          "end": 176360
+        },
+        {
+          "word": "files",
+          "begin": 176420,
+          "end": 176940
+        },
+        {
+          "word": "have",
+          "begin": 176940,
+          "end": 177100
+        },
+        {
+          "word": "very",
+          "begin": 177160,
+          "end": 177360
+        },
+        {
+          "word": "low",
+          "begin": 177460,
+          "end": 177540
+        },
+        {
+          "word": "erase",
+          "begin": 177640,
+          "end": 178280
+        },
+        {
+          "word": "counts",
+          "begin": 178360,
+          "end": 178880
+        },
+        {
+          "word": "while",
+          "begin": 178880,
+          "end": 178940
+        },
+        {
+          "word": "frequently-written",
+          "begin": 179000,
+          "end": 179380
+        },
+        {
+          "word": "blocks",
+          "begin": 179380,
+          "end": 179800
+        },
+        {
+          "word": "are",
+          "begin": 179880,
+          "end": 179900
+        },
+        {
+          "word": "nearing",
+          "begin": 179980,
+          "end": 180220
+        },
+        {
+          "word": "their",
+          "begin": 180240,
+          "end": 180420
+        },
+        {
+          "word": "P/E",
+          "begin": 180420,
+          "end": 180860
+        },
+        {
+          "word": "limit.",
+          "begin": 180860,
+          "end": 181100
+        },
+        {
+          "word": "Why",
+          "begin": 181740,
+          "end": 181820
+        },
+        {
+          "word": "is",
+          "begin": 181960,
+          "end": 182040
+        },
+        {
+          "word": "this",
+          "begin": 182080,
+          "end": 182220
+        },
+        {
+          "word": "happening,",
+          "begin": 182220,
+          "end": 182680
+        },
+        {
+          "word": "and",
+          "begin": 183020,
+          "end": 183120
+        },
+        {
+          "word": "what",
+          "begin": 183160,
+          "end": 183320
+        },
+        {
+          "word": "would",
+          "begin": 183320,
+          "end": 183440
+        },
+        {
+          "word": "static",
+          "begin": 183480,
+          "end": 183800
+        },
+        {
+          "word": "wear",
+          "begin": 183840,
+          "end": 183920
+        },
+        {
+          "word": "leveling",
+          "begin": 184060,
+          "end": 184420
+        },
+        {
+          "word": "do",
+          "begin": 184480,
+          "end": 184540
+        },
+        {
+          "word": "differently?",
+          "begin": 184620,
+          "end": 185000
+        },
+        {
+          "word": "The",
+          "begin": 185680,
+          "end": 185720
+        },
+        {
+          "word": "answer:",
+          "begin": 185840,
+          "end": 186100
+        },
+        {
+          "word": "Dynamic",
+          "begin": 186460,
+          "end": 186920
+        },
+        {
+          "word": "wear",
+          "begin": 186960,
+          "end": 187040
+        },
+        {
+          "word": "leveling",
+          "begin": 187160,
+          "end": 187560
+        },
+        {
+          "word": "only",
+          "begin": 187720,
+          "end": 187900
+        },
+        {
+          "word": "ensures",
+          "begin": 187960,
+          "end": 188360
+        },
+        {
+          "word": "new",
+          "begin": 188420,
+          "end": 188500
+        },
+        {
+          "word": "writes",
+          "begin": 188600,
+          "end": 188860
+        },
+        {
+          "word": "go",
+          "begin": 188900,
+          "end": 188980
+        },
+        {
+          "word": "to",
+          "begin": 189080,
+          "end": 189140
+        },
+        {
+          "word": "the",
+          "begin": 189200,
+          "end": 189240
+        },
+        {
+          "word": "least-worn",
+          "begin": 189320,
+          "end": 189960
+        },
+        {
+          "word": "free",
+          "begin": 189960,
+          "end": 190040
+        },
+        {
+          "word": "block.",
+          "begin": 190140,
+          "end": 190440
+        },
+        {
+          "word": "It",
+          "begin": 190920,
+          "end": 191020
+        },
+        {
+          "word": "never",
+          "begin": 191060,
+          "end": 191240
+        },
+        {
+          "word": "touches",
+          "begin": 191320,
+          "end": 191660
+        },
+        {
+          "word": "cold",
+          "begin": 191720,
+          "end": 191940
+        },
+        {
+          "word": "data",
+          "begin": 191940,
+          "end": 192220
+        },
+        {
+          "word": "sitting",
+          "begin": 192420,
+          "end": 192640
+        },
+        {
+          "word": "on",
+          "begin": 192680,
+          "end": 192780
+        },
+        {
+          "word": "low-wear",
+          "begin": 192820,
+          "end": 193080
+        },
+        {
+          "word": "blocks.",
+          "begin": 193200,
+          "end": 193600
+        },
+        {
+          "word": "Over",
+          "begin": 194180,
+          "end": 194320
+        },
+        {
+          "word": "time,",
+          "begin": 194400,
+          "end": 194720
+        },
+        {
+          "word": "blocks",
+          "begin": 194940,
+          "end": 195240
+        },
+        {
+          "word": "holding",
+          "begin": 195260,
+          "end": 195540
+        },
+        {
+          "word": "rarely-updated",
+          "begin": 195540,
+          "end": 196420
+        },
+        {
+          "word": "data",
+          "begin": 196480,
+          "end": 196700
+        },
+        {
+          "word": "(OS",
+          "begin": 196920,
+          "end": 197240
+        },
+        {
+          "word": "files,",
+          "begin": 197300,
+          "end": 198020
+        },
+        {
+          "word": "static",
+          "begin": 198060,
+          "end": 198280
+        },
+        {
+          "word": "configs)",
+          "begin": 198340,
+          "end": 198760
+        },
+        {
+          "word": "accumulate",
+          "begin": 198820,
+          "end": 199360
+        },
+        {
+          "word": "very",
+          "begin": 199360,
+          "end": 199640
+        },
+        {
+          "word": "low",
+          "begin": 199740,
+          "end": 200020
+        },
+        {
+          "word": "erase",
+          "begin": 200040,
+          "end": 200260
+        },
+        {
+          "word": "counts",
+          "begin": 200260,
+          "end": 200560
+        },
+        {
+          "word": "while",
+          "begin": 200620,
+          "end": 200740
+        },
+        {
+          "word": "hot",
+          "begin": 200820,
+          "end": 201000
+        },
+        {
+          "word": "blocks",
+          "begin": 201060,
+          "end": 201360
+        },
+        {
+          "word": "exhaust",
+          "begin": 201400,
+          "end": 201800
+        },
+        {
+          "word": "their",
+          "begin": 201800,
+          "end": 201900
+        },
+        {
+          "word": "P/E",
+          "begin": 202020,
+          "end": 202300
+        },
+        {
+          "word": "cycles.",
+          "begin": 202440,
+          "end": 202920
+        },
+        {
+          "word": "Static",
+          "begin": 203480,
+          "end": 203880
+        },
+        {
+          "word": "wear",
+          "begin": 203920,
+          "end": 203980
+        },
+        {
+          "word": "leveling",
+          "begin": 204100,
+          "end": 204480
+        },
+        {
+          "word": "solves",
+          "begin": 204600,
+          "end": 204800
+        },
+        {
+          "word": "this",
+          "begin": 204800,
+          "end": 204880
+        },
+        {
+          "word": "by",
+          "begin": 204880,
+          "end": 205160
+        },
+        {
+          "word": "periodically",
+          "begin": 205300,
+          "end": 205880
+        },
+        {
+          "word": "moving",
+          "begin": 205880,
+          "end": 206280
+        },
+        {
+          "word": "cold",
+          "begin": 206340,
+          "end": 206600
+        },
+        {
+          "word": "data",
+          "begin": 206640,
+          "end": 206880
+        },
+        {
+          "word": "off",
+          "begin": 207100,
+          "end": 207280
+        },
+        {
+          "word": "low-wear",
+          "begin": 207360,
+          "end": 207740
+        },
+        {
+          "word": "blocks",
+          "begin": 207760,
+          "end": 208040
+        },
+        {
+          "word": "to",
+          "begin": 208080,
+          "end": 208140
+        },
+        {
+          "word": "high-wear",
+          "begin": 208220,
+          "end": 208520
+        },
+        {
+          "word": "blocks,",
+          "begin": 208640,
+          "end": 209020
+        },
+        {
+          "word": "then",
+          "begin": 209320,
+          "end": 209460
+        },
+        {
+          "word": "using",
+          "begin": 209460,
+          "end": 209700
+        },
+        {
+          "word": "the",
+          "begin": 209740,
+          "end": 209800
+        },
+        {
+          "word": "freed",
+          "begin": 209900,
+          "end": 209980
+        },
+        {
+          "word": "low-wear",
+          "begin": 209980,
+          "end": 210440
+        },
+        {
+          "word": "blocks",
+          "begin": 210580,
+          "end": 210900
+        },
+        {
+          "word": "for",
+          "begin": 210960,
+          "end": 211000
+        },
+        {
+          "word": "new",
+          "begin": 211080,
+          "end": 211160
+        },
+        {
+          "word": "hot",
+          "begin": 211280,
+          "end": 211480
+        },
+        {
+          "word": "writes.",
+          "begin": 211500,
+          "end": 211920
+        },
+        {
+          "word": "This",
+          "begin": 212480,
+          "end": 212640
+        },
+        {
+          "word": "forces",
+          "begin": 212680,
+          "end": 213020
+        },
+        {
+          "word": "all",
+          "begin": 213160,
+          "end": 213280
+        },
+        {
+          "word": "blocks",
+          "begin": 213340,
+          "end": 213660
+        },
+        {
+          "word": "to",
+          "begin": 213700,
+          "end": 213720
+        },
+        {
+          "word": "share",
+          "begin": 213720,
+          "end": 213880
+        },
+        {
+          "word": "the",
+          "begin": 213880,
+          "end": 213960
+        },
+        {
+          "word": "wear",
+          "begin": 214080,
+          "end": 214280
+        },
+        {
+          "word": "burden",
+          "begin": 214440,
+          "end": 214720
+        },
+        {
+          "word": "evenly.",
+          "begin": 214860,
+          "end": 215200
+        },
+        {
+          "word": "The",
+          "begin": 215620,
+          "end": 215660
+        },
+        {
+          "word": "tradeoff",
+          "begin": 215720,
+          "end": 216180
+        },
+        {
+          "word": "is",
+          "begin": 216240,
+          "end": 216320
+        },
+        {
+          "word": "that",
+          "begin": 216340,
+          "end": 216480
+        },
+        {
+          "word": "moving",
+          "begin": 216540,
+          "end": 216800
+        },
+        {
+          "word": "cold",
+          "begin": 216840,
+          "end": 217100
+        },
+        {
+          "word": "data",
+          "begin": 217140,
+          "end": 217360
+        },
+        {
+          "word": "generates",
+          "begin": 217520,
+          "end": 217940
+        },
+        {
+          "word": "additional",
+          "begin": 217960,
+          "end": 218360
+        },
+        {
+          "word": "NAND",
+          "begin": 218480,
+          "end": 218720
+        },
+        {
+          "word": "writes",
+          "begin": 218780,
+          "end": 219120
+        },
+        {
+          "word": "(increasing",
+          "begin": 219220,
+          "end": 219720
+        },
+        {
+          "word": "WAF),",
+          "begin": 219780,
+          "end": 220160
+        },
+        {
+          "word": "so",
+          "begin": 220540,
+          "end": 220600
+        },
+        {
+          "word": "the",
+          "begin": 220660,
+          "end": 220700
+        },
+        {
+          "word": "FTL",
+          "begin": 220840,
+          "end": 221260
+        },
+        {
+          "word": "must",
+          "begin": 221340,
+          "end": 221520
+        },
+        {
+          "word": "balance",
+          "begin": 221560,
+          "end": 221820
+        },
+        {
+          "word": "wear",
+          "begin": 221860,
+          "end": 221740
+        },
+        {
+          "word": "uniformity",
+          "begin": 221740,
+          "end": 222420
+        },
+        {
+          "word": "against",
+          "begin": 222460,
+          "end": 223220
+        },
+        {
+          "word": "write",
+          "begin": 223220,
+          "end": 223500
+        },
+        {
+          "word": "amplification.",
+          "begin": 223600,
+          "end": 224380
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

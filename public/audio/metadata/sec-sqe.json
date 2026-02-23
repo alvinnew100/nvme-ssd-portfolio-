@@ -1,0 +1,2197 @@
+{
+  "sectionId": "sec-sqe",
+  "audioFile": "/audio/sections/sec-sqe.mp3",
+  "totalDurationMs": 164680,
+  "fileSizeBytes": 2635392,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "What's Inside a Command? — The 64-Byte SQ Entry",
+      "beginMs": 100,
+      "endMs": 3720,
+      "timestamps": [
+        {
+          "word": "What's",
+          "begin": 100,
+          "end": 320
+        },
+        {
+          "word": "Inside",
+          "begin": 420,
+          "end": 800
+        },
+        {
+          "word": "a",
+          "begin": 800,
+          "end": 820
+        },
+        {
+          "word": "Command?",
+          "begin": 880,
+          "end": 1340
+        },
+        {
+          "word": "The",
+          "begin": 1600,
+          "end": 1640
+        },
+        {
+          "word": "64-Byte",
+          "begin": 1760,
+          "end": 2560
+        },
+        {
+          "word": "SQ",
+          "begin": 2640,
+          "end": 2900
+        },
+        {
+          "word": "Entry",
+          "begin": 3040,
+          "end": 3240
+        },
+        {
+          "word": "Analogy:",
+          "begin": 3320,
+          "end": 3720
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: An SQE Is a Structured Order Form. Every NVMe command is a 64-byte form with specific fields in specific positions. DWord 0 always contains the opcode (what to do) and command ID (tracking number). DWords 6-9 contain data buffer addresses. DWords 10-15 are command-specific parameters. It's like a standardized order form where every field has a fixed position.",
+      "beginMs": 4160,
+      "endMs": 29580,
+      "timestamps": [
+        {
+          "word": "An",
+          "begin": 4160,
+          "end": 4240
+        },
+        {
+          "word": "SQE",
+          "begin": 4320,
+          "end": 4800
+        },
+        {
+          "word": "Is",
+          "begin": 5160,
+          "end": 5240
+        },
+        {
+          "word": "a",
+          "begin": 5260,
+          "end": 5280
+        },
+        {
+          "word": "Structured",
+          "begin": 5380,
+          "end": 5760
+        },
+        {
+          "word": "Order",
+          "begin": 5820,
+          "end": 5960
+        },
+        {
+          "word": "Form.",
+          "begin": 6060,
+          "end": 6340
+        },
+        {
+          "word": "Every",
+          "begin": 6940,
+          "end": 7120
+        },
+        {
+          "word": "NVMe",
+          "begin": 7280,
+          "end": 7660
+        },
+        {
+          "word": "command",
+          "begin": 7780,
+          "end": 8160
+        },
+        {
+          "word": "is",
+          "begin": 8160,
+          "end": 8200
+        },
+        {
+          "word": "a",
+          "begin": 8240,
+          "end": 8380
+        },
+        {
+          "word": "64-byte",
+          "begin": 8500,
+          "end": 9240
+        },
+        {
+          "word": "form",
+          "begin": 9320,
+          "end": 9620
+        },
+        {
+          "word": "with",
+          "begin": 9680,
+          "end": 9800
+        },
+        {
+          "word": "specific",
+          "begin": 9840,
+          "end": 10280
+        },
+        {
+          "word": "fields",
+          "begin": 10360,
+          "end": 10720
+        },
+        {
+          "word": "in",
+          "begin": 10760,
+          "end": 10820
+        },
+        {
+          "word": "specific",
+          "begin": 10880,
+          "end": 11300
+        },
+        {
+          "word": "positions.",
+          "begin": 11340,
+          "end": 11920
+        },
+        {
+          "word": "DWord",
+          "begin": 12580,
+          "end": 12980
+        },
+        {
+          "word": "0",
+          "begin": 13040,
+          "end": 13280
+        },
+        {
+          "word": "always",
+          "begin": 13520,
+          "end": 13800
+        },
+        {
+          "word": "contains",
+          "begin": 13840,
+          "end": 14280
+        },
+        {
+          "word": "the",
+          "begin": 14320,
+          "end": 14360
+        },
+        {
+          "word": "opcode",
+          "begin": 14500,
+          "end": 14960
+        },
+        {
+          "word": "(what",
+          "begin": 15000,
+          "end": 15140
+        },
+        {
+          "word": "to",
+          "begin": 15140,
+          "end": 15260
+        },
+        {
+          "word": "do)",
+          "begin": 15340,
+          "end": 15420
+        },
+        {
+          "word": "and",
+          "begin": 15660,
+          "end": 15760
+        },
+        {
+          "word": "command",
+          "begin": 15800,
+          "end": 16200
+        },
+        {
+          "word": "ID",
+          "begin": 16300,
+          "end": 16500
+        },
+        {
+          "word": "(tracking",
+          "begin": 16600,
+          "end": 16960
+        },
+        {
+          "word": "number).",
+          "begin": 16980,
+          "end": 17200
+        },
+        {
+          "word": "DWords",
+          "begin": 18280,
+          "end": 18760
+        },
+        {
+          "word": "6-9",
+          "begin": 18880,
+          "end": 19460
+        },
+        {
+          "word": "contain",
+          "begin": 19520,
+          "end": 19880
+        },
+        {
+          "word": "data",
+          "begin": 19940,
+          "end": 20140
+        },
+        {
+          "word": "buffer",
+          "begin": 20200,
+          "end": 20440
+        },
+        {
+          "word": "addresses.",
+          "begin": 20500,
+          "end": 21060
+        },
+        {
+          "word": "DWords",
+          "begin": 22040,
+          "end": 22480
+        },
+        {
+          "word": "10-15",
+          "begin": 22580,
+          "end": 23360
+        },
+        {
+          "word": "are",
+          "begin": 23480,
+          "end": 23500
+        },
+        {
+          "word": "command-specific",
+          "begin": 23600,
+          "end": 24440
+        },
+        {
+          "word": "parameters.",
+          "begin": 24500,
+          "end": 25140
+        },
+        {
+          "word": "It's",
+          "begin": 26080,
+          "end": 26180
+        },
+        {
+          "word": "like",
+          "begin": 26240,
+          "end": 26380
+        },
+        {
+          "word": "a",
+          "begin": 26380,
+          "end": 26400
+        },
+        {
+          "word": "standardized",
+          "begin": 26480,
+          "end": 27040
+        },
+        {
+          "word": "order",
+          "begin": 27100,
+          "end": 27240
+        },
+        {
+          "word": "form",
+          "begin": 27360,
+          "end": 27660
+        },
+        {
+          "word": "where",
+          "begin": 27720,
+          "end": 27940
+        },
+        {
+          "word": "every",
+          "begin": 28020,
+          "end": 28120
+        },
+        {
+          "word": "field",
+          "begin": 28240,
+          "end": 28500
+        },
+        {
+          "word": "has",
+          "begin": 28540,
+          "end": 28700
+        },
+        {
+          "word": "a",
+          "begin": 28700,
+          "end": 28720
+        },
+        {
+          "word": "fixed",
+          "begin": 28820,
+          "end": 29060
+        },
+        {
+          "word": "position.",
+          "begin": 29100,
+          "end": 29580
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "paragraph",
+      "text": "In Lesson 6, we learned that commands go into the Submission Queue. But what does a command actually look like? It's not text — it's a precisely structured block of 64 bytes (that's 512 bits, or 16 groups of 4 bytes each).",
+      "beginMs": 30320,
+      "endMs": 45440,
+      "timestamps": [
+        {
+          "word": "In",
+          "begin": 30320,
+          "end": 30420
+        },
+        {
+          "word": "Lesson",
+          "begin": 30480,
+          "end": 30780
+        },
+        {
+          "word": "6,",
+          "begin": 30900,
+          "end": 31180
+        },
+        {
+          "word": "we",
+          "begin": 31260,
+          "end": 31320
+        },
+        {
+          "word": "learned",
+          "begin": 31420,
+          "end": 31620
+        },
+        {
+          "word": "that",
+          "begin": 31640,
+          "end": 31740
+        },
+        {
+          "word": "commands",
+          "begin": 31800,
+          "end": 32240
+        },
+        {
+          "word": "go",
+          "begin": 32299,
+          "end": 32360
+        },
+        {
+          "word": "into",
+          "begin": 32439,
+          "end": 32600
+        },
+        {
+          "word": "the",
+          "begin": 32640,
+          "end": 32680
+        },
+        {
+          "word": "Submission",
+          "begin": 32759,
+          "end": 33160
+        },
+        {
+          "word": "Queue.",
+          "begin": 33220,
+          "end": 33340
+        },
+        {
+          "word": "But",
+          "begin": 33920,
+          "end": 34020
+        },
+        {
+          "word": "what",
+          "begin": 34080,
+          "end": 34220
+        },
+        {
+          "word": "does",
+          "begin": 34260,
+          "end": 34400
+        },
+        {
+          "word": "a",
+          "begin": 34420,
+          "end": 34440
+        },
+        {
+          "word": "command",
+          "begin": 34500,
+          "end": 34860
+        },
+        {
+          "word": "actually",
+          "begin": 34980,
+          "end": 35320
+        },
+        {
+          "word": "look",
+          "begin": 35400,
+          "end": 35540
+        },
+        {
+          "word": "like?",
+          "begin": 35580,
+          "end": 35840
+        },
+        {
+          "word": "It's",
+          "begin": 36340,
+          "end": 36460
+        },
+        {
+          "word": "not",
+          "begin": 36540,
+          "end": 36700
+        },
+        {
+          "word": "text",
+          "begin": 36700,
+          "end": 37200
+        },
+        {
+          "word": "it's",
+          "begin": 37320,
+          "end": 37440
+        },
+        {
+          "word": "a",
+          "begin": 37460,
+          "end": 37480
+        },
+        {
+          "word": "precisely",
+          "begin": 37560,
+          "end": 38060
+        },
+        {
+          "word": "structured",
+          "begin": 38140,
+          "end": 38540
+        },
+        {
+          "word": "block",
+          "begin": 38600,
+          "end": 38860
+        },
+        {
+          "word": "of",
+          "begin": 38900,
+          "end": 38980
+        },
+        {
+          "word": "64",
+          "begin": 39060,
+          "end": 39480
+        },
+        {
+          "word": "bytes",
+          "begin": 39620,
+          "end": 39900
+        },
+        {
+          "word": "(that's",
+          "begin": 39960,
+          "end": 40120
+        },
+        {
+          "word": "512",
+          "begin": 40200,
+          "end": 40960
+        },
+        {
+          "word": "bits,",
+          "begin": 41020,
+          "end": 41300
+        },
+        {
+          "word": "or",
+          "begin": 42320,
+          "end": 42340
+        },
+        {
+          "word": "16",
+          "begin": 42560,
+          "end": 42980
+        },
+        {
+          "word": "groups",
+          "begin": 43040,
+          "end": 43340
+        },
+        {
+          "word": "of",
+          "begin": 43400,
+          "end": 43460
+        },
+        {
+          "word": "4",
+          "begin": 43460,
+          "end": 43640
+        },
+        {
+          "word": "bytes",
+          "begin": 43760,
+          "end": 44020
+        },
+        {
+          "word": "each).",
+          "begin": 44120,
+          "end": 44320
+        },
+        {
+          "word": "Why",
+          "begin": 45360,
+          "end": 45440
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "Why exactly 64 bytes? Think of it like a standardized form. Every NVMe command — whether it's &ldquo;read this data&rdquo; or &ldquo;tell me your serial number&rdquo; — uses the same 64-byte form. The first part of the form is always the same (who you are, what you want, where to put the result). The second part changes depending on the specific command.",
+      "beginMs": 45560,
+      "endMs": 70520,
+      "timestamps": [
+        {
+          "word": "exactly",
+          "begin": 45560,
+          "end": 45960
+        },
+        {
+          "word": "64",
+          "begin": 46080,
+          "end": 46480
+        },
+        {
+          "word": "bytes?",
+          "begin": 46600,
+          "end": 46940
+        },
+        {
+          "word": "Think",
+          "begin": 47640,
+          "end": 47800
+        },
+        {
+          "word": "of",
+          "begin": 47800,
+          "end": 47900
+        },
+        {
+          "word": "it",
+          "begin": 47920,
+          "end": 48000
+        },
+        {
+          "word": "like",
+          "begin": 48020,
+          "end": 48180
+        },
+        {
+          "word": "a",
+          "begin": 48180,
+          "end": 48220
+        },
+        {
+          "word": "standardized",
+          "begin": 48300,
+          "end": 48880
+        },
+        {
+          "word": "form.",
+          "begin": 48940,
+          "end": 49240
+        },
+        {
+          "word": "Every",
+          "begin": 49540,
+          "end": 49760
+        },
+        {
+          "word": "NVMe",
+          "begin": 49960,
+          "end": 50500
+        },
+        {
+          "word": "command",
+          "begin": 50620,
+          "end": 51140
+        },
+        {
+          "word": "whether",
+          "begin": 51620,
+          "end": 52000
+        },
+        {
+          "word": "it's",
+          "begin": 52140,
+          "end": 52400
+        },
+        {
+          "word": "&ldquo;read",
+          "begin": 52640,
+          "end": 53440
+        },
+        {
+          "word": "this",
+          "begin": 53460,
+          "end": 53620
+        },
+        {
+          "word": "data&rdquo;",
+          "begin": 53680,
+          "end": 54560
+        },
+        {
+          "word": "or",
+          "begin": 54960,
+          "end": 54980
+        },
+        {
+          "word": "&ldquo;tell",
+          "begin": 55380,
+          "end": 56560
+        },
+        {
+          "word": "me",
+          "begin": 56620,
+          "end": 56680
+        },
+        {
+          "word": "your",
+          "begin": 56740,
+          "end": 56800
+        },
+        {
+          "word": "serial",
+          "begin": 56940,
+          "end": 57200
+        },
+        {
+          "word": "number&rdquo;",
+          "begin": 57280,
+          "end": 58140
+        },
+        {
+          "word": "uses",
+          "begin": 58600,
+          "end": 58900
+        },
+        {
+          "word": "the",
+          "begin": 58920,
+          "end": 58980
+        },
+        {
+          "word": "same",
+          "begin": 59100,
+          "end": 59360
+        },
+        {
+          "word": "64-byte",
+          "begin": 59480,
+          "end": 60260
+        },
+        {
+          "word": "form.",
+          "begin": 60340,
+          "end": 60640
+        },
+        {
+          "word": "The",
+          "begin": 61280,
+          "end": 61320
+        },
+        {
+          "word": "first",
+          "begin": 61400,
+          "end": 61620
+        },
+        {
+          "word": "part",
+          "begin": 61660,
+          "end": 61860
+        },
+        {
+          "word": "of",
+          "begin": 61860,
+          "end": 61920
+        },
+        {
+          "word": "the",
+          "begin": 61940,
+          "end": 62000
+        },
+        {
+          "word": "form",
+          "begin": 62080,
+          "end": 62440
+        },
+        {
+          "word": "is",
+          "begin": 62540,
+          "end": 62620
+        },
+        {
+          "word": "always",
+          "begin": 62620,
+          "end": 62900
+        },
+        {
+          "word": "the",
+          "begin": 63000,
+          "end": 63080
+        },
+        {
+          "word": "same",
+          "begin": 63200,
+          "end": 63280
+        },
+        {
+          "word": "(who",
+          "begin": 63280,
+          "end": 63340
+        },
+        {
+          "word": "you",
+          "begin": 63420,
+          "end": 63480
+        },
+        {
+          "word": "are,",
+          "begin": 63600,
+          "end": 63620
+        },
+        {
+          "word": "what",
+          "begin": 64060,
+          "end": 64200
+        },
+        {
+          "word": "you",
+          "begin": 64220,
+          "end": 64300
+        },
+        {
+          "word": "want,",
+          "begin": 64379,
+          "end": 64700
+        },
+        {
+          "word": "where",
+          "begin": 64879,
+          "end": 64959
+        },
+        {
+          "word": "to",
+          "begin": 65040,
+          "end": 65080
+        },
+        {
+          "word": "put",
+          "begin": 65140,
+          "end": 65260
+        },
+        {
+          "word": "the",
+          "begin": 65300,
+          "end": 65360
+        },
+        {
+          "word": "result).",
+          "begin": 65400,
+          "end": 65800
+        },
+        {
+          "word": "The",
+          "begin": 66540,
+          "end": 66600
+        },
+        {
+          "word": "second",
+          "begin": 66680,
+          "end": 66960
+        },
+        {
+          "word": "part",
+          "begin": 67000,
+          "end": 67220
+        },
+        {
+          "word": "changes",
+          "begin": 67220,
+          "end": 67640
+        },
+        {
+          "word": "depending",
+          "begin": 67680,
+          "end": 68060
+        },
+        {
+          "word": "on",
+          "begin": 68100,
+          "end": 68180
+        },
+        {
+          "word": "the",
+          "begin": 68180,
+          "end": 68220
+        },
+        {
+          "word": "specific",
+          "begin": 68280,
+          "end": 68700
+        },
+        {
+          "word": "command.",
+          "begin": 68700,
+          "end": 69220
+        },
+        {
+          "word": "Each",
+          "begin": 69820,
+          "end": 69980
+        },
+        {
+          "word": "4-byte",
+          "begin": 70100,
+          "end": 70520
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "Each 4-byte group is called a Command Dword (CDW), numbered 0 through 15. Here's how they're organized:",
+      "beginMs": 70560,
+      "endMs": 77500,
+      "timestamps": [
+        {
+          "word": "group",
+          "begin": 70560,
+          "end": 70840
+        },
+        {
+          "word": "is",
+          "begin": 70860,
+          "end": 70940
+        },
+        {
+          "word": "called",
+          "begin": 71000,
+          "end": 71240
+        },
+        {
+          "word": "a",
+          "begin": 71240,
+          "end": 71280
+        },
+        {
+          "word": "Command",
+          "begin": 71360,
+          "end": 71740
+        },
+        {
+          "word": "Dword",
+          "begin": 71800,
+          "end": 72640
+        },
+        {
+          "word": "(CDW),",
+          "begin": 72800,
+          "end": 73140
+        },
+        {
+          "word": "numbered",
+          "begin": 73520,
+          "end": 73900
+        },
+        {
+          "word": "0",
+          "begin": 73900,
+          "end": 74120
+        },
+        {
+          "word": "through",
+          "begin": 74240,
+          "end": 74320
+        },
+        {
+          "word": "15.",
+          "begin": 74440,
+          "end": 74960
+        },
+        {
+          "word": "Here's",
+          "begin": 75560,
+          "end": 75780
+        },
+        {
+          "word": "how",
+          "begin": 75780,
+          "end": 75840
+        },
+        {
+          "word": "they're",
+          "begin": 75920,
+          "end": 76320
+        },
+        {
+          "word": "organized:",
+          "begin": 76340,
+          "end": 77500
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "Understanding the 64-byte command format is key to everything that follows. When we build commands with the Command Builder tool later, you'll see how each field maps to specific bytes and bits. When we decode ftrace traces, we'll read CDW10-CDW15 to figure out exactly what command was sent. The 64-byte SQ entry is the fundamental unit of communication between your computer and the SSD.",
+      "beginMs": 77540,
+      "endMs": 103140,
+      "timestamps": [
+        {
+          "word": "Understanding",
+          "begin": 77540,
+          "end": 78120
+        },
+        {
+          "word": "the",
+          "begin": 78120,
+          "end": 78140
+        },
+        {
+          "word": "64-byte",
+          "begin": 78140,
+          "end": 78780
+        },
+        {
+          "word": "command",
+          "begin": 78840,
+          "end": 79180
+        },
+        {
+          "word": "format",
+          "begin": 79240,
+          "end": 79640
+        },
+        {
+          "word": "is",
+          "begin": 79720,
+          "end": 79820
+        },
+        {
+          "word": "key",
+          "begin": 79900,
+          "end": 80020
+        },
+        {
+          "word": "to",
+          "begin": 80160,
+          "end": 80240
+        },
+        {
+          "word": "everything",
+          "begin": 80360,
+          "end": 80760
+        },
+        {
+          "word": "that",
+          "begin": 80800,
+          "end": 80900
+        },
+        {
+          "word": "follows.",
+          "begin": 80960,
+          "end": 81420
+        },
+        {
+          "word": "When",
+          "begin": 81780,
+          "end": 81900
+        },
+        {
+          "word": "we",
+          "begin": 81920,
+          "end": 81980
+        },
+        {
+          "word": "build",
+          "begin": 82080,
+          "end": 82280
+        },
+        {
+          "word": "commands",
+          "begin": 82340,
+          "end": 82760
+        },
+        {
+          "word": "with",
+          "begin": 82800,
+          "end": 82840
+        },
+        {
+          "word": "the",
+          "begin": 82900,
+          "end": 82940
+        },
+        {
+          "word": "Command",
+          "begin": 83000,
+          "end": 83360
+        },
+        {
+          "word": "Builder",
+          "begin": 83420,
+          "end": 83760
+        },
+        {
+          "word": "tool",
+          "begin": 83760,
+          "end": 84060
+        },
+        {
+          "word": "later,",
+          "begin": 84060,
+          "end": 84600
+        },
+        {
+          "word": "you'll",
+          "begin": 84600,
+          "end": 84680
+        },
+        {
+          "word": "see",
+          "begin": 84780,
+          "end": 84840
+        },
+        {
+          "word": "how",
+          "begin": 84940,
+          "end": 85180
+        },
+        {
+          "word": "each",
+          "begin": 85280,
+          "end": 85320
+        },
+        {
+          "word": "field",
+          "begin": 85420,
+          "end": 85680
+        },
+        {
+          "word": "maps",
+          "begin": 85760,
+          "end": 86020
+        },
+        {
+          "word": "to",
+          "begin": 86060,
+          "end": 86120
+        },
+        {
+          "word": "specific",
+          "begin": 86200,
+          "end": 86680
+        },
+        {
+          "word": "bytes",
+          "begin": 86740,
+          "end": 87060
+        },
+        {
+          "word": "and",
+          "begin": 87140,
+          "end": 87220
+        },
+        {
+          "word": "bits.",
+          "begin": 87280,
+          "end": 87540
+        },
+        {
+          "word": "When",
+          "begin": 88280,
+          "end": 88400
+        },
+        {
+          "word": "we",
+          "begin": 88420,
+          "end": 88480
+        },
+        {
+          "word": "decode",
+          "begin": 88600,
+          "end": 89060
+        },
+        {
+          "word": "ftrace",
+          "begin": 89140,
+          "end": 89540
+        },
+        {
+          "word": "traces,",
+          "begin": 89600,
+          "end": 91740
+        },
+        {
+          "word": "we'll",
+          "begin": 91740,
+          "end": 93500
+        },
+        {
+          "word": "read",
+          "begin": 93620,
+          "end": 93800
+        },
+        {
+          "word": "CDW10-CDW15",
+          "begin": 93900,
+          "end": 94300
+        },
+        {
+          "word": "to",
+          "begin": 94580,
+          "end": 94640
+        },
+        {
+          "word": "figure",
+          "begin": 94720,
+          "end": 94980
+        },
+        {
+          "word": "out",
+          "begin": 95020,
+          "end": 95140
+        },
+        {
+          "word": "exactly",
+          "begin": 95160,
+          "end": 95640
+        },
+        {
+          "word": "what",
+          "begin": 95720,
+          "end": 95840
+        },
+        {
+          "word": "command",
+          "begin": 95880,
+          "end": 96220
+        },
+        {
+          "word": "was",
+          "begin": 96260,
+          "end": 96400
+        },
+        {
+          "word": "sent.",
+          "begin": 96460,
+          "end": 96740
+        },
+        {
+          "word": "The",
+          "begin": 97320,
+          "end": 97360
+        },
+        {
+          "word": "64-byte",
+          "begin": 97480,
+          "end": 98320
+        },
+        {
+          "word": "SQ",
+          "begin": 98400,
+          "end": 98700
+        },
+        {
+          "word": "entry",
+          "begin": 98800,
+          "end": 99060
+        },
+        {
+          "word": "is",
+          "begin": 99260,
+          "end": 99340
+        },
+        {
+          "word": "the",
+          "begin": 99360,
+          "end": 99420
+        },
+        {
+          "word": "fundamental",
+          "begin": 99520,
+          "end": 100140
+        },
+        {
+          "word": "unit",
+          "begin": 100140,
+          "end": 100300
+        },
+        {
+          "word": "of",
+          "begin": 100300,
+          "end": 100520
+        },
+        {
+          "word": "communication",
+          "begin": 100560,
+          "end": 101300
+        },
+        {
+          "word": "between",
+          "begin": 101360,
+          "end": 101660
+        },
+        {
+          "word": "your",
+          "begin": 101660,
+          "end": 101720
+        },
+        {
+          "word": "computer",
+          "begin": 101800,
+          "end": 102240
+        },
+        {
+          "word": "and",
+          "begin": 102460,
+          "end": 102560
+        },
+        {
+          "word": "the",
+          "begin": 102560,
+          "end": 102620
+        },
+        {
+          "word": "SSD.",
+          "begin": 102700,
+          "end": 103140
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "reveal",
+      "text": "Knowledge check: Why does the NVMe specification mandate that every Submission Queue Entry be exactly the same fixed size, rather than allowing variable-length commands that could be more space-efficient for simple operations? The answer: Every NVMe command is exactly 64 bytes (16 DWords x 4 bytes each). A fixed-size format is essential for a circular queue to work efficiently: the controller can calculate the address of any entry instantly using simple pointer arithmetic (base + index x 64). With variable-length entries, the controller would need to parse each entry to find the next one, destroying the O(1) random access that makes NVMe queues fast. Fixed size also means the DMA engine can fetch commands in predictable chunks, and the host driver can calculate queue fullness by simple pointer comparison. The tradeoff is that simple commands (like Flush, which needs almost no parameters) waste space — but at 64 bytes per entry, the waste is negligible compared to the performance gained from predictable memory layout. This is the same reason CPU cache lines and memory pages are fixed-size.",
+      "beginMs": 103780,
+      "endMs": 164540,
+      "timestamps": [
+        {
+          "word": "Knowledge",
+          "begin": 103780,
+          "end": 104060
+        },
+        {
+          "word": "check:",
+          "begin": 104140,
+          "end": 104420
+        },
+        {
+          "word": "Why",
+          "begin": 104700,
+          "end": 104780
+        },
+        {
+          "word": "does",
+          "begin": 104860,
+          "end": 104960
+        },
+        {
+          "word": "the",
+          "begin": 105000,
+          "end": 105060
+        },
+        {
+          "word": "NVMe",
+          "begin": 105160,
+          "end": 105560
+        },
+        {
+          "word": "specification",
+          "begin": 105680,
+          "end": 106540
+        },
+        {
+          "word": "mandate",
+          "begin": 106720,
+          "end": 107080
+        },
+        {
+          "word": "that",
+          "begin": 107120,
+          "end": 107220
+        },
+        {
+          "word": "every",
+          "begin": 107320,
+          "end": 107520
+        },
+        {
+          "word": "Submission",
+          "begin": 107640,
+          "end": 107980
+        },
+        {
+          "word": "Queue",
+          "begin": 107980,
+          "end": 107980
+        },
+        {
+          "word": "Entry",
+          "begin": 107980,
+          "end": 108140
+        },
+        {
+          "word": "be",
+          "begin": 108140,
+          "end": 108200
+        },
+        {
+          "word": "exactly",
+          "begin": 108200,
+          "end": 108580
+        },
+        {
+          "word": "the",
+          "begin": 108580,
+          "end": 108620
+        },
+        {
+          "word": "same",
+          "begin": 108720,
+          "end": 108920
+        },
+        {
+          "word": "fixed",
+          "begin": 108960,
+          "end": 109280
+        },
+        {
+          "word": "size,",
+          "begin": 109340,
+          "end": 109720
+        },
+        {
+          "word": "rather",
+          "begin": 109720,
+          "end": 110100
+        },
+        {
+          "word": "than",
+          "begin": 110200,
+          "end": 110940
+        },
+        {
+          "word": "allowing",
+          "begin": 110960,
+          "end": 111420
+        },
+        {
+          "word": "variable-length",
+          "begin": 111420,
+          "end": 111960
+        },
+        {
+          "word": "commands",
+          "begin": 112000,
+          "end": 112340
+        },
+        {
+          "word": "that",
+          "begin": 112400,
+          "end": 112520
+        },
+        {
+          "word": "could",
+          "begin": 112560,
+          "end": 112740
+        },
+        {
+          "word": "be",
+          "begin": 112740,
+          "end": 112800
+        },
+        {
+          "word": "more",
+          "begin": 112840,
+          "end": 112900
+        },
+        {
+          "word": "space-efficient",
+          "begin": 112920,
+          "end": 113600
+        },
+        {
+          "word": "for",
+          "begin": 113680,
+          "end": 113900
+        },
+        {
+          "word": "simple",
+          "begin": 113980,
+          "end": 114360
+        },
+        {
+          "word": "operations?",
+          "begin": 114400,
+          "end": 115320
+        },
+        {
+          "word": "The",
+          "begin": 115900,
+          "end": 115960
+        },
+        {
+          "word": "answer:",
+          "begin": 116080,
+          "end": 116780
+        },
+        {
+          "word": "Every",
+          "begin": 116840,
+          "end": 116920
+        },
+        {
+          "word": "NVMe",
+          "begin": 117040,
+          "end": 117420
+        },
+        {
+          "word": "command",
+          "begin": 117520,
+          "end": 117920
+        },
+        {
+          "word": "is",
+          "begin": 118000,
+          "end": 118100
+        },
+        {
+          "word": "exactly",
+          "begin": 118120,
+          "end": 118560
+        },
+        {
+          "word": "64",
+          "begin": 118700,
+          "end": 119120
+        },
+        {
+          "word": "bytes",
+          "begin": 119240,
+          "end": 119480
+        },
+        {
+          "word": "(16",
+          "begin": 119640,
+          "end": 120000
+        },
+        {
+          "word": "DWords",
+          "begin": 120060,
+          "end": 120460
+        },
+        {
+          "word": "x",
+          "begin": 120560,
+          "end": 120740
+        },
+        {
+          "word": "4",
+          "begin": 120820,
+          "end": 120900
+        },
+        {
+          "word": "bytes",
+          "begin": 121020,
+          "end": 121280
+        },
+        {
+          "word": "each).",
+          "begin": 121400,
+          "end": 121620
+        },
+        {
+          "word": "A",
+          "begin": 122200,
+          "end": 122340
+        },
+        {
+          "word": "fixed-size",
+          "begin": 122340,
+          "end": 122880
+        },
+        {
+          "word": "format",
+          "begin": 122920,
+          "end": 123300
+        },
+        {
+          "word": "is",
+          "begin": 123360,
+          "end": 123460
+        },
+        {
+          "word": "essential",
+          "begin": 123480,
+          "end": 123840
+        },
+        {
+          "word": "for",
+          "begin": 123960,
+          "end": 124080
+        },
+        {
+          "word": "a",
+          "begin": 124080,
+          "end": 124100
+        },
+        {
+          "word": "circular",
+          "begin": 124200,
+          "end": 124540
+        },
+        {
+          "word": "queue",
+          "begin": 124660,
+          "end": 124780
+        },
+        {
+          "word": "to",
+          "begin": 124900,
+          "end": 124960
+        },
+        {
+          "word": "work",
+          "begin": 125020,
+          "end": 125220
+        },
+        {
+          "word": "efficiently:",
+          "begin": 125240,
+          "end": 125700
+        },
+        {
+          "word": "the",
+          "begin": 126000,
+          "end": 126060
+        },
+        {
+          "word": "controller",
+          "begin": 126100,
+          "end": 126480
+        },
+        {
+          "word": "can",
+          "begin": 126580,
+          "end": 126680
+        },
+        {
+          "word": "calculate",
+          "begin": 126720,
+          "end": 127180
+        },
+        {
+          "word": "the",
+          "begin": 127200,
+          "end": 127260
+        },
+        {
+          "word": "address",
+          "begin": 127360,
+          "end": 127720
+        },
+        {
+          "word": "of",
+          "begin": 127740,
+          "end": 127820
+        },
+        {
+          "word": "any",
+          "begin": 127900,
+          "end": 128000
+        },
+        {
+          "word": "entry",
+          "begin": 128100,
+          "end": 128320
+        },
+        {
+          "word": "instantly",
+          "begin": 128440,
+          "end": 128840
+        },
+        {
+          "word": "using",
+          "begin": 129060,
+          "end": 129280
+        },
+        {
+          "word": "simple",
+          "begin": 129380,
+          "end": 129580
+        },
+        {
+          "word": "pointer",
+          "begin": 129660,
+          "end": 130080
+        },
+        {
+          "word": "arithmetic",
+          "begin": 130120,
+          "end": 130580
+        },
+        {
+          "word": "(base",
+          "begin": 130639,
+          "end": 130979
+        },
+        {
+          "word": "+",
+          "begin": 130979,
+          "end": 131200
+        },
+        {
+          "word": "index",
+          "begin": 131280,
+          "end": 131620
+        },
+        {
+          "word": "x",
+          "begin": 131720,
+          "end": 131880
+        },
+        {
+          "word": "64).",
+          "begin": 131940,
+          "end": 132400
+        },
+        {
+          "word": "With",
+          "begin": 132880,
+          "end": 132980
+        },
+        {
+          "word": "variable-length",
+          "begin": 133060,
+          "end": 133700
+        },
+        {
+          "word": "entries,",
+          "begin": 133780,
+          "end": 134220
+        },
+        {
+          "word": "the",
+          "begin": 134480,
+          "end": 134540
+        },
+        {
+          "word": "controller",
+          "begin": 134580,
+          "end": 134980
+        },
+        {
+          "word": "would",
+          "begin": 135060,
+          "end": 135180
+        },
+        {
+          "word": "need",
+          "begin": 135200,
+          "end": 135340
+        },
+        {
+          "word": "to",
+          "begin": 135340,
+          "end": 135380
+        },
+        {
+          "word": "parse",
+          "begin": 135460,
+          "end": 135960
+        },
+        {
+          "word": "each",
+          "begin": 136060,
+          "end": 136200
+        },
+        {
+          "word": "entry",
+          "begin": 136220,
+          "end": 136420
+        },
+        {
+          "word": "to",
+          "begin": 136500,
+          "end": 136680
+        },
+        {
+          "word": "find",
+          "begin": 136500,
+          "end": 136720
+        },
+        {
+          "word": "the",
+          "begin": 136740,
+          "end": 136780
+        },
+        {
+          "word": "next",
+          "begin": 136840,
+          "end": 137080
+        },
+        {
+          "word": "one,",
+          "begin": 137120,
+          "end": 137300
+        },
+        {
+          "word": "destroying",
+          "begin": 137520,
+          "end": 137980
+        },
+        {
+          "word": "the",
+          "begin": 138000,
+          "end": 138180
+        },
+        {
+          "word": "O(1)",
+          "begin": 138320,
+          "end": 138480
+        },
+        {
+          "word": "random",
+          "begin": 138540,
+          "end": 138840
+        },
+        {
+          "word": "access",
+          "begin": 138940,
+          "end": 139360
+        },
+        {
+          "word": "that",
+          "begin": 139400,
+          "end": 139500
+        },
+        {
+          "word": "makes",
+          "begin": 139520,
+          "end": 139760
+        },
+        {
+          "word": "NVMe",
+          "begin": 139860,
+          "end": 140300
+        },
+        {
+          "word": "queues",
+          "begin": 140420,
+          "end": 140700
+        },
+        {
+          "word": "fast.",
+          "begin": 140780,
+          "end": 141180
+        },
+        {
+          "word": "Fixed",
+          "begin": 141480,
+          "end": 141740
+        },
+        {
+          "word": "size",
+          "begin": 141740,
+          "end": 142160
+        },
+        {
+          "word": "also",
+          "begin": 142280,
+          "end": 142480
+        },
+        {
+          "word": "means",
+          "begin": 142560,
+          "end": 142780
+        },
+        {
+          "word": "the",
+          "begin": 142820,
+          "end": 142880
+        },
+        {
+          "word": "DMA",
+          "begin": 142940,
+          "end": 143260
+        },
+        {
+          "word": "engine",
+          "begin": 143400,
+          "end": 143640
+        },
+        {
+          "word": "can",
+          "begin": 143680,
+          "end": 143800
+        },
+        {
+          "word": "fetch",
+          "begin": 143880,
+          "end": 144080
+        },
+        {
+          "word": "commands",
+          "begin": 144140,
+          "end": 144540
+        },
+        {
+          "word": "in",
+          "begin": 144560,
+          "end": 144620
+        },
+        {
+          "word": "predictable",
+          "begin": 144680,
+          "end": 145080
+        },
+        {
+          "word": "chunks,",
+          "begin": 145200,
+          "end": 145600
+        },
+        {
+          "word": "and",
+          "begin": 145920,
+          "end": 146000
+        },
+        {
+          "word": "the",
+          "begin": 146000,
+          "end": 146040
+        },
+        {
+          "word": "host",
+          "begin": 146100,
+          "end": 146340
+        },
+        {
+          "word": "driver",
+          "begin": 146360,
+          "end": 146640
+        },
+        {
+          "word": "can",
+          "begin": 146740,
+          "end": 146840
+        },
+        {
+          "word": "calculate",
+          "begin": 146900,
+          "end": 147380
+        },
+        {
+          "word": "queue",
+          "begin": 147460,
+          "end": 147560
+        },
+        {
+          "word": "fullness",
+          "begin": 147700,
+          "end": 148020
+        },
+        {
+          "word": "by",
+          "begin": 148080,
+          "end": 148140
+        },
+        {
+          "word": "simple",
+          "begin": 148280,
+          "end": 148480
+        },
+        {
+          "word": "pointer",
+          "begin": 148580,
+          "end": 148860
+        },
+        {
+          "word": "comparison.",
+          "begin": 148940,
+          "end": 149580
+        },
+        {
+          "word": "The",
+          "begin": 149880,
+          "end": 149920
+        },
+        {
+          "word": "tradeoff",
+          "begin": 150000,
+          "end": 150440
+        },
+        {
+          "word": "is",
+          "begin": 150480,
+          "end": 150560
+        },
+        {
+          "word": "that",
+          "begin": 150580,
+          "end": 150720
+        },
+        {
+          "word": "simple",
+          "begin": 150800,
+          "end": 151000
+        },
+        {
+          "word": "commands",
+          "begin": 151100,
+          "end": 151560
+        },
+        {
+          "word": "(like",
+          "begin": 151580,
+          "end": 151720
+        },
+        {
+          "word": "Flush,",
+          "begin": 151820,
+          "end": 152160
+        },
+        {
+          "word": "which",
+          "begin": 152260,
+          "end": 152500
+        },
+        {
+          "word": "needs",
+          "begin": 152520,
+          "end": 152680
+        },
+        {
+          "word": "almost",
+          "begin": 152740,
+          "end": 153020
+        },
+        {
+          "word": "no",
+          "begin": 153040,
+          "end": 153100
+        },
+        {
+          "word": "parameters)",
+          "begin": 153200,
+          "end": 153700
+        },
+        {
+          "word": "waste",
+          "begin": 153760,
+          "end": 154020
+        },
+        {
+          "word": "space",
+          "begin": 154060,
+          "end": 154400
+        },
+        {
+          "word": "but",
+          "begin": 154660,
+          "end": 154740
+        },
+        {
+          "word": "at",
+          "begin": 154740,
+          "end": 154840
+        },
+        {
+          "word": "64",
+          "begin": 154920,
+          "end": 155320
+        },
+        {
+          "word": "bytes",
+          "begin": 155440,
+          "end": 155660
+        },
+        {
+          "word": "per",
+          "begin": 155720,
+          "end": 155780
+        },
+        {
+          "word": "entry,",
+          "begin": 155880,
+          "end": 156120
+        },
+        {
+          "word": "the",
+          "begin": 156120,
+          "end": 156420
+        },
+        {
+          "word": "waste",
+          "begin": 156480,
+          "end": 156740
+        },
+        {
+          "word": "is",
+          "begin": 156760,
+          "end": 156860
+        },
+        {
+          "word": "negligible",
+          "begin": 156920,
+          "end": 157360
+        },
+        {
+          "word": "compared",
+          "begin": 157480,
+          "end": 157800
+        },
+        {
+          "word": "to",
+          "begin": 157820,
+          "end": 157880
+        },
+        {
+          "word": "the",
+          "begin": 157920,
+          "end": 157960
+        },
+        {
+          "word": "performance",
+          "begin": 158040,
+          "end": 158520
+        },
+        {
+          "word": "gained",
+          "begin": 158600,
+          "end": 158880
+        },
+        {
+          "word": "from",
+          "begin": 158940,
+          "end": 159040
+        },
+        {
+          "word": "predictable",
+          "begin": 159080,
+          "end": 159520
+        },
+        {
+          "word": "memory",
+          "begin": 159620,
+          "end": 159880
+        },
+        {
+          "word": "layout.",
+          "begin": 159960,
+          "end": 160380
+        },
+        {
+          "word": "This",
+          "begin": 160640,
+          "end": 160780
+        },
+        {
+          "word": "is",
+          "begin": 160780,
+          "end": 160860
+        },
+        {
+          "word": "the",
+          "begin": 160900,
+          "end": 160940
+        },
+        {
+          "word": "same",
+          "begin": 161040,
+          "end": 161260
+        },
+        {
+          "word": "reason",
+          "begin": 161320,
+          "end": 161620
+        },
+        {
+          "word": "CPU",
+          "begin": 161720,
+          "end": 162020
+        },
+        {
+          "word": "cache",
+          "begin": 162040,
+          "end": 162000
+        },
+        {
+          "word": "lines",
+          "begin": 162000,
+          "end": 162420
+        },
+        {
+          "word": "and",
+          "begin": 162480,
+          "end": 162920
+        },
+        {
+          "word": "memory",
+          "begin": 162960,
+          "end": 163200
+        },
+        {
+          "word": "pages",
+          "begin": 163280,
+          "end": 163640
+        },
+        {
+          "word": "are",
+          "begin": 163720,
+          "end": 163740
+        },
+        {
+          "word": "fixed-size.",
+          "begin": 163860,
+          "end": 164540
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

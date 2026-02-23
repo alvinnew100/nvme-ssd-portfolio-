@@ -1,0 +1,41 @@
+{
+  "sectionId": "sec-gc",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "When free blocks run low, the GC engine kicks in to reclaim space:",
+      "blockIndex": 0
+    },
+    {
+      "type": "heading",
+      "text": "Garbage Collection",
+      "blockIndex": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "Every time the FTL performs an out-of-place write, the old page becomes stale but still occupies physical space. Over time, blocks accumulate stale pages that can't be reclaimed individually (remember: NAND erases happen at the block level, not page level).",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "So how does the SSD reclaim this wasted space? Through garbage collection (GC) — a background process that consolidates valid data and frees up entire blocks for reuse.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "GC is the biggest internal factor affecting SSD performance. When the drive runs low on free blocks, GC must run more aggressively — competing with host I/O for NAND bandwidth and causing the dreaded performance cliff seen in steady-state benchmarks.",
+      "blockIndex": 4
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: If the garbage collector erased the source block before copying its valid pages to a new location, what would happen? Why must the GC steps execute in a very specific order, and what does each step depend on? The answer: If the block were erased before copying valid pages, that data would be permanently destroyed — a catastrophic data loss. The GC steps must follow this strict order: (1) Select source block — pick the block with the lowest VPC for optimal efficiency, (2) Copy valid pages — move them to a free block so the data is safely duplicated, (3) Update FTL table — redirect the LBA mappings to point at the new physical locations (without this step, reads would still go to the old block), (4) Erase source block — now safe because valid data exists elsewhere and mappings point to the copies, (5) Return to free pool — the erased block is clean and available for new writes. Each step depends on the prior one: you can't erase before copying, you can't update mappings before knowing where copies landed, and you can't return the block to the free pool before erasing it.",
+      "requiresReveal": true,
+      "blockIndex": 5
+    },
+    {
+      "type": "info",
+      "text": "Why FTL matters for performance: Every random write creates stale pages. When the FTL runs low on free blocks, garbage collection kicks in, copying valid data and erasing blocks. This background activity competes with host I/O and causes the &ldquo;performance cliff&rdquo; seen in steady-state benchmarks. TRIM helps by telling the FTL which pages are truly free.",
+      "blockIndex": 6
+    }
+  ]
+}

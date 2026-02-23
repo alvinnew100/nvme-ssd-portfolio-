@@ -1,0 +1,61 @@
+{
+  "sectionId": "sec-format-sanitize",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Erasing the Drive — Format NVM vs Sanitize",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: Format vs Sanitize: Quick Clean vs Deep Clean. Format NVM is like reformatting a USB drive — it resets the namespace's LBA mapping and optionally erases user data. It's fast but may leave data recoverable in NAND. Sanitize is a deep clean that cryptographically or physically destroys all data — including unmapped pages and overprovisioned space. Use Format for routine resets, Sanitize when data must be irrecoverable.",
+      "blockIndex": 1
+    },
+    {
+      "type": "term",
+      "text": "Format NVM: An admin command that resets a namespace — changes block size, metadata format, or protection settings. Can optionally erase user data, but doesn't guarantee all physical NAND is wiped.",
+      "blockIndex": 2
+    },
+    {
+      "type": "term",
+      "text": "Sanitize: An admin command that irreversibly destroys ALL data on the entire SSD — including unmapped areas, spare blocks, and controller caches. Three methods: Block Erase (NAND erase all blocks), Crypto Erase (destroy encryption key), Overwrite (write pattern to all locations).",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "Sometimes you need to erase an SSD — maybe you're repurposing it, returning it, or decommissioning it from a secure environment. NVMe provides two commands for this, and they're very different:",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "Why two commands? Because &ldquo;erase&rdquo; means different things in different contexts. Reformatting a namespace is like wiping a whiteboard — quick and convenient, but forensic experts might still recover the data. Sanitize is like shredding the whiteboard — the data is cryptographically or physically destroyed.",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "Reformats a single namespace (or all). Can change the LBA size (e.g., switch from 512-byte to 4KB sectors). Optionally performs a secure erase — but only at the namespace level.",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "A controller-level operation that guarantees all user data across all namespaces is irrecoverable. Cannot be aborted once started. Required for government/military decommissioning (NIST 800-88).",
+      "blockIndex": 7
+    },
+    {
+      "type": "paragraph",
+      "text": "Self-encrypting drives (SED) encrypt all data with an internal AES key before writing it to NAND. Crypto Erase doesn't touch the NAND at all — it destroys the encryption key, making all stored data permanently unreadable gibberish. This is why it completes in under a second regardless of drive capacity. The physical NAND still contains encrypted ciphertext, but without the key it's indistinguishable from random data. Crypto Erase is sufficient for most commercial decommissioning; block erase or overwrite is required when regulations demand physical media sanitization.",
+      "blockIndex": 8
+    },
+    {
+      "type": "info",
+      "text": "Sanitize is irreversible: Once started, Sanitize cannot be aborted and affects all namespaces on the entire NVM subsystem. Check progress with nvme sanitize-log /dev/nvme0. Enterprise drives may take hours for overwrite sanitize on large capacities.",
+      "blockIndex": 9
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: Your company is decommissioning 500 SSDs that held customer financial data. A junior engineer suggests using 'nvme format' on each drive. Why is this insufficient, and what would you recommend instead? What data could remain recoverable after a format? The answer: Format NVM only resets the namespace's logical mapping — it may leave data physically intact in NAND cells, especially in over-provisioned areas, spare blocks, and unmapped regions that the format command doesn't touch. A determined attacker with NAND chip readers could potentially recover data from these areas. For drives holding regulated data (financial, medical, PII), you need Sanitize — specifically Crypto Erase (SANACT=4) if the drives are self-encrypting, or Block Erase (SANACT=2) otherwise. Crypto Erase destroys the internal encryption key, making all data on the entire NVM subsystem — including over-provisioned and unmapped areas — cryptographically unrecoverable in under a second. This meets NIST 800-88 guidelines for media sanitization.",
+      "requiresReveal": true,
+      "blockIndex": 10
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "sectionId": "sec-testing",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "SSD Testing — Beyond Simple Benchmarks",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: SSD Testing Has Three Pillars. Testing an SSD is like testing a car: correctness testing (does it drive straight?), performance testing (how fast and how well does it handle?), and endurance testing (how long before something breaks?). Each category uses different tools and approaches.",
+      "blockIndex": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "Running fio gives you performance numbers. But thoroughly testing an SSD goes much further. In the storage industry, a complete test plan verifies everything from protocol compliance to power loss behavior.",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "Why is this important? Because a drive that's fast but loses data during a power failure is worse than useless. A drive that passes benchmarks but mishandles error codes will crash your database. Testing catches these issues before they reach production.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "Think of it as a pyramid — each layer builds on the one below it. You can't meaningfully test performance if basic commands don't work correctly:",
+      "blockIndex": 4
+    },
+    {
+      "type": "info",
+      "text": "Preconditioning — why fresh drive numbers lie: A brand-new SSD is faster because all blocks are erased and ready. After you fill the drive, garbage collection kicks in and steady-state performance drops. Always precondition (fill the drive with random writes) before measuring production-representative performance. The SNIA PTS (Performance Test Specification) defines standard preconditioning procedures.",
+      "blockIndex": 5
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: A vendor claims their SSD delivers 1,000,000 random write IOPS. You run a 10-second fio test and confirm the number. But after deploying it in a database server, sustained write IOPS drops to 200,000. What went wrong with your testing methodology, and how would you design a test that predicts real-world performance? The answer: The 10-second test only measured burst performance — the SSD's SLC cache absorbed all writes at maximum speed. Once the SLC cache fills (typically 10-100 GB depending on drive fullness), writes fall back to direct TLC/QLC programming, which is 3-5x slower. Meanwhile, garbage collection kicks in to reclaim blocks, competing with host writes for NAND bandwidth. To measure real-world sustained performance, you need: (1) Precondition the drive by filling it with random writes (2x the drive capacity) to force GC into steady state. (2) Run tests for 120+ seconds with ramp_time=30s to skip the SLC cache burst. (3) Use size=100% so fio accesses the entire drive, not just a small region the SLC cache can cover. (4) Monitor p99 and p99.9 latency, not just average — GC causes periodic latency spikes that averages hide. The SNIA Performance Test Specification defines standard preconditioning procedures for exactly this reason.",
+      "requiresReveal": true,
+      "blockIndex": 6
+    }
+  ]
+}

@@ -1,0 +1,2412 @@
+{
+  "sectionId": "sec-boot",
+  "audioFile": "/audio/sections/sec-boot.mp3",
+  "totalDurationMs": 189680,
+  "fileSizeBytes": 3035520,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "From Power-On to First I/O — The Boot Sequence",
+      "beginMs": 20,
+      "endMs": 3160,
+      "timestamps": [
+        {
+          "word": "From",
+          "begin": 20,
+          "end": 140
+        },
+        {
+          "word": "Power-On",
+          "begin": 200,
+          "end": 720
+        },
+        {
+          "word": "to",
+          "begin": 780,
+          "end": 840
+        },
+        {
+          "word": "First",
+          "begin": 960,
+          "end": 1220
+        },
+        {
+          "word": "I/O",
+          "begin": 1300,
+          "end": 2320
+        },
+        {
+          "word": "The",
+          "begin": 2400,
+          "end": 2440
+        },
+        {
+          "word": "Boot",
+          "begin": 2500,
+          "end": 2660
+        },
+        {
+          "word": "Sequence",
+          "begin": 2660,
+          "end": 2840
+        },
+        {
+          "word": "Analogy:",
+          "begin": 2860,
+          "end": 3160
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: Boot Is Like Opening a Restaurant. Before the SSD can serve I/O commands, it goes through a startup ritual — like a restaurant opening for the day. First, the host discovers the SSD on the PCIe bus (finding the building). Then it reads BAR0 (checking the menu). Then it creates admin queues (setting up the kitchen). Then it identifies the controller and creates I/O queues (hiring staff and opening for customers).",
+      "beginMs": 3240,
+      "endMs": 31320,
+      "timestamps": [
+        {
+          "word": "Boot",
+          "begin": 3240,
+          "end": 4120
+        },
+        {
+          "word": "Is",
+          "begin": 4140,
+          "end": 4220
+        },
+        {
+          "word": "Like",
+          "begin": 4260,
+          "end": 4400
+        },
+        {
+          "word": "Opening",
+          "begin": 4460,
+          "end": 4740
+        },
+        {
+          "word": "a",
+          "begin": 4760,
+          "end": 4860
+        },
+        {
+          "word": "Restaurant.",
+          "begin": 4880,
+          "end": 5300
+        },
+        {
+          "word": "Before",
+          "begin": 5300,
+          "end": 6380
+        },
+        {
+          "word": "the",
+          "begin": 6380,
+          "end": 6420
+        },
+        {
+          "word": "SSD",
+          "begin": 6520,
+          "end": 6960
+        },
+        {
+          "word": "can",
+          "begin": 7080,
+          "end": 7160
+        },
+        {
+          "word": "serve",
+          "begin": 7180,
+          "end": 7500
+        },
+        {
+          "word": "I/O",
+          "begin": 7600,
+          "end": 7960
+        },
+        {
+          "word": "commands,",
+          "begin": 8039,
+          "end": 8580
+        },
+        {
+          "word": "it",
+          "begin": 8800,
+          "end": 8880
+        },
+        {
+          "word": "goes",
+          "begin": 8920,
+          "end": 9120
+        },
+        {
+          "word": "through",
+          "begin": 9180,
+          "end": 9240
+        },
+        {
+          "word": "a",
+          "begin": 9300,
+          "end": 9320
+        },
+        {
+          "word": "startup",
+          "begin": 9400,
+          "end": 9760
+        },
+        {
+          "word": "ritual",
+          "begin": 9800,
+          "end": 10640
+        },
+        {
+          "word": "like",
+          "begin": 10700,
+          "end": 11020
+        },
+        {
+          "word": "a",
+          "begin": 11060,
+          "end": 11100
+        },
+        {
+          "word": "restaurant",
+          "begin": 11100,
+          "end": 11240
+        },
+        {
+          "word": "opening",
+          "begin": 11320,
+          "end": 11620
+        },
+        {
+          "word": "for",
+          "begin": 11680,
+          "end": 11740
+        },
+        {
+          "word": "the",
+          "begin": 11800,
+          "end": 11840
+        },
+        {
+          "word": "day.",
+          "begin": 11920,
+          "end": 12000
+        },
+        {
+          "word": "First,",
+          "begin": 12640,
+          "end": 13000
+        },
+        {
+          "word": "the",
+          "begin": 13160,
+          "end": 13220
+        },
+        {
+          "word": "host",
+          "begin": 13280,
+          "end": 13580
+        },
+        {
+          "word": "discovers",
+          "begin": 13580,
+          "end": 14640
+        },
+        {
+          "word": "the",
+          "begin": 14720,
+          "end": 14800
+        },
+        {
+          "word": "on",
+          "begin": 15060,
+          "end": 15420
+        },
+        {
+          "word": "the",
+          "begin": 15600,
+          "end": 15680
+        },
+        {
+          "word": "PCIe",
+          "begin": 15820,
+          "end": 15840
+        },
+        {
+          "word": "bus",
+          "begin": 15940,
+          "end": 16160
+        },
+        {
+          "word": "(finding",
+          "begin": 16239,
+          "end": 16540
+        },
+        {
+          "word": "the",
+          "begin": 16580,
+          "end": 16620
+        },
+        {
+          "word": "building).",
+          "begin": 16680,
+          "end": 17080
+        },
+        {
+          "word": "Then",
+          "begin": 17820,
+          "end": 18000
+        },
+        {
+          "word": "it",
+          "begin": 18020,
+          "end": 18080
+        },
+        {
+          "word": "reads",
+          "begin": 18160,
+          "end": 19000
+        },
+        {
+          "word": "BAR0",
+          "begin": 19220,
+          "end": 19480
+        },
+        {
+          "word": "(checking",
+          "begin": 19940,
+          "end": 20260
+        },
+        {
+          "word": "the",
+          "begin": 20300,
+          "end": 20340
+        },
+        {
+          "word": "menu).",
+          "begin": 20400,
+          "end": 20660
+        },
+        {
+          "word": "Then",
+          "begin": 21600,
+          "end": 21820
+        },
+        {
+          "word": "it",
+          "begin": 21940,
+          "end": 22020
+        },
+        {
+          "word": "creates",
+          "begin": 22060,
+          "end": 22440
+        },
+        {
+          "word": "admin",
+          "begin": 22580,
+          "end": 22920
+        },
+        {
+          "word": "queues",
+          "begin": 23000,
+          "end": 23300
+        },
+        {
+          "word": "(setting",
+          "begin": 23360,
+          "end": 23580
+        },
+        {
+          "word": "up",
+          "begin": 23620,
+          "end": 23720
+        },
+        {
+          "word": "the",
+          "begin": 23740,
+          "end": 23800
+        },
+        {
+          "word": "kitchen).",
+          "begin": 23860,
+          "end": 24220
+        },
+        {
+          "word": "Then",
+          "begin": 24880,
+          "end": 25120
+        },
+        {
+          "word": "it",
+          "begin": 25220,
+          "end": 25300
+        },
+        {
+          "word": "identifies",
+          "begin": 25340,
+          "end": 25920
+        },
+        {
+          "word": "the",
+          "begin": 25960,
+          "end": 26000
+        },
+        {
+          "word": "controller",
+          "begin": 26060,
+          "end": 26560
+        },
+        {
+          "word": "and",
+          "begin": 26740,
+          "end": 26900
+        },
+        {
+          "word": "creates",
+          "begin": 26900,
+          "end": 27260
+        },
+        {
+          "word": "I/O",
+          "begin": 27400,
+          "end": 27920
+        },
+        {
+          "word": "queues",
+          "begin": 28080,
+          "end": 28100
+        },
+        {
+          "word": "(hiring",
+          "begin": 28140,
+          "end": 28480
+        },
+        {
+          "word": "staff",
+          "begin": 28560,
+          "end": 28920
+        },
+        {
+          "word": "and",
+          "begin": 29000,
+          "end": 29080
+        },
+        {
+          "word": "opening",
+          "begin": 29140,
+          "end": 29420
+        },
+        {
+          "word": "for",
+          "begin": 29480,
+          "end": 29520
+        },
+        {
+          "word": "customers).",
+          "begin": 29600,
+          "end": 30220
+        },
+        {
+          "word": "Now",
+          "begin": 31080,
+          "end": 31280
+        },
+        {
+          "word": "we",
+          "begin": 31280,
+          "end": 31320
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "paragraph",
+      "text": "Now we know all the building blocks: PCIe is the highway, BAR0 is the control panel, and queues carry commands. But how do these pieces come together when you press the power button?",
+      "beginMs": 31400,
+      "endMs": 44700,
+      "timestamps": [
+        {
+          "word": "know",
+          "begin": 31400,
+          "end": 31460
+        },
+        {
+          "word": "all",
+          "begin": 31640,
+          "end": 31740
+        },
+        {
+          "word": "the",
+          "begin": 31800,
+          "end": 31840
+        },
+        {
+          "word": "building",
+          "begin": 31920,
+          "end": 32200
+        },
+        {
+          "word": "blocks:",
+          "begin": 32259,
+          "end": 32659
+        },
+        {
+          "word": "PCIe",
+          "begin": 33580,
+          "end": 34240
+        },
+        {
+          "word": "is",
+          "begin": 34360,
+          "end": 34440
+        },
+        {
+          "word": "the",
+          "begin": 34480,
+          "end": 34520
+        },
+        {
+          "word": "highway,",
+          "begin": 34600,
+          "end": 36760
+        },
+        {
+          "word": "BAR0",
+          "begin": 36960,
+          "end": 37340
+        },
+        {
+          "word": "is",
+          "begin": 37340,
+          "end": 37420
+        },
+        {
+          "word": "the",
+          "begin": 37460,
+          "end": 37520
+        },
+        {
+          "word": "control",
+          "begin": 37580,
+          "end": 37940
+        },
+        {
+          "word": "panel,",
+          "begin": 38020,
+          "end": 38300
+        },
+        {
+          "word": "and",
+          "begin": 39600,
+          "end": 39780
+        },
+        {
+          "word": "queues",
+          "begin": 39840,
+          "end": 40080
+        },
+        {
+          "word": "carry",
+          "begin": 40140,
+          "end": 40360
+        },
+        {
+          "word": "commands.",
+          "begin": 40440,
+          "end": 41020
+        },
+        {
+          "word": "But",
+          "begin": 41760,
+          "end": 41840
+        },
+        {
+          "word": "how",
+          "begin": 41900,
+          "end": 41980
+        },
+        {
+          "word": "do",
+          "begin": 42040,
+          "end": 42100
+        },
+        {
+          "word": "these",
+          "begin": 42160,
+          "end": 42300
+        },
+        {
+          "word": "pieces",
+          "begin": 42380,
+          "end": 42700
+        },
+        {
+          "word": "come",
+          "begin": 42760,
+          "end": 42920
+        },
+        {
+          "word": "together",
+          "begin": 42980,
+          "end": 43320
+        },
+        {
+          "word": "when",
+          "begin": 43500,
+          "end": 43620
+        },
+        {
+          "word": "you",
+          "begin": 43620,
+          "end": 43680
+        },
+        {
+          "word": "press",
+          "begin": 43760,
+          "end": 43960
+        },
+        {
+          "word": "the",
+          "begin": 44000,
+          "end": 44040
+        },
+        {
+          "word": "power",
+          "begin": 44100,
+          "end": 44580
+        },
+        {
+          "word": "button?",
+          "begin": 44580,
+          "end": 44700
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "The boot process follows a strict order — each step depends on the previous one. You can't send commands without queues. You can't create queues without first enabling the controller. You can't enable the controller without knowing where its registers are. And you can't find registers without scanning the PCIe bus first.",
+      "beginMs": 45560,
+      "endMs": 65640,
+      "timestamps": [
+        {
+          "word": "The",
+          "begin": 45560,
+          "end": 45580
+        },
+        {
+          "word": "boot",
+          "begin": 45580,
+          "end": 45880
+        },
+        {
+          "word": "process",
+          "begin": 45940,
+          "end": 46440
+        },
+        {
+          "word": "follows",
+          "begin": 46520,
+          "end": 46860
+        },
+        {
+          "word": "a",
+          "begin": 46880,
+          "end": 46900
+        },
+        {
+          "word": "strict",
+          "begin": 47000,
+          "end": 47320
+        },
+        {
+          "word": "order",
+          "begin": 47420,
+          "end": 47620
+        },
+        {
+          "word": "each",
+          "begin": 48040,
+          "end": 48260
+        },
+        {
+          "word": "step",
+          "begin": 48300,
+          "end": 48500
+        },
+        {
+          "word": "depends",
+          "begin": 48540,
+          "end": 49000
+        },
+        {
+          "word": "on",
+          "begin": 49020,
+          "end": 49100
+        },
+        {
+          "word": "the",
+          "begin": 49100,
+          "end": 49160
+        },
+        {
+          "word": "previous",
+          "begin": 49220,
+          "end": 49660
+        },
+        {
+          "word": "one.",
+          "begin": 49700,
+          "end": 49720
+        },
+        {
+          "word": "You",
+          "begin": 49720,
+          "end": 50760
+        },
+        {
+          "word": "can't",
+          "begin": 50840,
+          "end": 51040
+        },
+        {
+          "word": "send",
+          "begin": 51040,
+          "end": 51320
+        },
+        {
+          "word": "commands",
+          "begin": 51380,
+          "end": 51780
+        },
+        {
+          "word": "without",
+          "begin": 51800,
+          "end": 52080
+        },
+        {
+          "word": "queues.",
+          "begin": 52140,
+          "end": 52620
+        },
+        {
+          "word": "You",
+          "begin": 53160,
+          "end": 53220
+        },
+        {
+          "word": "can't",
+          "begin": 53280,
+          "end": 53500
+        },
+        {
+          "word": "create",
+          "begin": 53540,
+          "end": 53840
+        },
+        {
+          "word": "queues",
+          "begin": 53840,
+          "end": 54040
+        },
+        {
+          "word": "without",
+          "begin": 54040,
+          "end": 54620
+        },
+        {
+          "word": "first",
+          "begin": 54700,
+          "end": 54980
+        },
+        {
+          "word": "enabling",
+          "begin": 55000,
+          "end": 55460
+        },
+        {
+          "word": "the",
+          "begin": 55500,
+          "end": 55540
+        },
+        {
+          "word": "controller.",
+          "begin": 55600,
+          "end": 56060
+        },
+        {
+          "word": "You",
+          "begin": 56920,
+          "end": 56980
+        },
+        {
+          "word": "can't",
+          "begin": 57060,
+          "end": 57300
+        },
+        {
+          "word": "enable",
+          "begin": 57340,
+          "end": 57720
+        },
+        {
+          "word": "the",
+          "begin": 57800,
+          "end": 57900
+        },
+        {
+          "word": "controller",
+          "begin": 57800,
+          "end": 58420
+        },
+        {
+          "word": "without",
+          "begin": 58420,
+          "end": 58720
+        },
+        {
+          "word": "knowing",
+          "begin": 58760,
+          "end": 59000
+        },
+        {
+          "word": "where",
+          "begin": 59060,
+          "end": 59220
+        },
+        {
+          "word": "its",
+          "begin": 59240,
+          "end": 59360
+        },
+        {
+          "word": "registers",
+          "begin": 59440,
+          "end": 59980
+        },
+        {
+          "word": "are.",
+          "begin": 60040,
+          "end": 60060
+        },
+        {
+          "word": "And",
+          "begin": 60980,
+          "end": 61080
+        },
+        {
+          "word": "you",
+          "begin": 61080,
+          "end": 61120
+        },
+        {
+          "word": "can't",
+          "begin": 61200,
+          "end": 61420
+        },
+        {
+          "word": "find",
+          "begin": 61480,
+          "end": 61720
+        },
+        {
+          "word": "registers",
+          "begin": 61760,
+          "end": 62400
+        },
+        {
+          "word": "without",
+          "begin": 62400,
+          "end": 62660
+        },
+        {
+          "word": "scanning",
+          "begin": 62720,
+          "end": 63100
+        },
+        {
+          "word": "the",
+          "begin": 63160,
+          "end": 63200
+        },
+        {
+          "word": "PCIe",
+          "begin": 63280,
+          "end": 63900
+        },
+        {
+          "word": "bus",
+          "begin": 64000,
+          "end": 64239
+        },
+        {
+          "word": "first.",
+          "begin": 64319,
+          "end": 64760
+        },
+        {
+          "word": "Click",
+          "begin": 65440,
+          "end": 65640
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "Click each phase below to see the exact steps. Notice how each phase builds on the previous one:",
+      "beginMs": 65740,
+      "endMs": 70520,
+      "timestamps": [
+        {
+          "word": "each",
+          "begin": 65740,
+          "end": 65880
+        },
+        {
+          "word": "phase",
+          "begin": 65960,
+          "end": 66200
+        },
+        {
+          "word": "below",
+          "begin": 66260,
+          "end": 66460
+        },
+        {
+          "word": "to",
+          "begin": 66680,
+          "end": 66740
+        },
+        {
+          "word": "see",
+          "begin": 66840,
+          "end": 66920
+        },
+        {
+          "word": "the",
+          "begin": 67000,
+          "end": 67060
+        },
+        {
+          "word": "exact",
+          "begin": 67120,
+          "end": 67540
+        },
+        {
+          "word": "steps.",
+          "begin": 67600,
+          "end": 68040
+        },
+        {
+          "word": "Notice",
+          "begin": 68660,
+          "end": 68920
+        },
+        {
+          "word": "how",
+          "begin": 68940,
+          "end": 69000
+        },
+        {
+          "word": "each",
+          "begin": 69180,
+          "end": 69320
+        },
+        {
+          "word": "phase",
+          "begin": 69420,
+          "end": 69760
+        },
+        {
+          "word": "builds",
+          "begin": 69840,
+          "end": 70080
+        },
+        {
+          "word": "on",
+          "begin": 70080,
+          "end": 70120
+        },
+        {
+          "word": "the",
+          "begin": 70120,
+          "end": 70200
+        },
+        {
+          "word": "previous",
+          "begin": 70260,
+          "end": 70440
+        },
+        {
+          "word": "one:",
+          "begin": 70460,
+          "end": 70520
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "This entire boot sequence uses concepts we've already learned: PCIe enumeration discovers the drive, BAR0 gives access to registers, the Submission Queue lets us send commands, and the Completion Queue receives results. The boot process is just these pieces assembled in the right order. Every NVMe drive in the world follows this same sequence — it's defined by the NVMe spec, which is why one Linux NVMe driver works with drives from Samsung, WD, Intel, or any other manufacturer.",
+      "beginMs": 70620,
+      "endMs": 106640,
+      "timestamps": [
+        {
+          "word": "This",
+          "begin": 70620,
+          "end": 70920
+        },
+        {
+          "word": "entire",
+          "begin": 70960,
+          "end": 72140
+        },
+        {
+          "word": "boot",
+          "begin": 72260,
+          "end": 72460
+        },
+        {
+          "word": "sequence",
+          "begin": 72520,
+          "end": 73020
+        },
+        {
+          "word": "uses",
+          "begin": 73060,
+          "end": 73220
+        },
+        {
+          "word": "concepts",
+          "begin": 73220,
+          "end": 74000
+        },
+        {
+          "word": "we've",
+          "begin": 74040,
+          "end": 74180
+        },
+        {
+          "word": "already",
+          "begin": 74220,
+          "end": 74500
+        },
+        {
+          "word": "learned:",
+          "begin": 74580,
+          "end": 74920
+        },
+        {
+          "word": "PCIe",
+          "begin": 74960,
+          "end": 76480
+        },
+        {
+          "word": "enumeration",
+          "begin": 76640,
+          "end": 77360
+        },
+        {
+          "word": "discovers",
+          "begin": 77400,
+          "end": 77880
+        },
+        {
+          "word": "the",
+          "begin": 77920,
+          "end": 77960
+        },
+        {
+          "word": "drive,",
+          "begin": 78040,
+          "end": 79920
+        },
+        {
+          "word": "BAR0",
+          "begin": 80200,
+          "end": 80480
+        },
+        {
+          "word": "gives",
+          "begin": 80960,
+          "end": 81160
+        },
+        {
+          "word": "access",
+          "begin": 81260,
+          "end": 81700
+        },
+        {
+          "word": "to",
+          "begin": 81740,
+          "end": 81800
+        },
+        {
+          "word": "registers,",
+          "begin": 81880,
+          "end": 83360
+        },
+        {
+          "word": "the",
+          "begin": 83460,
+          "end": 83600
+        },
+        {
+          "word": "Submission",
+          "begin": 83460,
+          "end": 83920
+        },
+        {
+          "word": "Queue",
+          "begin": 84000,
+          "end": 84160
+        },
+        {
+          "word": "lets",
+          "begin": 84720,
+          "end": 84900
+        },
+        {
+          "word": "us",
+          "begin": 84940,
+          "end": 85060
+        },
+        {
+          "word": "send",
+          "begin": 85120,
+          "end": 85340
+        },
+        {
+          "word": "commands,",
+          "begin": 85400,
+          "end": 86020
+        },
+        {
+          "word": "and",
+          "begin": 86640,
+          "end": 86740
+        },
+        {
+          "word": "the",
+          "begin": 86740,
+          "end": 86780
+        },
+        {
+          "word": "Completion",
+          "begin": 86840,
+          "end": 87380
+        },
+        {
+          "word": "Queue",
+          "begin": 87460,
+          "end": 87600
+        },
+        {
+          "word": "receives",
+          "begin": 87800,
+          "end": 88180
+        },
+        {
+          "word": "results.",
+          "begin": 88240,
+          "end": 88660
+        },
+        {
+          "word": "The",
+          "begin": 88660,
+          "end": 89420
+        },
+        {
+          "word": "boot",
+          "begin": 89500,
+          "end": 89660
+        },
+        {
+          "word": "process",
+          "begin": 89720,
+          "end": 90240
+        },
+        {
+          "word": "is",
+          "begin": 90320,
+          "end": 90400
+        },
+        {
+          "word": "just",
+          "begin": 90460,
+          "end": 90680
+        },
+        {
+          "word": "these",
+          "begin": 90720,
+          "end": 90900
+        },
+        {
+          "word": "pieces",
+          "begin": 90980,
+          "end": 91500
+        },
+        {
+          "word": "assembled",
+          "begin": 91580,
+          "end": 92100
+        },
+        {
+          "word": "in",
+          "begin": 92140,
+          "end": 92220
+        },
+        {
+          "word": "the",
+          "begin": 92240,
+          "end": 92280
+        },
+        {
+          "word": "right",
+          "begin": 92360,
+          "end": 92560
+        },
+        {
+          "word": "order.",
+          "begin": 92660,
+          "end": 92860
+        },
+        {
+          "word": "Every",
+          "begin": 93680,
+          "end": 93880
+        },
+        {
+          "word": "NVMe",
+          "begin": 94040,
+          "end": 94460
+        },
+        {
+          "word": "drive",
+          "begin": 94560,
+          "end": 94820
+        },
+        {
+          "word": "in",
+          "begin": 94840,
+          "end": 94900
+        },
+        {
+          "word": "the",
+          "begin": 94900,
+          "end": 94960
+        },
+        {
+          "word": "world",
+          "begin": 95020,
+          "end": 95340
+        },
+        {
+          "word": "follows",
+          "begin": 95420,
+          "end": 95780
+        },
+        {
+          "word": "this",
+          "begin": 95780,
+          "end": 95920
+        },
+        {
+          "word": "same",
+          "begin": 96000,
+          "end": 96200
+        },
+        {
+          "word": "sequence",
+          "begin": 96300,
+          "end": 96780
+        },
+        {
+          "word": "it's",
+          "begin": 97040,
+          "end": 97160
+        },
+        {
+          "word": "defined",
+          "begin": 97200,
+          "end": 97560
+        },
+        {
+          "word": "by",
+          "begin": 97580,
+          "end": 97640
+        },
+        {
+          "word": "the",
+          "begin": 97720,
+          "end": 97780
+        },
+        {
+          "word": "NVMe",
+          "begin": 97920,
+          "end": 98340
+        },
+        {
+          "word": "spec,",
+          "begin": 98480,
+          "end": 98840
+        },
+        {
+          "word": "which",
+          "begin": 99140,
+          "end": 99280
+        },
+        {
+          "word": "is",
+          "begin": 99300,
+          "end": 99400
+        },
+        {
+          "word": "why",
+          "begin": 99440,
+          "end": 99520
+        },
+        {
+          "word": "one",
+          "begin": 99740,
+          "end": 99920
+        },
+        {
+          "word": "Linux",
+          "begin": 99980,
+          "end": 100300
+        },
+        {
+          "word": "NVMe",
+          "begin": 100400,
+          "end": 100780
+        },
+        {
+          "word": "driver",
+          "begin": 100880,
+          "end": 101360
+        },
+        {
+          "word": "works",
+          "begin": 101400,
+          "end": 101600
+        },
+        {
+          "word": "with",
+          "begin": 101640,
+          "end": 101740
+        },
+        {
+          "word": "drives",
+          "begin": 101820,
+          "end": 102160
+        },
+        {
+          "word": "from",
+          "begin": 102200,
+          "end": 102320
+        },
+        {
+          "word": "Samsung,",
+          "begin": 102420,
+          "end": 102940
+        },
+        {
+          "word": "WD,",
+          "begin": 103220,
+          "end": 103640
+        },
+        {
+          "word": "Intel,",
+          "begin": 103960,
+          "end": 104340
+        },
+        {
+          "word": "or",
+          "begin": 104460,
+          "end": 104480
+        },
+        {
+          "word": "any",
+          "begin": 104620,
+          "end": 104760
+        },
+        {
+          "word": "other",
+          "begin": 104820,
+          "end": 104940
+        },
+        {
+          "word": "manufacturer.",
+          "begin": 105020,
+          "end": 105720
+        },
+        {
+          "word": "Knowledge",
+          "begin": 106320,
+          "end": 106640
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "reveal",
+      "text": "Knowledge check: If the NVMe driver tried to submit I/O commands before creating the I/O queues — or tried to create queues before enabling the controller — what would happen? Explain why the boot sequence must follow a strict order and what depends on what. The answer: The boot sequence is a dependency chain where each step requires the previous one: (1) PCIe Enumeration must happen first — the BIOS scans the bus to discover devices. Without this, the CPU doesn't know the SSD exists. (2) BAR0 Assignment maps the SSD's registers to memory addresses. Without BAR0, there's no way to access the controller's registers. (3) Admin Queue creation (writing AQA, ASQ, ACQ registers) sets up the communication channel. Without admin queues, there's no way to send any commands at all. (4) Enabling the controller (CC.EN=1) powers up the SSD's command processing engine. Before this, the SSD ignores queue contents. (5) Identify Controller queries capabilities — the driver needs to know queue limits before creating I/O queues. (6) Finally, I/O Queue creation gives the driver high-speed data channels. If you tried to submit I/O commands before this step, there would be no I/O queues to put them in. Each step builds on the last — skip any step and the subsequent steps fail or produce undefined behavior.",
+      "beginMs": 106740,
+      "endMs": 189440,
+      "timestamps": [
+        {
+          "word": "check:",
+          "begin": 106740,
+          "end": 107040
+        },
+        {
+          "word": "If",
+          "begin": 107380,
+          "end": 107460
+        },
+        {
+          "word": "the",
+          "begin": 107460,
+          "end": 107560
+        },
+        {
+          "word": "NVMe",
+          "begin": 107700,
+          "end": 108140
+        },
+        {
+          "word": "driver",
+          "begin": 108240,
+          "end": 108640
+        },
+        {
+          "word": "tried",
+          "begin": 108640,
+          "end": 108820
+        },
+        {
+          "word": "to",
+          "begin": 108840,
+          "end": 108880
+        },
+        {
+          "word": "submit",
+          "begin": 108980,
+          "end": 109240
+        },
+        {
+          "word": "I/O",
+          "begin": 109340,
+          "end": 109500
+        },
+        {
+          "word": "commands",
+          "begin": 109600,
+          "end": 110020
+        },
+        {
+          "word": "before",
+          "begin": 110080,
+          "end": 110280
+        },
+        {
+          "word": "creating",
+          "begin": 110400,
+          "end": 110780
+        },
+        {
+          "word": "the",
+          "begin": 110820,
+          "end": 110880
+        },
+        {
+          "word": "I/O",
+          "begin": 111000,
+          "end": 111420
+        },
+        {
+          "word": "queues",
+          "begin": 111420,
+          "end": 111760
+        },
+        {
+          "word": "or",
+          "begin": 112080,
+          "end": 112100
+        },
+        {
+          "word": "tried",
+          "begin": 112200,
+          "end": 112400
+        },
+        {
+          "word": "to",
+          "begin": 112420,
+          "end": 112480
+        },
+        {
+          "word": "create",
+          "begin": 112540,
+          "end": 112840
+        },
+        {
+          "word": "queues",
+          "begin": 112900,
+          "end": 113280
+        },
+        {
+          "word": "before",
+          "begin": 113340,
+          "end": 113620
+        },
+        {
+          "word": "enabling",
+          "begin": 113620,
+          "end": 114040
+        },
+        {
+          "word": "the",
+          "begin": 114060,
+          "end": 114100
+        },
+        {
+          "word": "controller",
+          "begin": 114160,
+          "end": 114640
+        },
+        {
+          "word": "what",
+          "begin": 115220,
+          "end": 115340
+        },
+        {
+          "word": "would",
+          "begin": 115380,
+          "end": 115500
+        },
+        {
+          "word": "happen?",
+          "begin": 115540,
+          "end": 115940
+        },
+        {
+          "word": "Explain",
+          "begin": 116500,
+          "end": 116920
+        },
+        {
+          "word": "why",
+          "begin": 116960,
+          "end": 117100
+        },
+        {
+          "word": "the",
+          "begin": 117100,
+          "end": 117140
+        },
+        {
+          "word": "boot",
+          "begin": 117220,
+          "end": 117400
+        },
+        {
+          "word": "sequence",
+          "begin": 117460,
+          "end": 117840
+        },
+        {
+          "word": "must",
+          "begin": 117900,
+          "end": 118080
+        },
+        {
+          "word": "follow",
+          "begin": 118140,
+          "end": 118320
+        },
+        {
+          "word": "a",
+          "begin": 118380,
+          "end": 118400
+        },
+        {
+          "word": "strict",
+          "begin": 118480,
+          "end": 118760
+        },
+        {
+          "word": "order",
+          "begin": 118860,
+          "end": 119020
+        },
+        {
+          "word": "and",
+          "begin": 119440,
+          "end": 119520
+        },
+        {
+          "word": "what",
+          "begin": 119560,
+          "end": 119680
+        },
+        {
+          "word": "depends",
+          "begin": 119720,
+          "end": 120080
+        },
+        {
+          "word": "on",
+          "begin": 120100,
+          "end": 120200
+        },
+        {
+          "word": "what.",
+          "begin": 120260,
+          "end": 120520
+        },
+        {
+          "word": "The",
+          "begin": 121040,
+          "end": 121100
+        },
+        {
+          "word": "answer:",
+          "begin": 121220,
+          "end": 121480
+        },
+        {
+          "word": "The",
+          "begin": 121880,
+          "end": 121920
+        },
+        {
+          "word": "boot",
+          "begin": 122000,
+          "end": 122180
+        },
+        {
+          "word": "sequence",
+          "begin": 122240,
+          "end": 122600
+        },
+        {
+          "word": "is",
+          "begin": 122600,
+          "end": 122620
+        },
+        {
+          "word": "a",
+          "begin": 122680,
+          "end": 122820
+        },
+        {
+          "word": "dependency",
+          "begin": 122860,
+          "end": 123380
+        },
+        {
+          "word": "chain",
+          "begin": 123500,
+          "end": 123780
+        },
+        {
+          "word": "where",
+          "begin": 124040,
+          "end": 124160
+        },
+        {
+          "word": "each",
+          "begin": 124260,
+          "end": 124400
+        },
+        {
+          "word": "step",
+          "begin": 124500,
+          "end": 124780
+        },
+        {
+          "word": "requires",
+          "begin": 124780,
+          "end": 125340
+        },
+        {
+          "word": "the",
+          "begin": 125420,
+          "end": 125480
+        },
+        {
+          "word": "previous",
+          "begin": 125480,
+          "end": 125840
+        },
+        {
+          "word": "one:",
+          "begin": 125900,
+          "end": 126100
+        },
+        {
+          "word": "(1)",
+          "begin": 126400,
+          "end": 126560
+        },
+        {
+          "word": "PCIe",
+          "begin": 126640,
+          "end": 127160
+        },
+        {
+          "word": "Enumeration",
+          "begin": 127320,
+          "end": 127920
+        },
+        {
+          "word": "must",
+          "begin": 127980,
+          "end": 128180
+        },
+        {
+          "word": "happen",
+          "begin": 128199,
+          "end": 128479
+        },
+        {
+          "word": "first",
+          "begin": 128560,
+          "end": 128940
+        },
+        {
+          "word": "the",
+          "begin": 128940,
+          "end": 128960
+        },
+        {
+          "word": "BIOS",
+          "begin": 129240,
+          "end": 129720
+        },
+        {
+          "word": "scans",
+          "begin": 129759,
+          "end": 130039
+        },
+        {
+          "word": "the",
+          "begin": 130060,
+          "end": 130180
+        },
+        {
+          "word": "bus",
+          "begin": 130259,
+          "end": 130500
+        },
+        {
+          "word": "to",
+          "begin": 130560,
+          "end": 130620
+        },
+        {
+          "word": "discover",
+          "begin": 130660,
+          "end": 130979
+        },
+        {
+          "word": "devices.",
+          "begin": 131080,
+          "end": 131680
+        },
+        {
+          "word": "Without",
+          "begin": 132240,
+          "end": 132580
+        },
+        {
+          "word": "this,",
+          "begin": 132580,
+          "end": 132820
+        },
+        {
+          "word": "the",
+          "begin": 133200,
+          "end": 133240
+        },
+        {
+          "word": "CPU",
+          "begin": 133320,
+          "end": 133700
+        },
+        {
+          "word": "doesn't",
+          "begin": 133780,
+          "end": 134040
+        },
+        {
+          "word": "know",
+          "begin": 134080,
+          "end": 134240
+        },
+        {
+          "word": "the",
+          "begin": 134240,
+          "end": 134280
+        },
+        {
+          "word": "SSD",
+          "begin": 134380,
+          "end": 134800
+        },
+        {
+          "word": "exists.",
+          "begin": 134880,
+          "end": 135380
+        },
+        {
+          "word": "(2)",
+          "begin": 135940,
+          "end": 136560
+        },
+        {
+          "word": "BAR0",
+          "begin": 136760,
+          "end": 136960
+        },
+        {
+          "word": "Assignment",
+          "begin": 137040,
+          "end": 137540
+        },
+        {
+          "word": "maps",
+          "begin": 137820,
+          "end": 138060
+        },
+        {
+          "word": "the",
+          "begin": 138120,
+          "end": 138160
+        },
+        {
+          "word": "SSD's",
+          "begin": 138240,
+          "end": 138580
+        },
+        {
+          "word": "registers",
+          "begin": 138580,
+          "end": 139080
+        },
+        {
+          "word": "to",
+          "begin": 139120,
+          "end": 139400
+        },
+        {
+          "word": "memory",
+          "begin": 139460,
+          "end": 139700
+        },
+        {
+          "word": "addresses.",
+          "begin": 139800,
+          "end": 140380
+        },
+        {
+          "word": "Without",
+          "begin": 140860,
+          "end": 141520
+        },
+        {
+          "word": "BAR0,",
+          "begin": 141700,
+          "end": 141940
+        },
+        {
+          "word": "there's",
+          "begin": 142400,
+          "end": 142560
+        },
+        {
+          "word": "no",
+          "begin": 142620,
+          "end": 142840
+        },
+        {
+          "word": "way",
+          "begin": 142900,
+          "end": 143060
+        },
+        {
+          "word": "to",
+          "begin": 143160,
+          "end": 143180
+        },
+        {
+          "word": "access",
+          "begin": 143180,
+          "end": 143420
+        },
+        {
+          "word": "the",
+          "begin": 143460,
+          "end": 143520
+        },
+        {
+          "word": "controller's",
+          "begin": 143560,
+          "end": 144040
+        },
+        {
+          "word": "registers.",
+          "begin": 144100,
+          "end": 144700
+        },
+        {
+          "word": "(3)",
+          "begin": 145200,
+          "end": 145340
+        },
+        {
+          "word": "Admin",
+          "begin": 145520,
+          "end": 145800
+        },
+        {
+          "word": "Queue",
+          "begin": 145840,
+          "end": 145980
+        },
+        {
+          "word": "creation",
+          "begin": 146080,
+          "end": 146540
+        },
+        {
+          "word": "(writing",
+          "begin": 146540,
+          "end": 146840
+        },
+        {
+          "word": "AQA,",
+          "begin": 146940,
+          "end": 147860
+        },
+        {
+          "word": "ASQ,",
+          "begin": 148000,
+          "end": 148160
+        },
+        {
+          "word": "ACQ",
+          "begin": 148220,
+          "end": 149400
+        },
+        {
+          "word": "registers)",
+          "begin": 149520,
+          "end": 150080
+        },
+        {
+          "word": "sets",
+          "begin": 150340,
+          "end": 150540
+        },
+        {
+          "word": "up",
+          "begin": 150580,
+          "end": 150680
+        },
+        {
+          "word": "the",
+          "begin": 150700,
+          "end": 150740
+        },
+        {
+          "word": "communication",
+          "begin": 150800,
+          "end": 151380
+        },
+        {
+          "word": "channel.",
+          "begin": 151380,
+          "end": 151720
+        },
+        {
+          "word": "Without",
+          "begin": 152280,
+          "end": 152600
+        },
+        {
+          "word": "admin",
+          "begin": 152660,
+          "end": 152940
+        },
+        {
+          "word": "queues,",
+          "begin": 153020,
+          "end": 153340
+        },
+        {
+          "word": "there's",
+          "begin": 153580,
+          "end": 153740
+        },
+        {
+          "word": "no",
+          "begin": 153800,
+          "end": 153980
+        },
+        {
+          "word": "way",
+          "begin": 154000,
+          "end": 154140
+        },
+        {
+          "word": "to",
+          "begin": 154240,
+          "end": 154400
+        },
+        {
+          "word": "send",
+          "begin": 154400,
+          "end": 154540
+        },
+        {
+          "word": "any",
+          "begin": 154560,
+          "end": 154700
+        },
+        {
+          "word": "commands",
+          "begin": 154740,
+          "end": 154980
+        },
+        {
+          "word": "at",
+          "begin": 155000,
+          "end": 155060
+        },
+        {
+          "word": "all.",
+          "begin": 155060,
+          "end": 155320
+        },
+        {
+          "word": "(4)",
+          "begin": 155780,
+          "end": 155980
+        },
+        {
+          "word": "Enabling",
+          "begin": 156000,
+          "end": 156440
+        },
+        {
+          "word": "the",
+          "begin": 156480,
+          "end": 156520
+        },
+        {
+          "word": "controller",
+          "begin": 156580,
+          "end": 156980
+        },
+        {
+          "word": "(CC.EN=1)",
+          "begin": 157160,
+          "end": 159140
+        },
+        {
+          "word": "powers",
+          "begin": 159400,
+          "end": 159860
+        },
+        {
+          "word": "up",
+          "begin": 159860,
+          "end": 159920
+        },
+        {
+          "word": "the",
+          "begin": 159920,
+          "end": 159960
+        },
+        {
+          "word": "SSD's",
+          "begin": 160080,
+          "end": 160660
+        },
+        {
+          "word": "command",
+          "begin": 160700,
+          "end": 161000
+        },
+        {
+          "word": "processing",
+          "begin": 161060,
+          "end": 161540
+        },
+        {
+          "word": "engine.",
+          "begin": 161580,
+          "end": 161900
+        },
+        {
+          "word": "Before",
+          "begin": 162300,
+          "end": 163520
+        },
+        {
+          "word": "this,",
+          "begin": 163560,
+          "end": 163700
+        },
+        {
+          "word": "the",
+          "begin": 163760,
+          "end": 163840
+        },
+        {
+          "word": "ignores",
+          "begin": 163960,
+          "end": 164400
+        },
+        {
+          "word": "queue",
+          "begin": 164480,
+          "end": 164620
+        },
+        {
+          "word": "contents.",
+          "begin": 164760,
+          "end": 165320
+        },
+        {
+          "word": "(5)",
+          "begin": 165620,
+          "end": 165860
+        },
+        {
+          "word": "Identify",
+          "begin": 165880,
+          "end": 166460
+        },
+        {
+          "word": "Controller",
+          "begin": 166460,
+          "end": 166840
+        },
+        {
+          "word": "queries",
+          "begin": 166940,
+          "end": 167300
+        },
+        {
+          "word": "capabilities",
+          "begin": 167340,
+          "end": 168100
+        },
+        {
+          "word": "the",
+          "begin": 168380,
+          "end": 168420
+        },
+        {
+          "word": "driver",
+          "begin": 168500,
+          "end": 168780
+        },
+        {
+          "word": "needs",
+          "begin": 168860,
+          "end": 169060
+        },
+        {
+          "word": "to",
+          "begin": 169100,
+          "end": 169160
+        },
+        {
+          "word": "know",
+          "begin": 169220,
+          "end": 169460
+        },
+        {
+          "word": "queue",
+          "begin": 169520,
+          "end": 169580
+        },
+        {
+          "word": "limits",
+          "begin": 169700,
+          "end": 170000
+        },
+        {
+          "word": "before",
+          "begin": 170060,
+          "end": 170420
+        },
+        {
+          "word": "creating",
+          "begin": 170420,
+          "end": 170800
+        },
+        {
+          "word": "I/O",
+          "begin": 170940,
+          "end": 172520
+        },
+        {
+          "word": "queues.",
+          "begin": 172640,
+          "end": 172780
+        },
+        {
+          "word": "(6)",
+          "begin": 173240,
+          "end": 173540
+        },
+        {
+          "word": "Finally,",
+          "begin": 173560,
+          "end": 174920
+        },
+        {
+          "word": "I/O",
+          "begin": 174940,
+          "end": 175540
+        },
+        {
+          "word": "Queue",
+          "begin": 175580,
+          "end": 175740
+        },
+        {
+          "word": "creation",
+          "begin": 175800,
+          "end": 176480
+        },
+        {
+          "word": "gives",
+          "begin": 176560,
+          "end": 176860
+        },
+        {
+          "word": "the",
+          "begin": 176940,
+          "end": 177000
+        },
+        {
+          "word": "driver",
+          "begin": 177100,
+          "end": 177600
+        },
+        {
+          "word": "data",
+          "begin": 177100,
+          "end": 177200
+        },
+        {
+          "word": "channels.",
+          "begin": 177300,
+          "end": 177600
+        },
+        {
+          "word": "If",
+          "begin": 177800,
+          "end": 177900
+        },
+        {
+          "word": "you",
+          "begin": 177900,
+          "end": 177960
+        },
+        {
+          "word": "tried",
+          "begin": 178040,
+          "end": 178260
+        },
+        {
+          "word": "to",
+          "begin": 178260,
+          "end": 178300
+        },
+        {
+          "word": "submit",
+          "begin": 178380,
+          "end": 178660
+        },
+        {
+          "word": "I/O",
+          "begin": 178760,
+          "end": 179080
+        },
+        {
+          "word": "commands",
+          "begin": 179240,
+          "end": 179800
+        },
+        {
+          "word": "before",
+          "begin": 179880,
+          "end": 180100
+        },
+        {
+          "word": "this",
+          "begin": 180200,
+          "end": 180360
+        },
+        {
+          "word": "step,",
+          "begin": 180400,
+          "end": 180720
+        },
+        {
+          "word": "there",
+          "begin": 181000,
+          "end": 181040
+        },
+        {
+          "word": "would",
+          "begin": 181100,
+          "end": 181200
+        },
+        {
+          "word": "be",
+          "begin": 181240,
+          "end": 181300
+        },
+        {
+          "word": "no",
+          "begin": 181400,
+          "end": 181740
+        },
+        {
+          "word": "I/O",
+          "begin": 181900,
+          "end": 182740
+        },
+        {
+          "word": "queues",
+          "begin": 182820,
+          "end": 183000
+        },
+        {
+          "word": "to",
+          "begin": 183000,
+          "end": 183040
+        },
+        {
+          "word": "put",
+          "begin": 183100,
+          "end": 183700
+        },
+        {
+          "word": "them",
+          "begin": 183800,
+          "end": 184240
+        },
+        {
+          "word": "in.",
+          "begin": 184260,
+          "end": 184340
+        },
+        {
+          "word": "Each",
+          "begin": 184340,
+          "end": 184460
+        },
+        {
+          "word": "step",
+          "begin": 184500,
+          "end": 184620
+        },
+        {
+          "word": "builds",
+          "begin": 184620,
+          "end": 185560
+        },
+        {
+          "word": "on",
+          "begin": 185600,
+          "end": 185700
+        },
+        {
+          "word": "the",
+          "begin": 185700,
+          "end": 185820
+        },
+        {
+          "word": "last",
+          "begin": 185860,
+          "end": 186120
+        },
+        {
+          "word": "skip",
+          "begin": 186160,
+          "end": 186460
+        },
+        {
+          "word": "any",
+          "begin": 186480,
+          "end": 186720
+        },
+        {
+          "word": "step",
+          "begin": 186780,
+          "end": 186980
+        },
+        {
+          "word": "and",
+          "begin": 186980,
+          "end": 187080
+        },
+        {
+          "word": "the",
+          "begin": 187120,
+          "end": 187160
+        },
+        {
+          "word": "subsequent",
+          "begin": 187200,
+          "end": 188060
+        },
+        {
+          "word": "steps",
+          "begin": 188060,
+          "end": 188580
+        },
+        {
+          "word": "fail",
+          "begin": 188600,
+          "end": 188740
+        },
+        {
+          "word": "or",
+          "begin": 188780,
+          "end": 188960
+        },
+        {
+          "word": "produce",
+          "begin": 189020,
+          "end": 189060
+        },
+        {
+          "word": "undefined",
+          "begin": 189140,
+          "end": 189340
+        },
+        {
+          "word": "behavior.",
+          "begin": 189340,
+          "end": 189440
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

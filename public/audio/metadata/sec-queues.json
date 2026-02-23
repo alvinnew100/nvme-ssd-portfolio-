@@ -1,0 +1,4209 @@
+{
+  "sectionId": "sec-queues",
+  "audioFile": "/audio/sections/sec-queues.mp3",
+  "totalDurationMs": 282320,
+  "fileSizeBytes": 4518144,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "How Commands Are Sent — Submission & Completion Queues",
+      "beginMs": 20,
+      "endMs": 3460,
+      "timestamps": [
+        {
+          "word": "How",
+          "begin": 20,
+          "end": 80
+        },
+        {
+          "word": "Commands",
+          "begin": 220,
+          "end": 560
+        },
+        {
+          "word": "Are",
+          "begin": 580,
+          "end": 600
+        },
+        {
+          "word": "Sent",
+          "begin": 760,
+          "end": 1020
+        },
+        {
+          "word": "Submission",
+          "begin": 1340,
+          "end": 1820
+        },
+        {
+          "word": "&",
+          "begin": 1920,
+          "end": 2000
+        },
+        {
+          "word": "Completion",
+          "begin": 2040,
+          "end": 2520
+        },
+        {
+          "word": "Queues",
+          "begin": 2600,
+          "end": 2940
+        },
+        {
+          "word": "Analogy:",
+          "begin": 3040,
+          "end": 3460
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: Queues Are Like Restaurant Order Slips. The Submission Queue (SQ) is the order counter — the host places command 'slips' there. The Completion Queue (CQ) is the pickup counter — the SSD places results there. Head and tail pointers track who's next, and the phase bit prevents confusion when the circular buffer wraps around.",
+      "beginMs": 3640,
+      "endMs": 21420,
+      "timestamps": [
+        {
+          "word": "Queues",
+          "begin": 3640,
+          "end": 3940
+        },
+        {
+          "word": "Are",
+          "begin": 4040,
+          "end": 4059
+        },
+        {
+          "word": "Like",
+          "begin": 4140,
+          "end": 4320
+        },
+        {
+          "word": "Restaurant",
+          "begin": 4380,
+          "end": 4760
+        },
+        {
+          "word": "Order",
+          "begin": 4760,
+          "end": 4980
+        },
+        {
+          "word": "Slips.",
+          "begin": 5100,
+          "end": 5420
+        },
+        {
+          "word": "The",
+          "begin": 5840,
+          "end": 5900
+        },
+        {
+          "word": "Submission",
+          "begin": 5960,
+          "end": 6360
+        },
+        {
+          "word": "Queue",
+          "begin": 6420,
+          "end": 6520
+        },
+        {
+          "word": "(SQ)",
+          "begin": 6680,
+          "end": 6960
+        },
+        {
+          "word": "is",
+          "begin": 6960,
+          "end": 7260
+        },
+        {
+          "word": "the",
+          "begin": 7280,
+          "end": 7320
+        },
+        {
+          "word": "order",
+          "begin": 7320,
+          "end": 7600
+        },
+        {
+          "word": "counter",
+          "begin": 7680,
+          "end": 7940
+        },
+        {
+          "word": "the",
+          "begin": 8240,
+          "end": 8280
+        },
+        {
+          "word": "host",
+          "begin": 8340,
+          "end": 8560
+        },
+        {
+          "word": "places",
+          "begin": 8620,
+          "end": 8960
+        },
+        {
+          "word": "'slips'",
+          "begin": 9000,
+          "end": 9560
+        },
+        {
+          "word": "there.",
+          "begin": 9600,
+          "end": 9740
+        },
+        {
+          "word": "The",
+          "begin": 10140,
+          "end": 10180
+        },
+        {
+          "word": "Completion",
+          "begin": 10240,
+          "end": 10740
+        },
+        {
+          "word": "Queue",
+          "begin": 10800,
+          "end": 10940
+        },
+        {
+          "word": "(CQ)",
+          "begin": 11160,
+          "end": 11500
+        },
+        {
+          "word": "is",
+          "begin": 11720,
+          "end": 11800
+        },
+        {
+          "word": "the",
+          "begin": 11840,
+          "end": 11880
+        },
+        {
+          "word": "pickup",
+          "begin": 11960,
+          "end": 12240
+        },
+        {
+          "word": "counter",
+          "begin": 12280,
+          "end": 13020
+        },
+        {
+          "word": "the",
+          "begin": 13100,
+          "end": 13160
+        },
+        {
+          "word": "SSD",
+          "begin": 13240,
+          "end": 13600
+        },
+        {
+          "word": "places",
+          "begin": 13700,
+          "end": 13840
+        },
+        {
+          "word": "results",
+          "begin": 13880,
+          "end": 14240
+        },
+        {
+          "word": "there.",
+          "begin": 14260,
+          "end": 14820
+        },
+        {
+          "word": "Head",
+          "begin": 14820,
+          "end": 14960
+        },
+        {
+          "word": "and",
+          "begin": 14980,
+          "end": 15060
+        },
+        {
+          "word": "tail",
+          "begin": 15120,
+          "end": 15300
+        },
+        {
+          "word": "pointers",
+          "begin": 15380,
+          "end": 15760
+        },
+        {
+          "word": "track",
+          "begin": 15800,
+          "end": 16059
+        },
+        {
+          "word": "who's",
+          "begin": 16079,
+          "end": 16260
+        },
+        {
+          "word": "next,",
+          "begin": 16300,
+          "end": 16700
+        },
+        {
+          "word": "and",
+          "begin": 16940,
+          "end": 17020
+        },
+        {
+          "word": "the",
+          "begin": 17020,
+          "end": 17060
+        },
+        {
+          "word": "phase",
+          "begin": 17140,
+          "end": 17380
+        },
+        {
+          "word": "bit",
+          "begin": 17420,
+          "end": 17560
+        },
+        {
+          "word": "prevents",
+          "begin": 17600,
+          "end": 17920
+        },
+        {
+          "word": "confusion",
+          "begin": 17980,
+          "end": 18520
+        },
+        {
+          "word": "when",
+          "begin": 18540,
+          "end": 18660
+        },
+        {
+          "word": "the",
+          "begin": 18660,
+          "end": 18700
+        },
+        {
+          "word": "circular",
+          "begin": 18800,
+          "end": 19120
+        },
+        {
+          "word": "buffer",
+          "begin": 19200,
+          "end": 19420
+        },
+        {
+          "word": "wraps",
+          "begin": 19520,
+          "end": 19780
+        },
+        {
+          "word": "around.",
+          "begin": 19800,
+          "end": 20220
+        },
+        {
+          "word": "SQ",
+          "begin": 20440,
+          "end": 20720
+        },
+        {
+          "word": "(Submission",
+          "begin": 20840,
+          "end": 21240
+        },
+        {
+          "word": "Queue):",
+          "begin": 21300,
+          "end": 21420
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "term",
+      "text": "SQ (Submission Queue): A circular buffer in host RAM where the CPU places NVMe commands (64-byte entries) for the SSD to process. Each I/O queue pair has one SQ.",
+      "beginMs": 21800,
+      "endMs": 30800,
+      "timestamps": [
+        {
+          "word": "A",
+          "begin": 21800,
+          "end": 21840
+        },
+        {
+          "word": "circular",
+          "begin": 21940,
+          "end": 22280
+        },
+        {
+          "word": "buffer",
+          "begin": 22360,
+          "end": 22640
+        },
+        {
+          "word": "in",
+          "begin": 22660,
+          "end": 22720
+        },
+        {
+          "word": "host",
+          "begin": 22760,
+          "end": 23020
+        },
+        {
+          "word": "RAM",
+          "begin": 23060,
+          "end": 23340
+        },
+        {
+          "word": "where",
+          "begin": 23400,
+          "end": 23540
+        },
+        {
+          "word": "the",
+          "begin": 23540,
+          "end": 23580
+        },
+        {
+          "word": "CPU",
+          "begin": 23680,
+          "end": 24060
+        },
+        {
+          "word": "places",
+          "begin": 24180,
+          "end": 24520
+        },
+        {
+          "word": "NVMe",
+          "begin": 24620,
+          "end": 25080
+        },
+        {
+          "word": "commands",
+          "begin": 25240,
+          "end": 25600
+        },
+        {
+          "word": "(64-byte",
+          "begin": 25660,
+          "end": 26420
+        },
+        {
+          "word": "entries)",
+          "begin": 26500,
+          "end": 26900
+        },
+        {
+          "word": "for",
+          "begin": 26960,
+          "end": 27060
+        },
+        {
+          "word": "the",
+          "begin": 27060,
+          "end": 27100
+        },
+        {
+          "word": "SSD",
+          "begin": 27200,
+          "end": 27580
+        },
+        {
+          "word": "to",
+          "begin": 27640,
+          "end": 27680
+        },
+        {
+          "word": "process.",
+          "begin": 27760,
+          "end": 28300
+        },
+        {
+          "word": "Each",
+          "begin": 28660,
+          "end": 28800
+        },
+        {
+          "word": "I/O",
+          "begin": 28920,
+          "end": 29660
+        },
+        {
+          "word": "queue",
+          "begin": 29660,
+          "end": 29700
+        },
+        {
+          "word": "pair",
+          "begin": 29820,
+          "end": 30120
+        },
+        {
+          "word": "has",
+          "begin": 30120,
+          "end": 30260
+        },
+        {
+          "word": "one",
+          "begin": 30300,
+          "end": 30460
+        },
+        {
+          "word": "SQ.",
+          "begin": 30480,
+          "end": 30800
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "term",
+      "text": "CQ (Completion Queue): A circular buffer in host RAM where the SSD places completion entries (16-byte) after processing commands. The phase bit flips each time the queue wraps to indicate fresh entries.",
+      "beginMs": 31180,
+      "endMs": 42400,
+      "timestamps": [
+        {
+          "word": "CQ",
+          "begin": 31180,
+          "end": 31480
+        },
+        {
+          "word": "(Completion",
+          "begin": 31600,
+          "end": 32100
+        },
+        {
+          "word": "Queue):",
+          "begin": 32180,
+          "end": 32280
+        },
+        {
+          "word": "A",
+          "begin": 32299,
+          "end": 32700
+        },
+        {
+          "word": "circular",
+          "begin": 32800,
+          "end": 33140
+        },
+        {
+          "word": "buffer",
+          "begin": 33220,
+          "end": 33500
+        },
+        {
+          "word": "in",
+          "begin": 33500,
+          "end": 33580
+        },
+        {
+          "word": "host",
+          "begin": 33600,
+          "end": 33880
+        },
+        {
+          "word": "RAM",
+          "begin": 33940,
+          "end": 34240
+        },
+        {
+          "word": "where",
+          "begin": 34300,
+          "end": 34440
+        },
+        {
+          "word": "the",
+          "begin": 34440,
+          "end": 34480
+        },
+        {
+          "word": "SSD",
+          "begin": 34600,
+          "end": 35020
+        },
+        {
+          "word": "places",
+          "begin": 35120,
+          "end": 35500
+        },
+        {
+          "word": "completion",
+          "begin": 35560,
+          "end": 36060
+        },
+        {
+          "word": "entries",
+          "begin": 36120,
+          "end": 36360
+        },
+        {
+          "word": "(16-byte)",
+          "begin": 36540,
+          "end": 37320
+        },
+        {
+          "word": "after",
+          "begin": 37420,
+          "end": 37600
+        },
+        {
+          "word": "processing",
+          "begin": 37680,
+          "end": 38180
+        },
+        {
+          "word": "commands.",
+          "begin": 38220,
+          "end": 38760
+        },
+        {
+          "word": "The",
+          "begin": 39000,
+          "end": 39040
+        },
+        {
+          "word": "phase",
+          "begin": 39120,
+          "end": 39340
+        },
+        {
+          "word": "bit",
+          "begin": 39400,
+          "end": 39540
+        },
+        {
+          "word": "flips",
+          "begin": 39660,
+          "end": 39920
+        },
+        {
+          "word": "each",
+          "begin": 39980,
+          "end": 40120
+        },
+        {
+          "word": "time",
+          "begin": 40180,
+          "end": 40400
+        },
+        {
+          "word": "the",
+          "begin": 40420,
+          "end": 40460
+        },
+        {
+          "word": "queue",
+          "begin": 40520,
+          "end": 40640
+        },
+        {
+          "word": "wraps",
+          "begin": 40740,
+          "end": 41060
+        },
+        {
+          "word": "to",
+          "begin": 41120,
+          "end": 41160
+        },
+        {
+          "word": "indicate",
+          "begin": 41240,
+          "end": 41680
+        },
+        {
+          "word": "fresh",
+          "begin": 41680,
+          "end": 41880
+        },
+        {
+          "word": "entries.",
+          "begin": 41960,
+          "end": 42400
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "We know the SSD has a control panel (BAR0 registers) and a high-speed connection (PCIe). But here's the critical question: how does the host actually send commands to the drive?",
+      "beginMs": 42560,
+      "endMs": 52300,
+      "timestamps": [
+        {
+          "word": "We",
+          "begin": 42560,
+          "end": 42620
+        },
+        {
+          "word": "know",
+          "begin": 42700,
+          "end": 42760
+        },
+        {
+          "word": "the",
+          "begin": 42860,
+          "end": 42920
+        },
+        {
+          "word": "SSD",
+          "begin": 43040,
+          "end": 43440
+        },
+        {
+          "word": "has",
+          "begin": 43560,
+          "end": 43700
+        },
+        {
+          "word": "a",
+          "begin": 43720,
+          "end": 43820
+        },
+        {
+          "word": "control",
+          "begin": 43820,
+          "end": 44160
+        },
+        {
+          "word": "panel",
+          "begin": 44240,
+          "end": 44940
+        },
+        {
+          "word": "(BAR0",
+          "begin": 45120,
+          "end": 45320
+        },
+        {
+          "word": "registers)",
+          "begin": 45420,
+          "end": 45980
+        },
+        {
+          "word": "and",
+          "begin": 46060,
+          "end": 46140
+        },
+        {
+          "word": "a",
+          "begin": 46140,
+          "end": 46240
+        },
+        {
+          "word": "high-speed",
+          "begin": 46240,
+          "end": 46680
+        },
+        {
+          "word": "connection",
+          "begin": 46740,
+          "end": 47140
+        },
+        {
+          "word": "(PCIe).",
+          "begin": 47220,
+          "end": 47820
+        },
+        {
+          "word": "But",
+          "begin": 48200,
+          "end": 48280
+        },
+        {
+          "word": "here's",
+          "begin": 48300,
+          "end": 48540
+        },
+        {
+          "word": "the",
+          "begin": 48540,
+          "end": 48580
+        },
+        {
+          "word": "critical",
+          "begin": 48640,
+          "end": 49040
+        },
+        {
+          "word": "question:",
+          "begin": 49060,
+          "end": 49480
+        },
+        {
+          "word": "how",
+          "begin": 49760,
+          "end": 49840
+        },
+        {
+          "word": "does",
+          "begin": 49900,
+          "end": 50020
+        },
+        {
+          "word": "the",
+          "begin": 50060,
+          "end": 50120
+        },
+        {
+          "word": "host",
+          "begin": 50180,
+          "end": 50460
+        },
+        {
+          "word": "actually",
+          "begin": 50560,
+          "end": 50860
+        },
+        {
+          "word": "send",
+          "begin": 50960,
+          "end": 51140
+        },
+        {
+          "word": "commands",
+          "begin": 51200,
+          "end": 51620
+        },
+        {
+          "word": "to",
+          "begin": 51660,
+          "end": 51720
+        },
+        {
+          "word": "the",
+          "begin": 51760,
+          "end": 51820
+        },
+        {
+          "word": "drive?",
+          "begin": 51880,
+          "end": 52300
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "Imagine a busy restaurant. Customers don't walk into the kitchen to place orders — there's a system. Customers write their orders on slips and put them in an order rack. The kitchen takes orders from the rack, cooks the food, then puts a ready ticket in a pickup tray. The waiter checks the pickup tray and delivers the food.",
+      "beginMs": 53200,
+      "endMs": 72560,
+      "timestamps": [
+        {
+          "word": "Imagine",
+          "begin": 53200,
+          "end": 53580
+        },
+        {
+          "word": "a",
+          "begin": 53580,
+          "end": 53740
+        },
+        {
+          "word": "busy",
+          "begin": 53820,
+          "end": 53880
+        },
+        {
+          "word": "restaurant.",
+          "begin": 53980,
+          "end": 54500
+        },
+        {
+          "word": "Customers",
+          "begin": 54680,
+          "end": 55220
+        },
+        {
+          "word": "don't",
+          "begin": 55220,
+          "end": 55660
+        },
+        {
+          "word": "walk",
+          "begin": 55680,
+          "end": 55780
+        },
+        {
+          "word": "into",
+          "begin": 55780,
+          "end": 55880
+        },
+        {
+          "word": "the",
+          "begin": 55960,
+          "end": 56040
+        },
+        {
+          "word": "kitchen",
+          "begin": 56120,
+          "end": 56460
+        },
+        {
+          "word": "to",
+          "begin": 56460,
+          "end": 56520
+        },
+        {
+          "word": "place",
+          "begin": 56620,
+          "end": 57060
+        },
+        {
+          "word": "orders",
+          "begin": 57340,
+          "end": 57640
+        },
+        {
+          "word": "there's",
+          "begin": 57640,
+          "end": 57860
+        },
+        {
+          "word": "a",
+          "begin": 57880,
+          "end": 58020
+        },
+        {
+          "word": "system.",
+          "begin": 58780,
+          "end": 59100
+        },
+        {
+          "word": "Customers",
+          "begin": 59120,
+          "end": 59240
+        },
+        {
+          "word": "write",
+          "begin": 59300,
+          "end": 59500
+        },
+        {
+          "word": "their",
+          "begin": 59500,
+          "end": 59720
+        },
+        {
+          "word": "orders",
+          "begin": 59800,
+          "end": 60220
+        },
+        {
+          "word": "on",
+          "begin": 60260,
+          "end": 60320
+        },
+        {
+          "word": "slips",
+          "begin": 60260,
+          "end": 60540
+        },
+        {
+          "word": "and",
+          "begin": 60660,
+          "end": 60740
+        },
+        {
+          "word": "put",
+          "begin": 60800,
+          "end": 60920
+        },
+        {
+          "word": "them",
+          "begin": 60960,
+          "end": 61080
+        },
+        {
+          "word": "in",
+          "begin": 61100,
+          "end": 61160
+        },
+        {
+          "word": "an",
+          "begin": 61180,
+          "end": 61260
+        },
+        {
+          "word": "order",
+          "begin": 61360,
+          "end": 61580
+        },
+        {
+          "word": "rack.",
+          "begin": 61580,
+          "end": 61860
+        },
+        {
+          "word": "The",
+          "begin": 62680,
+          "end": 62740
+        },
+        {
+          "word": "kitchen",
+          "begin": 62800,
+          "end": 63100
+        },
+        {
+          "word": "takes",
+          "begin": 63100,
+          "end": 63440
+        },
+        {
+          "word": "orders",
+          "begin": 63520,
+          "end": 63780
+        },
+        {
+          "word": "from",
+          "begin": 63820,
+          "end": 63940
+        },
+        {
+          "word": "the",
+          "begin": 63960,
+          "end": 64000
+        },
+        {
+          "word": "rack,",
+          "begin": 64060,
+          "end": 64400
+        },
+        {
+          "word": "cooks",
+          "begin": 64739,
+          "end": 64940
+        },
+        {
+          "word": "the",
+          "begin": 65000,
+          "end": 65040
+        },
+        {
+          "word": "food,",
+          "begin": 65120,
+          "end": 65420
+        },
+        {
+          "word": "then",
+          "begin": 65720,
+          "end": 65880
+        },
+        {
+          "word": "puts",
+          "begin": 65940,
+          "end": 66100
+        },
+        {
+          "word": "a",
+          "begin": 66140,
+          "end": 66160
+        },
+        {
+          "word": "ready",
+          "begin": 66240,
+          "end": 66420
+        },
+        {
+          "word": "ticket",
+          "begin": 66520,
+          "end": 66800
+        },
+        {
+          "word": "in",
+          "begin": 66880,
+          "end": 66940
+        },
+        {
+          "word": "a",
+          "begin": 66960,
+          "end": 66980
+        },
+        {
+          "word": "pickup",
+          "begin": 67040,
+          "end": 67340
+        },
+        {
+          "word": "tray.",
+          "begin": 67400,
+          "end": 67520
+        },
+        {
+          "word": "The",
+          "begin": 68600,
+          "end": 68640
+        },
+        {
+          "word": "waiter",
+          "begin": 68720,
+          "end": 68920
+        },
+        {
+          "word": "checks",
+          "begin": 69040,
+          "end": 69260
+        },
+        {
+          "word": "the",
+          "begin": 69320,
+          "end": 69360
+        },
+        {
+          "word": "pickup",
+          "begin": 69420,
+          "end": 69720
+        },
+        {
+          "word": "tray",
+          "begin": 69760,
+          "end": 69880
+        },
+        {
+          "word": "and",
+          "begin": 70060,
+          "end": 70140
+        },
+        {
+          "word": "delivers",
+          "begin": 70160,
+          "end": 70580
+        },
+        {
+          "word": "the",
+          "begin": 70580,
+          "end": 72000
+        },
+        {
+          "word": "food.",
+          "begin": 72080,
+          "end": 72140
+        },
+        {
+          "word": "NVMe",
+          "begin": 72260,
+          "end": 72560
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "NVMe works the same way. The computer (host) places commands into a Submission Queue (SQ) in RAM — that's the order rack. The SSD picks up commands, processes them, and puts results into a Completion Queue (CQ) in RAM — that's the pickup tray.",
+      "beginMs": 72800,
+      "endMs": 88440,
+      "timestamps": [
+        {
+          "word": "works",
+          "begin": 72800,
+          "end": 73000
+        },
+        {
+          "word": "the",
+          "begin": 73060,
+          "end": 73100
+        },
+        {
+          "word": "same",
+          "begin": 73200,
+          "end": 73460
+        },
+        {
+          "word": "way.",
+          "begin": 73460,
+          "end": 74320
+        },
+        {
+          "word": "The",
+          "begin": 74380,
+          "end": 74480
+        },
+        {
+          "word": "computer",
+          "begin": 74380,
+          "end": 74840
+        },
+        {
+          "word": "(host)",
+          "begin": 74840,
+          "end": 75100
+        },
+        {
+          "word": "places",
+          "begin": 75180,
+          "end": 75580
+        },
+        {
+          "word": "commands",
+          "begin": 75580,
+          "end": 76000
+        },
+        {
+          "word": "into",
+          "begin": 76020,
+          "end": 76100
+        },
+        {
+          "word": "a",
+          "begin": 76120,
+          "end": 76260
+        },
+        {
+          "word": "Submission",
+          "begin": 76360,
+          "end": 76760
+        },
+        {
+          "word": "Queue",
+          "begin": 76840,
+          "end": 77780
+        },
+        {
+          "word": "(SQ)",
+          "begin": 77840,
+          "end": 77940
+        },
+        {
+          "word": "in",
+          "begin": 78060,
+          "end": 78140
+        },
+        {
+          "word": "RAM",
+          "begin": 78200,
+          "end": 78520
+        },
+        {
+          "word": "that's",
+          "begin": 78980,
+          "end": 79180
+        },
+        {
+          "word": "the",
+          "begin": 79240,
+          "end": 79280
+        },
+        {
+          "word": "order",
+          "begin": 79400,
+          "end": 79640
+        },
+        {
+          "word": "rack.",
+          "begin": 79680,
+          "end": 79920
+        },
+        {
+          "word": "The",
+          "begin": 80560,
+          "end": 80720
+        },
+        {
+          "word": "SSD",
+          "begin": 80720,
+          "end": 81120
+        },
+        {
+          "word": "picks",
+          "begin": 81220,
+          "end": 81420
+        },
+        {
+          "word": "up",
+          "begin": 81460,
+          "end": 81560
+        },
+        {
+          "word": "commands,",
+          "begin": 81600,
+          "end": 82120
+        },
+        {
+          "word": "processes",
+          "begin": 82380,
+          "end": 82860
+        },
+        {
+          "word": "them,",
+          "begin": 82860,
+          "end": 83140
+        },
+        {
+          "word": "and",
+          "begin": 83480,
+          "end": 83540
+        },
+        {
+          "word": "puts",
+          "begin": 83600,
+          "end": 83780
+        },
+        {
+          "word": "results",
+          "begin": 83840,
+          "end": 84220
+        },
+        {
+          "word": "into",
+          "begin": 84240,
+          "end": 84400
+        },
+        {
+          "word": "a",
+          "begin": 84440,
+          "end": 84460
+        },
+        {
+          "word": "Completion",
+          "begin": 84520,
+          "end": 84980
+        },
+        {
+          "word": "Queue",
+          "begin": 85060,
+          "end": 85180
+        },
+        {
+          "word": "(CQ)",
+          "begin": 85360,
+          "end": 85700
+        },
+        {
+          "word": "in",
+          "begin": 85940,
+          "end": 86020
+        },
+        {
+          "word": "RAM",
+          "begin": 86100,
+          "end": 86440
+        },
+        {
+          "word": "that's",
+          "begin": 86780,
+          "end": 86960
+        },
+        {
+          "word": "the",
+          "begin": 87000,
+          "end": 87040
+        },
+        {
+          "word": "pickup",
+          "begin": 87080,
+          "end": 87360
+        },
+        {
+          "word": "tray.",
+          "begin": 87420,
+          "end": 87540
+        },
+        {
+          "word": "But",
+          "begin": 88100,
+          "end": 88180
+        },
+        {
+          "word": "why",
+          "begin": 88220,
+          "end": 88440
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "But why use queues at all? Why not just send one command at a time? Because SSDs are massively parallel — they have multiple NAND chips working simultaneously. If you sent one command and waited for it to finish before sending the next, most of the SSD would sit idle. Queues let you stack up many commands so the SSD can work on them in parallel, keeping all its NAND chips busy.",
+      "beginMs": 89660,
+      "endMs": 111860,
+      "timestamps": [
+        {
+          "word": "Why",
+          "begin": 89660,
+          "end": 89740
+        },
+        {
+          "word": "not",
+          "begin": 89820,
+          "end": 89960
+        },
+        {
+          "word": "just",
+          "begin": 90000,
+          "end": 90220
+        },
+        {
+          "word": "send",
+          "begin": 90240,
+          "end": 90360
+        },
+        {
+          "word": "one",
+          "begin": 90400,
+          "end": 90560
+        },
+        {
+          "word": "command",
+          "begin": 90620,
+          "end": 90960
+        },
+        {
+          "word": "at",
+          "begin": 90960,
+          "end": 91040
+        },
+        {
+          "word": "a",
+          "begin": 91060,
+          "end": 91080
+        },
+        {
+          "word": "time?",
+          "begin": 91160,
+          "end": 91520
+        },
+        {
+          "word": "Because",
+          "begin": 91720,
+          "end": 92000
+        },
+        {
+          "word": "SSDs",
+          "begin": 92100,
+          "end": 92540
+        },
+        {
+          "word": "are",
+          "begin": 92660,
+          "end": 92720
+        },
+        {
+          "word": "massively",
+          "begin": 92820,
+          "end": 93240
+        },
+        {
+          "word": "parallel",
+          "begin": 93340,
+          "end": 93800
+        },
+        {
+          "word": "they",
+          "begin": 94120,
+          "end": 94240
+        },
+        {
+          "word": "have",
+          "begin": 94240,
+          "end": 94360
+        },
+        {
+          "word": "multiple",
+          "begin": 94400,
+          "end": 94720
+        },
+        {
+          "word": "NAND",
+          "begin": 94840,
+          "end": 95020
+        },
+        {
+          "word": "chips",
+          "begin": 95100,
+          "end": 95340
+        },
+        {
+          "word": "working",
+          "begin": 95400,
+          "end": 95700
+        },
+        {
+          "word": "simultaneously.",
+          "begin": 95780,
+          "end": 96680
+        },
+        {
+          "word": "If",
+          "begin": 97160,
+          "end": 97260
+        },
+        {
+          "word": "you",
+          "begin": 97280,
+          "end": 97320
+        },
+        {
+          "word": "sent",
+          "begin": 97440,
+          "end": 97620
+        },
+        {
+          "word": "one",
+          "begin": 97680,
+          "end": 97820
+        },
+        {
+          "word": "command",
+          "begin": 97900,
+          "end": 98320
+        },
+        {
+          "word": "and",
+          "begin": 98400,
+          "end": 98480
+        },
+        {
+          "word": "waited",
+          "begin": 98520,
+          "end": 98780
+        },
+        {
+          "word": "for",
+          "begin": 98820,
+          "end": 98920
+        },
+        {
+          "word": "it",
+          "begin": 98940,
+          "end": 99000
+        },
+        {
+          "word": "to",
+          "begin": 99040,
+          "end": 99080
+        },
+        {
+          "word": "finish",
+          "begin": 99180,
+          "end": 99460
+        },
+        {
+          "word": "before",
+          "begin": 99520,
+          "end": 99720
+        },
+        {
+          "word": "sending",
+          "begin": 99860,
+          "end": 100120
+        },
+        {
+          "word": "the",
+          "begin": 100160,
+          "end": 100200
+        },
+        {
+          "word": "next,",
+          "begin": 100280,
+          "end": 100720
+        },
+        {
+          "word": "most",
+          "begin": 101080,
+          "end": 101320
+        },
+        {
+          "word": "of",
+          "begin": 101340,
+          "end": 101400
+        },
+        {
+          "word": "the",
+          "begin": 101420,
+          "end": 101480
+        },
+        {
+          "word": "SSD",
+          "begin": 101580,
+          "end": 102000
+        },
+        {
+          "word": "would",
+          "begin": 102120,
+          "end": 102240
+        },
+        {
+          "word": "sit",
+          "begin": 102320,
+          "end": 102460
+        },
+        {
+          "word": "idle.",
+          "begin": 102540,
+          "end": 102740
+        },
+        {
+          "word": "Queues",
+          "begin": 103040,
+          "end": 103320
+        },
+        {
+          "word": "let",
+          "begin": 103360,
+          "end": 103460
+        },
+        {
+          "word": "you",
+          "begin": 103460,
+          "end": 103540
+        },
+        {
+          "word": "stack",
+          "begin": 103640,
+          "end": 103940
+        },
+        {
+          "word": "up",
+          "begin": 103700,
+          "end": 103940
+        },
+        {
+          "word": "many",
+          "begin": 103980,
+          "end": 104120
+        },
+        {
+          "word": "commands",
+          "begin": 104180,
+          "end": 104520
+        },
+        {
+          "word": "so",
+          "begin": 104560,
+          "end": 104840
+        },
+        {
+          "word": "the",
+          "begin": 104840,
+          "end": 105340
+        },
+        {
+          "word": "SSD",
+          "begin": 105360,
+          "end": 105880
+        },
+        {
+          "word": "can",
+          "begin": 105940,
+          "end": 106240
+        },
+        {
+          "word": "work",
+          "begin": 106300,
+          "end": 106480
+        },
+        {
+          "word": "on",
+          "begin": 106340,
+          "end": 106600
+        },
+        {
+          "word": "them",
+          "begin": 106620,
+          "end": 106740
+        },
+        {
+          "word": "in",
+          "begin": 106760,
+          "end": 106820
+        },
+        {
+          "word": "parallel,",
+          "begin": 106880,
+          "end": 107400
+        },
+        {
+          "word": "keeping",
+          "begin": 107740,
+          "end": 108040
+        },
+        {
+          "word": "all",
+          "begin": 108140,
+          "end": 108260
+        },
+        {
+          "word": "its",
+          "begin": 108280,
+          "end": 108420
+        },
+        {
+          "word": "NAND",
+          "begin": 108500,
+          "end": 108740
+        },
+        {
+          "word": "chips",
+          "begin": 108740,
+          "end": 109100
+        },
+        {
+          "word": "busy.",
+          "begin": 109180,
+          "end": 109420
+        },
+        {
+          "word": "And",
+          "begin": 109940,
+          "end": 110040
+        },
+        {
+          "word": "why",
+          "begin": 110080,
+          "end": 110160
+        },
+        {
+          "word": "circular?",
+          "begin": 110360,
+          "end": 110760
+        },
+        {
+          "word": "Both",
+          "begin": 111260,
+          "end": 111460
+        },
+        {
+          "word": "queues",
+          "begin": 111540,
+          "end": 111800
+        },
+        {
+          "word": "are",
+          "begin": 111840,
+          "end": 111860
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "paragraph",
+      "text": "And why circular? Both queues are shaped like rings (circular buffers). Two pointers chase each other around: the HEAD (where the consumer reads from) and the TAIL (where the producer writes to). When the tail catches the head, the queue is full — you must wait. When head catches tail, the queue is empty.",
+      "beginMs": 112880,
+      "endMs": 128900,
+      "timestamps": [
+        {
+          "word": "(circular",
+          "begin": 112880,
+          "end": 113260
+        },
+        {
+          "word": "buffers).",
+          "begin": 113360,
+          "end": 113860
+        },
+        {
+          "word": "Two",
+          "begin": 114040,
+          "end": 114120
+        },
+        {
+          "word": "pointers",
+          "begin": 114240,
+          "end": 114640
+        },
+        {
+          "word": "chase",
+          "begin": 114720,
+          "end": 115100
+        },
+        {
+          "word": "each",
+          "begin": 115140,
+          "end": 115240
+        },
+        {
+          "word": "other",
+          "begin": 115240,
+          "end": 115280
+        },
+        {
+          "word": "around:",
+          "begin": 115360,
+          "end": 115860
+        },
+        {
+          "word": "the",
+          "begin": 116160,
+          "end": 116200
+        },
+        {
+          "word": "HEAD",
+          "begin": 116260,
+          "end": 116480
+        },
+        {
+          "word": "(where",
+          "begin": 116520,
+          "end": 116660
+        },
+        {
+          "word": "the",
+          "begin": 116660,
+          "end": 116700
+        },
+        {
+          "word": "consumer",
+          "begin": 116760,
+          "end": 117180
+        },
+        {
+          "word": "reads",
+          "begin": 117280,
+          "end": 117520
+        },
+        {
+          "word": "from)",
+          "begin": 117580,
+          "end": 117820
+        },
+        {
+          "word": "and",
+          "begin": 117940,
+          "end": 118040
+        },
+        {
+          "word": "the",
+          "begin": 118040,
+          "end": 118080
+        },
+        {
+          "word": "TAIL",
+          "begin": 118160,
+          "end": 118460
+        },
+        {
+          "word": "(where",
+          "begin": 118520,
+          "end": 118680
+        },
+        {
+          "word": "the",
+          "begin": 118680,
+          "end": 118720
+        },
+        {
+          "word": "producer",
+          "begin": 118780,
+          "end": 119140
+        },
+        {
+          "word": "writes",
+          "begin": 119240,
+          "end": 119480
+        },
+        {
+          "word": "to).",
+          "begin": 119540,
+          "end": 119640
+        },
+        {
+          "word": "When",
+          "begin": 120120,
+          "end": 120240
+        },
+        {
+          "word": "tail",
+          "begin": 120280,
+          "end": 120460
+        },
+        {
+          "word": "catches",
+          "begin": 120540,
+          "end": 120840
+        },
+        {
+          "word": "head,",
+          "begin": 120880,
+          "end": 121180
+        },
+        {
+          "word": "the",
+          "begin": 121500,
+          "end": 121540
+        },
+        {
+          "word": "queue",
+          "begin": 121600,
+          "end": 121720
+        },
+        {
+          "word": "is",
+          "begin": 121820,
+          "end": 121920
+        },
+        {
+          "word": "full",
+          "begin": 122000,
+          "end": 122220
+        },
+        {
+          "word": "you",
+          "begin": 122540,
+          "end": 122580
+        },
+        {
+          "word": "must",
+          "begin": 122640,
+          "end": 122860
+        },
+        {
+          "word": "wait.",
+          "begin": 122920,
+          "end": 123220
+        },
+        {
+          "word": "When",
+          "begin": 123620,
+          "end": 123740
+        },
+        {
+          "word": "head",
+          "begin": 123800,
+          "end": 123960
+        },
+        {
+          "word": "catches",
+          "begin": 124020,
+          "end": 124320
+        },
+        {
+          "word": "tail,",
+          "begin": 124380,
+          "end": 124700
+        },
+        {
+          "word": "the",
+          "begin": 125020,
+          "end": 125060
+        },
+        {
+          "word": "queue",
+          "begin": 125140,
+          "end": 125260
+        },
+        {
+          "word": "is",
+          "begin": 125360,
+          "end": 125460
+        },
+        {
+          "word": "empty.",
+          "begin": 125500,
+          "end": 125760
+        },
+        {
+          "word": "Try",
+          "begin": 126060,
+          "end": 126180
+        },
+        {
+          "word": "the",
+          "begin": 126280,
+          "end": 126340
+        },
+        {
+          "word": "simulator",
+          "begin": 126420,
+          "end": 126840
+        },
+        {
+          "word": "below",
+          "begin": 126940,
+          "end": 127340
+        },
+        {
+          "word": "to",
+          "begin": 127340,
+          "end": 127380
+        },
+        {
+          "word": "see",
+          "begin": 127480,
+          "end": 127560
+        },
+        {
+          "word": "this",
+          "begin": 127640,
+          "end": 127780
+        },
+        {
+          "word": "in",
+          "begin": 127800,
+          "end": 127880
+        },
+        {
+          "word": "action.",
+          "begin": 127940,
+          "end": 128340
+        },
+        {
+          "word": "Each",
+          "begin": 128740,
+          "end": 128900
+        }
+      ]
+    },
+    {
+      "blockIndex": 9,
+      "type": "paragraph",
+      "text": "Try the simulator below to see this in action. Each button corresponds to a real step in the NVMe command flow:",
+      "beginMs": 129960,
+      "endMs": 134980,
+      "timestamps": [
+        {
+          "word": "to",
+          "begin": 129960,
+          "end": 130060
+        },
+        {
+          "word": "a",
+          "begin": 130080,
+          "end": 130180
+        },
+        {
+          "word": "real",
+          "begin": 130300,
+          "end": 130500
+        },
+        {
+          "word": "step",
+          "begin": 130600,
+          "end": 130940
+        },
+        {
+          "word": "in",
+          "begin": 131039,
+          "end": 131080
+        },
+        {
+          "word": "the",
+          "begin": 131100,
+          "end": 131180
+        },
+        {
+          "word": "NVMe",
+          "begin": 131300,
+          "end": 131780
+        },
+        {
+          "word": "command",
+          "begin": 131920,
+          "end": 132280
+        },
+        {
+          "word": "flow:",
+          "begin": 132360,
+          "end": 132480
+        },
+        {
+          "word": "Click",
+          "begin": 132960,
+          "end": 133180
+        },
+        {
+          "word": "this",
+          "begin": 133240,
+          "end": 133460
+        },
+        {
+          "word": "to",
+          "begin": 133520,
+          "end": 133580
+        },
+        {
+          "word": "simulate",
+          "begin": 133680,
+          "end": 134100
+        },
+        {
+          "word": "the",
+          "begin": 134100,
+          "end": 134160
+        },
+        {
+          "word": "host",
+          "begin": 134220,
+          "end": 134500
+        },
+        {
+          "word": "placing",
+          "begin": 134580,
+          "end": 134920
+        },
+        {
+          "word": "a",
+          "begin": 134920,
+          "end": 134980
+        }
+      ]
+    },
+    {
+      "blockIndex": 10,
+      "type": "paragraph",
+      "text": "Click this to simulate the host placing a command into the Submission Queue. Watch the SQ ring: a new entry (C1, C2, etc.) appears at the TAIL position. The tail pointer advances clockwise. In real NVMe, the host then writes the new tail value to the SQ Tail Doorbell register — that's how the SSD knows new work arrived. Try clicking it 3-4 times to queue up multiple commands and watch the tail chase around the ring.",
+      "beginMs": 135820,
+      "endMs": 162280,
+      "timestamps": [
+        {
+          "word": "the",
+          "begin": 135820,
+          "end": 135860
+        },
+        {
+          "word": "Submission",
+          "begin": 135980,
+          "end": 136440
+        },
+        {
+          "word": "Queue.",
+          "begin": 136520,
+          "end": 136660
+        },
+        {
+          "word": "Watch",
+          "begin": 137200,
+          "end": 137420
+        },
+        {
+          "word": "the",
+          "begin": 137480,
+          "end": 137540
+        },
+        {
+          "word": "SQ",
+          "begin": 137620,
+          "end": 137900
+        },
+        {
+          "word": "ring:",
+          "begin": 138020,
+          "end": 138260
+        },
+        {
+          "word": "a",
+          "begin": 138260,
+          "end": 138680
+        },
+        {
+          "word": "new",
+          "begin": 138760,
+          "end": 138840
+        },
+        {
+          "word": "entry",
+          "begin": 138980,
+          "end": 139440
+        },
+        {
+          "word": "(C1,",
+          "begin": 139540,
+          "end": 139800
+        },
+        {
+          "word": "C2,",
+          "begin": 140160,
+          "end": 140480
+        },
+        {
+          "word": "etc.)",
+          "begin": 141000,
+          "end": 141460
+        },
+        {
+          "word": "appears",
+          "begin": 141800,
+          "end": 142180
+        },
+        {
+          "word": "at",
+          "begin": 142220,
+          "end": 142240
+        },
+        {
+          "word": "the",
+          "begin": 142320,
+          "end": 142360
+        },
+        {
+          "word": "TAIL",
+          "begin": 142460,
+          "end": 142780
+        },
+        {
+          "word": "position.",
+          "begin": 142780,
+          "end": 143260
+        },
+        {
+          "word": "The",
+          "begin": 143640,
+          "end": 143680
+        },
+        {
+          "word": "tail",
+          "begin": 143760,
+          "end": 143960
+        },
+        {
+          "word": "pointer",
+          "begin": 144040,
+          "end": 144320
+        },
+        {
+          "word": "advances",
+          "begin": 144400,
+          "end": 144920
+        },
+        {
+          "word": "clockwise.",
+          "begin": 144980,
+          "end": 145600
+        },
+        {
+          "word": "In",
+          "begin": 145020,
+          "end": 145240
+        },
+        {
+          "word": "real",
+          "begin": 145260,
+          "end": 145600
+        },
+        {
+          "word": "NVMe,",
+          "begin": 145960,
+          "end": 146440
+        },
+        {
+          "word": "the",
+          "begin": 146500,
+          "end": 146580
+        },
+        {
+          "word": "host",
+          "begin": 146580,
+          "end": 146900
+        },
+        {
+          "word": "then",
+          "begin": 147380,
+          "end": 147500
+        },
+        {
+          "word": "writes",
+          "begin": 147540,
+          "end": 147860
+        },
+        {
+          "word": "the",
+          "begin": 147860,
+          "end": 147920
+        },
+        {
+          "word": "new",
+          "begin": 148000,
+          "end": 148160
+        },
+        {
+          "word": "tail",
+          "begin": 148280,
+          "end": 148600
+        },
+        {
+          "word": "value",
+          "begin": 148740,
+          "end": 149100
+        },
+        {
+          "word": "to",
+          "begin": 149180,
+          "end": 149200
+        },
+        {
+          "word": "the",
+          "begin": 149200,
+          "end": 149280
+        },
+        {
+          "word": "SQ",
+          "begin": 149320,
+          "end": 149520
+        },
+        {
+          "word": "Tail",
+          "begin": 149580,
+          "end": 149900
+        },
+        {
+          "word": "Doorbell",
+          "begin": 149960,
+          "end": 150380
+        },
+        {
+          "word": "register",
+          "begin": 150440,
+          "end": 151140
+        },
+        {
+          "word": "that's",
+          "begin": 151180,
+          "end": 151880
+        },
+        {
+          "word": "how",
+          "begin": 151900,
+          "end": 151980
+        },
+        {
+          "word": "the",
+          "begin": 152060,
+          "end": 152120
+        },
+        {
+          "word": "SSD",
+          "begin": 152220,
+          "end": 152680
+        },
+        {
+          "word": "knows",
+          "begin": 152840,
+          "end": 153080
+        },
+        {
+          "word": "new",
+          "begin": 153140,
+          "end": 153220
+        },
+        {
+          "word": "work",
+          "begin": 153320,
+          "end": 153520
+        },
+        {
+          "word": "arrived.",
+          "begin": 153540,
+          "end": 154040
+        },
+        {
+          "word": "Try",
+          "begin": 154200,
+          "end": 154460
+        },
+        {
+          "word": "clicking",
+          "begin": 154460,
+          "end": 154760
+        },
+        {
+          "word": "it",
+          "begin": 154780,
+          "end": 154880
+        },
+        {
+          "word": "3-4",
+          "begin": 154920,
+          "end": 155500
+        },
+        {
+          "word": "times",
+          "begin": 155500,
+          "end": 155900
+        },
+        {
+          "word": "to",
+          "begin": 155960,
+          "end": 156000
+        },
+        {
+          "word": "queue",
+          "begin": 156080,
+          "end": 156180
+        },
+        {
+          "word": "up",
+          "begin": 156260,
+          "end": 156360
+        },
+        {
+          "word": "multiple",
+          "begin": 156400,
+          "end": 156700
+        },
+        {
+          "word": "commands",
+          "begin": 156800,
+          "end": 157280
+        },
+        {
+          "word": "and",
+          "begin": 157380,
+          "end": 157460
+        },
+        {
+          "word": "watch",
+          "begin": 157500,
+          "end": 157700
+        },
+        {
+          "word": "the",
+          "begin": 157760,
+          "end": 157800
+        },
+        {
+          "word": "tail",
+          "begin": 157860,
+          "end": 158180
+        },
+        {
+          "word": "chase",
+          "begin": 158180,
+          "end": 158400
+        },
+        {
+          "word": "around",
+          "begin": 158440,
+          "end": 158680
+        },
+        {
+          "word": "the",
+          "begin": 158680,
+          "end": 158740
+        },
+        {
+          "word": "ring.",
+          "begin": 158800,
+          "end": 159040
+        },
+        {
+          "word": "Click",
+          "begin": 159940,
+          "end": 160140
+        },
+        {
+          "word": "this",
+          "begin": 160200,
+          "end": 160380
+        },
+        {
+          "word": "to",
+          "begin": 160420,
+          "end": 160480
+        },
+        {
+          "word": "simulate",
+          "begin": 160580,
+          "end": 161040
+        },
+        {
+          "word": "the",
+          "begin": 161080,
+          "end": 161120
+        },
+        {
+          "word": "SSD",
+          "begin": 161240,
+          "end": 161660
+        },
+        {
+          "word": "fetching",
+          "begin": 161840,
+          "end": 162280
+        }
+      ]
+    },
+    {
+      "blockIndex": 11,
+      "type": "paragraph",
+      "text": "Click this to simulate the SSD fetching a command and completing it. Watch both rings: the entry disappears from the SQ at the HEAD position (the SSD consumed it), and a matching result appears in the CQ. The SQ head advances, and the CQ tail advances. Notice: commands are always consumed in order (FIFO) — the SSD reads from HEAD, not from any random slot.",
+      "beginMs": 162320,
+      "endMs": 183940,
+      "timestamps": [
+        {
+          "word": "a",
+          "begin": 162320,
+          "end": 162480
+        },
+        {
+          "word": "command",
+          "begin": 162640,
+          "end": 162940
+        },
+        {
+          "word": "and",
+          "begin": 162960,
+          "end": 163080
+        },
+        {
+          "word": "completing",
+          "begin": 162960,
+          "end": 163380
+        },
+        {
+          "word": "it.",
+          "begin": 163420,
+          "end": 163580
+        },
+        {
+          "word": "Watch",
+          "begin": 164180,
+          "end": 164400
+        },
+        {
+          "word": "both",
+          "begin": 164480,
+          "end": 164680
+        },
+        {
+          "word": "rings:",
+          "begin": 164760,
+          "end": 165140
+        },
+        {
+          "word": "the",
+          "begin": 165500,
+          "end": 165560
+        },
+        {
+          "word": "entry",
+          "begin": 165680,
+          "end": 165920
+        },
+        {
+          "word": "disappears",
+          "begin": 166000,
+          "end": 166560
+        },
+        {
+          "word": "from",
+          "begin": 166600,
+          "end": 166720
+        },
+        {
+          "word": "the",
+          "begin": 166720,
+          "end": 166780
+        },
+        {
+          "word": "SQ",
+          "begin": 166880,
+          "end": 167180
+        },
+        {
+          "word": "at",
+          "begin": 167180,
+          "end": 167520
+        },
+        {
+          "word": "the",
+          "begin": 167540,
+          "end": 167580
+        },
+        {
+          "word": "HEAD",
+          "begin": 167660,
+          "end": 167940
+        },
+        {
+          "word": "position",
+          "begin": 168280,
+          "end": 168720
+        },
+        {
+          "word": "(the",
+          "begin": 168740,
+          "end": 168800
+        },
+        {
+          "word": "SSD",
+          "begin": 168920,
+          "end": 169360
+        },
+        {
+          "word": "consumed",
+          "begin": 169500,
+          "end": 169940
+        },
+        {
+          "word": "it),",
+          "begin": 169980,
+          "end": 170140
+        },
+        {
+          "word": "and",
+          "begin": 170480,
+          "end": 170560
+        },
+        {
+          "word": "a",
+          "begin": 170580,
+          "end": 170600
+        },
+        {
+          "word": "matching",
+          "begin": 170660,
+          "end": 171000
+        },
+        {
+          "word": "result",
+          "begin": 171040,
+          "end": 171400
+        },
+        {
+          "word": "appears",
+          "begin": 171440,
+          "end": 171840
+        },
+        {
+          "word": "in",
+          "begin": 171860,
+          "end": 171920
+        },
+        {
+          "word": "the",
+          "begin": 171940,
+          "end": 171980
+        },
+        {
+          "word": "CQ.",
+          "begin": 172080,
+          "end": 172380
+        },
+        {
+          "word": "The",
+          "begin": 173380,
+          "end": 173440
+        },
+        {
+          "word": "SQ",
+          "begin": 173540,
+          "end": 173860
+        },
+        {
+          "word": "head",
+          "begin": 173960,
+          "end": 174120
+        },
+        {
+          "word": "advances,",
+          "begin": 174140,
+          "end": 174800
+        },
+        {
+          "word": "and",
+          "begin": 174960,
+          "end": 175040
+        },
+        {
+          "word": "the",
+          "begin": 175040,
+          "end": 175100
+        },
+        {
+          "word": "CQ",
+          "begin": 175200,
+          "end": 175520
+        },
+        {
+          "word": "tail",
+          "begin": 175660,
+          "end": 175960
+        },
+        {
+          "word": "advances.",
+          "begin": 176020,
+          "end": 176680
+        },
+        {
+          "word": "Notice:",
+          "begin": 177440,
+          "end": 177840
+        },
+        {
+          "word": "commands",
+          "begin": 178000,
+          "end": 178400
+        },
+        {
+          "word": "are",
+          "begin": 178420,
+          "end": 178520
+        },
+        {
+          "word": "always",
+          "begin": 178540,
+          "end": 178780
+        },
+        {
+          "word": "consumed",
+          "begin": 178840,
+          "end": 179240
+        },
+        {
+          "word": "in",
+          "begin": 179260,
+          "end": 179300
+        },
+        {
+          "word": "order",
+          "begin": 179300,
+          "end": 179760
+        },
+        {
+          "word": "(FIFO)",
+          "begin": 179880,
+          "end": 180420
+        },
+        {
+          "word": "the",
+          "begin": 180520,
+          "end": 180540
+        },
+        {
+          "word": "SSD",
+          "begin": 180560,
+          "end": 180800
+        },
+        {
+          "word": "reads",
+          "begin": 180900,
+          "end": 181080
+        },
+        {
+          "word": "from",
+          "begin": 181120,
+          "end": 181260
+        },
+        {
+          "word": "HEAD,",
+          "begin": 181300,
+          "end": 181600
+        },
+        {
+          "word": "not",
+          "begin": 181820,
+          "end": 181980
+        },
+        {
+          "word": "from",
+          "begin": 182040,
+          "end": 182180
+        },
+        {
+          "word": "any",
+          "begin": 182200,
+          "end": 182320
+        },
+        {
+          "word": "random",
+          "begin": 182420,
+          "end": 182740
+        },
+        {
+          "word": "slot.",
+          "begin": 182840,
+          "end": 183200
+        },
+        {
+          "word": "Click",
+          "begin": 183740,
+          "end": 183940
+        }
+      ]
+    },
+    {
+      "blockIndex": 12,
+      "type": "paragraph",
+      "text": "Click this to simulate the host reading a completion entry. Watch the CQ ring: the result is removed from the CQ head position and the head advances. The host then writes the new CQ head to the CQ Head Doorbell — telling the SSD &ldquo;I've read up to this point, you can reuse those slots.&rdquo;",
+      "beginMs": 184000,
+      "endMs": 202260,
+      "timestamps": [
+        {
+          "word": "this",
+          "begin": 184000,
+          "end": 184200
+        },
+        {
+          "word": "to",
+          "begin": 184260,
+          "end": 184320
+        },
+        {
+          "word": "simulate",
+          "begin": 184400,
+          "end": 184820
+        },
+        {
+          "word": "the",
+          "begin": 184820,
+          "end": 184860
+        },
+        {
+          "word": "host",
+          "begin": 184940,
+          "end": 185220
+        },
+        {
+          "word": "reading",
+          "begin": 185280,
+          "end": 185520
+        },
+        {
+          "word": "a",
+          "begin": 185560,
+          "end": 185580
+        },
+        {
+          "word": "completion",
+          "begin": 185640,
+          "end": 186120
+        },
+        {
+          "word": "entry.",
+          "begin": 186160,
+          "end": 186400
+        },
+        {
+          "word": "Watch",
+          "begin": 186660,
+          "end": 186980
+        },
+        {
+          "word": "the",
+          "begin": 186980,
+          "end": 187020
+        },
+        {
+          "word": "CQ",
+          "begin": 187120,
+          "end": 187460
+        },
+        {
+          "word": "ring:",
+          "begin": 187640,
+          "end": 187900
+        },
+        {
+          "word": "the",
+          "begin": 187900,
+          "end": 188160
+        },
+        {
+          "word": "result",
+          "begin": 188220,
+          "end": 188560
+        },
+        {
+          "word": "is",
+          "begin": 188580,
+          "end": 188680
+        },
+        {
+          "word": "removed",
+          "begin": 188720,
+          "end": 189120
+        },
+        {
+          "word": "from",
+          "begin": 189160,
+          "end": 189280
+        },
+        {
+          "word": "the",
+          "begin": 189300,
+          "end": 189340
+        },
+        {
+          "word": "CQ",
+          "begin": 189440,
+          "end": 189740
+        },
+        {
+          "word": "head",
+          "begin": 189860,
+          "end": 190020
+        },
+        {
+          "word": "position",
+          "begin": 190080,
+          "end": 190500
+        },
+        {
+          "word": "and",
+          "begin": 190580,
+          "end": 190720
+        },
+        {
+          "word": "the",
+          "begin": 190800,
+          "end": 190880
+        },
+        {
+          "word": "head",
+          "begin": 190800,
+          "end": 190980
+        },
+        {
+          "word": "advances.",
+          "begin": 191000,
+          "end": 191660
+        },
+        {
+          "word": "The",
+          "begin": 191800,
+          "end": 191860
+        },
+        {
+          "word": "host",
+          "begin": 191920,
+          "end": 192180
+        },
+        {
+          "word": "then",
+          "begin": 192220,
+          "end": 192360
+        },
+        {
+          "word": "writes",
+          "begin": 192420,
+          "end": 192660
+        },
+        {
+          "word": "the",
+          "begin": 192700,
+          "end": 192760
+        },
+        {
+          "word": "new",
+          "begin": 192820,
+          "end": 192900
+        },
+        {
+          "word": "CQ",
+          "begin": 193080,
+          "end": 193400
+        },
+        {
+          "word": "head",
+          "begin": 193520,
+          "end": 193700
+        },
+        {
+          "word": "to",
+          "begin": 193740,
+          "end": 193760
+        },
+        {
+          "word": "the",
+          "begin": 193760,
+          "end": 193800
+        },
+        {
+          "word": "CQ",
+          "begin": 193860,
+          "end": 194260
+        },
+        {
+          "word": "Head",
+          "begin": 194260,
+          "end": 194600
+        },
+        {
+          "word": "Doorbell",
+          "begin": 194660,
+          "end": 195100
+        },
+        {
+          "word": "telling",
+          "begin": 195480,
+          "end": 196260
+        },
+        {
+          "word": "the",
+          "begin": 196320,
+          "end": 196400
+        },
+        {
+          "word": "&ldquo;I've",
+          "begin": 196620,
+          "end": 197900
+        },
+        {
+          "word": "read",
+          "begin": 197940,
+          "end": 198060
+        },
+        {
+          "word": "up",
+          "begin": 198080,
+          "end": 198180
+        },
+        {
+          "word": "to",
+          "begin": 198200,
+          "end": 198220
+        },
+        {
+          "word": "this",
+          "begin": 198220,
+          "end": 198460
+        },
+        {
+          "word": "point,",
+          "begin": 198540,
+          "end": 198800
+        },
+        {
+          "word": "you",
+          "begin": 198800,
+          "end": 199080
+        },
+        {
+          "word": "can",
+          "begin": 199160,
+          "end": 199260
+        },
+        {
+          "word": "reuse",
+          "begin": 199340,
+          "end": 199780
+        },
+        {
+          "word": "those",
+          "begin": 199840,
+          "end": 200100
+        },
+        {
+          "word": "slots.&rdquo;",
+          "begin": 200100,
+          "end": 201320
+        },
+        {
+          "word": "The",
+          "begin": 201880,
+          "end": 201920
+        },
+        {
+          "word": "phase",
+          "begin": 202020,
+          "end": 202260
+        }
+      ]
+    },
+    {
+      "blockIndex": 13,
+      "type": "info",
+      "text": "The phase bit trick — how the host detects new completions: But wait — if the SSD writes results to the CQ, how does the host know which entries are new? NVMe uses a clever trick: each CQ entry has a &ldquo;phase bit&rdquo; (P). When the SSD wraps around the ring, it flips the phase. The host knows a CQ entry is new when its P bit matches the expected phase. This avoids the overhead of comparing head/tail pointers for every completion check.",
+      "beginMs": 203200,
+      "endMs": 233580,
+      "timestamps": [
+        {
+          "word": "the",
+          "begin": 203200,
+          "end": 203260
+        },
+        {
+          "word": "host",
+          "begin": 203320,
+          "end": 203560
+        },
+        {
+          "word": "detects",
+          "begin": 203600,
+          "end": 203960
+        },
+        {
+          "word": "new",
+          "begin": 204020,
+          "end": 204080
+        },
+        {
+          "word": "completions:",
+          "begin": 204180,
+          "end": 204860
+        },
+        {
+          "word": "But",
+          "begin": 205020,
+          "end": 205120
+        },
+        {
+          "word": "wait",
+          "begin": 205180,
+          "end": 205480
+        },
+        {
+          "word": "if",
+          "begin": 205760,
+          "end": 205840
+        },
+        {
+          "word": "the",
+          "begin": 205880,
+          "end": 205920
+        },
+        {
+          "word": "SSD",
+          "begin": 206000,
+          "end": 206400
+        },
+        {
+          "word": "writes",
+          "begin": 206540,
+          "end": 206840
+        },
+        {
+          "word": "results",
+          "begin": 206840,
+          "end": 207180
+        },
+        {
+          "word": "to",
+          "begin": 207220,
+          "end": 207280
+        },
+        {
+          "word": "the",
+          "begin": 207320,
+          "end": 207380
+        },
+        {
+          "word": "CQ,",
+          "begin": 207480,
+          "end": 207820
+        },
+        {
+          "word": "how",
+          "begin": 208320,
+          "end": 208400
+        },
+        {
+          "word": "does",
+          "begin": 208480,
+          "end": 208600
+        },
+        {
+          "word": "the",
+          "begin": 208640,
+          "end": 208700
+        },
+        {
+          "word": "host",
+          "begin": 208780,
+          "end": 209060
+        },
+        {
+          "word": "know",
+          "begin": 209100,
+          "end": 209180
+        },
+        {
+          "word": "which",
+          "begin": 209300,
+          "end": 209560
+        },
+        {
+          "word": "entries",
+          "begin": 209600,
+          "end": 209860
+        },
+        {
+          "word": "are",
+          "begin": 209860,
+          "end": 209920
+        },
+        {
+          "word": "new?",
+          "begin": 210020,
+          "end": 210100
+        },
+        {
+          "word": "NVMe",
+          "begin": 210800,
+          "end": 211260
+        },
+        {
+          "word": "uses",
+          "begin": 211420,
+          "end": 211720
+        },
+        {
+          "word": "a",
+          "begin": 211480,
+          "end": 211500
+        },
+        {
+          "word": "clever",
+          "begin": 211580,
+          "end": 211860
+        },
+        {
+          "word": "trick:",
+          "begin": 211900,
+          "end": 212060
+        },
+        {
+          "word": "each",
+          "begin": 212060,
+          "end": 212220
+        },
+        {
+          "word": "CQ",
+          "begin": 212280,
+          "end": 212960
+        },
+        {
+          "word": "entry",
+          "begin": 213080,
+          "end": 213360
+        },
+        {
+          "word": "has",
+          "begin": 213380,
+          "end": 213620
+        },
+        {
+          "word": "a",
+          "begin": 213660,
+          "end": 213740
+        },
+        {
+          "word": "&ldquo;phase",
+          "begin": 213740,
+          "end": 215700
+        },
+        {
+          "word": "bit&rdquo;",
+          "begin": 215760,
+          "end": 216700
+        },
+        {
+          "word": "(P).",
+          "begin": 217160,
+          "end": 217280
+        },
+        {
+          "word": "When",
+          "begin": 217980,
+          "end": 218060
+        },
+        {
+          "word": "the",
+          "begin": 218080,
+          "end": 218140
+        },
+        {
+          "word": "SSD",
+          "begin": 218240,
+          "end": 218660
+        },
+        {
+          "word": "wraps",
+          "begin": 218800,
+          "end": 219060
+        },
+        {
+          "word": "around",
+          "begin": 219080,
+          "end": 219360
+        },
+        {
+          "word": "the",
+          "begin": 219380,
+          "end": 219420
+        },
+        {
+          "word": "ring,",
+          "begin": 219500,
+          "end": 219760
+        },
+        {
+          "word": "it",
+          "begin": 220060,
+          "end": 220140
+        },
+        {
+          "word": "flips",
+          "begin": 220240,
+          "end": 220480
+        },
+        {
+          "word": "the",
+          "begin": 220520,
+          "end": 220580
+        },
+        {
+          "word": "phase.",
+          "begin": 220660,
+          "end": 221060
+        },
+        {
+          "word": "The",
+          "begin": 221320,
+          "end": 221360
+        },
+        {
+          "word": "host",
+          "begin": 221440,
+          "end": 221720
+        },
+        {
+          "word": "knows",
+          "begin": 221760,
+          "end": 221960
+        },
+        {
+          "word": "a",
+          "begin": 222000,
+          "end": 222200
+        },
+        {
+          "word": "CQ",
+          "begin": 222300,
+          "end": 222420
+        },
+        {
+          "word": "entry",
+          "begin": 222540,
+          "end": 222780
+        },
+        {
+          "word": "is",
+          "begin": 222840,
+          "end": 222960
+        },
+        {
+          "word": "new",
+          "begin": 223040,
+          "end": 223120
+        },
+        {
+          "word": "when",
+          "begin": 223620,
+          "end": 223740
+        },
+        {
+          "word": "its",
+          "begin": 223740,
+          "end": 223840
+        },
+        {
+          "word": "P",
+          "begin": 223920,
+          "end": 224040
+        },
+        {
+          "word": "bit",
+          "begin": 224160,
+          "end": 224340
+        },
+        {
+          "word": "matches",
+          "begin": 224380,
+          "end": 224740
+        },
+        {
+          "word": "the",
+          "begin": 224800,
+          "end": 224860
+        },
+        {
+          "word": "expected",
+          "begin": 224900,
+          "end": 225400
+        },
+        {
+          "word": "phase.",
+          "begin": 225480,
+          "end": 225840
+        },
+        {
+          "word": "This",
+          "begin": 226340,
+          "end": 226480
+        },
+        {
+          "word": "avoids",
+          "begin": 226500,
+          "end": 226840
+        },
+        {
+          "word": "the",
+          "begin": 226880,
+          "end": 226940
+        },
+        {
+          "word": "overhead",
+          "begin": 227040,
+          "end": 227440
+        },
+        {
+          "word": "of",
+          "begin": 227440,
+          "end": 227520
+        },
+        {
+          "word": "comparing",
+          "begin": 227560,
+          "end": 228000
+        },
+        {
+          "word": "head/tail",
+          "begin": 228100,
+          "end": 229120
+        },
+        {
+          "word": "pointers",
+          "begin": 229180,
+          "end": 229520
+        },
+        {
+          "word": "for",
+          "begin": 229600,
+          "end": 229660
+        },
+        {
+          "word": "completion",
+          "begin": 229600,
+          "end": 230080
+        },
+        {
+          "word": "check.",
+          "begin": 230080,
+          "end": 230440
+        },
+        {
+          "word": "Knowledge",
+          "begin": 230900,
+          "end": 231160
+        },
+        {
+          "word": "check:",
+          "begin": 231160,
+          "end": 231480
+        },
+        {
+          "word": "Imagine",
+          "begin": 231580,
+          "end": 231960
+        },
+        {
+          "word": "the",
+          "begin": 231960,
+          "end": 232020
+        },
+        {
+          "word": "NVMe",
+          "begin": 232120,
+          "end": 232520
+        },
+        {
+          "word": "driver",
+          "begin": 232600,
+          "end": 233160
+        },
+        {
+          "word": "keeps",
+          "begin": 233160,
+          "end": 233200
+        },
+        {
+          "word": "submitting",
+          "begin": 233240,
+          "end": 233580
+        }
+      ]
+    },
+    {
+      "blockIndex": 14,
+      "type": "reveal",
+      "text": "Knowledge check: Imagine the NVMe driver keeps submitting commands without checking how full the Submission Queue is. What happens when the tail pointer catches the head pointer, and why doesn't NVMe have a hardware mechanism to auto-recover from this? The answer: When the tail pointer catches the head pointer, the circular buffer is full — there are no free slots left. The host must wait for the controller to process commands (which advances the head pointer, freeing slots) before submitting more. NVMe doesn't auto-recover because the host driver is responsible for tracking available queue depth. The driver maintains a local count of in-flight commands and never advances the tail past the head. If the driver had a bug and overwrote an unprocessed entry, the original command would be lost and the replacement would be corrupted — leading to data loss or controller errors. This design keeps hardware simple and puts flow control responsibility on the software, which can make smarter scheduling decisions.",
+      "beginMs": 233620,
+      "endMs": 281880,
+      "timestamps": [
+        {
+          "word": "commands",
+          "begin": 233620,
+          "end": 234000
+        },
+        {
+          "word": "without",
+          "begin": 234020,
+          "end": 234320
+        },
+        {
+          "word": "checking",
+          "begin": 234320,
+          "end": 234660
+        },
+        {
+          "word": "how",
+          "begin": 234700,
+          "end": 234780
+        },
+        {
+          "word": "full",
+          "begin": 234920,
+          "end": 235040
+        },
+        {
+          "word": "the",
+          "begin": 235080,
+          "end": 235140
+        },
+        {
+          "word": "Submission",
+          "begin": 235220,
+          "end": 235600
+        },
+        {
+          "word": "Queue",
+          "begin": 235660,
+          "end": 235780
+        },
+        {
+          "word": "is.",
+          "begin": 235880,
+          "end": 236160
+        },
+        {
+          "word": "What",
+          "begin": 236760,
+          "end": 236880
+        },
+        {
+          "word": "happens",
+          "begin": 236900,
+          "end": 237220
+        },
+        {
+          "word": "when",
+          "begin": 237240,
+          "end": 237360
+        },
+        {
+          "word": "the",
+          "begin": 237360,
+          "end": 237400
+        },
+        {
+          "word": "tail",
+          "begin": 237480,
+          "end": 237680
+        },
+        {
+          "word": "pointer",
+          "begin": 237740,
+          "end": 237960
+        },
+        {
+          "word": "catches",
+          "begin": 238060,
+          "end": 238320
+        },
+        {
+          "word": "the",
+          "begin": 238360,
+          "end": 238420
+        },
+        {
+          "word": "head",
+          "begin": 238480,
+          "end": 238640
+        },
+        {
+          "word": "pointer,",
+          "begin": 238680,
+          "end": 238940
+        },
+        {
+          "word": "and",
+          "begin": 239360,
+          "end": 239420
+        },
+        {
+          "word": "why",
+          "begin": 239460,
+          "end": 239540
+        },
+        {
+          "word": "doesn't",
+          "begin": 239620,
+          "end": 239840
+        },
+        {
+          "word": "NVMe",
+          "begin": 239920,
+          "end": 240300
+        },
+        {
+          "word": "have",
+          "begin": 240400,
+          "end": 240560
+        },
+        {
+          "word": "a",
+          "begin": 240560,
+          "end": 240580
+        },
+        {
+          "word": "hardware",
+          "begin": 240660,
+          "end": 240940
+        },
+        {
+          "word": "mechanism",
+          "begin": 241040,
+          "end": 241500
+        },
+        {
+          "word": "to",
+          "begin": 241540,
+          "end": 241600
+        },
+        {
+          "word": "auto-recover",
+          "begin": 241700,
+          "end": 242240
+        },
+        {
+          "word": "from",
+          "begin": 242340,
+          "end": 242480
+        },
+        {
+          "word": "this?",
+          "begin": 242500,
+          "end": 242760
+        },
+        {
+          "word": "The",
+          "begin": 243360,
+          "end": 243400
+        },
+        {
+          "word": "answer:",
+          "begin": 243480,
+          "end": 243720
+        },
+        {
+          "word": "When",
+          "begin": 244200,
+          "end": 244320
+        },
+        {
+          "word": "the",
+          "begin": 244320,
+          "end": 244360
+        },
+        {
+          "word": "tail",
+          "begin": 244420,
+          "end": 244600
+        },
+        {
+          "word": "pointer",
+          "begin": 244660,
+          "end": 244880
+        },
+        {
+          "word": "catches",
+          "begin": 244960,
+          "end": 245240
+        },
+        {
+          "word": "the",
+          "begin": 245260,
+          "end": 245320
+        },
+        {
+          "word": "head",
+          "begin": 245380,
+          "end": 245520
+        },
+        {
+          "word": "pointer,",
+          "begin": 245580,
+          "end": 246240
+        },
+        {
+          "word": "the",
+          "begin": 246320,
+          "end": 246520
+        },
+        {
+          "word": "circular",
+          "begin": 246320,
+          "end": 246620
+        },
+        {
+          "word": "buffer",
+          "begin": 246700,
+          "end": 246960
+        },
+        {
+          "word": "is",
+          "begin": 246980,
+          "end": 247079
+        },
+        {
+          "word": "full",
+          "begin": 247160,
+          "end": 247400
+        },
+        {
+          "word": "there",
+          "begin": 247800,
+          "end": 247900
+        },
+        {
+          "word": "are",
+          "begin": 247920,
+          "end": 247940
+        },
+        {
+          "word": "no",
+          "begin": 248040,
+          "end": 248100
+        },
+        {
+          "word": "free",
+          "begin": 248240,
+          "end": 248320
+        },
+        {
+          "word": "slots",
+          "begin": 248420,
+          "end": 248680
+        },
+        {
+          "word": "left.",
+          "begin": 248740,
+          "end": 249040
+        },
+        {
+          "word": "The",
+          "begin": 249560,
+          "end": 249620
+        },
+        {
+          "word": "host",
+          "begin": 249680,
+          "end": 249940
+        },
+        {
+          "word": "must",
+          "begin": 249980,
+          "end": 250140
+        },
+        {
+          "word": "wait",
+          "begin": 250180,
+          "end": 250340
+        },
+        {
+          "word": "for",
+          "begin": 250380,
+          "end": 250420
+        },
+        {
+          "word": "the",
+          "begin": 250460,
+          "end": 250500
+        },
+        {
+          "word": "controller",
+          "begin": 250560,
+          "end": 250940
+        },
+        {
+          "word": "to",
+          "begin": 251000,
+          "end": 251040
+        },
+        {
+          "word": "process",
+          "begin": 251100,
+          "end": 251460
+        },
+        {
+          "word": "commands",
+          "begin": 251520,
+          "end": 251900
+        },
+        {
+          "word": "(which",
+          "begin": 251920,
+          "end": 252040
+        },
+        {
+          "word": "advances",
+          "begin": 252080,
+          "end": 252540
+        },
+        {
+          "word": "the",
+          "begin": 252580,
+          "end": 252620
+        },
+        {
+          "word": "head",
+          "begin": 252680,
+          "end": 252820
+        },
+        {
+          "word": "pointer,",
+          "begin": 252880,
+          "end": 253140
+        },
+        {
+          "word": "freeing",
+          "begin": 253580,
+          "end": 253800
+        },
+        {
+          "word": "slots)",
+          "begin": 253880,
+          "end": 254120
+        },
+        {
+          "word": "before",
+          "begin": 254180,
+          "end": 254360
+        },
+        {
+          "word": "submitting",
+          "begin": 254480,
+          "end": 254820
+        },
+        {
+          "word": "more.",
+          "begin": 254880,
+          "end": 254940
+        },
+        {
+          "word": "NVMe",
+          "begin": 255700,
+          "end": 256160
+        },
+        {
+          "word": "doesn't",
+          "begin": 256320,
+          "end": 256580
+        },
+        {
+          "word": "auto-recover",
+          "begin": 256680,
+          "end": 257240
+        },
+        {
+          "word": "because",
+          "begin": 257360,
+          "end": 257580
+        },
+        {
+          "word": "the",
+          "begin": 257620,
+          "end": 257660
+        },
+        {
+          "word": "host",
+          "begin": 257740,
+          "end": 257980
+        },
+        {
+          "word": "driver",
+          "begin": 258000,
+          "end": 258260
+        },
+        {
+          "word": "is",
+          "begin": 258340,
+          "end": 258420
+        },
+        {
+          "word": "responsible",
+          "begin": 258460,
+          "end": 259000
+        },
+        {
+          "word": "for",
+          "begin": 259100,
+          "end": 259260
+        },
+        {
+          "word": "tracking",
+          "begin": 259280,
+          "end": 259580
+        },
+        {
+          "word": "available",
+          "begin": 259580,
+          "end": 260060
+        },
+        {
+          "word": "queue",
+          "begin": 260100,
+          "end": 260160
+        },
+        {
+          "word": "depth.",
+          "begin": 260260,
+          "end": 260580
+        },
+        {
+          "word": "The",
+          "begin": 260960,
+          "end": 261000
+        },
+        {
+          "word": "driver",
+          "begin": 261060,
+          "end": 261340
+        },
+        {
+          "word": "maintains",
+          "begin": 261420,
+          "end": 261860
+        },
+        {
+          "word": "a",
+          "begin": 261900,
+          "end": 262000
+        },
+        {
+          "word": "local",
+          "begin": 262000,
+          "end": 262500
+        },
+        {
+          "word": "count",
+          "begin": 262500,
+          "end": 262880
+        },
+        {
+          "word": "of",
+          "begin": 262920,
+          "end": 262940
+        },
+        {
+          "word": "in-flight",
+          "begin": 262940,
+          "end": 263060
+        },
+        {
+          "word": "commands",
+          "begin": 263099,
+          "end": 263540
+        },
+        {
+          "word": "and",
+          "begin": 263640,
+          "end": 263740
+        },
+        {
+          "word": "never",
+          "begin": 263780,
+          "end": 264040
+        },
+        {
+          "word": "advances",
+          "begin": 264080,
+          "end": 264520
+        },
+        {
+          "word": "the",
+          "begin": 264560,
+          "end": 264600
+        },
+        {
+          "word": "tail",
+          "begin": 264680,
+          "end": 264920
+        },
+        {
+          "word": "past",
+          "begin": 264980,
+          "end": 265220
+        },
+        {
+          "word": "the",
+          "begin": 265240,
+          "end": 265300
+        },
+        {
+          "word": "head.",
+          "begin": 265360,
+          "end": 265620
+        },
+        {
+          "word": "If",
+          "begin": 266320,
+          "end": 266380
+        },
+        {
+          "word": "the",
+          "begin": 266420,
+          "end": 266480
+        },
+        {
+          "word": "driver",
+          "begin": 266540,
+          "end": 266880
+        },
+        {
+          "word": "had",
+          "begin": 266880,
+          "end": 267000
+        },
+        {
+          "word": "a",
+          "begin": 267000,
+          "end": 267020
+        },
+        {
+          "word": "bug",
+          "begin": 267100,
+          "end": 267380
+        },
+        {
+          "word": "and",
+          "begin": 267480,
+          "end": 267560
+        },
+        {
+          "word": "overwrote",
+          "begin": 267640,
+          "end": 268160
+        },
+        {
+          "word": "an",
+          "begin": 268240,
+          "end": 268340
+        },
+        {
+          "word": "unprocessed",
+          "begin": 268400,
+          "end": 268880
+        },
+        {
+          "word": "entry,",
+          "begin": 268940,
+          "end": 269200
+        },
+        {
+          "word": "the",
+          "begin": 269480,
+          "end": 269540
+        },
+        {
+          "word": "original",
+          "begin": 269580,
+          "end": 270020
+        },
+        {
+          "word": "command",
+          "begin": 270020,
+          "end": 270360
+        },
+        {
+          "word": "would",
+          "begin": 270380,
+          "end": 270480
+        },
+        {
+          "word": "be",
+          "begin": 270520,
+          "end": 270560
+        },
+        {
+          "word": "lost",
+          "begin": 270660,
+          "end": 271060
+        },
+        {
+          "word": "and",
+          "begin": 271160,
+          "end": 271220
+        },
+        {
+          "word": "the",
+          "begin": 271220,
+          "end": 271280
+        },
+        {
+          "word": "replacement",
+          "begin": 271320,
+          "end": 271840
+        },
+        {
+          "word": "would",
+          "begin": 271860,
+          "end": 271940
+        },
+        {
+          "word": "be",
+          "begin": 271980,
+          "end": 272020
+        },
+        {
+          "word": "corrupted",
+          "begin": 272100,
+          "end": 272620
+        },
+        {
+          "word": "leading",
+          "begin": 272820,
+          "end": 273060
+        },
+        {
+          "word": "to",
+          "begin": 273100,
+          "end": 273140
+        },
+        {
+          "word": "data",
+          "begin": 273220,
+          "end": 273420
+        },
+        {
+          "word": "loss",
+          "begin": 273500,
+          "end": 273780
+        },
+        {
+          "word": "or",
+          "begin": 273860,
+          "end": 273880
+        },
+        {
+          "word": "controller",
+          "begin": 273960,
+          "end": 274360
+        },
+        {
+          "word": "errors.",
+          "begin": 274480,
+          "end": 274840
+        },
+        {
+          "word": "This",
+          "begin": 275440,
+          "end": 275560
+        },
+        {
+          "word": "design",
+          "begin": 275600,
+          "end": 276020
+        },
+        {
+          "word": "keeps",
+          "begin": 276080,
+          "end": 276280
+        },
+        {
+          "word": "hardware",
+          "begin": 276320,
+          "end": 276600
+        },
+        {
+          "word": "simple",
+          "begin": 276760,
+          "end": 277000
+        },
+        {
+          "word": "and",
+          "begin": 277300,
+          "end": 277380
+        },
+        {
+          "word": "puts",
+          "begin": 277420,
+          "end": 277600
+        },
+        {
+          "word": "flow",
+          "begin": 277680,
+          "end": 277800
+        },
+        {
+          "word": "control",
+          "begin": 277920,
+          "end": 278260
+        },
+        {
+          "word": "responsibility",
+          "begin": 278300,
+          "end": 279020
+        },
+        {
+          "word": "on",
+          "begin": 279100,
+          "end": 279180
+        },
+        {
+          "word": "the",
+          "begin": 279180,
+          "end": 279240
+        },
+        {
+          "word": "software,",
+          "begin": 279320,
+          "end": 279680
+        },
+        {
+          "word": "which",
+          "begin": 280000,
+          "end": 280120
+        },
+        {
+          "word": "can",
+          "begin": 280160,
+          "end": 280260
+        },
+        {
+          "word": "make",
+          "begin": 280260,
+          "end": 280440
+        },
+        {
+          "word": "smarter",
+          "begin": 280500,
+          "end": 280760
+        },
+        {
+          "word": "scheduling",
+          "begin": 280860,
+          "end": 281280
+        },
+        {
+          "word": "decisions.",
+          "begin": 281300,
+          "end": 281880
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

@@ -1,0 +1,2239 @@
+{
+  "sectionId": "sec-waf",
+  "audioFile": "/audio/sections/sec-waf.mp3",
+  "totalDurationMs": 191360,
+  "fileSizeBytes": 3062400,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "Write Amplification — The Hidden Cost of Writing",
+      "beginMs": 20,
+      "endMs": 2880,
+      "timestamps": [
+        {
+          "word": "Write",
+          "begin": 20,
+          "end": 220
+        },
+        {
+          "word": "Amplification",
+          "begin": 300,
+          "end": 1040
+        },
+        {
+          "word": "The",
+          "begin": 1320,
+          "end": 1360
+        },
+        {
+          "word": "Hidden",
+          "begin": 1420,
+          "end": 1640
+        },
+        {
+          "word": "Cost",
+          "begin": 1700,
+          "end": 2000
+        },
+        {
+          "word": "of",
+          "begin": 2020,
+          "end": 2100
+        },
+        {
+          "word": "Writing",
+          "begin": 2160,
+          "end": 2420
+        },
+        {
+          "word": "Analogy:",
+          "begin": 2420,
+          "end": 2880
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: Write Amplification Is Wasted Effort. Imagine you want to change one sentence in a book, but you have to rewrite the entire chapter. That's write amplification — the SSD writes more data to NAND than the host actually requested. A WAF of 3.0 means for every 1 GB the host writes, the SSD internally writes 3 GB (due to GC copying valid pages, metadata updates, etc.).",
+      "beginMs": 3300,
+      "endMs": 27560,
+      "timestamps": [
+        {
+          "word": "Write",
+          "begin": 3300,
+          "end": 3480
+        },
+        {
+          "word": "Amplification",
+          "begin": 3560,
+          "end": 4240
+        },
+        {
+          "word": "Is",
+          "begin": 4320,
+          "end": 4400
+        },
+        {
+          "word": "Wasted",
+          "begin": 4460,
+          "end": 4800
+        },
+        {
+          "word": "Effort.",
+          "begin": 4840,
+          "end": 5180
+        },
+        {
+          "word": "Imagine",
+          "begin": 5820,
+          "end": 6220
+        },
+        {
+          "word": "you",
+          "begin": 6220,
+          "end": 6280
+        },
+        {
+          "word": "want",
+          "begin": 6340,
+          "end": 6460
+        },
+        {
+          "word": "to",
+          "begin": 6460,
+          "end": 6500
+        },
+        {
+          "word": "change",
+          "begin": 6580,
+          "end": 6920
+        },
+        {
+          "word": "one",
+          "begin": 6920,
+          "end": 7080
+        },
+        {
+          "word": "sentence",
+          "begin": 7160,
+          "end": 7540
+        },
+        {
+          "word": "in",
+          "begin": 7580,
+          "end": 7640
+        },
+        {
+          "word": "a",
+          "begin": 7660,
+          "end": 7680
+        },
+        {
+          "word": "book,",
+          "begin": 7740,
+          "end": 8000
+        },
+        {
+          "word": "but",
+          "begin": 8240,
+          "end": 8360
+        },
+        {
+          "word": "you",
+          "begin": 8360,
+          "end": 8400
+        },
+        {
+          "word": "have",
+          "begin": 8460,
+          "end": 8620
+        },
+        {
+          "word": "to",
+          "begin": 8660,
+          "end": 8720
+        },
+        {
+          "word": "rewrite",
+          "begin": 8800,
+          "end": 9120
+        },
+        {
+          "word": "the",
+          "begin": 9160,
+          "end": 9220
+        },
+        {
+          "word": "entire",
+          "begin": 9260,
+          "end": 9600
+        },
+        {
+          "word": "chapter.",
+          "begin": 9700,
+          "end": 10040
+        },
+        {
+          "word": "That's",
+          "begin": 10580,
+          "end": 10760
+        },
+        {
+          "word": "write",
+          "begin": 10860,
+          "end": 11060
+        },
+        {
+          "word": "amplification",
+          "begin": 11120,
+          "end": 11860
+        },
+        {
+          "word": "the",
+          "begin": 12160,
+          "end": 12300
+        },
+        {
+          "word": "SSD",
+          "begin": 12300,
+          "end": 12680
+        },
+        {
+          "word": "writes",
+          "begin": 12820,
+          "end": 13040
+        },
+        {
+          "word": "more",
+          "begin": 13120,
+          "end": 13180
+        },
+        {
+          "word": "data",
+          "begin": 13320,
+          "end": 13520
+        },
+        {
+          "word": "to",
+          "begin": 13600,
+          "end": 13680
+        },
+        {
+          "word": "NAND",
+          "begin": 13740,
+          "end": 14040
+        },
+        {
+          "word": "than",
+          "begin": 14120,
+          "end": 14240
+        },
+        {
+          "word": "the",
+          "begin": 14240,
+          "end": 14300
+        },
+        {
+          "word": "host",
+          "begin": 14360,
+          "end": 14620
+        },
+        {
+          "word": "actually",
+          "begin": 14720,
+          "end": 15000
+        },
+        {
+          "word": "requested.",
+          "begin": 15060,
+          "end": 15600
+        },
+        {
+          "word": "A",
+          "begin": 16219,
+          "end": 16239
+        },
+        {
+          "word": "WAF",
+          "begin": 16320,
+          "end": 16620
+        },
+        {
+          "word": "of",
+          "begin": 16700,
+          "end": 17320
+        },
+        {
+          "word": "3.0",
+          "begin": 17320,
+          "end": 17600
+        },
+        {
+          "word": "means",
+          "begin": 17840,
+          "end": 18060
+        },
+        {
+          "word": "for",
+          "begin": 18120,
+          "end": 18160
+        },
+        {
+          "word": "every",
+          "begin": 18280,
+          "end": 18440
+        },
+        {
+          "word": "1",
+          "begin": 18540,
+          "end": 18720
+        },
+        {
+          "word": "GB",
+          "begin": 18780,
+          "end": 19160
+        },
+        {
+          "word": "the",
+          "begin": 19200,
+          "end": 19240
+        },
+        {
+          "word": "host",
+          "begin": 19320,
+          "end": 19580
+        },
+        {
+          "word": "writes,",
+          "begin": 19640,
+          "end": 19900
+        },
+        {
+          "word": "the",
+          "begin": 20180,
+          "end": 20220
+        },
+        {
+          "word": "SSD",
+          "begin": 20320,
+          "end": 20720
+        },
+        {
+          "word": "internally",
+          "begin": 20860,
+          "end": 21300
+        },
+        {
+          "word": "writes",
+          "begin": 21400,
+          "end": 21640
+        },
+        {
+          "word": "3",
+          "begin": 21720,
+          "end": 21840
+        },
+        {
+          "word": "GB",
+          "begin": 21920,
+          "end": 22400
+        },
+        {
+          "word": "(due",
+          "begin": 22520,
+          "end": 22580
+        },
+        {
+          "word": "to",
+          "begin": 22640,
+          "end": 22680
+        },
+        {
+          "word": "GC",
+          "begin": 22780,
+          "end": 23100
+        },
+        {
+          "word": "copying",
+          "begin": 23240,
+          "end": 23640
+        },
+        {
+          "word": "valid",
+          "begin": 23680,
+          "end": 23960
+        },
+        {
+          "word": "pages,",
+          "begin": 24000,
+          "end": 24440
+        },
+        {
+          "word": "metadata",
+          "begin": 24740,
+          "end": 25160
+        },
+        {
+          "word": "updates,",
+          "begin": 25260,
+          "end": 25700
+        },
+        {
+          "word": "etc.).",
+          "begin": 25880,
+          "end": 26300
+        },
+        {
+          "word": "WAF",
+          "begin": 27260,
+          "end": 27560
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "term",
+      "text": "WAF (Write Amplification Factor): The ratio of actual NAND writes to host-requested writes. WAF = NAND writes / Host writes. Ideal WAF is 1.0 (no amplification). Real-world WAF ranges from 1.1 (sequential, TRIM-enabled) to 10+ (random writes, full drive, no TRIM). Lower WAF means better endurance and performance.",
+      "beginMs": 27700,
+      "endMs": 53320,
+      "timestamps": [
+        {
+          "word": "(Write",
+          "begin": 27700,
+          "end": 27900
+        },
+        {
+          "word": "Amplification",
+          "begin": 28000,
+          "end": 28660
+        },
+        {
+          "word": "Factor):",
+          "begin": 28720,
+          "end": 29020
+        },
+        {
+          "word": "The",
+          "begin": 29400,
+          "end": 29440
+        },
+        {
+          "word": "ratio",
+          "begin": 29520,
+          "end": 30020
+        },
+        {
+          "word": "of",
+          "begin": 30120,
+          "end": 30240
+        },
+        {
+          "word": "actual",
+          "begin": 30120,
+          "end": 30420
+        },
+        {
+          "word": "NAND",
+          "begin": 30520,
+          "end": 30780
+        },
+        {
+          "word": "writes",
+          "begin": 30860,
+          "end": 31100
+        },
+        {
+          "word": "to",
+          "begin": 31160,
+          "end": 31220
+        },
+        {
+          "word": "host-requested",
+          "begin": 31300,
+          "end": 32119
+        },
+        {
+          "word": "writes.",
+          "begin": 32180,
+          "end": 32520
+        },
+        {
+          "word": "WAF",
+          "begin": 33560,
+          "end": 33860
+        },
+        {
+          "word": "=",
+          "begin": 33960,
+          "end": 34280
+        },
+        {
+          "word": "NAND",
+          "begin": 34360,
+          "end": 34620
+        },
+        {
+          "word": "writes",
+          "begin": 34680,
+          "end": 34980
+        },
+        {
+          "word": "/",
+          "begin": 35220,
+          "end": 35840
+        },
+        {
+          "word": "Host",
+          "begin": 35840,
+          "end": 36180
+        },
+        {
+          "word": "writes.",
+          "begin": 36280,
+          "end": 36620
+        },
+        {
+          "word": "Ideal",
+          "begin": 37260,
+          "end": 37600
+        },
+        {
+          "word": "WAF",
+          "begin": 37680,
+          "end": 37980
+        },
+        {
+          "word": "is",
+          "begin": 38080,
+          "end": 38700
+        },
+        {
+          "word": "1.0",
+          "begin": 38700,
+          "end": 38980
+        },
+        {
+          "word": "(no",
+          "begin": 39120,
+          "end": 39200
+        },
+        {
+          "word": "amplification).",
+          "begin": 39380,
+          "end": 40120
+        },
+        {
+          "word": "Real-world",
+          "begin": 41000,
+          "end": 41540
+        },
+        {
+          "word": "WAF",
+          "begin": 41600,
+          "end": 41920
+        },
+        {
+          "word": "ranges",
+          "begin": 42140,
+          "end": 43160
+        },
+        {
+          "word": "from",
+          "begin": 43220,
+          "end": 43400
+        },
+        {
+          "word": "(sequential,",
+          "begin": 43480,
+          "end": 44340
+        },
+        {
+          "word": "TRIM-enabled)",
+          "begin": 44380,
+          "end": 44960
+        },
+        {
+          "word": "to",
+          "begin": 45040,
+          "end": 45800
+        },
+        {
+          "word": "10+",
+          "begin": 45880,
+          "end": 46200
+        },
+        {
+          "word": "writes,",
+          "begin": 46260,
+          "end": 46600
+        },
+        {
+          "word": "full",
+          "begin": 46920,
+          "end": 47080
+        },
+        {
+          "word": "drive,",
+          "begin": 47140,
+          "end": 47520
+        },
+        {
+          "word": "no",
+          "begin": 47820,
+          "end": 48100
+        },
+        {
+          "word": "TRIM).",
+          "begin": 48100,
+          "end": 48280
+        },
+        {
+          "word": "Lower",
+          "begin": 49340,
+          "end": 49540
+        },
+        {
+          "word": "WAF",
+          "begin": 49680,
+          "end": 49980
+        },
+        {
+          "word": "means",
+          "begin": 50060,
+          "end": 50300
+        },
+        {
+          "word": "better",
+          "begin": 50360,
+          "end": 50540
+        },
+        {
+          "word": "endurance",
+          "begin": 50640,
+          "end": 51100
+        },
+        {
+          "word": "and",
+          "begin": 51180,
+          "end": 51280
+        },
+        {
+          "word": "performance.",
+          "begin": 51320,
+          "end": 51900
+        },
+        {
+          "word": "We",
+          "begin": 52980,
+          "end": 53040
+        },
+        {
+          "word": "just",
+          "begin": 53100,
+          "end": 53320
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "We just learned that garbage collection copies valid pages when reclaiming blocks. But that copying is itself a write to NAND. This means the SSD writes more data to NAND than the host actually sent.",
+      "beginMs": 53360,
+      "endMs": 64459,
+      "timestamps": [
+        {
+          "word": "learned",
+          "begin": 53360,
+          "end": 53520
+        },
+        {
+          "word": "that",
+          "begin": 53560,
+          "end": 53680
+        },
+        {
+          "word": "garbage",
+          "begin": 53720,
+          "end": 54040
+        },
+        {
+          "word": "collection",
+          "begin": 54100,
+          "end": 54500
+        },
+        {
+          "word": "copies",
+          "begin": 54560,
+          "end": 54940
+        },
+        {
+          "word": "valid",
+          "begin": 54980,
+          "end": 55260
+        },
+        {
+          "word": "pages",
+          "begin": 55260,
+          "end": 55720
+        },
+        {
+          "word": "when",
+          "begin": 55760,
+          "end": 55880
+        },
+        {
+          "word": "reclaiming",
+          "begin": 55920,
+          "end": 56360
+        },
+        {
+          "word": "blocks.",
+          "begin": 56420,
+          "end": 56820
+        },
+        {
+          "word": "But",
+          "begin": 57640,
+          "end": 57760
+        },
+        {
+          "word": "that",
+          "begin": 57760,
+          "end": 57920
+        },
+        {
+          "word": "copying",
+          "begin": 57980,
+          "end": 58360
+        },
+        {
+          "word": "is",
+          "begin": 58400,
+          "end": 58440
+        },
+        {
+          "word": "itself",
+          "begin": 58460,
+          "end": 58740
+        },
+        {
+          "word": "a",
+          "begin": 58780,
+          "end": 58800
+        },
+        {
+          "word": "write",
+          "begin": 58840,
+          "end": 58940
+        },
+        {
+          "word": "to",
+          "begin": 58940,
+          "end": 59000
+        },
+        {
+          "word": "NAND.",
+          "begin": 59080,
+          "end": 59260
+        },
+        {
+          "word": "This",
+          "begin": 59300,
+          "end": 59520
+        },
+        {
+          "word": "means",
+          "begin": 59680,
+          "end": 60760
+        },
+        {
+          "word": "the",
+          "begin": 60760,
+          "end": 60800
+        },
+        {
+          "word": "SSD",
+          "begin": 60900,
+          "end": 61220
+        },
+        {
+          "word": "writes",
+          "begin": 61240,
+          "end": 61740
+        },
+        {
+          "word": "more",
+          "begin": 61800,
+          "end": 62180
+        },
+        {
+          "word": "data",
+          "begin": 62300,
+          "end": 62500
+        },
+        {
+          "word": "to",
+          "begin": 62660,
+          "end": 62740
+        },
+        {
+          "word": "NAND",
+          "begin": 62820,
+          "end": 62880
+        },
+        {
+          "word": "than",
+          "begin": 62980,
+          "end": 63160
+        },
+        {
+          "word": "the",
+          "begin": 63220,
+          "end": 63240
+        },
+        {
+          "word": "host",
+          "begin": 63400,
+          "end": 63660
+        },
+        {
+          "word": "actually",
+          "begin": 63660,
+          "end": 63960
+        },
+        {
+          "word": "sent.",
+          "begin": 64080,
+          "end": 64459
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "The ratio is called the Write Amplification Factor (WAF):",
+      "beginMs": 64500,
+      "endMs": 70780,
+      "timestamps": [
+        {
+          "word": "The",
+          "begin": 64500,
+          "end": 64560
+        },
+        {
+          "word": "ratio",
+          "begin": 64700,
+          "end": 66100
+        },
+        {
+          "word": "is",
+          "begin": 66140,
+          "end": 66320
+        },
+        {
+          "word": "called",
+          "begin": 66360,
+          "end": 66700
+        },
+        {
+          "word": "the",
+          "begin": 66760,
+          "end": 66840
+        },
+        {
+          "word": "Write",
+          "begin": 66900,
+          "end": 67360
+        },
+        {
+          "word": "Amplification",
+          "begin": 67460,
+          "end": 68180
+        },
+        {
+          "word": "Factor",
+          "begin": 68260,
+          "end": 69440
+        },
+        {
+          "word": "(WAF):",
+          "begin": 69660,
+          "end": 70780
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "A WAF of 1.0 is perfect — the SSD writes only what you asked. A WAF of 3.0 means the SSD writes 3x the data to NAND — tripling the wear on the NAND cells. This directly reduces the drive's lifespan.",
+      "beginMs": 70940,
+      "endMs": 88300,
+      "timestamps": [
+        {
+          "word": "A",
+          "begin": 70940,
+          "end": 70960
+        },
+        {
+          "word": "WAF",
+          "begin": 71220,
+          "end": 71460
+        },
+        {
+          "word": "of",
+          "begin": 71620,
+          "end": 72220
+        },
+        {
+          "word": "1.0",
+          "begin": 72260,
+          "end": 72480
+        },
+        {
+          "word": "is",
+          "begin": 72620,
+          "end": 72700
+        },
+        {
+          "word": "perfect",
+          "begin": 72760,
+          "end": 74640
+        },
+        {
+          "word": "the",
+          "begin": 74700,
+          "end": 74780
+        },
+        {
+          "word": "writes",
+          "begin": 75000,
+          "end": 75220
+        },
+        {
+          "word": "only",
+          "begin": 75320,
+          "end": 75480
+        },
+        {
+          "word": "what",
+          "begin": 75540,
+          "end": 75680
+        },
+        {
+          "word": "you",
+          "begin": 75680,
+          "end": 75720
+        },
+        {
+          "word": "asked.",
+          "begin": 75720,
+          "end": 76260
+        },
+        {
+          "word": "A",
+          "begin": 77080,
+          "end": 77220
+        },
+        {
+          "word": "WAF",
+          "begin": 77220,
+          "end": 77520
+        },
+        {
+          "word": "of",
+          "begin": 77600,
+          "end": 78260
+        },
+        {
+          "word": "3.0",
+          "begin": 78320,
+          "end": 78540
+        },
+        {
+          "word": "means",
+          "begin": 78780,
+          "end": 79000
+        },
+        {
+          "word": "the",
+          "begin": 79040,
+          "end": 79080
+        },
+        {
+          "word": "SSD",
+          "begin": 79200,
+          "end": 79640
+        },
+        {
+          "word": "writes",
+          "begin": 79840,
+          "end": 80320
+        },
+        {
+          "word": "3x",
+          "begin": 80460,
+          "end": 80780
+        },
+        {
+          "word": "the",
+          "begin": 80820,
+          "end": 80860
+        },
+        {
+          "word": "data",
+          "begin": 80920,
+          "end": 81140
+        },
+        {
+          "word": "to",
+          "begin": 81200,
+          "end": 81280
+        },
+        {
+          "word": "NAND",
+          "begin": 81340,
+          "end": 81700
+        },
+        {
+          "word": "tripling",
+          "begin": 82240,
+          "end": 82600
+        },
+        {
+          "word": "the",
+          "begin": 82620,
+          "end": 82660
+        },
+        {
+          "word": "wear",
+          "begin": 82720,
+          "end": 82800
+        },
+        {
+          "word": "on",
+          "begin": 83020,
+          "end": 83120
+        },
+        {
+          "word": "the",
+          "begin": 83120,
+          "end": 83160
+        },
+        {
+          "word": "NAND",
+          "begin": 83220,
+          "end": 83440
+        },
+        {
+          "word": "cells.",
+          "begin": 83520,
+          "end": 83860
+        },
+        {
+          "word": "This",
+          "begin": 84860,
+          "end": 85040
+        },
+        {
+          "word": "directly",
+          "begin": 85100,
+          "end": 85480
+        },
+        {
+          "word": "reduces",
+          "begin": 85560,
+          "end": 86000
+        },
+        {
+          "word": "the",
+          "begin": 85600,
+          "end": 85620
+        },
+        {
+          "word": "drive's",
+          "begin": 85680,
+          "end": 86100
+        },
+        {
+          "word": "lifespan.",
+          "begin": 86160,
+          "end": 86700
+        },
+        {
+          "word": "Why",
+          "begin": 86740,
+          "end": 86780
+        },
+        {
+          "word": "does",
+          "begin": 86820,
+          "end": 87100
+        },
+        {
+          "word": "WAF",
+          "begin": 88120,
+          "end": 88300
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "Why does WAF matter? Because NAND cells have limited P/E (Program/Erase) cycles. If WAF is 3x, your 600 TBW rated drive effectively only lasts 200 TBW of your data. Two factors dominate WAF:",
+      "beginMs": 88300,
+      "endMs": 105980,
+      "timestamps": [
+        {
+          "word": "matter?",
+          "begin": 88300,
+          "end": 88580
+        },
+        {
+          "word": "Because",
+          "begin": 88760,
+          "end": 90120
+        },
+        {
+          "word": "NAND",
+          "begin": 90140,
+          "end": 89080
+        },
+        {
+          "word": "cells",
+          "begin": 90100,
+          "end": 90400
+        },
+        {
+          "word": "have",
+          "begin": 90460,
+          "end": 90700
+        },
+        {
+          "word": "limited",
+          "begin": 90800,
+          "end": 91300
+        },
+        {
+          "word": "P/E",
+          "begin": 91360,
+          "end": 91620
+        },
+        {
+          "word": "(Program/Erase)",
+          "begin": 91660,
+          "end": 94180
+        },
+        {
+          "word": "cycles.",
+          "begin": 94240,
+          "end": 94740
+        },
+        {
+          "word": "If",
+          "begin": 95520,
+          "end": 96080
+        },
+        {
+          "word": "WAF",
+          "begin": 96260,
+          "end": 96460
+        },
+        {
+          "word": "is",
+          "begin": 96540,
+          "end": 97740
+        },
+        {
+          "word": "3x,",
+          "begin": 97880,
+          "end": 98080
+        },
+        {
+          "word": "600",
+          "begin": 98100,
+          "end": 98700
+        },
+        {
+          "word": "TBW",
+          "begin": 98780,
+          "end": 99040
+        },
+        {
+          "word": "rated",
+          "begin": 99120,
+          "end": 99360
+        },
+        {
+          "word": "drive",
+          "begin": 99400,
+          "end": 99760
+        },
+        {
+          "word": "effectively",
+          "begin": 99820,
+          "end": 100320
+        },
+        {
+          "word": "only",
+          "begin": 100460,
+          "end": 100640
+        },
+        {
+          "word": "lasts",
+          "begin": 100740,
+          "end": 101340
+        },
+        {
+          "word": "200",
+          "begin": 101440,
+          "end": 102000
+        },
+        {
+          "word": "TBW",
+          "begin": 102080,
+          "end": 102360
+        },
+        {
+          "word": "of",
+          "begin": 102500,
+          "end": 102580
+        },
+        {
+          "word": "your",
+          "begin": 102600,
+          "end": 102640
+        },
+        {
+          "word": "data.",
+          "begin": 102740,
+          "end": 102980
+        },
+        {
+          "word": "Two",
+          "begin": 103640,
+          "end": 103720
+        },
+        {
+          "word": "factors",
+          "begin": 103860,
+          "end": 104340
+        },
+        {
+          "word": "dominate",
+          "begin": 104340,
+          "end": 104720
+        },
+        {
+          "word": "WAF:",
+          "begin": 104780,
+          "end": 105100
+        },
+        {
+          "word": "Typical",
+          "begin": 105560,
+          "end": 105980
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "Typical WAF values: consumer SSDs under normal use see ~1.5-3x, enterprise drives with steady-state random writes can reach 3-5x, and well-tuned sequential workloads with TRIM approach the ideal 1.0x.",
+      "beginMs": 105980,
+      "endMs": 120840,
+      "timestamps": [
+        {
+          "word": "WAF",
+          "begin": 105980,
+          "end": 106220
+        },
+        {
+          "word": "values:",
+          "begin": 106280,
+          "end": 106800
+        },
+        {
+          "word": "consumer",
+          "begin": 107420,
+          "end": 107780
+        },
+        {
+          "word": "SSDs",
+          "begin": 107780,
+          "end": 108520
+        },
+        {
+          "word": "under",
+          "begin": 108600,
+          "end": 108720
+        },
+        {
+          "word": "normal",
+          "begin": 108820,
+          "end": 110180
+        },
+        {
+          "word": "use",
+          "begin": 110260,
+          "end": 110920
+        },
+        {
+          "word": "see",
+          "begin": 110960,
+          "end": 111000
+        },
+        {
+          "word": "~1.5-3x,",
+          "begin": 111080,
+          "end": 111740
+        },
+        {
+          "word": "enterprise",
+          "begin": 112280,
+          "end": 112780
+        },
+        {
+          "word": "drives",
+          "begin": 112840,
+          "end": 113200
+        },
+        {
+          "word": "with",
+          "begin": 113240,
+          "end": 113340
+        },
+        {
+          "word": "steady-state",
+          "begin": 113400,
+          "end": 113960
+        },
+        {
+          "word": "random",
+          "begin": 114000,
+          "end": 114300
+        },
+        {
+          "word": "writes",
+          "begin": 114360,
+          "end": 114640
+        },
+        {
+          "word": "can",
+          "begin": 114700,
+          "end": 114820
+        },
+        {
+          "word": "reach",
+          "begin": 114860,
+          "end": 115040
+        },
+        {
+          "word": "3-5x,",
+          "begin": 115140,
+          "end": 116140
+        },
+        {
+          "word": "and",
+          "begin": 116440,
+          "end": 116540
+        },
+        {
+          "word": "well-tuned",
+          "begin": 116600,
+          "end": 117100
+        },
+        {
+          "word": "sequential",
+          "begin": 117160,
+          "end": 117520
+        },
+        {
+          "word": "workloads",
+          "begin": 117640,
+          "end": 118080
+        },
+        {
+          "word": "with",
+          "begin": 118120,
+          "end": 118240
+        },
+        {
+          "word": "TRIM",
+          "begin": 118320,
+          "end": 118600
+        },
+        {
+          "word": "approach",
+          "begin": 118680,
+          "end": 119000
+        },
+        {
+          "word": "the",
+          "begin": 119080,
+          "end": 119140
+        },
+        {
+          "word": "ideal",
+          "begin": 119260,
+          "end": 119560
+        },
+        {
+          "word": "1.0x.",
+          "begin": 119700,
+          "end": 120840
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "info",
+      "text": "Measuring WAF in practice: Check SMART before and after a workload: Data Units Written shows host writes. For NAND writes, you need the vendor-specific counter (varies by manufacturer). WAF = NAND writes / host writes. Run nvme smart-log /dev/nvme0 and note the values before and after.",
+      "beginMs": 121400,
+      "endMs": 142680,
+      "timestamps": [
+        {
+          "word": "Measuring",
+          "begin": 121400,
+          "end": 121740
+        },
+        {
+          "word": "WAF",
+          "begin": 121740,
+          "end": 121840
+        },
+        {
+          "word": "in",
+          "begin": 121860,
+          "end": 122200
+        },
+        {
+          "word": "practice:",
+          "begin": 122260,
+          "end": 122760
+        },
+        {
+          "word": "Check",
+          "begin": 123200,
+          "end": 123400
+        },
+        {
+          "word": "SMART",
+          "begin": 123480,
+          "end": 123960
+        },
+        {
+          "word": "before",
+          "begin": 123960,
+          "end": 124400
+        },
+        {
+          "word": "and",
+          "begin": 124420,
+          "end": 124480
+        },
+        {
+          "word": "after",
+          "begin": 124560,
+          "end": 124860
+        },
+        {
+          "word": "a",
+          "begin": 124940,
+          "end": 125000
+        },
+        {
+          "word": "workload:",
+          "begin": 124940,
+          "end": 125420
+        },
+        {
+          "word": "Data",
+          "begin": 125940,
+          "end": 126140
+        },
+        {
+          "word": "Units",
+          "begin": 126220,
+          "end": 126520
+        },
+        {
+          "word": "Written",
+          "begin": 126600,
+          "end": 126840
+        },
+        {
+          "word": "shows",
+          "begin": 126960,
+          "end": 127180
+        },
+        {
+          "word": "host",
+          "begin": 127220,
+          "end": 127500
+        },
+        {
+          "word": "writes.",
+          "begin": 127540,
+          "end": 127860
+        },
+        {
+          "word": "For",
+          "begin": 128199,
+          "end": 128259
+        },
+        {
+          "word": "NAND",
+          "begin": 128360,
+          "end": 128620
+        },
+        {
+          "word": "writes,",
+          "begin": 128660,
+          "end": 128979
+        },
+        {
+          "word": "you",
+          "begin": 129320,
+          "end": 129380
+        },
+        {
+          "word": "need",
+          "begin": 129440,
+          "end": 129600
+        },
+        {
+          "word": "the",
+          "begin": 129620,
+          "end": 129680
+        },
+        {
+          "word": "vendor-specific",
+          "begin": 129759,
+          "end": 130460
+        },
+        {
+          "word": "counter",
+          "begin": 130460,
+          "end": 130759
+        },
+        {
+          "word": "(varies",
+          "begin": 130860,
+          "end": 131180
+        },
+        {
+          "word": "by",
+          "begin": 131240,
+          "end": 131300
+        },
+        {
+          "word": "manufacturer).",
+          "begin": 131400,
+          "end": 133180
+        },
+        {
+          "word": "WAF",
+          "begin": 133380,
+          "end": 133600
+        },
+        {
+          "word": "=",
+          "begin": 133700,
+          "end": 134000
+        },
+        {
+          "word": "NAND",
+          "begin": 134060,
+          "end": 134320
+        },
+        {
+          "word": "writes",
+          "begin": 134360,
+          "end": 134700
+        },
+        {
+          "word": "/",
+          "begin": 135040,
+          "end": 135260
+        },
+        {
+          "word": "host",
+          "begin": 135300,
+          "end": 135740
+        },
+        {
+          "word": "writes.",
+          "begin": 136300,
+          "end": 137000
+        },
+        {
+          "word": "Run",
+          "begin": 137180,
+          "end": 137300
+        },
+        {
+          "word": "nvme",
+          "begin": 137420,
+          "end": 137440
+        },
+        {
+          "word": "smart-log",
+          "begin": 137720,
+          "end": 138200
+        },
+        {
+          "word": "/dev/nvme0",
+          "begin": 138360,
+          "end": 140260
+        },
+        {
+          "word": "and",
+          "begin": 140880,
+          "end": 140980
+        },
+        {
+          "word": "note",
+          "begin": 141020,
+          "end": 141280
+        },
+        {
+          "word": "the",
+          "begin": 141340,
+          "end": 141420
+        },
+        {
+          "word": "values",
+          "begin": 141340,
+          "end": 141720
+        },
+        {
+          "word": "before",
+          "begin": 141780,
+          "end": 142020
+        },
+        {
+          "word": "and",
+          "begin": 142220,
+          "end": 142320
+        },
+        {
+          "word": "after.",
+          "begin": 142420,
+          "end": 142680
+        }
+      ]
+    },
+    {
+      "blockIndex": 9,
+      "type": "reveal",
+      "text": "Knowledge check: An SSD benchmark reports 100 GB of host writes but the SSD's internal NAND write counter shows 300 GB. Derive the Write Amplification Factor and explain what's causing the extra writes. The answer: WAF = NAND writes / Host writes = 300 GB / 100 GB = 3.0. The extra 200 GB comes from garbage collection: when the SSD needs to reclaim blocks, it must read valid pages from partially-empty blocks, write them to new blocks, then erase the old blocks. Each GC cycle amplifies writes. Other contributors include metadata updates, wear-leveling page moves, and write-ahead logging in the FTL. A WAF of 3 means the NAND is wearing out 3x faster than the host workload alone would suggest.",
+      "beginMs": 143140,
+      "endMs": 191220,
+      "timestamps": [
+        {
+          "word": "Knowledge",
+          "begin": 143140,
+          "end": 143360
+        },
+        {
+          "word": "check:",
+          "begin": 143440,
+          "end": 143880
+        },
+        {
+          "word": "An",
+          "begin": 144200,
+          "end": 144280
+        },
+        {
+          "word": "SSD",
+          "begin": 144360,
+          "end": 144820
+        },
+        {
+          "word": "benchmark",
+          "begin": 144920,
+          "end": 145420
+        },
+        {
+          "word": "reports",
+          "begin": 145480,
+          "end": 146080
+        },
+        {
+          "word": "100",
+          "begin": 146120,
+          "end": 146380
+        },
+        {
+          "word": "GB",
+          "begin": 146420,
+          "end": 146880
+        },
+        {
+          "word": "of",
+          "begin": 146920,
+          "end": 146980
+        },
+        {
+          "word": "host",
+          "begin": 147020,
+          "end": 147300
+        },
+        {
+          "word": "writes",
+          "begin": 147340,
+          "end": 147660
+        },
+        {
+          "word": "but",
+          "begin": 147920,
+          "end": 148040
+        },
+        {
+          "word": "the",
+          "begin": 148040,
+          "end": 148080
+        },
+        {
+          "word": "SSD's",
+          "begin": 148200,
+          "end": 148780
+        },
+        {
+          "word": "internal",
+          "begin": 148820,
+          "end": 149180
+        },
+        {
+          "word": "NAND",
+          "begin": 149280,
+          "end": 149500
+        },
+        {
+          "word": "write",
+          "begin": 149540,
+          "end": 149700
+        },
+        {
+          "word": "counter",
+          "begin": 149740,
+          "end": 150000
+        },
+        {
+          "word": "shows",
+          "begin": 150140,
+          "end": 150560
+        },
+        {
+          "word": "300",
+          "begin": 150660,
+          "end": 150920
+        },
+        {
+          "word": "GB.",
+          "begin": 150960,
+          "end": 151520
+        },
+        {
+          "word": "Derive",
+          "begin": 151840,
+          "end": 152240
+        },
+        {
+          "word": "the",
+          "begin": 152280,
+          "end": 152340
+        },
+        {
+          "word": "Write",
+          "begin": 152400,
+          "end": 152600
+        },
+        {
+          "word": "Amplification",
+          "begin": 152700,
+          "end": 153380
+        },
+        {
+          "word": "Factor",
+          "begin": 153460,
+          "end": 153760
+        },
+        {
+          "word": "and",
+          "begin": 153900,
+          "end": 153980
+        },
+        {
+          "word": "explain",
+          "begin": 153980,
+          "end": 154440
+        },
+        {
+          "word": "what's",
+          "begin": 154480,
+          "end": 154620
+        },
+        {
+          "word": "causing",
+          "begin": 154680,
+          "end": 155060
+        },
+        {
+          "word": "the",
+          "begin": 155080,
+          "end": 155140
+        },
+        {
+          "word": "extra",
+          "begin": 155220,
+          "end": 155480
+        },
+        {
+          "word": "writes.",
+          "begin": 155560,
+          "end": 155940
+        },
+        {
+          "word": "The",
+          "begin": 156280,
+          "end": 156340
+        },
+        {
+          "word": "answer:",
+          "begin": 156460,
+          "end": 157560
+        },
+        {
+          "word": "WAF",
+          "begin": 157720,
+          "end": 157920
+        },
+        {
+          "word": "=",
+          "begin": 158000,
+          "end": 158360
+        },
+        {
+          "word": "NAND",
+          "begin": 158480,
+          "end": 158880
+        },
+        {
+          "word": "writes",
+          "begin": 159420,
+          "end": 160140
+        },
+        {
+          "word": "/",
+          "begin": 160280,
+          "end": 160660
+        },
+        {
+          "word": "Host",
+          "begin": 160900,
+          "end": 161180
+        },
+        {
+          "word": "writes",
+          "begin": 161240,
+          "end": 161540
+        },
+        {
+          "word": "=",
+          "begin": 161660,
+          "end": 162240
+        },
+        {
+          "word": "300",
+          "begin": 162320,
+          "end": 162600
+        },
+        {
+          "word": "GB",
+          "begin": 162600,
+          "end": 162940
+        },
+        {
+          "word": "/",
+          "begin": 163420,
+          "end": 163560
+        },
+        {
+          "word": "100",
+          "begin": 163600,
+          "end": 163860
+        },
+        {
+          "word": "GB",
+          "begin": 163860,
+          "end": 164960
+        },
+        {
+          "word": "=",
+          "begin": 165060,
+          "end": 165300
+        },
+        {
+          "word": "3.0.",
+          "begin": 165360,
+          "end": 166140
+        },
+        {
+          "word": "The",
+          "begin": 166220,
+          "end": 166240
+        },
+        {
+          "word": "extra",
+          "begin": 166260,
+          "end": 166560
+        },
+        {
+          "word": "200",
+          "begin": 166660,
+          "end": 166920
+        },
+        {
+          "word": "GB",
+          "begin": 166920,
+          "end": 167260
+        },
+        {
+          "word": "comes",
+          "begin": 167420,
+          "end": 167640
+        },
+        {
+          "word": "from",
+          "begin": 167680,
+          "end": 167800
+        },
+        {
+          "word": "garbage",
+          "begin": 167860,
+          "end": 168160
+        },
+        {
+          "word": "collection:",
+          "begin": 168240,
+          "end": 168700
+        },
+        {
+          "word": "when",
+          "begin": 169020,
+          "end": 169680
+        },
+        {
+          "word": "the",
+          "begin": 169740,
+          "end": 169820
+        },
+        {
+          "word": "needs",
+          "begin": 169940,
+          "end": 170140
+        },
+        {
+          "word": "to",
+          "begin": 170180,
+          "end": 170240
+        },
+        {
+          "word": "reclaim",
+          "begin": 170300,
+          "end": 170660
+        },
+        {
+          "word": "blocks,",
+          "begin": 170700,
+          "end": 171140
+        },
+        {
+          "word": "it",
+          "begin": 171440,
+          "end": 171500
+        },
+        {
+          "word": "must",
+          "begin": 171520,
+          "end": 171720
+        },
+        {
+          "word": "read",
+          "begin": 171760,
+          "end": 171940
+        },
+        {
+          "word": "valid",
+          "begin": 172000,
+          "end": 172280
+        },
+        {
+          "word": "pages",
+          "begin": 172320,
+          "end": 172700
+        },
+        {
+          "word": "from",
+          "begin": 172740,
+          "end": 172860
+        },
+        {
+          "word": "partially-empty",
+          "begin": 172900,
+          "end": 173600
+        },
+        {
+          "word": "blocks,",
+          "begin": 173680,
+          "end": 174080
+        },
+        {
+          "word": "write",
+          "begin": 174460,
+          "end": 174660
+        },
+        {
+          "word": "them",
+          "begin": 174660,
+          "end": 174780
+        },
+        {
+          "word": "to",
+          "begin": 174840,
+          "end": 174900
+        },
+        {
+          "word": "new",
+          "begin": 174980,
+          "end": 175060
+        },
+        {
+          "word": "blocks,",
+          "begin": 175180,
+          "end": 175620
+        },
+        {
+          "word": "then",
+          "begin": 175800,
+          "end": 175960
+        },
+        {
+          "word": "erase",
+          "begin": 176000,
+          "end": 176320
+        },
+        {
+          "word": "the",
+          "begin": 176380,
+          "end": 176440
+        },
+        {
+          "word": "old",
+          "begin": 176520,
+          "end": 176660
+        },
+        {
+          "word": "blocks.",
+          "begin": 176720,
+          "end": 177140
+        },
+        {
+          "word": "Each",
+          "begin": 177520,
+          "end": 177820
+        },
+        {
+          "word": "GC",
+          "begin": 177880,
+          "end": 178120
+        },
+        {
+          "word": "cycle",
+          "begin": 178260,
+          "end": 178560
+        },
+        {
+          "word": "amplifies",
+          "begin": 178780,
+          "end": 179300
+        },
+        {
+          "word": "writes.",
+          "begin": 179360,
+          "end": 179720
+        },
+        {
+          "word": "Other",
+          "begin": 180080,
+          "end": 180200
+        },
+        {
+          "word": "contributors",
+          "begin": 180300,
+          "end": 180880
+        },
+        {
+          "word": "include",
+          "begin": 180920,
+          "end": 181280
+        },
+        {
+          "word": "metadata",
+          "begin": 181340,
+          "end": 181780
+        },
+        {
+          "word": "updates,",
+          "begin": 181880,
+          "end": 182380
+        },
+        {
+          "word": "wear-leveling",
+          "begin": 182560,
+          "end": 183100
+        },
+        {
+          "word": "page",
+          "begin": 183160,
+          "end": 183420
+        },
+        {
+          "word": "moves,",
+          "begin": 183480,
+          "end": 183780
+        },
+        {
+          "word": "and",
+          "begin": 183880,
+          "end": 183980
+        },
+        {
+          "word": "write-ahead",
+          "begin": 184040,
+          "end": 184460
+        },
+        {
+          "word": "logging",
+          "begin": 184500,
+          "end": 184720
+        },
+        {
+          "word": "in",
+          "begin": 184740,
+          "end": 184820
+        },
+        {
+          "word": "the",
+          "begin": 184820,
+          "end": 185000
+        },
+        {
+          "word": "FTL.",
+          "begin": 185080,
+          "end": 185580
+        },
+        {
+          "word": "A",
+          "begin": 185800,
+          "end": 185820
+        },
+        {
+          "word": "WAF",
+          "begin": 185900,
+          "end": 186160
+        },
+        {
+          "word": "of",
+          "begin": 186200,
+          "end": 186300
+        },
+        {
+          "word": "3",
+          "begin": 186380,
+          "end": 186540
+        },
+        {
+          "word": "means",
+          "begin": 186860,
+          "end": 187080
+        },
+        {
+          "word": "the",
+          "begin": 187120,
+          "end": 187180
+        },
+        {
+          "word": "NAND",
+          "begin": 187240,
+          "end": 187480
+        },
+        {
+          "word": "is",
+          "begin": 187500,
+          "end": 187580
+        },
+        {
+          "word": "wearing",
+          "begin": 187640,
+          "end": 187900
+        },
+        {
+          "word": "out",
+          "begin": 187940,
+          "end": 188260
+        },
+        {
+          "word": "3x",
+          "begin": 188360,
+          "end": 188640
+        },
+        {
+          "word": "faster",
+          "begin": 188700,
+          "end": 189040
+        },
+        {
+          "word": "than",
+          "begin": 189120,
+          "end": 189240
+        },
+        {
+          "word": "the",
+          "begin": 189240,
+          "end": 189300
+        },
+        {
+          "word": "host",
+          "begin": 189360,
+          "end": 189620
+        },
+        {
+          "word": "workload",
+          "begin": 189660,
+          "end": 190260
+        },
+        {
+          "word": "alone",
+          "begin": 190300,
+          "end": 190640
+        },
+        {
+          "word": "would",
+          "begin": 190680,
+          "end": 190800
+        },
+        {
+          "word": "suggest.",
+          "begin": 190680,
+          "end": 191220
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

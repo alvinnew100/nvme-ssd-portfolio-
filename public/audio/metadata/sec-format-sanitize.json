@@ -1,0 +1,2773 @@
+{
+  "sectionId": "sec-format-sanitize",
+  "audioFile": "/audio/sections/sec-format-sanitize.mp3",
+  "totalDurationMs": 237920,
+  "fileSizeBytes": 3807360,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "Erasing the Drive — Format NVM vs Sanitize",
+      "beginMs": 40,
+      "endMs": 3400,
+      "timestamps": [
+        {
+          "word": "Erasing",
+          "begin": 40,
+          "end": 460
+        },
+        {
+          "word": "the",
+          "begin": 480,
+          "end": 540
+        },
+        {
+          "word": "Drive",
+          "begin": 600,
+          "end": 960
+        },
+        {
+          "word": "Format",
+          "begin": 960,
+          "end": 1580
+        },
+        {
+          "word": "NVM",
+          "begin": 1640,
+          "end": 2060
+        },
+        {
+          "word": "vs",
+          "begin": 2120,
+          "end": 2420
+        },
+        {
+          "word": "Sanitize",
+          "begin": 2480,
+          "end": 2960
+        },
+        {
+          "word": "Analogy:",
+          "begin": 2960,
+          "end": 3400
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: Format vs Sanitize: Quick Clean vs Deep Clean. Format NVM is like reformatting a USB drive — it resets the namespace's LBA mapping and optionally erases user data. It's fast but may leave data recoverable in NAND. Sanitize is a deep clean that cryptographically or physically destroys all data — including unmapped pages and overprovisioned space. Use Format for routine resets, Sanitize when data must be irrecoverable.",
+      "beginMs": 3780,
+      "endMs": 30000,
+      "timestamps": [
+        {
+          "word": "Format",
+          "begin": 3780,
+          "end": 4080
+        },
+        {
+          "word": "vs",
+          "begin": 4080,
+          "end": 4400
+        },
+        {
+          "word": "Sanitize:",
+          "begin": 4460,
+          "end": 5060
+        },
+        {
+          "word": "Quick",
+          "begin": 5320,
+          "end": 5500
+        },
+        {
+          "word": "Clean",
+          "begin": 5520,
+          "end": 5780
+        },
+        {
+          "word": "vs",
+          "begin": 5780,
+          "end": 6140
+        },
+        {
+          "word": "Deep",
+          "begin": 6200,
+          "end": 6380
+        },
+        {
+          "word": "Clean.",
+          "begin": 6440,
+          "end": 6720
+        },
+        {
+          "word": "Format",
+          "begin": 7040,
+          "end": 7360
+        },
+        {
+          "word": "NVM",
+          "begin": 7420,
+          "end": 7860
+        },
+        {
+          "word": "is",
+          "begin": 7880,
+          "end": 7980
+        },
+        {
+          "word": "like",
+          "begin": 8000,
+          "end": 8140
+        },
+        {
+          "word": "reformatting",
+          "begin": 8220,
+          "end": 8820
+        },
+        {
+          "word": "a",
+          "begin": 8840,
+          "end": 8880
+        },
+        {
+          "word": "USB",
+          "begin": 8940,
+          "end": 9320
+        },
+        {
+          "word": "drive",
+          "begin": 9400,
+          "end": 9740
+        },
+        {
+          "word": "it",
+          "begin": 9960,
+          "end": 10040
+        },
+        {
+          "word": "resets",
+          "begin": 10120,
+          "end": 10540
+        },
+        {
+          "word": "the",
+          "begin": 10540,
+          "end": 10660
+        },
+        {
+          "word": "namespace's",
+          "begin": 10700,
+          "end": 11300
+        },
+        {
+          "word": "LBA",
+          "begin": 11380,
+          "end": 11660
+        },
+        {
+          "word": "mapping",
+          "begin": 11760,
+          "end": 12160
+        },
+        {
+          "word": "and",
+          "begin": 12420,
+          "end": 12500
+        },
+        {
+          "word": "optionally",
+          "begin": 12600,
+          "end": 13020
+        },
+        {
+          "word": "erases",
+          "begin": 13140,
+          "end": 13620
+        },
+        {
+          "word": "user",
+          "begin": 13640,
+          "end": 13860
+        },
+        {
+          "word": "data.",
+          "begin": 13940,
+          "end": 14140
+        },
+        {
+          "word": "It's",
+          "begin": 14400,
+          "end": 14500
+        },
+        {
+          "word": "fast",
+          "begin": 14600,
+          "end": 14920
+        },
+        {
+          "word": "but",
+          "begin": 14980,
+          "end": 15080
+        },
+        {
+          "word": "may",
+          "begin": 15080,
+          "end": 15200
+        },
+        {
+          "word": "leave",
+          "begin": 15340,
+          "end": 15500
+        },
+        {
+          "word": "data",
+          "begin": 15540,
+          "end": 15720
+        },
+        {
+          "word": "recoverable",
+          "begin": 15780,
+          "end": 16280
+        },
+        {
+          "word": "in",
+          "begin": 16400,
+          "end": 16480
+        },
+        {
+          "word": "NAND.",
+          "begin": 16540,
+          "end": 16920
+        },
+        {
+          "word": "Sanitize",
+          "begin": 17280,
+          "end": 17800
+        },
+        {
+          "word": "is",
+          "begin": 17800,
+          "end": 17440
+        },
+        {
+          "word": "a",
+          "begin": 17440,
+          "end": 17480
+        },
+        {
+          "word": "deep",
+          "begin": 17540,
+          "end": 17800
+        },
+        {
+          "word": "clean",
+          "begin": 17800,
+          "end": 17980
+        },
+        {
+          "word": "that",
+          "begin": 18080,
+          "end": 18260
+        },
+        {
+          "word": "cryptographically",
+          "begin": 18320,
+          "end": 19040
+        },
+        {
+          "word": "or",
+          "begin": 19100,
+          "end": 19160
+        },
+        {
+          "word": "physically",
+          "begin": 19180,
+          "end": 19720
+        },
+        {
+          "word": "destroys",
+          "begin": 19880,
+          "end": 20340
+        },
+        {
+          "word": "all",
+          "begin": 20340,
+          "end": 20460
+        },
+        {
+          "word": "data",
+          "begin": 20500,
+          "end": 21260
+        },
+        {
+          "word": "including",
+          "begin": 21600,
+          "end": 21980
+        },
+        {
+          "word": "unmapped",
+          "begin": 22080,
+          "end": 22400
+        },
+        {
+          "word": "pages",
+          "begin": 22420,
+          "end": 22900
+        },
+        {
+          "word": "and",
+          "begin": 22960,
+          "end": 23060
+        },
+        {
+          "word": "overprovisioned",
+          "begin": 23140,
+          "end": 23780
+        },
+        {
+          "word": "space.",
+          "begin": 23860,
+          "end": 24260
+        },
+        {
+          "word": "Use",
+          "begin": 24460,
+          "end": 24660
+        },
+        {
+          "word": "Format",
+          "begin": 24740,
+          "end": 25080
+        },
+        {
+          "word": "for",
+          "begin": 25120,
+          "end": 25200
+        },
+        {
+          "word": "routine",
+          "begin": 25280,
+          "end": 25620
+        },
+        {
+          "word": "resets,",
+          "begin": 25660,
+          "end": 26220
+        },
+        {
+          "word": "Sanitize",
+          "begin": 26540,
+          "end": 27120
+        },
+        {
+          "word": "when",
+          "begin": 27140,
+          "end": 27260
+        },
+        {
+          "word": "data",
+          "begin": 27320,
+          "end": 27520
+        },
+        {
+          "word": "must",
+          "begin": 27580,
+          "end": 27760
+        },
+        {
+          "word": "be",
+          "begin": 27800,
+          "end": 27840
+        },
+        {
+          "word": "irrecoverable.",
+          "begin": 27980,
+          "end": 28600
+        },
+        {
+          "word": "Format",
+          "begin": 29060,
+          "end": 29420
+        },
+        {
+          "word": "NVM:",
+          "begin": 29500,
+          "end": 30000
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "term",
+      "text": "Format NVM: An admin command that resets a namespace — changes block size, metadata format, or protection settings. Can optionally erase user data, but doesn't guarantee all physical NAND is wiped.",
+      "beginMs": 30340,
+      "endMs": 42040,
+      "timestamps": [
+        {
+          "word": "An",
+          "begin": 30340,
+          "end": 30420
+        },
+        {
+          "word": "admin",
+          "begin": 30520,
+          "end": 30780
+        },
+        {
+          "word": "command",
+          "begin": 30840,
+          "end": 31200
+        },
+        {
+          "word": "that",
+          "begin": 31240,
+          "end": 31360
+        },
+        {
+          "word": "resets",
+          "begin": 31380,
+          "end": 31760
+        },
+        {
+          "word": "a",
+          "begin": 31400,
+          "end": 31440
+        },
+        {
+          "word": "namespace",
+          "begin": 31560,
+          "end": 32159
+        },
+        {
+          "word": "changes",
+          "begin": 32220,
+          "end": 33100
+        },
+        {
+          "word": "block",
+          "begin": 33180,
+          "end": 33420
+        },
+        {
+          "word": "size,",
+          "begin": 33500,
+          "end": 33860
+        },
+        {
+          "word": "metadata",
+          "begin": 34140,
+          "end": 34540
+        },
+        {
+          "word": "format,",
+          "begin": 34640,
+          "end": 35080
+        },
+        {
+          "word": "or",
+          "begin": 35360,
+          "end": 35380
+        },
+        {
+          "word": "protection",
+          "begin": 35520,
+          "end": 35960
+        },
+        {
+          "word": "settings.",
+          "begin": 36040,
+          "end": 36480
+        },
+        {
+          "word": "Can",
+          "begin": 36680,
+          "end": 36800
+        },
+        {
+          "word": "optionally",
+          "begin": 36880,
+          "end": 37280
+        },
+        {
+          "word": "erase",
+          "begin": 37280,
+          "end": 37720
+        },
+        {
+          "word": "user",
+          "begin": 37760,
+          "end": 37980
+        },
+        {
+          "word": "data,",
+          "begin": 38080,
+          "end": 38300
+        },
+        {
+          "word": "but",
+          "begin": 38640,
+          "end": 38740
+        },
+        {
+          "word": "doesn't",
+          "begin": 38760,
+          "end": 39000
+        },
+        {
+          "word": "guarantee",
+          "begin": 39060,
+          "end": 39420
+        },
+        {
+          "word": "all",
+          "begin": 39620,
+          "end": 39720
+        },
+        {
+          "word": "physical",
+          "begin": 39820,
+          "end": 40120
+        },
+        {
+          "word": "NAND",
+          "begin": 40220,
+          "end": 40460
+        },
+        {
+          "word": "is",
+          "begin": 40480,
+          "end": 40580
+        },
+        {
+          "word": "wiped.",
+          "begin": 40640,
+          "end": 40980
+        },
+        {
+          "word": "Sanitize:",
+          "begin": 41380,
+          "end": 42040
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "term",
+      "text": "Sanitize: An admin command that irreversibly destroys ALL data on the entire SSD — including unmapped areas, spare blocks, and controller caches. Three methods: Block Erase (NAND erase all blocks), Crypto Erase (destroy encryption key), Overwrite (write pattern to all locations).",
+      "beginMs": 42320,
+      "endMs": 59840,
+      "timestamps": [
+        {
+          "word": "An",
+          "begin": 42320,
+          "end": 42400
+        },
+        {
+          "word": "admin",
+          "begin": 42480,
+          "end": 42760
+        },
+        {
+          "word": "command",
+          "begin": 42820,
+          "end": 43200
+        },
+        {
+          "word": "that",
+          "begin": 43240,
+          "end": 43360
+        },
+        {
+          "word": "irreversibly",
+          "begin": 43440,
+          "end": 44080
+        },
+        {
+          "word": "destroys",
+          "begin": 44160,
+          "end": 44420
+        },
+        {
+          "word": "ALL",
+          "begin": 44420,
+          "end": 44440
+        },
+        {
+          "word": "data",
+          "begin": 44620,
+          "end": 45140
+        },
+        {
+          "word": "on",
+          "begin": 45180,
+          "end": 45300
+        },
+        {
+          "word": "the",
+          "begin": 45320,
+          "end": 45340
+        },
+        {
+          "word": "entire",
+          "begin": 45480,
+          "end": 46120
+        },
+        {
+          "word": "SSD",
+          "begin": 46240,
+          "end": 46700
+        },
+        {
+          "word": "including",
+          "begin": 47120,
+          "end": 47540
+        },
+        {
+          "word": "unmapped",
+          "begin": 47660,
+          "end": 48040
+        },
+        {
+          "word": "areas,",
+          "begin": 48140,
+          "end": 48400
+        },
+        {
+          "word": "spare",
+          "begin": 48860,
+          "end": 49020
+        },
+        {
+          "word": "blocks,",
+          "begin": 49180,
+          "end": 49600
+        },
+        {
+          "word": "and",
+          "begin": 49880,
+          "end": 49960
+        },
+        {
+          "word": "controller",
+          "begin": 50020,
+          "end": 50440
+        },
+        {
+          "word": "caches.",
+          "begin": 50540,
+          "end": 51080
+        },
+        {
+          "word": "Three",
+          "begin": 51240,
+          "end": 51360
+        },
+        {
+          "word": "methods:",
+          "begin": 51480,
+          "end": 51960
+        },
+        {
+          "word": "Block",
+          "begin": 52260,
+          "end": 52540
+        },
+        {
+          "word": "Erase",
+          "begin": 52580,
+          "end": 52880
+        },
+        {
+          "word": "(NAND",
+          "begin": 52960,
+          "end": 53280
+        },
+        {
+          "word": "erase",
+          "begin": 53360,
+          "end": 53700
+        },
+        {
+          "word": "all",
+          "begin": 53740,
+          "end": 53840
+        },
+        {
+          "word": "blocks),",
+          "begin": 53920,
+          "end": 54340
+        },
+        {
+          "word": "Crypto",
+          "begin": 54580,
+          "end": 54860
+        },
+        {
+          "word": "Erase",
+          "begin": 54980,
+          "end": 55360
+        },
+        {
+          "word": "(destroy",
+          "begin": 55360,
+          "end": 55780
+        },
+        {
+          "word": "encryption",
+          "begin": 55820,
+          "end": 56280
+        },
+        {
+          "word": "key),",
+          "begin": 56360,
+          "end": 56460
+        },
+        {
+          "word": "Overwrite",
+          "begin": 56880,
+          "end": 57340
+        },
+        {
+          "word": "(write",
+          "begin": 57400,
+          "end": 57600
+        },
+        {
+          "word": "pattern",
+          "begin": 57660,
+          "end": 58000
+        },
+        {
+          "word": "to",
+          "begin": 58040,
+          "end": 58120
+        },
+        {
+          "word": "all",
+          "begin": 58240,
+          "end": 58340
+        },
+        {
+          "word": "locations).",
+          "begin": 58400,
+          "end": 59100
+        },
+        {
+          "word": "Sometimes",
+          "begin": 59320,
+          "end": 59840
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "Sometimes you need to erase an SSD — maybe you're repurposing it, returning it, or decommissioning it from a secure environment. NVMe provides two commands for this, and they're very different:",
+      "beginMs": 59860,
+      "endMs": 70480,
+      "timestamps": [
+        {
+          "word": "you",
+          "begin": 59860,
+          "end": 59920
+        },
+        {
+          "word": "need",
+          "begin": 59980,
+          "end": 60100
+        },
+        {
+          "word": "to",
+          "begin": 60140,
+          "end": 60220
+        },
+        {
+          "word": "erase",
+          "begin": 60280,
+          "end": 60940
+        },
+        {
+          "word": "an",
+          "begin": 60980,
+          "end": 61140
+        },
+        {
+          "word": "SSD",
+          "begin": 61200,
+          "end": 61280
+        },
+        {
+          "word": "maybe",
+          "begin": 61720,
+          "end": 61920
+        },
+        {
+          "word": "you're",
+          "begin": 61960,
+          "end": 62040
+        },
+        {
+          "word": "repurposing",
+          "begin": 62120,
+          "end": 62760
+        },
+        {
+          "word": "it,",
+          "begin": 62800,
+          "end": 62940
+        },
+        {
+          "word": "returning",
+          "begin": 63140,
+          "end": 63600
+        },
+        {
+          "word": "it,",
+          "begin": 63640,
+          "end": 63800
+        },
+        {
+          "word": "or",
+          "begin": 64000,
+          "end": 64019
+        },
+        {
+          "word": "decommissioning",
+          "begin": 64180,
+          "end": 64879
+        },
+        {
+          "word": "it",
+          "begin": 64920,
+          "end": 65040
+        },
+        {
+          "word": "from",
+          "begin": 65099,
+          "end": 65220
+        },
+        {
+          "word": "a",
+          "begin": 65239,
+          "end": 65260
+        },
+        {
+          "word": "secure",
+          "begin": 65340,
+          "end": 65700
+        },
+        {
+          "word": "environment.",
+          "begin": 65720,
+          "end": 66280
+        },
+        {
+          "word": "NVMe",
+          "begin": 66560,
+          "end": 67300
+        },
+        {
+          "word": "provides",
+          "begin": 67460,
+          "end": 67860
+        },
+        {
+          "word": "two",
+          "begin": 67940,
+          "end": 68040
+        },
+        {
+          "word": "commands",
+          "begin": 68140,
+          "end": 68540
+        },
+        {
+          "word": "for",
+          "begin": 68580,
+          "end": 68720
+        },
+        {
+          "word": "this,",
+          "begin": 68720,
+          "end": 68980
+        },
+        {
+          "word": "and",
+          "begin": 69280,
+          "end": 69400
+        },
+        {
+          "word": "they're",
+          "begin": 69400,
+          "end": 69460
+        },
+        {
+          "word": "very",
+          "begin": 69600,
+          "end": 69820
+        },
+        {
+          "word": "different:",
+          "begin": 69900,
+          "end": 70220
+        },
+        {
+          "word": "Why",
+          "begin": 70220,
+          "end": 70480
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "Why two commands? Because &ldquo;erase&rdquo; means different things in different contexts. Reformatting a namespace is like wiping a whiteboard — quick and convenient, but forensic experts might still recover the data. Sanitize is like shredding the whiteboard — the data is cryptographically or physically destroyed.",
+      "beginMs": 70640,
+      "endMs": 90840,
+      "timestamps": [
+        {
+          "word": "two",
+          "begin": 70640,
+          "end": 70700
+        },
+        {
+          "word": "commands?",
+          "begin": 70780,
+          "end": 71240
+        },
+        {
+          "word": "Because",
+          "begin": 71440,
+          "end": 74180
+        },
+        {
+          "word": "&ldquo;erase&rdquo;",
+          "begin": 74220,
+          "end": 75580
+        },
+        {
+          "word": "means",
+          "begin": 76020,
+          "end": 76260
+        },
+        {
+          "word": "different",
+          "begin": 76320,
+          "end": 76580
+        },
+        {
+          "word": "things",
+          "begin": 76580,
+          "end": 76960
+        },
+        {
+          "word": "in",
+          "begin": 77000,
+          "end": 77040
+        },
+        {
+          "word": "different",
+          "begin": 77060,
+          "end": 77420
+        },
+        {
+          "word": "contexts.",
+          "begin": 77480,
+          "end": 78160
+        },
+        {
+          "word": "Reformatting",
+          "begin": 78180,
+          "end": 78700
+        },
+        {
+          "word": "a",
+          "begin": 78740,
+          "end": 78920
+        },
+        {
+          "word": "namespace",
+          "begin": 78980,
+          "end": 79240
+        },
+        {
+          "word": "is",
+          "begin": 79280,
+          "end": 79500
+        },
+        {
+          "word": "like",
+          "begin": 79560,
+          "end": 80140
+        },
+        {
+          "word": "wiping",
+          "begin": 80180,
+          "end": 80480
+        },
+        {
+          "word": "a",
+          "begin": 80500,
+          "end": 80620
+        },
+        {
+          "word": "whiteboard",
+          "begin": 80620,
+          "end": 81120
+        },
+        {
+          "word": "quick",
+          "begin": 81400,
+          "end": 81620
+        },
+        {
+          "word": "and",
+          "begin": 81720,
+          "end": 81860
+        },
+        {
+          "word": "convenient,",
+          "begin": 81880,
+          "end": 82380
+        },
+        {
+          "word": "but",
+          "begin": 82600,
+          "end": 82700
+        },
+        {
+          "word": "forensic",
+          "begin": 82760,
+          "end": 83180
+        },
+        {
+          "word": "experts",
+          "begin": 83240,
+          "end": 83680
+        },
+        {
+          "word": "might",
+          "begin": 83740,
+          "end": 83920
+        },
+        {
+          "word": "still",
+          "begin": 83980,
+          "end": 84180
+        },
+        {
+          "word": "recover",
+          "begin": 84240,
+          "end": 84660
+        },
+        {
+          "word": "the",
+          "begin": 84740,
+          "end": 84820
+        },
+        {
+          "word": "data.",
+          "begin": 84740,
+          "end": 84980
+        },
+        {
+          "word": "Sanitize",
+          "begin": 85360,
+          "end": 85960
+        },
+        {
+          "word": "is",
+          "begin": 86000,
+          "end": 86100
+        },
+        {
+          "word": "like",
+          "begin": 86120,
+          "end": 86280
+        },
+        {
+          "word": "shredding",
+          "begin": 86340,
+          "end": 86620
+        },
+        {
+          "word": "the",
+          "begin": 86360,
+          "end": 86460
+        },
+        {
+          "word": "whiteboard",
+          "begin": 86500,
+          "end": 86900
+        },
+        {
+          "word": "the",
+          "begin": 86900,
+          "end": 87060
+        },
+        {
+          "word": "data",
+          "begin": 87240,
+          "end": 87680
+        },
+        {
+          "word": "is",
+          "begin": 87700,
+          "end": 87820
+        },
+        {
+          "word": "cryptographically",
+          "begin": 87840,
+          "end": 88500
+        },
+        {
+          "word": "or",
+          "begin": 88620,
+          "end": 88680
+        },
+        {
+          "word": "physically",
+          "begin": 88620,
+          "end": 89220
+        },
+        {
+          "word": "destroyed.",
+          "begin": 89280,
+          "end": 89580
+        },
+        {
+          "word": "Reformats",
+          "begin": 89580,
+          "end": 90620
+        },
+        {
+          "word": "a",
+          "begin": 90640,
+          "end": 90840
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "Reformats a single namespace (or all). Can change the LBA size (e.g., switch from 512-byte to 4KB sectors). Optionally performs a secure erase — but only at the namespace level.",
+      "beginMs": 90920,
+      "endMs": 104120,
+      "timestamps": [
+        {
+          "word": "single",
+          "begin": 90920,
+          "end": 91460
+        },
+        {
+          "word": "namespace",
+          "begin": 91480,
+          "end": 92200
+        },
+        {
+          "word": "(or",
+          "begin": 92300,
+          "end": 92320
+        },
+        {
+          "word": "all).",
+          "begin": 92500,
+          "end": 92700
+        },
+        {
+          "word": "Can",
+          "begin": 93040,
+          "end": 93140
+        },
+        {
+          "word": "change",
+          "begin": 93140,
+          "end": 93620
+        },
+        {
+          "word": "the",
+          "begin": 93620,
+          "end": 93680
+        },
+        {
+          "word": "LBA",
+          "begin": 93820,
+          "end": 94140
+        },
+        {
+          "word": "size",
+          "begin": 94340,
+          "end": 94700
+        },
+        {
+          "word": "(e.g.,",
+          "begin": 94840,
+          "end": 95300
+        },
+        {
+          "word": "switch",
+          "begin": 95880,
+          "end": 96360
+        },
+        {
+          "word": "from",
+          "begin": 96480,
+          "end": 96740
+        },
+        {
+          "word": "512-byte",
+          "begin": 96760,
+          "end": 97580
+        },
+        {
+          "word": "to",
+          "begin": 97620,
+          "end": 97680
+        },
+        {
+          "word": "4KB",
+          "begin": 97800,
+          "end": 98460
+        },
+        {
+          "word": "sectors).",
+          "begin": 98540,
+          "end": 99080
+        },
+        {
+          "word": "Optionally",
+          "begin": 99520,
+          "end": 99940
+        },
+        {
+          "word": "performs",
+          "begin": 100000,
+          "end": 100480
+        },
+        {
+          "word": "a",
+          "begin": 100520,
+          "end": 100560
+        },
+        {
+          "word": "secure",
+          "begin": 100620,
+          "end": 101120
+        },
+        {
+          "word": "erase",
+          "begin": 101160,
+          "end": 101460
+        },
+        {
+          "word": "but",
+          "begin": 101680,
+          "end": 101780
+        },
+        {
+          "word": "only",
+          "begin": 101880,
+          "end": 102080
+        },
+        {
+          "word": "at",
+          "begin": 102180,
+          "end": 102300
+        },
+        {
+          "word": "the",
+          "begin": 102300,
+          "end": 102340
+        },
+        {
+          "word": "namespace",
+          "begin": 102420,
+          "end": 103040
+        },
+        {
+          "word": "level.",
+          "begin": 103040,
+          "end": 103980
+        },
+        {
+          "word": "A",
+          "begin": 104060,
+          "end": 104120
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "A controller-level operation that guarantees all user data across all namespaces is irrecoverable. Cannot be aborted once started. Required for government/military decommissioning (NIST 800-88).",
+      "beginMs": 104060,
+      "endMs": 119580,
+      "timestamps": [
+        {
+          "word": "controller-level",
+          "begin": 104060,
+          "end": 104820
+        },
+        {
+          "word": "operation",
+          "begin": 104900,
+          "end": 105460
+        },
+        {
+          "word": "that",
+          "begin": 105520,
+          "end": 105620
+        },
+        {
+          "word": "guarantees",
+          "begin": 105680,
+          "end": 106260
+        },
+        {
+          "word": "all",
+          "begin": 106380,
+          "end": 106500
+        },
+        {
+          "word": "user",
+          "begin": 106580,
+          "end": 106800
+        },
+        {
+          "word": "data",
+          "begin": 106900,
+          "end": 107120
+        },
+        {
+          "word": "across",
+          "begin": 107240,
+          "end": 107600
+        },
+        {
+          "word": "all",
+          "begin": 107720,
+          "end": 107840
+        },
+        {
+          "word": "namespaces",
+          "begin": 107900,
+          "end": 108620
+        },
+        {
+          "word": "is",
+          "begin": 108720,
+          "end": 108820
+        },
+        {
+          "word": "irrecoverable.",
+          "begin": 108920,
+          "end": 109540
+        },
+        {
+          "word": "Cannot",
+          "begin": 112360,
+          "end": 112660
+        },
+        {
+          "word": "be",
+          "begin": 112700,
+          "end": 112760
+        },
+        {
+          "word": "aborted",
+          "begin": 112840,
+          "end": 113280
+        },
+        {
+          "word": "once",
+          "begin": 113360,
+          "end": 113600
+        },
+        {
+          "word": "started.",
+          "begin": 113640,
+          "end": 114080
+        },
+        {
+          "word": "Required",
+          "begin": 114440,
+          "end": 114960
+        },
+        {
+          "word": "for",
+          "begin": 115020,
+          "end": 115080
+        },
+        {
+          "word": "government/military",
+          "begin": 115180,
+          "end": 116300
+        },
+        {
+          "word": "decommissioning",
+          "begin": 116400,
+          "end": 117000
+        },
+        {
+          "word": "(NIST",
+          "begin": 117080,
+          "end": 117500
+        },
+        {
+          "word": "800-88).",
+          "begin": 117600,
+          "end": 119580
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "paragraph",
+      "text": "Self-encrypting drives (SED) encrypt all data with an internal AES key before writing it to NAND. Crypto Erase doesn't touch the NAND at all — it destroys the encryption key, making all stored data permanently unreadable gibberish. This is why it completes in under a second regardless of drive capacity. The physical NAND still contains encrypted ciphertext, but without the key it's indistinguishable from random data. Crypto Erase is sufficient for most commercial decommissioning; block erase or overwrite is required when regulations demand physical media sanitization.",
+      "beginMs": 122140,
+      "endMs": 157260,
+      "timestamps": [
+        {
+          "word": "Self-encrypting",
+          "begin": 122140,
+          "end": 122820
+        },
+        {
+          "word": "drives",
+          "begin": 122880,
+          "end": 123200
+        },
+        {
+          "word": "(SED)",
+          "begin": 123240,
+          "end": 124080
+        },
+        {
+          "word": "encrypt",
+          "begin": 124260,
+          "end": 124600
+        },
+        {
+          "word": "all",
+          "begin": 124300,
+          "end": 124320
+        },
+        {
+          "word": "data",
+          "begin": 124380,
+          "end": 124620
+        },
+        {
+          "word": "with",
+          "begin": 124720,
+          "end": 124940
+        },
+        {
+          "word": "an",
+          "begin": 124980,
+          "end": 125100
+        },
+        {
+          "word": "internal",
+          "begin": 125100,
+          "end": 125540
+        },
+        {
+          "word": "AES",
+          "begin": 125560,
+          "end": 125900
+        },
+        {
+          "word": "key",
+          "begin": 125920,
+          "end": 126100
+        },
+        {
+          "word": "before",
+          "begin": 126240,
+          "end": 127160
+        },
+        {
+          "word": "writing",
+          "begin": 127160,
+          "end": 127740
+        },
+        {
+          "word": "it",
+          "begin": 127760,
+          "end": 127820
+        },
+        {
+          "word": "to",
+          "begin": 127860,
+          "end": 127920
+        },
+        {
+          "word": "NAND.",
+          "begin": 128000,
+          "end": 128340
+        },
+        {
+          "word": "Crypto",
+          "begin": 128960,
+          "end": 129199
+        },
+        {
+          "word": "Erase",
+          "begin": 129300,
+          "end": 129600
+        },
+        {
+          "word": "doesn't",
+          "begin": 129660,
+          "end": 129900
+        },
+        {
+          "word": "touch",
+          "begin": 129940,
+          "end": 130240
+        },
+        {
+          "word": "the",
+          "begin": 130240,
+          "end": 130280
+        },
+        {
+          "word": "NAND",
+          "begin": 130340,
+          "end": 130580
+        },
+        {
+          "word": "at",
+          "begin": 130620,
+          "end": 130699
+        },
+        {
+          "word": "all",
+          "begin": 130740,
+          "end": 130919
+        },
+        {
+          "word": "it",
+          "begin": 131280,
+          "end": 131340
+        },
+        {
+          "word": "destroys",
+          "begin": 131380,
+          "end": 131860
+        },
+        {
+          "word": "the",
+          "begin": 131880,
+          "end": 131940
+        },
+        {
+          "word": "encryption",
+          "begin": 132000,
+          "end": 132460
+        },
+        {
+          "word": "key,",
+          "begin": 132540,
+          "end": 132640
+        },
+        {
+          "word": "making",
+          "begin": 133140,
+          "end": 133420
+        },
+        {
+          "word": "all",
+          "begin": 133540,
+          "end": 133660
+        },
+        {
+          "word": "stored",
+          "begin": 133760,
+          "end": 134160
+        },
+        {
+          "word": "data",
+          "begin": 134240,
+          "end": 134560
+        },
+        {
+          "word": "permanently",
+          "begin": 134640,
+          "end": 134920
+        },
+        {
+          "word": "unreadable",
+          "begin": 135060,
+          "end": 135500
+        },
+        {
+          "word": "gibberish.",
+          "begin": 135620,
+          "end": 136100
+        },
+        {
+          "word": "This",
+          "begin": 136720,
+          "end": 136860
+        },
+        {
+          "word": "is",
+          "begin": 136880,
+          "end": 136980
+        },
+        {
+          "word": "why",
+          "begin": 137020,
+          "end": 137100
+        },
+        {
+          "word": "it",
+          "begin": 137200,
+          "end": 137260
+        },
+        {
+          "word": "completes",
+          "begin": 137320,
+          "end": 137800
+        },
+        {
+          "word": "in",
+          "begin": 137880,
+          "end": 137960
+        },
+        {
+          "word": "under",
+          "begin": 138000,
+          "end": 138220
+        },
+        {
+          "word": "a",
+          "begin": 138220,
+          "end": 138240
+        },
+        {
+          "word": "second",
+          "begin": 138360,
+          "end": 138680
+        },
+        {
+          "word": "regardless",
+          "begin": 138720,
+          "end": 139380
+        },
+        {
+          "word": "of",
+          "begin": 139400,
+          "end": 139460
+        },
+        {
+          "word": "drive",
+          "begin": 139520,
+          "end": 139760
+        },
+        {
+          "word": "capacity.",
+          "begin": 139800,
+          "end": 140280
+        },
+        {
+          "word": "The",
+          "begin": 141240,
+          "end": 141280
+        },
+        {
+          "word": "physical",
+          "begin": 141340,
+          "end": 141840
+        },
+        {
+          "word": "NAND",
+          "begin": 141980,
+          "end": 142040
+        },
+        {
+          "word": "still",
+          "begin": 142120,
+          "end": 142300
+        },
+        {
+          "word": "contains",
+          "begin": 142360,
+          "end": 142780
+        },
+        {
+          "word": "encrypted",
+          "begin": 142840,
+          "end": 143280
+        },
+        {
+          "word": "ciphertext,",
+          "begin": 143280,
+          "end": 144060
+        },
+        {
+          "word": "but",
+          "begin": 144300,
+          "end": 144400
+        },
+        {
+          "word": "without",
+          "begin": 144420,
+          "end": 144720
+        },
+        {
+          "word": "the",
+          "begin": 144720,
+          "end": 144760
+        },
+        {
+          "word": "key",
+          "begin": 144840,
+          "end": 144980
+        },
+        {
+          "word": "it's",
+          "begin": 145100,
+          "end": 145220
+        },
+        {
+          "word": "indistinguishable",
+          "begin": 145320,
+          "end": 146060
+        },
+        {
+          "word": "from",
+          "begin": 146180,
+          "end": 146320
+        },
+        {
+          "word": "random",
+          "begin": 146360,
+          "end": 146640
+        },
+        {
+          "word": "data.",
+          "begin": 146700,
+          "end": 146940
+        },
+        {
+          "word": "Crypto",
+          "begin": 147720,
+          "end": 147960
+        },
+        {
+          "word": "Erase",
+          "begin": 148060,
+          "end": 148440
+        },
+        {
+          "word": "is",
+          "begin": 148520,
+          "end": 148620
+        },
+        {
+          "word": "sufficient",
+          "begin": 148640,
+          "end": 149080
+        },
+        {
+          "word": "for",
+          "begin": 149140,
+          "end": 149200
+        },
+        {
+          "word": "most",
+          "begin": 149300,
+          "end": 149520
+        },
+        {
+          "word": "commercial",
+          "begin": 149560,
+          "end": 149900
+        },
+        {
+          "word": "decommissioning;",
+          "begin": 150000,
+          "end": 150660
+        },
+        {
+          "word": "block",
+          "begin": 150920,
+          "end": 151180
+        },
+        {
+          "word": "erase",
+          "begin": 151200,
+          "end": 151560
+        },
+        {
+          "word": "or",
+          "begin": 151660,
+          "end": 151680
+        },
+        {
+          "word": "overwrite",
+          "begin": 151840,
+          "end": 152320
+        },
+        {
+          "word": "is",
+          "begin": 152380,
+          "end": 152460
+        },
+        {
+          "word": "required",
+          "begin": 152500,
+          "end": 153040
+        },
+        {
+          "word": "when",
+          "begin": 153100,
+          "end": 153220
+        },
+        {
+          "word": "regulations",
+          "begin": 153280,
+          "end": 153880
+        },
+        {
+          "word": "demand",
+          "begin": 153940,
+          "end": 154340
+        },
+        {
+          "word": "physical",
+          "begin": 154440,
+          "end": 154740
+        },
+        {
+          "word": "media",
+          "begin": 154840,
+          "end": 155100
+        },
+        {
+          "word": "sanitization.",
+          "begin": 155200,
+          "end": 156000
+        },
+        {
+          "word": "Sanitize",
+          "begin": 156680,
+          "end": 157260
+        }
+      ]
+    },
+    {
+      "blockIndex": 9,
+      "type": "info",
+      "text": "Sanitize is irreversible: Once started, Sanitize cannot be aborted and affects all namespaces on the entire NVM subsystem. Check progress with nvme sanitize-log /dev/nvme0. Enterprise drives may take hours for overwrite sanitize on large capacities.",
+      "beginMs": 159440,
+      "endMs": 175740,
+      "timestamps": [
+        {
+          "word": "Sanitize",
+          "begin": 159440,
+          "end": 159940
+        },
+        {
+          "word": "cannot",
+          "begin": 159980,
+          "end": 160280
+        },
+        {
+          "word": "be",
+          "begin": 160300,
+          "end": 160360
+        },
+        {
+          "word": "aborted",
+          "begin": 160440,
+          "end": 160920
+        },
+        {
+          "word": "and",
+          "begin": 161020,
+          "end": 161100
+        },
+        {
+          "word": "affects",
+          "begin": 161120,
+          "end": 161440
+        },
+        {
+          "word": "all",
+          "begin": 161560,
+          "end": 161680
+        },
+        {
+          "word": "namespaces",
+          "begin": 161760,
+          "end": 162440
+        },
+        {
+          "word": "on",
+          "begin": 162520,
+          "end": 162620
+        },
+        {
+          "word": "the",
+          "begin": 162620,
+          "end": 162680
+        },
+        {
+          "word": "entire",
+          "begin": 162760,
+          "end": 163420
+        },
+        {
+          "word": "NVM",
+          "begin": 163420,
+          "end": 163440
+        },
+        {
+          "word": "subsystem.",
+          "begin": 163500,
+          "end": 164200
+        },
+        {
+          "word": "Check",
+          "begin": 164300,
+          "end": 164520
+        },
+        {
+          "word": "progress",
+          "begin": 164860,
+          "end": 165320
+        },
+        {
+          "word": "with",
+          "begin": 165320,
+          "end": 165660
+        },
+        {
+          "word": "nvme",
+          "begin": 165760,
+          "end": 166280
+        },
+        {
+          "word": "sanitize-log",
+          "begin": 166640,
+          "end": 167500
+        },
+        {
+          "word": "/dev/nvme0.",
+          "begin": 167500,
+          "end": 169360
+        },
+        {
+          "word": "Enterprise",
+          "begin": 169820,
+          "end": 170280
+        },
+        {
+          "word": "drives",
+          "begin": 170280,
+          "end": 170580
+        },
+        {
+          "word": "may",
+          "begin": 170640,
+          "end": 170880
+        },
+        {
+          "word": "take",
+          "begin": 170940,
+          "end": 171400
+        },
+        {
+          "word": "hours",
+          "begin": 171440,
+          "end": 171720
+        },
+        {
+          "word": "for",
+          "begin": 171720,
+          "end": 171860
+        },
+        {
+          "word": "overwrite",
+          "begin": 171880,
+          "end": 172020
+        },
+        {
+          "word": "sanitize",
+          "begin": 172080,
+          "end": 172620
+        },
+        {
+          "word": "on",
+          "begin": 172700,
+          "end": 172800
+        },
+        {
+          "word": "large",
+          "begin": 172860,
+          "end": 173140
+        },
+        {
+          "word": "capacities.",
+          "begin": 173200,
+          "end": 173920
+        },
+        {
+          "word": "Knowledge",
+          "begin": 174240,
+          "end": 174540
+        },
+        {
+          "word": "check:",
+          "begin": 174620,
+          "end": 174880
+        },
+        {
+          "word": "Your",
+          "begin": 175080,
+          "end": 175140
+        },
+        {
+          "word": "company",
+          "begin": 175240,
+          "end": 175540
+        },
+        {
+          "word": "is",
+          "begin": 175640,
+          "end": 175740
+        }
+      ]
+    },
+    {
+      "blockIndex": 10,
+      "type": "reveal",
+      "text": "Knowledge check: Your company is decommissioning 500 SSDs that held customer financial data. A junior engineer suggests using 'nvme format' on each drive. Why is this insufficient, and what would you recommend instead? What data could remain recoverable after a format? The answer: Format NVM only resets the namespace's logical mapping — it may leave data physically intact in NAND cells, especially in over-provisioned areas, spare blocks, and unmapped regions that the format command doesn't touch. A determined attacker with NAND chip readers could potentially recover data from these areas. For drives holding regulated data (financial, medical, PII), you need Sanitize — specifically Crypto Erase (SANACT=4) if the drives are self-encrypting, or Block Erase (SANACT=2) otherwise. Crypto Erase destroys the internal encryption key, making all data on the entire NVM subsystem — including over-provisioned and unmapped areas — cryptographically unrecoverable in under a second. This meets NIST 800-88 guidelines for media sanitization.",
+      "beginMs": 175800,
+      "endMs": 237380,
+      "timestamps": [
+        {
+          "word": "decommissioning",
+          "begin": 175800,
+          "end": 176820
+        },
+        {
+          "word": "500",
+          "begin": 176820,
+          "end": 177080
+        },
+        {
+          "word": "SSDs",
+          "begin": 177140,
+          "end": 177580
+        },
+        {
+          "word": "that",
+          "begin": 177760,
+          "end": 177940
+        },
+        {
+          "word": "held",
+          "begin": 177980,
+          "end": 178200
+        },
+        {
+          "word": "customer",
+          "begin": 178260,
+          "end": 178640
+        },
+        {
+          "word": "financial",
+          "begin": 178740,
+          "end": 179160
+        },
+        {
+          "word": "data.",
+          "begin": 179260,
+          "end": 179480
+        },
+        {
+          "word": "A",
+          "begin": 179920,
+          "end": 179960
+        },
+        {
+          "word": "junior",
+          "begin": 180040,
+          "end": 180280
+        },
+        {
+          "word": "engineer",
+          "begin": 180380,
+          "end": 180680
+        },
+        {
+          "word": "suggests",
+          "begin": 180860,
+          "end": 181320
+        },
+        {
+          "word": "using",
+          "begin": 181380,
+          "end": 181660
+        },
+        {
+          "word": "'nvme",
+          "begin": 181760,
+          "end": 182320
+        },
+        {
+          "word": "format'",
+          "begin": 182480,
+          "end": 182900
+        },
+        {
+          "word": "on",
+          "begin": 182980,
+          "end": 183080
+        },
+        {
+          "word": "each",
+          "begin": 183200,
+          "end": 183340
+        },
+        {
+          "word": "drive.",
+          "begin": 183440,
+          "end": 183860
+        },
+        {
+          "word": "Why",
+          "begin": 184200,
+          "end": 184280
+        },
+        {
+          "word": "is",
+          "begin": 184400,
+          "end": 184500
+        },
+        {
+          "word": "this",
+          "begin": 184560,
+          "end": 184720
+        },
+        {
+          "word": "insufficient,",
+          "begin": 184780,
+          "end": 185460
+        },
+        {
+          "word": "and",
+          "begin": 185720,
+          "end": 185800
+        },
+        {
+          "word": "what",
+          "begin": 185840,
+          "end": 185960
+        },
+        {
+          "word": "would",
+          "begin": 186000,
+          "end": 186140
+        },
+        {
+          "word": "you",
+          "begin": 186140,
+          "end": 186200
+        },
+        {
+          "word": "recommend",
+          "begin": 186260,
+          "end": 186700
+        },
+        {
+          "word": "instead?",
+          "begin": 186740,
+          "end": 187220
+        },
+        {
+          "word": "What",
+          "begin": 187460,
+          "end": 187600
+        },
+        {
+          "word": "data",
+          "begin": 187640,
+          "end": 187860
+        },
+        {
+          "word": "could",
+          "begin": 187940,
+          "end": 188080
+        },
+        {
+          "word": "remain",
+          "begin": 188120,
+          "end": 188400
+        },
+        {
+          "word": "recoverable",
+          "begin": 188420,
+          "end": 189100
+        },
+        {
+          "word": "after",
+          "begin": 189160,
+          "end": 189340
+        },
+        {
+          "word": "a",
+          "begin": 189340,
+          "end": 189360
+        },
+        {
+          "word": "format?",
+          "begin": 189480,
+          "end": 189940
+        },
+        {
+          "word": "The",
+          "begin": 190200,
+          "end": 190260
+        },
+        {
+          "word": "answer:",
+          "begin": 190380,
+          "end": 190640
+        },
+        {
+          "word": "Format",
+          "begin": 191100,
+          "end": 191500
+        },
+        {
+          "word": "NVM",
+          "begin": 191600,
+          "end": 192080
+        },
+        {
+          "word": "only",
+          "begin": 192220,
+          "end": 192400
+        },
+        {
+          "word": "resets",
+          "begin": 192500,
+          "end": 192920
+        },
+        {
+          "word": "the",
+          "begin": 192960,
+          "end": 193020
+        },
+        {
+          "word": "namespace's",
+          "begin": 193080,
+          "end": 193720
+        },
+        {
+          "word": "logical",
+          "begin": 193760,
+          "end": 194080
+        },
+        {
+          "word": "mapping",
+          "begin": 194180,
+          "end": 194580
+        },
+        {
+          "word": "it",
+          "begin": 194920,
+          "end": 194960
+        },
+        {
+          "word": "may",
+          "begin": 194960,
+          "end": 195060
+        },
+        {
+          "word": "leave",
+          "begin": 195180,
+          "end": 195340
+        },
+        {
+          "word": "data",
+          "begin": 195400,
+          "end": 195580
+        },
+        {
+          "word": "physically",
+          "begin": 195700,
+          "end": 196040
+        },
+        {
+          "word": "intact",
+          "begin": 196100,
+          "end": 196520
+        },
+        {
+          "word": "in",
+          "begin": 196540,
+          "end": 196620
+        },
+        {
+          "word": "NAND",
+          "begin": 196660,
+          "end": 196920
+        },
+        {
+          "word": "cells,",
+          "begin": 197020,
+          "end": 197360
+        },
+        {
+          "word": "especially",
+          "begin": 197680,
+          "end": 198100
+        },
+        {
+          "word": "in",
+          "begin": 198160,
+          "end": 198220
+        },
+        {
+          "word": "over-provisioned",
+          "begin": 198320,
+          "end": 198960
+        },
+        {
+          "word": "areas,",
+          "begin": 199080,
+          "end": 199540
+        },
+        {
+          "word": "spare",
+          "begin": 199900,
+          "end": 200040
+        },
+        {
+          "word": "blocks,",
+          "begin": 200180,
+          "end": 200520
+        },
+        {
+          "word": "and",
+          "begin": 200640,
+          "end": 200820
+        },
+        {
+          "word": "unmapped",
+          "begin": 200920,
+          "end": 201260
+        },
+        {
+          "word": "regions",
+          "begin": 201320,
+          "end": 201700
+        },
+        {
+          "word": "that",
+          "begin": 201720,
+          "end": 201760
+        },
+        {
+          "word": "the",
+          "begin": 201840,
+          "end": 201880
+        },
+        {
+          "word": "format",
+          "begin": 201960,
+          "end": 202220
+        },
+        {
+          "word": "command",
+          "begin": 202340,
+          "end": 202780
+        },
+        {
+          "word": "doesn't",
+          "begin": 202900,
+          "end": 203160
+        },
+        {
+          "word": "touch.",
+          "begin": 203200,
+          "end": 203480
+        },
+        {
+          "word": "A",
+          "begin": 203860,
+          "end": 203880
+        },
+        {
+          "word": "determined",
+          "begin": 203920,
+          "end": 204320
+        },
+        {
+          "word": "attacker",
+          "begin": 204340,
+          "end": 204800
+        },
+        {
+          "word": "with",
+          "begin": 204800,
+          "end": 204920
+        },
+        {
+          "word": "NAND",
+          "begin": 204980,
+          "end": 205360
+        },
+        {
+          "word": "chip",
+          "begin": 205440,
+          "end": 205460
+        },
+        {
+          "word": "readers",
+          "begin": 205500,
+          "end": 205880
+        },
+        {
+          "word": "could",
+          "begin": 205960,
+          "end": 206060
+        },
+        {
+          "word": "potentially",
+          "begin": 206100,
+          "end": 206560
+        },
+        {
+          "word": "recover",
+          "begin": 206640,
+          "end": 206960
+        },
+        {
+          "word": "data",
+          "begin": 207060,
+          "end": 207260
+        },
+        {
+          "word": "from",
+          "begin": 207340,
+          "end": 207480
+        },
+        {
+          "word": "these",
+          "begin": 207500,
+          "end": 207660
+        },
+        {
+          "word": "areas.",
+          "begin": 207740,
+          "end": 208220
+        },
+        {
+          "word": "For",
+          "begin": 208400,
+          "end": 208460
+        },
+        {
+          "word": "drives",
+          "begin": 208540,
+          "end": 208880
+        },
+        {
+          "word": "holding",
+          "begin": 208900,
+          "end": 209180
+        },
+        {
+          "word": "regulated",
+          "begin": 209220,
+          "end": 209680
+        },
+        {
+          "word": "data",
+          "begin": 209720,
+          "end": 209940
+        },
+        {
+          "word": "(financial,",
+          "begin": 210160,
+          "end": 210640
+        },
+        {
+          "word": "medical,",
+          "begin": 210960,
+          "end": 211280
+        },
+        {
+          "word": "PII),",
+          "begin": 211560,
+          "end": 211980
+        },
+        {
+          "word": "you",
+          "begin": 212520,
+          "end": 212580
+        },
+        {
+          "word": "need",
+          "begin": 212640,
+          "end": 212800
+        },
+        {
+          "word": "Sanitize",
+          "begin": 212880,
+          "end": 213480
+        },
+        {
+          "word": "specifically",
+          "begin": 213800,
+          "end": 214320
+        },
+        {
+          "word": "Crypto",
+          "begin": 214420,
+          "end": 214720
+        },
+        {
+          "word": "Erase",
+          "begin": 214820,
+          "end": 215140
+        },
+        {
+          "word": "(SANACT=4)",
+          "begin": 215200,
+          "end": 216340
+        },
+        {
+          "word": "if",
+          "begin": 216840,
+          "end": 216920
+        },
+        {
+          "word": "the",
+          "begin": 216960,
+          "end": 217000
+        },
+        {
+          "word": "drives",
+          "begin": 217060,
+          "end": 217380
+        },
+        {
+          "word": "are",
+          "begin": 217400,
+          "end": 217420
+        },
+        {
+          "word": "self-encrypting,",
+          "begin": 217540,
+          "end": 218300
+        },
+        {
+          "word": "or",
+          "begin": 217600,
+          "end": 217680
+        },
+        {
+          "word": "Block",
+          "begin": 217720,
+          "end": 217900
+        },
+        {
+          "word": "Erase",
+          "begin": 217900,
+          "end": 218080
+        },
+        {
+          "word": "(SANACT=2)",
+          "begin": 218120,
+          "end": 219580
+        },
+        {
+          "word": "otherwise.",
+          "begin": 219620,
+          "end": 221160
+        },
+        {
+          "word": "Crypto",
+          "begin": 221620,
+          "end": 221900
+        },
+        {
+          "word": "Erase",
+          "begin": 222060,
+          "end": 222280
+        },
+        {
+          "word": "destroys",
+          "begin": 222340,
+          "end": 222820
+        },
+        {
+          "word": "the",
+          "begin": 222840,
+          "end": 222900
+        },
+        {
+          "word": "internal",
+          "begin": 222960,
+          "end": 223340
+        },
+        {
+          "word": "encryption",
+          "begin": 223360,
+          "end": 223780
+        },
+        {
+          "word": "key,",
+          "begin": 223840,
+          "end": 223940
+        },
+        {
+          "word": "making",
+          "begin": 224360,
+          "end": 224600
+        },
+        {
+          "word": "all",
+          "begin": 224700,
+          "end": 224840
+        },
+        {
+          "word": "data",
+          "begin": 224900,
+          "end": 225120
+        },
+        {
+          "word": "on",
+          "begin": 225240,
+          "end": 225320
+        },
+        {
+          "word": "the",
+          "begin": 225320,
+          "end": 225380
+        },
+        {
+          "word": "entire",
+          "begin": 225440,
+          "end": 225800
+        },
+        {
+          "word": "NVM",
+          "begin": 225940,
+          "end": 226360
+        },
+        {
+          "word": "subsystem",
+          "begin": 226460,
+          "end": 227040
+        },
+        {
+          "word": "including",
+          "begin": 227320,
+          "end": 227740
+        },
+        {
+          "word": "over-provisioned",
+          "begin": 227840,
+          "end": 228480
+        },
+        {
+          "word": "and",
+          "begin": 228500,
+          "end": 228120
+        },
+        {
+          "word": "unmapped",
+          "begin": 228120,
+          "end": 228380
+        },
+        {
+          "word": "areas",
+          "begin": 228400,
+          "end": 228480
+        },
+        {
+          "word": "cryptographically",
+          "begin": 228500,
+          "end": 229400
+        },
+        {
+          "word": "unrecoverable",
+          "begin": 229480,
+          "end": 230640
+        },
+        {
+          "word": "in",
+          "begin": 230660,
+          "end": 230680
+        },
+        {
+          "word": "under",
+          "begin": 230820,
+          "end": 231100
+        },
+        {
+          "word": "a",
+          "begin": 231160,
+          "end": 231300
+        },
+        {
+          "word": "second.",
+          "begin": 231300,
+          "end": 232560
+        },
+        {
+          "word": "This",
+          "begin": 233140,
+          "end": 233320
+        },
+        {
+          "word": "meets",
+          "begin": 233380,
+          "end": 233560
+        },
+        {
+          "word": "NIST",
+          "begin": 233560,
+          "end": 234200
+        },
+        {
+          "word": "800-88",
+          "begin": 234240,
+          "end": 235300
+        },
+        {
+          "word": "guidelines",
+          "begin": 235340,
+          "end": 235920
+        },
+        {
+          "word": "for",
+          "begin": 236000,
+          "end": 236060
+        },
+        {
+          "word": "media",
+          "begin": 236160,
+          "end": 236440
+        },
+        {
+          "word": "sanitization.",
+          "begin": 236540,
+          "end": 237380
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

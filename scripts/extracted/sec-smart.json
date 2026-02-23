@@ -1,0 +1,51 @@
+{
+  "sectionId": "sec-smart",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Is Your Drive Healthy? — SMART Monitoring",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: SMART Is the SSD's Health Dashboard. SMART (Self-Monitoring, Analysis, and Reporting Technology) is like a fitness tracker for your SSD. It continuously monitors 14 health metrics — temperature, wear level, error counts, power-on hours. You can read these at any time using 'nvme smart-log /dev/nvme0' to check if your drive is healthy or approaching end-of-life.",
+      "blockIndex": 1
+    },
+    {
+      "type": "term",
+      "text": "SMART: Self-Monitoring, Analysis, and Reporting Technology — a built-in health monitoring system in storage devices. Reports metrics like temperature, wear percentage, error counts, and power-on hours through standardized log pages.",
+      "blockIndex": 2
+    },
+    {
+      "type": "term",
+      "text": "Percentage Used: A SMART field (0-255%) estimating how much of the SSD's rated endurance has been consumed. 100% means the drive has used its rated TBW. Values above 100% mean the drive has exceeded its warranty endurance but may still function.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "Just like you go to a doctor for a checkup, your SSD has a built-in health report called SMART (Self-Monitoring, Analysis, and Reporting Technology). It tracks temperature, wear, error counts, power usage, and more — everything you need to know about the drive's health.",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "Why should you check SMART? Because SSDs don't fail suddenly without warning. SMART data shows early warning signs: rising temperatures, increasing error counts, shrinking spare capacity. If you catch these trends early, you can replace the drive before you lose data.",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "The SMART log is retrieved using the Get Log Page command (opcode 0x02) with Log ID 0x02. It returns 512 bytes of health data. The nvme-cli shortcut is:",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "Out of all 14 fields, which ones matter most? Three fields should trigger immediate action if they change:",
+      "blockIndex": 7
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: You see two SMART fields: 'Percentage Used: 80%' and 'Data Units Written: 50 TB' on a drive rated for 600 TBW. Why don't these two numbers tell the same story? What hidden factor explains the discrepancy? The answer: Data Units Written (50 TB) only counts host-initiated writes — what the OS sent to the SSD. But Percentage Used (80%) reflects the actual NAND wear, which includes all internal writes: garbage collection copies, wear-leveling page moves, metadata updates, and FTL journaling. The discrepancy reveals a Write Amplification Factor of roughly (80% of 600 TBW) / 50 TB = 480 / 50 = 9.6x. This means for every byte the host wrote, the SSD internally wrote nearly 10 bytes to NAND. The drive is wearing out far faster than the host write volume alone suggests — likely due to heavy random writes, a nearly-full drive, or missing TRIM support.",
+      "requiresReveal": true,
+      "blockIndex": 8
+    }
+  ]
+}

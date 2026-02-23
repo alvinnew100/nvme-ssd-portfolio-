@@ -1,0 +1,2477 @@
+{
+  "sectionId": "sec-bus",
+  "audioFile": "/audio/sections/sec-bus.mp3",
+  "totalDurationMs": 206360,
+  "fileSizeBytes": 3302400,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "What Is a Bus?",
+      "beginMs": 20,
+      "endMs": 680,
+      "timestamps": [
+        {
+          "word": "What",
+          "begin": 20,
+          "end": 160
+        },
+        {
+          "word": "Is",
+          "begin": 160,
+          "end": 260
+        },
+        {
+          "word": "a",
+          "begin": 280,
+          "end": 300
+        },
+        {
+          "word": "Bus?",
+          "begin": 380,
+          "end": 680
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "paragraph",
+      "text": "A bus is the data highway that connects the different parts of your computer together. The CPU, RAM, SSD, GPU, and other devices all need to send data to each other — the bus is the road system that makes this possible.",
+      "beginMs": 1320,
+      "endMs": 13900,
+      "timestamps": [
+        {
+          "word": "A",
+          "begin": 1320,
+          "end": 1340
+        },
+        {
+          "word": "bus",
+          "begin": 1400,
+          "end": 1640
+        },
+        {
+          "word": "is",
+          "begin": 1680,
+          "end": 1760
+        },
+        {
+          "word": "the",
+          "begin": 1800,
+          "end": 1860
+        },
+        {
+          "word": "data",
+          "begin": 1920,
+          "end": 2120
+        },
+        {
+          "word": "highway",
+          "begin": 2180,
+          "end": 2480
+        },
+        {
+          "word": "that",
+          "begin": 2600,
+          "end": 2700
+        },
+        {
+          "word": "connects",
+          "begin": 2740,
+          "end": 3100
+        },
+        {
+          "word": "the",
+          "begin": 3100,
+          "end": 3140
+        },
+        {
+          "word": "different",
+          "begin": 3200,
+          "end": 3460
+        },
+        {
+          "word": "parts",
+          "begin": 3460,
+          "end": 3800
+        },
+        {
+          "word": "of",
+          "begin": 3820,
+          "end": 3900
+        },
+        {
+          "word": "your",
+          "begin": 3920,
+          "end": 3980
+        },
+        {
+          "word": "computer",
+          "begin": 4059,
+          "end": 4380
+        },
+        {
+          "word": "together.",
+          "begin": 4460,
+          "end": 4780
+        },
+        {
+          "word": "The",
+          "begin": 5160,
+          "end": 5200
+        },
+        {
+          "word": "CPU,",
+          "begin": 5320,
+          "end": 5740
+        },
+        {
+          "word": "RAM,",
+          "begin": 6100,
+          "end": 6460
+        },
+        {
+          "word": "SSD,",
+          "begin": 6660,
+          "end": 7080
+        },
+        {
+          "word": "GPU,",
+          "begin": 7460,
+          "end": 7900
+        },
+        {
+          "word": "and",
+          "begin": 8200,
+          "end": 8280
+        },
+        {
+          "word": "other",
+          "begin": 8340,
+          "end": 8480
+        },
+        {
+          "word": "devices",
+          "begin": 8540,
+          "end": 9040
+        },
+        {
+          "word": "all",
+          "begin": 9180,
+          "end": 9300
+        },
+        {
+          "word": "need",
+          "begin": 9380,
+          "end": 9520
+        },
+        {
+          "word": "to",
+          "begin": 9540,
+          "end": 9600
+        },
+        {
+          "word": "send",
+          "begin": 9680,
+          "end": 9860
+        },
+        {
+          "word": "data",
+          "begin": 9900,
+          "end": 10100
+        },
+        {
+          "word": "to",
+          "begin": 10160,
+          "end": 10240
+        },
+        {
+          "word": "each",
+          "begin": 10300,
+          "end": 10580
+        },
+        {
+          "word": "other",
+          "begin": 10600,
+          "end": 11240
+        },
+        {
+          "word": "the",
+          "begin": 11300,
+          "end": 11380
+        },
+        {
+          "word": "bus",
+          "begin": 11520,
+          "end": 11720
+        },
+        {
+          "word": "is",
+          "begin": 11740,
+          "end": 11760
+        },
+        {
+          "word": "the",
+          "begin": 11760,
+          "end": 11800
+        },
+        {
+          "word": "road",
+          "begin": 11860,
+          "end": 12060
+        },
+        {
+          "word": "system",
+          "begin": 12100,
+          "end": 12420
+        },
+        {
+          "word": "that",
+          "begin": 12440,
+          "end": 12540
+        },
+        {
+          "word": "makes",
+          "begin": 12580,
+          "end": 12780
+        },
+        {
+          "word": "this",
+          "begin": 12800,
+          "end": 12920
+        },
+        {
+          "word": "possible.",
+          "begin": 12980,
+          "end": 13360
+        },
+        {
+          "word": "Why",
+          "begin": 13820,
+          "end": 13900
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "paragraph",
+      "text": "Why does this matter for SSDs? Because no matter how fast the SSD's internal NAND chips are, data still has to travel over the bus to reach the CPU. The bus speed sets the upper limit on how fast data can move. Modern NVMe SSDs use a bus called PCIe (Peripheral Component Interconnect Express), which is the fastest bus available for storage devices.",
+      "beginMs": 14000,
+      "endMs": 35580,
+      "timestamps": [
+        {
+          "word": "does",
+          "begin": 14000,
+          "end": 14120
+        },
+        {
+          "word": "this",
+          "begin": 14140,
+          "end": 14280
+        },
+        {
+          "word": "matter",
+          "begin": 14340,
+          "end": 14520
+        },
+        {
+          "word": "for",
+          "begin": 14600,
+          "end": 14660
+        },
+        {
+          "word": "SSDs?",
+          "begin": 14760,
+          "end": 15440
+        },
+        {
+          "word": "Because",
+          "begin": 15760,
+          "end": 15980
+        },
+        {
+          "word": "no",
+          "begin": 16020,
+          "end": 16079
+        },
+        {
+          "word": "matter",
+          "begin": 16140,
+          "end": 16460
+        },
+        {
+          "word": "how",
+          "begin": 16460,
+          "end": 16780
+        },
+        {
+          "word": "fast",
+          "begin": 16780,
+          "end": 17060
+        },
+        {
+          "word": "the",
+          "begin": 17100,
+          "end": 17160
+        },
+        {
+          "word": "SSD's",
+          "begin": 17280,
+          "end": 17840
+        },
+        {
+          "word": "internal",
+          "begin": 17920,
+          "end": 18260
+        },
+        {
+          "word": "NAND",
+          "begin": 18380,
+          "end": 18780
+        },
+        {
+          "word": "chips",
+          "begin": 18860,
+          "end": 19540
+        },
+        {
+          "word": "are,",
+          "begin": 19580,
+          "end": 19680
+        },
+        {
+          "word": "data",
+          "begin": 19680,
+          "end": 19960
+        },
+        {
+          "word": "still",
+          "begin": 20000,
+          "end": 20240
+        },
+        {
+          "word": "has",
+          "begin": 20260,
+          "end": 20400
+        },
+        {
+          "word": "to",
+          "begin": 20440,
+          "end": 20460
+        },
+        {
+          "word": "travel",
+          "begin": 20460,
+          "end": 20680
+        },
+        {
+          "word": "over",
+          "begin": 20840,
+          "end": 21000
+        },
+        {
+          "word": "the",
+          "begin": 21060,
+          "end": 21100
+        },
+        {
+          "word": "bus",
+          "begin": 21160,
+          "end": 21420
+        },
+        {
+          "word": "to",
+          "begin": 21500,
+          "end": 21560
+        },
+        {
+          "word": "reach",
+          "begin": 21640,
+          "end": 21820
+        },
+        {
+          "word": "the",
+          "begin": 21880,
+          "end": 21920
+        },
+        {
+          "word": "CPU.",
+          "begin": 22020,
+          "end": 22420
+        },
+        {
+          "word": "The",
+          "begin": 23120,
+          "end": 23160
+        },
+        {
+          "word": "bus",
+          "begin": 23220,
+          "end": 23400
+        },
+        {
+          "word": "speed",
+          "begin": 23420,
+          "end": 23720
+        },
+        {
+          "word": "sets",
+          "begin": 23800,
+          "end": 23980
+        },
+        {
+          "word": "the",
+          "begin": 23980,
+          "end": 24080
+        },
+        {
+          "word": "upper",
+          "begin": 24180,
+          "end": 24340
+        },
+        {
+          "word": "limit",
+          "begin": 24440,
+          "end": 24660
+        },
+        {
+          "word": "on",
+          "begin": 24700,
+          "end": 24780
+        },
+        {
+          "word": "how",
+          "begin": 24840,
+          "end": 24920
+        },
+        {
+          "word": "fast",
+          "begin": 25080,
+          "end": 25300
+        },
+        {
+          "word": "data",
+          "begin": 25360,
+          "end": 25540
+        },
+        {
+          "word": "can",
+          "begin": 25620,
+          "end": 25740
+        },
+        {
+          "word": "move.",
+          "begin": 25780,
+          "end": 26120
+        },
+        {
+          "word": "Modern",
+          "begin": 26520,
+          "end": 26840
+        },
+        {
+          "word": "NVMe",
+          "begin": 26940,
+          "end": 27380
+        },
+        {
+          "word": "SSDs",
+          "begin": 27520,
+          "end": 27860
+        },
+        {
+          "word": "use",
+          "begin": 27860,
+          "end": 28200
+        },
+        {
+          "word": "a",
+          "begin": 28520,
+          "end": 28580
+        },
+        {
+          "word": "bus",
+          "begin": 28660,
+          "end": 28720
+        },
+        {
+          "word": "called",
+          "begin": 28780,
+          "end": 29300
+        },
+        {
+          "word": "PCIe",
+          "begin": 29380,
+          "end": 30040
+        },
+        {
+          "word": "(Peripheral",
+          "begin": 30240,
+          "end": 30620
+        },
+        {
+          "word": "Component",
+          "begin": 30740,
+          "end": 31260
+        },
+        {
+          "word": "Interconnect",
+          "begin": 31360,
+          "end": 31920
+        },
+        {
+          "word": "Express),",
+          "begin": 31940,
+          "end": 32460
+        },
+        {
+          "word": "which",
+          "begin": 32759,
+          "end": 32880
+        },
+        {
+          "word": "is",
+          "begin": 32900,
+          "end": 33000
+        },
+        {
+          "word": "the",
+          "begin": 33020,
+          "end": 33060
+        },
+        {
+          "word": "fastest",
+          "begin": 33160,
+          "end": 33560
+        },
+        {
+          "word": "bus",
+          "begin": 33620,
+          "end": 33860
+        },
+        {
+          "word": "available",
+          "begin": 33920,
+          "end": 34620
+        },
+        {
+          "word": "for",
+          "begin": 34660,
+          "end": 34860
+        },
+        {
+          "word": "storage",
+          "begin": 34900,
+          "end": 35160
+        },
+        {
+          "word": "devices.",
+          "begin": 35300,
+          "end": 35580
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "analogy",
+      "text": "Analogy: PCIe Is a Multi-Lane Highway. If data is cars, then PCIe is a multi-lane highway. Each 'lane' is an independent path for data. An NVMe SSD typically uses 4 lanes (called 'x4'). Adding lanes is like widening the highway — more traffic can flow simultaneously, even though each car drives at the same speed limit.",
+      "beginMs": 36220,
+      "endMs": 59220,
+      "timestamps": [
+        {
+          "word": "Analogy:",
+          "begin": 36220,
+          "end": 36720
+        },
+        {
+          "word": "PCIe",
+          "begin": 37200,
+          "end": 38100
+        },
+        {
+          "word": "Is",
+          "begin": 38100,
+          "end": 38180
+        },
+        {
+          "word": "a",
+          "begin": 38200,
+          "end": 38220
+        },
+        {
+          "word": "Multi-Lane",
+          "begin": 38300,
+          "end": 38840
+        },
+        {
+          "word": "Highway.",
+          "begin": 38900,
+          "end": 39200
+        },
+        {
+          "word": "If",
+          "begin": 39960,
+          "end": 40040
+        },
+        {
+          "word": "data",
+          "begin": 40100,
+          "end": 40340
+        },
+        {
+          "word": "is",
+          "begin": 40420,
+          "end": 40500
+        },
+        {
+          "word": "cars,",
+          "begin": 40560,
+          "end": 40980
+        },
+        {
+          "word": "then",
+          "begin": 41120,
+          "end": 41240
+        },
+        {
+          "word": "PCIe",
+          "begin": 41300,
+          "end": 41900
+        },
+        {
+          "word": "is",
+          "begin": 42060,
+          "end": 42140
+        },
+        {
+          "word": "a",
+          "begin": 42160,
+          "end": 42200
+        },
+        {
+          "word": "multi-lane",
+          "begin": 42260,
+          "end": 42780
+        },
+        {
+          "word": "highway.",
+          "begin": 42840,
+          "end": 43140
+        },
+        {
+          "word": "Each",
+          "begin": 43760,
+          "end": 44020
+        },
+        {
+          "word": "'lane'",
+          "begin": 44020,
+          "end": 44260
+        },
+        {
+          "word": "is",
+          "begin": 44340,
+          "end": 44440
+        },
+        {
+          "word": "an",
+          "begin": 44460,
+          "end": 44520
+        },
+        {
+          "word": "independent",
+          "begin": 44600,
+          "end": 45140
+        },
+        {
+          "word": "path",
+          "begin": 45180,
+          "end": 45460
+        },
+        {
+          "word": "for",
+          "begin": 45520,
+          "end": 45720
+        },
+        {
+          "word": "data.",
+          "begin": 45820,
+          "end": 46680
+        },
+        {
+          "word": "An",
+          "begin": 46760,
+          "end": 46880
+        },
+        {
+          "word": "NVMe",
+          "begin": 46920,
+          "end": 47220
+        },
+        {
+          "word": "SSD",
+          "begin": 47360,
+          "end": 47800
+        },
+        {
+          "word": "typically",
+          "begin": 48120,
+          "end": 48480
+        },
+        {
+          "word": "uses",
+          "begin": 48560,
+          "end": 48840
+        },
+        {
+          "word": "4",
+          "begin": 48960,
+          "end": 49040
+        },
+        {
+          "word": "lanes",
+          "begin": 49220,
+          "end": 49540
+        },
+        {
+          "word": "(called",
+          "begin": 49600,
+          "end": 49840
+        },
+        {
+          "word": "'x4').",
+          "begin": 49920,
+          "end": 50260
+        },
+        {
+          "word": "Adding",
+          "begin": 51120,
+          "end": 51380
+        },
+        {
+          "word": "lanes",
+          "begin": 51380,
+          "end": 51880
+        },
+        {
+          "word": "is",
+          "begin": 52000,
+          "end": 52080
+        },
+        {
+          "word": "like",
+          "begin": 52100,
+          "end": 52260
+        },
+        {
+          "word": "widening",
+          "begin": 52320,
+          "end": 52700
+        },
+        {
+          "word": "the",
+          "begin": 52720,
+          "end": 52780
+        },
+        {
+          "word": "highway",
+          "begin": 52840,
+          "end": 53160
+        },
+        {
+          "word": "more",
+          "begin": 53940,
+          "end": 54000
+        },
+        {
+          "word": "traffic",
+          "begin": 54160,
+          "end": 54480
+        },
+        {
+          "word": "can",
+          "begin": 54520,
+          "end": 54620
+        },
+        {
+          "word": "flow",
+          "begin": 54680,
+          "end": 54800
+        },
+        {
+          "word": "simultaneously,",
+          "begin": 54920,
+          "end": 55720
+        },
+        {
+          "word": "even",
+          "begin": 56180,
+          "end": 56340
+        },
+        {
+          "word": "though",
+          "begin": 56380,
+          "end": 56440
+        },
+        {
+          "word": "each",
+          "begin": 56580,
+          "end": 56720
+        },
+        {
+          "word": "car",
+          "begin": 56800,
+          "end": 56920
+        },
+        {
+          "word": "drives",
+          "begin": 57100,
+          "end": 57420
+        },
+        {
+          "word": "at",
+          "begin": 57440,
+          "end": 57460
+        },
+        {
+          "word": "the",
+          "begin": 57520,
+          "end": 57560
+        },
+        {
+          "word": "same",
+          "begin": 57660,
+          "end": 57880
+        },
+        {
+          "word": "speed",
+          "begin": 57940,
+          "end": 58200
+        },
+        {
+          "word": "limit.",
+          "begin": 58240,
+          "end": 58540
+        },
+        {
+          "word": "Data",
+          "begin": 59000,
+          "end": 59220
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "Data travels over the bus in small chunks called packets. When the SSD needs to send data to the CPU, it packages the data into a packet, puts it on the bus, and the bus delivers it. We'll learn the details of these packets (called TLPs — Transaction Layer Packets) in Lesson 5.",
+      "beginMs": 59300,
+      "endMs": 77480,
+      "timestamps": [
+        {
+          "word": "travels",
+          "begin": 59300,
+          "end": 59720
+        },
+        {
+          "word": "over",
+          "begin": 59760,
+          "end": 59920
+        },
+        {
+          "word": "the",
+          "begin": 59960,
+          "end": 60020
+        },
+        {
+          "word": "bus",
+          "begin": 60100,
+          "end": 60400
+        },
+        {
+          "word": "in",
+          "begin": 60480,
+          "end": 60560
+        },
+        {
+          "word": "small",
+          "begin": 60640,
+          "end": 60880
+        },
+        {
+          "word": "chunks",
+          "begin": 60960,
+          "end": 61240
+        },
+        {
+          "word": "called",
+          "begin": 61300,
+          "end": 61500
+        },
+        {
+          "word": "packets.",
+          "begin": 61560,
+          "end": 62080
+        },
+        {
+          "word": "When",
+          "begin": 62720,
+          "end": 62840
+        },
+        {
+          "word": "the",
+          "begin": 62840,
+          "end": 62880
+        },
+        {
+          "word": "SSD",
+          "begin": 63000,
+          "end": 63480
+        },
+        {
+          "word": "needs",
+          "begin": 63680,
+          "end": 63880
+        },
+        {
+          "word": "to",
+          "begin": 63920,
+          "end": 63960
+        },
+        {
+          "word": "send",
+          "begin": 64040,
+          "end": 64220
+        },
+        {
+          "word": "data",
+          "begin": 64260,
+          "end": 64459
+        },
+        {
+          "word": "to",
+          "begin": 64540,
+          "end": 64599
+        },
+        {
+          "word": "the",
+          "begin": 64640,
+          "end": 64700
+        },
+        {
+          "word": "CPU,",
+          "begin": 64780,
+          "end": 65180
+        },
+        {
+          "word": "it",
+          "begin": 65680,
+          "end": 65760
+        },
+        {
+          "word": "packages",
+          "begin": 65800,
+          "end": 66260
+        },
+        {
+          "word": "the",
+          "begin": 66300,
+          "end": 66340
+        },
+        {
+          "word": "data",
+          "begin": 66420,
+          "end": 66640
+        },
+        {
+          "word": "into",
+          "begin": 66760,
+          "end": 66940
+        },
+        {
+          "word": "a",
+          "begin": 67000,
+          "end": 67020
+        },
+        {
+          "word": "packet,",
+          "begin": 67080,
+          "end": 67520
+        },
+        {
+          "word": "puts",
+          "begin": 68120,
+          "end": 68320
+        },
+        {
+          "word": "it",
+          "begin": 68360,
+          "end": 68440
+        },
+        {
+          "word": "on",
+          "begin": 68460,
+          "end": 68580
+        },
+        {
+          "word": "the",
+          "begin": 68580,
+          "end": 68620
+        },
+        {
+          "word": "bus,",
+          "begin": 68620,
+          "end": 69020
+        },
+        {
+          "word": "and",
+          "begin": 69360,
+          "end": 69480
+        },
+        {
+          "word": "the",
+          "begin": 69480,
+          "end": 69520
+        },
+        {
+          "word": "bus",
+          "begin": 69600,
+          "end": 69820
+        },
+        {
+          "word": "delivers",
+          "begin": 69860,
+          "end": 70240
+        },
+        {
+          "word": "it.",
+          "begin": 70280,
+          "end": 70460
+        },
+        {
+          "word": "We'll",
+          "begin": 70980,
+          "end": 71060
+        },
+        {
+          "word": "learn",
+          "begin": 71120,
+          "end": 71360
+        },
+        {
+          "word": "the",
+          "begin": 71360,
+          "end": 71420
+        },
+        {
+          "word": "details",
+          "begin": 71480,
+          "end": 71900
+        },
+        {
+          "word": "of",
+          "begin": 71920,
+          "end": 71980
+        },
+        {
+          "word": "these",
+          "begin": 71980,
+          "end": 72180
+        },
+        {
+          "word": "packets",
+          "begin": 72220,
+          "end": 72580
+        },
+        {
+          "word": "(called",
+          "begin": 72640,
+          "end": 72860
+        },
+        {
+          "word": "TLPs",
+          "begin": 72940,
+          "end": 73740
+        },
+        {
+          "word": "Transaction",
+          "begin": 74280,
+          "end": 74840
+        },
+        {
+          "word": "Layer",
+          "begin": 74900,
+          "end": 75060
+        },
+        {
+          "word": "Packets)",
+          "begin": 75160,
+          "end": 75620
+        },
+        {
+          "word": "in",
+          "begin": 75720,
+          "end": 75820
+        },
+        {
+          "word": "Lesson",
+          "begin": 75860,
+          "end": 76160
+        },
+        {
+          "word": "5.",
+          "begin": 76260,
+          "end": 76620
+        },
+        {
+          "word": "The",
+          "begin": 77440,
+          "end": 77480
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "The key takeaway: the bus is the bottleneck. Old SATA SSDs were limited by the SATA bus (~600 MB/s). NVMe SSDs use PCIe and can reach 7+ GB/s — over 10x faster — because PCIe has more lanes and faster per-lane speeds.",
+      "beginMs": 78840,
+      "endMs": 99780,
+      "timestamps": [
+        {
+          "word": "the",
+          "begin": 78840,
+          "end": 78880
+        },
+        {
+          "word": "bus",
+          "begin": 78960,
+          "end": 79200
+        },
+        {
+          "word": "is",
+          "begin": 79300,
+          "end": 79380
+        },
+        {
+          "word": "the",
+          "begin": 79420,
+          "end": 79460
+        },
+        {
+          "word": "bottleneck.",
+          "begin": 79540,
+          "end": 80100
+        },
+        {
+          "word": "Old",
+          "begin": 80840,
+          "end": 81040
+        },
+        {
+          "word": "SATA",
+          "begin": 81120,
+          "end": 81320
+        },
+        {
+          "word": "SSDs",
+          "begin": 81440,
+          "end": 82120
+        },
+        {
+          "word": "were",
+          "begin": 82180,
+          "end": 82240
+        },
+        {
+          "word": "limited",
+          "begin": 82340,
+          "end": 82700
+        },
+        {
+          "word": "by",
+          "begin": 82740,
+          "end": 82820
+        },
+        {
+          "word": "the",
+          "begin": 82900,
+          "end": 82960
+        },
+        {
+          "word": "SATA",
+          "begin": 83080,
+          "end": 83300
+        },
+        {
+          "word": "bus",
+          "begin": 83380,
+          "end": 83620
+        },
+        {
+          "word": "(~600",
+          "begin": 83720,
+          "end": 84320
+        },
+        {
+          "word": "MB/s).",
+          "begin": 84460,
+          "end": 85560
+        },
+        {
+          "word": "NVMe",
+          "begin": 86180,
+          "end": 86640
+        },
+        {
+          "word": "SSDs",
+          "begin": 86800,
+          "end": 87400
+        },
+        {
+          "word": "use",
+          "begin": 87420,
+          "end": 87600
+        },
+        {
+          "word": "PCIe",
+          "begin": 87660,
+          "end": 88240
+        },
+        {
+          "word": "and",
+          "begin": 87740,
+          "end": 88080
+        },
+        {
+          "word": "can",
+          "begin": 88160,
+          "end": 88580
+        },
+        {
+          "word": "reach",
+          "begin": 88640,
+          "end": 90240
+        },
+        {
+          "word": "7+",
+          "begin": 90360,
+          "end": 90680
+        },
+        {
+          "word": "over",
+          "begin": 90680,
+          "end": 91180
+        },
+        {
+          "word": "10x",
+          "begin": 91180,
+          "end": 91420
+        },
+        {
+          "word": "faster",
+          "begin": 91420,
+          "end": 92020
+        },
+        {
+          "word": "because",
+          "begin": 92040,
+          "end": 92700
+        },
+        {
+          "word": "PCIe",
+          "begin": 92780,
+          "end": 93400
+        },
+        {
+          "word": "has",
+          "begin": 93400,
+          "end": 93540
+        },
+        {
+          "word": "more",
+          "begin": 93600,
+          "end": 93660
+        },
+        {
+          "word": "lanes",
+          "begin": 93800,
+          "end": 94200
+        },
+        {
+          "word": "and",
+          "begin": 94340,
+          "end": 94440
+        },
+        {
+          "word": "faster",
+          "begin": 94500,
+          "end": 94980
+        },
+        {
+          "word": "per-lane",
+          "begin": 95060,
+          "end": 95240
+        },
+        {
+          "word": "speeds.",
+          "begin": 95300,
+          "end": 95720
+        },
+        {
+          "word": "Knowledge",
+          "begin": 97260,
+          "end": 97460
+        },
+        {
+          "word": "check:",
+          "begin": 97520,
+          "end": 97860
+        },
+        {
+          "word": "How",
+          "begin": 98960,
+          "end": 99040
+        },
+        {
+          "word": "would",
+          "begin": 99140,
+          "end": 99260
+        },
+        {
+          "word": "you",
+          "begin": 99260,
+          "end": 99320
+        },
+        {
+          "word": "derive",
+          "begin": 99380,
+          "end": 99780
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "reveal",
+      "text": "Knowledge check: How would you derive the usable bandwidth of PCIe 4.0 x4 from first principles? What encoding overhead must you account for, and why does it exist? The answer: PCIe 4.0 runs at 16 GT/s (gigatransfers per second) per lane. With 4 lanes (x4), that's 64 GT/s raw. PCIe 4.0 uses 128b/130b encoding — for every 128 bits of payload, 2 bits of overhead are added for clock recovery and error detection. So usable bandwidth = 64 GT/s x (128/130) x (1 byte / 8 bits) = ~7.88 GB/s. The encoding overhead exists because without embedded clock transitions, the receiver can't distinguish data from noise at these speeds.",
+      "beginMs": 99780,
+      "endMs": 153880,
+      "timestamps": [
+        {
+          "word": "the",
+          "begin": 99780,
+          "end": 99820
+        },
+        {
+          "word": "usable",
+          "begin": 99880,
+          "end": 100200
+        },
+        {
+          "word": "bandwidth",
+          "begin": 100300,
+          "end": 100780
+        },
+        {
+          "word": "of",
+          "begin": 100880,
+          "end": 100960
+        },
+        {
+          "word": "PCIe",
+          "begin": 101020,
+          "end": 102160
+        },
+        {
+          "word": "4.0",
+          "begin": 102200,
+          "end": 102400
+        },
+        {
+          "word": "x4",
+          "begin": 102520,
+          "end": 102840
+        },
+        {
+          "word": "from",
+          "begin": 103100,
+          "end": 103220
+        },
+        {
+          "word": "first",
+          "begin": 103300,
+          "end": 103520
+        },
+        {
+          "word": "principles?",
+          "begin": 103580,
+          "end": 104120
+        },
+        {
+          "word": "What",
+          "begin": 104840,
+          "end": 104960
+        },
+        {
+          "word": "encoding",
+          "begin": 104980,
+          "end": 105400
+        },
+        {
+          "word": "overhead",
+          "begin": 105460,
+          "end": 105880
+        },
+        {
+          "word": "must",
+          "begin": 105920,
+          "end": 106140
+        },
+        {
+          "word": "you",
+          "begin": 106140,
+          "end": 106200
+        },
+        {
+          "word": "account",
+          "begin": 106240,
+          "end": 106580
+        },
+        {
+          "word": "for,",
+          "begin": 106640,
+          "end": 106720
+        },
+        {
+          "word": "and",
+          "begin": 106980,
+          "end": 107060
+        },
+        {
+          "word": "why",
+          "begin": 107120,
+          "end": 107380
+        },
+        {
+          "word": "does",
+          "begin": 107440,
+          "end": 107560
+        },
+        {
+          "word": "it",
+          "begin": 107580,
+          "end": 107600
+        },
+        {
+          "word": "exist?",
+          "begin": 107640,
+          "end": 108100
+        },
+        {
+          "word": "The",
+          "begin": 109240,
+          "end": 109300
+        },
+        {
+          "word": "answer:",
+          "begin": 109400,
+          "end": 109680
+        },
+        {
+          "word": "PCIe",
+          "begin": 110880,
+          "end": 112100
+        },
+        {
+          "word": "4.0",
+          "begin": 112160,
+          "end": 112800
+        },
+        {
+          "word": "runs",
+          "begin": 112840,
+          "end": 113120
+        },
+        {
+          "word": "at",
+          "begin": 113140,
+          "end": 113240
+        },
+        {
+          "word": "16",
+          "begin": 113140,
+          "end": 113560
+        },
+        {
+          "word": "(gigatransfers",
+          "begin": 113640,
+          "end": 113900
+        },
+        {
+          "word": "per",
+          "begin": 114020,
+          "end": 114080
+        },
+        {
+          "word": "second)",
+          "begin": 114200,
+          "end": 114520
+        },
+        {
+          "word": "per",
+          "begin": 114580,
+          "end": 114660
+        },
+        {
+          "word": "lane.",
+          "begin": 114740,
+          "end": 115000
+        },
+        {
+          "word": "With",
+          "begin": 116120,
+          "end": 116240
+        },
+        {
+          "word": "4",
+          "begin": 116340,
+          "end": 116420
+        },
+        {
+          "word": "lanes",
+          "begin": 116580,
+          "end": 116860
+        },
+        {
+          "word": "(x4),",
+          "begin": 116960,
+          "end": 117300
+        },
+        {
+          "word": "that's",
+          "begin": 118600,
+          "end": 118820
+        },
+        {
+          "word": "64",
+          "begin": 118940,
+          "end": 119240
+        },
+        {
+          "word": "GT/s",
+          "begin": 119340,
+          "end": 120480
+        },
+        {
+          "word": "raw.",
+          "begin": 120560,
+          "end": 120640
+        },
+        {
+          "word": "PCIe",
+          "begin": 121500,
+          "end": 122700
+        },
+        {
+          "word": "4.0",
+          "begin": 122740,
+          "end": 122980
+        },
+        {
+          "word": "uses",
+          "begin": 123200,
+          "end": 123480
+        },
+        {
+          "word": "128b/130b",
+          "begin": 123540,
+          "end": 125700
+        },
+        {
+          "word": "encoding",
+          "begin": 125780,
+          "end": 126320
+        },
+        {
+          "word": "for",
+          "begin": 126680,
+          "end": 126900
+        },
+        {
+          "word": "every",
+          "begin": 126960,
+          "end": 127040
+        },
+        {
+          "word": "128",
+          "begin": 127140,
+          "end": 128039
+        },
+        {
+          "word": "bits",
+          "begin": 128080,
+          "end": 128259
+        },
+        {
+          "word": "of",
+          "begin": 128280,
+          "end": 128340
+        },
+        {
+          "word": "payload,",
+          "begin": 128400,
+          "end": 128860
+        },
+        {
+          "word": "2",
+          "begin": 129120,
+          "end": 129220
+        },
+        {
+          "word": "bits",
+          "begin": 129300,
+          "end": 129479
+        },
+        {
+          "word": "of",
+          "begin": 129500,
+          "end": 129580
+        },
+        {
+          "word": "overhead",
+          "begin": 129620,
+          "end": 130080
+        },
+        {
+          "word": "are",
+          "begin": 130199,
+          "end": 130220
+        },
+        {
+          "word": "added",
+          "begin": 130360,
+          "end": 130580
+        },
+        {
+          "word": "for",
+          "begin": 130620,
+          "end": 130780
+        },
+        {
+          "word": "clock",
+          "begin": 130800,
+          "end": 131020
+        },
+        {
+          "word": "recovery",
+          "begin": 131020,
+          "end": 131400
+        },
+        {
+          "word": "and",
+          "begin": 131560,
+          "end": 131640
+        },
+        {
+          "word": "error",
+          "begin": 131700,
+          "end": 131920
+        },
+        {
+          "word": "detection.",
+          "begin": 131920,
+          "end": 132440
+        },
+        {
+          "word": "So",
+          "begin": 133640,
+          "end": 133860
+        },
+        {
+          "word": "usable",
+          "begin": 133860,
+          "end": 134180
+        },
+        {
+          "word": "bandwidth",
+          "begin": 134300,
+          "end": 134680
+        },
+        {
+          "word": "=",
+          "begin": 134760,
+          "end": 134980
+        },
+        {
+          "word": "64",
+          "begin": 135120,
+          "end": 135400
+        },
+        {
+          "word": "GT/s",
+          "begin": 135500,
+          "end": 136800
+        },
+        {
+          "word": "x",
+          "begin": 136880,
+          "end": 137100
+        },
+        {
+          "word": "(128/130)",
+          "begin": 137180,
+          "end": 138820
+        },
+        {
+          "word": "x",
+          "begin": 139040,
+          "end": 139220
+        },
+        {
+          "word": "(1",
+          "begin": 139300,
+          "end": 139460
+        },
+        {
+          "word": "byte",
+          "begin": 139520,
+          "end": 139740
+        },
+        {
+          "word": "/",
+          "begin": 139820,
+          "end": 140100
+        },
+        {
+          "word": "8",
+          "begin": 140200,
+          "end": 140320
+        },
+        {
+          "word": "bits)",
+          "begin": 140380,
+          "end": 142120
+        },
+        {
+          "word": "=",
+          "begin": 142180,
+          "end": 142400
+        },
+        {
+          "word": "GB/s.",
+          "begin": 142480,
+          "end": 144000
+        },
+        {
+          "word": "The",
+          "begin": 144800,
+          "end": 144860
+        },
+        {
+          "word": "encoding",
+          "begin": 144920,
+          "end": 145420
+        },
+        {
+          "word": "overhead",
+          "begin": 145520,
+          "end": 145900
+        },
+        {
+          "word": "exists",
+          "begin": 145920,
+          "end": 146480
+        },
+        {
+          "word": "because",
+          "begin": 146640,
+          "end": 146860
+        },
+        {
+          "word": "without",
+          "begin": 146900,
+          "end": 147200
+        },
+        {
+          "word": "embedded",
+          "begin": 147220,
+          "end": 147580
+        },
+        {
+          "word": "clock",
+          "begin": 147660,
+          "end": 147900
+        },
+        {
+          "word": "transitions,",
+          "begin": 147960,
+          "end": 148340
+        },
+        {
+          "word": "the",
+          "begin": 148340,
+          "end": 148400
+        },
+        {
+          "word": "receiver",
+          "begin": 148480,
+          "end": 149000
+        },
+        {
+          "word": "can't",
+          "begin": 149100,
+          "end": 149720
+        },
+        {
+          "word": "distinguish",
+          "begin": 149740,
+          "end": 150240
+        },
+        {
+          "word": "data",
+          "begin": 150320,
+          "end": 150540
+        },
+        {
+          "word": "from",
+          "begin": 150620,
+          "end": 150760
+        },
+        {
+          "word": "noise",
+          "begin": 150820,
+          "end": 151140
+        },
+        {
+          "word": "at",
+          "begin": 151160,
+          "end": 151240
+        },
+        {
+          "word": "these",
+          "begin": 151280,
+          "end": 151340
+        },
+        {
+          "word": "speeds.",
+          "begin": 151500,
+          "end": 151940
+        },
+        {
+          "word": "Knowledge",
+          "begin": 152860,
+          "end": 153180
+        },
+        {
+          "word": "check:",
+          "begin": 153260,
+          "end": 153520
+        },
+        {
+          "word": "A",
+          "begin": 153860,
+          "end": 153880
+        }
+      ],
+      "requiresReveal": true
+    },
+    {
+      "blockIndex": 7,
+      "type": "reveal",
+      "text": "Knowledge check: A colleague says 'adding more PCIe lanes makes each lane faster.' When is this true and when does it fail? What actually changes when you go from x1 to x4? The answer: This is never true — each lane runs at the same speed, determined solely by the PCIe generation (e.g., 16 GT/s for Gen 4). Adding lanes increases total bandwidth by providing parallel paths for data, not by speeding up individual lanes. Going from x1 to x4 quadruples the aggregate bandwidth (from ~2 GB/s to ~8 GB/s for Gen 4) because four independent data streams flow simultaneously. The per-lane speed only changes when you upgrade the PCIe generation itself (e.g., Gen 3 at 8 GT/s to Gen 4 at 16 GT/s).",
+      "beginMs": 154000,
+      "endMs": 205740,
+      "timestamps": [
+        {
+          "word": "colleague",
+          "begin": 154000,
+          "end": 154380
+        },
+        {
+          "word": "says",
+          "begin": 154460,
+          "end": 154700
+        },
+        {
+          "word": "'adding",
+          "begin": 154840,
+          "end": 155080
+        },
+        {
+          "word": "more",
+          "begin": 155140,
+          "end": 155200
+        },
+        {
+          "word": "PCIe",
+          "begin": 155360,
+          "end": 155920
+        },
+        {
+          "word": "lanes",
+          "begin": 156020,
+          "end": 156320
+        },
+        {
+          "word": "makes",
+          "begin": 156380,
+          "end": 156620
+        },
+        {
+          "word": "each",
+          "begin": 156720,
+          "end": 156880
+        },
+        {
+          "word": "lane",
+          "begin": 156960,
+          "end": 157140
+        },
+        {
+          "word": "faster.'",
+          "begin": 157240,
+          "end": 157620
+        },
+        {
+          "word": "When",
+          "begin": 158400,
+          "end": 158540
+        },
+        {
+          "word": "is",
+          "begin": 158540,
+          "end": 158640
+        },
+        {
+          "word": "this",
+          "begin": 158680,
+          "end": 158840
+        },
+        {
+          "word": "true",
+          "begin": 158920,
+          "end": 159060
+        },
+        {
+          "word": "and",
+          "begin": 159220,
+          "end": 159340
+        },
+        {
+          "word": "when",
+          "begin": 159340,
+          "end": 159460
+        },
+        {
+          "word": "does",
+          "begin": 159480,
+          "end": 159620
+        },
+        {
+          "word": "it",
+          "begin": 159620,
+          "end": 159700
+        },
+        {
+          "word": "fail?",
+          "begin": 159800,
+          "end": 160080
+        },
+        {
+          "word": "What",
+          "begin": 160520,
+          "end": 160640
+        },
+        {
+          "word": "actually",
+          "begin": 160680,
+          "end": 160980
+        },
+        {
+          "word": "changes",
+          "begin": 161100,
+          "end": 161500
+        },
+        {
+          "word": "when",
+          "begin": 161540,
+          "end": 161660
+        },
+        {
+          "word": "you",
+          "begin": 161660,
+          "end": 161720
+        },
+        {
+          "word": "go",
+          "begin": 161780,
+          "end": 162380
+        },
+        {
+          "word": "from",
+          "begin": 162440,
+          "end": 162600
+        },
+        {
+          "word": "to",
+          "begin": 162660,
+          "end": 162720
+        },
+        {
+          "word": "x4?",
+          "begin": 162800,
+          "end": 164300
+        },
+        {
+          "word": "The",
+          "begin": 164300,
+          "end": 164320
+        },
+        {
+          "word": "answer:",
+          "begin": 164420,
+          "end": 164660
+        },
+        {
+          "word": "This",
+          "begin": 165080,
+          "end": 165240
+        },
+        {
+          "word": "is",
+          "begin": 165260,
+          "end": 165380
+        },
+        {
+          "word": "never",
+          "begin": 165460,
+          "end": 165780
+        },
+        {
+          "word": "true",
+          "begin": 165820,
+          "end": 165880
+        },
+        {
+          "word": "each",
+          "begin": 166360,
+          "end": 166520
+        },
+        {
+          "word": "lane",
+          "begin": 166640,
+          "end": 166860
+        },
+        {
+          "word": "runs",
+          "begin": 166940,
+          "end": 167180
+        },
+        {
+          "word": "at",
+          "begin": 167200,
+          "end": 167300
+        },
+        {
+          "word": "the",
+          "begin": 167300,
+          "end": 167340
+        },
+        {
+          "word": "same",
+          "begin": 167440,
+          "end": 167640
+        },
+        {
+          "word": "speed,",
+          "begin": 167720,
+          "end": 168060
+        },
+        {
+          "word": "determined",
+          "begin": 168240,
+          "end": 168680
+        },
+        {
+          "word": "solely",
+          "begin": 168800,
+          "end": 169060
+        },
+        {
+          "word": "by",
+          "begin": 169160,
+          "end": 169320
+        },
+        {
+          "word": "the",
+          "begin": 169320,
+          "end": 169360
+        },
+        {
+          "word": "PCIe",
+          "begin": 169440,
+          "end": 170040
+        },
+        {
+          "word": "generation",
+          "begin": 170160,
+          "end": 170760
+        },
+        {
+          "word": "(e.g.,",
+          "begin": 171160,
+          "end": 171400
+        },
+        {
+          "word": "16",
+          "begin": 171780,
+          "end": 172240
+        },
+        {
+          "word": "GT/s",
+          "begin": 172300,
+          "end": 173740
+        },
+        {
+          "word": "for",
+          "begin": 173920,
+          "end": 173980
+        },
+        {
+          "word": "Gen",
+          "begin": 174060,
+          "end": 174260
+        },
+        {
+          "word": "4).",
+          "begin": 174360,
+          "end": 174440
+        },
+        {
+          "word": "Adding",
+          "begin": 175380,
+          "end": 175620
+        },
+        {
+          "word": "lanes",
+          "begin": 175660,
+          "end": 175940
+        },
+        {
+          "word": "increases",
+          "begin": 175960,
+          "end": 176440
+        },
+        {
+          "word": "total",
+          "begin": 176480,
+          "end": 176700
+        },
+        {
+          "word": "bandwidth",
+          "begin": 176780,
+          "end": 177180
+        },
+        {
+          "word": "by",
+          "begin": 177240,
+          "end": 177300
+        },
+        {
+          "word": "providing",
+          "begin": 177400,
+          "end": 177800
+        },
+        {
+          "word": "parallel",
+          "begin": 177860,
+          "end": 178240
+        },
+        {
+          "word": "paths",
+          "begin": 178300,
+          "end": 178620
+        },
+        {
+          "word": "for",
+          "begin": 178660,
+          "end": 178720
+        },
+        {
+          "word": "data,",
+          "begin": 178800,
+          "end": 179020
+        },
+        {
+          "word": "not",
+          "begin": 179360,
+          "end": 179520
+        },
+        {
+          "word": "by",
+          "begin": 179560,
+          "end": 179620
+        },
+        {
+          "word": "speeding",
+          "begin": 179760,
+          "end": 180080
+        },
+        {
+          "word": "up",
+          "begin": 180100,
+          "end": 180240
+        },
+        {
+          "word": "individual",
+          "begin": 180320,
+          "end": 180800
+        },
+        {
+          "word": "lanes.",
+          "begin": 180900,
+          "end": 181300
+        },
+        {
+          "word": "Going",
+          "begin": 182040,
+          "end": 182720
+        },
+        {
+          "word": "from",
+          "begin": 182780,
+          "end": 183000
+        },
+        {
+          "word": "to",
+          "begin": 183060,
+          "end": 183120
+        },
+        {
+          "word": "x4",
+          "begin": 183200,
+          "end": 183680
+        },
+        {
+          "word": "quadruples",
+          "begin": 183700,
+          "end": 184240
+        },
+        {
+          "word": "the",
+          "begin": 184280,
+          "end": 184320
+        },
+        {
+          "word": "aggregate",
+          "begin": 184440,
+          "end": 184820
+        },
+        {
+          "word": "bandwidth",
+          "begin": 184860,
+          "end": 185420
+        },
+        {
+          "word": "(from",
+          "begin": 185420,
+          "end": 185580
+        },
+        {
+          "word": "~2",
+          "begin": 185920,
+          "end": 186340
+        },
+        {
+          "word": "GB/s",
+          "begin": 186480,
+          "end": 188560
+        },
+        {
+          "word": "to",
+          "begin": 188880,
+          "end": 188980
+        },
+        {
+          "word": "~8",
+          "begin": 189480,
+          "end": 189800
+        },
+        {
+          "word": "GB/s",
+          "begin": 189920,
+          "end": 192220
+        },
+        {
+          "word": "for",
+          "begin": 192220,
+          "end": 192380
+        },
+        {
+          "word": "Gen",
+          "begin": 192460,
+          "end": 192820
+        },
+        {
+          "word": "4)",
+          "begin": 192840,
+          "end": 192880
+        },
+        {
+          "word": "because",
+          "begin": 192940,
+          "end": 193220
+        },
+        {
+          "word": "four",
+          "begin": 193220,
+          "end": 193480
+        },
+        {
+          "word": "independent",
+          "begin": 193480,
+          "end": 194060
+        },
+        {
+          "word": "data",
+          "begin": 194080,
+          "end": 194540
+        },
+        {
+          "word": "streams",
+          "begin": 194540,
+          "end": 194900
+        },
+        {
+          "word": "flow",
+          "begin": 194980,
+          "end": 195120
+        },
+        {
+          "word": "simultaneously.",
+          "begin": 194980,
+          "end": 195120
+        },
+        {
+          "word": "The",
+          "begin": 195940,
+          "end": 195980
+        },
+        {
+          "word": "per-lane",
+          "begin": 196040,
+          "end": 196480
+        },
+        {
+          "word": "speed",
+          "begin": 196560,
+          "end": 196820
+        },
+        {
+          "word": "only",
+          "begin": 196940,
+          "end": 197120
+        },
+        {
+          "word": "changes",
+          "begin": 197220,
+          "end": 197640
+        },
+        {
+          "word": "when",
+          "begin": 197660,
+          "end": 197780
+        },
+        {
+          "word": "you",
+          "begin": 197780,
+          "end": 197840
+        },
+        {
+          "word": "upgrade",
+          "begin": 197940,
+          "end": 198300
+        },
+        {
+          "word": "the",
+          "begin": 198300,
+          "end": 198400
+        },
+        {
+          "word": "PCIe",
+          "begin": 198460,
+          "end": 199040
+        },
+        {
+          "word": "generation",
+          "begin": 199160,
+          "end": 199680
+        },
+        {
+          "word": "itself",
+          "begin": 199700,
+          "end": 200200
+        },
+        {
+          "word": "(e.g.,",
+          "begin": 200540,
+          "end": 200740
+        },
+        {
+          "word": "Gen",
+          "begin": 201100,
+          "end": 201300
+        },
+        {
+          "word": "3",
+          "begin": 201400,
+          "end": 201540
+        },
+        {
+          "word": "at",
+          "begin": 201940,
+          "end": 202020
+        },
+        {
+          "word": "8",
+          "begin": 202020,
+          "end": 202460
+        },
+        {
+          "word": "GT/s",
+          "begin": 202580,
+          "end": 203200
+        },
+        {
+          "word": "to",
+          "begin": 203540,
+          "end": 203600
+        },
+        {
+          "word": "Gen",
+          "begin": 203680,
+          "end": 203880
+        },
+        {
+          "word": "4",
+          "begin": 203980,
+          "end": 204060
+        },
+        {
+          "word": "at",
+          "begin": 204320,
+          "end": 204440
+        },
+        {
+          "word": "16",
+          "begin": 204480,
+          "end": 205040
+        },
+        {
+          "word": "GT/s).",
+          "begin": 205160,
+          "end": 205740
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

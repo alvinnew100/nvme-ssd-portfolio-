@@ -1,0 +1,4371 @@
+{
+  "sectionId": "sec-firmware",
+  "audioFile": "/audio/sections/sec-firmware.mp3",
+  "totalDurationMs": 302320,
+  "fileSizeBytes": 4838400,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "Firmware Updates — Upgrading the SSD's Brain",
+      "beginMs": 0,
+      "endMs": 3040,
+      "timestamps": [
+        {
+          "word": "Firmware",
+          "begin": 0,
+          "end": 320
+        },
+        {
+          "word": "Updates",
+          "begin": 400,
+          "end": 860
+        },
+        {
+          "word": "Upgrading",
+          "begin": 1200,
+          "end": 1600
+        },
+        {
+          "word": "the",
+          "begin": 1640,
+          "end": 1680
+        },
+        {
+          "word": "SSD's",
+          "begin": 1800,
+          "end": 2320
+        },
+        {
+          "word": "Brain",
+          "begin": 2380,
+          "end": 2580
+        },
+        {
+          "word": "Analogy:",
+          "begin": 2600,
+          "end": 3040
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: Firmware Updates Are Brain Surgery. Updating SSD firmware is like updating the operating system on a computer — the SSD's controller has its own software (firmware) that manages all operations. Firmware updates can fix bugs, improve performance, or add features. But a failed update can brick the drive, so most SSDs support dual-bank firmware (two copies) for safe rollback.",
+      "beginMs": 3420,
+      "endMs": 25900,
+      "timestamps": [
+        {
+          "word": "Firmware",
+          "begin": 3420,
+          "end": 3700
+        },
+        {
+          "word": "Updates",
+          "begin": 3760,
+          "end": 4080
+        },
+        {
+          "word": "Are",
+          "begin": 4120,
+          "end": 4140
+        },
+        {
+          "word": "Brain",
+          "begin": 4260,
+          "end": 4480
+        },
+        {
+          "word": "Surgery.",
+          "begin": 4540,
+          "end": 4880
+        },
+        {
+          "word": "Updating",
+          "begin": 5680,
+          "end": 6060
+        },
+        {
+          "word": "SSD",
+          "begin": 6200,
+          "end": 6760
+        },
+        {
+          "word": "firmware",
+          "begin": 6900,
+          "end": 7180
+        },
+        {
+          "word": "is",
+          "begin": 7400,
+          "end": 7480
+        },
+        {
+          "word": "like",
+          "begin": 7500,
+          "end": 7640
+        },
+        {
+          "word": "updating",
+          "begin": 7720,
+          "end": 8060
+        },
+        {
+          "word": "the",
+          "begin": 8080,
+          "end": 8140
+        },
+        {
+          "word": "operating",
+          "begin": 8260,
+          "end": 8660
+        },
+        {
+          "word": "system",
+          "begin": 8720,
+          "end": 9020
+        },
+        {
+          "word": "on",
+          "begin": 9040,
+          "end": 9120
+        },
+        {
+          "word": "a",
+          "begin": 9120,
+          "end": 9160
+        },
+        {
+          "word": "computer",
+          "begin": 9200,
+          "end": 9540
+        },
+        {
+          "word": "the",
+          "begin": 9540,
+          "end": 9600
+        },
+        {
+          "word": "SSD's",
+          "begin": 10040,
+          "end": 10720
+        },
+        {
+          "word": "controller",
+          "begin": 10760,
+          "end": 11240
+        },
+        {
+          "word": "has",
+          "begin": 11240,
+          "end": 11380
+        },
+        {
+          "word": "its",
+          "begin": 11400,
+          "end": 11520
+        },
+        {
+          "word": "own",
+          "begin": 11580,
+          "end": 11720
+        },
+        {
+          "word": "software",
+          "begin": 11800,
+          "end": 12120
+        },
+        {
+          "word": "(firmware)",
+          "begin": 12280,
+          "end": 12580
+        },
+        {
+          "word": "that",
+          "begin": 12720,
+          "end": 12840
+        },
+        {
+          "word": "manages",
+          "begin": 12860,
+          "end": 13260
+        },
+        {
+          "word": "all",
+          "begin": 13260,
+          "end": 13560
+        },
+        {
+          "word": "operations.",
+          "begin": 13640,
+          "end": 14380
+        },
+        {
+          "word": "Firmware",
+          "begin": 15000,
+          "end": 15320
+        },
+        {
+          "word": "updates",
+          "begin": 15400,
+          "end": 15740
+        },
+        {
+          "word": "can",
+          "begin": 15780,
+          "end": 15880
+        },
+        {
+          "word": "fix",
+          "begin": 15980,
+          "end": 16180
+        },
+        {
+          "word": "bugs,",
+          "begin": 16260,
+          "end": 16600
+        },
+        {
+          "word": "improve",
+          "begin": 16800,
+          "end": 17140
+        },
+        {
+          "word": "performance,",
+          "begin": 17200,
+          "end": 17720
+        },
+        {
+          "word": "or",
+          "begin": 17820,
+          "end": 18220
+        },
+        {
+          "word": "add",
+          "begin": 18240,
+          "end": 18280
+        },
+        {
+          "word": "features.",
+          "begin": 18380,
+          "end": 19320
+        },
+        {
+          "word": "But",
+          "begin": 19440,
+          "end": 19520
+        },
+        {
+          "word": "a",
+          "begin": 19600,
+          "end": 19640
+        },
+        {
+          "word": "failed",
+          "begin": 19660,
+          "end": 19940
+        },
+        {
+          "word": "update",
+          "begin": 19960,
+          "end": 20220
+        },
+        {
+          "word": "can",
+          "begin": 20280,
+          "end": 20460
+        },
+        {
+          "word": "brick",
+          "begin": 20480,
+          "end": 20540
+        },
+        {
+          "word": "the",
+          "begin": 20600,
+          "end": 20720
+        },
+        {
+          "word": "drive,",
+          "begin": 20920,
+          "end": 21320
+        },
+        {
+          "word": "so",
+          "begin": 21320,
+          "end": 21480
+        },
+        {
+          "word": "most",
+          "begin": 21320,
+          "end": 21540
+        },
+        {
+          "word": "SSDs",
+          "begin": 21600,
+          "end": 22000
+        },
+        {
+          "word": "support",
+          "begin": 22060,
+          "end": 22460
+        },
+        {
+          "word": "dual-bank",
+          "begin": 22540,
+          "end": 23000
+        },
+        {
+          "word": "firmware",
+          "begin": 23080,
+          "end": 23340
+        },
+        {
+          "word": "(two",
+          "begin": 23500,
+          "end": 23600
+        },
+        {
+          "word": "copies)",
+          "begin": 23680,
+          "end": 24080
+        },
+        {
+          "word": "for",
+          "begin": 24120,
+          "end": 24180
+        },
+        {
+          "word": "safe",
+          "begin": 24300,
+          "end": 24520
+        },
+        {
+          "word": "rollback.",
+          "begin": 24560,
+          "end": 25040
+        },
+        {
+          "word": "Firmware:",
+          "begin": 25600,
+          "end": 25900
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "term",
+      "text": "Firmware: The software that runs on the SSD controller's embedded processor. Manages the FTL, error correction, wear leveling, command processing, and all other SSD operations. Stored in a dedicated NAND region and loaded into controller SRAM at boot.",
+      "beginMs": 26240,
+      "endMs": 40360,
+      "timestamps": [
+        {
+          "word": "The",
+          "begin": 26240,
+          "end": 26300
+        },
+        {
+          "word": "software",
+          "begin": 26380,
+          "end": 26700
+        },
+        {
+          "word": "that",
+          "begin": 26780,
+          "end": 26900
+        },
+        {
+          "word": "runs",
+          "begin": 26960,
+          "end": 27200
+        },
+        {
+          "word": "on",
+          "begin": 27220,
+          "end": 27320
+        },
+        {
+          "word": "the",
+          "begin": 27320,
+          "end": 27360
+        },
+        {
+          "word": "SSD",
+          "begin": 27480,
+          "end": 27880
+        },
+        {
+          "word": "controller's",
+          "begin": 27960,
+          "end": 28480
+        },
+        {
+          "word": "embedded",
+          "begin": 28540,
+          "end": 28900
+        },
+        {
+          "word": "processor.",
+          "begin": 28960,
+          "end": 29440
+        },
+        {
+          "word": "Manages",
+          "begin": 30060,
+          "end": 30440
+        },
+        {
+          "word": "the",
+          "begin": 30440,
+          "end": 30660
+        },
+        {
+          "word": "FTL,",
+          "begin": 30660,
+          "end": 31180
+        },
+        {
+          "word": "error",
+          "begin": 31440,
+          "end": 31460
+        },
+        {
+          "word": "correction,",
+          "begin": 31640,
+          "end": 32159
+        },
+        {
+          "word": "wear",
+          "begin": 32420,
+          "end": 32479
+        },
+        {
+          "word": "leveling,",
+          "begin": 32640,
+          "end": 33040
+        },
+        {
+          "word": "command",
+          "begin": 33200,
+          "end": 33520
+        },
+        {
+          "word": "processing,",
+          "begin": 33560,
+          "end": 34140
+        },
+        {
+          "word": "and",
+          "begin": 34240,
+          "end": 34320
+        },
+        {
+          "word": "all",
+          "begin": 34280,
+          "end": 34560
+        },
+        {
+          "word": "other",
+          "begin": 34620,
+          "end": 34740
+        },
+        {
+          "word": "SSD",
+          "begin": 34860,
+          "end": 35240
+        },
+        {
+          "word": "operations.",
+          "begin": 35320,
+          "end": 36040
+        },
+        {
+          "word": "Stored",
+          "begin": 36560,
+          "end": 36820
+        },
+        {
+          "word": "in",
+          "begin": 36840,
+          "end": 36920
+        },
+        {
+          "word": "a",
+          "begin": 36940,
+          "end": 36960
+        },
+        {
+          "word": "dedicated",
+          "begin": 37040,
+          "end": 37540
+        },
+        {
+          "word": "NAND",
+          "begin": 37600,
+          "end": 37800
+        },
+        {
+          "word": "region",
+          "begin": 37800,
+          "end": 38200
+        },
+        {
+          "word": "and",
+          "begin": 38300,
+          "end": 38400
+        },
+        {
+          "word": "loaded",
+          "begin": 38440,
+          "end": 38720
+        },
+        {
+          "word": "into",
+          "begin": 38760,
+          "end": 38920
+        },
+        {
+          "word": "controller",
+          "begin": 38980,
+          "end": 39400
+        },
+        {
+          "word": "SRAM",
+          "begin": 39520,
+          "end": 39920
+        },
+        {
+          "word": "at",
+          "begin": 39960,
+          "end": 40040
+        },
+        {
+          "word": "boot.",
+          "begin": 40040,
+          "end": 40360
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "Remember the SSD controller from Lesson 3? It's the processor that runs the FTL, manages wear leveling, handles garbage collection, and processes every NVMe command. All of that behavior is controlled by firmware — software that runs on the controller chip.",
+      "beginMs": 40760,
+      "endMs": 54420,
+      "timestamps": [
+        {
+          "word": "Remember",
+          "begin": 40760,
+          "end": 41100
+        },
+        {
+          "word": "the",
+          "begin": 41100,
+          "end": 41140
+        },
+        {
+          "word": "SSD",
+          "begin": 41240,
+          "end": 41620
+        },
+        {
+          "word": "controller",
+          "begin": 41720,
+          "end": 42100
+        },
+        {
+          "word": "from",
+          "begin": 42180,
+          "end": 42300
+        },
+        {
+          "word": "Lesson",
+          "begin": 42360,
+          "end": 42620
+        },
+        {
+          "word": "3?",
+          "begin": 42680,
+          "end": 42820
+        },
+        {
+          "word": "It's",
+          "begin": 43420,
+          "end": 43540
+        },
+        {
+          "word": "the",
+          "begin": 43560,
+          "end": 43600
+        },
+        {
+          "word": "processor",
+          "begin": 43660,
+          "end": 44120
+        },
+        {
+          "word": "that",
+          "begin": 44200,
+          "end": 44300
+        },
+        {
+          "word": "runs",
+          "begin": 44360,
+          "end": 44580
+        },
+        {
+          "word": "the",
+          "begin": 44620,
+          "end": 44680
+        },
+        {
+          "word": "FTL,",
+          "begin": 44760,
+          "end": 45260
+        },
+        {
+          "word": "manages",
+          "begin": 45540,
+          "end": 45920
+        },
+        {
+          "word": "wear",
+          "begin": 45960,
+          "end": 46040
+        },
+        {
+          "word": "leveling,",
+          "begin": 46180,
+          "end": 46580
+        },
+        {
+          "word": "handles",
+          "begin": 46800,
+          "end": 47120
+        },
+        {
+          "word": "garbage",
+          "begin": 47180,
+          "end": 47480
+        },
+        {
+          "word": "collection,",
+          "begin": 47540,
+          "end": 48020
+        },
+        {
+          "word": "and",
+          "begin": 48120,
+          "end": 48200
+        },
+        {
+          "word": "processes",
+          "begin": 48240,
+          "end": 48820
+        },
+        {
+          "word": "every",
+          "begin": 48920,
+          "end": 49120
+        },
+        {
+          "word": "NVMe",
+          "begin": 49280,
+          "end": 49720
+        },
+        {
+          "word": "command.",
+          "begin": 49840,
+          "end": 50300
+        },
+        {
+          "word": "All",
+          "begin": 50660,
+          "end": 50820
+        },
+        {
+          "word": "of",
+          "begin": 50820,
+          "end": 50920
+        },
+        {
+          "word": "that",
+          "begin": 50940,
+          "end": 51080
+        },
+        {
+          "word": "behavior",
+          "begin": 51120,
+          "end": 51540
+        },
+        {
+          "word": "is",
+          "begin": 51620,
+          "end": 51700
+        },
+        {
+          "word": "controlled",
+          "begin": 51760,
+          "end": 52140
+        },
+        {
+          "word": "by",
+          "begin": 52140,
+          "end": 52240
+        },
+        {
+          "word": "firmware",
+          "begin": 52400,
+          "end": 52700
+        },
+        {
+          "word": "software",
+          "begin": 53140,
+          "end": 53520
+        },
+        {
+          "word": "that",
+          "begin": 53600,
+          "end": 53720
+        },
+        {
+          "word": "runs",
+          "begin": 53780,
+          "end": 54040
+        },
+        {
+          "word": "on",
+          "begin": 54060,
+          "end": 54160
+        },
+        {
+          "word": "the",
+          "begin": 54160,
+          "end": 54200
+        },
+        {
+          "word": "controller",
+          "begin": 54260,
+          "end": 54640
+        },
+        {
+          "word": "chip.",
+          "begin": 54780,
+          "end": 54340
+        },
+        {
+          "word": "But",
+          "begin": 54340,
+          "end": 54420
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "But why would firmware need updating? Because bugs exist. A firmware bug might cause rare data corruption, poor garbage collection under specific workloads, or incorrect SMART reporting. Manufacturers continuously improve firmware — fixing bugs, optimizing performance, and adding new features.",
+      "beginMs": 54440,
+      "endMs": 73180,
+      "timestamps": [
+        {
+          "word": "why",
+          "begin": 54440,
+          "end": 54640
+        },
+        {
+          "word": "would",
+          "begin": 54780,
+          "end": 55020
+        },
+        {
+          "word": "firmware",
+          "begin": 55020,
+          "end": 55640
+        },
+        {
+          "word": "need",
+          "begin": 55780,
+          "end": 56000
+        },
+        {
+          "word": "updating?",
+          "begin": 56040,
+          "end": 56460
+        },
+        {
+          "word": "Because",
+          "begin": 56520,
+          "end": 56960
+        },
+        {
+          "word": "bugs",
+          "begin": 57000,
+          "end": 57580
+        },
+        {
+          "word": "exist.",
+          "begin": 57580,
+          "end": 58840
+        },
+        {
+          "word": "A",
+          "begin": 59080,
+          "end": 59100
+        },
+        {
+          "word": "firmware",
+          "begin": 59200,
+          "end": 59480
+        },
+        {
+          "word": "bug",
+          "begin": 59600,
+          "end": 59900
+        },
+        {
+          "word": "might",
+          "begin": 60040,
+          "end": 60200
+        },
+        {
+          "word": "cause",
+          "begin": 60240,
+          "end": 60500
+        },
+        {
+          "word": "rare",
+          "begin": 60600,
+          "end": 60680
+        },
+        {
+          "word": "data",
+          "begin": 60880,
+          "end": 61080
+        },
+        {
+          "word": "corruption,",
+          "begin": 61140,
+          "end": 61680
+        },
+        {
+          "word": "poor",
+          "begin": 61940,
+          "end": 62060
+        },
+        {
+          "word": "garbage",
+          "begin": 62260,
+          "end": 62560
+        },
+        {
+          "word": "collection",
+          "begin": 62620,
+          "end": 63140
+        },
+        {
+          "word": "under",
+          "begin": 63240,
+          "end": 63380
+        },
+        {
+          "word": "specific",
+          "begin": 63460,
+          "end": 63900
+        },
+        {
+          "word": "workloads,",
+          "begin": 63960,
+          "end": 64519
+        },
+        {
+          "word": "or",
+          "begin": 64760,
+          "end": 64780
+        },
+        {
+          "word": "incorrect",
+          "begin": 64920,
+          "end": 65379
+        },
+        {
+          "word": "SMART",
+          "begin": 65480,
+          "end": 65740
+        },
+        {
+          "word": "reporting.",
+          "begin": 65740,
+          "end": 66200
+        },
+        {
+          "word": "Manufacturers",
+          "begin": 66580,
+          "end": 67320
+        },
+        {
+          "word": "continuously",
+          "begin": 67360,
+          "end": 68080
+        },
+        {
+          "word": "improve",
+          "begin": 68200,
+          "end": 68580
+        },
+        {
+          "word": "firmware",
+          "begin": 68660,
+          "end": 68960
+        },
+        {
+          "word": "fixing",
+          "begin": 69340,
+          "end": 69640
+        },
+        {
+          "word": "bugs,",
+          "begin": 69720,
+          "end": 70060
+        },
+        {
+          "word": "optimizing",
+          "begin": 70280,
+          "end": 70800
+        },
+        {
+          "word": "performance,",
+          "begin": 70860,
+          "end": 71500
+        },
+        {
+          "word": "and",
+          "begin": 71660,
+          "end": 71740
+        },
+        {
+          "word": "adding",
+          "begin": 71800,
+          "end": 72020
+        },
+        {
+          "word": "new",
+          "begin": 72060,
+          "end": 72120
+        },
+        {
+          "word": "features.",
+          "begin": 72260,
+          "end": 72780
+        },
+        {
+          "word": "Here's",
+          "begin": 72940,
+          "end": 73180
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "Here's what makes SSD firmware updates interesting: the drive has multiple firmware slots — like having multiple versions of an app installed simultaneously. You can download a new version into one slot while the old version keeps running in another. If the update goes wrong, you can switch back. This is done through two NVMe admin commands:",
+      "beginMs": 73220,
+      "endMs": 90620,
+      "timestamps": [
+        {
+          "word": "what",
+          "begin": 73220,
+          "end": 73340
+        },
+        {
+          "word": "makes",
+          "begin": 73360,
+          "end": 73600
+        },
+        {
+          "word": "SSD",
+          "begin": 73680,
+          "end": 74080
+        },
+        {
+          "word": "firmware",
+          "begin": 74200,
+          "end": 74480
+        },
+        {
+          "word": "updates",
+          "begin": 74620,
+          "end": 74960
+        },
+        {
+          "word": "interesting:",
+          "begin": 75040,
+          "end": 75540
+        },
+        {
+          "word": "the",
+          "begin": 75800,
+          "end": 75840
+        },
+        {
+          "word": "drive",
+          "begin": 75920,
+          "end": 76280
+        },
+        {
+          "word": "has",
+          "begin": 76300,
+          "end": 76460
+        },
+        {
+          "word": "multiple",
+          "begin": 76560,
+          "end": 76880
+        },
+        {
+          "word": "firmware",
+          "begin": 77020,
+          "end": 77300
+        },
+        {
+          "word": "slots",
+          "begin": 77460,
+          "end": 77880
+        },
+        {
+          "word": "like",
+          "begin": 78120,
+          "end": 78240
+        },
+        {
+          "word": "having",
+          "begin": 78280,
+          "end": 78520
+        },
+        {
+          "word": "multiple",
+          "begin": 78580,
+          "end": 78860
+        },
+        {
+          "word": "versions",
+          "begin": 78860,
+          "end": 79260
+        },
+        {
+          "word": "of",
+          "begin": 79280,
+          "end": 79360
+        },
+        {
+          "word": "an",
+          "begin": 79360,
+          "end": 79440
+        },
+        {
+          "word": "app",
+          "begin": 79500,
+          "end": 79580
+        },
+        {
+          "word": "installed",
+          "begin": 79580,
+          "end": 80440
+        },
+        {
+          "word": "simultaneously.",
+          "begin": 80520,
+          "end": 81360
+        },
+        {
+          "word": "You",
+          "begin": 81580,
+          "end": 81640
+        },
+        {
+          "word": "can",
+          "begin": 81680,
+          "end": 81800
+        },
+        {
+          "word": "download",
+          "begin": 81840,
+          "end": 82200
+        },
+        {
+          "word": "a",
+          "begin": 82200,
+          "end": 82240
+        },
+        {
+          "word": "new",
+          "begin": 82300,
+          "end": 82360
+        },
+        {
+          "word": "version",
+          "begin": 82460,
+          "end": 82780
+        },
+        {
+          "word": "into",
+          "begin": 82800,
+          "end": 82940
+        },
+        {
+          "word": "one",
+          "begin": 83020,
+          "end": 83200
+        },
+        {
+          "word": "slot",
+          "begin": 83280,
+          "end": 83600
+        },
+        {
+          "word": "while",
+          "begin": 83680,
+          "end": 83820
+        },
+        {
+          "word": "the",
+          "begin": 83820,
+          "end": 83860
+        },
+        {
+          "word": "old",
+          "begin": 83960,
+          "end": 84120
+        },
+        {
+          "word": "version",
+          "begin": 84160,
+          "end": 84420
+        },
+        {
+          "word": "keeps",
+          "begin": 84460,
+          "end": 84600
+        },
+        {
+          "word": "running",
+          "begin": 84620,
+          "end": 84900
+        },
+        {
+          "word": "in",
+          "begin": 84920,
+          "end": 85000
+        },
+        {
+          "word": "another.",
+          "begin": 85000,
+          "end": 85260
+        },
+        {
+          "word": "If",
+          "begin": 85680,
+          "end": 85760
+        },
+        {
+          "word": "the",
+          "begin": 85780,
+          "end": 85840
+        },
+        {
+          "word": "update",
+          "begin": 85900,
+          "end": 86160
+        },
+        {
+          "word": "goes",
+          "begin": 86180,
+          "end": 86360
+        },
+        {
+          "word": "wrong,",
+          "begin": 86400,
+          "end": 86680
+        },
+        {
+          "word": "you",
+          "begin": 86760,
+          "end": 86820
+        },
+        {
+          "word": "can",
+          "begin": 86860,
+          "end": 86960
+        },
+        {
+          "word": "switch",
+          "begin": 87040,
+          "end": 87220
+        },
+        {
+          "word": "back.",
+          "begin": 87280,
+          "end": 87560
+        },
+        {
+          "word": "This",
+          "begin": 87840,
+          "end": 87980
+        },
+        {
+          "word": "is",
+          "begin": 88000,
+          "end": 88080
+        },
+        {
+          "word": "done",
+          "begin": 88140,
+          "end": 88320
+        },
+        {
+          "word": "through",
+          "begin": 88380,
+          "end": 88480
+        },
+        {
+          "word": "two",
+          "begin": 88600,
+          "end": 88720
+        },
+        {
+          "word": "NVMe",
+          "begin": 88900,
+          "end": 89300
+        },
+        {
+          "word": "admin",
+          "begin": 89440,
+          "end": 89740
+        },
+        {
+          "word": "commands:",
+          "begin": 89780,
+          "end": 90260
+        },
+        {
+          "word": "Think",
+          "begin": 90480,
+          "end": 90620
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "Think of firmware slots like save slots in a video game. Each slot holds a different firmware version, and the drive can only run one at a time. Try it: select a target slot, choose a commit action, and click &ldquo;Apply&rdquo; to see what happens.",
+      "beginMs": 90640,
+      "endMs": 104180,
+      "timestamps": [
+        {
+          "word": "of",
+          "begin": 90640,
+          "end": 90720
+        },
+        {
+          "word": "firmware",
+          "begin": 90800,
+          "end": 91040
+        },
+        {
+          "word": "slots",
+          "begin": 91180,
+          "end": 91520
+        },
+        {
+          "word": "like",
+          "begin": 91680,
+          "end": 91800
+        },
+        {
+          "word": "save",
+          "begin": 91880,
+          "end": 92060
+        },
+        {
+          "word": "slots",
+          "begin": 92120,
+          "end": 92400
+        },
+        {
+          "word": "in",
+          "begin": 92440,
+          "end": 92500
+        },
+        {
+          "word": "a",
+          "begin": 92500,
+          "end": 92520
+        },
+        {
+          "word": "video",
+          "begin": 92580,
+          "end": 92800
+        },
+        {
+          "word": "game.",
+          "begin": 92880,
+          "end": 93120
+        },
+        {
+          "word": "Each",
+          "begin": 93340,
+          "end": 93480
+        },
+        {
+          "word": "slot",
+          "begin": 93560,
+          "end": 93800
+        },
+        {
+          "word": "holds",
+          "begin": 93820,
+          "end": 94020
+        },
+        {
+          "word": "a",
+          "begin": 94040,
+          "end": 94060
+        },
+        {
+          "word": "different",
+          "begin": 94120,
+          "end": 94380
+        },
+        {
+          "word": "firmware",
+          "begin": 94440,
+          "end": 94720
+        },
+        {
+          "word": "version,",
+          "begin": 94820,
+          "end": 95180
+        },
+        {
+          "word": "and",
+          "begin": 95300,
+          "end": 95380
+        },
+        {
+          "word": "the",
+          "begin": 95380,
+          "end": 95420
+        },
+        {
+          "word": "drive",
+          "begin": 95480,
+          "end": 95700
+        },
+        {
+          "word": "can",
+          "begin": 95760,
+          "end": 95840
+        },
+        {
+          "word": "only",
+          "begin": 95840,
+          "end": 96060
+        },
+        {
+          "word": "run",
+          "begin": 96060,
+          "end": 96040
+        },
+        {
+          "word": "one",
+          "begin": 96040,
+          "end": 96160
+        },
+        {
+          "word": "at",
+          "begin": 96180,
+          "end": 96280
+        },
+        {
+          "word": "a",
+          "begin": 96360,
+          "end": 96420
+        },
+        {
+          "word": "time.",
+          "begin": 96480,
+          "end": 97000
+        },
+        {
+          "word": "Try",
+          "begin": 97280,
+          "end": 97360
+        },
+        {
+          "word": "it:",
+          "begin": 97380,
+          "end": 97660
+        },
+        {
+          "word": "select",
+          "begin": 97840,
+          "end": 98120
+        },
+        {
+          "word": "a",
+          "begin": 98140,
+          "end": 98160
+        },
+        {
+          "word": "target",
+          "begin": 98200,
+          "end": 98500
+        },
+        {
+          "word": "slot,",
+          "begin": 98540,
+          "end": 98840
+        },
+        {
+          "word": "choose",
+          "begin": 99020,
+          "end": 99200
+        },
+        {
+          "word": "a",
+          "begin": 99220,
+          "end": 99240
+        },
+        {
+          "word": "commit",
+          "begin": 99300,
+          "end": 99560
+        },
+        {
+          "word": "action,",
+          "begin": 99640,
+          "end": 100000
+        },
+        {
+          "word": "and",
+          "begin": 100100,
+          "end": 100180
+        },
+        {
+          "word": "click",
+          "begin": 100240,
+          "end": 101420
+        },
+        {
+          "word": "&ldquo;Apply&rdquo;",
+          "begin": 101800,
+          "end": 102980
+        },
+        {
+          "word": "to",
+          "begin": 103320,
+          "end": 103360
+        },
+        {
+          "word": "see",
+          "begin": 103460,
+          "end": 103520
+        },
+        {
+          "word": "what",
+          "begin": 103600,
+          "end": 103700
+        },
+        {
+          "word": "happens.",
+          "begin": 103720,
+          "end": 104180
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "Why not just send the entire file in one command? Because firmware images can be several megabytes, but a single NVMe command can only carry a limited amount of data. So the download command transfers the firmware binary in chunks — multiple smaller pieces that the controller reassembles.",
+      "beginMs": 104500,
+      "endMs": 119760,
+      "timestamps": [
+        {
+          "word": "Why",
+          "begin": 104500,
+          "end": 104580
+        },
+        {
+          "word": "not",
+          "begin": 104660,
+          "end": 104800
+        },
+        {
+          "word": "just",
+          "begin": 104840,
+          "end": 105220
+        },
+        {
+          "word": "send",
+          "begin": 105220,
+          "end": 105420
+        },
+        {
+          "word": "the",
+          "begin": 105500,
+          "end": 105520
+        },
+        {
+          "word": "entire",
+          "begin": 105640,
+          "end": 106140
+        },
+        {
+          "word": "file",
+          "begin": 106200,
+          "end": 106420
+        },
+        {
+          "word": "in",
+          "begin": 106440,
+          "end": 106600
+        },
+        {
+          "word": "command?",
+          "begin": 106440,
+          "end": 106840
+        },
+        {
+          "word": "Because",
+          "begin": 107020,
+          "end": 107280
+        },
+        {
+          "word": "firmware",
+          "begin": 107360,
+          "end": 107700
+        },
+        {
+          "word": "images",
+          "begin": 107780,
+          "end": 108140
+        },
+        {
+          "word": "can",
+          "begin": 108180,
+          "end": 108300
+        },
+        {
+          "word": "be",
+          "begin": 108320,
+          "end": 108380
+        },
+        {
+          "word": "several",
+          "begin": 108520,
+          "end": 108740
+        },
+        {
+          "word": "megabytes,",
+          "begin": 108840,
+          "end": 109380
+        },
+        {
+          "word": "but",
+          "begin": 109560,
+          "end": 109640
+        },
+        {
+          "word": "a",
+          "begin": 109640,
+          "end": 109680
+        },
+        {
+          "word": "single",
+          "begin": 109800,
+          "end": 110000
+        },
+        {
+          "word": "NVMe",
+          "begin": 110160,
+          "end": 110580
+        },
+        {
+          "word": "command",
+          "begin": 110700,
+          "end": 111060
+        },
+        {
+          "word": "can",
+          "begin": 111120,
+          "end": 111240
+        },
+        {
+          "word": "only",
+          "begin": 111340,
+          "end": 111500
+        },
+        {
+          "word": "carry",
+          "begin": 111600,
+          "end": 111840
+        },
+        {
+          "word": "a",
+          "begin": 111920,
+          "end": 111940
+        },
+        {
+          "word": "limited",
+          "begin": 112020,
+          "end": 112360
+        },
+        {
+          "word": "amount",
+          "begin": 112380,
+          "end": 112640
+        },
+        {
+          "word": "of",
+          "begin": 112640,
+          "end": 112700
+        },
+        {
+          "word": "data.",
+          "begin": 112700,
+          "end": 113000
+        },
+        {
+          "word": "So",
+          "begin": 113320,
+          "end": 113380
+        },
+        {
+          "word": "the",
+          "begin": 113440,
+          "end": 113480
+        },
+        {
+          "word": "download",
+          "begin": 113560,
+          "end": 113960
+        },
+        {
+          "word": "command",
+          "begin": 114000,
+          "end": 114320
+        },
+        {
+          "word": "transfers",
+          "begin": 114360,
+          "end": 114820
+        },
+        {
+          "word": "the",
+          "begin": 114820,
+          "end": 114920
+        },
+        {
+          "word": "firmware",
+          "begin": 115020,
+          "end": 115300
+        },
+        {
+          "word": "binary",
+          "begin": 115420,
+          "end": 115800
+        },
+        {
+          "word": "in",
+          "begin": 115880,
+          "end": 115940
+        },
+        {
+          "word": "chunks",
+          "begin": 115940,
+          "end": 116420
+        },
+        {
+          "word": "multiple",
+          "begin": 116660,
+          "end": 116960
+        },
+        {
+          "word": "smaller",
+          "begin": 117080,
+          "end": 117360
+        },
+        {
+          "word": "pieces",
+          "begin": 117460,
+          "end": 117820
+        },
+        {
+          "word": "that",
+          "begin": 117860,
+          "end": 117980
+        },
+        {
+          "word": "the",
+          "begin": 118000,
+          "end": 118060
+        },
+        {
+          "word": "controller",
+          "begin": 118120,
+          "end": 118520
+        },
+        {
+          "word": "reassembles.",
+          "begin": 118600,
+          "end": 119300
+        },
+        {
+          "word": "The",
+          "begin": 119480,
+          "end": 119520
+        },
+        {
+          "word": "good",
+          "begin": 119600,
+          "end": 119760
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "paragraph",
+      "text": "The good news: nvme-cli handles the chunking automatically. You just point it at the firmware file:",
+      "beginMs": 121820,
+      "endMs": 126440,
+      "timestamps": [
+        {
+          "word": "the",
+          "begin": 121820,
+          "end": 121880
+        },
+        {
+          "word": "chunking",
+          "begin": 121940,
+          "end": 122280
+        },
+        {
+          "word": "automatically.",
+          "begin": 122320,
+          "end": 122900
+        },
+        {
+          "word": "You",
+          "begin": 123180,
+          "end": 123240
+        },
+        {
+          "word": "just",
+          "begin": 123300,
+          "end": 123460
+        },
+        {
+          "word": "point",
+          "begin": 123520,
+          "end": 123740
+        },
+        {
+          "word": "it",
+          "begin": 123740,
+          "end": 123820
+        },
+        {
+          "word": "at",
+          "begin": 123860,
+          "end": 123880
+        },
+        {
+          "word": "the",
+          "begin": 123960,
+          "end": 124020
+        },
+        {
+          "word": "firmware",
+          "begin": 124100,
+          "end": 124380
+        },
+        {
+          "word": "file:",
+          "begin": 124520,
+          "end": 125300
+        },
+        {
+          "word": "After",
+          "begin": 125300,
+          "end": 125540
+        },
+        {
+          "word": "the",
+          "begin": 125600,
+          "end": 125620
+        },
+        {
+          "word": "image",
+          "begin": 125620,
+          "end": 125920
+        },
+        {
+          "word": "is",
+          "begin": 125960,
+          "end": 126100
+        },
+        {
+          "word": "downloaded,",
+          "begin": 126120,
+          "end": 126440
+        }
+      ]
+    },
+    {
+      "blockIndex": 9,
+      "type": "paragraph",
+      "text": "After the image is downloaded, you need to commit it — telling the controller what to do with it. But why are there 4 different commit actions? Because different situations need different levels of urgency and risk:",
+      "beginMs": 126480,
+      "endMs": 135400,
+      "timestamps": [
+        {
+          "word": "you",
+          "begin": 126480,
+          "end": 126540
+        },
+        {
+          "word": "need",
+          "begin": 126600,
+          "end": 126740
+        },
+        {
+          "word": "to",
+          "begin": 126760,
+          "end": 126800
+        },
+        {
+          "word": "commit",
+          "begin": 126880,
+          "end": 127140
+        },
+        {
+          "word": "it",
+          "begin": 127160,
+          "end": 127280
+        },
+        {
+          "word": "telling",
+          "begin": 127500,
+          "end": 127760
+        },
+        {
+          "word": "the",
+          "begin": 127780,
+          "end": 127820
+        },
+        {
+          "word": "controller",
+          "begin": 127880,
+          "end": 128300
+        },
+        {
+          "word": "what",
+          "begin": 128380,
+          "end": 128500
+        },
+        {
+          "word": "to",
+          "begin": 128539,
+          "end": 128600
+        },
+        {
+          "word": "do",
+          "begin": 128660,
+          "end": 128740
+        },
+        {
+          "word": "with",
+          "begin": 128800,
+          "end": 128940
+        },
+        {
+          "word": "it.",
+          "begin": 128979,
+          "end": 129100
+        },
+        {
+          "word": "But",
+          "begin": 129440,
+          "end": 129520
+        },
+        {
+          "word": "why",
+          "begin": 129560,
+          "end": 129639
+        },
+        {
+          "word": "are",
+          "begin": 129780,
+          "end": 129940
+        },
+        {
+          "word": "there",
+          "begin": 130080,
+          "end": 130320
+        },
+        {
+          "word": "4",
+          "begin": 130320,
+          "end": 130360
+        },
+        {
+          "word": "different",
+          "begin": 130440,
+          "end": 130580
+        },
+        {
+          "word": "commit",
+          "begin": 130620,
+          "end": 130880
+        },
+        {
+          "word": "actions?",
+          "begin": 130919,
+          "end": 131460
+        },
+        {
+          "word": "Because",
+          "begin": 131620,
+          "end": 131920
+        },
+        {
+          "word": "different",
+          "begin": 131960,
+          "end": 132240
+        },
+        {
+          "word": "situations",
+          "begin": 132280,
+          "end": 132940
+        },
+        {
+          "word": "need",
+          "begin": 133000,
+          "end": 133160
+        },
+        {
+          "word": "different",
+          "begin": 133220,
+          "end": 133520
+        },
+        {
+          "word": "levels",
+          "begin": 133540,
+          "end": 133860
+        },
+        {
+          "word": "of",
+          "begin": 133880,
+          "end": 133960
+        },
+        {
+          "word": "urgency",
+          "begin": 134040,
+          "end": 134440
+        },
+        {
+          "word": "and",
+          "begin": 134520,
+          "end": 134600
+        },
+        {
+          "word": "risk:",
+          "begin": 134660,
+          "end": 135080
+        },
+        {
+          "word": "The",
+          "begin": 135360,
+          "end": 135400
+        }
+      ]
+    },
+    {
+      "blockIndex": 10,
+      "type": "paragraph",
+      "text": "The commit command takes a slot number (-s) and a commit action (-a). Click each CA below to see how it works:",
+      "beginMs": 135460,
+      "endMs": 141360,
+      "timestamps": [
+        {
+          "word": "commit",
+          "begin": 135460,
+          "end": 135720
+        },
+        {
+          "word": "command",
+          "begin": 135760,
+          "end": 136120
+        },
+        {
+          "word": "takes",
+          "begin": 136120,
+          "end": 136400
+        },
+        {
+          "word": "a",
+          "begin": 136440,
+          "end": 136460
+        },
+        {
+          "word": "slot",
+          "begin": 136540,
+          "end": 136800
+        },
+        {
+          "word": "number",
+          "begin": 136840,
+          "end": 137000
+        },
+        {
+          "word": "(-s)",
+          "begin": 137140,
+          "end": 137380
+        },
+        {
+          "word": "and",
+          "begin": 137520,
+          "end": 137600
+        },
+        {
+          "word": "a",
+          "begin": 137600,
+          "end": 137620
+        },
+        {
+          "word": "commit",
+          "begin": 137700,
+          "end": 137940
+        },
+        {
+          "word": "action",
+          "begin": 138020,
+          "end": 138320
+        },
+        {
+          "word": "(-a).",
+          "begin": 138380,
+          "end": 138760
+        },
+        {
+          "word": "Click",
+          "begin": 139080,
+          "end": 139280
+        },
+        {
+          "word": "each",
+          "begin": 139380,
+          "end": 139560
+        },
+        {
+          "word": "CA",
+          "begin": 139660,
+          "end": 139880
+        },
+        {
+          "word": "below",
+          "begin": 140020,
+          "end": 140240
+        },
+        {
+          "word": "to",
+          "begin": 140460,
+          "end": 140520
+        },
+        {
+          "word": "see",
+          "begin": 140600,
+          "end": 140680
+        },
+        {
+          "word": "how",
+          "begin": 140740,
+          "end": 140880
+        },
+        {
+          "word": "it",
+          "begin": 140900,
+          "end": 140960
+        },
+        {
+          "word": "works:",
+          "begin": 141000,
+          "end": 141360
+        }
+      ]
+    },
+    {
+      "blockIndex": 11,
+      "type": "paragraph",
+      "text": "Here's what a real firmware update looks like from start to finish. Notice how each step has a verification — you never blindly trust that it worked:",
+      "beginMs": 141660,
+      "endMs": 149880,
+      "timestamps": [
+        {
+          "word": "Here's",
+          "begin": 141660,
+          "end": 141840
+        },
+        {
+          "word": "what",
+          "begin": 141880,
+          "end": 141980
+        },
+        {
+          "word": "a",
+          "begin": 142000,
+          "end": 142020
+        },
+        {
+          "word": "real",
+          "begin": 142100,
+          "end": 142280
+        },
+        {
+          "word": "firmware",
+          "begin": 142400,
+          "end": 142700
+        },
+        {
+          "word": "update",
+          "begin": 142860,
+          "end": 143180
+        },
+        {
+          "word": "looks",
+          "begin": 143220,
+          "end": 143400
+        },
+        {
+          "word": "like",
+          "begin": 143400,
+          "end": 143640
+        },
+        {
+          "word": "from",
+          "begin": 143680,
+          "end": 143800
+        },
+        {
+          "word": "start",
+          "begin": 143860,
+          "end": 144100
+        },
+        {
+          "word": "to",
+          "begin": 144120,
+          "end": 144180
+        },
+        {
+          "word": "finish.",
+          "begin": 144240,
+          "end": 144600
+        },
+        {
+          "word": "Notice",
+          "begin": 145020,
+          "end": 145340
+        },
+        {
+          "word": "how",
+          "begin": 145360,
+          "end": 145440
+        },
+        {
+          "word": "each",
+          "begin": 145600,
+          "end": 145760
+        },
+        {
+          "word": "step",
+          "begin": 145820,
+          "end": 146100
+        },
+        {
+          "word": "has",
+          "begin": 146120,
+          "end": 146280
+        },
+        {
+          "word": "a",
+          "begin": 146300,
+          "end": 146320
+        },
+        {
+          "word": "verification",
+          "begin": 146380,
+          "end": 147200
+        },
+        {
+          "word": "you",
+          "begin": 147420,
+          "end": 147480
+        },
+        {
+          "word": "never",
+          "begin": 147560,
+          "end": 147860
+        },
+        {
+          "word": "blindly",
+          "begin": 147880,
+          "end": 148180
+        },
+        {
+          "word": "trust",
+          "begin": 148280,
+          "end": 148560
+        },
+        {
+          "word": "that",
+          "begin": 148600,
+          "end": 148700
+        },
+        {
+          "word": "it",
+          "begin": 148700,
+          "end": 148720
+        },
+        {
+          "word": "worked:",
+          "begin": 148820,
+          "end": 149180
+        },
+        {
+          "word": "Target",
+          "begin": 149560,
+          "end": 149880
+        }
+      ]
+    },
+    {
+      "blockIndex": 12,
+      "type": "paragraph",
+      "text": "Target firmware slot (1-7). Slot 1 is often read-only (factory image). The number of available slots varies by drive — check the FRMW field in Identify Controller. Most consumer drives have 2-4 slots.",
+      "beginMs": 149880,
+      "endMs": 163520,
+      "timestamps": [
+        {
+          "word": "firmware",
+          "begin": 149880,
+          "end": 150420
+        },
+        {
+          "word": "slot",
+          "begin": 150460,
+          "end": 150700
+        },
+        {
+          "word": "(1-7).",
+          "begin": 150840,
+          "end": 151640
+        },
+        {
+          "word": "Slot",
+          "begin": 151840,
+          "end": 152080
+        },
+        {
+          "word": "1",
+          "begin": 152140,
+          "end": 152400
+        },
+        {
+          "word": "is",
+          "begin": 152480,
+          "end": 152580
+        },
+        {
+          "word": "often",
+          "begin": 152640,
+          "end": 152900
+        },
+        {
+          "word": "read-only",
+          "begin": 152980,
+          "end": 153400
+        },
+        {
+          "word": "(factory",
+          "begin": 153500,
+          "end": 153840
+        },
+        {
+          "word": "image).",
+          "begin": 153940,
+          "end": 154240
+        },
+        {
+          "word": "The",
+          "begin": 154600,
+          "end": 154640
+        },
+        {
+          "word": "number",
+          "begin": 154700,
+          "end": 154920
+        },
+        {
+          "word": "of",
+          "begin": 155000,
+          "end": 155080
+        },
+        {
+          "word": "available",
+          "begin": 155100,
+          "end": 155500
+        },
+        {
+          "word": "slots",
+          "begin": 155620,
+          "end": 155960
+        },
+        {
+          "word": "varies",
+          "begin": 156040,
+          "end": 156340
+        },
+        {
+          "word": "by",
+          "begin": 156380,
+          "end": 156440
+        },
+        {
+          "word": "drive",
+          "begin": 156560,
+          "end": 156980
+        },
+        {
+          "word": "check",
+          "begin": 157280,
+          "end": 157460
+        },
+        {
+          "word": "the",
+          "begin": 157500,
+          "end": 157540
+        },
+        {
+          "word": "FRMW",
+          "begin": 157540,
+          "end": 158500
+        },
+        {
+          "word": "field",
+          "begin": 158620,
+          "end": 159100
+        },
+        {
+          "word": "in",
+          "begin": 159100,
+          "end": 159180
+        },
+        {
+          "word": "Identify",
+          "begin": 159220,
+          "end": 159620
+        },
+        {
+          "word": "Controller.",
+          "begin": 159760,
+          "end": 160200
+        },
+        {
+          "word": "Most",
+          "begin": 160600,
+          "end": 160840
+        },
+        {
+          "word": "consumer",
+          "begin": 160880,
+          "end": 161360
+        },
+        {
+          "word": "drives",
+          "begin": 161360,
+          "end": 161720
+        },
+        {
+          "word": "have",
+          "begin": 161760,
+          "end": 161860
+        },
+        {
+          "word": "2-4",
+          "begin": 161860,
+          "end": 162540
+        },
+        {
+          "word": "slots.",
+          "begin": 162580,
+          "end": 162960
+        },
+        {
+          "word": "Commit",
+          "begin": 163300,
+          "end": 163520
+        }
+      ]
+    },
+    {
+      "blockIndex": 13,
+      "type": "paragraph",
+      "text": "Commit Action (0-3). Determines download, activation, and reset behavior. CA1 is the safest for production. CA3 avoids downtime but isn't universally supported.",
+      "beginMs": 163620,
+      "endMs": 173600,
+      "timestamps": [
+        {
+          "word": "Action",
+          "begin": 163620,
+          "end": 163960
+        },
+        {
+          "word": "(0-3).",
+          "begin": 164040,
+          "end": 164720
+        },
+        {
+          "word": "Determines",
+          "begin": 165180,
+          "end": 165660
+        },
+        {
+          "word": "download,",
+          "begin": 165720,
+          "end": 166240
+        },
+        {
+          "word": "activation,",
+          "begin": 166500,
+          "end": 167180
+        },
+        {
+          "word": "and",
+          "begin": 167460,
+          "end": 167560
+        },
+        {
+          "word": "reset",
+          "begin": 167600,
+          "end": 167940
+        },
+        {
+          "word": "behavior.",
+          "begin": 167980,
+          "end": 168360
+        },
+        {
+          "word": "CA1",
+          "begin": 168560,
+          "end": 169140
+        },
+        {
+          "word": "is",
+          "begin": 169240,
+          "end": 169320
+        },
+        {
+          "word": "the",
+          "begin": 169360,
+          "end": 169420
+        },
+        {
+          "word": "safest",
+          "begin": 169540,
+          "end": 169900
+        },
+        {
+          "word": "for",
+          "begin": 169940,
+          "end": 170000
+        },
+        {
+          "word": "production.",
+          "begin": 170100,
+          "end": 171160
+        },
+        {
+          "word": "CA3",
+          "begin": 171320,
+          "end": 171440
+        },
+        {
+          "word": "avoids",
+          "begin": 171520,
+          "end": 171880
+        },
+        {
+          "word": "downtime",
+          "begin": 171920,
+          "end": 172480
+        },
+        {
+          "word": "but",
+          "begin": 172540,
+          "end": 172660
+        },
+        {
+          "word": "isn't",
+          "begin": 172700,
+          "end": 172820
+        },
+        {
+          "word": "universally",
+          "begin": 172820,
+          "end": 173080
+        },
+        {
+          "word": "supported.",
+          "begin": 173140,
+          "end": 173600
+        }
+      ]
+    },
+    {
+      "blockIndex": 14,
+      "type": "paragraph",
+      "text": "Path to the firmware binary file for fw-download. The file is transferred in chunks (default 4KB, configurable with --xfer). The drive may impose a minimum granularity (FWUG).",
+      "beginMs": 173620,
+      "endMs": 185660,
+      "timestamps": [
+        {
+          "word": "Path",
+          "begin": 173620,
+          "end": 173420
+        },
+        {
+          "word": "to",
+          "begin": 173420,
+          "end": 173480
+        },
+        {
+          "word": "the",
+          "begin": 173580,
+          "end": 173640
+        },
+        {
+          "word": "firmware",
+          "begin": 173700,
+          "end": 174060
+        },
+        {
+          "word": "binary",
+          "begin": 174320,
+          "end": 174700
+        },
+        {
+          "word": "file",
+          "begin": 174740,
+          "end": 175080
+        },
+        {
+          "word": "for",
+          "begin": 175080,
+          "end": 175140
+        },
+        {
+          "word": "fw-download.",
+          "begin": 175140,
+          "end": 176480
+        },
+        {
+          "word": "The",
+          "begin": 176540,
+          "end": 176600
+        },
+        {
+          "word": "file",
+          "begin": 176660,
+          "end": 176740
+        },
+        {
+          "word": "is",
+          "begin": 176800,
+          "end": 176960
+        },
+        {
+          "word": "transferred",
+          "begin": 177080,
+          "end": 177940
+        },
+        {
+          "word": "in",
+          "begin": 177960,
+          "end": 177980
+        },
+        {
+          "word": "chunks",
+          "begin": 178060,
+          "end": 178440
+        },
+        {
+          "word": "(default",
+          "begin": 178520,
+          "end": 178780
+        },
+        {
+          "word": "4KB,",
+          "begin": 178820,
+          "end": 179260
+        },
+        {
+          "word": "configurable",
+          "begin": 179320,
+          "end": 181020
+        },
+        {
+          "word": "with",
+          "begin": 181020,
+          "end": 181060
+        },
+        {
+          "word": "--xfer).",
+          "begin": 181060,
+          "end": 182660
+        },
+        {
+          "word": "The",
+          "begin": 183280,
+          "end": 183320
+        },
+        {
+          "word": "drive",
+          "begin": 183380,
+          "end": 183640
+        },
+        {
+          "word": "may",
+          "begin": 183680,
+          "end": 183740
+        },
+        {
+          "word": "impose",
+          "begin": 183820,
+          "end": 184180
+        },
+        {
+          "word": "a",
+          "begin": 184200,
+          "end": 184220
+        },
+        {
+          "word": "minimum",
+          "begin": 184300,
+          "end": 184600
+        },
+        {
+          "word": "granularity",
+          "begin": 184660,
+          "end": 185260
+        },
+        {
+          "word": "(FWUG).",
+          "begin": 185400,
+          "end": 185660
+        }
+      ]
+    },
+    {
+      "blockIndex": 15,
+      "type": "paragraph",
+      "text": "Byte 260 of Identify Controller. Bits [4:1] = number of FW slots. Bit 0 = slot 1 is read-only. Bit 5 = activation without reset supported (required for CA3).",
+      "beginMs": 185720,
+      "endMs": 199420,
+      "timestamps": [
+        {
+          "word": "Byte",
+          "begin": 185720,
+          "end": 185860
+        },
+        {
+          "word": "260",
+          "begin": 185980,
+          "end": 187440
+        },
+        {
+          "word": "of",
+          "begin": 187460,
+          "end": 188040
+        },
+        {
+          "word": "Identify",
+          "begin": 188040,
+          "end": 188480
+        },
+        {
+          "word": "Controller.",
+          "begin": 188620,
+          "end": 189060
+        },
+        {
+          "word": "Bits",
+          "begin": 189540,
+          "end": 189800
+        },
+        {
+          "word": "[4:1]",
+          "begin": 189840,
+          "end": 190400
+        },
+        {
+          "word": "=",
+          "begin": 190520,
+          "end": 190840
+        },
+        {
+          "word": "number",
+          "begin": 190900,
+          "end": 191100
+        },
+        {
+          "word": "of",
+          "begin": 191160,
+          "end": 191240
+        },
+        {
+          "word": "FW",
+          "begin": 191320,
+          "end": 191740
+        },
+        {
+          "word": "slots.",
+          "begin": 191840,
+          "end": 192260
+        },
+        {
+          "word": "Bit",
+          "begin": 192720,
+          "end": 192860
+        },
+        {
+          "word": "0",
+          "begin": 192940,
+          "end": 193160
+        },
+        {
+          "word": "=",
+          "begin": 193320,
+          "end": 193540
+        },
+        {
+          "word": "slot",
+          "begin": 193640,
+          "end": 193780
+        },
+        {
+          "word": "1",
+          "begin": 193940,
+          "end": 194120
+        },
+        {
+          "word": "is",
+          "begin": 194140,
+          "end": 194220
+        },
+        {
+          "word": "read-only.",
+          "begin": 194280,
+          "end": 194700
+        },
+        {
+          "word": "Bit",
+          "begin": 195160,
+          "end": 195320
+        },
+        {
+          "word": "5",
+          "begin": 195400,
+          "end": 195660
+        },
+        {
+          "word": "=",
+          "begin": 195760,
+          "end": 196060
+        },
+        {
+          "word": "activation",
+          "begin": 196140,
+          "end": 196760
+        },
+        {
+          "word": "without",
+          "begin": 196800,
+          "end": 197080
+        },
+        {
+          "word": "reset",
+          "begin": 197120,
+          "end": 197460
+        },
+        {
+          "word": "supported",
+          "begin": 197500,
+          "end": 197980
+        },
+        {
+          "word": "(required",
+          "begin": 198240,
+          "end": 198680
+        },
+        {
+          "word": "for",
+          "begin": 198740,
+          "end": 199120
+        },
+        {
+          "word": "CA3).",
+          "begin": 199280,
+          "end": 199420
+        }
+      ]
+    },
+    {
+      "blockIndex": 16,
+      "type": "info",
+      "text": "Firmware update risks — why slots matter: A power loss during firmware commit can brick the drive if it has no backup boot firmware. This is exactly why multiple slots exist — slot 1 (read-only factory firmware) acts as a safety net. Enterprise drives often have dual-boot firmware so they can always fall back. Always ensure stable power during updates, and never overwrite your only working firmware slot.",
+      "beginMs": 199800,
+      "endMs": 222640,
+      "timestamps": [
+        {
+          "word": "Firmware",
+          "begin": 199800,
+          "end": 200100
+        },
+        {
+          "word": "update",
+          "begin": 200240,
+          "end": 200540
+        },
+        {
+          "word": "risks",
+          "begin": 200580,
+          "end": 201000
+        },
+        {
+          "word": "why",
+          "begin": 201280,
+          "end": 201360
+        },
+        {
+          "word": "slots",
+          "begin": 201500,
+          "end": 201780
+        },
+        {
+          "word": "matter:",
+          "begin": 201860,
+          "end": 202040
+        },
+        {
+          "word": "A",
+          "begin": 202060,
+          "end": 202560
+        },
+        {
+          "word": "power",
+          "begin": 202700,
+          "end": 203060
+        },
+        {
+          "word": "loss",
+          "begin": 203060,
+          "end": 203300
+        },
+        {
+          "word": "during",
+          "begin": 203360,
+          "end": 203560
+        },
+        {
+          "word": "firmware",
+          "begin": 203660,
+          "end": 203920
+        },
+        {
+          "word": "commit",
+          "begin": 204040,
+          "end": 204360
+        },
+        {
+          "word": "can",
+          "begin": 204420,
+          "end": 204540
+        },
+        {
+          "word": "brick",
+          "begin": 204600,
+          "end": 204760
+        },
+        {
+          "word": "the",
+          "begin": 204800,
+          "end": 204840
+        },
+        {
+          "word": "drive",
+          "begin": 204920,
+          "end": 205280
+        },
+        {
+          "word": "if",
+          "begin": 205360,
+          "end": 205460
+        },
+        {
+          "word": "it",
+          "begin": 205460,
+          "end": 205520
+        },
+        {
+          "word": "has",
+          "begin": 205520,
+          "end": 205700
+        },
+        {
+          "word": "no",
+          "begin": 205700,
+          "end": 205820
+        },
+        {
+          "word": "backup",
+          "begin": 205920,
+          "end": 206260
+        },
+        {
+          "word": "boot",
+          "begin": 206300,
+          "end": 206460
+        },
+        {
+          "word": "firmware.",
+          "begin": 206520,
+          "end": 206820
+        },
+        {
+          "word": "This",
+          "begin": 207320,
+          "end": 207480
+        },
+        {
+          "word": "is",
+          "begin": 207500,
+          "end": 207600
+        },
+        {
+          "word": "exactly",
+          "begin": 207620,
+          "end": 208040
+        },
+        {
+          "word": "why",
+          "begin": 208100,
+          "end": 208160
+        },
+        {
+          "word": "multiple",
+          "begin": 208280,
+          "end": 208600
+        },
+        {
+          "word": "slots",
+          "begin": 208720,
+          "end": 209020
+        },
+        {
+          "word": "exist",
+          "begin": 209060,
+          "end": 209520
+        },
+        {
+          "word": "slot",
+          "begin": 209820,
+          "end": 210040
+        },
+        {
+          "word": "1",
+          "begin": 210080,
+          "end": 210240
+        },
+        {
+          "word": "(read-only",
+          "begin": 210300,
+          "end": 210680
+        },
+        {
+          "word": "factory",
+          "begin": 210800,
+          "end": 211140
+        },
+        {
+          "word": "firmware)",
+          "begin": 211240,
+          "end": 211520
+        },
+        {
+          "word": "acts",
+          "begin": 211740,
+          "end": 211940
+        },
+        {
+          "word": "as",
+          "begin": 211980,
+          "end": 212060
+        },
+        {
+          "word": "a",
+          "begin": 212080,
+          "end": 212100
+        },
+        {
+          "word": "safety",
+          "begin": 212200,
+          "end": 212460
+        },
+        {
+          "word": "net.",
+          "begin": 212520,
+          "end": 212760
+        },
+        {
+          "word": "Enterprise",
+          "begin": 212960,
+          "end": 213440
+        },
+        {
+          "word": "drives",
+          "begin": 213500,
+          "end": 213820
+        },
+        {
+          "word": "often",
+          "begin": 213940,
+          "end": 214180
+        },
+        {
+          "word": "have",
+          "begin": 214200,
+          "end": 214360
+        },
+        {
+          "word": "dual-boot",
+          "begin": 214360,
+          "end": 214840
+        },
+        {
+          "word": "firmware",
+          "begin": 214920,
+          "end": 215240
+        },
+        {
+          "word": "so",
+          "begin": 215460,
+          "end": 215520
+        },
+        {
+          "word": "they",
+          "begin": 215560,
+          "end": 215620
+        },
+        {
+          "word": "can",
+          "begin": 215700,
+          "end": 215800
+        },
+        {
+          "word": "always",
+          "begin": 215880,
+          "end": 216120
+        },
+        {
+          "word": "fall",
+          "begin": 216180,
+          "end": 216320
+        },
+        {
+          "word": "back.",
+          "begin": 216380,
+          "end": 216700
+        },
+        {
+          "word": "Always",
+          "begin": 217040,
+          "end": 217360
+        },
+        {
+          "word": "ensure",
+          "begin": 217380,
+          "end": 217620
+        },
+        {
+          "word": "stable",
+          "begin": 217760,
+          "end": 218380
+        },
+        {
+          "word": "power",
+          "begin": 218460,
+          "end": 218660
+        },
+        {
+          "word": "during",
+          "begin": 218460,
+          "end": 218660
+        },
+        {
+          "word": "updates,",
+          "begin": 218740,
+          "end": 219160
+        },
+        {
+          "word": "and",
+          "begin": 219460,
+          "end": 219560
+        },
+        {
+          "word": "never",
+          "begin": 219580,
+          "end": 219720
+        },
+        {
+          "word": "overwrite",
+          "begin": 219720,
+          "end": 220300
+        },
+        {
+          "word": "your",
+          "begin": 220300,
+          "end": 220340
+        },
+        {
+          "word": "only",
+          "begin": 220340,
+          "end": 220660
+        },
+        {
+          "word": "working",
+          "begin": 220740,
+          "end": 221000
+        },
+        {
+          "word": "firmware",
+          "begin": 221100,
+          "end": 221360
+        },
+        {
+          "word": "slot.",
+          "begin": 221500,
+          "end": 221820
+        },
+        {
+          "word": "Knowledge",
+          "begin": 222000,
+          "end": 222280
+        },
+        {
+          "word": "check:",
+          "begin": 222280,
+          "end": 222640
+        }
+      ]
+    },
+    {
+      "blockIndex": 17,
+      "type": "reveal",
+      "text": "Knowledge check: You need to update firmware on 1,000 production NVMe SSDs in a data center with zero data loss and minimal downtime. Walk through your strategy: which Commit Action would you use, why multiple firmware slots matter, and what's your rollback plan if the new firmware has a bug? The answer: Use CA1 (download + activate on next reset) for maximum safety and control. First, verify all drives have at least 2 writable firmware slots using 'nvme id-ctrl | grep FRMW'. Stage the new firmware into slot 2 (keeping the current working firmware in slot 1) across all 1,000 drives during business hours — this causes no disruption since CA1 doesn't activate until reset. Then during a maintenance window, reset drives in rolling batches (e.g., 50 at a time) to activate the new firmware. After each batch, verify with 'nvme fw-log' that the new firmware is active and run a quick health check (SMART log, basic I/O test). If the new firmware causes issues in any batch, use CA2 to reactivate slot 1 (the old firmware) on affected drives — no re-download needed since the old image is still in its slot. This is exactly why multiple slots exist: slot 1 (often read-only factory firmware) acts as an ultimate safety net, while writable slots let you stage, test, and roll back without risk. Never use CA3 (immediate activation) across a fleet — if it causes a bug, you have no controlled rollback window.",
+      "beginMs": 222820,
+      "endMs": 302100,
+      "timestamps": [
+        {
+          "word": "You",
+          "begin": 222820,
+          "end": 222880
+        },
+        {
+          "word": "need",
+          "begin": 222940,
+          "end": 223060
+        },
+        {
+          "word": "to",
+          "begin": 223080,
+          "end": 223140
+        },
+        {
+          "word": "update",
+          "begin": 223220,
+          "end": 223480
+        },
+        {
+          "word": "firmware",
+          "begin": 223540,
+          "end": 223920
+        },
+        {
+          "word": "on",
+          "begin": 224020,
+          "end": 224120
+        },
+        {
+          "word": "1,000",
+          "begin": 224180,
+          "end": 224660
+        },
+        {
+          "word": "production",
+          "begin": 224700,
+          "end": 225120
+        },
+        {
+          "word": "SSDs",
+          "begin": 225220,
+          "end": 226560
+        },
+        {
+          "word": "in",
+          "begin": 226840,
+          "end": 226900
+        },
+        {
+          "word": "a",
+          "begin": 226920,
+          "end": 227080
+        },
+        {
+          "word": "data",
+          "begin": 227140,
+          "end": 227200
+        },
+        {
+          "word": "center",
+          "begin": 227280,
+          "end": 227660
+        },
+        {
+          "word": "with",
+          "begin": 227660,
+          "end": 227740
+        },
+        {
+          "word": "zero",
+          "begin": 227800,
+          "end": 228100
+        },
+        {
+          "word": "data",
+          "begin": 228100,
+          "end": 228260
+        },
+        {
+          "word": "loss",
+          "begin": 228320,
+          "end": 228580
+        },
+        {
+          "word": "and",
+          "begin": 228660,
+          "end": 228760
+        },
+        {
+          "word": "minimal",
+          "begin": 228780,
+          "end": 229040
+        },
+        {
+          "word": "downtime.",
+          "begin": 229100,
+          "end": 229600
+        },
+        {
+          "word": "Walk",
+          "begin": 229920,
+          "end": 230100
+        },
+        {
+          "word": "through",
+          "begin": 230160,
+          "end": 230240
+        },
+        {
+          "word": "your",
+          "begin": 230280,
+          "end": 230440
+        },
+        {
+          "word": "strategy:",
+          "begin": 230440,
+          "end": 230840
+        },
+        {
+          "word": "which",
+          "begin": 231200,
+          "end": 231340
+        },
+        {
+          "word": "Commit",
+          "begin": 231400,
+          "end": 231600
+        },
+        {
+          "word": "Action",
+          "begin": 231680,
+          "end": 231960
+        },
+        {
+          "word": "would",
+          "begin": 232000,
+          "end": 232120
+        },
+        {
+          "word": "you",
+          "begin": 232120,
+          "end": 232180
+        },
+        {
+          "word": "use,",
+          "begin": 232260,
+          "end": 232600
+        },
+        {
+          "word": "why",
+          "begin": 232860,
+          "end": 232920
+        },
+        {
+          "word": "multiple",
+          "begin": 233060,
+          "end": 233340
+        },
+        {
+          "word": "firmware",
+          "begin": 233460,
+          "end": 233700
+        },
+        {
+          "word": "slots",
+          "begin": 233820,
+          "end": 234080
+        },
+        {
+          "word": "matter,",
+          "begin": 234140,
+          "end": 234360
+        },
+        {
+          "word": "and",
+          "begin": 234760,
+          "end": 234840
+        },
+        {
+          "word": "what's",
+          "begin": 234860,
+          "end": 235020
+        },
+        {
+          "word": "your",
+          "begin": 235040,
+          "end": 235100
+        },
+        {
+          "word": "rollback",
+          "begin": 235180,
+          "end": 235540
+        },
+        {
+          "word": "plan",
+          "begin": 235580,
+          "end": 235860
+        },
+        {
+          "word": "if",
+          "begin": 235920,
+          "end": 236020
+        },
+        {
+          "word": "the",
+          "begin": 236040,
+          "end": 236100
+        },
+        {
+          "word": "new",
+          "begin": 236160,
+          "end": 236220
+        },
+        {
+          "word": "firmware",
+          "begin": 236340,
+          "end": 236720
+        },
+        {
+          "word": "has",
+          "begin": 236720,
+          "end": 236860
+        },
+        {
+          "word": "a",
+          "begin": 236860,
+          "end": 236880
+        },
+        {
+          "word": "bug?",
+          "begin": 236940,
+          "end": 237220
+        },
+        {
+          "word": "The",
+          "begin": 237520,
+          "end": 237560
+        },
+        {
+          "word": "answer:",
+          "begin": 237640,
+          "end": 237860
+        },
+        {
+          "word": "Use",
+          "begin": 238240,
+          "end": 238680
+        },
+        {
+          "word": "CA1",
+          "begin": 238820,
+          "end": 238980
+        },
+        {
+          "word": "(download",
+          "begin": 239020,
+          "end": 239440
+        },
+        {
+          "word": "+",
+          "begin": 239440,
+          "end": 239760
+        },
+        {
+          "word": "activate",
+          "begin": 239960,
+          "end": 240300
+        },
+        {
+          "word": "on",
+          "begin": 240340,
+          "end": 240440
+        },
+        {
+          "word": "next",
+          "begin": 240480,
+          "end": 240720
+        },
+        {
+          "word": "reset)",
+          "begin": 240760,
+          "end": 241120
+        },
+        {
+          "word": "for",
+          "begin": 241160,
+          "end": 241220
+        },
+        {
+          "word": "maximum",
+          "begin": 241300,
+          "end": 241700
+        },
+        {
+          "word": "safety",
+          "begin": 241780,
+          "end": 242080
+        },
+        {
+          "word": "and",
+          "begin": 242240,
+          "end": 242340
+        },
+        {
+          "word": "control.",
+          "begin": 242380,
+          "end": 242780
+        },
+        {
+          "word": "First,",
+          "begin": 242960,
+          "end": 243280
+        },
+        {
+          "word": "verify",
+          "begin": 243560,
+          "end": 244040
+        },
+        {
+          "word": "all",
+          "begin": 244080,
+          "end": 244180
+        },
+        {
+          "word": "drives",
+          "begin": 244180,
+          "end": 244540
+        },
+        {
+          "word": "have",
+          "begin": 244540,
+          "end": 244640
+        },
+        {
+          "word": "at",
+          "begin": 244660,
+          "end": 244740
+        },
+        {
+          "word": "least",
+          "begin": 244780,
+          "end": 244980
+        },
+        {
+          "word": "2",
+          "begin": 245040,
+          "end": 245140
+        },
+        {
+          "word": "writable",
+          "begin": 245260,
+          "end": 245540
+        },
+        {
+          "word": "firmware",
+          "begin": 245660,
+          "end": 246060
+        },
+        {
+          "word": "slots",
+          "begin": 246100,
+          "end": 246360
+        },
+        {
+          "word": "using",
+          "begin": 246460,
+          "end": 246700
+        },
+        {
+          "word": "'nvme",
+          "begin": 246800,
+          "end": 247160
+        },
+        {
+          "word": "id-ctrl",
+          "begin": 247280,
+          "end": 247960
+        },
+        {
+          "word": "grep",
+          "begin": 248200,
+          "end": 248300
+        },
+        {
+          "word": "FRMW'.",
+          "begin": 248200,
+          "end": 250080
+        },
+        {
+          "word": "Stage",
+          "begin": 250320,
+          "end": 250680
+        },
+        {
+          "word": "the",
+          "begin": 250680,
+          "end": 250720
+        },
+        {
+          "word": "new",
+          "begin": 250780,
+          "end": 250840
+        },
+        {
+          "word": "firmware",
+          "begin": 250980,
+          "end": 251260
+        },
+        {
+          "word": "into",
+          "begin": 251480,
+          "end": 251580
+        },
+        {
+          "word": "slot",
+          "begin": 251580,
+          "end": 251740
+        },
+        {
+          "word": "2",
+          "begin": 251800,
+          "end": 251860
+        },
+        {
+          "word": "(keeping",
+          "begin": 251940,
+          "end": 252700
+        },
+        {
+          "word": "the",
+          "begin": 252700,
+          "end": 252900
+        },
+        {
+          "word": "current",
+          "begin": 252960,
+          "end": 253200
+        },
+        {
+          "word": "working",
+          "begin": 253200,
+          "end": 253180
+        },
+        {
+          "word": "firmware",
+          "begin": 253180,
+          "end": 253440
+        },
+        {
+          "word": "in",
+          "begin": 253460,
+          "end": 253540
+        },
+        {
+          "word": "slot",
+          "begin": 253620,
+          "end": 253800
+        },
+        {
+          "word": "1)",
+          "begin": 253800,
+          "end": 253880
+        },
+        {
+          "word": "across",
+          "begin": 254040,
+          "end": 254219
+        },
+        {
+          "word": "all",
+          "begin": 254280,
+          "end": 254300
+        },
+        {
+          "word": "1,000",
+          "begin": 254300,
+          "end": 254980
+        },
+        {
+          "word": "drives",
+          "begin": 255000,
+          "end": 255340
+        },
+        {
+          "word": "during",
+          "begin": 255420,
+          "end": 255660
+        },
+        {
+          "word": "business",
+          "begin": 255720,
+          "end": 256100
+        },
+        {
+          "word": "hours",
+          "begin": 256120,
+          "end": 256440
+        },
+        {
+          "word": "this",
+          "begin": 256480,
+          "end": 256620
+        },
+        {
+          "word": "causes",
+          "begin": 256640,
+          "end": 256840
+        },
+        {
+          "word": "no",
+          "begin": 256860,
+          "end": 256920
+        },
+        {
+          "word": "disruption",
+          "begin": 257000,
+          "end": 257980
+        },
+        {
+          "word": "since",
+          "begin": 258080,
+          "end": 258360
+        },
+        {
+          "word": "CA1",
+          "begin": 258360,
+          "end": 258520
+        },
+        {
+          "word": "doesn't",
+          "begin": 258600,
+          "end": 258880
+        },
+        {
+          "word": "activate",
+          "begin": 258900,
+          "end": 259800
+        },
+        {
+          "word": "until",
+          "begin": 259840,
+          "end": 260140
+        },
+        {
+          "word": "reset.",
+          "begin": 260140,
+          "end": 261400
+        },
+        {
+          "word": "Then",
+          "begin": 261560,
+          "end": 261740
+        },
+        {
+          "word": "during",
+          "begin": 261780,
+          "end": 261980
+        },
+        {
+          "word": "a",
+          "begin": 262000,
+          "end": 262020
+        },
+        {
+          "word": "maintenance",
+          "begin": 262100,
+          "end": 262500
+        },
+        {
+          "word": "window,",
+          "begin": 262540,
+          "end": 262780
+        },
+        {
+          "word": "reset",
+          "begin": 263080,
+          "end": 263400
+        },
+        {
+          "word": "drives",
+          "begin": 263420,
+          "end": 263760
+        },
+        {
+          "word": "in",
+          "begin": 263440,
+          "end": 263480
+        },
+        {
+          "word": "rolling",
+          "begin": 263480,
+          "end": 263960
+        },
+        {
+          "word": "batches",
+          "begin": 264040,
+          "end": 264600
+        },
+        {
+          "word": "(e.g.,",
+          "begin": 264640,
+          "end": 265140
+        },
+        {
+          "word": "50",
+          "begin": 265320,
+          "end": 265540
+        },
+        {
+          "word": "at",
+          "begin": 265600,
+          "end": 265680
+        },
+        {
+          "word": "a",
+          "begin": 265700,
+          "end": 266120
+        },
+        {
+          "word": "time)",
+          "begin": 266280,
+          "end": 266540
+        },
+        {
+          "word": "to",
+          "begin": 266580,
+          "end": 266680
+        },
+        {
+          "word": "activate",
+          "begin": 266700,
+          "end": 267020
+        },
+        {
+          "word": "the",
+          "begin": 267140,
+          "end": 267220
+        },
+        {
+          "word": "firmware.",
+          "begin": 267140,
+          "end": 267460
+        },
+        {
+          "word": "After",
+          "begin": 267760,
+          "end": 268040
+        },
+        {
+          "word": "each",
+          "begin": 268060,
+          "end": 268200
+        },
+        {
+          "word": "batch,",
+          "begin": 268260,
+          "end": 268520
+        },
+        {
+          "word": "verify",
+          "begin": 268640,
+          "end": 269100
+        },
+        {
+          "word": "with",
+          "begin": 269100,
+          "end": 269200
+        },
+        {
+          "word": "'nvme",
+          "begin": 269300,
+          "end": 269720
+        },
+        {
+          "word": "fw-log'",
+          "begin": 269860,
+          "end": 270660
+        },
+        {
+          "word": "that",
+          "begin": 270920,
+          "end": 271020
+        },
+        {
+          "word": "the",
+          "begin": 270960,
+          "end": 271120
+        },
+        {
+          "word": "new",
+          "begin": 271180,
+          "end": 271240
+        },
+        {
+          "word": "firmware",
+          "begin": 271380,
+          "end": 271740
+        },
+        {
+          "word": "is",
+          "begin": 271760,
+          "end": 271840
+        },
+        {
+          "word": "active",
+          "begin": 271940,
+          "end": 272300
+        },
+        {
+          "word": "and",
+          "begin": 272400,
+          "end": 272480
+        },
+        {
+          "word": "run",
+          "begin": 272540,
+          "end": 272700
+        },
+        {
+          "word": "a",
+          "begin": 272720,
+          "end": 272760
+        },
+        {
+          "word": "quick",
+          "begin": 272820,
+          "end": 273020
+        },
+        {
+          "word": "health",
+          "begin": 273060,
+          "end": 273240
+        },
+        {
+          "word": "check",
+          "begin": 273320,
+          "end": 273560
+        },
+        {
+          "word": "(SMART",
+          "begin": 273660,
+          "end": 273940
+        },
+        {
+          "word": "log,",
+          "begin": 273960,
+          "end": 274220
+        },
+        {
+          "word": "basic",
+          "begin": 274500,
+          "end": 274800
+        },
+        {
+          "word": "I/O",
+          "begin": 274860,
+          "end": 275320
+        },
+        {
+          "word": "test).",
+          "begin": 275440,
+          "end": 275840
+        },
+        {
+          "word": "If",
+          "begin": 276120,
+          "end": 276200
+        },
+        {
+          "word": "the",
+          "begin": 276240,
+          "end": 276280
+        },
+        {
+          "word": "new",
+          "begin": 276340,
+          "end": 276420
+        },
+        {
+          "word": "firmware",
+          "begin": 276560,
+          "end": 276840
+        },
+        {
+          "word": "causes",
+          "begin": 276960,
+          "end": 277300
+        },
+        {
+          "word": "issues",
+          "begin": 277360,
+          "end": 277640
+        },
+        {
+          "word": "in",
+          "begin": 277660,
+          "end": 277740
+        },
+        {
+          "word": "any",
+          "begin": 277820,
+          "end": 277940
+        },
+        {
+          "word": "batch,",
+          "begin": 278020,
+          "end": 278300
+        },
+        {
+          "word": "use",
+          "begin": 278460,
+          "end": 278640
+        },
+        {
+          "word": "CA2",
+          "begin": 278740,
+          "end": 279060
+        },
+        {
+          "word": "to",
+          "begin": 279060,
+          "end": 279280
+        },
+        {
+          "word": "reactivate",
+          "begin": 279360,
+          "end": 279900
+        },
+        {
+          "word": "slot",
+          "begin": 279960,
+          "end": 280160
+        },
+        {
+          "word": "1",
+          "begin": 280220,
+          "end": 280380
+        },
+        {
+          "word": "(the",
+          "begin": 280400,
+          "end": 280440
+        },
+        {
+          "word": "old",
+          "begin": 280600,
+          "end": 280760
+        },
+        {
+          "word": "firmware)",
+          "begin": 280840,
+          "end": 281180
+        },
+        {
+          "word": "on",
+          "begin": 281220,
+          "end": 281300
+        },
+        {
+          "word": "affected",
+          "begin": 281300,
+          "end": 281680
+        },
+        {
+          "word": "drives",
+          "begin": 281720,
+          "end": 282080
+        },
+        {
+          "word": "no",
+          "begin": 282380,
+          "end": 282440
+        },
+        {
+          "word": "re-download",
+          "begin": 282560,
+          "end": 283140
+        },
+        {
+          "word": "needed",
+          "begin": 283160,
+          "end": 283440
+        },
+        {
+          "word": "since",
+          "begin": 283500,
+          "end": 283680
+        },
+        {
+          "word": "the",
+          "begin": 283680,
+          "end": 283740
+        },
+        {
+          "word": "old",
+          "begin": 283740,
+          "end": 284080
+        },
+        {
+          "word": "image",
+          "begin": 284160,
+          "end": 284400
+        },
+        {
+          "word": "is",
+          "begin": 284420,
+          "end": 284500
+        },
+        {
+          "word": "still",
+          "begin": 284540,
+          "end": 284740
+        },
+        {
+          "word": "in",
+          "begin": 284780,
+          "end": 284860
+        },
+        {
+          "word": "its",
+          "begin": 284860,
+          "end": 284980
+        },
+        {
+          "word": "slot.",
+          "begin": 285040,
+          "end": 285380
+        },
+        {
+          "word": "This",
+          "begin": 285640,
+          "end": 285780
+        },
+        {
+          "word": "is",
+          "begin": 285820,
+          "end": 285920
+        },
+        {
+          "word": "exactly",
+          "begin": 285940,
+          "end": 286360
+        },
+        {
+          "word": "why",
+          "begin": 286360,
+          "end": 286520
+        },
+        {
+          "word": "multiple",
+          "begin": 286640,
+          "end": 286960
+        },
+        {
+          "word": "slots",
+          "begin": 287100,
+          "end": 287380
+        },
+        {
+          "word": "exist:",
+          "begin": 287419,
+          "end": 287920
+        },
+        {
+          "word": "slot",
+          "begin": 288240,
+          "end": 288500
+        },
+        {
+          "word": "1",
+          "begin": 288520,
+          "end": 288720
+        },
+        {
+          "word": "(often",
+          "begin": 288840,
+          "end": 289100
+        },
+        {
+          "word": "read-only",
+          "begin": 289140,
+          "end": 289520
+        },
+        {
+          "word": "factory",
+          "begin": 289640,
+          "end": 289960
+        },
+        {
+          "word": "firmware)",
+          "begin": 290080,
+          "end": 290340
+        },
+        {
+          "word": "acts",
+          "begin": 290500,
+          "end": 290740
+        },
+        {
+          "word": "as",
+          "begin": 290760,
+          "end": 290860
+        },
+        {
+          "word": "an",
+          "begin": 290880,
+          "end": 290960
+        },
+        {
+          "word": "ultimate",
+          "begin": 291040,
+          "end": 291380
+        },
+        {
+          "word": "safety",
+          "begin": 291440,
+          "end": 291700
+        },
+        {
+          "word": "net,",
+          "begin": 291780,
+          "end": 292000
+        },
+        {
+          "word": "while",
+          "begin": 292280,
+          "end": 292420
+        },
+        {
+          "word": "writable",
+          "begin": 292500,
+          "end": 292780
+        },
+        {
+          "word": "slots",
+          "begin": 292920,
+          "end": 293220
+        },
+        {
+          "word": "let",
+          "begin": 293280,
+          "end": 293400
+        },
+        {
+          "word": "you",
+          "begin": 293400,
+          "end": 293460
+        },
+        {
+          "word": "stage,",
+          "begin": 293580,
+          "end": 293940
+        },
+        {
+          "word": "test,",
+          "begin": 294160,
+          "end": 294520
+        },
+        {
+          "word": "and",
+          "begin": 294640,
+          "end": 294720
+        },
+        {
+          "word": "roll",
+          "begin": 294760,
+          "end": 294920
+        },
+        {
+          "word": "back",
+          "begin": 294960,
+          "end": 295180
+        },
+        {
+          "word": "without",
+          "begin": 295200,
+          "end": 295460
+        },
+        {
+          "word": "risk.",
+          "begin": 295480,
+          "end": 295880
+        },
+        {
+          "word": "Never",
+          "begin": 296140,
+          "end": 296320
+        },
+        {
+          "word": "use",
+          "begin": 296420,
+          "end": 296600
+        },
+        {
+          "word": "CA3",
+          "begin": 296680,
+          "end": 297200
+        },
+        {
+          "word": "(immediate",
+          "begin": 297320,
+          "end": 297720
+        },
+        {
+          "word": "activation)",
+          "begin": 297760,
+          "end": 298300
+        },
+        {
+          "word": "across",
+          "begin": 298300,
+          "end": 298620
+        },
+        {
+          "word": "a",
+          "begin": 298640,
+          "end": 298660
+        },
+        {
+          "word": "fleet",
+          "begin": 298760,
+          "end": 299060
+        },
+        {
+          "word": "if",
+          "begin": 299360,
+          "end": 299440
+        },
+        {
+          "word": "it",
+          "begin": 299460,
+          "end": 299520
+        },
+        {
+          "word": "causes",
+          "begin": 299560,
+          "end": 299900
+        },
+        {
+          "word": "a",
+          "begin": 299920,
+          "end": 299940
+        },
+        {
+          "word": "bug,",
+          "begin": 300020,
+          "end": 300340
+        },
+        {
+          "word": "you",
+          "begin": 300600,
+          "end": 300640
+        },
+        {
+          "word": "have",
+          "begin": 300680,
+          "end": 300820
+        },
+        {
+          "word": "no",
+          "begin": 300820,
+          "end": 300960
+        },
+        {
+          "word": "controlled",
+          "begin": 301060,
+          "end": 301420
+        },
+        {
+          "word": "rollback",
+          "begin": 301460,
+          "end": 301840
+        },
+        {
+          "word": "window.",
+          "begin": 301860,
+          "end": 302100
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

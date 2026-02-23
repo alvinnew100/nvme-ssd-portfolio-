@@ -1,0 +1,6447 @@
+{
+  "sectionId": "sec-tracing",
+  "audioFile": "/audio/sections/sec-tracing.mp3",
+  "totalDurationMs": 486000,
+  "fileSizeBytes": 7777152,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "ftrace NVMe Tracing — Watching Commands in Real Time",
+      "beginMs": 20,
+      "endMs": 3440,
+      "timestamps": [
+        {
+          "word": "ftrace",
+          "begin": 20,
+          "end": 280
+        },
+        {
+          "word": "NVMe",
+          "begin": 360,
+          "end": 860
+        },
+        {
+          "word": "Tracing",
+          "begin": 1000,
+          "end": 1440
+        },
+        {
+          "word": "Watching",
+          "begin": 1580,
+          "end": 1860
+        },
+        {
+          "word": "Commands",
+          "begin": 1920,
+          "end": 2420
+        },
+        {
+          "word": "in",
+          "begin": 2420,
+          "end": 2480
+        },
+        {
+          "word": "Real",
+          "begin": 2560,
+          "end": 2780
+        },
+        {
+          "word": "Time",
+          "begin": 2780,
+          "end": 3000
+        },
+        {
+          "word": "Analogy:",
+          "begin": 3020,
+          "end": 3440
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: Tracing Shows What's Really Happening. Tracing tools (ftrace, blktrace, perf) are like putting sensors on every step of the I/O path. They show exactly how long each layer takes, where bottlenecks occur, and which operations are being queued. Essential for diagnosing 'the SSD feels slow' problems — usually the bottleneck isn't the SSD itself.",
+      "beginMs": 3860,
+      "endMs": 22920,
+      "timestamps": [
+        {
+          "word": "Tracing",
+          "begin": 3860,
+          "end": 4200
+        },
+        {
+          "word": "Shows",
+          "begin": 4300,
+          "end": 4600
+        },
+        {
+          "word": "What's",
+          "begin": 4640,
+          "end": 4800
+        },
+        {
+          "word": "Really",
+          "begin": 4880,
+          "end": 5080
+        },
+        {
+          "word": "Happening.",
+          "begin": 5140,
+          "end": 5580
+        },
+        {
+          "word": "Tracing",
+          "begin": 5880,
+          "end": 6180
+        },
+        {
+          "word": "tools",
+          "begin": 6220,
+          "end": 6480
+        },
+        {
+          "word": "(ftrace,",
+          "begin": 6560,
+          "end": 7040
+        },
+        {
+          "word": "blktrace,",
+          "begin": 7040,
+          "end": 7880
+        },
+        {
+          "word": "perf)",
+          "begin": 8080,
+          "end": 8280
+        },
+        {
+          "word": "are",
+          "begin": 8320,
+          "end": 8340
+        },
+        {
+          "word": "like",
+          "begin": 8420,
+          "end": 8600
+        },
+        {
+          "word": "putting",
+          "begin": 8660,
+          "end": 8860
+        },
+        {
+          "word": "sensors",
+          "begin": 8960,
+          "end": 9360
+        },
+        {
+          "word": "on",
+          "begin": 9440,
+          "end": 9520
+        },
+        {
+          "word": "every",
+          "begin": 9600,
+          "end": 9760
+        },
+        {
+          "word": "step",
+          "begin": 9860,
+          "end": 10100
+        },
+        {
+          "word": "of",
+          "begin": 10100,
+          "end": 10180
+        },
+        {
+          "word": "the",
+          "begin": 10200,
+          "end": 10260
+        },
+        {
+          "word": "I/O",
+          "begin": 10340,
+          "end": 10520
+        },
+        {
+          "word": "path.",
+          "begin": 10620,
+          "end": 10980
+        },
+        {
+          "word": "They",
+          "begin": 11160,
+          "end": 11200
+        },
+        {
+          "word": "show",
+          "begin": 11320,
+          "end": 11400
+        },
+        {
+          "word": "exactly",
+          "begin": 11480,
+          "end": 11880
+        },
+        {
+          "word": "how",
+          "begin": 11960,
+          "end": 12040
+        },
+        {
+          "word": "long",
+          "begin": 12140,
+          "end": 12340
+        },
+        {
+          "word": "each",
+          "begin": 12440,
+          "end": 12580
+        },
+        {
+          "word": "layer",
+          "begin": 12660,
+          "end": 12820
+        },
+        {
+          "word": "takes,",
+          "begin": 12920,
+          "end": 13260
+        },
+        {
+          "word": "where",
+          "begin": 13460,
+          "end": 13520
+        },
+        {
+          "word": "bottlenecks",
+          "begin": 13640,
+          "end": 14100
+        },
+        {
+          "word": "occur,",
+          "begin": 14120,
+          "end": 14320
+        },
+        {
+          "word": "and",
+          "begin": 14560,
+          "end": 14640
+        },
+        {
+          "word": "which",
+          "begin": 14680,
+          "end": 14840
+        },
+        {
+          "word": "operations",
+          "begin": 14920,
+          "end": 15460
+        },
+        {
+          "word": "are",
+          "begin": 15480,
+          "end": 15600
+        },
+        {
+          "word": "being",
+          "begin": 15600,
+          "end": 15780
+        },
+        {
+          "word": "queued.",
+          "begin": 15860,
+          "end": 16200
+        },
+        {
+          "word": "Essential",
+          "begin": 16540,
+          "end": 16800
+        },
+        {
+          "word": "for",
+          "begin": 16840,
+          "end": 16900
+        },
+        {
+          "word": "diagnosing",
+          "begin": 17000,
+          "end": 17680
+        },
+        {
+          "word": "'the",
+          "begin": 17720,
+          "end": 17760
+        },
+        {
+          "word": "SSD",
+          "begin": 17860,
+          "end": 18280
+        },
+        {
+          "word": "feels",
+          "begin": 18440,
+          "end": 18600
+        },
+        {
+          "word": "slow'",
+          "begin": 18700,
+          "end": 18840
+        },
+        {
+          "word": "problems",
+          "begin": 18960,
+          "end": 19480
+        },
+        {
+          "word": "usually",
+          "begin": 19680,
+          "end": 19960
+        },
+        {
+          "word": "the",
+          "begin": 20000,
+          "end": 20060
+        },
+        {
+          "word": "bottleneck",
+          "begin": 20120,
+          "end": 20560
+        },
+        {
+          "word": "isn't",
+          "begin": 20640,
+          "end": 20820
+        },
+        {
+          "word": "the",
+          "begin": 20820,
+          "end": 20900
+        },
+        {
+          "word": "SSD",
+          "begin": 21000,
+          "end": 21420
+        },
+        {
+          "word": "itself.",
+          "begin": 21480,
+          "end": 22000
+        },
+        {
+          "word": "ftrace:",
+          "begin": 22220,
+          "end": 22920
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "term",
+      "text": "ftrace: Linux's built-in function tracer. Can trace kernel functions related to NVMe and block I/O with nanosecond precision. Accessed via /sys/kernel/debug/tracing/ or the trace-cmd wrapper.",
+      "beginMs": 22920,
+      "endMs": 34020,
+      "timestamps": [
+        {
+          "word": "Linux's",
+          "begin": 22920,
+          "end": 23320
+        },
+        {
+          "word": "built-in",
+          "begin": 23380,
+          "end": 23720
+        },
+        {
+          "word": "function",
+          "begin": 23820,
+          "end": 24120
+        },
+        {
+          "word": "tracer.",
+          "begin": 24160,
+          "end": 24480
+        },
+        {
+          "word": "Can",
+          "begin": 24880,
+          "end": 25000
+        },
+        {
+          "word": "trace",
+          "begin": 25060,
+          "end": 25320
+        },
+        {
+          "word": "kernel",
+          "begin": 25380,
+          "end": 25560
+        },
+        {
+          "word": "functions",
+          "begin": 25660,
+          "end": 26060
+        },
+        {
+          "word": "related",
+          "begin": 26100,
+          "end": 26460
+        },
+        {
+          "word": "to",
+          "begin": 26480,
+          "end": 26540
+        },
+        {
+          "word": "NVMe",
+          "begin": 26640,
+          "end": 27120
+        },
+        {
+          "word": "and",
+          "begin": 27320,
+          "end": 27400
+        },
+        {
+          "word": "block",
+          "begin": 27460,
+          "end": 27720
+        },
+        {
+          "word": "I/O",
+          "begin": 27780,
+          "end": 28060
+        },
+        {
+          "word": "with",
+          "begin": 28200,
+          "end": 28340
+        },
+        {
+          "word": "nanosecond",
+          "begin": 28420,
+          "end": 29020
+        },
+        {
+          "word": "precision.",
+          "begin": 29080,
+          "end": 29560
+        },
+        {
+          "word": "Accessed",
+          "begin": 29920,
+          "end": 30320
+        },
+        {
+          "word": "via",
+          "begin": 30360,
+          "end": 30440
+        },
+        {
+          "word": "/sys/kernel/debug/tracing/",
+          "begin": 30640,
+          "end": 32380
+        },
+        {
+          "word": "or",
+          "begin": 32759,
+          "end": 32780
+        },
+        {
+          "word": "the",
+          "begin": 32880,
+          "end": 32920
+        },
+        {
+          "word": "trace-cmd",
+          "begin": 33000,
+          "end": 33620
+        },
+        {
+          "word": "wrapper.",
+          "begin": 33740,
+          "end": 34020
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "term",
+      "text": "blktrace: A specialized Linux tool that records all block I/O events (queue, merge, issue, complete) for a specific device. Combined with blkparse, it shows the complete lifecycle of each I/O request through the block layer.",
+      "beginMs": 34220,
+      "endMs": 47700,
+      "timestamps": [
+        {
+          "word": "blktrace:",
+          "begin": 34220,
+          "end": 35200
+        },
+        {
+          "word": "A",
+          "begin": 35480,
+          "end": 35640
+        },
+        {
+          "word": "specialized",
+          "begin": 35680,
+          "end": 36280
+        },
+        {
+          "word": "Linux",
+          "begin": 36320,
+          "end": 36560
+        },
+        {
+          "word": "tool",
+          "begin": 36580,
+          "end": 36860
+        },
+        {
+          "word": "that",
+          "begin": 36900,
+          "end": 37020
+        },
+        {
+          "word": "records",
+          "begin": 37020,
+          "end": 37400
+        },
+        {
+          "word": "all",
+          "begin": 37540,
+          "end": 37660
+        },
+        {
+          "word": "block",
+          "begin": 37740,
+          "end": 38020
+        },
+        {
+          "word": "I/O",
+          "begin": 38140,
+          "end": 38340
+        },
+        {
+          "word": "events",
+          "begin": 38440,
+          "end": 38760
+        },
+        {
+          "word": "(queue,",
+          "begin": 38840,
+          "end": 38960
+        },
+        {
+          "word": "merge,",
+          "begin": 39340,
+          "end": 39860
+        },
+        {
+          "word": "issue,",
+          "begin": 39860,
+          "end": 40080
+        },
+        {
+          "word": "complete)",
+          "begin": 40340,
+          "end": 40760
+        },
+        {
+          "word": "for",
+          "begin": 40800,
+          "end": 40900
+        },
+        {
+          "word": "a",
+          "begin": 40900,
+          "end": 40940
+        },
+        {
+          "word": "specific",
+          "begin": 41000,
+          "end": 41420
+        },
+        {
+          "word": "device.",
+          "begin": 41440,
+          "end": 41880
+        },
+        {
+          "word": "Combined",
+          "begin": 42220,
+          "end": 42640
+        },
+        {
+          "word": "with",
+          "begin": 42660,
+          "end": 42780
+        },
+        {
+          "word": "blkparse,",
+          "begin": 42840,
+          "end": 43720
+        },
+        {
+          "word": "it",
+          "begin": 44000,
+          "end": 44080
+        },
+        {
+          "word": "shows",
+          "begin": 44120,
+          "end": 44380
+        },
+        {
+          "word": "the",
+          "begin": 44420,
+          "end": 44480
+        },
+        {
+          "word": "complete",
+          "begin": 44520,
+          "end": 44880
+        },
+        {
+          "word": "lifecycle",
+          "begin": 44900,
+          "end": 45420
+        },
+        {
+          "word": "of",
+          "begin": 45560,
+          "end": 45640
+        },
+        {
+          "word": "each",
+          "begin": 45740,
+          "end": 45880
+        },
+        {
+          "word": "I/O",
+          "begin": 46000,
+          "end": 46200
+        },
+        {
+          "word": "request",
+          "begin": 46300,
+          "end": 46780
+        },
+        {
+          "word": "through",
+          "begin": 46960,
+          "end": 47040
+        },
+        {
+          "word": "the",
+          "begin": 47100,
+          "end": 47140
+        },
+        {
+          "word": "block",
+          "begin": 47200,
+          "end": 47460
+        },
+        {
+          "word": "layer.",
+          "begin": 47500,
+          "end": 47700
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "We've learned how NVMe commands work: the host writes a 64-byte Submission Queue Entry, rings a doorbell, the drive processes it, and posts a Completion Queue Entry. But when something goes wrong — a command takes too long, an error appears, performance drops — how do you actually see what's happening?",
+      "beginMs": 47980,
+      "endMs": 65220,
+      "timestamps": [
+        {
+          "word": "We've",
+          "begin": 47980,
+          "end": 48140
+        },
+        {
+          "word": "learned",
+          "begin": 48180,
+          "end": 48400
+        },
+        {
+          "word": "how",
+          "begin": 48420,
+          "end": 48500
+        },
+        {
+          "word": "NVMe",
+          "begin": 48640,
+          "end": 49020
+        },
+        {
+          "word": "commands",
+          "begin": 49120,
+          "end": 49500
+        },
+        {
+          "word": "work:",
+          "begin": 49560,
+          "end": 49820
+        },
+        {
+          "word": "the",
+          "begin": 50040,
+          "end": 50080
+        },
+        {
+          "word": "host",
+          "begin": 50160,
+          "end": 50480
+        },
+        {
+          "word": "writes",
+          "begin": 50520,
+          "end": 50780
+        },
+        {
+          "word": "a",
+          "begin": 50920,
+          "end": 50940
+        },
+        {
+          "word": "64-byte",
+          "begin": 51080,
+          "end": 51880
+        },
+        {
+          "word": "Submission",
+          "begin": 51940,
+          "end": 52340
+        },
+        {
+          "word": "Queue",
+          "begin": 52400,
+          "end": 52500
+        },
+        {
+          "word": "Entry,",
+          "begin": 52600,
+          "end": 52840
+        },
+        {
+          "word": "rings",
+          "begin": 53200,
+          "end": 53420
+        },
+        {
+          "word": "a",
+          "begin": 53240,
+          "end": 53340
+        },
+        {
+          "word": "doorbell,",
+          "begin": 53400,
+          "end": 53940
+        },
+        {
+          "word": "the",
+          "begin": 54180,
+          "end": 54220
+        },
+        {
+          "word": "drive",
+          "begin": 54280,
+          "end": 54520
+        },
+        {
+          "word": "processes",
+          "begin": 54560,
+          "end": 55100
+        },
+        {
+          "word": "it,",
+          "begin": 55120,
+          "end": 55260
+        },
+        {
+          "word": "and",
+          "begin": 55520,
+          "end": 55600
+        },
+        {
+          "word": "posts",
+          "begin": 55680,
+          "end": 56020
+        },
+        {
+          "word": "a",
+          "begin": 56020,
+          "end": 56040
+        },
+        {
+          "word": "Completion",
+          "begin": 56100,
+          "end": 56580
+        },
+        {
+          "word": "Queue",
+          "begin": 56640,
+          "end": 56740
+        },
+        {
+          "word": "Entry.",
+          "begin": 56820,
+          "end": 57040
+        },
+        {
+          "word": "But",
+          "begin": 57360,
+          "end": 57440
+        },
+        {
+          "word": "when",
+          "begin": 57480,
+          "end": 57600
+        },
+        {
+          "word": "something",
+          "begin": 57680,
+          "end": 57960
+        },
+        {
+          "word": "goes",
+          "begin": 58000,
+          "end": 58200
+        },
+        {
+          "word": "wrong",
+          "begin": 58260,
+          "end": 58540
+        },
+        {
+          "word": "a",
+          "begin": 58840,
+          "end": 58940
+        },
+        {
+          "word": "command",
+          "begin": 58940,
+          "end": 59280
+        },
+        {
+          "word": "takes",
+          "begin": 59320,
+          "end": 59560
+        },
+        {
+          "word": "too",
+          "begin": 59620,
+          "end": 59700
+        },
+        {
+          "word": "long,",
+          "begin": 59800,
+          "end": 60080
+        },
+        {
+          "word": "an",
+          "begin": 60380,
+          "end": 60460
+        },
+        {
+          "word": "error",
+          "begin": 60540,
+          "end": 60680
+        },
+        {
+          "word": "appears,",
+          "begin": 60760,
+          "end": 61240
+        },
+        {
+          "word": "performance",
+          "begin": 61540,
+          "end": 62020
+        },
+        {
+          "word": "drops",
+          "begin": 62080,
+          "end": 62440
+        },
+        {
+          "word": "how",
+          "begin": 62740,
+          "end": 62800
+        },
+        {
+          "word": "do",
+          "begin": 62860,
+          "end": 62920
+        },
+        {
+          "word": "you",
+          "begin": 62920,
+          "end": 62960
+        },
+        {
+          "word": "actually",
+          "begin": 63060,
+          "end": 63580
+        },
+        {
+          "word": "see",
+          "begin": 63660,
+          "end": 63720
+        },
+        {
+          "word": "what's",
+          "begin": 63660,
+          "end": 63820
+        },
+        {
+          "word": "happening?",
+          "begin": 63840,
+          "end": 64260
+        },
+        {
+          "word": "You",
+          "begin": 64260,
+          "end": 64819
+        },
+        {
+          "word": "trace",
+          "begin": 64819,
+          "end": 65220
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "You trace it. Linux has a built-in tracing framework called ftrace (short for &ldquo;function tracer&rdquo;). It can record events inside the kernel — including every NVMe command that's submitted and completed. Think of it as a security camera for the I/O path: you can see exactly what commands were sent, when, to which queue, and whether they succeeded.",
+      "beginMs": 65260,
+      "endMs": 89500,
+      "timestamps": [
+        {
+          "word": "it.",
+          "begin": 65260,
+          "end": 65400
+        },
+        {
+          "word": "Linux",
+          "begin": 66080,
+          "end": 66380
+        },
+        {
+          "word": "has",
+          "begin": 66400,
+          "end": 66540
+        },
+        {
+          "word": "a",
+          "begin": 66540,
+          "end": 66600
+        },
+        {
+          "word": "built-in",
+          "begin": 66680,
+          "end": 67040
+        },
+        {
+          "word": "tracing",
+          "begin": 67080,
+          "end": 67440
+        },
+        {
+          "word": "framework",
+          "begin": 67520,
+          "end": 67940
+        },
+        {
+          "word": "called",
+          "begin": 68140,
+          "end": 68320
+        },
+        {
+          "word": "ftrace",
+          "begin": 68400,
+          "end": 68680
+        },
+        {
+          "word": "(short",
+          "begin": 68860,
+          "end": 69140
+        },
+        {
+          "word": "for",
+          "begin": 69440,
+          "end": 69520
+        },
+        {
+          "word": "&ldquo;function",
+          "begin": 69960,
+          "end": 71800
+        },
+        {
+          "word": "tracer&rdquo;).",
+          "begin": 71860,
+          "end": 74980
+        },
+        {
+          "word": "It",
+          "begin": 75440,
+          "end": 75480
+        },
+        {
+          "word": "can",
+          "begin": 75520,
+          "end": 75640
+        },
+        {
+          "word": "record",
+          "begin": 75680,
+          "end": 76020
+        },
+        {
+          "word": "events",
+          "begin": 76020,
+          "end": 76340
+        },
+        {
+          "word": "inside",
+          "begin": 76380,
+          "end": 76700
+        },
+        {
+          "word": "the",
+          "begin": 76700,
+          "end": 76760
+        },
+        {
+          "word": "kernel",
+          "begin": 76820,
+          "end": 77060
+        },
+        {
+          "word": "including",
+          "begin": 77240,
+          "end": 77620
+        },
+        {
+          "word": "every",
+          "begin": 77700,
+          "end": 77900
+        },
+        {
+          "word": "NVMe",
+          "begin": 78040,
+          "end": 78480
+        },
+        {
+          "word": "command",
+          "begin": 78600,
+          "end": 79040
+        },
+        {
+          "word": "that's",
+          "begin": 79240,
+          "end": 79380
+        },
+        {
+          "word": "submitted",
+          "begin": 79440,
+          "end": 79860
+        },
+        {
+          "word": "and",
+          "begin": 79920,
+          "end": 80020
+        },
+        {
+          "word": "completed.",
+          "begin": 80060,
+          "end": 80580
+        },
+        {
+          "word": "Think",
+          "begin": 80960,
+          "end": 81120
+        },
+        {
+          "word": "of",
+          "begin": 81120,
+          "end": 81220
+        },
+        {
+          "word": "it",
+          "begin": 81240,
+          "end": 81320
+        },
+        {
+          "word": "as",
+          "begin": 81360,
+          "end": 81460
+        },
+        {
+          "word": "a",
+          "begin": 81460,
+          "end": 81520
+        },
+        {
+          "word": "security",
+          "begin": 81600,
+          "end": 82000
+        },
+        {
+          "word": "camera",
+          "begin": 82080,
+          "end": 82400
+        },
+        {
+          "word": "for",
+          "begin": 82680,
+          "end": 82740
+        },
+        {
+          "word": "the",
+          "begin": 82800,
+          "end": 82840
+        },
+        {
+          "word": "I/O",
+          "begin": 82960,
+          "end": 83380
+        },
+        {
+          "word": "path:",
+          "begin": 83380,
+          "end": 83620
+        },
+        {
+          "word": "you",
+          "begin": 84180,
+          "end": 84240
+        },
+        {
+          "word": "can",
+          "begin": 84280,
+          "end": 84380
+        },
+        {
+          "word": "see",
+          "begin": 84460,
+          "end": 84520
+        },
+        {
+          "word": "exactly",
+          "begin": 84580,
+          "end": 85020
+        },
+        {
+          "word": "what",
+          "begin": 85020,
+          "end": 85240
+        },
+        {
+          "word": "commands",
+          "begin": 85280,
+          "end": 85680
+        },
+        {
+          "word": "were",
+          "begin": 85680,
+          "end": 85720
+        },
+        {
+          "word": "sent,",
+          "begin": 85840,
+          "end": 86100
+        },
+        {
+          "word": "when,",
+          "begin": 86440,
+          "end": 86720
+        },
+        {
+          "word": "to",
+          "begin": 87040,
+          "end": 87100
+        },
+        {
+          "word": "which",
+          "begin": 87160,
+          "end": 87440
+        },
+        {
+          "word": "queue,",
+          "begin": 87480,
+          "end": 87540
+        },
+        {
+          "word": "and",
+          "begin": 88000,
+          "end": 88060
+        },
+        {
+          "word": "whether",
+          "begin": 88100,
+          "end": 88260
+        },
+        {
+          "word": "they",
+          "begin": 88340,
+          "end": 88400
+        },
+        {
+          "word": "succeeded.",
+          "begin": 88500,
+          "end": 89040
+        },
+        {
+          "word": "Why",
+          "begin": 89420,
+          "end": 89500
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "Why not just use application-level logging? Because application logs only show what the app asked for. They don't show what the kernel actually did. A single application write() call might be split into multiple NVMe commands, reordered by the I/O scheduler, or delayed by write-back caching. ftrace shows the ground truth — what actually hit the hardware.",
+      "beginMs": 89600,
+      "endMs": 108320,
+      "timestamps": [
+        {
+          "word": "not",
+          "begin": 89600,
+          "end": 89760
+        },
+        {
+          "word": "just",
+          "begin": 89780,
+          "end": 89960
+        },
+        {
+          "word": "use",
+          "begin": 89980,
+          "end": 90160
+        },
+        {
+          "word": "application-level",
+          "begin": 90220,
+          "end": 91060
+        },
+        {
+          "word": "logging?",
+          "begin": 91060,
+          "end": 91440
+        },
+        {
+          "word": "Because",
+          "begin": 91700,
+          "end": 91920
+        },
+        {
+          "word": "application",
+          "begin": 92000,
+          "end": 92540
+        },
+        {
+          "word": "logs",
+          "begin": 92580,
+          "end": 92840
+        },
+        {
+          "word": "only",
+          "begin": 92900,
+          "end": 93040
+        },
+        {
+          "word": "show",
+          "begin": 93160,
+          "end": 93260
+        },
+        {
+          "word": "what",
+          "begin": 93360,
+          "end": 93460
+        },
+        {
+          "word": "the",
+          "begin": 93480,
+          "end": 93540
+        },
+        {
+          "word": "app",
+          "begin": 93640,
+          "end": 93800
+        },
+        {
+          "word": "asked",
+          "begin": 93860,
+          "end": 94080
+        },
+        {
+          "word": "for.",
+          "begin": 94140,
+          "end": 94220
+        },
+        {
+          "word": "They",
+          "begin": 94720,
+          "end": 94760
+        },
+        {
+          "word": "don't",
+          "begin": 94800,
+          "end": 94940
+        },
+        {
+          "word": "show",
+          "begin": 95020,
+          "end": 95100
+        },
+        {
+          "word": "what",
+          "begin": 95200,
+          "end": 95340
+        },
+        {
+          "word": "the",
+          "begin": 95340,
+          "end": 95380
+        },
+        {
+          "word": "kernel",
+          "begin": 95440,
+          "end": 95640
+        },
+        {
+          "word": "actually",
+          "begin": 95780,
+          "end": 96120
+        },
+        {
+          "word": "did.",
+          "begin": 96200,
+          "end": 96500
+        },
+        {
+          "word": "A",
+          "begin": 96640,
+          "end": 96660
+        },
+        {
+          "word": "single",
+          "begin": 96780,
+          "end": 97020
+        },
+        {
+          "word": "application",
+          "begin": 97100,
+          "end": 97640
+        },
+        {
+          "word": "write()",
+          "begin": 97700,
+          "end": 97860
+        },
+        {
+          "word": "call",
+          "begin": 97900,
+          "end": 98100
+        },
+        {
+          "word": "might",
+          "begin": 98160,
+          "end": 98300
+        },
+        {
+          "word": "be",
+          "begin": 98340,
+          "end": 98400
+        },
+        {
+          "word": "split",
+          "begin": 98480,
+          "end": 98720
+        },
+        {
+          "word": "into",
+          "begin": 98740,
+          "end": 98920
+        },
+        {
+          "word": "multiple",
+          "begin": 99000,
+          "end": 99320
+        },
+        {
+          "word": "NVMe",
+          "begin": 99440,
+          "end": 99860
+        },
+        {
+          "word": "commands,",
+          "begin": 99960,
+          "end": 100440
+        },
+        {
+          "word": "reordered",
+          "begin": 100900,
+          "end": 101480
+        },
+        {
+          "word": "by",
+          "begin": 101480,
+          "end": 101660
+        },
+        {
+          "word": "the",
+          "begin": 101780,
+          "end": 101660
+        },
+        {
+          "word": "I/O",
+          "begin": 101780,
+          "end": 102340
+        },
+        {
+          "word": "scheduler,",
+          "begin": 102380,
+          "end": 103340
+        },
+        {
+          "word": "or",
+          "begin": 103340,
+          "end": 103360
+        },
+        {
+          "word": "delayed",
+          "begin": 103400,
+          "end": 103720
+        },
+        {
+          "word": "by",
+          "begin": 103720,
+          "end": 103840
+        },
+        {
+          "word": "write-back",
+          "begin": 103720,
+          "end": 103940
+        },
+        {
+          "word": "caching.",
+          "begin": 104000,
+          "end": 104460
+        },
+        {
+          "word": "ftrace",
+          "begin": 104800,
+          "end": 105220
+        },
+        {
+          "word": "shows",
+          "begin": 105280,
+          "end": 105520
+        },
+        {
+          "word": "the",
+          "begin": 105560,
+          "end": 105600
+        },
+        {
+          "word": "ground",
+          "begin": 105660,
+          "end": 106000
+        },
+        {
+          "word": "truth",
+          "begin": 106040,
+          "end": 106300
+        },
+        {
+          "word": "what",
+          "begin": 106420,
+          "end": 106540
+        },
+        {
+          "word": "actually",
+          "begin": 106600,
+          "end": 106960
+        },
+        {
+          "word": "hit",
+          "begin": 107020,
+          "end": 107240
+        },
+        {
+          "word": "the",
+          "begin": 107300,
+          "end": 107500
+        },
+        {
+          "word": "hardware.",
+          "begin": 107300,
+          "end": 108160
+        },
+        {
+          "word": "How",
+          "begin": 108160,
+          "end": 108320
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "How does ftrace work internally? The Linux kernel has tracepoints — pre-defined instrumentation hooks compiled into the source code. When you enable a tracepoint, the kernel writes a record to a ring buffer every time that code path executes. Reading the trace pipe gives you a stream of these records, timestamped to microsecond precision.",
+      "beginMs": 108380,
+      "endMs": 125700,
+      "timestamps": [
+        {
+          "word": "does",
+          "begin": 108380,
+          "end": 108400
+        },
+        {
+          "word": "ftrace",
+          "begin": 108480,
+          "end": 108860
+        },
+        {
+          "word": "work",
+          "begin": 108940,
+          "end": 109140
+        },
+        {
+          "word": "internally?",
+          "begin": 109180,
+          "end": 109640
+        },
+        {
+          "word": "The",
+          "begin": 109920,
+          "end": 109980
+        },
+        {
+          "word": "Linux",
+          "begin": 110040,
+          "end": 110320
+        },
+        {
+          "word": "kernel",
+          "begin": 110380,
+          "end": 110620
+        },
+        {
+          "word": "has",
+          "begin": 110660,
+          "end": 110820
+        },
+        {
+          "word": "tracepoints",
+          "begin": 110880,
+          "end": 111500
+        },
+        {
+          "word": "pre-defined",
+          "begin": 111620,
+          "end": 112200
+        },
+        {
+          "word": "instrumentation",
+          "begin": 112280,
+          "end": 113000
+        },
+        {
+          "word": "hooks",
+          "begin": 113040,
+          "end": 113300
+        },
+        {
+          "word": "compiled",
+          "begin": 113340,
+          "end": 113780
+        },
+        {
+          "word": "into",
+          "begin": 113800,
+          "end": 113960
+        },
+        {
+          "word": "the",
+          "begin": 114000,
+          "end": 114060
+        },
+        {
+          "word": "source",
+          "begin": 114160,
+          "end": 114400
+        },
+        {
+          "word": "code.",
+          "begin": 114440,
+          "end": 114720
+        },
+        {
+          "word": "When",
+          "begin": 115080,
+          "end": 115200
+        },
+        {
+          "word": "you",
+          "begin": 115200,
+          "end": 115240
+        },
+        {
+          "word": "enable",
+          "begin": 115300,
+          "end": 115640
+        },
+        {
+          "word": "a",
+          "begin": 115660,
+          "end": 115680
+        },
+        {
+          "word": "tracepoint,",
+          "begin": 115760,
+          "end": 116340
+        },
+        {
+          "word": "the",
+          "begin": 116600,
+          "end": 116640
+        },
+        {
+          "word": "kernel",
+          "begin": 116720,
+          "end": 116940
+        },
+        {
+          "word": "writes",
+          "begin": 117040,
+          "end": 117240
+        },
+        {
+          "word": "a",
+          "begin": 117280,
+          "end": 117300
+        },
+        {
+          "word": "record",
+          "begin": 117360,
+          "end": 117640
+        },
+        {
+          "word": "to",
+          "begin": 117700,
+          "end": 117760
+        },
+        {
+          "word": "a",
+          "begin": 117820,
+          "end": 117940
+        },
+        {
+          "word": "ring",
+          "begin": 117940,
+          "end": 118080
+        },
+        {
+          "word": "buffer",
+          "begin": 118140,
+          "end": 118600
+        },
+        {
+          "word": "every",
+          "begin": 118640,
+          "end": 118720
+        },
+        {
+          "word": "time",
+          "begin": 118800,
+          "end": 119000
+        },
+        {
+          "word": "that",
+          "begin": 119020,
+          "end": 119160
+        },
+        {
+          "word": "code",
+          "begin": 119200,
+          "end": 119380
+        },
+        {
+          "word": "path",
+          "begin": 119380,
+          "end": 119660
+        },
+        {
+          "word": "executes.",
+          "begin": 119760,
+          "end": 120360
+        },
+        {
+          "word": "Reading",
+          "begin": 120620,
+          "end": 120880
+        },
+        {
+          "word": "the",
+          "begin": 120900,
+          "end": 120960
+        },
+        {
+          "word": "trace",
+          "begin": 121020,
+          "end": 121340
+        },
+        {
+          "word": "pipe",
+          "begin": 121340,
+          "end": 121560
+        },
+        {
+          "word": "gives",
+          "begin": 121640,
+          "end": 121820
+        },
+        {
+          "word": "you",
+          "begin": 121820,
+          "end": 121860
+        },
+        {
+          "word": "a",
+          "begin": 121860,
+          "end": 121960
+        },
+        {
+          "word": "stream",
+          "begin": 122060,
+          "end": 122340
+        },
+        {
+          "word": "of",
+          "begin": 122360,
+          "end": 122420
+        },
+        {
+          "word": "these",
+          "begin": 122460,
+          "end": 122620
+        },
+        {
+          "word": "records,",
+          "begin": 122660,
+          "end": 123060
+        },
+        {
+          "word": "timestamped",
+          "begin": 123300,
+          "end": 123880
+        },
+        {
+          "word": "to",
+          "begin": 123940,
+          "end": 124000
+        },
+        {
+          "word": "microsecond",
+          "begin": 124080,
+          "end": 124720
+        },
+        {
+          "word": "precision.",
+          "begin": 124800,
+          "end": 125300
+        },
+        {
+          "word": "Why",
+          "begin": 125640,
+          "end": 125700
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "paragraph",
+      "text": "Why is this useful?",
+      "beginMs": 125840,
+      "endMs": 126480,
+      "timestamps": [
+        {
+          "word": "is",
+          "begin": 125840,
+          "end": 125940
+        },
+        {
+          "word": "this",
+          "begin": 125960,
+          "end": 126120
+        },
+        {
+          "word": "useful?",
+          "begin": 126160,
+          "end": 126480
+        }
+      ]
+    },
+    {
+      "blockIndex": 9,
+      "type": "paragraph",
+      "text": "The NVMe driver exposes two trace events. Together, they give you the complete lifecycle of every command:",
+      "beginMs": 126920,
+      "endMs": 132980,
+      "timestamps": [
+        {
+          "word": "The",
+          "begin": 126920,
+          "end": 126980
+        },
+        {
+          "word": "NVMe",
+          "begin": 127080,
+          "end": 127540
+        },
+        {
+          "word": "driver",
+          "begin": 127640,
+          "end": 128060
+        },
+        {
+          "word": "exposes",
+          "begin": 128060,
+          "end": 128600
+        },
+        {
+          "word": "two",
+          "begin": 128680,
+          "end": 128780
+        },
+        {
+          "word": "trace",
+          "begin": 128900,
+          "end": 129180
+        },
+        {
+          "word": "events.",
+          "begin": 129199,
+          "end": 129600
+        },
+        {
+          "word": "Together,",
+          "begin": 129780,
+          "end": 130460
+        },
+        {
+          "word": "they",
+          "begin": 130460,
+          "end": 130500
+        },
+        {
+          "word": "give",
+          "begin": 130600,
+          "end": 130759
+        },
+        {
+          "word": "you",
+          "begin": 130780,
+          "end": 130840
+        },
+        {
+          "word": "the",
+          "begin": 130900,
+          "end": 130960
+        },
+        {
+          "word": "complete",
+          "begin": 131020,
+          "end": 131400
+        },
+        {
+          "word": "lifecycle",
+          "begin": 131400,
+          "end": 131960
+        },
+        {
+          "word": "of",
+          "begin": 132080,
+          "end": 132160
+        },
+        {
+          "word": "every",
+          "begin": 132260,
+          "end": 132440
+        },
+        {
+          "word": "command:",
+          "begin": 132520,
+          "end": 132980
+        }
+      ]
+    },
+    {
+      "blockIndex": 10,
+      "type": "paragraph",
+      "text": "Fires when a command is submitted — the SQE is placed into the submission queue. Logs the opcode, queue ID, namespace, command ID, and all CDW fields (the command's raw parameters in hex).",
+      "beginMs": 133320,
+      "endMs": 146300,
+      "timestamps": [
+        {
+          "word": "Fires",
+          "begin": 133320,
+          "end": 133720
+        },
+        {
+          "word": "when",
+          "begin": 133720,
+          "end": 133820
+        },
+        {
+          "word": "a",
+          "begin": 133820,
+          "end": 133840
+        },
+        {
+          "word": "command",
+          "begin": 133920,
+          "end": 134300
+        },
+        {
+          "word": "is",
+          "begin": 134320,
+          "end": 134380
+        },
+        {
+          "word": "submitted",
+          "begin": 134440,
+          "end": 134720
+        },
+        {
+          "word": "the",
+          "begin": 134720,
+          "end": 135200
+        },
+        {
+          "word": "SQE",
+          "begin": 135320,
+          "end": 135620
+        },
+        {
+          "word": "is",
+          "begin": 135440,
+          "end": 135460
+        },
+        {
+          "word": "placed",
+          "begin": 135520,
+          "end": 136120
+        },
+        {
+          "word": "into",
+          "begin": 136160,
+          "end": 136640
+        },
+        {
+          "word": "the",
+          "begin": 136700,
+          "end": 136740
+        },
+        {
+          "word": "submission",
+          "begin": 136840,
+          "end": 137260
+        },
+        {
+          "word": "queue.",
+          "begin": 137340,
+          "end": 137460
+        },
+        {
+          "word": "Logs",
+          "begin": 137880,
+          "end": 138160
+        },
+        {
+          "word": "the",
+          "begin": 138200,
+          "end": 138260
+        },
+        {
+          "word": "opcode,",
+          "begin": 138380,
+          "end": 138880
+        },
+        {
+          "word": "queue",
+          "begin": 139140,
+          "end": 139240
+        },
+        {
+          "word": "ID,",
+          "begin": 139360,
+          "end": 139620
+        },
+        {
+          "word": "namespace,",
+          "begin": 140140,
+          "end": 140780
+        },
+        {
+          "word": "command",
+          "begin": 141060,
+          "end": 141380
+        },
+        {
+          "word": "ID,",
+          "begin": 141380,
+          "end": 141660
+        },
+        {
+          "word": "and",
+          "begin": 142100,
+          "end": 142200
+        },
+        {
+          "word": "all",
+          "begin": 142280,
+          "end": 142400
+        },
+        {
+          "word": "CDW",
+          "begin": 142520,
+          "end": 143100
+        },
+        {
+          "word": "fields",
+          "begin": 143220,
+          "end": 143520
+        },
+        {
+          "word": "(the",
+          "begin": 143520,
+          "end": 143640
+        },
+        {
+          "word": "command's",
+          "begin": 143720,
+          "end": 144100
+        },
+        {
+          "word": "raw",
+          "begin": 144120,
+          "end": 144300
+        },
+        {
+          "word": "parameters",
+          "begin": 144460,
+          "end": 145040
+        },
+        {
+          "word": "in",
+          "begin": 145080,
+          "end": 145160
+        },
+        {
+          "word": "hex).",
+          "begin": 145220,
+          "end": 145620
+        },
+        {
+          "word": "Fires",
+          "begin": 145960,
+          "end": 146300
+        }
+      ]
+    },
+    {
+      "blockIndex": 11,
+      "type": "paragraph",
+      "text": "Fires when the drive's response arrives — the CQE is processed. Shows the status code (success or error), command result, retries, and flags. The time between setup and complete is the command's latency.",
+      "beginMs": 146340,
+      "endMs": 158860,
+      "timestamps": [
+        {
+          "word": "when",
+          "begin": 146340,
+          "end": 146420
+        },
+        {
+          "word": "the",
+          "begin": 146440,
+          "end": 146460
+        },
+        {
+          "word": "drive's",
+          "begin": 146460,
+          "end": 146880
+        },
+        {
+          "word": "response",
+          "begin": 146920,
+          "end": 147380
+        },
+        {
+          "word": "arrives",
+          "begin": 147400,
+          "end": 147840
+        },
+        {
+          "word": "the",
+          "begin": 148140,
+          "end": 148200
+        },
+        {
+          "word": "CQE",
+          "begin": 148300,
+          "end": 148700
+        },
+        {
+          "word": "is",
+          "begin": 148860,
+          "end": 148940
+        },
+        {
+          "word": "processed.",
+          "begin": 149000,
+          "end": 149620
+        },
+        {
+          "word": "Shows",
+          "begin": 149620,
+          "end": 150200
+        },
+        {
+          "word": "the",
+          "begin": 150240,
+          "end": 150300
+        },
+        {
+          "word": "status",
+          "begin": 150380,
+          "end": 150740
+        },
+        {
+          "word": "code",
+          "begin": 150800,
+          "end": 151060
+        },
+        {
+          "word": "(success",
+          "begin": 151120,
+          "end": 151600
+        },
+        {
+          "word": "or",
+          "begin": 151720,
+          "end": 151740
+        },
+        {
+          "word": "error),",
+          "begin": 151920,
+          "end": 152100
+        },
+        {
+          "word": "command",
+          "begin": 152500,
+          "end": 152860
+        },
+        {
+          "word": "result,",
+          "begin": 152900,
+          "end": 153300
+        },
+        {
+          "word": "retries,",
+          "begin": 153620,
+          "end": 154220
+        },
+        {
+          "word": "and",
+          "begin": 154520,
+          "end": 154600
+        },
+        {
+          "word": "flags.",
+          "begin": 154700,
+          "end": 155180
+        },
+        {
+          "word": "The",
+          "begin": 155360,
+          "end": 155420
+        },
+        {
+          "word": "time",
+          "begin": 155480,
+          "end": 155760
+        },
+        {
+          "word": "between",
+          "begin": 155760,
+          "end": 156060
+        },
+        {
+          "word": "setup",
+          "begin": 156160,
+          "end": 156460
+        },
+        {
+          "word": "and",
+          "begin": 156480,
+          "end": 156620
+        },
+        {
+          "word": "complete",
+          "begin": 156620,
+          "end": 157080
+        },
+        {
+          "word": "is",
+          "begin": 157160,
+          "end": 157260
+        },
+        {
+          "word": "the",
+          "begin": 157300,
+          "end": 157340
+        },
+        {
+          "word": "command's",
+          "begin": 157420,
+          "end": 157800
+        },
+        {
+          "word": "latency.",
+          "begin": 157820,
+          "end": 158340
+        },
+        {
+          "word": "But",
+          "begin": 158760,
+          "end": 158860
+        }
+      ]
+    },
+    {
+      "blockIndex": 12,
+      "type": "paragraph",
+      "text": "But NVMe events only show what hits the drive. What about everything that happens before that? A write() system call goes through the filesystem, the block layer (I/O scheduler, merging, reordering), and then finally the NVMe driver. The block layer has its own trace events that show the I/O pipeline:",
+      "beginMs": 158960,
+      "endMs": 176580,
+      "timestamps": [
+        {
+          "word": "NVMe",
+          "begin": 158960,
+          "end": 159460
+        },
+        {
+          "word": "events",
+          "begin": 159560,
+          "end": 159980
+        },
+        {
+          "word": "only",
+          "begin": 160160,
+          "end": 160340
+        },
+        {
+          "word": "show",
+          "begin": 160460,
+          "end": 160700
+        },
+        {
+          "word": "what",
+          "begin": 160700,
+          "end": 160820
+        },
+        {
+          "word": "hits",
+          "begin": 160860,
+          "end": 161040
+        },
+        {
+          "word": "the",
+          "begin": 161100,
+          "end": 161160
+        },
+        {
+          "word": "drive.",
+          "begin": 161220,
+          "end": 161660
+        },
+        {
+          "word": "What",
+          "begin": 161980,
+          "end": 162080
+        },
+        {
+          "word": "about",
+          "begin": 162100,
+          "end": 162340
+        },
+        {
+          "word": "everything",
+          "begin": 162420,
+          "end": 162780
+        },
+        {
+          "word": "that",
+          "begin": 162800,
+          "end": 162900
+        },
+        {
+          "word": "happens",
+          "begin": 162920,
+          "end": 163280
+        },
+        {
+          "word": "before",
+          "begin": 163340,
+          "end": 163560
+        },
+        {
+          "word": "that?",
+          "begin": 163700,
+          "end": 163980
+        },
+        {
+          "word": "A",
+          "begin": 164160,
+          "end": 164180
+        },
+        {
+          "word": "write()",
+          "begin": 164260,
+          "end": 164480
+        },
+        {
+          "word": "system",
+          "begin": 164520,
+          "end": 164800
+        },
+        {
+          "word": "call",
+          "begin": 164880,
+          "end": 165140
+        },
+        {
+          "word": "goes",
+          "begin": 165280,
+          "end": 165480
+        },
+        {
+          "word": "through",
+          "begin": 165540,
+          "end": 165620
+        },
+        {
+          "word": "the",
+          "begin": 165680,
+          "end": 165720
+        },
+        {
+          "word": "filesystem,",
+          "begin": 165820,
+          "end": 166540
+        },
+        {
+          "word": "the",
+          "begin": 166840,
+          "end": 166900
+        },
+        {
+          "word": "block",
+          "begin": 166960,
+          "end": 167240
+        },
+        {
+          "word": "layer",
+          "begin": 167280,
+          "end": 167740
+        },
+        {
+          "word": "(I/O",
+          "begin": 167760,
+          "end": 167780
+        },
+        {
+          "word": "scheduler,",
+          "begin": 167900,
+          "end": 168280
+        },
+        {
+          "word": "merging,",
+          "begin": 168740,
+          "end": 169140
+        },
+        {
+          "word": "reordering),",
+          "begin": 169480,
+          "end": 170040
+        },
+        {
+          "word": "and",
+          "begin": 170240,
+          "end": 170320
+        },
+        {
+          "word": "then",
+          "begin": 170340,
+          "end": 170480
+        },
+        {
+          "word": "finally",
+          "begin": 170560,
+          "end": 170900
+        },
+        {
+          "word": "the",
+          "begin": 170900,
+          "end": 170640
+        },
+        {
+          "word": "NVMe",
+          "begin": 170740,
+          "end": 170920
+        },
+        {
+          "word": "driver.",
+          "begin": 171060,
+          "end": 172120
+        },
+        {
+          "word": "The",
+          "begin": 172280,
+          "end": 172320
+        },
+        {
+          "word": "block",
+          "begin": 172380,
+          "end": 172660
+        },
+        {
+          "word": "layer",
+          "begin": 172700,
+          "end": 172960
+        },
+        {
+          "word": "has",
+          "begin": 172960,
+          "end": 173100
+        },
+        {
+          "word": "its",
+          "begin": 173100,
+          "end": 173220
+        },
+        {
+          "word": "own",
+          "begin": 173260,
+          "end": 173440
+        },
+        {
+          "word": "trace",
+          "begin": 173440,
+          "end": 173700
+        },
+        {
+          "word": "events",
+          "begin": 173720,
+          "end": 174100
+        },
+        {
+          "word": "that",
+          "begin": 174160,
+          "end": 174280
+        },
+        {
+          "word": "show",
+          "begin": 174320,
+          "end": 174400
+        },
+        {
+          "word": "the",
+          "begin": 174480,
+          "end": 174520
+        },
+        {
+          "word": "I/O",
+          "begin": 174660,
+          "end": 175500
+        },
+        {
+          "word": "pipeline:",
+          "begin": 175680,
+          "end": 176580
+        }
+      ]
+    },
+    {
+      "blockIndex": 13,
+      "type": "paragraph",
+      "text": "In block layer trace output, you'll see short letter codes for the operation type. These are combinations of the base operation and modifier flags:",
+      "beginMs": 176620,
+      "endMs": 184040,
+      "timestamps": [
+        {
+          "word": "In",
+          "begin": 176620,
+          "end": 176640
+        },
+        {
+          "word": "block",
+          "begin": 176640,
+          "end": 176920
+        },
+        {
+          "word": "layer",
+          "begin": 176960,
+          "end": 177240
+        },
+        {
+          "word": "trace",
+          "begin": 177320,
+          "end": 177620
+        },
+        {
+          "word": "output,",
+          "begin": 177900,
+          "end": 178460
+        },
+        {
+          "word": "you'll",
+          "begin": 178500,
+          "end": 178600
+        },
+        {
+          "word": "see",
+          "begin": 178600,
+          "end": 178640
+        },
+        {
+          "word": "short",
+          "begin": 178740,
+          "end": 179040
+        },
+        {
+          "word": "letter",
+          "begin": 179040,
+          "end": 179180
+        },
+        {
+          "word": "codes",
+          "begin": 179240,
+          "end": 179380
+        },
+        {
+          "word": "for",
+          "begin": 179460,
+          "end": 179620
+        },
+        {
+          "word": "the",
+          "begin": 179740,
+          "end": 179800
+        },
+        {
+          "word": "operation",
+          "begin": 179740,
+          "end": 179860
+        },
+        {
+          "word": "type.",
+          "begin": 179920,
+          "end": 180220
+        },
+        {
+          "word": "These",
+          "begin": 180620,
+          "end": 180780
+        },
+        {
+          "word": "are",
+          "begin": 180800,
+          "end": 180820
+        },
+        {
+          "word": "combinations",
+          "begin": 180920,
+          "end": 181600
+        },
+        {
+          "word": "of",
+          "begin": 181660,
+          "end": 181720
+        },
+        {
+          "word": "the",
+          "begin": 181760,
+          "end": 181800
+        },
+        {
+          "word": "base",
+          "begin": 181880,
+          "end": 182120
+        },
+        {
+          "word": "operation",
+          "begin": 182180,
+          "end": 182740
+        },
+        {
+          "word": "and",
+          "begin": 182840,
+          "end": 182940
+        },
+        {
+          "word": "modifier",
+          "begin": 182980,
+          "end": 183460
+        },
+        {
+          "word": "flags:",
+          "begin": 183580,
+          "end": 184040
+        }
+      ]
+    },
+    {
+      "blockIndex": 14,
+      "type": "paragraph",
+      "text": "But you'll often see two-letter codes like RS, WS, or DS. What does the S mean? The second letter is a modifier flag that gets appended to the base operation:",
+      "beginMs": 184320,
+      "endMs": 194560,
+      "timestamps": [
+        {
+          "word": "But",
+          "begin": 184320,
+          "end": 184420
+        },
+        {
+          "word": "you'll",
+          "begin": 184420,
+          "end": 184580
+        },
+        {
+          "word": "often",
+          "begin": 184640,
+          "end": 184940
+        },
+        {
+          "word": "see",
+          "begin": 185020,
+          "end": 185100
+        },
+        {
+          "word": "two-letter",
+          "begin": 185220,
+          "end": 185580
+        },
+        {
+          "word": "codes",
+          "begin": 185680,
+          "end": 186060
+        },
+        {
+          "word": "like",
+          "begin": 186120,
+          "end": 186280
+        },
+        {
+          "word": "RS,",
+          "begin": 186400,
+          "end": 186900
+        },
+        {
+          "word": "WS,",
+          "begin": 187220,
+          "end": 187880
+        },
+        {
+          "word": "or",
+          "begin": 188140,
+          "end": 188160
+        },
+        {
+          "word": "DS.",
+          "begin": 188320,
+          "end": 188800
+        },
+        {
+          "word": "What",
+          "begin": 189420,
+          "end": 189580
+        },
+        {
+          "word": "does",
+          "begin": 189580,
+          "end": 189700
+        },
+        {
+          "word": "the",
+          "begin": 189740,
+          "end": 189800
+        },
+        {
+          "word": "S",
+          "begin": 189900,
+          "end": 190080
+        },
+        {
+          "word": "mean?",
+          "begin": 190160,
+          "end": 190420
+        },
+        {
+          "word": "The",
+          "begin": 190820,
+          "end": 190860
+        },
+        {
+          "word": "second",
+          "begin": 190960,
+          "end": 191240
+        },
+        {
+          "word": "letter",
+          "begin": 191280,
+          "end": 191440
+        },
+        {
+          "word": "is",
+          "begin": 191560,
+          "end": 191660
+        },
+        {
+          "word": "a",
+          "begin": 191680,
+          "end": 191780
+        },
+        {
+          "word": "modifier",
+          "begin": 191780,
+          "end": 192360
+        },
+        {
+          "word": "flag",
+          "begin": 192360,
+          "end": 192640
+        },
+        {
+          "word": "that",
+          "begin": 192680,
+          "end": 192780
+        },
+        {
+          "word": "gets",
+          "begin": 192820,
+          "end": 193000
+        },
+        {
+          "word": "appended",
+          "begin": 193020,
+          "end": 193400
+        },
+        {
+          "word": "to",
+          "begin": 193440,
+          "end": 193500
+        },
+        {
+          "word": "the",
+          "begin": 193540,
+          "end": 193600
+        },
+        {
+          "word": "base",
+          "begin": 193660,
+          "end": 193880
+        },
+        {
+          "word": "operation:",
+          "begin": 193940,
+          "end": 194560
+        }
+      ]
+    },
+    {
+      "blockIndex": 15,
+      "type": "paragraph",
+      "text": "So &ldquo;DS&rdquo; means a synchronous discard (TRIM) request, and &ldquo;RS&rdquo; means a synchronous read. These flags tell you not just what the kernel is doing, but how urgently — sync requests can't be reordered, while async ones can be batched and optimized by the I/O scheduler.",
+      "beginMs": 194980,
+      "endMs": 217460,
+      "timestamps": [
+        {
+          "word": "So",
+          "begin": 194980,
+          "end": 195060
+        },
+        {
+          "word": "&ldquo;DS&rdquo;",
+          "begin": 195400,
+          "end": 198340
+        },
+        {
+          "word": "means",
+          "begin": 198820,
+          "end": 199000
+        },
+        {
+          "word": "a",
+          "begin": 199020,
+          "end": 199080
+        },
+        {
+          "word": "synchronous",
+          "begin": 199200,
+          "end": 199620
+        },
+        {
+          "word": "discard",
+          "begin": 199680,
+          "end": 200160
+        },
+        {
+          "word": "(TRIM)",
+          "begin": 200760,
+          "end": 201720
+        },
+        {
+          "word": "request,",
+          "begin": 201720,
+          "end": 204780
+        },
+        {
+          "word": "and",
+          "begin": 204860,
+          "end": 204960
+        },
+        {
+          "word": "&ldquo;RS&rdquo;",
+          "begin": 205060,
+          "end": 205520
+        },
+        {
+          "word": "means",
+          "begin": 206000,
+          "end": 206220
+        },
+        {
+          "word": "a",
+          "begin": 206240,
+          "end": 206260
+        },
+        {
+          "word": "synchronous",
+          "begin": 206360,
+          "end": 206780
+        },
+        {
+          "word": "read.",
+          "begin": 206840,
+          "end": 207120
+        },
+        {
+          "word": "These",
+          "begin": 207600,
+          "end": 207780
+        },
+        {
+          "word": "flags",
+          "begin": 207860,
+          "end": 208140
+        },
+        {
+          "word": "tell",
+          "begin": 208140,
+          "end": 208380
+        },
+        {
+          "word": "you",
+          "begin": 208420,
+          "end": 208460
+        },
+        {
+          "word": "not",
+          "begin": 208480,
+          "end": 208680
+        },
+        {
+          "word": "just",
+          "begin": 208740,
+          "end": 208960
+        },
+        {
+          "word": "what",
+          "begin": 209000,
+          "end": 209140
+        },
+        {
+          "word": "the",
+          "begin": 209140,
+          "end": 209180
+        },
+        {
+          "word": "kernel",
+          "begin": 209240,
+          "end": 209520
+        },
+        {
+          "word": "is",
+          "begin": 209540,
+          "end": 209640
+        },
+        {
+          "word": "doing,",
+          "begin": 209700,
+          "end": 210000
+        },
+        {
+          "word": "but",
+          "begin": 210280,
+          "end": 210380
+        },
+        {
+          "word": "how",
+          "begin": 210400,
+          "end": 210480
+        },
+        {
+          "word": "urgently",
+          "begin": 210660,
+          "end": 210960
+        },
+        {
+          "word": "sync",
+          "begin": 210960,
+          "end": 211580
+        },
+        {
+          "word": "requests",
+          "begin": 211620,
+          "end": 212060
+        },
+        {
+          "word": "can't",
+          "begin": 212060,
+          "end": 212040
+        },
+        {
+          "word": "be",
+          "begin": 212040,
+          "end": 212060
+        },
+        {
+          "word": "reordered,",
+          "begin": 212060,
+          "end": 212420
+        },
+        {
+          "word": "while",
+          "begin": 212420,
+          "end": 212600
+        },
+        {
+          "word": "async",
+          "begin": 212700,
+          "end": 213020
+        },
+        {
+          "word": "ones",
+          "begin": 213320,
+          "end": 213580
+        },
+        {
+          "word": "can",
+          "begin": 213740,
+          "end": 213860
+        },
+        {
+          "word": "be",
+          "begin": 213900,
+          "end": 213980
+        },
+        {
+          "word": "batched",
+          "begin": 213980,
+          "end": 214340
+        },
+        {
+          "word": "and",
+          "begin": 214340,
+          "end": 214440
+        },
+        {
+          "word": "optimized",
+          "begin": 214460,
+          "end": 215280
+        },
+        {
+          "word": "by",
+          "begin": 215300,
+          "end": 215480
+        },
+        {
+          "word": "the",
+          "begin": 215620,
+          "end": 215660
+        },
+        {
+          "word": "I/O",
+          "begin": 215680,
+          "end": 216260
+        },
+        {
+          "word": "scheduler.",
+          "begin": 216380,
+          "end": 216800
+        },
+        {
+          "word": "These",
+          "begin": 217280,
+          "end": 217460
+        }
+      ]
+    },
+    {
+      "blockIndex": 16,
+      "type": "info",
+      "text": "These are constructed examples: The trace output shown below is not captured from a live system. These examples are constructed based on the kernel's NVMe tracepoint format definition to illustrate what each field means. The structure and format are accurate — this is what you would see on a real system, but the specific timestamps, PIDs, and values are illustrative. You can paste them into the Trace Decoder tool below to decode the CDW fields.",
+      "beginMs": 217480,
+      "endMs": 243760,
+      "timestamps": [
+        {
+          "word": "are",
+          "begin": 217480,
+          "end": 217500
+        },
+        {
+          "word": "constructed",
+          "begin": 217580,
+          "end": 218020
+        },
+        {
+          "word": "examples:",
+          "begin": 218020,
+          "end": 218420
+        },
+        {
+          "word": "The",
+          "begin": 218480,
+          "end": 218540
+        },
+        {
+          "word": "trace",
+          "begin": 218740,
+          "end": 219240
+        },
+        {
+          "word": "output",
+          "begin": 219280,
+          "end": 219700
+        },
+        {
+          "word": "shown",
+          "begin": 219700,
+          "end": 219940
+        },
+        {
+          "word": "below",
+          "begin": 219960,
+          "end": 220280
+        },
+        {
+          "word": "is",
+          "begin": 220280,
+          "end": 220380
+        },
+        {
+          "word": "not",
+          "begin": 220380,
+          "end": 220800
+        },
+        {
+          "word": "captured",
+          "begin": 220840,
+          "end": 221600
+        },
+        {
+          "word": "from",
+          "begin": 221600,
+          "end": 221720
+        },
+        {
+          "word": "a",
+          "begin": 221720,
+          "end": 221740
+        },
+        {
+          "word": "live",
+          "begin": 221820,
+          "end": 222060
+        },
+        {
+          "word": "system.",
+          "begin": 222140,
+          "end": 222560
+        },
+        {
+          "word": "These",
+          "begin": 222920,
+          "end": 223120
+        },
+        {
+          "word": "examples",
+          "begin": 223140,
+          "end": 223680
+        },
+        {
+          "word": "are",
+          "begin": 223760,
+          "end": 223780
+        },
+        {
+          "word": "constructed",
+          "begin": 223880,
+          "end": 224460
+        },
+        {
+          "word": "based",
+          "begin": 224500,
+          "end": 224780
+        },
+        {
+          "word": "on",
+          "begin": 224820,
+          "end": 224900
+        },
+        {
+          "word": "the",
+          "begin": 224900,
+          "end": 224940
+        },
+        {
+          "word": "kernel's",
+          "begin": 225020,
+          "end": 225380
+        },
+        {
+          "word": "NVMe",
+          "begin": 225480,
+          "end": 225920
+        },
+        {
+          "word": "tracepoint",
+          "begin": 226060,
+          "end": 226580
+        },
+        {
+          "word": "format",
+          "begin": 226640,
+          "end": 226960
+        },
+        {
+          "word": "definition",
+          "begin": 226960,
+          "end": 227600
+        },
+        {
+          "word": "to",
+          "begin": 227820,
+          "end": 227880
+        },
+        {
+          "word": "illustrate",
+          "begin": 227960,
+          "end": 228420
+        },
+        {
+          "word": "what",
+          "begin": 228480,
+          "end": 228600
+        },
+        {
+          "word": "each",
+          "begin": 228680,
+          "end": 228820
+        },
+        {
+          "word": "field",
+          "begin": 228900,
+          "end": 229140
+        },
+        {
+          "word": "means.",
+          "begin": 229200,
+          "end": 229620
+        },
+        {
+          "word": "The",
+          "begin": 230140,
+          "end": 230180
+        },
+        {
+          "word": "structure",
+          "begin": 230240,
+          "end": 230620
+        },
+        {
+          "word": "and",
+          "begin": 230760,
+          "end": 230840
+        },
+        {
+          "word": "format",
+          "begin": 230920,
+          "end": 231260
+        },
+        {
+          "word": "are",
+          "begin": 231320,
+          "end": 231340
+        },
+        {
+          "word": "accurate",
+          "begin": 231500,
+          "end": 232020
+        },
+        {
+          "word": "this",
+          "begin": 232320,
+          "end": 232460
+        },
+        {
+          "word": "is",
+          "begin": 232460,
+          "end": 232560
+        },
+        {
+          "word": "what",
+          "begin": 232580,
+          "end": 232720
+        },
+        {
+          "word": "you",
+          "begin": 232720,
+          "end": 232780
+        },
+        {
+          "word": "would",
+          "begin": 232820,
+          "end": 232920
+        },
+        {
+          "word": "see",
+          "begin": 232920,
+          "end": 233100
+        },
+        {
+          "word": "on",
+          "begin": 233200,
+          "end": 233280
+        },
+        {
+          "word": "a",
+          "begin": 233300,
+          "end": 233320
+        },
+        {
+          "word": "real",
+          "begin": 233400,
+          "end": 233560
+        },
+        {
+          "word": "system,",
+          "begin": 233680,
+          "end": 234100
+        },
+        {
+          "word": "but",
+          "begin": 234320,
+          "end": 234400
+        },
+        {
+          "word": "the",
+          "begin": 234420,
+          "end": 234480
+        },
+        {
+          "word": "specific",
+          "begin": 234540,
+          "end": 235020
+        },
+        {
+          "word": "timestamps,",
+          "begin": 235060,
+          "end": 235720
+        },
+        {
+          "word": "PIDs,",
+          "begin": 235820,
+          "end": 236180
+        },
+        {
+          "word": "and",
+          "begin": 236200,
+          "end": 236460
+        },
+        {
+          "word": "values",
+          "begin": 236460,
+          "end": 236760
+        },
+        {
+          "word": "are",
+          "begin": 236780,
+          "end": 236980
+        },
+        {
+          "word": "illustrative.",
+          "begin": 237020,
+          "end": 237800
+        },
+        {
+          "word": "You",
+          "begin": 237800,
+          "end": 237840
+        },
+        {
+          "word": "can",
+          "begin": 237880,
+          "end": 237960
+        },
+        {
+          "word": "paste",
+          "begin": 238100,
+          "end": 238960
+        },
+        {
+          "word": "them",
+          "begin": 239020,
+          "end": 239260
+        },
+        {
+          "word": "into",
+          "begin": 239260,
+          "end": 239380
+        },
+        {
+          "word": "the",
+          "begin": 239440,
+          "end": 239500
+        },
+        {
+          "word": "Trace",
+          "begin": 239520,
+          "end": 239840
+        },
+        {
+          "word": "Decoder",
+          "begin": 239860,
+          "end": 240420
+        },
+        {
+          "word": "tool",
+          "begin": 240540,
+          "end": 240720
+        },
+        {
+          "word": "below",
+          "begin": 240780,
+          "end": 241000
+        },
+        {
+          "word": "to",
+          "begin": 241320,
+          "end": 241380
+        },
+        {
+          "word": "decode",
+          "begin": 241440,
+          "end": 242120
+        },
+        {
+          "word": "the",
+          "begin": 242220,
+          "end": 242300
+        },
+        {
+          "word": "CDW",
+          "begin": 242400,
+          "end": 242700
+        },
+        {
+          "word": "fields.",
+          "begin": 242840,
+          "end": 243260
+        },
+        {
+          "word": "Let's",
+          "begin": 243600,
+          "end": 243760
+        }
+      ]
+    },
+    {
+      "blockIndex": 17,
+      "type": "paragraph",
+      "text": "Let's start with the most common command — a Read. The NVMe tracepoint logs each command with its raw CDW (Command Dword) values in hex:",
+      "beginMs": 243820,
+      "endMs": 251460,
+      "timestamps": [
+        {
+          "word": "start",
+          "begin": 243820,
+          "end": 244060
+        },
+        {
+          "word": "with",
+          "begin": 244080,
+          "end": 244220
+        },
+        {
+          "word": "the",
+          "begin": 244220,
+          "end": 244260
+        },
+        {
+          "word": "most",
+          "begin": 244320,
+          "end": 244540
+        },
+        {
+          "word": "common",
+          "begin": 244600,
+          "end": 244920
+        },
+        {
+          "word": "command",
+          "begin": 244980,
+          "end": 245400
+        },
+        {
+          "word": "a",
+          "begin": 245440,
+          "end": 245740
+        },
+        {
+          "word": "Read.",
+          "begin": 245880,
+          "end": 246220
+        },
+        {
+          "word": "The",
+          "begin": 246640,
+          "end": 246700
+        },
+        {
+          "word": "NVMe",
+          "begin": 246820,
+          "end": 247220
+        },
+        {
+          "word": "tracepoint",
+          "begin": 247340,
+          "end": 247800
+        },
+        {
+          "word": "logs",
+          "begin": 247840,
+          "end": 248120
+        },
+        {
+          "word": "each",
+          "begin": 248240,
+          "end": 248360
+        },
+        {
+          "word": "command",
+          "begin": 248440,
+          "end": 248860
+        },
+        {
+          "word": "with",
+          "begin": 248900,
+          "end": 249020
+        },
+        {
+          "word": "its",
+          "begin": 249020,
+          "end": 249140
+        },
+        {
+          "word": "raw",
+          "begin": 249220,
+          "end": 249300
+        },
+        {
+          "word": "CDW",
+          "begin": 249520,
+          "end": 250060
+        },
+        {
+          "word": "(Command",
+          "begin": 250120,
+          "end": 250500
+        },
+        {
+          "word": "Dword)",
+          "begin": 250500,
+          "end": 250920
+        },
+        {
+          "word": "values",
+          "begin": 250920,
+          "end": 251120
+        },
+        {
+          "word": "in",
+          "begin": 251120,
+          "end": 251180
+        },
+        {
+          "word": "hex:",
+          "begin": 251180,
+          "end": 251340
+        },
+        {
+          "word": "For",
+          "begin": 251340,
+          "end": 251460
+        }
+      ]
+    },
+    {
+      "blockIndex": 18,
+      "type": "paragraph",
+      "text": "For a Read command (opcode 0x02), the NVMe spec defines what each CDW field contains:",
+      "beginMs": 251500,
+      "endMs": 258060,
+      "timestamps": [
+        {
+          "word": "a",
+          "begin": 251500,
+          "end": 251600
+        },
+        {
+          "word": "Read",
+          "begin": 251760,
+          "end": 251920
+        },
+        {
+          "word": "command",
+          "begin": 252160,
+          "end": 252720
+        },
+        {
+          "word": "(opcode",
+          "begin": 252740,
+          "end": 253040
+        },
+        {
+          "word": "0x02),",
+          "begin": 253040,
+          "end": 253700
+        },
+        {
+          "word": "the",
+          "begin": 253760,
+          "end": 253800
+        },
+        {
+          "word": "NVMe",
+          "begin": 253820,
+          "end": 254680
+        },
+        {
+          "word": "spec",
+          "begin": 254740,
+          "end": 254940
+        },
+        {
+          "word": "defines",
+          "begin": 255000,
+          "end": 255600
+        },
+        {
+          "word": "what",
+          "begin": 255620,
+          "end": 255340
+        },
+        {
+          "word": "each",
+          "begin": 255360,
+          "end": 255520
+        },
+        {
+          "word": "CDW",
+          "begin": 255580,
+          "end": 256339
+        },
+        {
+          "word": "field",
+          "begin": 256440,
+          "end": 256640
+        },
+        {
+          "word": "contains:",
+          "begin": 256720,
+          "end": 258060
+        }
+      ]
+    },
+    {
+      "blockIndex": 19,
+      "type": "paragraph",
+      "text": "Summary: this Read command reads 8 blocks (32 KB) starting at LBA 0 from namespace 1, on I/O queue 1, with no special flags — and it succeeded.",
+      "beginMs": 258399,
+      "endMs": 268660,
+      "timestamps": [
+        {
+          "word": "Summary:",
+          "begin": 258399,
+          "end": 258720
+        },
+        {
+          "word": "this",
+          "begin": 258920,
+          "end": 259100
+        },
+        {
+          "word": "Read",
+          "begin": 259180,
+          "end": 259339
+        },
+        {
+          "word": "command",
+          "begin": 259399,
+          "end": 259680
+        },
+        {
+          "word": "reads",
+          "begin": 259680,
+          "end": 259779
+        },
+        {
+          "word": "8",
+          "begin": 259779,
+          "end": 260000
+        },
+        {
+          "word": "blocks",
+          "begin": 260019,
+          "end": 260320
+        },
+        {
+          "word": "(32",
+          "begin": 260320,
+          "end": 260480
+        },
+        {
+          "word": "KB)",
+          "begin": 260600,
+          "end": 261339
+        },
+        {
+          "word": "starting",
+          "begin": 261339,
+          "end": 262019
+        },
+        {
+          "word": "at",
+          "begin": 262040,
+          "end": 262300
+        },
+        {
+          "word": "LBA",
+          "begin": 262360,
+          "end": 262520
+        },
+        {
+          "word": "0",
+          "begin": 262660,
+          "end": 262880
+        },
+        {
+          "word": "from",
+          "begin": 263060,
+          "end": 263180
+        },
+        {
+          "word": "namespace",
+          "begin": 263220,
+          "end": 263700
+        },
+        {
+          "word": "1,",
+          "begin": 263780,
+          "end": 264000
+        },
+        {
+          "word": "on",
+          "begin": 264320,
+          "end": 264420
+        },
+        {
+          "word": "I/O",
+          "begin": 264520,
+          "end": 264840
+        },
+        {
+          "word": "queue",
+          "begin": 264840,
+          "end": 264940
+        },
+        {
+          "word": "1,",
+          "begin": 265060,
+          "end": 265300
+        },
+        {
+          "word": "with",
+          "begin": 265560,
+          "end": 265680
+        },
+        {
+          "word": "no",
+          "begin": 265760,
+          "end": 266080
+        },
+        {
+          "word": "special",
+          "begin": 266140,
+          "end": 266380
+        },
+        {
+          "word": "flags",
+          "begin": 266380,
+          "end": 266740
+        },
+        {
+          "word": "and",
+          "begin": 267040,
+          "end": 267120
+        },
+        {
+          "word": "it",
+          "begin": 267140,
+          "end": 267220
+        },
+        {
+          "word": "succeeded.",
+          "begin": 267260,
+          "end": 267780
+        },
+        {
+          "word": "Now",
+          "begin": 268440,
+          "end": 268660
+        }
+      ]
+    },
+    {
+      "blockIndex": 20,
+      "type": "paragraph",
+      "text": "Now a Write command. The CDW layout for Write (opcode 0x01) is almost identical to Read:",
+      "beginMs": 268740,
+      "endMs": 273720,
+      "timestamps": [
+        {
+          "word": "a",
+          "begin": 268740,
+          "end": 268820
+        },
+        {
+          "word": "Write",
+          "begin": 268960,
+          "end": 269080
+        },
+        {
+          "word": "command.",
+          "begin": 269120,
+          "end": 269860
+        },
+        {
+          "word": "The",
+          "begin": 269940,
+          "end": 270000
+        },
+        {
+          "word": "CDW",
+          "begin": 270080,
+          "end": 270340
+        },
+        {
+          "word": "layout",
+          "begin": 270440,
+          "end": 270780
+        },
+        {
+          "word": "for",
+          "begin": 270840,
+          "end": 271000
+        },
+        {
+          "word": "Write",
+          "begin": 271040,
+          "end": 271420
+        },
+        {
+          "word": "(opcode",
+          "begin": 271460,
+          "end": 271660
+        },
+        {
+          "word": "0x01)",
+          "begin": 271660,
+          "end": 272200
+        },
+        {
+          "word": "is",
+          "begin": 272320,
+          "end": 272400
+        },
+        {
+          "word": "almost",
+          "begin": 272500,
+          "end": 272820
+        },
+        {
+          "word": "identical",
+          "begin": 272840,
+          "end": 273240
+        },
+        {
+          "word": "to",
+          "begin": 273340,
+          "end": 273400
+        },
+        {
+          "word": "Read:",
+          "begin": 273480,
+          "end": 273720
+        }
+      ]
+    },
+    {
+      "blockIndex": 21,
+      "type": "paragraph",
+      "text": "Summary: this Write command writes 256 blocks (1 MB) starting at LBA 4096, with FUA forced, on I/O queue 2 — and succeeded. Notice it went to queue 2 while the Read was on queue 1 — the kernel spreads I/O across queues for parallelism.",
+      "beginMs": 274240,
+      "endMs": 291300,
+      "timestamps": [
+        {
+          "word": "Summary:",
+          "begin": 274240,
+          "end": 274520
+        },
+        {
+          "word": "this",
+          "begin": 274920,
+          "end": 275060
+        },
+        {
+          "word": "Write",
+          "begin": 275120,
+          "end": 275300
+        },
+        {
+          "word": "command",
+          "begin": 275320,
+          "end": 276660
+        },
+        {
+          "word": "writes",
+          "begin": 276760,
+          "end": 276960
+        },
+        {
+          "word": "blocks",
+          "begin": 277020,
+          "end": 277500
+        },
+        {
+          "word": "(1",
+          "begin": 277580,
+          "end": 277700
+        },
+        {
+          "word": "MB)",
+          "begin": 277740,
+          "end": 277800
+        },
+        {
+          "word": "starting",
+          "begin": 278139,
+          "end": 278580
+        },
+        {
+          "word": "at",
+          "begin": 278640,
+          "end": 278740
+        },
+        {
+          "word": "4096,",
+          "begin": 278800,
+          "end": 280220
+        },
+        {
+          "word": "with",
+          "begin": 280420,
+          "end": 280540
+        },
+        {
+          "word": "FUA",
+          "begin": 280600,
+          "end": 280960
+        },
+        {
+          "word": "forced,",
+          "begin": 281120,
+          "end": 281520
+        },
+        {
+          "word": "on",
+          "begin": 281760,
+          "end": 281860
+        },
+        {
+          "word": "I/O",
+          "begin": 281960,
+          "end": 282300
+        },
+        {
+          "word": "queue",
+          "begin": 282300,
+          "end": 282340
+        },
+        {
+          "word": "2",
+          "begin": 282460,
+          "end": 282580
+        },
+        {
+          "word": "and",
+          "begin": 283080,
+          "end": 283160
+        },
+        {
+          "word": "succeeded.",
+          "begin": 283220,
+          "end": 283740
+        },
+        {
+          "word": "Notice",
+          "begin": 284420,
+          "end": 284680
+        },
+        {
+          "word": "it",
+          "begin": 284720,
+          "end": 284760
+        },
+        {
+          "word": "went",
+          "begin": 284800,
+          "end": 284920
+        },
+        {
+          "word": "to",
+          "begin": 284940,
+          "end": 285000
+        },
+        {
+          "word": "queue",
+          "begin": 285080,
+          "end": 285180
+        },
+        {
+          "word": "2",
+          "begin": 285300,
+          "end": 285420
+        },
+        {
+          "word": "while",
+          "begin": 285540,
+          "end": 285700
+        },
+        {
+          "word": "the",
+          "begin": 285700,
+          "end": 285740
+        },
+        {
+          "word": "Read",
+          "begin": 285820,
+          "end": 285980
+        },
+        {
+          "word": "was",
+          "begin": 286020,
+          "end": 286140
+        },
+        {
+          "word": "on",
+          "begin": 286180,
+          "end": 286280
+        },
+        {
+          "word": "queue",
+          "begin": 286340,
+          "end": 286440
+        },
+        {
+          "word": "1",
+          "begin": 286560,
+          "end": 286820
+        },
+        {
+          "word": "the",
+          "begin": 286820,
+          "end": 286840
+        },
+        {
+          "word": "kernel",
+          "begin": 287120,
+          "end": 287440
+        },
+        {
+          "word": "spreads",
+          "begin": 287520,
+          "end": 287780
+        },
+        {
+          "word": "I/O",
+          "begin": 287780,
+          "end": 288020
+        },
+        {
+          "word": "across",
+          "begin": 288120,
+          "end": 288480
+        },
+        {
+          "word": "queues",
+          "begin": 288540,
+          "end": 288780
+        },
+        {
+          "word": "for",
+          "begin": 288820,
+          "end": 288880
+        },
+        {
+          "word": "parallelism.",
+          "begin": 288940,
+          "end": 289600
+        },
+        {
+          "word": "What",
+          "begin": 290040,
+          "end": 290140
+        },
+        {
+          "word": "about",
+          "begin": 290160,
+          "end": 290480
+        },
+        {
+          "word": "a",
+          "begin": 290499,
+          "end": 290580
+        },
+        {
+          "word": "Flush?",
+          "begin": 290780,
+          "end": 291300
+        }
+      ]
+    },
+    {
+      "blockIndex": 22,
+      "type": "paragraph",
+      "text": "What about a Flush? The Flush command (opcode 0x00) tells the drive to persist all cached data:",
+      "beginMs": 291340,
+      "endMs": 296340,
+      "timestamps": [
+        {
+          "word": "Flush",
+          "begin": 291340,
+          "end": 291500
+        },
+        {
+          "word": "command",
+          "begin": 291560,
+          "end": 291880
+        },
+        {
+          "word": "(opcode",
+          "begin": 291960,
+          "end": 292340
+        },
+        {
+          "word": "0x00)",
+          "begin": 292400,
+          "end": 292900
+        },
+        {
+          "word": "tells",
+          "begin": 293040,
+          "end": 293280
+        },
+        {
+          "word": "the",
+          "begin": 293300,
+          "end": 293360
+        },
+        {
+          "word": "drive",
+          "begin": 293420,
+          "end": 293720
+        },
+        {
+          "word": "to",
+          "begin": 293720,
+          "end": 293760
+        },
+        {
+          "word": "persist",
+          "begin": 293820,
+          "end": 294220
+        },
+        {
+          "word": "all",
+          "begin": 294320,
+          "end": 294420
+        },
+        {
+          "word": "cached",
+          "begin": 294480,
+          "end": 294820
+        },
+        {
+          "word": "data:",
+          "begin": 294920,
+          "end": 295140
+        },
+        {
+          "word": "And",
+          "begin": 295840,
+          "end": 296020
+        },
+        {
+          "word": "TRIM?",
+          "begin": 296080,
+          "end": 296340
+        }
+      ]
+    },
+    {
+      "blockIndex": 23,
+      "type": "paragraph",
+      "text": "And TRIM? TRIM is sent as a Dataset Management command (opcode 0x09):",
+      "beginMs": 296720,
+      "endMs": 300800,
+      "timestamps": [
+        {
+          "word": "TRIM",
+          "begin": 296720,
+          "end": 296920
+        },
+        {
+          "word": "is",
+          "begin": 296940,
+          "end": 297020
+        },
+        {
+          "word": "sent",
+          "begin": 297100,
+          "end": 297300
+        },
+        {
+          "word": "as",
+          "begin": 297380,
+          "end": 297480
+        },
+        {
+          "word": "a",
+          "begin": 297500,
+          "end": 297520
+        },
+        {
+          "word": "Dataset",
+          "begin": 297600,
+          "end": 298000
+        },
+        {
+          "word": "Management",
+          "begin": 298040,
+          "end": 298420
+        },
+        {
+          "word": "command",
+          "begin": 298460,
+          "end": 298820
+        },
+        {
+          "word": "(opcode",
+          "begin": 298920,
+          "end": 299360
+        },
+        {
+          "word": "0x09):",
+          "begin": 299400,
+          "end": 300700
+        },
+        {
+          "word": "What",
+          "begin": 300700,
+          "end": 300800
+        }
+      ]
+    },
+    {
+      "blockIndex": 24,
+      "type": "paragraph",
+      "text": "What about admin commands? They go to queue 0 (the admin queue). Here's an Identify Controller command:",
+      "beginMs": 300820,
+      "endMs": 306500,
+      "timestamps": [
+        {
+          "word": "about",
+          "begin": 300820,
+          "end": 301180
+        },
+        {
+          "word": "admin",
+          "begin": 301200,
+          "end": 301280
+        },
+        {
+          "word": "commands?",
+          "begin": 301340,
+          "end": 301820
+        },
+        {
+          "word": "They",
+          "begin": 302480,
+          "end": 302520
+        },
+        {
+          "word": "go",
+          "begin": 302600,
+          "end": 302760
+        },
+        {
+          "word": "to",
+          "begin": 302760,
+          "end": 302800
+        },
+        {
+          "word": "queue",
+          "begin": 302880,
+          "end": 303000
+        },
+        {
+          "word": "0",
+          "begin": 303140,
+          "end": 303360
+        },
+        {
+          "word": "(the",
+          "begin": 303480,
+          "end": 303520
+        },
+        {
+          "word": "admin",
+          "begin": 303640,
+          "end": 303920
+        },
+        {
+          "word": "queue).",
+          "begin": 304000,
+          "end": 304120
+        },
+        {
+          "word": "Here's",
+          "begin": 304720,
+          "end": 304940
+        },
+        {
+          "word": "an",
+          "begin": 304960,
+          "end": 305040
+        },
+        {
+          "word": "Identify",
+          "begin": 305060,
+          "end": 305480
+        },
+        {
+          "word": "Controller",
+          "begin": 305620,
+          "end": 306020
+        },
+        {
+          "word": "command:",
+          "begin": 306120,
+          "end": 306500
+        }
+      ]
+    },
+    {
+      "blockIndex": 25,
+      "type": "paragraph",
+      "text": "Note: Newer kernel versions may show a more decoded format (e.g., io_cmd_read slba=0, len=7 instead of raw CDW hex). The trace decoder tool below works with the CDW format shown above. The sample traces you can load in the decoder also use this format.",
+      "beginMs": 306520,
+      "endMs": 328760,
+      "timestamps": [
+        {
+          "word": "Note:",
+          "begin": 306520,
+          "end": 307160
+        },
+        {
+          "word": "Newer",
+          "begin": 307580,
+          "end": 307740
+        },
+        {
+          "word": "kernel",
+          "begin": 307840,
+          "end": 308180
+        },
+        {
+          "word": "versions",
+          "begin": 308180,
+          "end": 308540
+        },
+        {
+          "word": "may",
+          "begin": 308620,
+          "end": 308680
+        },
+        {
+          "word": "show",
+          "begin": 308860,
+          "end": 309060
+        },
+        {
+          "word": "a",
+          "begin": 309140,
+          "end": 309200
+        },
+        {
+          "word": "more",
+          "begin": 309320,
+          "end": 309340
+        },
+        {
+          "word": "decoded",
+          "begin": 309340,
+          "end": 309740
+        },
+        {
+          "word": "format",
+          "begin": 309820,
+          "end": 310240
+        },
+        {
+          "word": "(e.g.,",
+          "begin": 310620,
+          "end": 310860
+        },
+        {
+          "word": "io_cmd_read",
+          "begin": 311340,
+          "end": 313480
+        },
+        {
+          "word": "len=7",
+          "begin": 313660,
+          "end": 317280
+        },
+        {
+          "word": "instead",
+          "begin": 317600,
+          "end": 317940
+        },
+        {
+          "word": "of",
+          "begin": 317940,
+          "end": 318040
+        },
+        {
+          "word": "raw",
+          "begin": 318100,
+          "end": 318200
+        },
+        {
+          "word": "CDW",
+          "begin": 318600,
+          "end": 319280
+        },
+        {
+          "word": "hex).",
+          "begin": 319280,
+          "end": 319600
+        },
+        {
+          "word": "The",
+          "begin": 320120,
+          "end": 320180
+        },
+        {
+          "word": "trace",
+          "begin": 320240,
+          "end": 320500
+        },
+        {
+          "word": "decoder",
+          "begin": 320540,
+          "end": 321120
+        },
+        {
+          "word": "tool",
+          "begin": 321180,
+          "end": 321320
+        },
+        {
+          "word": "below",
+          "begin": 321180,
+          "end": 321380
+        },
+        {
+          "word": "works",
+          "begin": 321840,
+          "end": 322060
+        },
+        {
+          "word": "with",
+          "begin": 322100,
+          "end": 322180
+        },
+        {
+          "word": "the",
+          "begin": 322200,
+          "end": 322260
+        },
+        {
+          "word": "CDW",
+          "begin": 322360,
+          "end": 322940
+        },
+        {
+          "word": "format",
+          "begin": 323040,
+          "end": 323460
+        },
+        {
+          "word": "shown",
+          "begin": 323540,
+          "end": 323720
+        },
+        {
+          "word": "above.",
+          "begin": 323720,
+          "end": 324100
+        },
+        {
+          "word": "The",
+          "begin": 324480,
+          "end": 324520
+        },
+        {
+          "word": "sample",
+          "begin": 324600,
+          "end": 324840
+        },
+        {
+          "word": "traces",
+          "begin": 324940,
+          "end": 325320
+        },
+        {
+          "word": "you",
+          "begin": 325340,
+          "end": 325400
+        },
+        {
+          "word": "can",
+          "begin": 325460,
+          "end": 325580
+        },
+        {
+          "word": "load",
+          "begin": 325640,
+          "end": 325840
+        },
+        {
+          "word": "in",
+          "begin": 325860,
+          "end": 325940
+        },
+        {
+          "word": "the",
+          "begin": 325940,
+          "end": 326000
+        },
+        {
+          "word": "decoder",
+          "begin": 326040,
+          "end": 326800
+        },
+        {
+          "word": "also",
+          "begin": 326840,
+          "end": 327020
+        },
+        {
+          "word": "use",
+          "begin": 327120,
+          "end": 327320
+        },
+        {
+          "word": "this",
+          "begin": 327360,
+          "end": 327500
+        },
+        {
+          "word": "format.",
+          "begin": 327560,
+          "end": 327980
+        },
+        {
+          "word": "Block",
+          "begin": 328480,
+          "end": 328760
+        }
+      ]
+    },
+    {
+      "blockIndex": 26,
+      "type": "paragraph",
+      "text": "Block layer events use a different format. They show the device major:minor, operation flags, byte size, starting sector, and sector count:",
+      "beginMs": 328820,
+      "endMs": 338040,
+      "timestamps": [
+        {
+          "word": "layer",
+          "begin": 328820,
+          "end": 329040
+        },
+        {
+          "word": "events",
+          "begin": 329060,
+          "end": 329440
+        },
+        {
+          "word": "use",
+          "begin": 329580,
+          "end": 329740
+        },
+        {
+          "word": "a",
+          "begin": 329760,
+          "end": 329780
+        },
+        {
+          "word": "different",
+          "begin": 329840,
+          "end": 330120
+        },
+        {
+          "word": "format.",
+          "begin": 330200,
+          "end": 330620
+        },
+        {
+          "word": "They",
+          "begin": 331000,
+          "end": 331060
+        },
+        {
+          "word": "show",
+          "begin": 331140,
+          "end": 331340
+        },
+        {
+          "word": "the",
+          "begin": 331380,
+          "end": 331440
+        },
+        {
+          "word": "device",
+          "begin": 331480,
+          "end": 332280
+        },
+        {
+          "word": "major:minor,",
+          "begin": 332280,
+          "end": 333140
+        },
+        {
+          "word": "operation",
+          "begin": 333600,
+          "end": 334120
+        },
+        {
+          "word": "flags,",
+          "begin": 334200,
+          "end": 334620
+        },
+        {
+          "word": "byte",
+          "begin": 334900,
+          "end": 335120
+        },
+        {
+          "word": "size,",
+          "begin": 335200,
+          "end": 335600
+        },
+        {
+          "word": "starting",
+          "begin": 335920,
+          "end": 336260
+        },
+        {
+          "word": "sector,",
+          "begin": 336340,
+          "end": 337100
+        },
+        {
+          "word": "and",
+          "begin": 337200,
+          "end": 337280
+        },
+        {
+          "word": "sector",
+          "begin": 337360,
+          "end": 337620
+        },
+        {
+          "word": "count:",
+          "begin": 337700,
+          "end": 338040
+        }
+      ]
+    },
+    {
+      "blockIndex": 27,
+      "type": "paragraph",
+      "text": "Notice the flags: R = async read, WS = synchronous write, DS = synchronous discard (TRIM). The sync flag (S) means the request must complete in order — it can't be reordered past other sync requests.",
+      "beginMs": 338560,
+      "endMs": 354400,
+      "timestamps": [
+        {
+          "word": "Notice",
+          "begin": 338560,
+          "end": 338800
+        },
+        {
+          "word": "the",
+          "begin": 338840,
+          "end": 338900
+        },
+        {
+          "word": "flags:",
+          "begin": 338980,
+          "end": 339439
+        },
+        {
+          "word": "R",
+          "begin": 339760,
+          "end": 339780
+        },
+        {
+          "word": "=",
+          "begin": 339920,
+          "end": 340180
+        },
+        {
+          "word": "async",
+          "begin": 340300,
+          "end": 340680
+        },
+        {
+          "word": "read,",
+          "begin": 340760,
+          "end": 341080
+        },
+        {
+          "word": "WS",
+          "begin": 341520,
+          "end": 342660
+        },
+        {
+          "word": "=",
+          "begin": 342680,
+          "end": 342880
+        },
+        {
+          "word": "synchronous",
+          "begin": 342920,
+          "end": 344020
+        },
+        {
+          "word": "write,",
+          "begin": 344040,
+          "end": 344500
+        },
+        {
+          "word": "DS",
+          "begin": 344880,
+          "end": 345060
+        },
+        {
+          "word": "=",
+          "begin": 345080,
+          "end": 345440
+        },
+        {
+          "word": "synchronous",
+          "begin": 345080,
+          "end": 345320
+        },
+        {
+          "word": "discard",
+          "begin": 345380,
+          "end": 345860
+        },
+        {
+          "word": "(TRIM).",
+          "begin": 345960,
+          "end": 347140
+        },
+        {
+          "word": "The",
+          "begin": 347520,
+          "end": 347560
+        },
+        {
+          "word": "sync",
+          "begin": 347680,
+          "end": 347860
+        },
+        {
+          "word": "flag",
+          "begin": 347920,
+          "end": 348180
+        },
+        {
+          "word": "(S)",
+          "begin": 348300,
+          "end": 348580
+        },
+        {
+          "word": "means",
+          "begin": 348900,
+          "end": 349120
+        },
+        {
+          "word": "the",
+          "begin": 349140,
+          "end": 349200
+        },
+        {
+          "word": "request",
+          "begin": 349240,
+          "end": 349660
+        },
+        {
+          "word": "must",
+          "begin": 349720,
+          "end": 349920
+        },
+        {
+          "word": "complete",
+          "begin": 349960,
+          "end": 350220
+        },
+        {
+          "word": "in",
+          "begin": 350220,
+          "end": 350320
+        },
+        {
+          "word": "order",
+          "begin": 350360,
+          "end": 350740
+        },
+        {
+          "word": "it",
+          "begin": 351160,
+          "end": 351220
+        },
+        {
+          "word": "can't",
+          "begin": 351260,
+          "end": 351480
+        },
+        {
+          "word": "be",
+          "begin": 351520,
+          "end": 351580
+        },
+        {
+          "word": "reordered",
+          "begin": 351700,
+          "end": 352200
+        },
+        {
+          "word": "past",
+          "begin": 352260,
+          "end": 352580
+        },
+        {
+          "word": "other",
+          "begin": 352680,
+          "end": 352820
+        },
+        {
+          "word": "sync",
+          "begin": 352980,
+          "end": 353160
+        },
+        {
+          "word": "requests.",
+          "begin": 353180,
+          "end": 353780
+        },
+        {
+          "word": "With",
+          "begin": 354300,
+          "end": 354400
+        }
+      ]
+    },
+    {
+      "blockIndex": 28,
+      "type": "paragraph",
+      "text": "With both block and NVMe events enabled, you can trace a single I/O through the entire stack:",
+      "beginMs": 354480,
+      "endMs": 360240,
+      "timestamps": [
+        {
+          "word": "both",
+          "begin": 354480,
+          "end": 354660
+        },
+        {
+          "word": "block",
+          "begin": 354740,
+          "end": 355080
+        },
+        {
+          "word": "and",
+          "begin": 355160,
+          "end": 355260
+        },
+        {
+          "word": "NVMe",
+          "begin": 355340,
+          "end": 355760
+        },
+        {
+          "word": "events",
+          "begin": 355860,
+          "end": 356180
+        },
+        {
+          "word": "enabled,",
+          "begin": 356200,
+          "end": 356660
+        },
+        {
+          "word": "you",
+          "begin": 356900,
+          "end": 356940
+        },
+        {
+          "word": "can",
+          "begin": 357000,
+          "end": 357080
+        },
+        {
+          "word": "trace",
+          "begin": 357120,
+          "end": 357340
+        },
+        {
+          "word": "a",
+          "begin": 357360,
+          "end": 357460
+        },
+        {
+          "word": "single",
+          "begin": 357520,
+          "end": 357740
+        },
+        {
+          "word": "I/O",
+          "begin": 357900,
+          "end": 358860
+        },
+        {
+          "word": "through",
+          "begin": 359060,
+          "end": 359160
+        },
+        {
+          "word": "the",
+          "begin": 359240,
+          "end": 359280
+        },
+        {
+          "word": "entire",
+          "begin": 359340,
+          "end": 359740
+        },
+        {
+          "word": "stack:",
+          "begin": 359860,
+          "end": 360240
+        }
+      ]
+    },
+    {
+      "blockIndex": 29,
+      "type": "paragraph",
+      "text": "Why is this breakdown useful? If total I/O latency is high but device latency is normal, the bottleneck is in the software stack (I/O scheduler, filesystem, or driver overhead). If device latency is high, the SSD itself is slow (GC, thermal throttling, or a firmware issue).",
+      "beginMs": 360720,
+      "endMs": 378880,
+      "timestamps": [
+        {
+          "word": "Why",
+          "begin": 360720,
+          "end": 360960
+        },
+        {
+          "word": "is",
+          "begin": 361000,
+          "end": 361020
+        },
+        {
+          "word": "this",
+          "begin": 361060,
+          "end": 361180
+        },
+        {
+          "word": "breakdown",
+          "begin": 361240,
+          "end": 361660
+        },
+        {
+          "word": "useful?",
+          "begin": 361680,
+          "end": 362100
+        },
+        {
+          "word": "If",
+          "begin": 362500,
+          "end": 362580
+        },
+        {
+          "word": "total",
+          "begin": 362640,
+          "end": 362940
+        },
+        {
+          "word": "I/O",
+          "begin": 363040,
+          "end": 363440
+        },
+        {
+          "word": "latency",
+          "begin": 363500,
+          "end": 363740
+        },
+        {
+          "word": "is",
+          "begin": 363740,
+          "end": 363920
+        },
+        {
+          "word": "high",
+          "begin": 363940,
+          "end": 364060
+        },
+        {
+          "word": "but",
+          "begin": 364520,
+          "end": 364620
+        },
+        {
+          "word": "device",
+          "begin": 364640,
+          "end": 365000
+        },
+        {
+          "word": "latency",
+          "begin": 365040,
+          "end": 365400
+        },
+        {
+          "word": "is",
+          "begin": 365460,
+          "end": 365560
+        },
+        {
+          "word": "normal,",
+          "begin": 365620,
+          "end": 365880
+        },
+        {
+          "word": "the",
+          "begin": 366340,
+          "end": 366380
+        },
+        {
+          "word": "bottleneck",
+          "begin": 366440,
+          "end": 366900
+        },
+        {
+          "word": "is",
+          "begin": 366920,
+          "end": 367020
+        },
+        {
+          "word": "in",
+          "begin": 367040,
+          "end": 367120
+        },
+        {
+          "word": "the",
+          "begin": 367120,
+          "end": 367180
+        },
+        {
+          "word": "software",
+          "begin": 367280,
+          "end": 367600
+        },
+        {
+          "word": "stack",
+          "begin": 367740,
+          "end": 368060
+        },
+        {
+          "word": "(I/O",
+          "begin": 368180,
+          "end": 368360
+        },
+        {
+          "word": "scheduler,",
+          "begin": 368480,
+          "end": 368900
+        },
+        {
+          "word": "filesystem,",
+          "begin": 369280,
+          "end": 370000
+        },
+        {
+          "word": "or",
+          "begin": 370140,
+          "end": 370160
+        },
+        {
+          "word": "driver",
+          "begin": 370260,
+          "end": 370540
+        },
+        {
+          "word": "overhead).",
+          "begin": 370620,
+          "end": 371080
+        },
+        {
+          "word": "If",
+          "begin": 371660,
+          "end": 371740
+        },
+        {
+          "word": "device",
+          "begin": 371780,
+          "end": 372120
+        },
+        {
+          "word": "latency",
+          "begin": 372180,
+          "end": 372540
+        },
+        {
+          "word": "is",
+          "begin": 372620,
+          "end": 372720
+        },
+        {
+          "word": "high,",
+          "begin": 372760,
+          "end": 374060
+        },
+        {
+          "word": "the",
+          "begin": 374120,
+          "end": 374200
+        },
+        {
+          "word": "itself",
+          "begin": 374280,
+          "end": 374780
+        },
+        {
+          "word": "is",
+          "begin": 374860,
+          "end": 374940
+        },
+        {
+          "word": "slow",
+          "begin": 374940,
+          "end": 375160
+        },
+        {
+          "word": "(GC,",
+          "begin": 375320,
+          "end": 375660
+        },
+        {
+          "word": "thermal",
+          "begin": 376200,
+          "end": 376420
+        },
+        {
+          "word": "throttling,",
+          "begin": 376520,
+          "end": 377060
+        },
+        {
+          "word": "or",
+          "begin": 377320,
+          "end": 377420
+        },
+        {
+          "word": "a",
+          "begin": 377420,
+          "end": 377440
+        },
+        {
+          "word": "firmware",
+          "begin": 377560,
+          "end": 377860
+        },
+        {
+          "word": "issue).",
+          "begin": 378000,
+          "end": 378240
+        },
+        {
+          "word": "ftrace",
+          "begin": 378620,
+          "end": 378880
+        }
+      ]
+    },
+    {
+      "blockIndex": 30,
+      "type": "info",
+      "text": "ftrace vs blktrace vs bpftrace: ftrace is built into the kernel — no installation needed, always available. blktrace is a dedicated block layer tracing tool with richer formatting but requires installation. bpftrace (eBPF-based) is the most powerful — you can write custom scripts that filter, aggregate, and compute histograms in kernel space. For quick debugging, ftrace is fastest to set up. For production monitoring, bpftrace is more flexible. All three read from the same kernel tracepoints — they just present the data differently.",
+      "beginMs": 381640,
+      "endMs": 413320,
+      "timestamps": [
+        {
+          "word": "ftrace",
+          "begin": 381640,
+          "end": 382000
+        },
+        {
+          "word": "is",
+          "begin": 382020,
+          "end": 382120
+        },
+        {
+          "word": "built",
+          "begin": 382180,
+          "end": 382380
+        },
+        {
+          "word": "into",
+          "begin": 382420,
+          "end": 382560
+        },
+        {
+          "word": "the",
+          "begin": 382600,
+          "end": 382660
+        },
+        {
+          "word": "kernel",
+          "begin": 382720,
+          "end": 383400
+        },
+        {
+          "word": "no",
+          "begin": 383420,
+          "end": 383540
+        },
+        {
+          "word": "installation",
+          "begin": 383540,
+          "end": 384100
+        },
+        {
+          "word": "needed,",
+          "begin": 384160,
+          "end": 384460
+        },
+        {
+          "word": "always",
+          "begin": 384580,
+          "end": 384840
+        },
+        {
+          "word": "available.",
+          "begin": 384860,
+          "end": 385280
+        },
+        {
+          "word": "blktrace",
+          "begin": 385820,
+          "end": 386620
+        },
+        {
+          "word": "is",
+          "begin": 386640,
+          "end": 386760
+        },
+        {
+          "word": "a",
+          "begin": 386800,
+          "end": 386920
+        },
+        {
+          "word": "dedicated",
+          "begin": 386980,
+          "end": 387540
+        },
+        {
+          "word": "block",
+          "begin": 387580,
+          "end": 387840
+        },
+        {
+          "word": "layer",
+          "begin": 387880,
+          "end": 388180
+        },
+        {
+          "word": "tracing",
+          "begin": 388240,
+          "end": 388760
+        },
+        {
+          "word": "tool",
+          "begin": 388860,
+          "end": 389080
+        },
+        {
+          "word": "with",
+          "begin": 389120,
+          "end": 389300
+        },
+        {
+          "word": "richer",
+          "begin": 389380,
+          "end": 389600
+        },
+        {
+          "word": "formatting",
+          "begin": 389600,
+          "end": 390100
+        },
+        {
+          "word": "but",
+          "begin": 390100,
+          "end": 390200
+        },
+        {
+          "word": "requires",
+          "begin": 390200,
+          "end": 390840
+        },
+        {
+          "word": "installation.",
+          "begin": 390200,
+          "end": 390840
+        },
+        {
+          "word": "bpftrace",
+          "begin": 391080,
+          "end": 392080
+        },
+        {
+          "word": "(eBPF-based)",
+          "begin": 392180,
+          "end": 393140
+        },
+        {
+          "word": "is",
+          "begin": 393200,
+          "end": 393280
+        },
+        {
+          "word": "the",
+          "begin": 393320,
+          "end": 393360
+        },
+        {
+          "word": "most",
+          "begin": 393420,
+          "end": 393640
+        },
+        {
+          "word": "powerful",
+          "begin": 393700,
+          "end": 394120
+        },
+        {
+          "word": "you",
+          "begin": 394460,
+          "end": 394520
+        },
+        {
+          "word": "can",
+          "begin": 394580,
+          "end": 394680
+        },
+        {
+          "word": "write",
+          "begin": 394720,
+          "end": 394880
+        },
+        {
+          "word": "custom",
+          "begin": 394920,
+          "end": 395280
+        },
+        {
+          "word": "scripts",
+          "begin": 395360,
+          "end": 395720
+        },
+        {
+          "word": "that",
+          "begin": 395760,
+          "end": 395860
+        },
+        {
+          "word": "filter,",
+          "begin": 395860,
+          "end": 396260
+        },
+        {
+          "word": "aggregate,",
+          "begin": 396580,
+          "end": 397080
+        },
+        {
+          "word": "and",
+          "begin": 397180,
+          "end": 397260
+        },
+        {
+          "word": "compute",
+          "begin": 397300,
+          "end": 397620
+        },
+        {
+          "word": "histograms",
+          "begin": 397660,
+          "end": 398220
+        },
+        {
+          "word": "in",
+          "begin": 398240,
+          "end": 398300
+        },
+        {
+          "word": "kernel",
+          "begin": 398340,
+          "end": 398560
+        },
+        {
+          "word": "space.",
+          "begin": 398680,
+          "end": 399060
+        },
+        {
+          "word": "For",
+          "begin": 399500,
+          "end": 399660
+        },
+        {
+          "word": "quick",
+          "begin": 399680,
+          "end": 399820
+        },
+        {
+          "word": "debugging,",
+          "begin": 399880,
+          "end": 400360
+        },
+        {
+          "word": "ftrace",
+          "begin": 400600,
+          "end": 400980
+        },
+        {
+          "word": "is",
+          "begin": 401000,
+          "end": 401100
+        },
+        {
+          "word": "fastest",
+          "begin": 401160,
+          "end": 401560
+        },
+        {
+          "word": "to",
+          "begin": 401600,
+          "end": 401660
+        },
+        {
+          "word": "set",
+          "begin": 401740,
+          "end": 401920
+        },
+        {
+          "word": "up.",
+          "begin": 401940,
+          "end": 402180
+        },
+        {
+          "word": "For",
+          "begin": 402560,
+          "end": 402620
+        },
+        {
+          "word": "production",
+          "begin": 402700,
+          "end": 403120
+        },
+        {
+          "word": "monitoring,",
+          "begin": 403159,
+          "end": 403640
+        },
+        {
+          "word": "bpftrace",
+          "begin": 403920,
+          "end": 404599
+        },
+        {
+          "word": "is",
+          "begin": 404620,
+          "end": 404700
+        },
+        {
+          "word": "more",
+          "begin": 404759,
+          "end": 404960
+        },
+        {
+          "word": "flexible.",
+          "begin": 404980,
+          "end": 405340
+        },
+        {
+          "word": "All",
+          "begin": 405700,
+          "end": 405840
+        },
+        {
+          "word": "three",
+          "begin": 405920,
+          "end": 406060
+        },
+        {
+          "word": "read",
+          "begin": 406180,
+          "end": 406360
+        },
+        {
+          "word": "from",
+          "begin": 406400,
+          "end": 406520
+        },
+        {
+          "word": "the",
+          "begin": 406540,
+          "end": 406580
+        },
+        {
+          "word": "same",
+          "begin": 406680,
+          "end": 406940
+        },
+        {
+          "word": "kernel",
+          "begin": 406940,
+          "end": 407160
+        },
+        {
+          "word": "tracepoints",
+          "begin": 407240,
+          "end": 407780
+        },
+        {
+          "word": "they",
+          "begin": 407780,
+          "end": 407980
+        },
+        {
+          "word": "just",
+          "begin": 408060,
+          "end": 408200
+        },
+        {
+          "word": "present",
+          "begin": 408240,
+          "end": 408540
+        },
+        {
+          "word": "the",
+          "begin": 408540,
+          "end": 408580
+        },
+        {
+          "word": "data",
+          "begin": 408620,
+          "end": 408800
+        },
+        {
+          "word": "differently.",
+          "begin": 408840,
+          "end": 409120
+        },
+        {
+          "word": "Knowledge",
+          "begin": 409120,
+          "end": 409720
+        },
+        {
+          "word": "check:",
+          "begin": 409760,
+          "end": 410400
+        },
+        {
+          "word": "Your",
+          "begin": 410640,
+          "end": 410700
+        },
+        {
+          "word": "application",
+          "begin": 410800,
+          "end": 411380
+        },
+        {
+          "word": "reports",
+          "begin": 411400,
+          "end": 411940
+        },
+        {
+          "word": "200",
+          "begin": 412040,
+          "end": 412320
+        },
+        {
+          "word": "microsecond",
+          "begin": 412360,
+          "end": 412960
+        },
+        {
+          "word": "average",
+          "begin": 413040,
+          "end": 413320
+        }
+      ]
+    },
+    {
+      "blockIndex": 31,
+      "type": "reveal",
+      "text": "Knowledge check: Your application reports 200 microsecond average I/O latency, but users complain about intermittent slowness. How would you use ftrace and blktrace together to pinpoint whether the bottleneck is in the kernel I/O stack or the SSD itself? What specific timestamps would you compare? The answer: Enable both NVMe and block layer trace events simultaneously. For each I/O, compare three key timestamps: (1) block_rq_issue — when the block layer hands the request to the NVMe driver, (2) nvme_setup_cmd — when the driver submits the command to the SSD's submission queue, and (3) nvme_complete_rq — when the SSD posts the completion. The gap between rq_issue and setup_cmd reveals driver/software overhead. The gap between setup_cmd and complete_rq is the actual SSD device latency. If device latency spikes to milliseconds during normal sub-100us operations, the SSD is likely doing foreground garbage collection or thermal throttling. If device latency is stable but total latency is high, the bottleneck is in the I/O scheduler, filesystem journaling, or queue contention. Look for patterns: spikes correlating with write bursts suggest GC, while steady high latency on one qid suggests CPU affinity issues.",
+      "beginMs": 413400,
+      "endMs": 485820,
+      "timestamps": [
+        {
+          "word": "I/O",
+          "begin": 413400,
+          "end": 413560
+        },
+        {
+          "word": "latency,",
+          "begin": 413660,
+          "end": 414080
+        },
+        {
+          "word": "but",
+          "begin": 414440,
+          "end": 414560
+        },
+        {
+          "word": "users",
+          "begin": 414580,
+          "end": 414920
+        },
+        {
+          "word": "complain",
+          "begin": 414960,
+          "end": 415300
+        },
+        {
+          "word": "about",
+          "begin": 415300,
+          "end": 415500
+        },
+        {
+          "word": "intermittent",
+          "begin": 415560,
+          "end": 415960
+        },
+        {
+          "word": "slowness.",
+          "begin": 416040,
+          "end": 416600
+        },
+        {
+          "word": "How",
+          "begin": 416860,
+          "end": 417000
+        },
+        {
+          "word": "would",
+          "begin": 417000,
+          "end": 417120
+        },
+        {
+          "word": "you",
+          "begin": 417120,
+          "end": 417160
+        },
+        {
+          "word": "use",
+          "begin": 417240,
+          "end": 417420
+        },
+        {
+          "word": "ftrace",
+          "begin": 417500,
+          "end": 417960
+        },
+        {
+          "word": "and",
+          "begin": 417980,
+          "end": 418060
+        },
+        {
+          "word": "blktrace",
+          "begin": 418100,
+          "end": 418860
+        },
+        {
+          "word": "together",
+          "begin": 418900,
+          "end": 419400
+        },
+        {
+          "word": "to",
+          "begin": 419480,
+          "end": 419700
+        },
+        {
+          "word": "pinpoint",
+          "begin": 419480,
+          "end": 419880
+        },
+        {
+          "word": "whether",
+          "begin": 419920,
+          "end": 420100
+        },
+        {
+          "word": "the",
+          "begin": 420160,
+          "end": 420200
+        },
+        {
+          "word": "bottleneck",
+          "begin": 420280,
+          "end": 420760
+        },
+        {
+          "word": "is",
+          "begin": 420780,
+          "end": 420880
+        },
+        {
+          "word": "in",
+          "begin": 420900,
+          "end": 420980
+        },
+        {
+          "word": "the",
+          "begin": 421000,
+          "end": 421040
+        },
+        {
+          "word": "kernel",
+          "begin": 421100,
+          "end": 421540
+        },
+        {
+          "word": "I/O",
+          "begin": 421660,
+          "end": 421680
+        },
+        {
+          "word": "stack",
+          "begin": 421820,
+          "end": 422200
+        },
+        {
+          "word": "or",
+          "begin": 422400,
+          "end": 423000
+        },
+        {
+          "word": "the",
+          "begin": 423060,
+          "end": 423120
+        },
+        {
+          "word": "itself?",
+          "begin": 423200,
+          "end": 423740
+        },
+        {
+          "word": "What",
+          "begin": 424140,
+          "end": 424280
+        },
+        {
+          "word": "specific",
+          "begin": 424300,
+          "end": 424740
+        },
+        {
+          "word": "timestamps",
+          "begin": 424780,
+          "end": 425380
+        },
+        {
+          "word": "would",
+          "begin": 425400,
+          "end": 425520
+        },
+        {
+          "word": "you",
+          "begin": 425540,
+          "end": 425580
+        },
+        {
+          "word": "compare?",
+          "begin": 425660,
+          "end": 425940
+        },
+        {
+          "word": "The",
+          "begin": 426480,
+          "end": 426520
+        },
+        {
+          "word": "answer:",
+          "begin": 426640,
+          "end": 426900
+        },
+        {
+          "word": "Enable",
+          "begin": 427340,
+          "end": 427640
+        },
+        {
+          "word": "both",
+          "begin": 427740,
+          "end": 427960
+        },
+        {
+          "word": "NVMe",
+          "begin": 428060,
+          "end": 428640
+        },
+        {
+          "word": "and",
+          "begin": 428800,
+          "end": 428900
+        },
+        {
+          "word": "block",
+          "begin": 428960,
+          "end": 429220
+        },
+        {
+          "word": "layer",
+          "begin": 429240,
+          "end": 429420
+        },
+        {
+          "word": "trace",
+          "begin": 429520,
+          "end": 429760
+        },
+        {
+          "word": "events",
+          "begin": 429780,
+          "end": 430040
+        },
+        {
+          "word": "simultaneously.",
+          "begin": 430120,
+          "end": 430940
+        },
+        {
+          "word": "For",
+          "begin": 431200,
+          "end": 431420
+        },
+        {
+          "word": "each",
+          "begin": 431420,
+          "end": 431560
+        },
+        {
+          "word": "I/O,",
+          "begin": 431700,
+          "end": 431920
+        },
+        {
+          "word": "compare",
+          "begin": 432340,
+          "end": 432740
+        },
+        {
+          "word": "three",
+          "begin": 432740,
+          "end": 432860
+        },
+        {
+          "word": "key",
+          "begin": 433000,
+          "end": 433100
+        },
+        {
+          "word": "timestamps:",
+          "begin": 433220,
+          "end": 433900
+        },
+        {
+          "word": "(1)",
+          "begin": 434300,
+          "end": 434460
+        },
+        {
+          "word": "block_rq_issue",
+          "begin": 434500,
+          "end": 436000
+        },
+        {
+          "word": "when",
+          "begin": 436460,
+          "end": 436580
+        },
+        {
+          "word": "the",
+          "begin": 436600,
+          "end": 436640
+        },
+        {
+          "word": "block",
+          "begin": 436700,
+          "end": 436960
+        },
+        {
+          "word": "layer",
+          "begin": 436980,
+          "end": 437280
+        },
+        {
+          "word": "hands",
+          "begin": 437280,
+          "end": 437580
+        },
+        {
+          "word": "the",
+          "begin": 437580,
+          "end": 437620
+        },
+        {
+          "word": "request",
+          "begin": 437660,
+          "end": 437880
+        },
+        {
+          "word": "to",
+          "begin": 437880,
+          "end": 438040
+        },
+        {
+          "word": "the",
+          "begin": 438040,
+          "end": 438180
+        },
+        {
+          "word": "NVMe",
+          "begin": 438220,
+          "end": 438420
+        },
+        {
+          "word": "driver,",
+          "begin": 438480,
+          "end": 441820
+        },
+        {
+          "word": "(2)",
+          "begin": 441880,
+          "end": 441960
+        },
+        {
+          "word": "when",
+          "begin": 442460,
+          "end": 442580
+        },
+        {
+          "word": "the",
+          "begin": 442580,
+          "end": 442640
+        },
+        {
+          "word": "driver",
+          "begin": 442700,
+          "end": 442980
+        },
+        {
+          "word": "submits",
+          "begin": 443120,
+          "end": 443440
+        },
+        {
+          "word": "the",
+          "begin": 443500,
+          "end": 443540
+        },
+        {
+          "word": "command",
+          "begin": 443600,
+          "end": 444000
+        },
+        {
+          "word": "to",
+          "begin": 444000,
+          "end": 444040
+        },
+        {
+          "word": "the",
+          "begin": 444100,
+          "end": 444140
+        },
+        {
+          "word": "SSD's",
+          "begin": 444260,
+          "end": 444740
+        },
+        {
+          "word": "submission",
+          "begin": 444900,
+          "end": 445340
+        },
+        {
+          "word": "queue,",
+          "begin": 445420,
+          "end": 445560
+        },
+        {
+          "word": "and",
+          "begin": 445880,
+          "end": 445980
+        },
+        {
+          "word": "(3)",
+          "begin": 446040,
+          "end": 446180
+        },
+        {
+          "word": "nvme_complete_rq",
+          "begin": 446400,
+          "end": 448100
+        },
+        {
+          "word": "when",
+          "begin": 448400,
+          "end": 448500
+        },
+        {
+          "word": "the",
+          "begin": 448440,
+          "end": 448580
+        },
+        {
+          "word": "SSD",
+          "begin": 448680,
+          "end": 449100
+        },
+        {
+          "word": "posts",
+          "begin": 449220,
+          "end": 449540
+        },
+        {
+          "word": "the",
+          "begin": 449580,
+          "end": 449620
+        },
+        {
+          "word": "completion.",
+          "begin": 449700,
+          "end": 450160
+        },
+        {
+          "word": "The",
+          "begin": 450240,
+          "end": 450660
+        },
+        {
+          "word": "gap",
+          "begin": 450740,
+          "end": 450960
+        },
+        {
+          "word": "between",
+          "begin": 450980,
+          "end": 451280
+        },
+        {
+          "word": "rq_issue",
+          "begin": 451380,
+          "end": 451940
+        },
+        {
+          "word": "and",
+          "begin": 452100,
+          "end": 452180
+        },
+        {
+          "word": "setup_cmd",
+          "begin": 452260,
+          "end": 453100
+        },
+        {
+          "word": "reveals",
+          "begin": 453160,
+          "end": 453560
+        },
+        {
+          "word": "driver/software",
+          "begin": 453620,
+          "end": 454980
+        },
+        {
+          "word": "overhead.",
+          "begin": 455020,
+          "end": 455500
+        },
+        {
+          "word": "The",
+          "begin": 455600,
+          "end": 455680
+        },
+        {
+          "word": "gap",
+          "begin": 455720,
+          "end": 455880
+        },
+        {
+          "word": "between",
+          "begin": 455920,
+          "end": 456460
+        },
+        {
+          "word": "setup_cmd",
+          "begin": 456460,
+          "end": 456920
+        },
+        {
+          "word": "and",
+          "begin": 456960,
+          "end": 457220
+        },
+        {
+          "word": "complete_rq",
+          "begin": 457420,
+          "end": 458120
+        },
+        {
+          "word": "is",
+          "begin": 458180,
+          "end": 458380
+        },
+        {
+          "word": "the",
+          "begin": 458480,
+          "end": 458560
+        },
+        {
+          "word": "actual",
+          "begin": 458660,
+          "end": 459040
+        },
+        {
+          "word": "SSD",
+          "begin": 459080,
+          "end": 459400
+        },
+        {
+          "word": "device",
+          "begin": 459480,
+          "end": 459540
+        },
+        {
+          "word": "latency.",
+          "begin": 459540,
+          "end": 459740
+        },
+        {
+          "word": "If",
+          "begin": 460040,
+          "end": 460140
+        },
+        {
+          "word": "device",
+          "begin": 460160,
+          "end": 460520
+        },
+        {
+          "word": "latency",
+          "begin": 460580,
+          "end": 460960
+        },
+        {
+          "word": "spikes",
+          "begin": 461060,
+          "end": 461440
+        },
+        {
+          "word": "to",
+          "begin": 461440,
+          "end": 461480
+        },
+        {
+          "word": "milliseconds",
+          "begin": 461540,
+          "end": 462200
+        },
+        {
+          "word": "during",
+          "begin": 462260,
+          "end": 462480
+        },
+        {
+          "word": "normal",
+          "begin": 462520,
+          "end": 462780
+        },
+        {
+          "word": "sub-100us",
+          "begin": 462920,
+          "end": 463500
+        },
+        {
+          "word": "operations,",
+          "begin": 463500,
+          "end": 464720
+        },
+        {
+          "word": "the",
+          "begin": 465040,
+          "end": 465080
+        },
+        {
+          "word": "is",
+          "begin": 465200,
+          "end": 465340
+        },
+        {
+          "word": "likely",
+          "begin": 465380,
+          "end": 465860
+        },
+        {
+          "word": "doing",
+          "begin": 465920,
+          "end": 466200
+        },
+        {
+          "word": "foreground",
+          "begin": 466220,
+          "end": 466800
+        },
+        {
+          "word": "garbage",
+          "begin": 466940,
+          "end": 467220
+        },
+        {
+          "word": "collection",
+          "begin": 467280,
+          "end": 467840
+        },
+        {
+          "word": "or",
+          "begin": 467860,
+          "end": 467980
+        },
+        {
+          "word": "thermal",
+          "begin": 468040,
+          "end": 468920
+        },
+        {
+          "word": "throttling.",
+          "begin": 469060,
+          "end": 469560
+        },
+        {
+          "word": "If",
+          "begin": 469720,
+          "end": 469820
+        },
+        {
+          "word": "device",
+          "begin": 469840,
+          "end": 470180
+        },
+        {
+          "word": "latency",
+          "begin": 470240,
+          "end": 470600
+        },
+        {
+          "word": "is",
+          "begin": 470680,
+          "end": 470760
+        },
+        {
+          "word": "stable",
+          "begin": 470820,
+          "end": 471120
+        },
+        {
+          "word": "but",
+          "begin": 471240,
+          "end": 471340
+        },
+        {
+          "word": "total",
+          "begin": 471340,
+          "end": 471740
+        },
+        {
+          "word": "latency",
+          "begin": 471740,
+          "end": 472100
+        },
+        {
+          "word": "is",
+          "begin": 472180,
+          "end": 472260
+        },
+        {
+          "word": "high,",
+          "begin": 472260,
+          "end": 472460
+        },
+        {
+          "word": "the",
+          "begin": 472920,
+          "end": 472960
+        },
+        {
+          "word": "bottleneck",
+          "begin": 473020,
+          "end": 473480
+        },
+        {
+          "word": "is",
+          "begin": 473500,
+          "end": 473600
+        },
+        {
+          "word": "in",
+          "begin": 473640,
+          "end": 473720
+        },
+        {
+          "word": "the",
+          "begin": 473720,
+          "end": 473780
+        },
+        {
+          "word": "I/O",
+          "begin": 473920,
+          "end": 474100
+        },
+        {
+          "word": "scheduler,",
+          "begin": 474220,
+          "end": 474900
+        },
+        {
+          "word": "filesystem",
+          "begin": 474900,
+          "end": 475500
+        },
+        {
+          "word": "journaling,",
+          "begin": 475560,
+          "end": 475980
+        },
+        {
+          "word": "or",
+          "begin": 476080,
+          "end": 476260
+        },
+        {
+          "word": "queue",
+          "begin": 476300,
+          "end": 476360
+        },
+        {
+          "word": "contention.",
+          "begin": 476440,
+          "end": 477040
+        },
+        {
+          "word": "Look",
+          "begin": 477360,
+          "end": 477480
+        },
+        {
+          "word": "for",
+          "begin": 477520,
+          "end": 477580
+        },
+        {
+          "word": "patterns:",
+          "begin": 477660,
+          "end": 478200
+        },
+        {
+          "word": "spikes",
+          "begin": 478520,
+          "end": 478860
+        },
+        {
+          "word": "correlating",
+          "begin": 478920,
+          "end": 479400
+        },
+        {
+          "word": "with",
+          "begin": 479420,
+          "end": 479520
+        },
+        {
+          "word": "write",
+          "begin": 479600,
+          "end": 479800
+        },
+        {
+          "word": "bursts",
+          "begin": 479860,
+          "end": 480180
+        },
+        {
+          "word": "suggest",
+          "begin": 480280,
+          "end": 480700
+        },
+        {
+          "word": "GC,",
+          "begin": 480780,
+          "end": 481120
+        },
+        {
+          "word": "while",
+          "begin": 481560,
+          "end": 481680
+        },
+        {
+          "word": "steady",
+          "begin": 481780,
+          "end": 482020
+        },
+        {
+          "word": "high",
+          "begin": 482120,
+          "end": 482220
+        },
+        {
+          "word": "latency",
+          "begin": 482380,
+          "end": 482780
+        },
+        {
+          "word": "on",
+          "begin": 482860,
+          "end": 482960
+        },
+        {
+          "word": "one",
+          "begin": 483040,
+          "end": 483220
+        },
+        {
+          "word": "qid",
+          "begin": 483300,
+          "end": 483400
+        },
+        {
+          "word": "suggests",
+          "begin": 483400,
+          "end": 484360
+        },
+        {
+          "word": "CPU",
+          "begin": 484480,
+          "end": 484820
+        },
+        {
+          "word": "affinity",
+          "begin": 484880,
+          "end": 485260
+        },
+        {
+          "word": "issues.",
+          "begin": 485360,
+          "end": 485820
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "sectionId": "sec-namespaces",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Namespaces — Splitting One Drive into Many",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: Namespaces Are Logical Partitions. An NVMe namespace is like a partition on a hard drive — it's a logical division of the SSD's storage. Most consumer SSDs have just one namespace (NSID 1) that spans the whole drive. Enterprise SSDs may have multiple namespaces to isolate workloads, each with its own LBA range and format.",
+      "blockIndex": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "In Lesson 1, we learned about LBAs — numbered mailboxes that address the drive's storage. But here's a question: what if you want one physical drive to act like multiple separate drives?",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "Think of a building with separate offices. The building is one physical structure, but each office has its own door, its own lock, and its own address. Tenants in office 1 can't access files in office 2 — they're isolated.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "An NVMe namespace is like one of those offices. It's a logical chunk of the SSD with its own set of LBAs, its own size, and its own LBA format (block size). Most consumer SSDs have a single namespace (the whole drive is one big office), but enterprise drives can split into many — each namespace can even have a different block size.",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "Why would you want multiple namespaces? In a data center, you might give different virtual machines different namespaces — each VM sees its own &ldquo;drive&rdquo; but they all share one physical SSD. This is more efficient than having separate drives for each VM.",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "Remember CDW1 in the 64-byte command structure? That's the Namespace ID (NSID). Every read, write, and TRIM command must specify which namespace it's targeting. For a drive with a single namespace, it's always NSID=1. The SSD rejects commands with an invalid NSID.",
+      "blockIndex": 6
+    },
+    {
+      "type": "info",
+      "text": "Creating and deleting namespaces: Enterprise drives support admin commands to create, delete, attach, and detach namespaces on the fly. You can carve a 2 TB drive into four 500 GB namespaces, each with its own LBA format. The commands are Namespace Management (opcode 0x0D) and Namespace Attachment (opcode 0x15).",
+      "blockIndex": 7
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: In a data center running 50 virtual machines on a single server with one NVMe SSD, why would you use multiple namespaces instead of simply creating 50 partitions on a single namespace? What does namespace-level isolation give you that partition-level isolation does not? The answer: Namespaces provide hardware-level isolation that partitions cannot. With partitions, all VMs share the same namespace — a misbehaving VM could issue a Format NVM command or write to wrong LBAs and corrupt another VM's partition, because the SSD sees it all as one address space. With separate namespaces, each VM gets its own NSID with an independent LBA range starting at 0. The SSD hardware enforces that commands targeting NSID 2 cannot touch data in NSID 3 — the isolation is at the NVMe protocol level, not just a software convention. Additionally, different namespaces can have different LBA formats (one VM might need 512-byte sectors for legacy compatibility while another uses 4KB), different protection settings (T10-PI for critical workloads), and can be independently formatted or secure-erased without affecting other namespaces. Combined with SR-IOV, each VM can get a dedicated virtual NVMe controller mapped to its namespace — achieving near-native I/O performance without hypervisor involvement on the data path.",
+      "requiresReveal": true,
+      "blockIndex": 8
+    }
+  ]
+}

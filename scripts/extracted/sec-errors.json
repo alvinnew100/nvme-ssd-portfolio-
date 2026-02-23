@@ -1,0 +1,41 @@
+{
+  "sectionId": "sec-errors",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "When Things Go Wrong — Error Handling",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: CQ Status Codes Are Error Reports. When the SSD finishes a command, it writes a 16-byte completion entry to the CQ. The status field is like a report card — 0x0 means success, anything else is an error code telling you exactly what went wrong and whether the command can be retried.",
+      "blockIndex": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "We've seen how commands are sent (via SQ) and results come back (via CQ). But what if a command fails? Maybe you tried to read an LBA that doesn't exist, or a NAND page has gone bad. The SSD needs a way to tell you exactly what went wrong.",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "Every command gets a 16-byte Completion Queue Entry (CQE) — the result slip. Inside this result, there's a status field that contains:",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "Why is DNR so important? When a driver gets an error, it needs to decide: should I retry? DNR answers this instantly. A media error (dead NAND page) with DNR=1 means &ldquo;stop trying, this data is gone.&rdquo; A busy error with DNR=0 means &ldquo;try again in a moment.&rdquo;",
+      "blockIndex": 4
+    },
+    {
+      "type": "info",
+      "text": "Async Event Requests (AER) — the drive calling YOU: So far, communication has been one-way: the host sends commands, the SSD responds. But what if something urgent happens on the SSD — a temperature spike, a namespace change, or a firmware activation? The host pre-posts &ldquo;Async Event Request&rdquo; commands. The SSD holds them and only completes one when something important happens — like a fire alarm that sits silent until there's smoke.",
+      "blockIndex": 5
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: An NVMe driver receives a completion entry with DNR=0 (Do Not Retry = false) and a media error status code. A colleague says 'just retry it forever until it works.' Under what conditions is this a terrible strategy, and how should a production driver actually handle retryable errors? The answer: Retrying forever is dangerous for several reasons: (1) If the NAND page has a marginal ECC issue, repeated reads can actually worsen bit errors through read disturb — each read attempt stresses neighboring cells. (2) Infinite retries block the queue slot, preventing other commands from completing. With thousands of pending I/Os, one stuck retry loop can cascade into a system-wide hang. (3) Some 'retryable' errors are actually transient-then-permanent — the SSD may return DNR=0 initially because it's still attempting internal recovery, but the data may ultimately be unrecoverable. A production driver should: set a maximum retry count (Linux NVMe uses ~3-5 retries), implement exponential backoff between retries, escalate to the upper layer (filesystem/application) after exhausting retries so it can take corrective action (like reading from a RAID mirror or reporting the error to the user), and log every retry for diagnostic purposes. The DNR bit is a hint, not a guarantee — DNR=0 means 'a retry might help,' not 'a retry will definitely work.'",
+      "requiresReveal": true,
+      "blockIndex": 6
+    }
+  ]
+}

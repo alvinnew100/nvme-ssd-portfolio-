@@ -1,0 +1,81 @@
+{
+  "sectionId": "sec-queues",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "How Commands Are Sent — Submission & Completion Queues",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: Queues Are Like Restaurant Order Slips. The Submission Queue (SQ) is the order counter — the host places command 'slips' there. The Completion Queue (CQ) is the pickup counter — the SSD places results there. Head and tail pointers track who's next, and the phase bit prevents confusion when the circular buffer wraps around.",
+      "blockIndex": 1
+    },
+    {
+      "type": "term",
+      "text": "SQ (Submission Queue): A circular buffer in host RAM where the CPU places NVMe commands (64-byte entries) for the SSD to process. Each I/O queue pair has one SQ.",
+      "blockIndex": 2
+    },
+    {
+      "type": "term",
+      "text": "CQ (Completion Queue): A circular buffer in host RAM where the SSD places completion entries (16-byte) after processing commands. The phase bit flips each time the queue wraps to indicate fresh entries.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "We know the SSD has a control panel (BAR0 registers) and a high-speed connection (PCIe). But here's the critical question: how does the host actually send commands to the drive?",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "Imagine a busy restaurant. Customers don't walk into the kitchen to place orders — there's a system. Customers write their orders on slips and put them in an order rack. The kitchen takes orders from the rack, cooks the food, then puts a ready ticket in a pickup tray. The waiter checks the pickup tray and delivers the food.",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "NVMe works the same way. The computer (host) places commands into a Submission Queue (SQ) in RAM — that's the order rack. The SSD picks up commands, processes them, and puts results into a Completion Queue (CQ) in RAM — that's the pickup tray.",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "But why use queues at all? Why not just send one command at a time? Because SSDs are massively parallel — they have multiple NAND chips working simultaneously. If you sent one command and waited for it to finish before sending the next, most of the SSD would sit idle. Queues let you stack up many commands so the SSD can work on them in parallel, keeping all its NAND chips busy.",
+      "blockIndex": 7
+    },
+    {
+      "type": "paragraph",
+      "text": "And why circular? Both queues are shaped like rings (circular buffers). Two pointers chase each other around: the HEAD (where the consumer reads from) and the TAIL (where the producer writes to). When the tail catches the head, the queue is full — you must wait. When head catches tail, the queue is empty.",
+      "blockIndex": 8
+    },
+    {
+      "type": "paragraph",
+      "text": "Try the simulator below to see this in action. Each button corresponds to a real step in the NVMe command flow:",
+      "blockIndex": 9
+    },
+    {
+      "type": "paragraph",
+      "text": "Click this to simulate the host placing a command into the Submission Queue. Watch the SQ ring: a new entry (C1, C2, etc.) appears at the TAIL position. The tail pointer advances clockwise. In real NVMe, the host then writes the new tail value to the SQ Tail Doorbell register — that's how the SSD knows new work arrived. Try clicking it 3-4 times to queue up multiple commands and watch the tail chase around the ring.",
+      "blockIndex": 10
+    },
+    {
+      "type": "paragraph",
+      "text": "Click this to simulate the SSD fetching a command and completing it. Watch both rings: the entry disappears from the SQ at the HEAD position (the SSD consumed it), and a matching result appears in the CQ. The SQ head advances, and the CQ tail advances. Notice: commands are always consumed in order (FIFO) — the SSD reads from HEAD, not from any random slot.",
+      "blockIndex": 11
+    },
+    {
+      "type": "paragraph",
+      "text": "Click this to simulate the host reading a completion entry. Watch the CQ ring: the result is removed from the CQ head position and the head advances. The host then writes the new CQ head to the CQ Head Doorbell — telling the SSD &ldquo;I've read up to this point, you can reuse those slots.&rdquo;",
+      "blockIndex": 12
+    },
+    {
+      "type": "info",
+      "text": "The phase bit trick — how the host detects new completions: But wait — if the SSD writes results to the CQ, how does the host know which entries are new? NVMe uses a clever trick: each CQ entry has a &ldquo;phase bit&rdquo; (P). When the SSD wraps around the ring, it flips the phase. The host knows a CQ entry is new when its P bit matches the expected phase. This avoids the overhead of comparing head/tail pointers for every completion check.",
+      "blockIndex": 13
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: Imagine the NVMe driver keeps submitting commands without checking how full the Submission Queue is. What happens when the tail pointer catches the head pointer, and why doesn't NVMe have a hardware mechanism to auto-recover from this? The answer: When the tail pointer catches the head pointer, the circular buffer is full — there are no free slots left. The host must wait for the controller to process commands (which advances the head pointer, freeing slots) before submitting more. NVMe doesn't auto-recover because the host driver is responsible for tracking available queue depth. The driver maintains a local count of in-flight commands and never advances the tail past the head. If the driver had a bug and overwrote an unprocessed entry, the original command would be lost and the replacement would be corrupted — leading to data loss or controller errors. This design keeps hardware simple and puts flow control responsibility on the software, which can make smarter scheduling decisions.",
+      "requiresReveal": true,
+      "blockIndex": 14
+    }
+  ]
+}

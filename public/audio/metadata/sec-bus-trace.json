@@ -1,0 +1,2938 @@
+{
+  "sectionId": "sec-bus-trace",
+  "audioFile": "/audio/sections/sec-bus-trace.mp3",
+  "totalDurationMs": 210120,
+  "fileSizeBytes": 3362304,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "Seeing It All in Action — A PCIe Bus Trace",
+      "beginMs": 80,
+      "endMs": 3080,
+      "timestamps": [
+        {
+          "word": "Seeing",
+          "begin": 80,
+          "end": 300
+        },
+        {
+          "word": "It",
+          "begin": 320,
+          "end": 380
+        },
+        {
+          "word": "All",
+          "begin": 420,
+          "end": 560
+        },
+        {
+          "word": "in",
+          "begin": 580,
+          "end": 640
+        },
+        {
+          "word": "Action",
+          "begin": 700,
+          "end": 1080
+        },
+        {
+          "word": "A",
+          "begin": 1320,
+          "end": 1340
+        },
+        {
+          "word": "PCIe",
+          "begin": 1420,
+          "end": 1980
+        },
+        {
+          "word": "Bus",
+          "begin": 2100,
+          "end": 2300
+        },
+        {
+          "word": "Trace",
+          "begin": 2360,
+          "end": 2620
+        },
+        {
+          "word": "Analogy:",
+          "begin": 2640,
+          "end": 3080
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: A Bus Trace Is an X-Ray of Data Flow. A PCIe bus trace captures every transaction between the host and SSD — like a security camera recording every package that passes through a mail sorting facility. You can see doorbell writes, DMA transfers, and interrupt signals at the individual packet level.",
+      "beginMs": 3480,
+      "endMs": 20400,
+      "timestamps": [
+        {
+          "word": "A",
+          "begin": 3480,
+          "end": 3500
+        },
+        {
+          "word": "Bus",
+          "begin": 3580,
+          "end": 3780
+        },
+        {
+          "word": "Trace",
+          "begin": 3840,
+          "end": 4120
+        },
+        {
+          "word": "Is",
+          "begin": 4160,
+          "end": 4260
+        },
+        {
+          "word": "an",
+          "begin": 4260,
+          "end": 4340
+        },
+        {
+          "word": "X-Ray",
+          "begin": 4360,
+          "end": 4640
+        },
+        {
+          "word": "of",
+          "begin": 4720,
+          "end": 4780
+        },
+        {
+          "word": "Data",
+          "begin": 4820,
+          "end": 5020
+        },
+        {
+          "word": "Flow.",
+          "begin": 5100,
+          "end": 5240
+        },
+        {
+          "word": "A",
+          "begin": 5960,
+          "end": 6000
+        },
+        {
+          "word": "PCIe",
+          "begin": 6060,
+          "end": 6580
+        },
+        {
+          "word": "bus",
+          "begin": 6660,
+          "end": 6860
+        },
+        {
+          "word": "trace",
+          "begin": 6900,
+          "end": 7160
+        },
+        {
+          "word": "captures",
+          "begin": 7220,
+          "end": 7640
+        },
+        {
+          "word": "every",
+          "begin": 7720,
+          "end": 7840
+        },
+        {
+          "word": "transaction",
+          "begin": 7840,
+          "end": 8180
+        },
+        {
+          "word": "between",
+          "begin": 8200,
+          "end": 8560
+        },
+        {
+          "word": "the",
+          "begin": 8600,
+          "end": 8720
+        },
+        {
+          "word": "host",
+          "begin": 8740,
+          "end": 8920
+        },
+        {
+          "word": "and",
+          "begin": 8920,
+          "end": 9040
+        },
+        {
+          "word": "SSD",
+          "begin": 9080,
+          "end": 9460
+        },
+        {
+          "word": "like",
+          "begin": 9560,
+          "end": 9820
+        },
+        {
+          "word": "a",
+          "begin": 9860,
+          "end": 9880
+        },
+        {
+          "word": "security",
+          "begin": 10280,
+          "end": 10840
+        },
+        {
+          "word": "camera",
+          "begin": 10860,
+          "end": 11260
+        },
+        {
+          "word": "recording",
+          "begin": 11320,
+          "end": 11740
+        },
+        {
+          "word": "every",
+          "begin": 11820,
+          "end": 11980
+        },
+        {
+          "word": "package",
+          "begin": 12060,
+          "end": 12400
+        },
+        {
+          "word": "that",
+          "begin": 12460,
+          "end": 12580
+        },
+        {
+          "word": "passes",
+          "begin": 12600,
+          "end": 12940
+        },
+        {
+          "word": "through",
+          "begin": 13000,
+          "end": 13080
+        },
+        {
+          "word": "a",
+          "begin": 13160,
+          "end": 13320
+        },
+        {
+          "word": "mail",
+          "begin": 13380,
+          "end": 13400
+        },
+        {
+          "word": "sorting",
+          "begin": 13500,
+          "end": 13760
+        },
+        {
+          "word": "facility.",
+          "begin": 13800,
+          "end": 14200
+        },
+        {
+          "word": "You",
+          "begin": 14720,
+          "end": 14760
+        },
+        {
+          "word": "can",
+          "begin": 14840,
+          "end": 14940
+        },
+        {
+          "word": "see",
+          "begin": 15000,
+          "end": 15080
+        },
+        {
+          "word": "doorbell",
+          "begin": 15160,
+          "end": 15460
+        },
+        {
+          "word": "writes,",
+          "begin": 15460,
+          "end": 15800
+        },
+        {
+          "word": "DMA",
+          "begin": 16059,
+          "end": 16320
+        },
+        {
+          "word": "transfers,",
+          "begin": 16420,
+          "end": 16980
+        },
+        {
+          "word": "and",
+          "begin": 17080,
+          "end": 17180
+        },
+        {
+          "word": "interrupt",
+          "begin": 17220,
+          "end": 17580
+        },
+        {
+          "word": "signals",
+          "begin": 17660,
+          "end": 18040
+        },
+        {
+          "word": "at",
+          "begin": 18120,
+          "end": 18220
+        },
+        {
+          "word": "the",
+          "begin": 18220,
+          "end": 18280
+        },
+        {
+          "word": "individual",
+          "begin": 18340,
+          "end": 18740
+        },
+        {
+          "word": "packet",
+          "begin": 18820,
+          "end": 19120
+        },
+        {
+          "word": "level.",
+          "begin": 19160,
+          "end": 19340
+        },
+        {
+          "word": "DMA",
+          "begin": 20120,
+          "end": 20400
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "term",
+      "text": "DMA (Direct Memory Access): A mechanism where the SSD reads from or writes to host RAM directly, without involving the CPU for each byte. The SSD's DMA engine fetches commands from SQs and delivers data/completions — this is what makes NVMe fast.",
+      "beginMs": 20500,
+      "endMs": 36640,
+      "timestamps": [
+        {
+          "word": "(Direct",
+          "begin": 20500,
+          "end": 20820
+        },
+        {
+          "word": "Memory",
+          "begin": 20900,
+          "end": 21140
+        },
+        {
+          "word": "Access):",
+          "begin": 21240,
+          "end": 21700
+        },
+        {
+          "word": "A",
+          "begin": 21940,
+          "end": 21960
+        },
+        {
+          "word": "mechanism",
+          "begin": 22020,
+          "end": 22540
+        },
+        {
+          "word": "where",
+          "begin": 22560,
+          "end": 22700
+        },
+        {
+          "word": "the",
+          "begin": 22700,
+          "end": 22740
+        },
+        {
+          "word": "SSD",
+          "begin": 22840,
+          "end": 23240
+        },
+        {
+          "word": "reads",
+          "begin": 23360,
+          "end": 23560
+        },
+        {
+          "word": "from",
+          "begin": 23640,
+          "end": 23860
+        },
+        {
+          "word": "or",
+          "begin": 23980,
+          "end": 24000
+        },
+        {
+          "word": "writes",
+          "begin": 24100,
+          "end": 24340
+        },
+        {
+          "word": "to",
+          "begin": 24380,
+          "end": 24440
+        },
+        {
+          "word": "host",
+          "begin": 24500,
+          "end": 24740
+        },
+        {
+          "word": "RAM",
+          "begin": 24800,
+          "end": 24960
+        },
+        {
+          "word": "directly,",
+          "begin": 25000,
+          "end": 25380
+        },
+        {
+          "word": "without",
+          "begin": 25640,
+          "end": 25880
+        },
+        {
+          "word": "involving",
+          "begin": 25900,
+          "end": 26280
+        },
+        {
+          "word": "the",
+          "begin": 26300,
+          "end": 26340
+        },
+        {
+          "word": "CPU",
+          "begin": 26440,
+          "end": 26780
+        },
+        {
+          "word": "for",
+          "begin": 26920,
+          "end": 26980
+        },
+        {
+          "word": "each",
+          "begin": 27060,
+          "end": 27180
+        },
+        {
+          "word": "byte.",
+          "begin": 27240,
+          "end": 27500
+        },
+        {
+          "word": "The",
+          "begin": 27940,
+          "end": 28680
+        },
+        {
+          "word": "DMA",
+          "begin": 28760,
+          "end": 29040
+        },
+        {
+          "word": "engine",
+          "begin": 29100,
+          "end": 29320
+        },
+        {
+          "word": "fetches",
+          "begin": 29420,
+          "end": 29720
+        },
+        {
+          "word": "commands",
+          "begin": 29760,
+          "end": 30120
+        },
+        {
+          "word": "from",
+          "begin": 30160,
+          "end": 30300
+        },
+        {
+          "word": "SQs",
+          "begin": 30320,
+          "end": 30880
+        },
+        {
+          "word": "and",
+          "begin": 30980,
+          "end": 31100
+        },
+        {
+          "word": "delivers",
+          "begin": 31120,
+          "end": 31440
+        },
+        {
+          "word": "data/completions",
+          "begin": 31500,
+          "end": 32420
+        },
+        {
+          "word": "this",
+          "begin": 32619,
+          "end": 32759
+        },
+        {
+          "word": "is",
+          "begin": 32780,
+          "end": 32860
+        },
+        {
+          "word": "what",
+          "begin": 32900,
+          "end": 33020
+        },
+        {
+          "word": "makes",
+          "begin": 33040,
+          "end": 33300
+        },
+        {
+          "word": "fast.",
+          "begin": 33400,
+          "end": 34180
+        },
+        {
+          "word": "MSI-X",
+          "begin": 34620,
+          "end": 35680
+        },
+        {
+          "word": "Signaled",
+          "begin": 35780,
+          "end": 36080
+        },
+        {
+          "word": "Interrupts",
+          "begin": 36100,
+          "end": 36640
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "term",
+      "text": "MSI-X (Message Signaled Interrupts - Extended): A modern interrupt mechanism where the SSD notifies the CPU by writing a small message to a specific memory address, rather than using a physical interrupt pin. Allows per-queue interrupt steering to specific CPU cores.",
+      "beginMs": 36940,
+      "endMs": 49400,
+      "timestamps": [
+        {
+          "word": "Extended):",
+          "begin": 36940,
+          "end": 37480
+        },
+        {
+          "word": "A",
+          "begin": 36940,
+          "end": 37080
+        },
+        {
+          "word": "modern",
+          "begin": 37120,
+          "end": 37480
+        },
+        {
+          "word": "interrupt",
+          "begin": 37740,
+          "end": 37760
+        },
+        {
+          "word": "mechanism",
+          "begin": 37840,
+          "end": 38380
+        },
+        {
+          "word": "where",
+          "begin": 38420,
+          "end": 38620
+        },
+        {
+          "word": "the",
+          "begin": 38680,
+          "end": 38740
+        },
+        {
+          "word": "notifies",
+          "begin": 38680,
+          "end": 38940
+        },
+        {
+          "word": "the",
+          "begin": 39020,
+          "end": 39180
+        },
+        {
+          "word": "CPU",
+          "begin": 39240,
+          "end": 39300
+        },
+        {
+          "word": "by",
+          "begin": 39380,
+          "end": 39560
+        },
+        {
+          "word": "writing",
+          "begin": 39380,
+          "end": 39840
+        },
+        {
+          "word": "a",
+          "begin": 39900,
+          "end": 39960
+        },
+        {
+          "word": "small",
+          "begin": 40080,
+          "end": 39960
+        },
+        {
+          "word": "message",
+          "begin": 40080,
+          "end": 40520
+        },
+        {
+          "word": "to",
+          "begin": 40520,
+          "end": 40580
+        },
+        {
+          "word": "a",
+          "begin": 40580,
+          "end": 40620
+        },
+        {
+          "word": "specific",
+          "begin": 40580,
+          "end": 41220
+        },
+        {
+          "word": "memory",
+          "begin": 41380,
+          "end": 41800
+        },
+        {
+          "word": "address,",
+          "begin": 41820,
+          "end": 42100
+        },
+        {
+          "word": "rather",
+          "begin": 41820,
+          "end": 42180
+        },
+        {
+          "word": "than",
+          "begin": 42240,
+          "end": 42420
+        },
+        {
+          "word": "using",
+          "begin": 42460,
+          "end": 42680
+        },
+        {
+          "word": "a",
+          "begin": 42700,
+          "end": 42800
+        },
+        {
+          "word": "physical",
+          "begin": 42700,
+          "end": 43080
+        },
+        {
+          "word": "interrupt",
+          "begin": 43100,
+          "end": 43500
+        },
+        {
+          "word": "pin.",
+          "begin": 43500,
+          "end": 46320
+        },
+        {
+          "word": "Allows",
+          "begin": 46660,
+          "end": 47040
+        },
+        {
+          "word": "per-queue",
+          "begin": 47040,
+          "end": 47320
+        },
+        {
+          "word": "interrupt",
+          "begin": 47400,
+          "end": 47780
+        },
+        {
+          "word": "steering",
+          "begin": 47840,
+          "end": 48160
+        },
+        {
+          "word": "to",
+          "begin": 47900,
+          "end": 47980
+        },
+        {
+          "word": "specific",
+          "begin": 48040,
+          "end": 48460
+        },
+        {
+          "word": "CPU",
+          "begin": 48560,
+          "end": 48960
+        },
+        {
+          "word": "cores.",
+          "begin": 49060,
+          "end": 49220
+        },
+        {
+          "word": "We've",
+          "begin": 49220,
+          "end": 49400
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "We've learned all the concepts separately — PCIe, BAR0, queues, and doorbells. Now let's see how they work together during a single NVMe Read command. Every step below is a real PCIe packet (called a Transaction Layer Packet, or TLP) traveling between the host and SSD.",
+      "beginMs": 49480,
+      "endMs": 67260,
+      "timestamps": [
+        {
+          "word": "learned",
+          "begin": 49480,
+          "end": 49800
+        },
+        {
+          "word": "all",
+          "begin": 50300,
+          "end": 50360
+        },
+        {
+          "word": "the",
+          "begin": 50440,
+          "end": 50500
+        },
+        {
+          "word": "concepts",
+          "begin": 50500,
+          "end": 50900
+        },
+        {
+          "word": "separately",
+          "begin": 50960,
+          "end": 51440
+        },
+        {
+          "word": "PCIe,",
+          "begin": 51500,
+          "end": 52340
+        },
+        {
+          "word": "BAR0,",
+          "begin": 52460,
+          "end": 53320
+        },
+        {
+          "word": "queues,",
+          "begin": 53400,
+          "end": 53820
+        },
+        {
+          "word": "and",
+          "begin": 53860,
+          "end": 54040
+        },
+        {
+          "word": "doorbells.",
+          "begin": 54480,
+          "end": 55240
+        },
+        {
+          "word": "Now",
+          "begin": 55360,
+          "end": 55440
+        },
+        {
+          "word": "let's",
+          "begin": 55520,
+          "end": 56640
+        },
+        {
+          "word": "see",
+          "begin": 56720,
+          "end": 56780
+        },
+        {
+          "word": "how",
+          "begin": 56860,
+          "end": 57020
+        },
+        {
+          "word": "they",
+          "begin": 57100,
+          "end": 57280
+        },
+        {
+          "word": "work",
+          "begin": 57360,
+          "end": 57540
+        },
+        {
+          "word": "together",
+          "begin": 57560,
+          "end": 57880
+        },
+        {
+          "word": "during",
+          "begin": 58000,
+          "end": 58200
+        },
+        {
+          "word": "a",
+          "begin": 58220,
+          "end": 58240
+        },
+        {
+          "word": "single",
+          "begin": 58360,
+          "end": 58580
+        },
+        {
+          "word": "NVMe",
+          "begin": 58760,
+          "end": 59220
+        },
+        {
+          "word": "Read",
+          "begin": 59340,
+          "end": 59520
+        },
+        {
+          "word": "command.",
+          "begin": 59560,
+          "end": 60000
+        },
+        {
+          "word": "Every",
+          "begin": 60480,
+          "end": 60640
+        },
+        {
+          "word": "step",
+          "begin": 60740,
+          "end": 60920
+        },
+        {
+          "word": "below",
+          "begin": 60980,
+          "end": 61480
+        },
+        {
+          "word": "is",
+          "begin": 61500,
+          "end": 61540
+        },
+        {
+          "word": "a",
+          "begin": 61620,
+          "end": 61680
+        },
+        {
+          "word": "real",
+          "begin": 61620,
+          "end": 61780
+        },
+        {
+          "word": "PCIe",
+          "begin": 61880,
+          "end": 62400
+        },
+        {
+          "word": "packet",
+          "begin": 62520,
+          "end": 62880
+        },
+        {
+          "word": "(called",
+          "begin": 62940,
+          "end": 63160
+        },
+        {
+          "word": "a",
+          "begin": 63180,
+          "end": 63200
+        },
+        {
+          "word": "Transaction",
+          "begin": 63260,
+          "end": 63860
+        },
+        {
+          "word": "Layer",
+          "begin": 63860,
+          "end": 64099
+        },
+        {
+          "word": "Packet,",
+          "begin": 64200,
+          "end": 64620
+        },
+        {
+          "word": "or",
+          "begin": 64879,
+          "end": 65040
+        },
+        {
+          "word": "TLP)",
+          "begin": 65040,
+          "end": 65459
+        },
+        {
+          "word": "traveling",
+          "begin": 65580,
+          "end": 66000
+        },
+        {
+          "word": "between",
+          "begin": 66020,
+          "end": 66300
+        },
+        {
+          "word": "the",
+          "begin": 66040,
+          "end": 66080
+        },
+        {
+          "word": "host",
+          "begin": 66140,
+          "end": 66360
+        },
+        {
+          "word": "and",
+          "begin": 66360,
+          "end": 66460
+        },
+        {
+          "word": "SSD.",
+          "begin": 66500,
+          "end": 66980
+        },
+        {
+          "word": "Why",
+          "begin": 67080,
+          "end": 67260
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "Why does this matter? When you debug NVMe performance or trace issues, you'll see these exact packet types. Understanding this flow helps you pinpoint where time is being spent — is it the doorbell write? The DMA data transfer? The NAND read time?",
+      "beginMs": 67320,
+      "endMs": 82000,
+      "timestamps": [
+        {
+          "word": "does",
+          "begin": 67320,
+          "end": 68300
+        },
+        {
+          "word": "this",
+          "begin": 68300,
+          "end": 68400
+        },
+        {
+          "word": "matter?",
+          "begin": 68400,
+          "end": 68580
+        },
+        {
+          "word": "When",
+          "begin": 68640,
+          "end": 68820
+        },
+        {
+          "word": "you",
+          "begin": 68840,
+          "end": 69540
+        },
+        {
+          "word": "debug",
+          "begin": 69540,
+          "end": 69680
+        },
+        {
+          "word": "NVMe",
+          "begin": 69680,
+          "end": 70020
+        },
+        {
+          "word": "performance",
+          "begin": 70100,
+          "end": 70740
+        },
+        {
+          "word": "or",
+          "begin": 70760,
+          "end": 70780
+        },
+        {
+          "word": "trace",
+          "begin": 70860,
+          "end": 71160
+        },
+        {
+          "word": "issues,",
+          "begin": 71160,
+          "end": 71480
+        },
+        {
+          "word": "you'll",
+          "begin": 71520,
+          "end": 71780
+        },
+        {
+          "word": "see",
+          "begin": 71880,
+          "end": 71980
+        },
+        {
+          "word": "these",
+          "begin": 72140,
+          "end": 72640
+        },
+        {
+          "word": "exact",
+          "begin": 72680,
+          "end": 73120
+        },
+        {
+          "word": "packet",
+          "begin": 73160,
+          "end": 73340
+        },
+        {
+          "word": "types.",
+          "begin": 73400,
+          "end": 74160
+        },
+        {
+          "word": "Understanding",
+          "begin": 74640,
+          "end": 75180
+        },
+        {
+          "word": "this",
+          "begin": 75200,
+          "end": 75320
+        },
+        {
+          "word": "flow",
+          "begin": 75400,
+          "end": 75660
+        },
+        {
+          "word": "helps",
+          "begin": 75660,
+          "end": 75860
+        },
+        {
+          "word": "you",
+          "begin": 75880,
+          "end": 75940
+        },
+        {
+          "word": "pinpoint",
+          "begin": 76020,
+          "end": 76440
+        },
+        {
+          "word": "where",
+          "begin": 76480,
+          "end": 76540
+        },
+        {
+          "word": "time",
+          "begin": 76660,
+          "end": 76880
+        },
+        {
+          "word": "is",
+          "begin": 76900,
+          "end": 76980
+        },
+        {
+          "word": "being",
+          "begin": 76980,
+          "end": 77200
+        },
+        {
+          "word": "spent",
+          "begin": 77260,
+          "end": 77600
+        },
+        {
+          "word": "is",
+          "begin": 77920,
+          "end": 78020
+        },
+        {
+          "word": "it",
+          "begin": 78040,
+          "end": 78140
+        },
+        {
+          "word": "the",
+          "begin": 78140,
+          "end": 78180
+        },
+        {
+          "word": "doorbell",
+          "begin": 78260,
+          "end": 78600
+        },
+        {
+          "word": "write?",
+          "begin": 78680,
+          "end": 78940
+        },
+        {
+          "word": "The",
+          "begin": 79160,
+          "end": 79200
+        },
+        {
+          "word": "DMA",
+          "begin": 79280,
+          "end": 79780
+        },
+        {
+          "word": "data",
+          "begin": 79840,
+          "end": 79900
+        },
+        {
+          "word": "transfer?",
+          "begin": 79980,
+          "end": 80380
+        },
+        {
+          "word": "The",
+          "begin": 80740,
+          "end": 80800
+        },
+        {
+          "word": "NAND",
+          "begin": 80860,
+          "end": 81080
+        },
+        {
+          "word": "read",
+          "begin": 81140,
+          "end": 81300
+        },
+        {
+          "word": "time?",
+          "begin": 81360,
+          "end": 81660
+        },
+        {
+          "word": "The",
+          "begin": 81960,
+          "end": 82000
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "The 7-step trace below shows the complete lifecycle of a single 4KB NVMe Read command across the PCIe bus:",
+      "beginMs": 83600,
+      "endMs": 90920,
+      "timestamps": [
+        {
+          "word": "the",
+          "begin": 83600,
+          "end": 83660
+        },
+        {
+          "word": "complete",
+          "begin": 83720,
+          "end": 84080
+        },
+        {
+          "word": "lifecycle",
+          "begin": 84120,
+          "end": 84640
+        },
+        {
+          "word": "of",
+          "begin": 84800,
+          "end": 84880
+        },
+        {
+          "word": "a",
+          "begin": 84900,
+          "end": 84920
+        },
+        {
+          "word": "single",
+          "begin": 85040,
+          "end": 85260
+        },
+        {
+          "word": "bus:",
+          "begin": 85420,
+          "end": 86340
+        },
+        {
+          "word": "The",
+          "begin": 86400,
+          "end": 86460
+        },
+        {
+          "word": "to",
+          "begin": 86580,
+          "end": 87660
+        },
+        {
+          "word": "a",
+          "begin": 87700,
+          "end": 87880
+        },
+        {
+          "word": "(BAR0).",
+          "begin": 87700,
+          "end": 87880
+        },
+        {
+          "word": "Used",
+          "begin": 88540,
+          "end": 88760
+        },
+        {
+          "word": "for",
+          "begin": 88800,
+          "end": 88840
+        },
+        {
+          "word": "doorbell",
+          "begin": 88920,
+          "end": 89260
+        },
+        {
+          "word": "writes",
+          "begin": 89320,
+          "end": 89620
+        },
+        {
+          "word": "the",
+          "begin": 89940,
+          "end": 90000
+        },
+        {
+          "word": "CPU",
+          "begin": 90080,
+          "end": 90480
+        },
+        {
+          "word": "tells",
+          "begin": 90580,
+          "end": 90840
+        },
+        {
+          "word": "the",
+          "begin": 90880,
+          "end": 90920
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "The CPU writes to a memory address that's actually mapped to the SSD's hardware register (BAR0). Used for doorbell writes — the CPU tells the SSD &ldquo;new command is waiting.&rdquo; Extremely fast (a single PCIe write TLP).",
+      "beginMs": 91020,
+      "endMs": 97240,
+      "timestamps": [
+        {
+          "word": "SSD",
+          "begin": 91020,
+          "end": 91400
+        },
+        {
+          "word": "&ldquo;new",
+          "begin": 91580,
+          "end": 92760
+        },
+        {
+          "word": "command",
+          "begin": 92860,
+          "end": 93240
+        },
+        {
+          "word": "is",
+          "begin": 93260,
+          "end": 93360
+        },
+        {
+          "word": "waiting.&rdquo;",
+          "begin": 93400,
+          "end": 94220
+        },
+        {
+          "word": "Extremely",
+          "begin": 94340,
+          "end": 94800
+        },
+        {
+          "word": "fast",
+          "begin": 94900,
+          "end": 95260
+        },
+        {
+          "word": "(a",
+          "begin": 95320,
+          "end": 95340
+        },
+        {
+          "word": "single",
+          "begin": 95460,
+          "end": 95660
+        },
+        {
+          "word": "PCIe",
+          "begin": 95760,
+          "end": 96340
+        },
+        {
+          "word": "write",
+          "begin": 96500,
+          "end": 96720
+        },
+        {
+          "word": "TLP).",
+          "begin": 96780,
+          "end": 97240
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "paragraph",
+      "text": "The SSD reads or writes the host's RAM directly, without the CPU being involved. The SSD becomes a &ldquo;bus master&rdquo; on PCIe and initiates its own memory transactions. This is how commands are fetched and data is delivered — the CPU is free to do other work.",
+      "beginMs": 98040,
+      "endMs": 117920,
+      "timestamps": [
+        {
+          "word": "The",
+          "begin": 98040,
+          "end": 98080
+        },
+        {
+          "word": "SSD",
+          "begin": 98200,
+          "end": 98580
+        },
+        {
+          "word": "reads",
+          "begin": 98700,
+          "end": 98980
+        },
+        {
+          "word": "or",
+          "begin": 98980,
+          "end": 99100
+        },
+        {
+          "word": "writes",
+          "begin": 99200,
+          "end": 99440
+        },
+        {
+          "word": "the",
+          "begin": 99500,
+          "end": 99540
+        },
+        {
+          "word": "host's",
+          "begin": 99600,
+          "end": 99880
+        },
+        {
+          "word": "RAM",
+          "begin": 99940,
+          "end": 100160
+        },
+        {
+          "word": "directly,",
+          "begin": 100220,
+          "end": 100620
+        },
+        {
+          "word": "without",
+          "begin": 101160,
+          "end": 101420
+        },
+        {
+          "word": "the",
+          "begin": 101460,
+          "end": 101500
+        },
+        {
+          "word": "CPU",
+          "begin": 101600,
+          "end": 101960
+        },
+        {
+          "word": "being",
+          "begin": 102060,
+          "end": 102240
+        },
+        {
+          "word": "involved.",
+          "begin": 102260,
+          "end": 102780
+        },
+        {
+          "word": "The",
+          "begin": 103200,
+          "end": 103780
+        },
+        {
+          "word": "becomes",
+          "begin": 103780,
+          "end": 104280
+        },
+        {
+          "word": "a",
+          "begin": 104300,
+          "end": 104320
+        },
+        {
+          "word": "&ldquo;bus",
+          "begin": 104420,
+          "end": 106680
+        },
+        {
+          "word": "master&rdquo;",
+          "begin": 106740,
+          "end": 107700
+        },
+        {
+          "word": "on",
+          "begin": 108200,
+          "end": 108280
+        },
+        {
+          "word": "PCIe",
+          "begin": 108340,
+          "end": 108960
+        },
+        {
+          "word": "and",
+          "begin": 109440,
+          "end": 109520
+        },
+        {
+          "word": "initiates",
+          "begin": 109540,
+          "end": 110060
+        },
+        {
+          "word": "its",
+          "begin": 110080,
+          "end": 110200
+        },
+        {
+          "word": "own",
+          "begin": 110240,
+          "end": 110360
+        },
+        {
+          "word": "memory",
+          "begin": 110400,
+          "end": 110600
+        },
+        {
+          "word": "transactions.",
+          "begin": 110600,
+          "end": 110880
+        },
+        {
+          "word": "This",
+          "begin": 110920,
+          "end": 111180
+        },
+        {
+          "word": "is",
+          "begin": 111220,
+          "end": 111460
+        },
+        {
+          "word": "how",
+          "begin": 112160,
+          "end": 112420
+        },
+        {
+          "word": "commands",
+          "begin": 112440,
+          "end": 112980
+        },
+        {
+          "word": "are",
+          "begin": 113000,
+          "end": 113020
+        },
+        {
+          "word": "fetched",
+          "begin": 113140,
+          "end": 113520
+        },
+        {
+          "word": "and",
+          "begin": 113640,
+          "end": 113840
+        },
+        {
+          "word": "data",
+          "begin": 113900,
+          "end": 113960
+        },
+        {
+          "word": "is",
+          "begin": 114020,
+          "end": 114120
+        },
+        {
+          "word": "delivered",
+          "begin": 114160,
+          "end": 115120
+        },
+        {
+          "word": "the",
+          "begin": 115220,
+          "end": 115300
+        },
+        {
+          "word": "CPU",
+          "begin": 115220,
+          "end": 115580
+        },
+        {
+          "word": "is",
+          "begin": 115680,
+          "end": 115760
+        },
+        {
+          "word": "free",
+          "begin": 115840,
+          "end": 115920
+        },
+        {
+          "word": "to",
+          "begin": 116000,
+          "end": 116040
+        },
+        {
+          "word": "do",
+          "begin": 116100,
+          "end": 116160
+        },
+        {
+          "word": "other",
+          "begin": 116240,
+          "end": 116360
+        },
+        {
+          "word": "work.",
+          "begin": 116460,
+          "end": 116740
+        },
+        {
+          "word": "How",
+          "begin": 117220,
+          "end": 117800
+        },
+        {
+          "word": "the",
+          "begin": 117840,
+          "end": 117920
+        }
+      ]
+    },
+    {
+      "blockIndex": 9,
+      "type": "paragraph",
+      "text": "How the SSD notifies the CPU that work is done. Instead of a physical interrupt wire, MSI-X is a PCIe memory write to a special address that the CPU's interrupt controller recognizes. Each CPU core can have its own interrupt vector — no sharing, no routing confusion.",
+      "beginMs": 118620,
+      "endMs": 134980,
+      "timestamps": [
+        {
+          "word": "the",
+          "begin": 118620,
+          "end": 118680
+        },
+        {
+          "word": "CPU",
+          "begin": 118620,
+          "end": 119000
+        },
+        {
+          "word": "that",
+          "begin": 119120,
+          "end": 119180
+        },
+        {
+          "word": "work",
+          "begin": 119280,
+          "end": 119440
+        },
+        {
+          "word": "is",
+          "begin": 119460,
+          "end": 119540
+        },
+        {
+          "word": "done.",
+          "begin": 119600,
+          "end": 119840
+        },
+        {
+          "word": "Instead",
+          "begin": 120320,
+          "end": 120620
+        },
+        {
+          "word": "of",
+          "begin": 120620,
+          "end": 120700
+        },
+        {
+          "word": "a",
+          "begin": 120720,
+          "end": 120740
+        },
+        {
+          "word": "physical",
+          "begin": 120840,
+          "end": 121180
+        },
+        {
+          "word": "interrupt",
+          "begin": 121260,
+          "end": 121560
+        },
+        {
+          "word": "wire,",
+          "begin": 121620,
+          "end": 122340
+        },
+        {
+          "word": "MSI-X",
+          "begin": 122380,
+          "end": 122960
+        },
+        {
+          "word": "is",
+          "begin": 123000,
+          "end": 123080
+        },
+        {
+          "word": "a",
+          "begin": 123100,
+          "end": 123120
+        },
+        {
+          "word": "PCIe",
+          "begin": 123180,
+          "end": 123740
+        },
+        {
+          "word": "memory",
+          "begin": 123840,
+          "end": 124080
+        },
+        {
+          "word": "write",
+          "begin": 124180,
+          "end": 124440
+        },
+        {
+          "word": "to",
+          "begin": 124740,
+          "end": 124800
+        },
+        {
+          "word": "a",
+          "begin": 124840,
+          "end": 124860
+        },
+        {
+          "word": "special",
+          "begin": 124940,
+          "end": 125260
+        },
+        {
+          "word": "address",
+          "begin": 125280,
+          "end": 125680
+        },
+        {
+          "word": "that",
+          "begin": 125740,
+          "end": 125880
+        },
+        {
+          "word": "the",
+          "begin": 125880,
+          "end": 125920
+        },
+        {
+          "word": "CPU's",
+          "begin": 126000,
+          "end": 126480
+        },
+        {
+          "word": "interrupt",
+          "begin": 126560,
+          "end": 126840
+        },
+        {
+          "word": "controller",
+          "begin": 126880,
+          "end": 127280
+        },
+        {
+          "word": "recognizes.",
+          "begin": 127380,
+          "end": 128080
+        },
+        {
+          "word": "Each",
+          "begin": 128680,
+          "end": 128840
+        },
+        {
+          "word": "CPU",
+          "begin": 128940,
+          "end": 129300
+        },
+        {
+          "word": "core",
+          "begin": 129400,
+          "end": 129520
+        },
+        {
+          "word": "can",
+          "begin": 129720,
+          "end": 129820
+        },
+        {
+          "word": "have",
+          "begin": 129820,
+          "end": 129900
+        },
+        {
+          "word": "its",
+          "begin": 129919,
+          "end": 130020
+        },
+        {
+          "word": "own",
+          "begin": 130020,
+          "end": 130380
+        },
+        {
+          "word": "interrupt",
+          "begin": 130460,
+          "end": 130780
+        },
+        {
+          "word": "vector",
+          "begin": 130840,
+          "end": 131120
+        },
+        {
+          "word": "no",
+          "begin": 131640,
+          "end": 131700
+        },
+        {
+          "word": "sharing,",
+          "begin": 131840,
+          "end": 132220
+        },
+        {
+          "word": "no",
+          "begin": 132560,
+          "end": 132800
+        },
+        {
+          "word": "routing",
+          "begin": 132880,
+          "end": 133000
+        },
+        {
+          "word": "confusion.",
+          "begin": 133040,
+          "end": 133580
+        },
+        {
+          "word": "Knowledge",
+          "begin": 133920,
+          "end": 134220
+        },
+        {
+          "word": "check:",
+          "begin": 134300,
+          "end": 134540
+        },
+        {
+          "word": "In",
+          "begin": 134840,
+          "end": 134920
+        },
+        {
+          "word": "the",
+          "begin": 134920,
+          "end": 134980
+        }
+      ]
+    },
+    {
+      "blockIndex": 10,
+      "type": "reveal",
+      "text": "Knowledge check: In the bus trace, you see both 'DMA Read' (the SSD fetching from host RAM) and 'DMA Write' (the SSD writing to host RAM). Under the hood, these map to different PCIe TLP types. Why does PCIe need separate transaction types for device-initiated reads vs. writes, and what would break if it only had one? The answer: PCIe uses different TLP types because reads and writes have fundamentally different flow control needs. A DMA Write from the SSD is a Memory Write (MWr) TLP — it's a 'posted' transaction, meaning the SSD fires it and doesn't wait for acknowledgment. This is fast but one-directional. A DMA Read is a Memory Read (MRd) request TLP — the SSD asks the host 'give me data at this address,' and the host responds with a Completion with Data (CplD) TLP containing the requested bytes. This is a split transaction: request goes one way, data comes back later. If PCIe only had writes, the SSD couldn't fetch commands from the host's Submission Queue (it needs to read host RAM). If it only had reads, the SSD couldn't deliver data or post completion entries (it needs to write to host RAM). The split design also allows the bus to stay busy — while the SSD waits for a read completion, other writes and requests can flow through the PCIe lanes.",
+      "beginMs": 135020,
+      "endMs": 209900,
+      "timestamps": [
+        {
+          "word": "bus",
+          "begin": 135020,
+          "end": 135200
+        },
+        {
+          "word": "trace,",
+          "begin": 135260,
+          "end": 135580
+        },
+        {
+          "word": "you",
+          "begin": 135900,
+          "end": 135960
+        },
+        {
+          "word": "see",
+          "begin": 136060,
+          "end": 136140
+        },
+        {
+          "word": "both",
+          "begin": 136240,
+          "end": 136460
+        },
+        {
+          "word": "'DMA",
+          "begin": 136520,
+          "end": 136820
+        },
+        {
+          "word": "Read'",
+          "begin": 136980,
+          "end": 137220
+        },
+        {
+          "word": "(the",
+          "begin": 137240,
+          "end": 137300
+        },
+        {
+          "word": "SSD",
+          "begin": 137400,
+          "end": 137800
+        },
+        {
+          "word": "fetching",
+          "begin": 137940,
+          "end": 138240
+        },
+        {
+          "word": "from",
+          "begin": 138280,
+          "end": 138400
+        },
+        {
+          "word": "host",
+          "begin": 138440,
+          "end": 138720
+        },
+        {
+          "word": "RAM)",
+          "begin": 138760,
+          "end": 139040
+        },
+        {
+          "word": "and",
+          "begin": 139400,
+          "end": 139480
+        },
+        {
+          "word": "'DMA",
+          "begin": 139520,
+          "end": 139820
+        },
+        {
+          "word": "Write'",
+          "begin": 139960,
+          "end": 140180
+        },
+        {
+          "word": "(the",
+          "begin": 140180,
+          "end": 140240
+        },
+        {
+          "word": "SSD",
+          "begin": 140300,
+          "end": 140680
+        },
+        {
+          "word": "writing",
+          "begin": 140820,
+          "end": 141100
+        },
+        {
+          "word": "to",
+          "begin": 141140,
+          "end": 141200
+        },
+        {
+          "word": "host",
+          "begin": 141240,
+          "end": 141520
+        },
+        {
+          "word": "RAM).",
+          "begin": 141580,
+          "end": 141840
+        },
+        {
+          "word": "Under",
+          "begin": 142320,
+          "end": 142440
+        },
+        {
+          "word": "the",
+          "begin": 142500,
+          "end": 142540
+        },
+        {
+          "word": "hood,",
+          "begin": 142640,
+          "end": 142880
+        },
+        {
+          "word": "these",
+          "begin": 143220,
+          "end": 143380
+        },
+        {
+          "word": "map",
+          "begin": 143440,
+          "end": 143640
+        },
+        {
+          "word": "to",
+          "begin": 143680,
+          "end": 143720
+        },
+        {
+          "word": "different",
+          "begin": 143800,
+          "end": 144060
+        },
+        {
+          "word": "PCIe",
+          "begin": 144100,
+          "end": 144620
+        },
+        {
+          "word": "TLP",
+          "begin": 144740,
+          "end": 145120
+        },
+        {
+          "word": "types.",
+          "begin": 145220,
+          "end": 145600
+        },
+        {
+          "word": "Why",
+          "begin": 145900,
+          "end": 145980
+        },
+        {
+          "word": "does",
+          "begin": 146080,
+          "end": 146200
+        },
+        {
+          "word": "PCIe",
+          "begin": 146260,
+          "end": 146780
+        },
+        {
+          "word": "need",
+          "begin": 147000,
+          "end": 147160
+        },
+        {
+          "word": "separate",
+          "begin": 147240,
+          "end": 147500
+        },
+        {
+          "word": "transaction",
+          "begin": 147500,
+          "end": 148080
+        },
+        {
+          "word": "types",
+          "begin": 148080,
+          "end": 148380
+        },
+        {
+          "word": "for",
+          "begin": 148380,
+          "end": 148960
+        },
+        {
+          "word": "device-initiated",
+          "begin": 149000,
+          "end": 149520
+        },
+        {
+          "word": "reads",
+          "begin": 149580,
+          "end": 149820
+        },
+        {
+          "word": "vs.",
+          "begin": 149820,
+          "end": 150220
+        },
+        {
+          "word": "writes,",
+          "begin": 150220,
+          "end": 150620
+        },
+        {
+          "word": "and",
+          "begin": 151020,
+          "end": 151100
+        },
+        {
+          "word": "what",
+          "begin": 151140,
+          "end": 151260
+        },
+        {
+          "word": "would",
+          "begin": 151280,
+          "end": 151380
+        },
+        {
+          "word": "break",
+          "begin": 151380,
+          "end": 151660
+        },
+        {
+          "word": "if",
+          "begin": 151680,
+          "end": 151780
+        },
+        {
+          "word": "it",
+          "begin": 151800,
+          "end": 151860
+        },
+        {
+          "word": "only",
+          "begin": 151900,
+          "end": 152040
+        },
+        {
+          "word": "had",
+          "begin": 152100,
+          "end": 152260
+        },
+        {
+          "word": "one?",
+          "begin": 152320,
+          "end": 152560
+        },
+        {
+          "word": "The",
+          "begin": 153080,
+          "end": 153120
+        },
+        {
+          "word": "answer:",
+          "begin": 153220,
+          "end": 153460
+        },
+        {
+          "word": "PCIe",
+          "begin": 153960,
+          "end": 154620
+        },
+        {
+          "word": "uses",
+          "begin": 154620,
+          "end": 154900
+        },
+        {
+          "word": "different",
+          "begin": 154960,
+          "end": 155240
+        },
+        {
+          "word": "TLP",
+          "begin": 155240,
+          "end": 155680
+        },
+        {
+          "word": "types",
+          "begin": 155780,
+          "end": 156140
+        },
+        {
+          "word": "because",
+          "begin": 156460,
+          "end": 156740
+        },
+        {
+          "word": "reads",
+          "begin": 156820,
+          "end": 157060
+        },
+        {
+          "word": "and",
+          "begin": 157080,
+          "end": 157180
+        },
+        {
+          "word": "writes",
+          "begin": 157220,
+          "end": 157480
+        },
+        {
+          "word": "have",
+          "begin": 157520,
+          "end": 157640
+        },
+        {
+          "word": "fundamentally",
+          "begin": 157720,
+          "end": 158280
+        },
+        {
+          "word": "different",
+          "begin": 158360,
+          "end": 158640
+        },
+        {
+          "word": "flow",
+          "begin": 158640,
+          "end": 158840
+        },
+        {
+          "word": "control",
+          "begin": 158960,
+          "end": 159280
+        },
+        {
+          "word": "needs.",
+          "begin": 159340,
+          "end": 159700
+        },
+        {
+          "word": "A",
+          "begin": 159960,
+          "end": 159980
+        },
+        {
+          "word": "DMA",
+          "begin": 160040,
+          "end": 160360
+        },
+        {
+          "word": "Write",
+          "begin": 160500,
+          "end": 160820
+        },
+        {
+          "word": "from",
+          "begin": 160820,
+          "end": 160940
+        },
+        {
+          "word": "the",
+          "begin": 160940,
+          "end": 161000
+        },
+        {
+          "word": "SSD",
+          "begin": 161080,
+          "end": 161480
+        },
+        {
+          "word": "is",
+          "begin": 161660,
+          "end": 161760
+        },
+        {
+          "word": "a",
+          "begin": 161780,
+          "end": 161800
+        },
+        {
+          "word": "Memory",
+          "begin": 161900,
+          "end": 162180
+        },
+        {
+          "word": "Write",
+          "begin": 162180,
+          "end": 162480
+        },
+        {
+          "word": "(MWr)",
+          "begin": 162580,
+          "end": 163320
+        },
+        {
+          "word": "TLP",
+          "begin": 163400,
+          "end": 164180
+        },
+        {
+          "word": "it's",
+          "begin": 164180,
+          "end": 164460
+        },
+        {
+          "word": "a",
+          "begin": 164500,
+          "end": 164600
+        },
+        {
+          "word": "'posted'",
+          "begin": 164660,
+          "end": 164840
+        },
+        {
+          "word": "transaction,",
+          "begin": 164840,
+          "end": 165340
+        },
+        {
+          "word": "meaning",
+          "begin": 165720,
+          "end": 165940
+        },
+        {
+          "word": "the",
+          "begin": 165960,
+          "end": 166020
+        },
+        {
+          "word": "SSD",
+          "begin": 166120,
+          "end": 166520
+        },
+        {
+          "word": "fires",
+          "begin": 166680,
+          "end": 167020
+        },
+        {
+          "word": "it",
+          "begin": 167040,
+          "end": 167140
+        },
+        {
+          "word": "and",
+          "begin": 167200,
+          "end": 167280
+        },
+        {
+          "word": "doesn't",
+          "begin": 167320,
+          "end": 167580
+        },
+        {
+          "word": "wait",
+          "begin": 167640,
+          "end": 167820
+        },
+        {
+          "word": "for",
+          "begin": 167880,
+          "end": 167980
+        },
+        {
+          "word": "acknowledgment.",
+          "begin": 167980,
+          "end": 168660
+        },
+        {
+          "word": "This",
+          "begin": 169160,
+          "end": 169280
+        },
+        {
+          "word": "is",
+          "begin": 169320,
+          "end": 169420
+        },
+        {
+          "word": "fast",
+          "begin": 169500,
+          "end": 169840
+        },
+        {
+          "word": "but",
+          "begin": 169900,
+          "end": 170020
+        },
+        {
+          "word": "one-directional.",
+          "begin": 170080,
+          "end": 170740
+        },
+        {
+          "word": "A",
+          "begin": 171040,
+          "end": 171140
+        },
+        {
+          "word": "DMA",
+          "begin": 171140,
+          "end": 171420
+        },
+        {
+          "word": "Read",
+          "begin": 171540,
+          "end": 171740
+        },
+        {
+          "word": "is",
+          "begin": 171800,
+          "end": 171880
+        },
+        {
+          "word": "a",
+          "begin": 171920,
+          "end": 171940
+        },
+        {
+          "word": "Memory",
+          "begin": 172000,
+          "end": 172240
+        },
+        {
+          "word": "Read",
+          "begin": 172320,
+          "end": 172500
+        },
+        {
+          "word": "(MRd)",
+          "begin": 172600,
+          "end": 173000
+        },
+        {
+          "word": "request",
+          "begin": 173120,
+          "end": 173540
+        },
+        {
+          "word": "TLP",
+          "begin": 173580,
+          "end": 175320
+        },
+        {
+          "word": "the",
+          "begin": 175380,
+          "end": 175460
+        },
+        {
+          "word": "asks",
+          "begin": 175660,
+          "end": 175920
+        },
+        {
+          "word": "the",
+          "begin": 175960,
+          "end": 176020
+        },
+        {
+          "word": "host",
+          "begin": 176080,
+          "end": 176320
+        },
+        {
+          "word": "'give",
+          "begin": 176360,
+          "end": 176480
+        },
+        {
+          "word": "me",
+          "begin": 176480,
+          "end": 176600
+        },
+        {
+          "word": "data",
+          "begin": 176680,
+          "end": 176920
+        },
+        {
+          "word": "at",
+          "begin": 177020,
+          "end": 177140
+        },
+        {
+          "word": "this",
+          "begin": 177140,
+          "end": 177280
+        },
+        {
+          "word": "address,'",
+          "begin": 177320,
+          "end": 177760
+        },
+        {
+          "word": "and",
+          "begin": 178140,
+          "end": 178240
+        },
+        {
+          "word": "the",
+          "begin": 178240,
+          "end": 178280
+        },
+        {
+          "word": "host",
+          "begin": 178340,
+          "end": 178580
+        },
+        {
+          "word": "responds",
+          "begin": 178580,
+          "end": 179020
+        },
+        {
+          "word": "with",
+          "begin": 179020,
+          "end": 179080
+        },
+        {
+          "word": "a",
+          "begin": 179080,
+          "end": 179200
+        },
+        {
+          "word": "Completion",
+          "begin": 179280,
+          "end": 179740
+        },
+        {
+          "word": "with",
+          "begin": 179760,
+          "end": 179880
+        },
+        {
+          "word": "Data",
+          "begin": 179940,
+          "end": 180180
+        },
+        {
+          "word": "TLP",
+          "begin": 180600,
+          "end": 181920
+        },
+        {
+          "word": "containing",
+          "begin": 182080,
+          "end": 182500
+        },
+        {
+          "word": "the",
+          "begin": 182540,
+          "end": 182580
+        },
+        {
+          "word": "requested",
+          "begin": 182620,
+          "end": 183120
+        },
+        {
+          "word": "bytes.",
+          "begin": 183180,
+          "end": 183560
+        },
+        {
+          "word": "This",
+          "begin": 184000,
+          "end": 184140
+        },
+        {
+          "word": "is",
+          "begin": 184160,
+          "end": 184260
+        },
+        {
+          "word": "a",
+          "begin": 184280,
+          "end": 184300
+        },
+        {
+          "word": "split",
+          "begin": 184400,
+          "end": 184660
+        },
+        {
+          "word": "transaction:",
+          "begin": 184660,
+          "end": 185400
+        },
+        {
+          "word": "request",
+          "begin": 185640,
+          "end": 186040
+        },
+        {
+          "word": "goes",
+          "begin": 186100,
+          "end": 186280
+        },
+        {
+          "word": "one",
+          "begin": 186340,
+          "end": 186500
+        },
+        {
+          "word": "way,",
+          "begin": 186560,
+          "end": 186640
+        },
+        {
+          "word": "data",
+          "begin": 187120,
+          "end": 187320
+        },
+        {
+          "word": "comes",
+          "begin": 187400,
+          "end": 187620
+        },
+        {
+          "word": "back",
+          "begin": 187680,
+          "end": 187900
+        },
+        {
+          "word": "later.",
+          "begin": 187940,
+          "end": 188760
+        },
+        {
+          "word": "If",
+          "begin": 188780,
+          "end": 188820
+        },
+        {
+          "word": "PCIe",
+          "begin": 188880,
+          "end": 189680
+        },
+        {
+          "word": "only",
+          "begin": 189740,
+          "end": 189840
+        },
+        {
+          "word": "had",
+          "begin": 189920,
+          "end": 190080
+        },
+        {
+          "word": "writes,",
+          "begin": 190140,
+          "end": 190500
+        },
+        {
+          "word": "the",
+          "begin": 190780,
+          "end": 190940
+        },
+        {
+          "word": "SSD",
+          "begin": 190940,
+          "end": 191400
+        },
+        {
+          "word": "couldn't",
+          "begin": 191560,
+          "end": 191780
+        },
+        {
+          "word": "fetch",
+          "begin": 191780,
+          "end": 192080
+        },
+        {
+          "word": "commands",
+          "begin": 192160,
+          "end": 192580
+        },
+        {
+          "word": "from",
+          "begin": 192620,
+          "end": 192740
+        },
+        {
+          "word": "the",
+          "begin": 192740,
+          "end": 192800
+        },
+        {
+          "word": "host's",
+          "begin": 192840,
+          "end": 193120
+        },
+        {
+          "word": "Submission",
+          "begin": 193160,
+          "end": 193560
+        },
+        {
+          "word": "Queue",
+          "begin": 193620,
+          "end": 193700
+        },
+        {
+          "word": "(it",
+          "begin": 193700,
+          "end": 193820
+        },
+        {
+          "word": "needs",
+          "begin": 193940,
+          "end": 194160
+        },
+        {
+          "word": "to",
+          "begin": 194220,
+          "end": 194280
+        },
+        {
+          "word": "read",
+          "begin": 194360,
+          "end": 194560
+        },
+        {
+          "word": "host",
+          "begin": 194620,
+          "end": 194900
+        },
+        {
+          "word": "RAM).",
+          "begin": 194960,
+          "end": 195240
+        },
+        {
+          "word": "If",
+          "begin": 195600,
+          "end": 195700
+        },
+        {
+          "word": "it",
+          "begin": 195700,
+          "end": 195780
+        },
+        {
+          "word": "only",
+          "begin": 195800,
+          "end": 195980
+        },
+        {
+          "word": "had",
+          "begin": 196060,
+          "end": 196220
+        },
+        {
+          "word": "reads,",
+          "begin": 196280,
+          "end": 196620
+        },
+        {
+          "word": "the",
+          "begin": 196880,
+          "end": 196940
+        },
+        {
+          "word": "SSD",
+          "begin": 197040,
+          "end": 197500
+        },
+        {
+          "word": "couldn't",
+          "begin": 197640,
+          "end": 197900
+        },
+        {
+          "word": "deliver",
+          "begin": 197940,
+          "end": 198220
+        },
+        {
+          "word": "data",
+          "begin": 198320,
+          "end": 198560
+        },
+        {
+          "word": "or",
+          "begin": 198740,
+          "end": 198760
+        },
+        {
+          "word": "post",
+          "begin": 198920,
+          "end": 199220
+        },
+        {
+          "word": "completion",
+          "begin": 199220,
+          "end": 199700
+        },
+        {
+          "word": "entries",
+          "begin": 199780,
+          "end": 200160
+        },
+        {
+          "word": "(it",
+          "begin": 200200,
+          "end": 200280
+        },
+        {
+          "word": "needs",
+          "begin": 200300,
+          "end": 200520
+        },
+        {
+          "word": "to",
+          "begin": 200580,
+          "end": 200640
+        },
+        {
+          "word": "write",
+          "begin": 200700,
+          "end": 200880
+        },
+        {
+          "word": "to",
+          "begin": 200920,
+          "end": 200960
+        },
+        {
+          "word": "host",
+          "begin": 201020,
+          "end": 201300
+        },
+        {
+          "word": "RAM).",
+          "begin": 201340,
+          "end": 201620
+        },
+        {
+          "word": "The",
+          "begin": 201840,
+          "end": 201880
+        },
+        {
+          "word": "split",
+          "begin": 201960,
+          "end": 202200
+        },
+        {
+          "word": "design",
+          "begin": 202240,
+          "end": 202600
+        },
+        {
+          "word": "also",
+          "begin": 202700,
+          "end": 202920
+        },
+        {
+          "word": "allows",
+          "begin": 203000,
+          "end": 203300
+        },
+        {
+          "word": "the",
+          "begin": 203300,
+          "end": 203360
+        },
+        {
+          "word": "bus",
+          "begin": 203360,
+          "end": 203400
+        },
+        {
+          "word": "to",
+          "begin": 203460,
+          "end": 203540
+        },
+        {
+          "word": "stay",
+          "begin": 203640,
+          "end": 203860
+        },
+        {
+          "word": "busy",
+          "begin": 203900,
+          "end": 204340
+        },
+        {
+          "word": "while",
+          "begin": 204660,
+          "end": 205320
+        },
+        {
+          "word": "the",
+          "begin": 205380,
+          "end": 205460
+        },
+        {
+          "word": "waits",
+          "begin": 205600,
+          "end": 205820
+        },
+        {
+          "word": "for",
+          "begin": 205880,
+          "end": 206140
+        },
+        {
+          "word": "a",
+          "begin": 206160,
+          "end": 206300
+        },
+        {
+          "word": "read",
+          "begin": 206340,
+          "end": 206520
+        },
+        {
+          "word": "completion,",
+          "begin": 206340,
+          "end": 206960
+        },
+        {
+          "word": "other",
+          "begin": 207200,
+          "end": 207340
+        },
+        {
+          "word": "writes",
+          "begin": 207440,
+          "end": 207680
+        },
+        {
+          "word": "and",
+          "begin": 207720,
+          "end": 207780
+        },
+        {
+          "word": "requests",
+          "begin": 207800,
+          "end": 208180
+        },
+        {
+          "word": "can",
+          "begin": 208180,
+          "end": 208220
+        },
+        {
+          "word": "flow",
+          "begin": 208240,
+          "end": 208360
+        },
+        {
+          "word": "through",
+          "begin": 208420,
+          "end": 208840
+        },
+        {
+          "word": "the",
+          "begin": 208920,
+          "end": 208940
+        },
+        {
+          "word": "PCIe",
+          "begin": 209000,
+          "end": 209020
+        },
+        {
+          "word": "lanes.",
+          "begin": 209160,
+          "end": 209900
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

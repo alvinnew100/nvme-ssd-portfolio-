@@ -1,0 +1,1596 @@
+{
+  "sectionId": "sec-nand-types",
+  "audioFile": "/audio/sections/sec-nand-types.mp3",
+  "totalDurationMs": 143840,
+  "fileSizeBytes": 2302080,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "SLC, MLC, TLC, QLC — Cell Types Compared",
+      "beginMs": 80,
+      "endMs": 4860,
+      "timestamps": [
+        {
+          "word": "QLC",
+          "begin": 80,
+          "end": 2940
+        },
+        {
+          "word": "Cell",
+          "begin": 3340,
+          "end": 3480
+        },
+        {
+          "word": "Types",
+          "begin": 3520,
+          "end": 3760
+        },
+        {
+          "word": "Compared",
+          "begin": 3800,
+          "end": 4260
+        },
+        {
+          "word": "The",
+          "begin": 4800,
+          "end": 4860
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "paragraph",
+      "text": "The number of bits each cell stores determines its speed, capacity, cost, and lifespan. Select a type below to explore the tradeoffs:",
+      "beginMs": 4920,
+      "endMs": 12140,
+      "timestamps": [
+        {
+          "word": "number",
+          "begin": 4920,
+          "end": 5160
+        },
+        {
+          "word": "of",
+          "begin": 5180,
+          "end": 5260
+        },
+        {
+          "word": "bits",
+          "begin": 5340,
+          "end": 5560
+        },
+        {
+          "word": "each",
+          "begin": 5680,
+          "end": 5820
+        },
+        {
+          "word": "cell",
+          "begin": 5900,
+          "end": 6060
+        },
+        {
+          "word": "stores",
+          "begin": 6160,
+          "end": 6580
+        },
+        {
+          "word": "determines",
+          "begin": 6580,
+          "end": 6980
+        },
+        {
+          "word": "its",
+          "begin": 7000,
+          "end": 7160
+        },
+        {
+          "word": "speed,",
+          "begin": 7240,
+          "end": 7600
+        },
+        {
+          "word": "capacity,",
+          "begin": 7780,
+          "end": 8260
+        },
+        {
+          "word": "cost,",
+          "begin": 8480,
+          "end": 8840
+        },
+        {
+          "word": "and",
+          "begin": 8900,
+          "end": 9000
+        },
+        {
+          "word": "lifespan.",
+          "begin": 9040,
+          "end": 9560
+        },
+        {
+          "word": "Select",
+          "begin": 10020,
+          "end": 10340
+        },
+        {
+          "word": "a",
+          "begin": 10360,
+          "end": 10380
+        },
+        {
+          "word": "type",
+          "begin": 10440,
+          "end": 10640
+        },
+        {
+          "word": "below",
+          "begin": 10680,
+          "end": 10880
+        },
+        {
+          "word": "to",
+          "begin": 11020,
+          "end": 11080
+        },
+        {
+          "word": "explore",
+          "begin": 11120,
+          "end": 11400
+        },
+        {
+          "word": "the",
+          "begin": 11500,
+          "end": 11540
+        },
+        {
+          "word": "tradeoffs:",
+          "begin": 11620,
+          "end": 12140
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "reveal",
+      "text": "Knowledge check: Why does SLC endure ~100x more P/E cycles than QLC? What is the precise physical mechanism that connects 'more bits per cell' to 'faster wear-out'? The answer: SLC distinguishes only 2 voltage levels with wide margins between them, so it can tolerate significant oxide degradation before misreads occur (~100,000 P/E cycles). QLC packs 16 voltage levels into the same voltage range, meaning the margins between adjacent levels are razor-thin. Even small amounts of oxide damage (trapped electrons shifting threshold voltages) cause the distributions to overlap, leading to bit errors. The progression is: SLC (~100K cycles, 2 levels), MLC (~10K cycles, 4 levels), TLC (~3K cycles, 8 levels), QLC (~1K cycles, 16 levels). Each doubling of levels roughly reduces endurance by 3-10x because the margin for error shrinks exponentially while oxide damage accumulates linearly with P/E cycles.",
+      "beginMs": 12380,
+      "endMs": 75680,
+      "timestamps": [
+        {
+          "word": "Knowledge",
+          "begin": 12380,
+          "end": 12700
+        },
+        {
+          "word": "check:",
+          "begin": 12780,
+          "end": 13060
+        },
+        {
+          "word": "Why",
+          "begin": 13340,
+          "end": 13680
+        },
+        {
+          "word": "does",
+          "begin": 13760,
+          "end": 13900
+        },
+        {
+          "word": "SLC",
+          "begin": 13940,
+          "end": 14200
+        },
+        {
+          "word": "endure",
+          "begin": 14360,
+          "end": 14860
+        },
+        {
+          "word": "~100x",
+          "begin": 14860,
+          "end": 15580
+        },
+        {
+          "word": "more",
+          "begin": 15640,
+          "end": 15720
+        },
+        {
+          "word": "P/E",
+          "begin": 15920,
+          "end": 16180
+        },
+        {
+          "word": "cycles",
+          "begin": 16320,
+          "end": 17220
+        },
+        {
+          "word": "than",
+          "begin": 17360,
+          "end": 17440
+        },
+        {
+          "word": "What",
+          "begin": 17860,
+          "end": 17980
+        },
+        {
+          "word": "is",
+          "begin": 17980,
+          "end": 18080
+        },
+        {
+          "word": "the",
+          "begin": 18120,
+          "end": 18160
+        },
+        {
+          "word": "precise",
+          "begin": 18240,
+          "end": 18640
+        },
+        {
+          "word": "physical",
+          "begin": 18720,
+          "end": 18980
+        },
+        {
+          "word": "mechanism",
+          "begin": 19060,
+          "end": 19580
+        },
+        {
+          "word": "that",
+          "begin": 19640,
+          "end": 19720
+        },
+        {
+          "word": "'more",
+          "begin": 19780,
+          "end": 20240
+        },
+        {
+          "word": "bits",
+          "begin": 20400,
+          "end": 20620
+        },
+        {
+          "word": "per",
+          "begin": 20700,
+          "end": 20780
+        },
+        {
+          "word": "cell'",
+          "begin": 20900,
+          "end": 21080
+        },
+        {
+          "word": "to",
+          "begin": 21160,
+          "end": 21260
+        },
+        {
+          "word": "'faster",
+          "begin": 21460,
+          "end": 21780
+        },
+        {
+          "word": "wear-out'?",
+          "begin": 21860,
+          "end": 22320
+        },
+        {
+          "word": "The",
+          "begin": 22680,
+          "end": 22740
+        },
+        {
+          "word": "answer:",
+          "begin": 22860,
+          "end": 23120
+        },
+        {
+          "word": "SLC",
+          "begin": 23600,
+          "end": 24120
+        },
+        {
+          "word": "distinguishes",
+          "begin": 24220,
+          "end": 24820
+        },
+        {
+          "word": "only",
+          "begin": 24900,
+          "end": 25040
+        },
+        {
+          "word": "2",
+          "begin": 25040,
+          "end": 25080
+        },
+        {
+          "word": "voltage",
+          "begin": 25200,
+          "end": 25760
+        },
+        {
+          "word": "levels",
+          "begin": 25840,
+          "end": 26160
+        },
+        {
+          "word": "with",
+          "begin": 26180,
+          "end": 26300
+        },
+        {
+          "word": "wide",
+          "begin": 26360,
+          "end": 26600
+        },
+        {
+          "word": "margins",
+          "begin": 26640,
+          "end": 27020
+        },
+        {
+          "word": "between",
+          "begin": 27060,
+          "end": 27400
+        },
+        {
+          "word": "them,",
+          "begin": 27440,
+          "end": 27620
+        },
+        {
+          "word": "so",
+          "begin": 27960,
+          "end": 28020
+        },
+        {
+          "word": "it",
+          "begin": 28080,
+          "end": 28120
+        },
+        {
+          "word": "can",
+          "begin": 28160,
+          "end": 28260
+        },
+        {
+          "word": "tolerate",
+          "begin": 28280,
+          "end": 28700
+        },
+        {
+          "word": "significant",
+          "begin": 28740,
+          "end": 29140
+        },
+        {
+          "word": "oxide",
+          "begin": 29140,
+          "end": 29660
+        },
+        {
+          "word": "degradation",
+          "begin": 29680,
+          "end": 30300
+        },
+        {
+          "word": "before",
+          "begin": 30380,
+          "end": 30760
+        },
+        {
+          "word": "misreads",
+          "begin": 30760,
+          "end": 31180
+        },
+        {
+          "word": "occur",
+          "begin": 31200,
+          "end": 31400
+        },
+        {
+          "word": "P/E",
+          "begin": 31920,
+          "end": 33200
+        },
+        {
+          "word": "cycles).",
+          "begin": 33340,
+          "end": 33820
+        },
+        {
+          "word": "QLC",
+          "begin": 34080,
+          "end": 34600
+        },
+        {
+          "word": "packs",
+          "begin": 34740,
+          "end": 35020
+        },
+        {
+          "word": "16",
+          "begin": 35100,
+          "end": 35480
+        },
+        {
+          "word": "voltage",
+          "begin": 35540,
+          "end": 35940
+        },
+        {
+          "word": "levels",
+          "begin": 35940,
+          "end": 36240
+        },
+        {
+          "word": "into",
+          "begin": 36280,
+          "end": 36400
+        },
+        {
+          "word": "the",
+          "begin": 36400,
+          "end": 36420
+        },
+        {
+          "word": "same",
+          "begin": 36440,
+          "end": 36780
+        },
+        {
+          "word": "voltage",
+          "begin": 36840,
+          "end": 37160
+        },
+        {
+          "word": "range,",
+          "begin": 37220,
+          "end": 37520
+        },
+        {
+          "word": "meaning",
+          "begin": 37760,
+          "end": 37980
+        },
+        {
+          "word": "the",
+          "begin": 38000,
+          "end": 38060
+        },
+        {
+          "word": "margins",
+          "begin": 38120,
+          "end": 38520
+        },
+        {
+          "word": "between",
+          "begin": 38560,
+          "end": 38860
+        },
+        {
+          "word": "adjacent",
+          "begin": 38880,
+          "end": 39300
+        },
+        {
+          "word": "levels",
+          "begin": 39340,
+          "end": 39660
+        },
+        {
+          "word": "are",
+          "begin": 39760,
+          "end": 39780
+        },
+        {
+          "word": "razor-thin.",
+          "begin": 39900,
+          "end": 40500
+        },
+        {
+          "word": "Even",
+          "begin": 40840,
+          "end": 41020
+        },
+        {
+          "word": "small",
+          "begin": 41100,
+          "end": 41340
+        },
+        {
+          "word": "amounts",
+          "begin": 41360,
+          "end": 41640
+        },
+        {
+          "word": "of",
+          "begin": 41680,
+          "end": 41740
+        },
+        {
+          "word": "oxide",
+          "begin": 41840,
+          "end": 42220
+        },
+        {
+          "word": "damage",
+          "begin": 42260,
+          "end": 42600
+        },
+        {
+          "word": "(trapped",
+          "begin": 42680,
+          "end": 42920
+        },
+        {
+          "word": "electrons",
+          "begin": 42920,
+          "end": 43500
+        },
+        {
+          "word": "shifting",
+          "begin": 43560,
+          "end": 43840
+        },
+        {
+          "word": "threshold",
+          "begin": 43920,
+          "end": 44300
+        },
+        {
+          "word": "voltages)",
+          "begin": 44360,
+          "end": 45020
+        },
+        {
+          "word": "cause",
+          "begin": 45020,
+          "end": 45220
+        },
+        {
+          "word": "the",
+          "begin": 45280,
+          "end": 45320
+        },
+        {
+          "word": "distributions",
+          "begin": 45360,
+          "end": 45980
+        },
+        {
+          "word": "to",
+          "begin": 46020,
+          "end": 46040
+        },
+        {
+          "word": "overlap,",
+          "begin": 46060,
+          "end": 46660
+        },
+        {
+          "word": "leading",
+          "begin": 46840,
+          "end": 47060
+        },
+        {
+          "word": "to",
+          "begin": 47120,
+          "end": 47160
+        },
+        {
+          "word": "bit",
+          "begin": 47240,
+          "end": 47380
+        },
+        {
+          "word": "errors.",
+          "begin": 47480,
+          "end": 47880
+        },
+        {
+          "word": "The",
+          "begin": 48200,
+          "end": 48260
+        },
+        {
+          "word": "progression",
+          "begin": 48320,
+          "end": 49620
+        },
+        {
+          "word": "is:",
+          "begin": 49720,
+          "end": 50040
+        },
+        {
+          "word": "SLC",
+          "begin": 50260,
+          "end": 50460
+        },
+        {
+          "word": "(~100K",
+          "begin": 50460,
+          "end": 51100
+        },
+        {
+          "word": "cycles,",
+          "begin": 51180,
+          "end": 51700
+        },
+        {
+          "word": "2",
+          "begin": 51960,
+          "end": 52060
+        },
+        {
+          "word": "levels),",
+          "begin": 52160,
+          "end": 53540
+        },
+        {
+          "word": "MLC",
+          "begin": 53940,
+          "end": 54280
+        },
+        {
+          "word": "(~10K",
+          "begin": 54400,
+          "end": 55100
+        },
+        {
+          "word": "cycles,",
+          "begin": 55460,
+          "end": 55820
+        },
+        {
+          "word": "4",
+          "begin": 55820,
+          "end": 56100
+        },
+        {
+          "word": "levels),",
+          "begin": 56480,
+          "end": 57900
+        },
+        {
+          "word": "TLC",
+          "begin": 58020,
+          "end": 58320
+        },
+        {
+          "word": "(~3K",
+          "begin": 58420,
+          "end": 59200
+        },
+        {
+          "word": "cycles,",
+          "begin": 59240,
+          "end": 60060
+        },
+        {
+          "word": "8",
+          "begin": 60100,
+          "end": 60460
+        },
+        {
+          "word": "levels),",
+          "begin": 60600,
+          "end": 61680
+        },
+        {
+          "word": "QLC",
+          "begin": 61740,
+          "end": 62580
+        },
+        {
+          "word": "(~1K",
+          "begin": 62640,
+          "end": 63160
+        },
+        {
+          "word": "16",
+          "begin": 62640,
+          "end": 62920
+        },
+        {
+          "word": "levels).",
+          "begin": 62960,
+          "end": 63400
+        },
+        {
+          "word": "Each",
+          "begin": 63780,
+          "end": 63940
+        },
+        {
+          "word": "doubling",
+          "begin": 64040,
+          "end": 64400
+        },
+        {
+          "word": "of",
+          "begin": 64420,
+          "end": 64519
+        },
+        {
+          "word": "levels",
+          "begin": 64560,
+          "end": 64940
+        },
+        {
+          "word": "roughly",
+          "begin": 65060,
+          "end": 65340
+        },
+        {
+          "word": "reduces",
+          "begin": 65420,
+          "end": 65880
+        },
+        {
+          "word": "endurance",
+          "begin": 65900,
+          "end": 66680
+        },
+        {
+          "word": "by",
+          "begin": 66740,
+          "end": 66820
+        },
+        {
+          "word": "3-10x",
+          "begin": 66920,
+          "end": 67860
+        },
+        {
+          "word": "because",
+          "begin": 68080,
+          "end": 68320
+        },
+        {
+          "word": "the",
+          "begin": 68360,
+          "end": 68400
+        },
+        {
+          "word": "margin",
+          "begin": 68480,
+          "end": 68820
+        },
+        {
+          "word": "for",
+          "begin": 68880,
+          "end": 69200
+        },
+        {
+          "word": "error",
+          "begin": 69220,
+          "end": 69500
+        },
+        {
+          "word": "shrinks",
+          "begin": 69500,
+          "end": 69700
+        },
+        {
+          "word": "exponentially",
+          "begin": 69800,
+          "end": 70480
+        },
+        {
+          "word": "while",
+          "begin": 70620,
+          "end": 70780
+        },
+        {
+          "word": "oxide",
+          "begin": 70880,
+          "end": 71280
+        },
+        {
+          "word": "damage",
+          "begin": 71320,
+          "end": 71680
+        },
+        {
+          "word": "accumulates",
+          "begin": 71740,
+          "end": 72360
+        },
+        {
+          "word": "linearly",
+          "begin": 72460,
+          "end": 72880
+        },
+        {
+          "word": "with",
+          "begin": 73000,
+          "end": 73100
+        },
+        {
+          "word": "P/E",
+          "begin": 73180,
+          "end": 73460
+        },
+        {
+          "word": "cycles.",
+          "begin": 73600,
+          "end": 74140
+        },
+        {
+          "word": "Knowledge",
+          "begin": 74560,
+          "end": 74780
+        },
+        {
+          "word": "check:",
+          "begin": 74840,
+          "end": 75280
+        },
+        {
+          "word": "If",
+          "begin": 75540,
+          "end": 75640
+        },
+        {
+          "word": "a",
+          "begin": 75660,
+          "end": 75680
+        }
+      ],
+      "requiresReveal": true
+    },
+    {
+      "blockIndex": 3,
+      "type": "reveal",
+      "text": "Knowledge check: If a manufacturer converts an SLC die to QLC without changing the physical cell count, the capacity quadruples. So why don't all SSDs just use QLC? What are the hidden costs of packing more bits into each cell? The answer: From lowest to highest density: SLC (1 bit/cell) < MLC (2 bits/cell) < TLC (3 bits/cell) < QLC (4 bits/cell). While QLC quadruples the storage per cell compared to SLC, the hidden costs are severe: (1) Write speed drops dramatically because programming 16 precise voltage levels requires iterative verify steps, (2) Read latency increases because the controller must make 15 voltage comparisons instead of 1, (3) Endurance plummets from ~100K to ~1K P/E cycles, and (4) Error rates skyrocket, demanding more powerful (and slower) ECC algorithms like LDPC with soft-decision decoding. This is why many SSDs use SLC as a write cache — incoming data is written quickly to SLC-mode cells, then slowly 'folded' into TLC/QLC cells in the background.",
+      "beginMs": 75760,
+      "endMs": 143600,
+      "timestamps": [
+        {
+          "word": "manufacturer",
+          "begin": 75760,
+          "end": 76460
+        },
+        {
+          "word": "converts",
+          "begin": 76580,
+          "end": 77360
+        },
+        {
+          "word": "an",
+          "begin": 77400,
+          "end": 77480
+        },
+        {
+          "word": "SLC",
+          "begin": 77600,
+          "end": 78120
+        },
+        {
+          "word": "die",
+          "begin": 78200,
+          "end": 78500
+        },
+        {
+          "word": "to",
+          "begin": 78640,
+          "end": 78720
+        },
+        {
+          "word": "without",
+          "begin": 79120,
+          "end": 79380
+        },
+        {
+          "word": "changing",
+          "begin": 79380,
+          "end": 79780
+        },
+        {
+          "word": "the",
+          "begin": 79820,
+          "end": 79860
+        },
+        {
+          "word": "physical",
+          "begin": 79940,
+          "end": 80240
+        },
+        {
+          "word": "cell",
+          "begin": 80400,
+          "end": 80540
+        },
+        {
+          "word": "count,",
+          "begin": 80620,
+          "end": 80960
+        },
+        {
+          "word": "the",
+          "begin": 81200,
+          "end": 81240
+        },
+        {
+          "word": "capacity",
+          "begin": 81300,
+          "end": 81780
+        },
+        {
+          "word": "quadruples.",
+          "begin": 81880,
+          "end": 82600
+        },
+        {
+          "word": "So",
+          "begin": 83260,
+          "end": 83320
+        },
+        {
+          "word": "why",
+          "begin": 83400,
+          "end": 83480
+        },
+        {
+          "word": "don't",
+          "begin": 83560,
+          "end": 83720
+        },
+        {
+          "word": "all",
+          "begin": 83820,
+          "end": 83960
+        },
+        {
+          "word": "SSDs",
+          "begin": 84060,
+          "end": 84500
+        },
+        {
+          "word": "just",
+          "begin": 84640,
+          "end": 84940
+        },
+        {
+          "word": "use",
+          "begin": 84940,
+          "end": 85100
+        },
+        {
+          "word": "QLC?",
+          "begin": 85160,
+          "end": 85660
+        },
+        {
+          "word": "What",
+          "begin": 86400,
+          "end": 86520
+        },
+        {
+          "word": "are",
+          "begin": 86540,
+          "end": 86560
+        },
+        {
+          "word": "the",
+          "begin": 86620,
+          "end": 86660
+        },
+        {
+          "word": "hidden",
+          "begin": 86740,
+          "end": 86920
+        },
+        {
+          "word": "costs",
+          "begin": 86980,
+          "end": 87380
+        },
+        {
+          "word": "of",
+          "begin": 87400,
+          "end": 87480
+        },
+        {
+          "word": "packing",
+          "begin": 87540,
+          "end": 87860
+        },
+        {
+          "word": "more",
+          "begin": 87900,
+          "end": 87980
+        },
+        {
+          "word": "bits",
+          "begin": 88120,
+          "end": 88340
+        },
+        {
+          "word": "into",
+          "begin": 88360,
+          "end": 88520
+        },
+        {
+          "word": "each",
+          "begin": 88620,
+          "end": 88760
+        },
+        {
+          "word": "cell?",
+          "begin": 88840,
+          "end": 89060
+        },
+        {
+          "word": "The",
+          "begin": 89280,
+          "end": 89340
+        },
+        {
+          "word": "answer:",
+          "begin": 89440,
+          "end": 90140
+        },
+        {
+          "word": "From",
+          "begin": 90140,
+          "end": 90280
+        },
+        {
+          "word": "lowest",
+          "begin": 90320,
+          "end": 90620
+        },
+        {
+          "word": "to",
+          "begin": 90620,
+          "end": 90720
+        },
+        {
+          "word": "highest",
+          "begin": 90800,
+          "end": 91060
+        },
+        {
+          "word": "density:",
+          "begin": 91120,
+          "end": 91500
+        },
+        {
+          "word": "SLC",
+          "begin": 91960,
+          "end": 93500
+        },
+        {
+          "word": "(1",
+          "begin": 93540,
+          "end": 93680
+        },
+        {
+          "word": "MLC",
+          "begin": 93540,
+          "end": 98740
+        },
+        {
+          "word": "(2",
+          "begin": 98840,
+          "end": 99220
+        },
+        {
+          "word": "QLC",
+          "begin": 99280,
+          "end": 99600
+        },
+        {
+          "word": "(4",
+          "begin": 99700,
+          "end": 99920
+        },
+        {
+          "word": "While",
+          "begin": 100080,
+          "end": 100200
+        },
+        {
+          "word": "QLC",
+          "begin": 100280,
+          "end": 100800
+        },
+        {
+          "word": "quadruples",
+          "begin": 100980,
+          "end": 101580
+        },
+        {
+          "word": "the",
+          "begin": 101580,
+          "end": 101620
+        },
+        {
+          "word": "storage",
+          "begin": 101700,
+          "end": 102040
+        },
+        {
+          "word": "per",
+          "begin": 102120,
+          "end": 102200
+        },
+        {
+          "word": "cell",
+          "begin": 102360,
+          "end": 102600
+        },
+        {
+          "word": "compared",
+          "begin": 102680,
+          "end": 103420
+        },
+        {
+          "word": "to",
+          "begin": 103520,
+          "end": 103600
+        },
+        {
+          "word": "the",
+          "begin": 103960,
+          "end": 104000
+        },
+        {
+          "word": "hidden",
+          "begin": 104060,
+          "end": 104260
+        },
+        {
+          "word": "costs",
+          "begin": 104320,
+          "end": 104640
+        },
+        {
+          "word": "are",
+          "begin": 104640,
+          "end": 104560
+        },
+        {
+          "word": "severe:",
+          "begin": 104600,
+          "end": 104840
+        },
+        {
+          "word": "(1)",
+          "begin": 104860,
+          "end": 105720
+        },
+        {
+          "word": "Write",
+          "begin": 105760,
+          "end": 105940
+        },
+        {
+          "word": "speed",
+          "begin": 105980,
+          "end": 106240
+        },
+        {
+          "word": "drops",
+          "begin": 106280,
+          "end": 106520
+        },
+        {
+          "word": "dramatically",
+          "begin": 106560,
+          "end": 107080
+        },
+        {
+          "word": "because",
+          "begin": 107300,
+          "end": 107500
+        },
+        {
+          "word": "programming",
+          "begin": 107580,
+          "end": 108020
+        },
+        {
+          "word": "16",
+          "begin": 108140,
+          "end": 108560
+        },
+        {
+          "word": "precise",
+          "begin": 108620,
+          "end": 109020
+        },
+        {
+          "word": "voltage",
+          "begin": 109080,
+          "end": 109380
+        },
+        {
+          "word": "levels",
+          "begin": 109460,
+          "end": 109800
+        },
+        {
+          "word": "requires",
+          "begin": 109840,
+          "end": 110300
+        },
+        {
+          "word": "iterative",
+          "begin": 110440,
+          "end": 110780
+        },
+        {
+          "word": "verify",
+          "begin": 110780,
+          "end": 111320
+        },
+        {
+          "word": "steps,",
+          "begin": 111320,
+          "end": 111720
+        },
+        {
+          "word": "(2)",
+          "begin": 112020,
+          "end": 112100
+        },
+        {
+          "word": "Read",
+          "begin": 112220,
+          "end": 112420
+        },
+        {
+          "word": "latency",
+          "begin": 112440,
+          "end": 112840
+        },
+        {
+          "word": "increases",
+          "begin": 112960,
+          "end": 113580
+        },
+        {
+          "word": "because",
+          "begin": 113640,
+          "end": 113860
+        },
+        {
+          "word": "the",
+          "begin": 113880,
+          "end": 113940
+        },
+        {
+          "word": "controller",
+          "begin": 113980,
+          "end": 114420
+        },
+        {
+          "word": "must",
+          "begin": 114500,
+          "end": 114660
+        },
+        {
+          "word": "make",
+          "begin": 114700,
+          "end": 114840
+        },
+        {
+          "word": "15",
+          "begin": 114940,
+          "end": 115360
+        },
+        {
+          "word": "voltage",
+          "begin": 115420,
+          "end": 115720
+        },
+        {
+          "word": "comparisons",
+          "begin": 115780,
+          "end": 116540
+        },
+        {
+          "word": "instead",
+          "begin": 116640,
+          "end": 116940
+        },
+        {
+          "word": "of",
+          "begin": 116940,
+          "end": 117040
+        },
+        {
+          "word": "1,",
+          "begin": 117080,
+          "end": 117300
+        },
+        {
+          "word": "(3)",
+          "begin": 117440,
+          "end": 117560
+        },
+        {
+          "word": "Endurance",
+          "begin": 117680,
+          "end": 118100
+        },
+        {
+          "word": "plummets",
+          "begin": 118160,
+          "end": 119500
+        },
+        {
+          "word": "from",
+          "begin": 119500,
+          "end": 119780
+        },
+        {
+          "word": "~100K",
+          "begin": 119820,
+          "end": 120600
+        },
+        {
+          "word": "to",
+          "begin": 120900,
+          "end": 120960
+        },
+        {
+          "word": "~1K",
+          "begin": 121000,
+          "end": 122320
+        },
+        {
+          "word": "P/E",
+          "begin": 122380,
+          "end": 122820
+        },
+        {
+          "word": "cycles,",
+          "begin": 123120,
+          "end": 123600
+        },
+        {
+          "word": "and",
+          "begin": 123920,
+          "end": 124020
+        },
+        {
+          "word": "(4)",
+          "begin": 124120,
+          "end": 124220
+        },
+        {
+          "word": "Error",
+          "begin": 124460,
+          "end": 124620
+        },
+        {
+          "word": "rates",
+          "begin": 124740,
+          "end": 125080
+        },
+        {
+          "word": "skyrocket,",
+          "begin": 125240,
+          "end": 125940
+        },
+        {
+          "word": "demanding",
+          "begin": 126200,
+          "end": 126580
+        },
+        {
+          "word": "more",
+          "begin": 126580,
+          "end": 126720
+        },
+        {
+          "word": "powerful",
+          "begin": 126860,
+          "end": 127280
+        },
+        {
+          "word": "(and",
+          "begin": 127500,
+          "end": 127600
+        },
+        {
+          "word": "slower)",
+          "begin": 127700,
+          "end": 128320
+        },
+        {
+          "word": "ECC",
+          "begin": 128360,
+          "end": 128580
+        },
+        {
+          "word": "algorithms",
+          "begin": 128720,
+          "end": 129300
+        },
+        {
+          "word": "like",
+          "begin": 129600,
+          "end": 129740
+        },
+        {
+          "word": "LDPC",
+          "begin": 129840,
+          "end": 130520
+        },
+        {
+          "word": "with",
+          "begin": 130699,
+          "end": 130820
+        },
+        {
+          "word": "soft-decision",
+          "begin": 130919,
+          "end": 131560
+        },
+        {
+          "word": "decoding.",
+          "begin": 131600,
+          "end": 132100
+        },
+        {
+          "word": "This",
+          "begin": 132400,
+          "end": 132520
+        },
+        {
+          "word": "is",
+          "begin": 132540,
+          "end": 132640
+        },
+        {
+          "word": "why",
+          "begin": 132680,
+          "end": 132740
+        },
+        {
+          "word": "many",
+          "begin": 132900,
+          "end": 133080
+        },
+        {
+          "word": "SSDs",
+          "begin": 133200,
+          "end": 133560
+        },
+        {
+          "word": "use",
+          "begin": 133560,
+          "end": 133820
+        },
+        {
+          "word": "SLC",
+          "begin": 133820,
+          "end": 134040
+        },
+        {
+          "word": "as",
+          "begin": 134140,
+          "end": 134280
+        },
+        {
+          "word": "a",
+          "begin": 134320,
+          "end": 134400
+        },
+        {
+          "word": "write",
+          "begin": 134520,
+          "end": 134940
+        },
+        {
+          "word": "cache",
+          "begin": 135020,
+          "end": 135180
+        },
+        {
+          "word": "incoming",
+          "begin": 135180,
+          "end": 136100
+        },
+        {
+          "word": "data",
+          "begin": 136160,
+          "end": 136360
+        },
+        {
+          "word": "is",
+          "begin": 136400,
+          "end": 136540
+        },
+        {
+          "word": "written",
+          "begin": 136620,
+          "end": 136840
+        },
+        {
+          "word": "quickly",
+          "begin": 136880,
+          "end": 137160
+        },
+        {
+          "word": "to",
+          "begin": 137240,
+          "end": 137320
+        },
+        {
+          "word": "SLC-mode",
+          "begin": 137340,
+          "end": 137860
+        },
+        {
+          "word": "cells,",
+          "begin": 137960,
+          "end": 138300
+        },
+        {
+          "word": "then",
+          "begin": 138440,
+          "end": 138640
+        },
+        {
+          "word": "slowly",
+          "begin": 138640,
+          "end": 139120
+        },
+        {
+          "word": "'folded'",
+          "begin": 139540,
+          "end": 140360
+        },
+        {
+          "word": "into",
+          "begin": 140400,
+          "end": 140620
+        },
+        {
+          "word": "TLC/QLC",
+          "begin": 140700,
+          "end": 141900
+        },
+        {
+          "word": "cells",
+          "begin": 141940,
+          "end": 142040
+        },
+        {
+          "word": "in",
+          "begin": 142120,
+          "end": 142200
+        },
+        {
+          "word": "the",
+          "begin": 142300,
+          "end": 142380
+        },
+        {
+          "word": "background.",
+          "begin": 142520,
+          "end": 143600
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

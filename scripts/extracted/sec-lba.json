@@ -1,0 +1,62 @@
+{
+  "sectionId": "sec-lba",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Addressing Storage — LBA",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: LBA Is Like Numbered Mailboxes. Imagine a very long row of numbered mailboxes. Each mailbox holds a small, fixed amount of data. To read or write data, you just say 'give me mailbox #42' — you don't need to know where it physically sits. The SSD handles the physical location internally.",
+      "blockIndex": 1
+    },
+    {
+      "type": "term",
+      "text": "LBA (Logical Block Addressing): A numbering system that divides the entire storage drive into fixed-size blocks, numbered starting from 0. 'Logical' means these are virtual addresses — the OS uses them, but the SSD maps them to physical NAND locations internally.",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "We know data is made of bits and bytes. But an SSD holds a trillion bytes — how does the computer know where to find a specific piece of data? It needs an addressing system, like street addresses for houses.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "Imagine a very long row of numbered mailboxes. Each mailbox holds a small, fixed amount of data. When you want to read or write data, you just say &ldquo;give me mailbox number 42&rdquo; — you don't need to know where it physically sits on the drive.",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "That's exactly how Logical Block Addressing (LBA) works. The entire storage drive is divided into fixed-size blocks, numbered starting from 0. Each block is called an LBA. The &ldquo;logical&rdquo; part means these are virtual addresses — your computer uses them, but the SSD internally maps them to the actual physical locations on the NAND chips.",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "But why &ldquo;logical&rdquo;? Why not just use physical addresses directly? Because the SSD constantly moves data around internally (for wear leveling, garbage collection, and error recovery). If the OS used physical addresses, every internal move would break the OS's bookkeeping. The LBA abstraction means the OS sees a stable, unchanging address space while the SSD manages the physical chaos underneath. (We'll see exactly how this mapping works when we cover the FTL later.)",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "Each LBA has a fixed size — either 512 bytes (the traditional size from hard disk days) or 4096 bytes (4 KB) (which matches how modern SSDs work internally, making them more efficient).",
+      "blockIndex": 7
+    },
+    {
+      "type": "info",
+      "text": "512 bytes vs 4 KB — why two sizes?: Older hard drives used 512-byte sectors, so most software was written for that size. Modern SSDs internally use 4 KB pages, but they can emulate 512-byte sectors for compatibility. What happens when the OS writes 512 bytes to a 4KB-native SSD? The SSD must read the full 4KB page, modify the 512 bytes, and write the whole page back — a read-modify-write cycle that wastes bandwidth. Using native 4 KB sectors avoids this entirely. You can check what your drive supports (and switch) using nvme id-ns.",
+      "blockIndex": 8
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: Why would it be disastrous for the OS to directly address physical NAND locations? What fundamental SSD behavior makes an abstraction layer like LBAs essential? The answer: The SSD constantly moves data internally for wear leveling, garbage collection, and error recovery. If the OS used physical NAND addresses, every internal data relocation would invalidate the OS's references, causing data corruption or loss. LBAs provide a stable abstraction — the FTL (Flash Translation Layer) maintains a mapping table that translates fixed LBAs to changing physical locations, so the OS never needs to know where data actually lives on NAND. This decoupling also allows the SSD to optimize data placement for performance (e.g., striping across channels) and reliability (e.g., moving data away from failing cells) without any OS involvement. The LBA interface is essentially a contract: the OS says 'store this at address 42' and the SSD guarantees it can retrieve it from address 42, regardless of how many times the physical location changes internally.",
+      "requiresReveal": true,
+      "blockIndex": 9
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: How would you derive the total number of LBAs on a 1 TB drive with 512-byte sectors from first principles? Why does the choice of sector size (512B vs 4KB) matter for the FTL's memory overhead? The answer: 1 TB = 1,000,000,000,000 bytes. Dividing by 512 bytes per LBA gives ~1,953,125,000 LBAs, or approximately 1.95 billion. This sector size choice has a massive impact on FTL overhead: the mapping table stores one physical address per LBA (typically 4 bytes each). With 512-byte LBAs, the table needs ~1.95 billion x 4 bytes = ~7.8 GB of DRAM — enormous. With 4KB LBAs, the same drive has only ~244 million LBAs, requiring ~976 MB of DRAM — 8x less. This is why 4KB-native drives are more efficient: fewer LBAs means a smaller mapping table, less DRAM needed, and faster table lookups. It also explains why DRAM-less SSDs using HMB (Host Memory Buffer) strongly prefer 4KB sectors.",
+      "requiresReveal": true,
+      "blockIndex": 10
+    }
+  ]
+}

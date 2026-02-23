@@ -1,0 +1,41 @@
+{
+  "sectionId": "sec-boot",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "From Power-On to First I/O — The Boot Sequence",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: Boot Is Like Opening a Restaurant. Before the SSD can serve I/O commands, it goes through a startup ritual — like a restaurant opening for the day. First, the host discovers the SSD on the PCIe bus (finding the building). Then it reads BAR0 (checking the menu). Then it creates admin queues (setting up the kitchen). Then it identifies the controller and creates I/O queues (hiring staff and opening for customers).",
+      "blockIndex": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "Now we know all the building blocks: PCIe is the highway, BAR0 is the control panel, and queues carry commands. But how do these pieces come together when you press the power button?",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "The boot process follows a strict order — each step depends on the previous one. You can't send commands without queues. You can't create queues without first enabling the controller. You can't enable the controller without knowing where its registers are. And you can't find registers without scanning the PCIe bus first.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "Click each phase below to see the exact steps. Notice how each phase builds on the previous one:",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "This entire boot sequence uses concepts we've already learned: PCIe enumeration discovers the drive, BAR0 gives access to registers, the Submission Queue lets us send commands, and the Completion Queue receives results. The boot process is just these pieces assembled in the right order. Every NVMe drive in the world follows this same sequence — it's defined by the NVMe spec, which is why one Linux NVMe driver works with drives from Samsung, WD, Intel, or any other manufacturer.",
+      "blockIndex": 5
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: If the NVMe driver tried to submit I/O commands before creating the I/O queues — or tried to create queues before enabling the controller — what would happen? Explain why the boot sequence must follow a strict order and what depends on what. The answer: The boot sequence is a dependency chain where each step requires the previous one: (1) PCIe Enumeration must happen first — the BIOS scans the bus to discover devices. Without this, the CPU doesn't know the SSD exists. (2) BAR0 Assignment maps the SSD's registers to memory addresses. Without BAR0, there's no way to access the controller's registers. (3) Admin Queue creation (writing AQA, ASQ, ACQ registers) sets up the communication channel. Without admin queues, there's no way to send any commands at all. (4) Enabling the controller (CC.EN=1) powers up the SSD's command processing engine. Before this, the SSD ignores queue contents. (5) Identify Controller queries capabilities — the driver needs to know queue limits before creating I/O queues. (6) Finally, I/O Queue creation gives the driver high-speed data channels. If you tried to submit I/O commands before this step, there would be no I/O queues to put them in. Each step builds on the last — skip any step and the subsequent steps fail or produce undefined behavior.",
+      "requiresReveal": true,
+      "blockIndex": 6
+    }
+  ]
+}

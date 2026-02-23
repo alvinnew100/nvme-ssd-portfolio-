@@ -1,0 +1,96 @@
+{
+  "sectionId": "sec-filesystems",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Filesystems — How Files Become LBAs",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: Filesystems Translate Files to Blocks. A filesystem is like a librarian's catalog system — it translates human-readable names (photo.jpg, report.pdf) into specific storage locations (LBAs). Different filesystems (ext4, XFS, Btrfs) use different organization strategies, affecting how well they work with SSDs.",
+      "blockIndex": 1
+    },
+    {
+      "type": "term",
+      "text": "ext4: The default Linux filesystem. Uses extents (contiguous block ranges) for efficient allocation. Supports TRIM/discard for SSDs. Good general-purpose choice.",
+      "blockIndex": 2
+    },
+    {
+      "type": "term",
+      "text": "XFS: A high-performance filesystem optimized for large files and parallel I/O. Excels at sequential workloads and scales well on multi-core systems. Often preferred for database and media storage.",
+      "blockIndex": 3
+    },
+    {
+      "type": "term",
+      "text": "Btrfs: A copy-on-write (CoW) filesystem with built-in snapshots, compression, and RAID support. CoW writes create new copies instead of overwriting — similar to how SSDs do out-of-place writes internally.",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "So far, we've been talking about LBAs — numbered blocks on the SSD. But when you save a document, you don't think in LBAs. You think in files and folders. Who translates between the two?",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "The filesystem. It's a layer of software that turns file operations (open, read, write, delete) into block I/O commands (NVMe Read, Write, TRIM). It tracks which LBAs belong to which file, manages free space, and handles crash recovery.",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "Why does the filesystem choice matter for NVMe? Because different filesystems interact differently with the SSD's internals:",
+      "blockIndex": 7
+    },
+    {
+      "type": "paragraph",
+      "text": "Before comparing filesystems, let's define the terms you'll see in the table below. Each of these concepts solves a specific problem:",
+      "blockIndex": 8
+    },
+    {
+      "type": "paragraph",
+      "text": "Data about your data. When you save a file, the filesystem stores not just the file contents but also: who owns it, when it was created/modified, its size, and which LBAs it occupies on the SSD. This bookkeeping data IS the metadata. Without it, the filesystem wouldn't know where your files are.",
+      "blockIndex": 9
+    },
+    {
+      "type": "paragraph",
+      "text": "A crash-safety mechanism. Before the filesystem makes any change (writing a file, renaming, deleting), it first writes a note to a special area called the &ldquo;journal&rdquo; describing what it's about to do. If power is lost mid-operation, the system checks the journal on boot and either completes or rolls back the pending change. Without journaling (ext2), recovery requires scanning the entire drive — which can take minutes.",
+      "blockIndex": 10
+    },
+    {
+      "type": "paragraph",
+      "text": "Instead of overwriting data in place, the filesystem writes the new version to a different location and updates the pointer. Sound familiar? It's the same principle as the SSD's FTL from Lesson 3! Btrfs does this at the filesystem level. Benefits: old versions of data are preserved (enabling snapshots), and partial writes can never corrupt existing data.",
+      "blockIndex": 11
+    },
+    {
+      "type": "paragraph",
+      "text": "A small mathematical fingerprint computed from your data. Every time data is read back, the filesystem recomputes the checksum and compares it. If they don't match, the data was silently corrupted (bit rot). Without checksums (ext4 on data), corruption goes undetected until the file is actually used and looks wrong.",
+      "blockIndex": 12
+    },
+    {
+      "type": "paragraph",
+      "text": "A frozen-in-time copy of the filesystem. With CoW, creating a snapshot is nearly instant — you just tell the filesystem &ldquo;preserve all current pointers.&rdquo; New writes go to new locations, while the snapshot still points to the old data. Used for: backups (snapshot before updating), rollbacks (revert to last known good state), and testing (snapshot, experiment, revert).",
+      "blockIndex": 13
+    },
+    {
+      "type": "paragraph",
+      "text": "The filesystem automatically compresses data before writing to NAND and decompresses when reading. Btrfs supports zstd, lzo, and zlib. Benefits: less data written to the SSD (less wear, more effective capacity), and reads can be faster because less data needs to come off the NAND (decompression is fast on modern CPUs). Downside: uses CPU time.",
+      "blockIndex": 14
+    },
+    {
+      "type": "paragraph",
+      "text": "In the comparison table, you'll see TRIM support labeled as &ldquo;Basic&rdquo; or &ldquo;Full.&rdquo; Here's what each level means and how TRIM can be delivered to the SSD:",
+      "blockIndex": 15
+    },
+    {
+      "type": "info",
+      "text": "Btrfs CoW and the SSD's FTL — double indirection: Here's an interesting parallel: Btrfs uses copy-on-write to avoid overwriting data in place. The SSD's FTL does the same thing at the hardware level. So with Btrfs on an NVMe SSD, writes are redirected twice — once by Btrfs and once by the FTL. This can increase write amplification but also improves crash consistency.",
+      "blockIndex": 16
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: Why does the choice of filesystem matter for NVMe SSD performance and longevity? Consider what happens at the intersection of filesystem behavior (journaling, CoW, TRIM) and the SSD's internal operations (FTL, GC, wear leveling). The answer: The filesystem sits directly above the block layer and determines how file operations translate into NVMe commands. This choice impacts the SSD in several critical ways: (1) TRIM support — ext4 and XFS send discard commands to inform the SSD about deleted data, reducing GC overhead and WAF. Without TRIM, the SSD wastes writes preserving dead data. (2) Write patterns — Btrfs uses copy-on-write, which means the SSD's FTL also does out-of-place writes, creating double indirection that can increase WAF. Ext4's in-place updates with journaling produce different patterns. (3) Journaling overhead — ext4's journal writes add extra NAND wear. The 'ordered' mode journals only metadata, while 'journal' mode doubles all writes. (4) Alignment — modern filesystems use 4K-aligned I/O matching the SSD's internal page size, avoiding read-modify-write penalties. The right choice depends on your workload: ext4 for general use, XFS for large files and parallel I/O, Btrfs when you need snapshots and checksums.",
+      "requiresReveal": true,
+      "blockIndex": 17
+    }
+  ]
+}

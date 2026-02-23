@@ -1,0 +1,1668 @@
+{
+  "sectionId": "sec-transistor",
+  "audioFile": "/audio/sections/sec-transistor.mp3",
+  "totalDurationMs": 113840,
+  "fileSizeBytes": 1822080,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "What Is a Transistor?",
+      "beginMs": 40,
+      "endMs": 1040,
+      "timestamps": [
+        {
+          "word": "What",
+          "begin": 40,
+          "end": 220
+        },
+        {
+          "word": "Is",
+          "begin": 240,
+          "end": 360
+        },
+        {
+          "word": "a",
+          "begin": 380,
+          "end": 400
+        },
+        {
+          "word": "Transistor?",
+          "begin": 480,
+          "end": 1040
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "paragraph",
+      "text": "Every digital device — CPUs, RAM, SSDs — is built from billions of tiny switches called transistors. A transistor is a microscopic electronic switch: apply voltage to its gate, and current flows between its source and drain. Remove the voltage, and current stops.",
+      "beginMs": 1480,
+      "endMs": 17640,
+      "timestamps": [
+        {
+          "word": "Every",
+          "begin": 1480,
+          "end": 1640
+        },
+        {
+          "word": "digital",
+          "begin": 1720,
+          "end": 2100
+        },
+        {
+          "word": "device",
+          "begin": 2100,
+          "end": 2500
+        },
+        {
+          "word": "CPUs,",
+          "begin": 2800,
+          "end": 3380
+        },
+        {
+          "word": "RAM,",
+          "begin": 3620,
+          "end": 3920
+        },
+        {
+          "word": "SSDs",
+          "begin": 4100,
+          "end": 4520
+        },
+        {
+          "word": "is",
+          "begin": 4920,
+          "end": 5020
+        },
+        {
+          "word": "built",
+          "begin": 5060,
+          "end": 5260
+        },
+        {
+          "word": "from",
+          "begin": 5300,
+          "end": 5440
+        },
+        {
+          "word": "billions",
+          "begin": 5500,
+          "end": 5860
+        },
+        {
+          "word": "of",
+          "begin": 5860,
+          "end": 5920
+        },
+        {
+          "word": "tiny",
+          "begin": 5920,
+          "end": 6240
+        },
+        {
+          "word": "switches",
+          "begin": 6320,
+          "end": 6680
+        },
+        {
+          "word": "called",
+          "begin": 6740,
+          "end": 6900
+        },
+        {
+          "word": "transistors.",
+          "begin": 6940,
+          "end": 7640
+        },
+        {
+          "word": "A",
+          "begin": 7920,
+          "end": 7940
+        },
+        {
+          "word": "transistor",
+          "begin": 8020,
+          "end": 8500
+        },
+        {
+          "word": "is",
+          "begin": 8580,
+          "end": 8680
+        },
+        {
+          "word": "a",
+          "begin": 8700,
+          "end": 8720
+        },
+        {
+          "word": "microscopic",
+          "begin": 8780,
+          "end": 9460
+        },
+        {
+          "word": "electronic",
+          "begin": 9480,
+          "end": 10060
+        },
+        {
+          "word": "switch:",
+          "begin": 10120,
+          "end": 10420
+        },
+        {
+          "word": "apply",
+          "begin": 10780,
+          "end": 10980
+        },
+        {
+          "word": "voltage",
+          "begin": 11100,
+          "end": 11460
+        },
+        {
+          "word": "to",
+          "begin": 11540,
+          "end": 11600
+        },
+        {
+          "word": "its",
+          "begin": 11660,
+          "end": 11780
+        },
+        {
+          "word": "gate,",
+          "begin": 11840,
+          "end": 12100
+        },
+        {
+          "word": "and",
+          "begin": 12320,
+          "end": 12400
+        },
+        {
+          "word": "current",
+          "begin": 12460,
+          "end": 12720
+        },
+        {
+          "word": "flows",
+          "begin": 12760,
+          "end": 13000
+        },
+        {
+          "word": "between",
+          "begin": 13040,
+          "end": 13340
+        },
+        {
+          "word": "its",
+          "begin": 13360,
+          "end": 13460
+        },
+        {
+          "word": "source",
+          "begin": 13540,
+          "end": 13820
+        },
+        {
+          "word": "and",
+          "begin": 13920,
+          "end": 14000
+        },
+        {
+          "word": "drain.",
+          "begin": 14040,
+          "end": 14360
+        },
+        {
+          "word": "Remove",
+          "begin": 14560,
+          "end": 14860
+        },
+        {
+          "word": "the",
+          "begin": 14900,
+          "end": 14940
+        },
+        {
+          "word": "voltage,",
+          "begin": 15000,
+          "end": 15400
+        },
+        {
+          "word": "and",
+          "begin": 15620,
+          "end": 15700
+        },
+        {
+          "word": "current",
+          "begin": 15760,
+          "end": 16000
+        },
+        {
+          "word": "stops.",
+          "begin": 16000,
+          "end": 16500
+        },
+        {
+          "word": "Analogy:",
+          "begin": 16800,
+          "end": 17120
+        },
+        {
+          "word": "A",
+          "begin": 17200,
+          "end": 17640
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "analogy",
+      "text": "Analogy: A Transistor Is a Tiny Light Switch. Push the switch (apply voltage to the gate) and electricity flows — that's a '1'. Release it and the flow stops — that's a '0'. A CPU has billions of these switches flipping billions of times per second. An SSD's NAND cells are special transistors that can trap charge and remember their state even without power.",
+      "beginMs": 18460,
+      "endMs": 37760,
+      "timestamps": [
+        {
+          "word": "a",
+          "begin": 18460,
+          "end": 18480
+        },
+        {
+          "word": "Tiny",
+          "begin": 18560,
+          "end": 18820
+        },
+        {
+          "word": "Light",
+          "begin": 18920,
+          "end": 19120
+        },
+        {
+          "word": "Switch.",
+          "begin": 19180,
+          "end": 19860
+        },
+        {
+          "word": "Push",
+          "begin": 19860,
+          "end": 20040
+        },
+        {
+          "word": "the",
+          "begin": 20080,
+          "end": 20140
+        },
+        {
+          "word": "switch",
+          "begin": 20220,
+          "end": 20460
+        },
+        {
+          "word": "(apply",
+          "begin": 20540,
+          "end": 20740
+        },
+        {
+          "word": "voltage",
+          "begin": 20860,
+          "end": 21200
+        },
+        {
+          "word": "to",
+          "begin": 21260,
+          "end": 21320
+        },
+        {
+          "word": "the",
+          "begin": 21360,
+          "end": 21400
+        },
+        {
+          "word": "gate)",
+          "begin": 21460,
+          "end": 21840
+        },
+        {
+          "word": "and",
+          "begin": 21840,
+          "end": 21860
+        },
+        {
+          "word": "electricity",
+          "begin": 21860,
+          "end": 22400
+        },
+        {
+          "word": "flows",
+          "begin": 22520,
+          "end": 22860
+        },
+        {
+          "word": "that's",
+          "begin": 23040,
+          "end": 23240
+        },
+        {
+          "word": "a",
+          "begin": 23260,
+          "end": 23280
+        },
+        {
+          "word": "'1'.",
+          "begin": 23360,
+          "end": 23620
+        },
+        {
+          "word": "Release",
+          "begin": 23660,
+          "end": 24280
+        },
+        {
+          "word": "it",
+          "begin": 24280,
+          "end": 24560
+        },
+        {
+          "word": "and",
+          "begin": 24600,
+          "end": 24840
+        },
+        {
+          "word": "the",
+          "begin": 24840,
+          "end": 24880
+        },
+        {
+          "word": "flow",
+          "begin": 24960,
+          "end": 25080
+        },
+        {
+          "word": "stops",
+          "begin": 25220,
+          "end": 25620
+        },
+        {
+          "word": "that's",
+          "begin": 25860,
+          "end": 26040
+        },
+        {
+          "word": "a",
+          "begin": 26080,
+          "end": 26100
+        },
+        {
+          "word": "'0'.",
+          "begin": 26180,
+          "end": 26880
+        },
+        {
+          "word": "A",
+          "begin": 27040,
+          "end": 27060
+        },
+        {
+          "word": "CPU",
+          "begin": 27160,
+          "end": 27540
+        },
+        {
+          "word": "has",
+          "begin": 27620,
+          "end": 27800
+        },
+        {
+          "word": "billions",
+          "begin": 27860,
+          "end": 28240
+        },
+        {
+          "word": "of",
+          "begin": 28240,
+          "end": 28320
+        },
+        {
+          "word": "these",
+          "begin": 28360,
+          "end": 28500
+        },
+        {
+          "word": "switches",
+          "begin": 28560,
+          "end": 29220
+        },
+        {
+          "word": "flipping",
+          "begin": 29220,
+          "end": 29480
+        },
+        {
+          "word": "billions",
+          "begin": 29560,
+          "end": 29920
+        },
+        {
+          "word": "of",
+          "begin": 29940,
+          "end": 30000
+        },
+        {
+          "word": "times",
+          "begin": 30040,
+          "end": 30340
+        },
+        {
+          "word": "per",
+          "begin": 30400,
+          "end": 30460
+        },
+        {
+          "word": "second.",
+          "begin": 30560,
+          "end": 30940
+        },
+        {
+          "word": "An",
+          "begin": 31200,
+          "end": 31300
+        },
+        {
+          "word": "SSD's",
+          "begin": 31320,
+          "end": 31840
+        },
+        {
+          "word": "NAND",
+          "begin": 31900,
+          "end": 32140
+        },
+        {
+          "word": "cells",
+          "begin": 32220,
+          "end": 32479
+        },
+        {
+          "word": "are",
+          "begin": 32540,
+          "end": 32560
+        },
+        {
+          "word": "special",
+          "begin": 32659,
+          "end": 33060
+        },
+        {
+          "word": "transistors",
+          "begin": 33080,
+          "end": 33680
+        },
+        {
+          "word": "that",
+          "begin": 33720,
+          "end": 33820
+        },
+        {
+          "word": "can",
+          "begin": 33860,
+          "end": 33960
+        },
+        {
+          "word": "trap",
+          "begin": 34020,
+          "end": 34260
+        },
+        {
+          "word": "charge",
+          "begin": 34300,
+          "end": 34600
+        },
+        {
+          "word": "and",
+          "begin": 34700,
+          "end": 34800
+        },
+        {
+          "word": "remember",
+          "begin": 34800,
+          "end": 35160
+        },
+        {
+          "word": "their",
+          "begin": 35160,
+          "end": 35360
+        },
+        {
+          "word": "state",
+          "begin": 35400,
+          "end": 35840
+        },
+        {
+          "word": "even",
+          "begin": 35860,
+          "end": 35920
+        },
+        {
+          "word": "without",
+          "begin": 35960,
+          "end": 36220
+        },
+        {
+          "word": "power.",
+          "begin": 36260,
+          "end": 36520
+        },
+        {
+          "word": "Why",
+          "begin": 36900,
+          "end": 36960
+        },
+        {
+          "word": "does",
+          "begin": 37060,
+          "end": 37180
+        },
+        {
+          "word": "this",
+          "begin": 37220,
+          "end": 37360
+        },
+        {
+          "word": "matter",
+          "begin": 37420,
+          "end": 37620
+        },
+        {
+          "word": "for",
+          "begin": 37700,
+          "end": 37760
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "Why does this matter for SSDs? Because NAND flash memory cells are a special type of transistor called a floating-gate transistor. Unlike regular transistors that forget their state when power is removed, floating-gate transistors can trap electrons in an insulated layer — this is how SSDs store data without power. We'll explore this in detail in Lesson 2.",
+      "beginMs": 37880,
+      "endMs": 56900,
+      "timestamps": [
+        {
+          "word": "SSDs?",
+          "begin": 37880,
+          "end": 38580
+        },
+        {
+          "word": "Because",
+          "begin": 38740,
+          "end": 39020
+        },
+        {
+          "word": "NAND",
+          "begin": 39080,
+          "end": 39340
+        },
+        {
+          "word": "flash",
+          "begin": 39420,
+          "end": 39680
+        },
+        {
+          "word": "memory",
+          "begin": 39740,
+          "end": 39960
+        },
+        {
+          "word": "cells",
+          "begin": 40060,
+          "end": 40360
+        },
+        {
+          "word": "are",
+          "begin": 40460,
+          "end": 40540
+        },
+        {
+          "word": "a",
+          "begin": 40540,
+          "end": 40560
+        },
+        {
+          "word": "special",
+          "begin": 40660,
+          "end": 40940
+        },
+        {
+          "word": "type",
+          "begin": 41020,
+          "end": 41380
+        },
+        {
+          "word": "of",
+          "begin": 41380,
+          "end": 41400
+        },
+        {
+          "word": "transistor",
+          "begin": 41400,
+          "end": 41820
+        },
+        {
+          "word": "called",
+          "begin": 41940,
+          "end": 42140
+        },
+        {
+          "word": "a",
+          "begin": 42140,
+          "end": 42280
+        },
+        {
+          "word": "floating-gate",
+          "begin": 42280,
+          "end": 42840
+        },
+        {
+          "word": "transistor.",
+          "begin": 42880,
+          "end": 43400
+        },
+        {
+          "word": "Unlike",
+          "begin": 43800,
+          "end": 44120
+        },
+        {
+          "word": "regular",
+          "begin": 44160,
+          "end": 44460
+        },
+        {
+          "word": "transistors",
+          "begin": 44560,
+          "end": 45200
+        },
+        {
+          "word": "that",
+          "begin": 45220,
+          "end": 45340
+        },
+        {
+          "word": "forget",
+          "begin": 45380,
+          "end": 45660
+        },
+        {
+          "word": "their",
+          "begin": 45680,
+          "end": 45880
+        },
+        {
+          "word": "state",
+          "begin": 45880,
+          "end": 46160
+        },
+        {
+          "word": "when",
+          "begin": 46200,
+          "end": 46320
+        },
+        {
+          "word": "power",
+          "begin": 46360,
+          "end": 46680
+        },
+        {
+          "word": "is",
+          "begin": 46680,
+          "end": 46780
+        },
+        {
+          "word": "removed,",
+          "begin": 46820,
+          "end": 47280
+        },
+        {
+          "word": "floating-gate",
+          "begin": 47600,
+          "end": 48120
+        },
+        {
+          "word": "transistors",
+          "begin": 48160,
+          "end": 48820
+        },
+        {
+          "word": "can",
+          "begin": 48860,
+          "end": 48960
+        },
+        {
+          "word": "trap",
+          "begin": 49020,
+          "end": 49260
+        },
+        {
+          "word": "electrons",
+          "begin": 49280,
+          "end": 49880
+        },
+        {
+          "word": "in",
+          "begin": 49940,
+          "end": 50020
+        },
+        {
+          "word": "an",
+          "begin": 50020,
+          "end": 50100
+        },
+        {
+          "word": "insulated",
+          "begin": 50180,
+          "end": 50680
+        },
+        {
+          "word": "layer",
+          "begin": 50720,
+          "end": 50920
+        },
+        {
+          "word": "this",
+          "begin": 51280,
+          "end": 51440
+        },
+        {
+          "word": "is",
+          "begin": 51460,
+          "end": 51560
+        },
+        {
+          "word": "how",
+          "begin": 51580,
+          "end": 51660
+        },
+        {
+          "word": "SSDs",
+          "begin": 51840,
+          "end": 52240
+        },
+        {
+          "word": "store",
+          "begin": 52380,
+          "end": 52500
+        },
+        {
+          "word": "data",
+          "begin": 52540,
+          "end": 52980
+        },
+        {
+          "word": "without",
+          "begin": 53060,
+          "end": 53340
+        },
+        {
+          "word": "power.",
+          "begin": 53380,
+          "end": 53500
+        },
+        {
+          "word": "We'll",
+          "begin": 54000,
+          "end": 54120
+        },
+        {
+          "word": "explore",
+          "begin": 54140,
+          "end": 54440
+        },
+        {
+          "word": "this",
+          "begin": 54580,
+          "end": 54780
+        },
+        {
+          "word": "in",
+          "begin": 54840,
+          "end": 54920
+        },
+        {
+          "word": "detail",
+          "begin": 54980,
+          "end": 55380
+        },
+        {
+          "word": "in",
+          "begin": 55460,
+          "end": 55540
+        },
+        {
+          "word": "Lesson",
+          "begin": 55600,
+          "end": 55880
+        },
+        {
+          "word": "2.",
+          "begin": 55880,
+          "end": 56080
+        },
+        {
+          "word": "Modern",
+          "begin": 56600,
+          "end": 56900
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "Modern SSDs contain trillions of these transistor cells, organized into a precise hierarchy (pages, blocks, planes, dies) that we'll learn about next. Understanding that they're all just tiny charge-trapping switches is the key intuition.",
+      "beginMs": 57000,
+      "endMs": 70020,
+      "timestamps": [
+        {
+          "word": "SSDs",
+          "begin": 57000,
+          "end": 57640
+        },
+        {
+          "word": "contain",
+          "begin": 57680,
+          "end": 58040
+        },
+        {
+          "word": "trillions",
+          "begin": 58100,
+          "end": 58600
+        },
+        {
+          "word": "of",
+          "begin": 58660,
+          "end": 58740
+        },
+        {
+          "word": "these",
+          "begin": 58780,
+          "end": 58940
+        },
+        {
+          "word": "transistor",
+          "begin": 59000,
+          "end": 59460
+        },
+        {
+          "word": "cells,",
+          "begin": 59580,
+          "end": 59980
+        },
+        {
+          "word": "organized",
+          "begin": 60300,
+          "end": 60780
+        },
+        {
+          "word": "into",
+          "begin": 60840,
+          "end": 61000
+        },
+        {
+          "word": "a",
+          "begin": 61060,
+          "end": 61160
+        },
+        {
+          "word": "precise",
+          "begin": 61160,
+          "end": 61560
+        },
+        {
+          "word": "hierarchy",
+          "begin": 61600,
+          "end": 62040
+        },
+        {
+          "word": "(pages,",
+          "begin": 62120,
+          "end": 62580
+        },
+        {
+          "word": "blocks,",
+          "begin": 62740,
+          "end": 63120
+        },
+        {
+          "word": "planes,",
+          "begin": 63320,
+          "end": 63740
+        },
+        {
+          "word": "dies)",
+          "begin": 64019,
+          "end": 64360
+        },
+        {
+          "word": "that",
+          "begin": 64400,
+          "end": 64440
+        },
+        {
+          "word": "we'll",
+          "begin": 64519,
+          "end": 64599
+        },
+        {
+          "word": "learn",
+          "begin": 64680,
+          "end": 64860
+        },
+        {
+          "word": "about",
+          "begin": 64860,
+          "end": 65120
+        },
+        {
+          "word": "next.",
+          "begin": 65160,
+          "end": 65560
+        },
+        {
+          "word": "Understanding",
+          "begin": 65720,
+          "end": 66220
+        },
+        {
+          "word": "that",
+          "begin": 66220,
+          "end": 66380
+        },
+        {
+          "word": "they're",
+          "begin": 66380,
+          "end": 66980
+        },
+        {
+          "word": "all",
+          "begin": 67020,
+          "end": 67120
+        },
+        {
+          "word": "just",
+          "begin": 67120,
+          "end": 67220
+        },
+        {
+          "word": "tiny",
+          "begin": 67220,
+          "end": 67500
+        },
+        {
+          "word": "charge-trapping",
+          "begin": 67620,
+          "end": 68280
+        },
+        {
+          "word": "switches",
+          "begin": 68360,
+          "end": 68800
+        },
+        {
+          "word": "is",
+          "begin": 68880,
+          "end": 69000
+        },
+        {
+          "word": "the",
+          "begin": 69040,
+          "end": 69080
+        },
+        {
+          "word": "key",
+          "begin": 69180,
+          "end": 69300
+        },
+        {
+          "word": "intuition.",
+          "begin": 69460,
+          "end": 70020
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "reveal",
+      "text": "Knowledge check: Why is a regular transistor useless for long-term data storage? What specific structural addition does a NAND cell have that solves this, and what would happen if that structure degraded? The answer: A regular transistor loses its state the instant power is removed — current either flows or it doesn't, with no memory. A NAND cell adds a floating gate, an extra conductive layer surrounded by oxide insulation that physically traps electrons. These trapped electrons shift the transistor's threshold voltage, encoding data that persists without power. If the oxide insulator degrades (from repeated program/erase cycles), electrons leak out or get stuck in the oxide itself, causing the cell to misread its stored voltage level — this is exactly how NAND cells wear out over time.",
+      "beginMs": 70020,
+      "endMs": 113700,
+      "timestamps": [
+        {
+          "word": "Knowledge",
+          "begin": 70020,
+          "end": 70660
+        },
+        {
+          "word": "check:",
+          "begin": 70760,
+          "end": 71020
+        },
+        {
+          "word": "Why",
+          "begin": 71340,
+          "end": 71640
+        },
+        {
+          "word": "is",
+          "begin": 71660,
+          "end": 71780
+        },
+        {
+          "word": "a",
+          "begin": 71800,
+          "end": 71920
+        },
+        {
+          "word": "regular",
+          "begin": 71800,
+          "end": 72080
+        },
+        {
+          "word": "transistor",
+          "begin": 72200,
+          "end": 72860
+        },
+        {
+          "word": "useless",
+          "begin": 72860,
+          "end": 73300
+        },
+        {
+          "word": "for",
+          "begin": 73360,
+          "end": 73420
+        },
+        {
+          "word": "long-term",
+          "begin": 73520,
+          "end": 73980
+        },
+        {
+          "word": "data",
+          "begin": 74040,
+          "end": 74220
+        },
+        {
+          "word": "storage?",
+          "begin": 74300,
+          "end": 74720
+        },
+        {
+          "word": "What",
+          "begin": 75060,
+          "end": 75200
+        },
+        {
+          "word": "specific",
+          "begin": 75240,
+          "end": 75720
+        },
+        {
+          "word": "structural",
+          "begin": 75780,
+          "end": 76220
+        },
+        {
+          "word": "addition",
+          "begin": 76240,
+          "end": 76680
+        },
+        {
+          "word": "does",
+          "begin": 76740,
+          "end": 76880
+        },
+        {
+          "word": "a",
+          "begin": 76900,
+          "end": 76920
+        },
+        {
+          "word": "NAND",
+          "begin": 77000,
+          "end": 77240
+        },
+        {
+          "word": "cell",
+          "begin": 77340,
+          "end": 77500
+        },
+        {
+          "word": "have",
+          "begin": 77500,
+          "end": 77880
+        },
+        {
+          "word": "that",
+          "begin": 77880,
+          "end": 77960
+        },
+        {
+          "word": "solves",
+          "begin": 77960,
+          "end": 78320
+        },
+        {
+          "word": "this,",
+          "begin": 78360,
+          "end": 78440
+        },
+        {
+          "word": "and",
+          "begin": 78500,
+          "end": 78520
+        },
+        {
+          "word": "what",
+          "begin": 78540,
+          "end": 79140
+        },
+        {
+          "word": "would",
+          "begin": 79180,
+          "end": 79320
+        },
+        {
+          "word": "happen",
+          "begin": 79360,
+          "end": 79520
+        },
+        {
+          "word": "if",
+          "begin": 79560,
+          "end": 79760
+        },
+        {
+          "word": "that",
+          "begin": 79820,
+          "end": 79980
+        },
+        {
+          "word": "structure",
+          "begin": 79980,
+          "end": 80440
+        },
+        {
+          "word": "degraded?",
+          "begin": 80480,
+          "end": 81140
+        },
+        {
+          "word": "The",
+          "begin": 81280,
+          "end": 81340
+        },
+        {
+          "word": "answer:",
+          "begin": 81420,
+          "end": 82080
+        },
+        {
+          "word": "A",
+          "begin": 82080,
+          "end": 82160
+        },
+        {
+          "word": "regular",
+          "begin": 82160,
+          "end": 82440
+        },
+        {
+          "word": "transistor",
+          "begin": 82520,
+          "end": 82980
+        },
+        {
+          "word": "loses",
+          "begin": 83100,
+          "end": 83400
+        },
+        {
+          "word": "its",
+          "begin": 83420,
+          "end": 83600
+        },
+        {
+          "word": "state",
+          "begin": 83640,
+          "end": 83880
+        },
+        {
+          "word": "the",
+          "begin": 83920,
+          "end": 83960
+        },
+        {
+          "word": "instant",
+          "begin": 84080,
+          "end": 84400
+        },
+        {
+          "word": "power",
+          "begin": 84440,
+          "end": 84780
+        },
+        {
+          "word": "is",
+          "begin": 84780,
+          "end": 84860
+        },
+        {
+          "word": "removed",
+          "begin": 84920,
+          "end": 85380
+        },
+        {
+          "word": "current",
+          "begin": 85720,
+          "end": 85980
+        },
+        {
+          "word": "either",
+          "begin": 86040,
+          "end": 86180
+        },
+        {
+          "word": "flows",
+          "begin": 86320,
+          "end": 86620
+        },
+        {
+          "word": "or",
+          "begin": 86700,
+          "end": 86780
+        },
+        {
+          "word": "it",
+          "begin": 86800,
+          "end": 86880
+        },
+        {
+          "word": "doesn't,",
+          "begin": 86920,
+          "end": 87320
+        },
+        {
+          "word": "with",
+          "begin": 87580,
+          "end": 87720
+        },
+        {
+          "word": "no",
+          "begin": 87820,
+          "end": 87900
+        },
+        {
+          "word": "memory.",
+          "begin": 88040,
+          "end": 88340
+        },
+        {
+          "word": "A",
+          "begin": 88680,
+          "end": 88720
+        },
+        {
+          "word": "NAND",
+          "begin": 88800,
+          "end": 89060
+        },
+        {
+          "word": "cell",
+          "begin": 89060,
+          "end": 89400
+        },
+        {
+          "word": "adds",
+          "begin": 89520,
+          "end": 89660
+        },
+        {
+          "word": "a",
+          "begin": 89660,
+          "end": 89720
+        },
+        {
+          "word": "floating",
+          "begin": 89820,
+          "end": 90100
+        },
+        {
+          "word": "gate,",
+          "begin": 90160,
+          "end": 90440
+        },
+        {
+          "word": "an",
+          "begin": 90740,
+          "end": 90800
+        },
+        {
+          "word": "extra",
+          "begin": 90880,
+          "end": 91120
+        },
+        {
+          "word": "conductive",
+          "begin": 91180,
+          "end": 91620
+        },
+        {
+          "word": "layer",
+          "begin": 91660,
+          "end": 91860
+        },
+        {
+          "word": "surrounded",
+          "begin": 92280,
+          "end": 92620
+        },
+        {
+          "word": "by",
+          "begin": 92620,
+          "end": 92720
+        },
+        {
+          "word": "oxide",
+          "begin": 92880,
+          "end": 93280
+        },
+        {
+          "word": "insulation",
+          "begin": 93340,
+          "end": 93900
+        },
+        {
+          "word": "that",
+          "begin": 93920,
+          "end": 94040
+        },
+        {
+          "word": "physically",
+          "begin": 94120,
+          "end": 94440
+        },
+        {
+          "word": "traps",
+          "begin": 94520,
+          "end": 94820
+        },
+        {
+          "word": "electrons.",
+          "begin": 94840,
+          "end": 95120
+        },
+        {
+          "word": "These",
+          "begin": 95140,
+          "end": 95500
+        },
+        {
+          "word": "trapped",
+          "begin": 95840,
+          "end": 96140
+        },
+        {
+          "word": "electrons",
+          "begin": 96160,
+          "end": 96680
+        },
+        {
+          "word": "shift",
+          "begin": 96700,
+          "end": 96940
+        },
+        {
+          "word": "the",
+          "begin": 97000,
+          "end": 97020
+        },
+        {
+          "word": "transistor's",
+          "begin": 97220,
+          "end": 97740
+        },
+        {
+          "word": "threshold",
+          "begin": 97760,
+          "end": 98120
+        },
+        {
+          "word": "voltage,",
+          "begin": 98160,
+          "end": 98620
+        },
+        {
+          "word": "encoding",
+          "begin": 98640,
+          "end": 99480
+        },
+        {
+          "word": "data",
+          "begin": 99540,
+          "end": 99980
+        },
+        {
+          "word": "that",
+          "begin": 100040,
+          "end": 100200
+        },
+        {
+          "word": "persists",
+          "begin": 100200,
+          "end": 100800
+        },
+        {
+          "word": "without",
+          "begin": 100840,
+          "end": 101120
+        },
+        {
+          "word": "power.",
+          "begin": 101180,
+          "end": 101460
+        },
+        {
+          "word": "If",
+          "begin": 101680,
+          "end": 101760
+        },
+        {
+          "word": "the",
+          "begin": 101800,
+          "end": 101840
+        },
+        {
+          "word": "oxide",
+          "begin": 101960,
+          "end": 102320
+        },
+        {
+          "word": "insulator",
+          "begin": 102380,
+          "end": 102780
+        },
+        {
+          "word": "degrades",
+          "begin": 102880,
+          "end": 103380
+        },
+        {
+          "word": "(from",
+          "begin": 103380,
+          "end": 103500
+        },
+        {
+          "word": "repeated",
+          "begin": 103520,
+          "end": 103880
+        },
+        {
+          "word": "program/erase",
+          "begin": 103940,
+          "end": 104640
+        },
+        {
+          "word": "cycles),",
+          "begin": 104680,
+          "end": 105140
+        },
+        {
+          "word": "electrons",
+          "begin": 105520,
+          "end": 106000
+        },
+        {
+          "word": "leak",
+          "begin": 106060,
+          "end": 106220
+        },
+        {
+          "word": "out",
+          "begin": 106280,
+          "end": 106660
+        },
+        {
+          "word": "or",
+          "begin": 106680,
+          "end": 106700
+        },
+        {
+          "word": "get",
+          "begin": 106680,
+          "end": 106780
+        },
+        {
+          "word": "stuck",
+          "begin": 106840,
+          "end": 107060
+        },
+        {
+          "word": "in",
+          "begin": 107080,
+          "end": 107120
+        },
+        {
+          "word": "the",
+          "begin": 107140,
+          "end": 107200
+        },
+        {
+          "word": "oxide",
+          "begin": 107280,
+          "end": 107640
+        },
+        {
+          "word": "itself,",
+          "begin": 107660,
+          "end": 108140
+        },
+        {
+          "word": "causing",
+          "begin": 108480,
+          "end": 108760
+        },
+        {
+          "word": "the",
+          "begin": 108800,
+          "end": 108840
+        },
+        {
+          "word": "cell",
+          "begin": 108940,
+          "end": 109120
+        },
+        {
+          "word": "to",
+          "begin": 109180,
+          "end": 109240
+        },
+        {
+          "word": "misread",
+          "begin": 109320,
+          "end": 109700
+        },
+        {
+          "word": "its",
+          "begin": 109720,
+          "end": 109840
+        },
+        {
+          "word": "stored",
+          "begin": 109880,
+          "end": 110140
+        },
+        {
+          "word": "voltage",
+          "begin": 110200,
+          "end": 110540
+        },
+        {
+          "word": "level",
+          "begin": 110600,
+          "end": 110780
+        },
+        {
+          "word": "this",
+          "begin": 111200,
+          "end": 111360
+        },
+        {
+          "word": "is",
+          "begin": 111380,
+          "end": 111480
+        },
+        {
+          "word": "exactly",
+          "begin": 111500,
+          "end": 112000
+        },
+        {
+          "word": "how",
+          "begin": 112060,
+          "end": 112140
+        },
+        {
+          "word": "NAND",
+          "begin": 112240,
+          "end": 112440
+        },
+        {
+          "word": "cells",
+          "begin": 112500,
+          "end": 112740
+        },
+        {
+          "word": "wear",
+          "begin": 112780,
+          "end": 112960
+        },
+        {
+          "word": "out",
+          "begin": 113000,
+          "end": 113140
+        },
+        {
+          "word": "over",
+          "begin": 113180,
+          "end": 113320
+        },
+        {
+          "word": "time.",
+          "begin": 113400,
+          "end": 113700
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

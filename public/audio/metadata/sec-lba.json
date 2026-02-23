@@ -1,0 +1,3594 @@
+{
+  "sectionId": "sec-lba",
+  "audioFile": "/audio/sections/sec-lba.mp3",
+  "totalDurationMs": 326400,
+  "fileSizeBytes": 5223552,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "Addressing Storage — LBA",
+      "beginMs": 0,
+      "endMs": 2360,
+      "timestamps": [
+        {
+          "word": "Addressing",
+          "begin": 0,
+          "end": 420
+        },
+        {
+          "word": "Storage",
+          "begin": 540,
+          "end": 1020
+        },
+        {
+          "word": "LBA",
+          "begin": 1360,
+          "end": 1680
+        },
+        {
+          "word": "Analogy:",
+          "begin": 1900,
+          "end": 2360
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: LBA Is Like Numbered Mailboxes. Imagine a very long row of numbered mailboxes. Each mailbox holds a small, fixed amount of data. To read or write data, you just say 'give me mailbox #42' — you don't need to know where it physically sits. The SSD handles the physical location internally.",
+      "beginMs": 2720,
+      "endMs": 21000,
+      "timestamps": [
+        {
+          "word": "LBA",
+          "begin": 2720,
+          "end": 3300
+        },
+        {
+          "word": "Is",
+          "begin": 3340,
+          "end": 3380
+        },
+        {
+          "word": "Like",
+          "begin": 3400,
+          "end": 3580
+        },
+        {
+          "word": "Numbered",
+          "begin": 3640,
+          "end": 3920
+        },
+        {
+          "word": "Mailboxes.",
+          "begin": 3960,
+          "end": 4680
+        },
+        {
+          "word": "Imagine",
+          "begin": 5040,
+          "end": 5440
+        },
+        {
+          "word": "a",
+          "begin": 5440,
+          "end": 5480
+        },
+        {
+          "word": "very",
+          "begin": 5560,
+          "end": 5760
+        },
+        {
+          "word": "long",
+          "begin": 5860,
+          "end": 6080
+        },
+        {
+          "word": "row",
+          "begin": 6080,
+          "end": 6240
+        },
+        {
+          "word": "of",
+          "begin": 6460,
+          "end": 6540
+        },
+        {
+          "word": "numbered",
+          "begin": 6620,
+          "end": 6920
+        },
+        {
+          "word": "mailboxes.",
+          "begin": 6960,
+          "end": 7660
+        },
+        {
+          "word": "Each",
+          "begin": 8000,
+          "end": 8140
+        },
+        {
+          "word": "mailbox",
+          "begin": 8220,
+          "end": 8680
+        },
+        {
+          "word": "holds",
+          "begin": 8700,
+          "end": 8920
+        },
+        {
+          "word": "a",
+          "begin": 8940,
+          "end": 8960
+        },
+        {
+          "word": "small,",
+          "begin": 9080,
+          "end": 9380
+        },
+        {
+          "word": "fixed",
+          "begin": 9500,
+          "end": 9760
+        },
+        {
+          "word": "amount",
+          "begin": 9780,
+          "end": 10040
+        },
+        {
+          "word": "of",
+          "begin": 10060,
+          "end": 10120
+        },
+        {
+          "word": "data.",
+          "begin": 10160,
+          "end": 10400
+        },
+        {
+          "word": "To",
+          "begin": 10680,
+          "end": 10760
+        },
+        {
+          "word": "read",
+          "begin": 10840,
+          "end": 11020
+        },
+        {
+          "word": "or",
+          "begin": 11040,
+          "end": 11060
+        },
+        {
+          "word": "write",
+          "begin": 11160,
+          "end": 11360
+        },
+        {
+          "word": "data,",
+          "begin": 11400,
+          "end": 11660
+        },
+        {
+          "word": "you",
+          "begin": 11980,
+          "end": 12040
+        },
+        {
+          "word": "just",
+          "begin": 12120,
+          "end": 12320
+        },
+        {
+          "word": "say",
+          "begin": 12380,
+          "end": 12460
+        },
+        {
+          "word": "'give",
+          "begin": 12760,
+          "end": 12860
+        },
+        {
+          "word": "me",
+          "begin": 12860,
+          "end": 12920
+        },
+        {
+          "word": "mailbox",
+          "begin": 12920,
+          "end": 13520
+        },
+        {
+          "word": "#42'",
+          "begin": 13580,
+          "end": 14340
+        },
+        {
+          "word": "you",
+          "begin": 14720,
+          "end": 14780
+        },
+        {
+          "word": "don't",
+          "begin": 14820,
+          "end": 15000
+        },
+        {
+          "word": "need",
+          "begin": 15020,
+          "end": 15140
+        },
+        {
+          "word": "to",
+          "begin": 15180,
+          "end": 15240
+        },
+        {
+          "word": "know",
+          "begin": 15300,
+          "end": 15480
+        },
+        {
+          "word": "where",
+          "begin": 15480,
+          "end": 15620
+        },
+        {
+          "word": "it",
+          "begin": 15620,
+          "end": 15720
+        },
+        {
+          "word": "physically",
+          "begin": 15780,
+          "end": 16120
+        },
+        {
+          "word": "sits.",
+          "begin": 16280,
+          "end": 17540
+        },
+        {
+          "word": "The",
+          "begin": 17620,
+          "end": 17700
+        },
+        {
+          "word": "handles",
+          "begin": 17880,
+          "end": 18240
+        },
+        {
+          "word": "the",
+          "begin": 18260,
+          "end": 18320
+        },
+        {
+          "word": "physical",
+          "begin": 18400,
+          "end": 18720
+        },
+        {
+          "word": "location",
+          "begin": 18820,
+          "end": 19360
+        },
+        {
+          "word": "internally.",
+          "begin": 19380,
+          "end": 19900
+        },
+        {
+          "word": "LBA",
+          "begin": 20080,
+          "end": 20500
+        },
+        {
+          "word": "(Logical",
+          "begin": 20640,
+          "end": 21000
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "term",
+      "text": "LBA (Logical Block Addressing): A numbering system that divides the entire storage drive into fixed-size blocks, numbered starting from 0. 'Logical' means these are virtual addresses — the OS uses them, but the SSD maps them to physical NAND locations internally.",
+      "beginMs": 21100,
+      "endMs": 37040,
+      "timestamps": [
+        {
+          "word": "Block",
+          "begin": 21100,
+          "end": 21360
+        },
+        {
+          "word": "Addressing):",
+          "begin": 21380,
+          "end": 21880
+        },
+        {
+          "word": "A",
+          "begin": 22240,
+          "end": 22280
+        },
+        {
+          "word": "numbering",
+          "begin": 22360,
+          "end": 22720
+        },
+        {
+          "word": "system",
+          "begin": 22800,
+          "end": 23180
+        },
+        {
+          "word": "that",
+          "begin": 23440,
+          "end": 23560
+        },
+        {
+          "word": "divides",
+          "begin": 23580,
+          "end": 23980
+        },
+        {
+          "word": "the",
+          "begin": 23980,
+          "end": 24100
+        },
+        {
+          "word": "entire",
+          "begin": 24160,
+          "end": 24560
+        },
+        {
+          "word": "storage",
+          "begin": 24680,
+          "end": 25040
+        },
+        {
+          "word": "drive",
+          "begin": 25140,
+          "end": 25460
+        },
+        {
+          "word": "into",
+          "begin": 25540,
+          "end": 25680
+        },
+        {
+          "word": "fixed-size",
+          "begin": 25800,
+          "end": 26420
+        },
+        {
+          "word": "blocks,",
+          "begin": 26520,
+          "end": 26980
+        },
+        {
+          "word": "numbered",
+          "begin": 27320,
+          "end": 27640
+        },
+        {
+          "word": "starting",
+          "begin": 27720,
+          "end": 28060
+        },
+        {
+          "word": "from",
+          "begin": 28120,
+          "end": 28280
+        },
+        {
+          "word": "0.",
+          "begin": 28360,
+          "end": 28620
+        },
+        {
+          "word": "'Logical'",
+          "begin": 29100,
+          "end": 29480
+        },
+        {
+          "word": "means",
+          "begin": 29620,
+          "end": 29960
+        },
+        {
+          "word": "these",
+          "begin": 30140,
+          "end": 30300
+        },
+        {
+          "word": "are",
+          "begin": 30340,
+          "end": 30360
+        },
+        {
+          "word": "virtual",
+          "begin": 30480,
+          "end": 30860
+        },
+        {
+          "word": "addresses",
+          "begin": 30900,
+          "end": 31480
+        },
+        {
+          "word": "the",
+          "begin": 31800,
+          "end": 31840
+        },
+        {
+          "word": "OS",
+          "begin": 31980,
+          "end": 32299
+        },
+        {
+          "word": "uses",
+          "begin": 32340,
+          "end": 32640
+        },
+        {
+          "word": "them,",
+          "begin": 32680,
+          "end": 32880
+        },
+        {
+          "word": "but",
+          "begin": 33040,
+          "end": 33080
+        },
+        {
+          "word": "the",
+          "begin": 33160,
+          "end": 33220
+        },
+        {
+          "word": "SSD",
+          "begin": 33360,
+          "end": 33840
+        },
+        {
+          "word": "maps",
+          "begin": 34160,
+          "end": 34420
+        },
+        {
+          "word": "them",
+          "begin": 34480,
+          "end": 34580
+        },
+        {
+          "word": "to",
+          "begin": 34620,
+          "end": 34680
+        },
+        {
+          "word": "physical",
+          "begin": 34780,
+          "end": 35060
+        },
+        {
+          "word": "NAND",
+          "begin": 35160,
+          "end": 35380
+        },
+        {
+          "word": "locations",
+          "begin": 35400,
+          "end": 35980
+        },
+        {
+          "word": "internally.",
+          "begin": 36080,
+          "end": 36560
+        },
+        {
+          "word": "We",
+          "begin": 36980,
+          "end": 37040
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "We know data is made of bits and bytes. But an SSD holds a trillion bytes — how does the computer know where to find a specific piece of data? It needs an addressing system, like street addresses for houses.",
+      "beginMs": 37120,
+      "endMs": 72860,
+      "timestamps": [
+        {
+          "word": "know",
+          "begin": 37120,
+          "end": 37200
+        },
+        {
+          "word": "data",
+          "begin": 37340,
+          "end": 37580
+        },
+        {
+          "word": "is",
+          "begin": 37680,
+          "end": 37780
+        },
+        {
+          "word": "made",
+          "begin": 37820,
+          "end": 37980
+        },
+        {
+          "word": "of",
+          "begin": 38000,
+          "end": 38080
+        },
+        {
+          "word": "bits",
+          "begin": 38180,
+          "end": 38400
+        },
+        {
+          "word": "and",
+          "begin": 38480,
+          "end": 38700
+        },
+        {
+          "word": "an",
+          "begin": 38480,
+          "end": 38500
+        },
+        {
+          "word": "trillion",
+          "begin": 38540,
+          "end": 38560
+        },
+        {
+          "word": "bytes",
+          "begin": 38620,
+          "end": 38640
+        },
+        {
+          "word": "how",
+          "begin": 38680,
+          "end": 38700
+        },
+        {
+          "word": "to",
+          "begin": 38880,
+          "end": 38900
+        },
+        {
+          "word": "piece",
+          "begin": 38940,
+          "end": 38960
+        },
+        {
+          "word": "It",
+          "begin": 60340,
+          "end": 60440
+        },
+        {
+          "word": "needs",
+          "begin": 60480,
+          "end": 60680
+        },
+        {
+          "word": "an",
+          "begin": 60680,
+          "end": 60820
+        },
+        {
+          "word": "addressing",
+          "begin": 60920,
+          "end": 61360
+        },
+        {
+          "word": "system,",
+          "begin": 61440,
+          "end": 61820
+        },
+        {
+          "word": "like",
+          "begin": 62240,
+          "end": 62380
+        },
+        {
+          "word": "street",
+          "begin": 62460,
+          "end": 62680
+        },
+        {
+          "word": "addresses",
+          "begin": 62700,
+          "end": 63140
+        },
+        {
+          "word": "for",
+          "begin": 63200,
+          "end": 63360
+        },
+        {
+          "word": "houses.",
+          "begin": 63360,
+          "end": 63840
+        },
+        {
+          "word": "Imagine",
+          "begin": 67360,
+          "end": 67800
+        },
+        {
+          "word": "a",
+          "begin": 67820,
+          "end": 67840
+        },
+        {
+          "word": "very",
+          "begin": 67960,
+          "end": 68180
+        },
+        {
+          "word": "long",
+          "begin": 68280,
+          "end": 68500
+        },
+        {
+          "word": "row",
+          "begin": 68500,
+          "end": 68660
+        },
+        {
+          "word": "of",
+          "begin": 68860,
+          "end": 68960
+        },
+        {
+          "word": "numbered",
+          "begin": 69020,
+          "end": 69320
+        },
+        {
+          "word": "mailboxes.",
+          "begin": 69380,
+          "end": 70120
+        },
+        {
+          "word": "Each",
+          "begin": 70620,
+          "end": 70760
+        },
+        {
+          "word": "mailbox",
+          "begin": 70840,
+          "end": 71320
+        },
+        {
+          "word": "holds",
+          "begin": 71360,
+          "end": 71580
+        },
+        {
+          "word": "a",
+          "begin": 71600,
+          "end": 71620
+        },
+        {
+          "word": "small,",
+          "begin": 71760,
+          "end": 72060
+        },
+        {
+          "word": "fixed",
+          "begin": 72200,
+          "end": 72500
+        },
+        {
+          "word": "amount",
+          "begin": 72520,
+          "end": 72760
+        },
+        {
+          "word": "of",
+          "begin": 72800,
+          "end": 72860
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "Imagine a very long row of numbered mailboxes. Each mailbox holds a small, fixed amount of data. When you want to read or write data, you just say &ldquo;give me mailbox number 42&rdquo; — you don't need to know where it physically sits on the drive.",
+      "beginMs": 72920,
+      "endMs": 86760,
+      "timestamps": [
+        {
+          "word": "data.",
+          "begin": 72920,
+          "end": 73160
+        },
+        {
+          "word": "When",
+          "begin": 74500,
+          "end": 74620
+        },
+        {
+          "word": "you",
+          "begin": 74620,
+          "end": 74680
+        },
+        {
+          "word": "want",
+          "begin": 74740,
+          "end": 74860
+        },
+        {
+          "word": "to",
+          "begin": 74900,
+          "end": 74960
+        },
+        {
+          "word": "read",
+          "begin": 75080,
+          "end": 75320
+        },
+        {
+          "word": "or",
+          "begin": 75340,
+          "end": 75360
+        },
+        {
+          "word": "write",
+          "begin": 75480,
+          "end": 75680
+        },
+        {
+          "word": "data,",
+          "begin": 75720,
+          "end": 76400
+        },
+        {
+          "word": "you",
+          "begin": 76460,
+          "end": 76520
+        },
+        {
+          "word": "just",
+          "begin": 76600,
+          "end": 77140
+        },
+        {
+          "word": "say",
+          "begin": 77140,
+          "end": 77240
+        },
+        {
+          "word": "&ldquo;give",
+          "begin": 77260,
+          "end": 78260
+        },
+        {
+          "word": "me",
+          "begin": 78300,
+          "end": 78560
+        },
+        {
+          "word": "mailbox",
+          "begin": 78620,
+          "end": 78960
+        },
+        {
+          "word": "number",
+          "begin": 79000,
+          "end": 78800
+        },
+        {
+          "word": "42&rdquo;",
+          "begin": 78940,
+          "end": 80360
+        },
+        {
+          "word": "you",
+          "begin": 80880,
+          "end": 80940
+        },
+        {
+          "word": "don't",
+          "begin": 80980,
+          "end": 81160
+        },
+        {
+          "word": "need",
+          "begin": 81180,
+          "end": 81300
+        },
+        {
+          "word": "to",
+          "begin": 81340,
+          "end": 81400
+        },
+        {
+          "word": "know",
+          "begin": 81500,
+          "end": 81580
+        },
+        {
+          "word": "where",
+          "begin": 81720,
+          "end": 81860
+        },
+        {
+          "word": "it",
+          "begin": 81860,
+          "end": 81960
+        },
+        {
+          "word": "physically",
+          "begin": 82040,
+          "end": 82340
+        },
+        {
+          "word": "sits",
+          "begin": 82340,
+          "end": 82780
+        },
+        {
+          "word": "on",
+          "begin": 82820,
+          "end": 82920
+        },
+        {
+          "word": "the",
+          "begin": 82920,
+          "end": 82980
+        },
+        {
+          "word": "drive.",
+          "begin": 83040,
+          "end": 83420
+        },
+        {
+          "word": "That's",
+          "begin": 86560,
+          "end": 86760
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "That's exactly how Logical Block Addressing (LBA) works. The entire storage drive is divided into fixed-size blocks, numbered starting from 0. Each block is called an LBA. The &ldquo;logical&rdquo; part means these are virtual addresses — your computer uses them, but the SSD internally maps them to the actual physical locations on the NAND chips.",
+      "beginMs": 86800,
+      "endMs": 110620,
+      "timestamps": [
+        {
+          "word": "exactly",
+          "begin": 86800,
+          "end": 87320
+        },
+        {
+          "word": "how",
+          "begin": 87440,
+          "end": 87520
+        },
+        {
+          "word": "Logical",
+          "begin": 87640,
+          "end": 87980
+        },
+        {
+          "word": "Block",
+          "begin": 88060,
+          "end": 88300
+        },
+        {
+          "word": "Addressing",
+          "begin": 88320,
+          "end": 88740
+        },
+        {
+          "word": "(LBA)",
+          "begin": 88840,
+          "end": 89180
+        },
+        {
+          "word": "works.",
+          "begin": 89340,
+          "end": 89740
+        },
+        {
+          "word": "The",
+          "begin": 90640,
+          "end": 90680
+        },
+        {
+          "word": "entire",
+          "begin": 90720,
+          "end": 91040
+        },
+        {
+          "word": "storage",
+          "begin": 91140,
+          "end": 91460
+        },
+        {
+          "word": "drive",
+          "begin": 91540,
+          "end": 91880
+        },
+        {
+          "word": "is",
+          "begin": 91920,
+          "end": 91940
+        },
+        {
+          "word": "divided",
+          "begin": 91940,
+          "end": 92480
+        },
+        {
+          "word": "into",
+          "begin": 92480,
+          "end": 92520
+        },
+        {
+          "word": "fixed-size",
+          "begin": 92600,
+          "end": 93120
+        },
+        {
+          "word": "blocks,",
+          "begin": 93120,
+          "end": 93520
+        },
+        {
+          "word": "numbered",
+          "begin": 93900,
+          "end": 94180
+        },
+        {
+          "word": "starting",
+          "begin": 94240,
+          "end": 94560
+        },
+        {
+          "word": "from",
+          "begin": 94620,
+          "end": 94740
+        },
+        {
+          "word": "0.",
+          "begin": 94840,
+          "end": 95820
+        },
+        {
+          "word": "Each",
+          "begin": 95820,
+          "end": 95960
+        },
+        {
+          "word": "block",
+          "begin": 96040,
+          "end": 96300
+        },
+        {
+          "word": "is",
+          "begin": 96320,
+          "end": 96400
+        },
+        {
+          "word": "called",
+          "begin": 96440,
+          "end": 96680
+        },
+        {
+          "word": "an",
+          "begin": 96700,
+          "end": 96760
+        },
+        {
+          "word": "LBA.",
+          "begin": 96840,
+          "end": 97180
+        },
+        {
+          "word": "The",
+          "begin": 98120,
+          "end": 98700
+        },
+        {
+          "word": "&ldquo;logical&rdquo;",
+          "begin": 99120,
+          "end": 100620
+        },
+        {
+          "word": "part",
+          "begin": 100620,
+          "end": 100840
+        },
+        {
+          "word": "means",
+          "begin": 100840,
+          "end": 101140
+        },
+        {
+          "word": "these",
+          "begin": 101140,
+          "end": 101240
+        },
+        {
+          "word": "are",
+          "begin": 101260,
+          "end": 101440
+        },
+        {
+          "word": "virtual",
+          "begin": 101560,
+          "end": 101940
+        },
+        {
+          "word": "addresses",
+          "begin": 101960,
+          "end": 102560
+        },
+        {
+          "word": "your",
+          "begin": 102900,
+          "end": 102960
+        },
+        {
+          "word": "computer",
+          "begin": 103040,
+          "end": 103380
+        },
+        {
+          "word": "uses",
+          "begin": 103480,
+          "end": 103780
+        },
+        {
+          "word": "them,",
+          "begin": 103820,
+          "end": 104040
+        },
+        {
+          "word": "but",
+          "begin": 104440,
+          "end": 104520
+        },
+        {
+          "word": "the",
+          "begin": 104560,
+          "end": 104600
+        },
+        {
+          "word": "SSD",
+          "begin": 104700,
+          "end": 105140
+        },
+        {
+          "word": "internally",
+          "begin": 105240,
+          "end": 105680
+        },
+        {
+          "word": "maps",
+          "begin": 105760,
+          "end": 106000
+        },
+        {
+          "word": "them",
+          "begin": 106060,
+          "end": 106180
+        },
+        {
+          "word": "to",
+          "begin": 106240,
+          "end": 106280
+        },
+        {
+          "word": "the",
+          "begin": 106320,
+          "end": 106380
+        },
+        {
+          "word": "actual",
+          "begin": 106460,
+          "end": 106760
+        },
+        {
+          "word": "physical",
+          "begin": 106840,
+          "end": 107140
+        },
+        {
+          "word": "locations",
+          "begin": 107220,
+          "end": 107800
+        },
+        {
+          "word": "on",
+          "begin": 107840,
+          "end": 107940
+        },
+        {
+          "word": "the",
+          "begin": 107940,
+          "end": 108000
+        },
+        {
+          "word": "NAND",
+          "begin": 108040,
+          "end": 108320
+        },
+        {
+          "word": "chips.",
+          "begin": 108440,
+          "end": 108840
+        },
+        {
+          "word": "But",
+          "begin": 110540,
+          "end": 110620
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "But why &ldquo;logical&rdquo;? Why not just use physical addresses directly? Because the SSD constantly moves data around internally (for wear leveling, garbage collection, and error recovery). If the OS used physical addresses, every internal move would break the OS's bookkeeping. The LBA abstraction means the OS sees a stable, unchanging address space while the SSD manages the physical chaos underneath. (We'll see exactly how this mapping works when we cover the FTL later.)",
+      "beginMs": 110680,
+      "endMs": 138800,
+      "timestamps": [
+        {
+          "word": "why",
+          "begin": 110680,
+          "end": 111340
+        },
+        {
+          "word": "&ldquo;logical&rdquo;?",
+          "begin": 111800,
+          "end": 112680
+        },
+        {
+          "word": "Why",
+          "begin": 113400,
+          "end": 113480
+        },
+        {
+          "word": "not",
+          "begin": 113600,
+          "end": 113740
+        },
+        {
+          "word": "just",
+          "begin": 113740,
+          "end": 113960
+        },
+        {
+          "word": "use",
+          "begin": 113980,
+          "end": 114160
+        },
+        {
+          "word": "physical",
+          "begin": 114220,
+          "end": 114520
+        },
+        {
+          "word": "addresses",
+          "begin": 114660,
+          "end": 115120
+        },
+        {
+          "word": "directly?",
+          "begin": 115160,
+          "end": 115580
+        },
+        {
+          "word": "Because",
+          "begin": 115940,
+          "end": 116200
+        },
+        {
+          "word": "the",
+          "begin": 116240,
+          "end": 116280
+        },
+        {
+          "word": "SSD",
+          "begin": 116400,
+          "end": 116860
+        },
+        {
+          "word": "constantly",
+          "begin": 116980,
+          "end": 117400
+        },
+        {
+          "word": "moves",
+          "begin": 117400,
+          "end": 117780
+        },
+        {
+          "word": "data",
+          "begin": 117840,
+          "end": 118040
+        },
+        {
+          "word": "around",
+          "begin": 118120,
+          "end": 118460
+        },
+        {
+          "word": "internally",
+          "begin": 118520,
+          "end": 119000
+        },
+        {
+          "word": "(for",
+          "begin": 119200,
+          "end": 119260
+        },
+        {
+          "word": "wear",
+          "begin": 119340,
+          "end": 119420
+        },
+        {
+          "word": "leveling,",
+          "begin": 119560,
+          "end": 119980
+        },
+        {
+          "word": "garbage",
+          "begin": 120080,
+          "end": 120400
+        },
+        {
+          "word": "collection,",
+          "begin": 120460,
+          "end": 120920
+        },
+        {
+          "word": "and",
+          "begin": 120920,
+          "end": 121100
+        },
+        {
+          "word": "error",
+          "begin": 121200,
+          "end": 121220
+        },
+        {
+          "word": "recovery).",
+          "begin": 121360,
+          "end": 121800
+        },
+        {
+          "word": "If",
+          "begin": 122240,
+          "end": 122340
+        },
+        {
+          "word": "the",
+          "begin": 122340,
+          "end": 122420
+        },
+        {
+          "word": "OS",
+          "begin": 122440,
+          "end": 122880
+        },
+        {
+          "word": "used",
+          "begin": 122920,
+          "end": 123140
+        },
+        {
+          "word": "physical",
+          "begin": 123200,
+          "end": 123500
+        },
+        {
+          "word": "addresses,",
+          "begin": 123640,
+          "end": 124240
+        },
+        {
+          "word": "every",
+          "begin": 124400,
+          "end": 124620
+        },
+        {
+          "word": "internal",
+          "begin": 124760,
+          "end": 125120
+        },
+        {
+          "word": "move",
+          "begin": 125240,
+          "end": 125520
+        },
+        {
+          "word": "would",
+          "begin": 125540,
+          "end": 125640
+        },
+        {
+          "word": "break",
+          "begin": 125700,
+          "end": 125960
+        },
+        {
+          "word": "the",
+          "begin": 125960,
+          "end": 126000
+        },
+        {
+          "word": "OS's",
+          "begin": 126120,
+          "end": 126520
+        },
+        {
+          "word": "bookkeeping.",
+          "begin": 126600,
+          "end": 127180
+        },
+        {
+          "word": "The",
+          "begin": 127600,
+          "end": 127660
+        },
+        {
+          "word": "LBA",
+          "begin": 127800,
+          "end": 128340
+        },
+        {
+          "word": "abstraction",
+          "begin": 128400,
+          "end": 128979
+        },
+        {
+          "word": "means",
+          "begin": 129020,
+          "end": 129180
+        },
+        {
+          "word": "the",
+          "begin": 129220,
+          "end": 129300
+        },
+        {
+          "word": "OS",
+          "begin": 129460,
+          "end": 129740
+        },
+        {
+          "word": "sees",
+          "begin": 129780,
+          "end": 129960
+        },
+        {
+          "word": "a",
+          "begin": 130000,
+          "end": 130120
+        },
+        {
+          "word": "stable,",
+          "begin": 130120,
+          "end": 130440
+        },
+        {
+          "word": "unchanging",
+          "begin": 130639,
+          "end": 131140
+        },
+        {
+          "word": "address",
+          "begin": 131220,
+          "end": 131540
+        },
+        {
+          "word": "space",
+          "begin": 131560,
+          "end": 131920
+        },
+        {
+          "word": "while",
+          "begin": 132040,
+          "end": 132140
+        },
+        {
+          "word": "the",
+          "begin": 132200,
+          "end": 132260
+        },
+        {
+          "word": "SSD",
+          "begin": 132380,
+          "end": 132840
+        },
+        {
+          "word": "manages",
+          "begin": 132980,
+          "end": 133420
+        },
+        {
+          "word": "the",
+          "begin": 133480,
+          "end": 133520
+        },
+        {
+          "word": "physical",
+          "begin": 133620,
+          "end": 133920
+        },
+        {
+          "word": "chaos",
+          "begin": 134020,
+          "end": 134380
+        },
+        {
+          "word": "underneath.",
+          "begin": 134420,
+          "end": 134940
+        },
+        {
+          "word": "(We'll",
+          "begin": 135380,
+          "end": 135480
+        },
+        {
+          "word": "see",
+          "begin": 135560,
+          "end": 135640
+        },
+        {
+          "word": "exactly",
+          "begin": 135700,
+          "end": 136140
+        },
+        {
+          "word": "how",
+          "begin": 136140,
+          "end": 136280
+        },
+        {
+          "word": "this",
+          "begin": 136360,
+          "end": 136500
+        },
+        {
+          "word": "mapping",
+          "begin": 136560,
+          "end": 136880
+        },
+        {
+          "word": "works",
+          "begin": 136920,
+          "end": 137280
+        },
+        {
+          "word": "when",
+          "begin": 137340,
+          "end": 137460
+        },
+        {
+          "word": "we",
+          "begin": 137500,
+          "end": 137560
+        },
+        {
+          "word": "cover",
+          "begin": 137640,
+          "end": 137840
+        },
+        {
+          "word": "the",
+          "begin": 137940,
+          "end": 137980
+        },
+        {
+          "word": "FTL",
+          "begin": 138080,
+          "end": 138500
+        },
+        {
+          "word": "later.)",
+          "begin": 138580,
+          "end": 138800
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "Each LBA has a fixed size — either 512 bytes (the traditional size from hard disk days) or 4096 bytes (4 KB) (which matches how modern SSDs work internally, making them more efficient).",
+      "beginMs": 139140,
+      "endMs": 152700,
+      "timestamps": [
+        {
+          "word": "Each",
+          "begin": 139140,
+          "end": 139320
+        },
+        {
+          "word": "LBA",
+          "begin": 139460,
+          "end": 140040
+        },
+        {
+          "word": "has",
+          "begin": 140040,
+          "end": 140200
+        },
+        {
+          "word": "a",
+          "begin": 140220,
+          "end": 140240
+        },
+        {
+          "word": "fixed",
+          "begin": 140360,
+          "end": 140580
+        },
+        {
+          "word": "size",
+          "begin": 140640,
+          "end": 141020
+        },
+        {
+          "word": "either",
+          "begin": 141200,
+          "end": 141620
+        },
+        {
+          "word": "512",
+          "begin": 141620,
+          "end": 142420
+        },
+        {
+          "word": "bytes",
+          "begin": 142420,
+          "end": 142900
+        },
+        {
+          "word": "(the",
+          "begin": 142900,
+          "end": 142940
+        },
+        {
+          "word": "traditional",
+          "begin": 143000,
+          "end": 143440
+        },
+        {
+          "word": "size",
+          "begin": 143560,
+          "end": 143880
+        },
+        {
+          "word": "from",
+          "begin": 143940,
+          "end": 144060
+        },
+        {
+          "word": "hard",
+          "begin": 144140,
+          "end": 144340
+        },
+        {
+          "word": "disk",
+          "begin": 144380,
+          "end": 144620
+        },
+        {
+          "word": "days)",
+          "begin": 144700,
+          "end": 145580
+        },
+        {
+          "word": "or",
+          "begin": 145620,
+          "end": 145760
+        },
+        {
+          "word": "4096",
+          "begin": 145760,
+          "end": 146580
+        },
+        {
+          "word": "bytes",
+          "begin": 146640,
+          "end": 146940
+        },
+        {
+          "word": "(4",
+          "begin": 147120,
+          "end": 147360
+        },
+        {
+          "word": "KB)",
+          "begin": 147360,
+          "end": 147660
+        },
+        {
+          "word": "(which",
+          "begin": 147920,
+          "end": 148060
+        },
+        {
+          "word": "matches",
+          "begin": 148140,
+          "end": 148480
+        },
+        {
+          "word": "how",
+          "begin": 148520,
+          "end": 148580
+        },
+        {
+          "word": "modern",
+          "begin": 148700,
+          "end": 149220
+        },
+        {
+          "word": "SSDs",
+          "begin": 149260,
+          "end": 149760
+        },
+        {
+          "word": "work",
+          "begin": 149820,
+          "end": 150020
+        },
+        {
+          "word": "internally,",
+          "begin": 150040,
+          "end": 150520
+        },
+        {
+          "word": "making",
+          "begin": 150920,
+          "end": 151220
+        },
+        {
+          "word": "them",
+          "begin": 151260,
+          "end": 151400
+        },
+        {
+          "word": "more",
+          "begin": 151460,
+          "end": 151620
+        },
+        {
+          "word": "efficient).",
+          "begin": 151640,
+          "end": 152180
+        },
+        {
+          "word": "Older",
+          "begin": 152480,
+          "end": 152700
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "info",
+      "text": "512 bytes vs 4 KB — why two sizes?: Older hard drives used 512-byte sectors, so most software was written for that size. Modern SSDs internally use 4 KB pages, but they can emulate 512-byte sectors for compatibility. What happens when the OS writes 512 bytes to a 4KB-native SSD? The SSD must read the full 4KB page, modify the 512 bytes, and write the whole page back — a read-modify-write cycle that wastes bandwidth. Using native 4 KB sectors avoids this entirely. You can check what your drive supports (and switch) using nvme id-ns.",
+      "beginMs": 152820,
+      "endMs": 192580,
+      "timestamps": [
+        {
+          "word": "hard",
+          "begin": 152820,
+          "end": 153020
+        },
+        {
+          "word": "drives",
+          "begin": 153060,
+          "end": 153420
+        },
+        {
+          "word": "used",
+          "begin": 153460,
+          "end": 153740
+        },
+        {
+          "word": "512-byte",
+          "begin": 153840,
+          "end": 155260
+        },
+        {
+          "word": "sectors,",
+          "begin": 155360,
+          "end": 155840
+        },
+        {
+          "word": "so",
+          "begin": 156200,
+          "end": 156600
+        },
+        {
+          "word": "most",
+          "begin": 156600,
+          "end": 156620
+        },
+        {
+          "word": "software",
+          "begin": 156680,
+          "end": 157200
+        },
+        {
+          "word": "was",
+          "begin": 157200,
+          "end": 157320
+        },
+        {
+          "word": "written",
+          "begin": 157380,
+          "end": 157520
+        },
+        {
+          "word": "for",
+          "begin": 157520,
+          "end": 157600
+        },
+        {
+          "word": "that",
+          "begin": 157680,
+          "end": 157740
+        },
+        {
+          "word": "size.",
+          "begin": 157800,
+          "end": 158480
+        },
+        {
+          "word": "Modern",
+          "begin": 158840,
+          "end": 159200
+        },
+        {
+          "word": "SSDs",
+          "begin": 159300,
+          "end": 159980
+        },
+        {
+          "word": "internally",
+          "begin": 160040,
+          "end": 160540
+        },
+        {
+          "word": "use",
+          "begin": 160640,
+          "end": 160840
+        },
+        {
+          "word": "4",
+          "begin": 160960,
+          "end": 161040
+        },
+        {
+          "word": "KB",
+          "begin": 161200,
+          "end": 161500
+        },
+        {
+          "word": "pages,",
+          "begin": 161620,
+          "end": 162580
+        },
+        {
+          "word": "but",
+          "begin": 162680,
+          "end": 162800
+        },
+        {
+          "word": "they",
+          "begin": 162880,
+          "end": 163060
+        },
+        {
+          "word": "can",
+          "begin": 163120,
+          "end": 163400
+        },
+        {
+          "word": "emulate",
+          "begin": 163440,
+          "end": 163800
+        },
+        {
+          "word": "512-byte",
+          "begin": 163800,
+          "end": 164800
+        },
+        {
+          "word": "sectors",
+          "begin": 164880,
+          "end": 165400
+        },
+        {
+          "word": "for",
+          "begin": 165480,
+          "end": 165540
+        },
+        {
+          "word": "compatibility.",
+          "begin": 165540,
+          "end": 166240
+        },
+        {
+          "word": "What",
+          "begin": 166640,
+          "end": 166760
+        },
+        {
+          "word": "happens",
+          "begin": 166800,
+          "end": 167180
+        },
+        {
+          "word": "when",
+          "begin": 167220,
+          "end": 167340
+        },
+        {
+          "word": "the",
+          "begin": 167340,
+          "end": 168340
+        },
+        {
+          "word": "OS",
+          "begin": 168480,
+          "end": 168600
+        },
+        {
+          "word": "512",
+          "begin": 168620,
+          "end": 168780
+        },
+        {
+          "word": "bytes",
+          "begin": 168820,
+          "end": 169720
+        },
+        {
+          "word": "to",
+          "begin": 169800,
+          "end": 169880
+        },
+        {
+          "word": "a",
+          "begin": 169920,
+          "end": 169960
+        },
+        {
+          "word": "SSD?",
+          "begin": 170100,
+          "end": 171740
+        },
+        {
+          "word": "The",
+          "begin": 172060,
+          "end": 172700
+        },
+        {
+          "word": "must",
+          "begin": 172860,
+          "end": 173100
+        },
+        {
+          "word": "read",
+          "begin": 173140,
+          "end": 173300
+        },
+        {
+          "word": "the",
+          "begin": 173300,
+          "end": 173640
+        },
+        {
+          "word": "full",
+          "begin": 173780,
+          "end": 173860
+        },
+        {
+          "word": "4KB",
+          "begin": 174020,
+          "end": 174520
+        },
+        {
+          "word": "page,",
+          "begin": 174540,
+          "end": 174920
+        },
+        {
+          "word": "modify",
+          "begin": 175280,
+          "end": 175800
+        },
+        {
+          "word": "the",
+          "begin": 175900,
+          "end": 175980
+        },
+        {
+          "word": "512",
+          "begin": 176120,
+          "end": 176740
+        },
+        {
+          "word": "bytes,",
+          "begin": 176800,
+          "end": 177220
+        },
+        {
+          "word": "and",
+          "begin": 177560,
+          "end": 177640
+        },
+        {
+          "word": "write",
+          "begin": 177700,
+          "end": 177880
+        },
+        {
+          "word": "the",
+          "begin": 177920,
+          "end": 177960
+        },
+        {
+          "word": "whole",
+          "begin": 178060,
+          "end": 178200
+        },
+        {
+          "word": "page",
+          "begin": 178260,
+          "end": 178540
+        },
+        {
+          "word": "back",
+          "begin": 178620,
+          "end": 178940
+        },
+        {
+          "word": "a",
+          "begin": 179360,
+          "end": 179380
+        },
+        {
+          "word": "read-modify-write",
+          "begin": 179500,
+          "end": 180520
+        },
+        {
+          "word": "cycle",
+          "begin": 180600,
+          "end": 181060
+        },
+        {
+          "word": "that",
+          "begin": 181060,
+          "end": 181080
+        },
+        {
+          "word": "wastes",
+          "begin": 181160,
+          "end": 181540
+        },
+        {
+          "word": "bandwidth.",
+          "begin": 181620,
+          "end": 182180
+        },
+        {
+          "word": "Using",
+          "begin": 182520,
+          "end": 182840
+        },
+        {
+          "word": "native",
+          "begin": 182880,
+          "end": 183180
+        },
+        {
+          "word": "4",
+          "begin": 183180,
+          "end": 183380
+        },
+        {
+          "word": "KB",
+          "begin": 183540,
+          "end": 184020
+        },
+        {
+          "word": "sectors",
+          "begin": 184100,
+          "end": 184520
+        },
+        {
+          "word": "avoids",
+          "begin": 184620,
+          "end": 185020
+        },
+        {
+          "word": "this",
+          "begin": 185080,
+          "end": 185280
+        },
+        {
+          "word": "entirely.",
+          "begin": 185360,
+          "end": 185920
+        },
+        {
+          "word": "You",
+          "begin": 186060,
+          "end": 186120
+        },
+        {
+          "word": "can",
+          "begin": 186180,
+          "end": 186300
+        },
+        {
+          "word": "check",
+          "begin": 186340,
+          "end": 186560
+        },
+        {
+          "word": "what",
+          "begin": 186580,
+          "end": 186700
+        },
+        {
+          "word": "your",
+          "begin": 186700,
+          "end": 186760
+        },
+        {
+          "word": "drive",
+          "begin": 186880,
+          "end": 187140
+        },
+        {
+          "word": "supports",
+          "begin": 187200,
+          "end": 187600
+        },
+        {
+          "word": "(and",
+          "begin": 187640,
+          "end": 187720
+        },
+        {
+          "word": "switch)",
+          "begin": 187800,
+          "end": 188080
+        },
+        {
+          "word": "using",
+          "begin": 188120,
+          "end": 188420
+        },
+        {
+          "word": "nvme",
+          "begin": 188560,
+          "end": 189200
+        },
+        {
+          "word": "id-ns.",
+          "begin": 189500,
+          "end": 190500
+        },
+        {
+          "word": "Knowledge",
+          "begin": 190580,
+          "end": 191500
+        },
+        {
+          "word": "check:",
+          "begin": 191580,
+          "end": 191980
+        },
+        {
+          "word": "Why",
+          "begin": 192280,
+          "end": 192480
+        },
+        {
+          "word": "would",
+          "begin": 192480,
+          "end": 192580
+        }
+      ]
+    },
+    {
+      "blockIndex": 9,
+      "type": "reveal",
+      "text": "Knowledge check: Why would it be disastrous for the OS to directly address physical NAND locations? What fundamental SSD behavior makes an abstraction layer like LBAs essential? The answer: The SSD constantly moves data internally for wear leveling, garbage collection, and error recovery. If the OS used physical NAND addresses, every internal data relocation would invalidate the OS's references, causing data corruption or loss. LBAs provide a stable abstraction — the FTL (Flash Translation Layer) maintains a mapping table that translates fixed LBAs to changing physical locations, so the OS never needs to know where data actually lives on NAND. This decoupling also allows the SSD to optimize data placement for performance (e.g., striping across channels) and reliability (e.g., moving data away from failing cells) without any OS involvement. The LBA interface is essentially a contract: the OS says 'store this at address 42' and the SSD guarantees it can retrieve it from address 42, regardless of how many times the physical location changes internally.",
+      "beginMs": 192580,
+      "endMs": 256120,
+      "timestamps": [
+        {
+          "word": "it",
+          "begin": 192580,
+          "end": 192680
+        },
+        {
+          "word": "be",
+          "begin": 192700,
+          "end": 192760
+        },
+        {
+          "word": "disastrous",
+          "begin": 192840,
+          "end": 193520
+        },
+        {
+          "word": "for",
+          "begin": 193560,
+          "end": 193700
+        },
+        {
+          "word": "the",
+          "begin": 193700,
+          "end": 193740
+        },
+        {
+          "word": "OS",
+          "begin": 193860,
+          "end": 194180
+        },
+        {
+          "word": "to",
+          "begin": 194220,
+          "end": 194280
+        },
+        {
+          "word": "directly",
+          "begin": 194340,
+          "end": 194720
+        },
+        {
+          "word": "address",
+          "begin": 194780,
+          "end": 195120
+        },
+        {
+          "word": "physical",
+          "begin": 195200,
+          "end": 195480
+        },
+        {
+          "word": "NAND",
+          "begin": 195580,
+          "end": 195840
+        },
+        {
+          "word": "locations?",
+          "begin": 195860,
+          "end": 196560
+        },
+        {
+          "word": "What",
+          "begin": 196940,
+          "end": 197080
+        },
+        {
+          "word": "fundamental",
+          "begin": 197180,
+          "end": 197700
+        },
+        {
+          "word": "SSD",
+          "begin": 197800,
+          "end": 198240
+        },
+        {
+          "word": "behavior",
+          "begin": 198340,
+          "end": 198740
+        },
+        {
+          "word": "makes",
+          "begin": 198840,
+          "end": 199040
+        },
+        {
+          "word": "an",
+          "begin": 199060,
+          "end": 199140
+        },
+        {
+          "word": "abstraction",
+          "begin": 199140,
+          "end": 199740
+        },
+        {
+          "word": "layer",
+          "begin": 199780,
+          "end": 199980
+        },
+        {
+          "word": "like",
+          "begin": 200100,
+          "end": 200280
+        },
+        {
+          "word": "LBAs",
+          "begin": 200360,
+          "end": 200700
+        },
+        {
+          "word": "essential?",
+          "begin": 200900,
+          "end": 201500
+        },
+        {
+          "word": "The",
+          "begin": 201760,
+          "end": 201820
+        },
+        {
+          "word": "answer:",
+          "begin": 201920,
+          "end": 202580
+        },
+        {
+          "word": "The",
+          "begin": 202580,
+          "end": 202600
+        },
+        {
+          "word": "SSD",
+          "begin": 202720,
+          "end": 203120
+        },
+        {
+          "word": "constantly",
+          "begin": 203240,
+          "end": 203700
+        },
+        {
+          "word": "moves",
+          "begin": 203700,
+          "end": 203740
+        },
+        {
+          "word": "data",
+          "begin": 203840,
+          "end": 204020
+        },
+        {
+          "word": "internally",
+          "begin": 204020,
+          "end": 204560
+        },
+        {
+          "word": "for",
+          "begin": 204600,
+          "end": 204820
+        },
+        {
+          "word": "wear",
+          "begin": 204820,
+          "end": 204940
+        },
+        {
+          "word": "leveling,",
+          "begin": 205080,
+          "end": 205560
+        },
+        {
+          "word": "garbage",
+          "begin": 205620,
+          "end": 205880
+        },
+        {
+          "word": "collection,",
+          "begin": 206080,
+          "end": 206600
+        },
+        {
+          "word": "and",
+          "begin": 206620,
+          "end": 206800
+        },
+        {
+          "word": "error",
+          "begin": 206840,
+          "end": 207200
+        },
+        {
+          "word": "recovery.",
+          "begin": 207200,
+          "end": 208000
+        },
+        {
+          "word": "If",
+          "begin": 208160,
+          "end": 208240
+        },
+        {
+          "word": "the",
+          "begin": 208240,
+          "end": 208300
+        },
+        {
+          "word": "OS",
+          "begin": 208320,
+          "end": 208740
+        },
+        {
+          "word": "used",
+          "begin": 208780,
+          "end": 209020
+        },
+        {
+          "word": "physical",
+          "begin": 209100,
+          "end": 209400
+        },
+        {
+          "word": "NAND",
+          "begin": 209500,
+          "end": 209700
+        },
+        {
+          "word": "addresses,",
+          "begin": 209700,
+          "end": 210280
+        },
+        {
+          "word": "every",
+          "begin": 210560,
+          "end": 210760
+        },
+        {
+          "word": "internal",
+          "begin": 210840,
+          "end": 211200
+        },
+        {
+          "word": "data",
+          "begin": 211300,
+          "end": 211500
+        },
+        {
+          "word": "relocation",
+          "begin": 211540,
+          "end": 212160
+        },
+        {
+          "word": "would",
+          "begin": 212220,
+          "end": 212320
+        },
+        {
+          "word": "invalidate",
+          "begin": 212320,
+          "end": 212900
+        },
+        {
+          "word": "the",
+          "begin": 212900,
+          "end": 212980
+        },
+        {
+          "word": "OS's",
+          "begin": 212980,
+          "end": 213460
+        },
+        {
+          "word": "references,",
+          "begin": 213520,
+          "end": 214140
+        },
+        {
+          "word": "causing",
+          "begin": 214380,
+          "end": 214680
+        },
+        {
+          "word": "data",
+          "begin": 214740,
+          "end": 214920
+        },
+        {
+          "word": "corruption",
+          "begin": 214980,
+          "end": 215480
+        },
+        {
+          "word": "or",
+          "begin": 215600,
+          "end": 215620
+        },
+        {
+          "word": "loss.",
+          "begin": 215720,
+          "end": 216120
+        },
+        {
+          "word": "LBAs",
+          "begin": 216420,
+          "end": 217000
+        },
+        {
+          "word": "provide",
+          "begin": 217080,
+          "end": 217400
+        },
+        {
+          "word": "a",
+          "begin": 217400,
+          "end": 217440
+        },
+        {
+          "word": "stable",
+          "begin": 217520,
+          "end": 217840
+        },
+        {
+          "word": "abstraction",
+          "begin": 217860,
+          "end": 219060
+        },
+        {
+          "word": "the",
+          "begin": 219120,
+          "end": 219220
+        },
+        {
+          "word": "FTL",
+          "begin": 219320,
+          "end": 219420
+        },
+        {
+          "word": "(Flash",
+          "begin": 219540,
+          "end": 219800
+        },
+        {
+          "word": "Translation",
+          "begin": 219860,
+          "end": 220440
+        },
+        {
+          "word": "Layer)",
+          "begin": 220500,
+          "end": 220680
+        },
+        {
+          "word": "maintains",
+          "begin": 220800,
+          "end": 221280
+        },
+        {
+          "word": "a",
+          "begin": 221300,
+          "end": 221320
+        },
+        {
+          "word": "mapping",
+          "begin": 221400,
+          "end": 221720
+        },
+        {
+          "word": "table",
+          "begin": 221780,
+          "end": 222280
+        },
+        {
+          "word": "that",
+          "begin": 222280,
+          "end": 222360
+        },
+        {
+          "word": "translates",
+          "begin": 222400,
+          "end": 222900
+        },
+        {
+          "word": "fixed",
+          "begin": 223020,
+          "end": 223280
+        },
+        {
+          "word": "LBAs",
+          "begin": 223360,
+          "end": 223940
+        },
+        {
+          "word": "to",
+          "begin": 224000,
+          "end": 224040
+        },
+        {
+          "word": "changing",
+          "begin": 224140,
+          "end": 224660
+        },
+        {
+          "word": "physical",
+          "begin": 224700,
+          "end": 224880
+        },
+        {
+          "word": "locations,",
+          "begin": 224980,
+          "end": 225560
+        },
+        {
+          "word": "so",
+          "begin": 225680,
+          "end": 226020
+        },
+        {
+          "word": "the",
+          "begin": 226080,
+          "end": 226120
+        },
+        {
+          "word": "OS",
+          "begin": 226120,
+          "end": 226600
+        },
+        {
+          "word": "never",
+          "begin": 226680,
+          "end": 226860
+        },
+        {
+          "word": "needs",
+          "begin": 226920,
+          "end": 227120
+        },
+        {
+          "word": "to",
+          "begin": 227180,
+          "end": 227240
+        },
+        {
+          "word": "know",
+          "begin": 227300,
+          "end": 227360
+        },
+        {
+          "word": "where",
+          "begin": 227480,
+          "end": 227540
+        },
+        {
+          "word": "data",
+          "begin": 227640,
+          "end": 227860
+        },
+        {
+          "word": "actually",
+          "begin": 228000,
+          "end": 228320
+        },
+        {
+          "word": "lives",
+          "begin": 228440,
+          "end": 228700
+        },
+        {
+          "word": "on",
+          "begin": 228740,
+          "end": 228860
+        },
+        {
+          "word": "NAND.",
+          "begin": 228920,
+          "end": 229260
+        },
+        {
+          "word": "This",
+          "begin": 229680,
+          "end": 229840
+        },
+        {
+          "word": "decoupling",
+          "begin": 229900,
+          "end": 230440
+        },
+        {
+          "word": "also",
+          "begin": 230540,
+          "end": 230760
+        },
+        {
+          "word": "allows",
+          "begin": 230840,
+          "end": 231160
+        },
+        {
+          "word": "the",
+          "begin": 231180,
+          "end": 231240
+        },
+        {
+          "word": "SSD",
+          "begin": 231360,
+          "end": 231800
+        },
+        {
+          "word": "to",
+          "begin": 231940,
+          "end": 232000
+        },
+        {
+          "word": "optimize",
+          "begin": 232080,
+          "end": 232620
+        },
+        {
+          "word": "data",
+          "begin": 232620,
+          "end": 232800
+        },
+        {
+          "word": "placement",
+          "begin": 232880,
+          "end": 233320
+        },
+        {
+          "word": "for",
+          "begin": 233380,
+          "end": 233440
+        },
+        {
+          "word": "performance",
+          "begin": 233520,
+          "end": 234120
+        },
+        {
+          "word": "(e.g.,",
+          "begin": 234260,
+          "end": 234480
+        },
+        {
+          "word": "striping",
+          "begin": 234620,
+          "end": 235020
+        },
+        {
+          "word": "across",
+          "begin": 235060,
+          "end": 235380
+        },
+        {
+          "word": "channels)",
+          "begin": 235460,
+          "end": 235920
+        },
+        {
+          "word": "and",
+          "begin": 236040,
+          "end": 236120
+        },
+        {
+          "word": "reliability",
+          "begin": 236140,
+          "end": 236820
+        },
+        {
+          "word": "(e.g.,",
+          "begin": 236820,
+          "end": 237340
+        },
+        {
+          "word": "moving",
+          "begin": 237460,
+          "end": 237740
+        },
+        {
+          "word": "data",
+          "begin": 237780,
+          "end": 238000
+        },
+        {
+          "word": "away",
+          "begin": 238080,
+          "end": 238240
+        },
+        {
+          "word": "from",
+          "begin": 238400,
+          "end": 238520
+        },
+        {
+          "word": "failing",
+          "begin": 238520,
+          "end": 238920
+        },
+        {
+          "word": "cells)",
+          "begin": 239020,
+          "end": 239340
+        },
+        {
+          "word": "without",
+          "begin": 239380,
+          "end": 239720
+        },
+        {
+          "word": "any",
+          "begin": 239800,
+          "end": 239920
+        },
+        {
+          "word": "OS",
+          "begin": 240060,
+          "end": 240340
+        },
+        {
+          "word": "involvement.",
+          "begin": 240380,
+          "end": 240980
+        },
+        {
+          "word": "The",
+          "begin": 241300,
+          "end": 241360
+        },
+        {
+          "word": "LBA",
+          "begin": 241480,
+          "end": 241980
+        },
+        {
+          "word": "interface",
+          "begin": 241980,
+          "end": 242440
+        },
+        {
+          "word": "is",
+          "begin": 242480,
+          "end": 242580
+        },
+        {
+          "word": "essentially",
+          "begin": 242600,
+          "end": 243100
+        },
+        {
+          "word": "a",
+          "begin": 243160,
+          "end": 243180
+        },
+        {
+          "word": "contract:",
+          "begin": 243260,
+          "end": 243880
+        },
+        {
+          "word": "the",
+          "begin": 244080,
+          "end": 244140
+        },
+        {
+          "word": "OS",
+          "begin": 244280,
+          "end": 245120
+        },
+        {
+          "word": "says",
+          "begin": 245280,
+          "end": 245540
+        },
+        {
+          "word": "at",
+          "begin": 245660,
+          "end": 245740
+        },
+        {
+          "word": "address",
+          "begin": 245760,
+          "end": 246100
+        },
+        {
+          "word": "42'",
+          "begin": 246160,
+          "end": 246680
+        },
+        {
+          "word": "and",
+          "begin": 246740,
+          "end": 246940
+        },
+        {
+          "word": "the",
+          "begin": 247200,
+          "end": 247220
+        },
+        {
+          "word": "SSD",
+          "begin": 247240,
+          "end": 247340
+        },
+        {
+          "word": "guarantees",
+          "begin": 247460,
+          "end": 248060
+        },
+        {
+          "word": "it",
+          "begin": 248080,
+          "end": 248200
+        },
+        {
+          "word": "can",
+          "begin": 248200,
+          "end": 248300
+        },
+        {
+          "word": "retrieve",
+          "begin": 248360,
+          "end": 248840
+        },
+        {
+          "word": "it",
+          "begin": 248860,
+          "end": 248920
+        },
+        {
+          "word": "from",
+          "begin": 248920,
+          "end": 249120
+        },
+        {
+          "word": "address",
+          "begin": 249160,
+          "end": 249480
+        },
+        {
+          "word": "42,",
+          "begin": 249520,
+          "end": 249800
+        },
+        {
+          "word": "regardless",
+          "begin": 249800,
+          "end": 250360
+        },
+        {
+          "word": "of",
+          "begin": 250420,
+          "end": 251180
+        },
+        {
+          "word": "how",
+          "begin": 251180,
+          "end": 251360
+        },
+        {
+          "word": "many",
+          "begin": 251480,
+          "end": 251580
+        },
+        {
+          "word": "times",
+          "begin": 251660,
+          "end": 251840
+        },
+        {
+          "word": "the",
+          "begin": 251840,
+          "end": 251900
+        },
+        {
+          "word": "physical",
+          "begin": 251980,
+          "end": 252480
+        },
+        {
+          "word": "location",
+          "begin": 252520,
+          "end": 252900
+        },
+        {
+          "word": "changes",
+          "begin": 252960,
+          "end": 254080
+        },
+        {
+          "word": "internally.",
+          "begin": 254120,
+          "end": 254600
+        },
+        {
+          "word": "Knowledge",
+          "begin": 255080,
+          "end": 255360
+        },
+        {
+          "word": "check:",
+          "begin": 255360,
+          "end": 255720
+        },
+        {
+          "word": "How",
+          "begin": 256020,
+          "end": 256120
+        }
+      ],
+      "requiresReveal": true
+    },
+    {
+      "blockIndex": 10,
+      "type": "reveal",
+      "text": "Knowledge check: How would you derive the total number of LBAs on a 1 TB drive with 512-byte sectors from first principles? Why does the choice of sector size (512B vs 4KB) matter for the FTL's memory overhead? The answer: 1 TB = 1,000,000,000,000 bytes. Dividing by 512 bytes per LBA gives ~1,953,125,000 LBAs, or approximately 1.95 billion. This sector size choice has a massive impact on FTL overhead: the mapping table stores one physical address per LBA (typically 4 bytes each). With 512-byte LBAs, the table needs ~1.95 billion x 4 bytes = ~7.8 GB of DRAM — enormous. With 4KB LBAs, the same drive has only ~244 million LBAs, requiring ~976 MB of DRAM — 8x less. This is why 4KB-native drives are more efficient: fewer LBAs means a smaller mapping table, less DRAM needed, and faster table lookups. It also explains why DRAM-less SSDs using HMB (Host Memory Buffer) strongly prefer 4KB sectors.",
+      "beginMs": 256180,
+      "endMs": 326180,
+      "timestamps": [
+        {
+          "word": "would",
+          "begin": 256180,
+          "end": 256300
+        },
+        {
+          "word": "you",
+          "begin": 256320,
+          "end": 256360
+        },
+        {
+          "word": "derive",
+          "begin": 256420,
+          "end": 256760
+        },
+        {
+          "word": "the",
+          "begin": 256780,
+          "end": 256840
+        },
+        {
+          "word": "total",
+          "begin": 256900,
+          "end": 257140
+        },
+        {
+          "word": "number",
+          "begin": 257240,
+          "end": 257500
+        },
+        {
+          "word": "of",
+          "begin": 257500,
+          "end": 257580
+        },
+        {
+          "word": "on",
+          "begin": 257660,
+          "end": 257840
+        },
+        {
+          "word": "a",
+          "begin": 257860,
+          "end": 258300
+        },
+        {
+          "word": "1",
+          "begin": 258340,
+          "end": 258420
+        },
+        {
+          "word": "drive",
+          "begin": 258420,
+          "end": 258460
+        },
+        {
+          "word": "with",
+          "begin": 258520,
+          "end": 258700
+        },
+        {
+          "word": "does",
+          "begin": 258760,
+          "end": 258780
+        },
+        {
+          "word": "the",
+          "begin": 258780,
+          "end": 258860
+        },
+        {
+          "word": "choice",
+          "begin": 258979,
+          "end": 259500
+        },
+        {
+          "word": "size",
+          "begin": 259720,
+          "end": 259820
+        },
+        {
+          "word": "vs",
+          "begin": 259900,
+          "end": 260140
+        },
+        {
+          "word": "4KB)",
+          "begin": 260140,
+          "end": 262000
+        },
+        {
+          "word": "matter",
+          "begin": 262160,
+          "end": 262360
+        },
+        {
+          "word": "for",
+          "begin": 262500,
+          "end": 262880
+        },
+        {
+          "word": "the",
+          "begin": 262920,
+          "end": 263000
+        },
+        {
+          "word": "FTL's",
+          "begin": 263100,
+          "end": 263300
+        },
+        {
+          "word": "memory",
+          "begin": 263360,
+          "end": 263600
+        },
+        {
+          "word": "overhead?",
+          "begin": 263700,
+          "end": 264200
+        },
+        {
+          "word": "The",
+          "begin": 264520,
+          "end": 264580
+        },
+        {
+          "word": "answer:",
+          "begin": 264680,
+          "end": 264940
+        },
+        {
+          "word": "1",
+          "begin": 265320,
+          "end": 267060
+        },
+        {
+          "word": "TB",
+          "begin": 267100,
+          "end": 267780
+        },
+        {
+          "word": "=",
+          "begin": 267820,
+          "end": 268120
+        },
+        {
+          "word": "1,000,000,000,000",
+          "begin": 268180,
+          "end": 269060
+        },
+        {
+          "word": "bytes.",
+          "begin": 269220,
+          "end": 270380
+        },
+        {
+          "word": "Dividing",
+          "begin": 270460,
+          "end": 270840
+        },
+        {
+          "word": "bytes",
+          "begin": 271180,
+          "end": 274720
+        },
+        {
+          "word": "per",
+          "begin": 274800,
+          "end": 274860
+        },
+        {
+          "word": "LBAs,",
+          "begin": 274960,
+          "end": 275380
+        },
+        {
+          "word": "or",
+          "begin": 275680,
+          "end": 275780
+        },
+        {
+          "word": "approximately",
+          "begin": 275780,
+          "end": 276380
+        },
+        {
+          "word": "1.95",
+          "begin": 276380,
+          "end": 277520
+        },
+        {
+          "word": "billion.",
+          "begin": 277580,
+          "end": 277960
+        },
+        {
+          "word": "This",
+          "begin": 278360,
+          "end": 278520
+        },
+        {
+          "word": "sector",
+          "begin": 278580,
+          "end": 278840
+        },
+        {
+          "word": "size",
+          "begin": 278960,
+          "end": 279220
+        },
+        {
+          "word": "choice",
+          "begin": 279220,
+          "end": 279600
+        },
+        {
+          "word": "has",
+          "begin": 279620,
+          "end": 279760
+        },
+        {
+          "word": "a",
+          "begin": 279760,
+          "end": 279800
+        },
+        {
+          "word": "massive",
+          "begin": 279900,
+          "end": 280280
+        },
+        {
+          "word": "impact",
+          "begin": 280360,
+          "end": 280800
+        },
+        {
+          "word": "on",
+          "begin": 280860,
+          "end": 280940
+        },
+        {
+          "word": "FTL",
+          "begin": 281020,
+          "end": 281420
+        },
+        {
+          "word": "overhead:",
+          "begin": 281500,
+          "end": 281940
+        },
+        {
+          "word": "the",
+          "begin": 282200,
+          "end": 282240
+        },
+        {
+          "word": "mapping",
+          "begin": 282300,
+          "end": 282600
+        },
+        {
+          "word": "table",
+          "begin": 282660,
+          "end": 282880
+        },
+        {
+          "word": "stores",
+          "begin": 283000,
+          "end": 283300
+        },
+        {
+          "word": "one",
+          "begin": 283380,
+          "end": 283560
+        },
+        {
+          "word": "physical",
+          "begin": 283660,
+          "end": 284020
+        },
+        {
+          "word": "address",
+          "begin": 284040,
+          "end": 284380
+        },
+        {
+          "word": "per",
+          "begin": 284460,
+          "end": 284540
+        },
+        {
+          "word": "LBA",
+          "begin": 284640,
+          "end": 285000
+        },
+        {
+          "word": "(typically",
+          "begin": 285280,
+          "end": 285640
+        },
+        {
+          "word": "4",
+          "begin": 285760,
+          "end": 285840
+        },
+        {
+          "word": "bytes",
+          "begin": 285980,
+          "end": 286220
+        },
+        {
+          "word": "each).",
+          "begin": 286300,
+          "end": 288740
+        },
+        {
+          "word": "With",
+          "begin": 288880,
+          "end": 289120
+        },
+        {
+          "word": "the",
+          "begin": 289420,
+          "end": 289460
+        },
+        {
+          "word": "table",
+          "begin": 289540,
+          "end": 289780
+        },
+        {
+          "word": "needs",
+          "begin": 289860,
+          "end": 290040
+        },
+        {
+          "word": "~1.95",
+          "begin": 290060,
+          "end": 291880
+        },
+        {
+          "word": "billion",
+          "begin": 291940,
+          "end": 292320
+        },
+        {
+          "word": "x",
+          "begin": 292580,
+          "end": 292880
+        },
+        {
+          "word": "4",
+          "begin": 293020,
+          "end": 293220
+        },
+        {
+          "word": "bytes",
+          "begin": 293280,
+          "end": 294420
+        },
+        {
+          "word": "=",
+          "begin": 294420,
+          "end": 294600
+        },
+        {
+          "word": "~7.8",
+          "begin": 294680,
+          "end": 294780
+        },
+        {
+          "word": "GB",
+          "begin": 294780,
+          "end": 296360
+        },
+        {
+          "word": "of",
+          "begin": 296540,
+          "end": 296720
+        },
+        {
+          "word": "enormous.",
+          "begin": 297040,
+          "end": 297580
+        },
+        {
+          "word": "With",
+          "begin": 297940,
+          "end": 298060
+        },
+        {
+          "word": "LBAs,",
+          "begin": 298160,
+          "end": 299700
+        },
+        {
+          "word": "the",
+          "begin": 299920,
+          "end": 299960
+        },
+        {
+          "word": "same",
+          "begin": 300080,
+          "end": 300300
+        },
+        {
+          "word": "drive",
+          "begin": 300360,
+          "end": 300700
+        },
+        {
+          "word": "has",
+          "begin": 300700,
+          "end": 302300
+        },
+        {
+          "word": "only",
+          "begin": 302400,
+          "end": 302600
+        },
+        {
+          "word": "~244",
+          "begin": 302700,
+          "end": 302780
+        },
+        {
+          "word": "million",
+          "begin": 302940,
+          "end": 303260
+        },
+        {
+          "word": "LBAs,",
+          "begin": 303360,
+          "end": 304140
+        },
+        {
+          "word": "requiring",
+          "begin": 304400,
+          "end": 304880
+        },
+        {
+          "word": "of",
+          "begin": 304900,
+          "end": 305520
+        },
+        {
+          "word": "DRAM",
+          "begin": 305620,
+          "end": 306520
+        },
+        {
+          "word": "8x",
+          "begin": 306660,
+          "end": 309040
+        },
+        {
+          "word": "less.",
+          "begin": 309100,
+          "end": 309420
+        },
+        {
+          "word": "This",
+          "begin": 309900,
+          "end": 310060
+        },
+        {
+          "word": "is",
+          "begin": 310080,
+          "end": 310160
+        },
+        {
+          "word": "why",
+          "begin": 310220,
+          "end": 310300
+        },
+        {
+          "word": "4KB-native",
+          "begin": 310480,
+          "end": 311500
+        },
+        {
+          "word": "drives",
+          "begin": 311560,
+          "end": 311900
+        },
+        {
+          "word": "are",
+          "begin": 311940,
+          "end": 311960
+        },
+        {
+          "word": "more",
+          "begin": 312040,
+          "end": 312200
+        },
+        {
+          "word": "efficient:",
+          "begin": 312200,
+          "end": 312640
+        },
+        {
+          "word": "fewer",
+          "begin": 312680,
+          "end": 313220
+        },
+        {
+          "word": "LBAs",
+          "begin": 313340,
+          "end": 314020
+        },
+        {
+          "word": "means",
+          "begin": 314080,
+          "end": 314280
+        },
+        {
+          "word": "a",
+          "begin": 314300,
+          "end": 314320
+        },
+        {
+          "word": "smaller",
+          "begin": 314420,
+          "end": 314720
+        },
+        {
+          "word": "mapping",
+          "begin": 314800,
+          "end": 315100
+        },
+        {
+          "word": "table,",
+          "begin": 315100,
+          "end": 315440
+        },
+        {
+          "word": "less",
+          "begin": 315840,
+          "end": 316020
+        },
+        {
+          "word": "DRAM",
+          "begin": 316100,
+          "end": 316720
+        },
+        {
+          "word": "needed,",
+          "begin": 316780,
+          "end": 317100
+        },
+        {
+          "word": "and",
+          "begin": 317380,
+          "end": 317460
+        },
+        {
+          "word": "faster",
+          "begin": 317560,
+          "end": 317880
+        },
+        {
+          "word": "table",
+          "begin": 317980,
+          "end": 318200
+        },
+        {
+          "word": "lookups.",
+          "begin": 318300,
+          "end": 318780
+        },
+        {
+          "word": "It",
+          "begin": 319060,
+          "end": 319140
+        },
+        {
+          "word": "also",
+          "begin": 319180,
+          "end": 319400
+        },
+        {
+          "word": "explains",
+          "begin": 319460,
+          "end": 319960
+        },
+        {
+          "word": "why",
+          "begin": 320000,
+          "end": 320060
+        },
+        {
+          "word": "DRAM-less",
+          "begin": 320220,
+          "end": 320820
+        },
+        {
+          "word": "SSDs",
+          "begin": 320920,
+          "end": 321540
+        },
+        {
+          "word": "using",
+          "begin": 321580,
+          "end": 321860
+        },
+        {
+          "word": "HMB",
+          "begin": 322000,
+          "end": 322520
+        },
+        {
+          "word": "(Host",
+          "begin": 322660,
+          "end": 322960
+        },
+        {
+          "word": "Memory",
+          "begin": 323020,
+          "end": 323300
+        },
+        {
+          "word": "Buffer)",
+          "begin": 323400,
+          "end": 323660
+        },
+        {
+          "word": "strongly",
+          "begin": 324080,
+          "end": 324480
+        },
+        {
+          "word": "prefer",
+          "begin": 324560,
+          "end": 324820
+        },
+        {
+          "word": "4KB",
+          "begin": 325000,
+          "end": 325520
+        },
+        {
+          "word": "sectors.",
+          "begin": 325660,
+          "end": 326180
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

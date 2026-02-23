@@ -1,0 +1,67 @@
+{
+  "sectionId": "sec-binary",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Everything Starts with a Bit",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: A Bit Is a Light Switch. Every piece of data — photos, videos, documents, apps — is made of billions of tiny on/off switches called bits. Off is 0, on is 1. That's it. Everything your computer does comes down to billions of these simple yes/no decisions.",
+      "blockIndex": 1
+    },
+    {
+      "type": "term",
+      "text": "Bit: The smallest unit of data in computing — a single 0 or 1. Short for 'binary digit.' Every other unit of data (bytes, kilobytes, etc.) is built from groups of bits.",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "Think of a light switch. It's either off or on. That's a bit — the smallest piece of data a computer can work with. Off is 0, on is 1. Every photo, video, document, and app on your computer is made of billions of these tiny switches.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "But why only 0 and 1? Why not 0 through 9 like normal numbers? Because electronic circuits are most reliable when they only need to distinguish between two states — voltage above a threshold (1) or below it (0). More states would mean smaller margins and more errors. (We'll see this exact tradeoff later when we look at how NAND cells store multiple bits.)",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "A single bit isn't very useful — it can only represent two things (yes/no, true/false). So how do we represent something more complex, like a letter or a number? By grouping 8 bits together into a byte.",
+      "blockIndex": 5
+    },
+    {
+      "type": "term",
+      "text": "Byte: A group of 8 bits. Can represent 256 different values (2^8). One byte is enough for a single letter, a small number, or one color channel in an image.",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "A byte can represent 256 different values (2×2×2×2×2×2×2×2 = 256), which is enough for a single letter, a small number, or a single color channel in an image.",
+      "blockIndex": 7
+    },
+    {
+      "type": "paragraph",
+      "text": "Storage drives hold billions of bytes. A 1 TB (terabyte) SSD holds about 1 trillion bytes — or 8 trillion individual bits. But how does the SSD physically store each of those bits? That's exactly what we'll explore after we understand how these bits are addressed.",
+      "blockIndex": 8
+    },
+    {
+      "type": "paragraph",
+      "text": "Why do engineers use hex instead of decimal? Each hex digit = exactly 4 bits. Two hex digits = 1 byte. It's compact and maps perfectly to binary.",
+      "blockIndex": 9
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: How would you convert the binary number 10110010 to decimal from first principles? Why does each bit position have a specific 'weight,' and what pattern do those weights follow? The answer: Each bit position represents a power of 2, doubling from right to left: 1, 2, 4, 8, 16, 32, 64, 128. This is because binary is base-2 — each digit position is worth 2^n where n is the position (starting from 0 on the right). For 10110010: bit 7 (128) + bit 5 (32) + bit 4 (16) + bit 1 (2) = 178. The weights follow powers of 2 because that's the fundamental property of positional numeral systems — just as decimal digits have weights of 1, 10, 100, 1000 (powers of 10), binary digits have weights of 1, 2, 4, 8 (powers of 2).",
+      "requiresReveal": true,
+      "blockIndex": 10
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: Why is 1 KB exactly 1,024 bytes instead of 1,000? What fundamental property of computer hardware makes powers of 2 the natural unit, and when does this convention cause real-world confusion? The answer: 1 KB = 2^10 = 1,024 bytes because computer memory is built from binary circuits — address lines double the addressable space with each addition (1 line = 2 addresses, 2 lines = 4, 10 lines = 1,024). Using powers of 2 aligns with hardware reality. This causes real-world confusion because storage manufacturers use the SI definition (1 KB = 1,000 bytes), so a '1 TB' drive has 1,000,000,000,000 bytes but the OS reports ~931 GiB (using binary gibibytes). The IEC introduced unambiguous prefixes — KiB (1,024), MiB (1,048,576), GiB (1,073,741,824) — but adoption is inconsistent.",
+      "requiresReveal": true,
+      "blockIndex": 11
+    }
+  ]
+}

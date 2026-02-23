@@ -1,0 +1,36 @@
+{
+  "sectionId": "sec-transistor",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "What Is a Transistor?",
+      "blockIndex": 0
+    },
+    {
+      "type": "paragraph",
+      "text": "Every digital device — CPUs, RAM, SSDs — is built from billions of tiny switches called transistors. A transistor is a microscopic electronic switch: apply voltage to its gate, and current flows between its source and drain. Remove the voltage, and current stops.",
+      "blockIndex": 1
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: A Transistor Is a Tiny Light Switch. Push the switch (apply voltage to the gate) and electricity flows — that's a '1'. Release it and the flow stops — that's a '0'. A CPU has billions of these switches flipping billions of times per second. An SSD's NAND cells are special transistors that can trap charge and remember their state even without power.",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "Why does this matter for SSDs? Because NAND flash memory cells are a special type of transistor called a floating-gate transistor. Unlike regular transistors that forget their state when power is removed, floating-gate transistors can trap electrons in an insulated layer — this is how SSDs store data without power. We'll explore this in detail in Lesson 2.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "Modern SSDs contain trillions of these transistor cells, organized into a precise hierarchy (pages, blocks, planes, dies) that we'll learn about next. Understanding that they're all just tiny charge-trapping switches is the key intuition.",
+      "blockIndex": 4
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: Why is a regular transistor useless for long-term data storage? What specific structural addition does a NAND cell have that solves this, and what would happen if that structure degraded? The answer: A regular transistor loses its state the instant power is removed — current either flows or it doesn't, with no memory. A NAND cell adds a floating gate, an extra conductive layer surrounded by oxide insulation that physically traps electrons. These trapped electrons shift the transistor's threshold voltage, encoding data that persists without power. If the oxide insulator degrades (from repeated program/erase cycles), electrons leak out or get stuck in the oxide itself, causing the cell to misread its stored voltage level — this is exactly how NAND cells wear out over time.",
+      "requiresReveal": true,
+      "blockIndex": 5
+    }
+  ]
+}

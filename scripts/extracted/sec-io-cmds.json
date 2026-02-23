@@ -1,0 +1,46 @@
+{
+  "sectionId": "sec-io-cmds",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "I/O Commands — Reading and Writing Your Data",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: I/O Commands Move Your Data. While admin commands manage the SSD, I/O commands are the workhorses that actually read and write your data. A Read command says 'give me N blocks starting at LBA X.' A Write command says 'store this data at LBA X.' These flow through I/O queues (not the admin queue) for maximum parallelism.",
+      "blockIndex": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "Admin commands manage the drive. I/O commands handle your actual data — they're the workhorses of NVMe. Every file you open, every save, every download ultimately becomes one or more I/O commands.",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "I/O commands use queues with QID &ge; 1 (the I/O queues created during boot, one per CPU core). Each command targets a specific namespace (NSID in CDW1) and specifies a range of LBAs.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "Each command below shows what it does, why it exists, and the nvme-cli terminal command you'd type to run it:",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "Some SSD vendors add proprietary I/O commands (opcodes 0x80-0xFF) for special diagnostics or features. The io-passthru command lets you send any opcode with raw CDW values — it's like having a skeleton key:",
+      "blockIndex": 5
+    },
+    {
+      "type": "info",
+      "text": "The 0-based NLB gotcha: NLB (Number of Logical Blocks) is 0-based: a value of 0 means 1 block, 7 means 8 blocks. Why? Because NLB is stored in 16 bits, giving a range of 0-65535. If it were 1-based, the maximum would be 65535 blocks. By being 0-based, you get 65536 blocks. This is a common source of off-by-one bugs in NVMe driver development.",
+      "blockIndex": 6
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: A database completes a Write command and gets a successful completion entry back. Power is lost one second later. Is the data guaranteed to be on NAND? What additional step is needed for crash consistency, and why doesn't NVMe guarantee persistence on every write by default? The answer: A successful Write completion does NOT guarantee data is on NAND — it may still be sitting in the SSD's volatile DRAM write cache. The Flush command (opcode 0x00) forces all cached data to be committed to non-volatile NAND flash. Databases issue Flush after every transaction commit to ensure crash consistency. NVMe doesn't guarantee persistence on every write by default because the DRAM write cache dramatically improves performance — DRAM writes complete in microseconds while NAND programming takes hundreds of microseconds. Flushing after every single write would negate this benefit. Instead, NVMe gives the host control: use normal writes for speed, and issue Flush (or set the FUA bit on individual writes) when persistence is critical. This lets the application choose the right tradeoff between speed and durability.",
+      "requiresReveal": true,
+      "blockIndex": 7
+    }
+  ]
+}

@@ -1,0 +1,2100 @@
+{
+  "sectionId": "sec-smart",
+  "audioFile": "/audio/sections/sec-smart.mp3",
+  "totalDurationMs": 170840,
+  "fileSizeBytes": 2734080,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "Is Your Drive Healthy? — SMART Monitoring",
+      "beginMs": 80,
+      "endMs": 2520,
+      "timestamps": [
+        {
+          "word": "Is",
+          "begin": 80,
+          "end": 160
+        },
+        {
+          "word": "Your",
+          "begin": 180,
+          "end": 240
+        },
+        {
+          "word": "Drive",
+          "begin": 320,
+          "end": 640
+        },
+        {
+          "word": "Healthy?",
+          "begin": 640,
+          "end": 920
+        },
+        {
+          "word": "SMART",
+          "begin": 1420,
+          "end": 1700
+        },
+        {
+          "word": "Monitoring",
+          "begin": 1740,
+          "end": 2180
+        },
+        {
+          "word": "Analogy:",
+          "begin": 2200,
+          "end": 2520
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: SMART Is the SSD's Health Dashboard. SMART (Self-Monitoring, Analysis, and Reporting Technology) is like a fitness tracker for your SSD. It continuously monitors 14 health metrics — temperature, wear level, error counts, power-on hours. You can read these at any time using 'nvme smart-log /dev/nvme0' to check if your drive is healthy or approaching end-of-life.",
+      "beginMs": 2580,
+      "endMs": 28040,
+      "timestamps": [
+        {
+          "word": "SMART",
+          "begin": 2580,
+          "end": 3340
+        },
+        {
+          "word": "Is",
+          "begin": 3360,
+          "end": 3600
+        },
+        {
+          "word": "the",
+          "begin": 3660,
+          "end": 3780
+        },
+        {
+          "word": "SSD's",
+          "begin": 3880,
+          "end": 4320
+        },
+        {
+          "word": "Health",
+          "begin": 4320,
+          "end": 4760
+        },
+        {
+          "word": "Dashboard.",
+          "begin": 4820,
+          "end": 5380
+        },
+        {
+          "word": "SMART",
+          "begin": 5800,
+          "end": 6060
+        },
+        {
+          "word": "(Self-Monitoring,",
+          "begin": 6100,
+          "end": 6900
+        },
+        {
+          "word": "Analysis,",
+          "begin": 7240,
+          "end": 7920
+        },
+        {
+          "word": "and",
+          "begin": 8039,
+          "end": 8140
+        },
+        {
+          "word": "Reporting",
+          "begin": 8140,
+          "end": 8540
+        },
+        {
+          "word": "Technology)",
+          "begin": 8580,
+          "end": 9120
+        },
+        {
+          "word": "is",
+          "begin": 9280,
+          "end": 9360
+        },
+        {
+          "word": "like",
+          "begin": 9380,
+          "end": 9520
+        },
+        {
+          "word": "a",
+          "begin": 9520,
+          "end": 9720
+        },
+        {
+          "word": "fitness",
+          "begin": 9760,
+          "end": 9940
+        },
+        {
+          "word": "tracker",
+          "begin": 10000,
+          "end": 10280
+        },
+        {
+          "word": "for",
+          "begin": 10380,
+          "end": 10500
+        },
+        {
+          "word": "your",
+          "begin": 10500,
+          "end": 10560
+        },
+        {
+          "word": "SSD.",
+          "begin": 10680,
+          "end": 11120
+        },
+        {
+          "word": "It",
+          "begin": 11460,
+          "end": 11540
+        },
+        {
+          "word": "continuously",
+          "begin": 11580,
+          "end": 12200
+        },
+        {
+          "word": "monitors",
+          "begin": 12300,
+          "end": 12760
+        },
+        {
+          "word": "14",
+          "begin": 12840,
+          "end": 13260
+        },
+        {
+          "word": "health",
+          "begin": 13300,
+          "end": 13500
+        },
+        {
+          "word": "metrics",
+          "begin": 13560,
+          "end": 14040
+        },
+        {
+          "word": "temperature,",
+          "begin": 14380,
+          "end": 14800
+        },
+        {
+          "word": "wear",
+          "begin": 15260,
+          "end": 15540
+        },
+        {
+          "word": "level,",
+          "begin": 15560,
+          "end": 15740
+        },
+        {
+          "word": "error",
+          "begin": 16200,
+          "end": 16379
+        },
+        {
+          "word": "counts,",
+          "begin": 16500,
+          "end": 16900
+        },
+        {
+          "word": "power-on",
+          "begin": 17160,
+          "end": 17640
+        },
+        {
+          "word": "hours.",
+          "begin": 17700,
+          "end": 18120
+        },
+        {
+          "word": "You",
+          "begin": 18480,
+          "end": 18540
+        },
+        {
+          "word": "can",
+          "begin": 18600,
+          "end": 18720
+        },
+        {
+          "word": "read",
+          "begin": 18760,
+          "end": 18920
+        },
+        {
+          "word": "these",
+          "begin": 18940,
+          "end": 19140
+        },
+        {
+          "word": "at",
+          "begin": 19180,
+          "end": 19260
+        },
+        {
+          "word": "any",
+          "begin": 19340,
+          "end": 19460
+        },
+        {
+          "word": "time",
+          "begin": 19540,
+          "end": 19860
+        },
+        {
+          "word": "using",
+          "begin": 19880,
+          "end": 20140
+        },
+        {
+          "word": "'nvme",
+          "begin": 20260,
+          "end": 20700
+        },
+        {
+          "word": "smart-log",
+          "begin": 20900,
+          "end": 21440
+        },
+        {
+          "word": "/dev/nvme0'",
+          "begin": 21480,
+          "end": 24100
+        },
+        {
+          "word": "to",
+          "begin": 24140,
+          "end": 24240
+        },
+        {
+          "word": "check",
+          "begin": 24320,
+          "end": 24580
+        },
+        {
+          "word": "if",
+          "begin": 24580,
+          "end": 24680
+        },
+        {
+          "word": "your",
+          "begin": 24700,
+          "end": 24840
+        },
+        {
+          "word": "drive",
+          "begin": 24920,
+          "end": 25420
+        },
+        {
+          "word": "is",
+          "begin": 25440,
+          "end": 25660
+        },
+        {
+          "word": "healthy",
+          "begin": 25700,
+          "end": 25940
+        },
+        {
+          "word": "approaching",
+          "begin": 25700,
+          "end": 25720
+        },
+        {
+          "word": "end-of-life.",
+          "begin": 25800,
+          "end": 26360
+        },
+        {
+          "word": "SMART:",
+          "begin": 26620,
+          "end": 26940
+        },
+        {
+          "word": "Self-Monitoring,",
+          "begin": 27240,
+          "end": 28040
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "term",
+      "text": "SMART: Self-Monitoring, Analysis, and Reporting Technology — a built-in health monitoring system in storage devices. Reports metrics like temperature, wear percentage, error counts, and power-on hours through standardized log pages.",
+      "beginMs": 28360,
+      "endMs": 40880,
+      "timestamps": [
+        {
+          "word": "Analysis,",
+          "begin": 28360,
+          "end": 29020
+        },
+        {
+          "word": "and",
+          "begin": 29120,
+          "end": 29200
+        },
+        {
+          "word": "Reporting",
+          "begin": 29220,
+          "end": 29620
+        },
+        {
+          "word": "Technology",
+          "begin": 29680,
+          "end": 30240
+        },
+        {
+          "word": "a",
+          "begin": 30680,
+          "end": 30700
+        },
+        {
+          "word": "built-in",
+          "begin": 30780,
+          "end": 31140
+        },
+        {
+          "word": "health",
+          "begin": 31200,
+          "end": 31420
+        },
+        {
+          "word": "monitoring",
+          "begin": 31500,
+          "end": 31880
+        },
+        {
+          "word": "system",
+          "begin": 31960,
+          "end": 32280
+        },
+        {
+          "word": "in",
+          "begin": 32320,
+          "end": 32400
+        },
+        {
+          "word": "storage",
+          "begin": 32460,
+          "end": 32780
+        },
+        {
+          "word": "devices.",
+          "begin": 32840,
+          "end": 33400
+        },
+        {
+          "word": "Reports",
+          "begin": 33840,
+          "end": 34240
+        },
+        {
+          "word": "metrics",
+          "begin": 34280,
+          "end": 34660
+        },
+        {
+          "word": "like",
+          "begin": 34680,
+          "end": 34820
+        },
+        {
+          "word": "temperature,",
+          "begin": 34860,
+          "end": 35300
+        },
+        {
+          "word": "wear",
+          "begin": 35740,
+          "end": 35820
+        },
+        {
+          "word": "percentage,",
+          "begin": 35980,
+          "end": 36560
+        },
+        {
+          "word": "error",
+          "begin": 36900,
+          "end": 37080
+        },
+        {
+          "word": "counts,",
+          "begin": 37200,
+          "end": 37520
+        },
+        {
+          "word": "and",
+          "begin": 37620,
+          "end": 37720
+        },
+        {
+          "word": "power-on",
+          "begin": 37760,
+          "end": 38240
+        },
+        {
+          "word": "hours",
+          "begin": 38300,
+          "end": 38720
+        },
+        {
+          "word": "through",
+          "begin": 38740,
+          "end": 38800
+        },
+        {
+          "word": "standardized",
+          "begin": 38920,
+          "end": 39480
+        },
+        {
+          "word": "log",
+          "begin": 39540,
+          "end": 39740
+        },
+        {
+          "word": "pages.",
+          "begin": 39800,
+          "end": 40280
+        },
+        {
+          "word": "Percentage",
+          "begin": 40460,
+          "end": 40880
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "term",
+      "text": "Percentage Used: A SMART field (0-255%) estimating how much of the SSD's rated endurance has been consumed. 100% means the drive has used its rated TBW. Values above 100% mean the drive has exceeded its warranty endurance but may still function.",
+      "beginMs": 40940,
+      "endMs": 58100,
+      "timestamps": [
+        {
+          "word": "Used:",
+          "begin": 40940,
+          "end": 41320
+        },
+        {
+          "word": "A",
+          "begin": 41620,
+          "end": 41640
+        },
+        {
+          "word": "SMART",
+          "begin": 41720,
+          "end": 41980
+        },
+        {
+          "word": "field",
+          "begin": 42060,
+          "end": 42220
+        },
+        {
+          "word": "(0-255%)",
+          "begin": 42260,
+          "end": 44280
+        },
+        {
+          "word": "estimating",
+          "begin": 44620,
+          "end": 45120
+        },
+        {
+          "word": "how",
+          "begin": 45180,
+          "end": 45260
+        },
+        {
+          "word": "much",
+          "begin": 45380,
+          "end": 45560
+        },
+        {
+          "word": "of",
+          "begin": 45600,
+          "end": 45660
+        },
+        {
+          "word": "the",
+          "begin": 45680,
+          "end": 45740
+        },
+        {
+          "word": "SSD's",
+          "begin": 45860,
+          "end": 46240
+        },
+        {
+          "word": "rated",
+          "begin": 46340,
+          "end": 46700
+        },
+        {
+          "word": "endurance",
+          "begin": 46720,
+          "end": 47140
+        },
+        {
+          "word": "has",
+          "begin": 47180,
+          "end": 48060
+        },
+        {
+          "word": "been",
+          "begin": 48440,
+          "end": 48840
+        },
+        {
+          "word": "consumed.",
+          "begin": 48880,
+          "end": 49300
+        },
+        {
+          "word": "means",
+          "begin": 49440,
+          "end": 49640
+        },
+        {
+          "word": "the",
+          "begin": 49680,
+          "end": 49740
+        },
+        {
+          "word": "drive",
+          "begin": 49800,
+          "end": 50120
+        },
+        {
+          "word": "has",
+          "begin": 50120,
+          "end": 50260
+        },
+        {
+          "word": "used",
+          "begin": 50260,
+          "end": 50340
+        },
+        {
+          "word": "its",
+          "begin": 50360,
+          "end": 50660
+        },
+        {
+          "word": "rated",
+          "begin": 50720,
+          "end": 51340
+        },
+        {
+          "word": "TBW.",
+          "begin": 51440,
+          "end": 51700
+        },
+        {
+          "word": "Values",
+          "begin": 51700,
+          "end": 52060
+        },
+        {
+          "word": "above",
+          "begin": 52100,
+          "end": 52980
+        },
+        {
+          "word": "100%",
+          "begin": 53020,
+          "end": 53840
+        },
+        {
+          "word": "mean",
+          "begin": 53920,
+          "end": 54060
+        },
+        {
+          "word": "the",
+          "begin": 54080,
+          "end": 54120
+        },
+        {
+          "word": "drive",
+          "begin": 54180,
+          "end": 54520
+        },
+        {
+          "word": "has",
+          "begin": 54520,
+          "end": 54640
+        },
+        {
+          "word": "exceeded",
+          "begin": 54660,
+          "end": 55120
+        },
+        {
+          "word": "its",
+          "begin": 55140,
+          "end": 55260
+        },
+        {
+          "word": "warranty",
+          "begin": 55340,
+          "end": 55680
+        },
+        {
+          "word": "endurance",
+          "begin": 55740,
+          "end": 56280
+        },
+        {
+          "word": "but",
+          "begin": 56760,
+          "end": 56840
+        },
+        {
+          "word": "may",
+          "begin": 56840,
+          "end": 56940
+        },
+        {
+          "word": "still",
+          "begin": 57060,
+          "end": 57280
+        },
+        {
+          "word": "function.",
+          "begin": 57360,
+          "end": 57760
+        },
+        {
+          "word": "Just",
+          "begin": 57920,
+          "end": 58100
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "Just like you go to a doctor for a checkup, your SSD has a built-in health report called SMART (Self-Monitoring, Analysis, and Reporting Technology). It tracks temperature, wear, error counts, power usage, and more — everything you need to know about the drive's health.",
+      "beginMs": 58100,
+      "endMs": 73400,
+      "timestamps": [
+        {
+          "word": "like",
+          "begin": 58100,
+          "end": 58280
+        },
+        {
+          "word": "you",
+          "begin": 58280,
+          "end": 58340
+        },
+        {
+          "word": "go",
+          "begin": 58400,
+          "end": 58480
+        },
+        {
+          "word": "to",
+          "begin": 58580,
+          "end": 58640
+        },
+        {
+          "word": "a",
+          "begin": 58680,
+          "end": 58700
+        },
+        {
+          "word": "doctor",
+          "begin": 58780,
+          "end": 59080
+        },
+        {
+          "word": "for",
+          "begin": 59200,
+          "end": 59300
+        },
+        {
+          "word": "a",
+          "begin": 59300,
+          "end": 59320
+        },
+        {
+          "word": "checkup,",
+          "begin": 59420,
+          "end": 59840
+        },
+        {
+          "word": "your",
+          "begin": 60100,
+          "end": 60160
+        },
+        {
+          "word": "SSD",
+          "begin": 60280,
+          "end": 60700
+        },
+        {
+          "word": "has",
+          "begin": 60820,
+          "end": 60960
+        },
+        {
+          "word": "a",
+          "begin": 60960,
+          "end": 61000
+        },
+        {
+          "word": "built-in",
+          "begin": 61100,
+          "end": 61440
+        },
+        {
+          "word": "health",
+          "begin": 61520,
+          "end": 61700
+        },
+        {
+          "word": "report",
+          "begin": 61740,
+          "end": 62160
+        },
+        {
+          "word": "called",
+          "begin": 62420,
+          "end": 62620
+        },
+        {
+          "word": "SMART",
+          "begin": 62720,
+          "end": 62980
+        },
+        {
+          "word": "(Self-Monitoring,",
+          "begin": 63020,
+          "end": 63800
+        },
+        {
+          "word": "Analysis,",
+          "begin": 64040,
+          "end": 64660
+        },
+        {
+          "word": "and",
+          "begin": 64840,
+          "end": 64920
+        },
+        {
+          "word": "Reporting",
+          "begin": 64940,
+          "end": 65340
+        },
+        {
+          "word": "Technology).",
+          "begin": 65400,
+          "end": 65960
+        },
+        {
+          "word": "It",
+          "begin": 66360,
+          "end": 66440
+        },
+        {
+          "word": "tracks",
+          "begin": 66460,
+          "end": 66780
+        },
+        {
+          "word": "temperature,",
+          "begin": 66820,
+          "end": 67640
+        },
+        {
+          "word": "wear,",
+          "begin": 67680,
+          "end": 68360
+        },
+        {
+          "word": "error",
+          "begin": 68400,
+          "end": 68420
+        },
+        {
+          "word": "counts,",
+          "begin": 68540,
+          "end": 68880
+        },
+        {
+          "word": "power",
+          "begin": 69100,
+          "end": 69440
+        },
+        {
+          "word": "usage,",
+          "begin": 69440,
+          "end": 69800
+        },
+        {
+          "word": "and",
+          "begin": 69920,
+          "end": 70020
+        },
+        {
+          "word": "more",
+          "begin": 70080,
+          "end": 70160
+        },
+        {
+          "word": "everything",
+          "begin": 70660,
+          "end": 71060
+        },
+        {
+          "word": "you",
+          "begin": 71080,
+          "end": 71120
+        },
+        {
+          "word": "need",
+          "begin": 71180,
+          "end": 71320
+        },
+        {
+          "word": "to",
+          "begin": 71340,
+          "end": 71400
+        },
+        {
+          "word": "know",
+          "begin": 71480,
+          "end": 71800
+        },
+        {
+          "word": "about",
+          "begin": 71820,
+          "end": 72080
+        },
+        {
+          "word": "the",
+          "begin": 72100,
+          "end": 72180
+        },
+        {
+          "word": "drive's",
+          "begin": 72100,
+          "end": 72420
+        },
+        {
+          "word": "health.",
+          "begin": 72420,
+          "end": 72720
+        },
+        {
+          "word": "Why",
+          "begin": 73320,
+          "end": 73400
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "Why should you check SMART? Because SSDs don't fail suddenly without warning. SMART data shows early warning signs: rising temperatures, increasing error counts, shrinking spare capacity. If you catch these trends early, you can replace the drive before you lose data.",
+      "beginMs": 73540,
+      "endMs": 88540,
+      "timestamps": [
+        {
+          "word": "should",
+          "begin": 73540,
+          "end": 73660
+        },
+        {
+          "word": "you",
+          "begin": 73680,
+          "end": 73720
+        },
+        {
+          "word": "check",
+          "begin": 73820,
+          "end": 74020
+        },
+        {
+          "word": "SMART?",
+          "begin": 74100,
+          "end": 74480
+        },
+        {
+          "word": "Because",
+          "begin": 74780,
+          "end": 75040
+        },
+        {
+          "word": "SSDs",
+          "begin": 75120,
+          "end": 75560
+        },
+        {
+          "word": "don't",
+          "begin": 75740,
+          "end": 76000
+        },
+        {
+          "word": "fail",
+          "begin": 76000,
+          "end": 76240
+        },
+        {
+          "word": "suddenly",
+          "begin": 76360,
+          "end": 76600
+        },
+        {
+          "word": "without",
+          "begin": 76600,
+          "end": 76980
+        },
+        {
+          "word": "warning.",
+          "begin": 77040,
+          "end": 77380
+        },
+        {
+          "word": "SMART",
+          "begin": 77720,
+          "end": 78000
+        },
+        {
+          "word": "data",
+          "begin": 78000,
+          "end": 78280
+        },
+        {
+          "word": "shows",
+          "begin": 78400,
+          "end": 78640
+        },
+        {
+          "word": "early",
+          "begin": 78760,
+          "end": 78920
+        },
+        {
+          "word": "warning",
+          "begin": 79020,
+          "end": 79300
+        },
+        {
+          "word": "signs:",
+          "begin": 79380,
+          "end": 79780
+        },
+        {
+          "word": "rising",
+          "begin": 80040,
+          "end": 80360
+        },
+        {
+          "word": "temperatures,",
+          "begin": 80400,
+          "end": 81060
+        },
+        {
+          "word": "increasing",
+          "begin": 81300,
+          "end": 81800
+        },
+        {
+          "word": "error",
+          "begin": 81880,
+          "end": 82000
+        },
+        {
+          "word": "counts,",
+          "begin": 82100,
+          "end": 82820
+        },
+        {
+          "word": "shrinking",
+          "begin": 82860,
+          "end": 83180
+        },
+        {
+          "word": "spare",
+          "begin": 83280,
+          "end": 83420
+        },
+        {
+          "word": "capacity.",
+          "begin": 83620,
+          "end": 84120
+        },
+        {
+          "word": "If",
+          "begin": 84680,
+          "end": 84760
+        },
+        {
+          "word": "you",
+          "begin": 84780,
+          "end": 84840
+        },
+        {
+          "word": "catch",
+          "begin": 84920,
+          "end": 85140
+        },
+        {
+          "word": "these",
+          "begin": 85220,
+          "end": 85380
+        },
+        {
+          "word": "trends",
+          "begin": 85460,
+          "end": 85760
+        },
+        {
+          "word": "early,",
+          "begin": 85860,
+          "end": 86080
+        },
+        {
+          "word": "you",
+          "begin": 86400,
+          "end": 86460
+        },
+        {
+          "word": "can",
+          "begin": 86520,
+          "end": 86620
+        },
+        {
+          "word": "replace",
+          "begin": 86660,
+          "end": 87040
+        },
+        {
+          "word": "the",
+          "begin": 87080,
+          "end": 87120
+        },
+        {
+          "word": "drive",
+          "begin": 87180,
+          "end": 87480
+        },
+        {
+          "word": "before",
+          "begin": 87520,
+          "end": 87740
+        },
+        {
+          "word": "you",
+          "begin": 87880,
+          "end": 87940
+        },
+        {
+          "word": "lose",
+          "begin": 88020,
+          "end": 88240
+        },
+        {
+          "word": "data.",
+          "begin": 88300,
+          "end": 88540
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "The SMART log is retrieved using the Get Log Page command (opcode 0x02) with Log ID 0x02. It returns 512 bytes of health data. The nvme-cli shortcut is:",
+      "beginMs": 88920,
+      "endMs": 99960,
+      "timestamps": [
+        {
+          "word": "The",
+          "begin": 88920,
+          "end": 88960
+        },
+        {
+          "word": "SMART",
+          "begin": 89060,
+          "end": 89300
+        },
+        {
+          "word": "log",
+          "begin": 89340,
+          "end": 89520
+        },
+        {
+          "word": "is",
+          "begin": 89540,
+          "end": 89640
+        },
+        {
+          "word": "retrieved",
+          "begin": 89660,
+          "end": 90080
+        },
+        {
+          "word": "using",
+          "begin": 90100,
+          "end": 90340
+        },
+        {
+          "word": "the",
+          "begin": 90140,
+          "end": 90160
+        },
+        {
+          "word": "Get",
+          "begin": 90240,
+          "end": 90340
+        },
+        {
+          "word": "Log",
+          "begin": 90380,
+          "end": 90600
+        },
+        {
+          "word": "Page",
+          "begin": 90680,
+          "end": 90960
+        },
+        {
+          "word": "command",
+          "begin": 91000,
+          "end": 91580
+        },
+        {
+          "word": "(opcode",
+          "begin": 91680,
+          "end": 92140
+        },
+        {
+          "word": "0x02)",
+          "begin": 92140,
+          "end": 92700
+        },
+        {
+          "word": "with",
+          "begin": 92940,
+          "end": 93060
+        },
+        {
+          "word": "Log",
+          "begin": 93120,
+          "end": 93340
+        },
+        {
+          "word": "ID",
+          "begin": 93380,
+          "end": 93600
+        },
+        {
+          "word": "0x02.",
+          "begin": 93740,
+          "end": 95100
+        },
+        {
+          "word": "It",
+          "begin": 95120,
+          "end": 95220
+        },
+        {
+          "word": "returns",
+          "begin": 95260,
+          "end": 95520
+        },
+        {
+          "word": "512",
+          "begin": 95520,
+          "end": 96240
+        },
+        {
+          "word": "bytes",
+          "begin": 96240,
+          "end": 96540
+        },
+        {
+          "word": "of",
+          "begin": 96560,
+          "end": 96640
+        },
+        {
+          "word": "health",
+          "begin": 96680,
+          "end": 96860
+        },
+        {
+          "word": "data.",
+          "begin": 96940,
+          "end": 98060
+        },
+        {
+          "word": "The",
+          "begin": 98120,
+          "end": 98200
+        },
+        {
+          "word": "nvme-cli",
+          "begin": 98120,
+          "end": 98960
+        },
+        {
+          "word": "shortcut",
+          "begin": 99100,
+          "end": 99600
+        },
+        {
+          "word": "is:",
+          "begin": 99700,
+          "end": 99960
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "Out of all 14 fields, which ones matter most? Three fields should trigger immediate action if they change:",
+      "beginMs": 100300,
+      "endMs": 106300,
+      "timestamps": [
+        {
+          "word": "Out",
+          "begin": 100300,
+          "end": 100380
+        },
+        {
+          "word": "of",
+          "begin": 100400,
+          "end": 100500
+        },
+        {
+          "word": "all",
+          "begin": 100580,
+          "end": 100700
+        },
+        {
+          "word": "14",
+          "begin": 100800,
+          "end": 101220
+        },
+        {
+          "word": "fields,",
+          "begin": 101320,
+          "end": 101780
+        },
+        {
+          "word": "which",
+          "begin": 102040,
+          "end": 102200
+        },
+        {
+          "word": "ones",
+          "begin": 102280,
+          "end": 102540
+        },
+        {
+          "word": "matter",
+          "begin": 102600,
+          "end": 102780
+        },
+        {
+          "word": "most?",
+          "begin": 102880,
+          "end": 103280
+        },
+        {
+          "word": "Three",
+          "begin": 103680,
+          "end": 103820
+        },
+        {
+          "word": "fields",
+          "begin": 103960,
+          "end": 104240
+        },
+        {
+          "word": "should",
+          "begin": 104280,
+          "end": 104400
+        },
+        {
+          "word": "trigger",
+          "begin": 104440,
+          "end": 104740
+        },
+        {
+          "word": "immediate",
+          "begin": 104740,
+          "end": 105140
+        },
+        {
+          "word": "action",
+          "begin": 105220,
+          "end": 105580
+        },
+        {
+          "word": "if",
+          "begin": 105600,
+          "end": 105680
+        },
+        {
+          "word": "they",
+          "begin": 105720,
+          "end": 105780
+        },
+        {
+          "word": "change:",
+          "begin": 105880,
+          "end": 106300
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "reveal",
+      "text": "Knowledge check: You see two SMART fields: 'Percentage Used: 80%' and 'Data Units Written: 50 TB' on a drive rated for 600 TBW. Why don't these two numbers tell the same story? What hidden factor explains the discrepancy? The answer: Data Units Written (50 TB) only counts host-initiated writes — what the OS sent to the SSD. But Percentage Used (80%) reflects the actual NAND wear, which includes all internal writes: garbage collection copies, wear-leveling page moves, metadata updates, and FTL journaling. The discrepancy reveals a Write Amplification Factor of roughly (80% of 600 TBW) / 50 TB = 480 / 50 = 9.6x. This means for every byte the host wrote, the SSD internally wrote nearly 10 bytes to NAND. The drive is wearing out far faster than the host write volume alone suggests — likely due to heavy random writes, a nearly-full drive, or missing TRIM support.",
+      "beginMs": 106640,
+      "endMs": 170620,
+      "timestamps": [
+        {
+          "word": "Knowledge",
+          "begin": 106640,
+          "end": 106980
+        },
+        {
+          "word": "check:",
+          "begin": 107060,
+          "end": 107360
+        },
+        {
+          "word": "You",
+          "begin": 107960,
+          "end": 108020
+        },
+        {
+          "word": "see",
+          "begin": 108120,
+          "end": 108200
+        },
+        {
+          "word": "two",
+          "begin": 108320,
+          "end": 108420
+        },
+        {
+          "word": "SMART",
+          "begin": 108580,
+          "end": 108840
+        },
+        {
+          "word": "fields:",
+          "begin": 108920,
+          "end": 109320
+        },
+        {
+          "word": "'Percentage",
+          "begin": 109580,
+          "end": 110080
+        },
+        {
+          "word": "Used:",
+          "begin": 110120,
+          "end": 111000
+        },
+        {
+          "word": "80%'",
+          "begin": 111080,
+          "end": 111520
+        },
+        {
+          "word": "and",
+          "begin": 111700,
+          "end": 111860
+        },
+        {
+          "word": "'Data",
+          "begin": 111900,
+          "end": 112040
+        },
+        {
+          "word": "Units",
+          "begin": 112120,
+          "end": 112420
+        },
+        {
+          "word": "Written:",
+          "begin": 112500,
+          "end": 112780
+        },
+        {
+          "word": "50",
+          "begin": 113100,
+          "end": 113340
+        },
+        {
+          "word": "TB'",
+          "begin": 113420,
+          "end": 113920
+        },
+        {
+          "word": "on",
+          "begin": 114000,
+          "end": 114080
+        },
+        {
+          "word": "a",
+          "begin": 114100,
+          "end": 114120
+        },
+        {
+          "word": "drive",
+          "begin": 114180,
+          "end": 114560
+        },
+        {
+          "word": "rated",
+          "begin": 114640,
+          "end": 114900
+        },
+        {
+          "word": "for",
+          "begin": 114940,
+          "end": 115320
+        },
+        {
+          "word": "600",
+          "begin": 115320,
+          "end": 116080
+        },
+        {
+          "word": "TBW.",
+          "begin": 116140,
+          "end": 116480
+        },
+        {
+          "word": "Why",
+          "begin": 117180,
+          "end": 117260
+        },
+        {
+          "word": "don't",
+          "begin": 117340,
+          "end": 117480
+        },
+        {
+          "word": "these",
+          "begin": 117520,
+          "end": 117680
+        },
+        {
+          "word": "two",
+          "begin": 117740,
+          "end": 117820
+        },
+        {
+          "word": "numbers",
+          "begin": 117920,
+          "end": 118220
+        },
+        {
+          "word": "tell",
+          "begin": 118280,
+          "end": 118420
+        },
+        {
+          "word": "the",
+          "begin": 118440,
+          "end": 118500
+        },
+        {
+          "word": "same",
+          "begin": 118600,
+          "end": 118780
+        },
+        {
+          "word": "story?",
+          "begin": 118860,
+          "end": 119160
+        },
+        {
+          "word": "What",
+          "begin": 119720,
+          "end": 119860
+        },
+        {
+          "word": "hidden",
+          "begin": 119880,
+          "end": 120080
+        },
+        {
+          "word": "factor",
+          "begin": 120160,
+          "end": 120560
+        },
+        {
+          "word": "explains",
+          "begin": 120600,
+          "end": 121020
+        },
+        {
+          "word": "the",
+          "begin": 121060,
+          "end": 121120
+        },
+        {
+          "word": "discrepancy?",
+          "begin": 121160,
+          "end": 121580
+        },
+        {
+          "word": "The",
+          "begin": 121640,
+          "end": 122500
+        },
+        {
+          "word": "answer:",
+          "begin": 122600,
+          "end": 122860
+        },
+        {
+          "word": "Data",
+          "begin": 123360,
+          "end": 123580
+        },
+        {
+          "word": "Units",
+          "begin": 123660,
+          "end": 123940
+        },
+        {
+          "word": "Written",
+          "begin": 124000,
+          "end": 124200
+        },
+        {
+          "word": "(50",
+          "begin": 124300,
+          "end": 124520
+        },
+        {
+          "word": "TB)",
+          "begin": 124600,
+          "end": 125140
+        },
+        {
+          "word": "only",
+          "begin": 125240,
+          "end": 125400
+        },
+        {
+          "word": "counts",
+          "begin": 125480,
+          "end": 125840
+        },
+        {
+          "word": "host-initiated",
+          "begin": 125840,
+          "end": 126720
+        },
+        {
+          "word": "writes",
+          "begin": 126780,
+          "end": 127160
+        },
+        {
+          "word": "what",
+          "begin": 128060,
+          "end": 128220
+        },
+        {
+          "word": "the",
+          "begin": 128220,
+          "end": 128280
+        },
+        {
+          "word": "OS",
+          "begin": 128360,
+          "end": 128660
+        },
+        {
+          "word": "sent",
+          "begin": 128720,
+          "end": 128880
+        },
+        {
+          "word": "to",
+          "begin": 128880,
+          "end": 128940
+        },
+        {
+          "word": "the",
+          "begin": 128940,
+          "end": 129100
+        },
+        {
+          "word": "SSD.",
+          "begin": 129180,
+          "end": 129620
+        },
+        {
+          "word": "But",
+          "begin": 130240,
+          "end": 130340
+        },
+        {
+          "word": "Percentage",
+          "begin": 130400,
+          "end": 130860
+        },
+        {
+          "word": "Used",
+          "begin": 130860,
+          "end": 131320
+        },
+        {
+          "word": "(80%)",
+          "begin": 131380,
+          "end": 131760
+        },
+        {
+          "word": "reflects",
+          "begin": 131820,
+          "end": 132260
+        },
+        {
+          "word": "the",
+          "begin": 132260,
+          "end": 132300
+        },
+        {
+          "word": "actual",
+          "begin": 132420,
+          "end": 132720
+        },
+        {
+          "word": "NAND",
+          "begin": 132820,
+          "end": 133060
+        },
+        {
+          "word": "wear,",
+          "begin": 133120,
+          "end": 133200
+        },
+        {
+          "word": "which",
+          "begin": 133760,
+          "end": 133880
+        },
+        {
+          "word": "includes",
+          "begin": 133920,
+          "end": 134280
+        },
+        {
+          "word": "all",
+          "begin": 134380,
+          "end": 134500
+        },
+        {
+          "word": "internal",
+          "begin": 134540,
+          "end": 134900
+        },
+        {
+          "word": "writes:",
+          "begin": 135020,
+          "end": 135380
+        },
+        {
+          "word": "garbage",
+          "begin": 135800,
+          "end": 136080
+        },
+        {
+          "word": "collection",
+          "begin": 136140,
+          "end": 136520
+        },
+        {
+          "word": "copies,",
+          "begin": 136580,
+          "end": 137080
+        },
+        {
+          "word": "wear-leveling",
+          "begin": 137520,
+          "end": 138080
+        },
+        {
+          "word": "page",
+          "begin": 138120,
+          "end": 138400
+        },
+        {
+          "word": "moves,",
+          "begin": 138480,
+          "end": 138820
+        },
+        {
+          "word": "metadata",
+          "begin": 139200,
+          "end": 139640
+        },
+        {
+          "word": "updates,",
+          "begin": 139740,
+          "end": 140680
+        },
+        {
+          "word": "and",
+          "begin": 140760,
+          "end": 140960
+        },
+        {
+          "word": "FTL",
+          "begin": 140760,
+          "end": 141220
+        },
+        {
+          "word": "journaling.",
+          "begin": 141320,
+          "end": 141780
+        },
+        {
+          "word": "The",
+          "begin": 142000,
+          "end": 142040
+        },
+        {
+          "word": "discrepancy",
+          "begin": 142100,
+          "end": 142680
+        },
+        {
+          "word": "reveals",
+          "begin": 142760,
+          "end": 143160
+        },
+        {
+          "word": "a",
+          "begin": 143200,
+          "end": 143220
+        },
+        {
+          "word": "Write",
+          "begin": 143320,
+          "end": 143560
+        },
+        {
+          "word": "Amplification",
+          "begin": 143640,
+          "end": 144340
+        },
+        {
+          "word": "Factor",
+          "begin": 144420,
+          "end": 144740
+        },
+        {
+          "word": "of",
+          "begin": 145320,
+          "end": 145700
+        },
+        {
+          "word": "roughly",
+          "begin": 145700,
+          "end": 146060
+        },
+        {
+          "word": "(80%",
+          "begin": 146140,
+          "end": 146600
+        },
+        {
+          "word": "of",
+          "begin": 146920,
+          "end": 147280
+        },
+        {
+          "word": "600",
+          "begin": 147300,
+          "end": 147560
+        },
+        {
+          "word": "/",
+          "begin": 147600,
+          "end": 148720
+        },
+        {
+          "word": "50",
+          "begin": 148760,
+          "end": 152480
+        },
+        {
+          "word": "TB",
+          "begin": 152580,
+          "end": 154160
+        },
+        {
+          "word": "=",
+          "begin": 154220,
+          "end": 154420
+        },
+        {
+          "word": "50",
+          "begin": 154480,
+          "end": 154700
+        },
+        {
+          "word": "=",
+          "begin": 154760,
+          "end": 155240
+        },
+        {
+          "word": "This",
+          "begin": 155600,
+          "end": 155740
+        },
+        {
+          "word": "means",
+          "begin": 155800,
+          "end": 156020
+        },
+        {
+          "word": "for",
+          "begin": 156080,
+          "end": 156260
+        },
+        {
+          "word": "every",
+          "begin": 156260,
+          "end": 156440
+        },
+        {
+          "word": "byte",
+          "begin": 156560,
+          "end": 156800
+        },
+        {
+          "word": "the",
+          "begin": 156820,
+          "end": 156860
+        },
+        {
+          "word": "host",
+          "begin": 156920,
+          "end": 157180
+        },
+        {
+          "word": "wrote,",
+          "begin": 157180,
+          "end": 157560
+        },
+        {
+          "word": "the",
+          "begin": 157920,
+          "end": 157980
+        },
+        {
+          "word": "SSD",
+          "begin": 158100,
+          "end": 158520
+        },
+        {
+          "word": "internally",
+          "begin": 158600,
+          "end": 159060
+        },
+        {
+          "word": "wrote",
+          "begin": 159160,
+          "end": 159400
+        },
+        {
+          "word": "nearly",
+          "begin": 159440,
+          "end": 159660
+        },
+        {
+          "word": "10",
+          "begin": 159780,
+          "end": 160000
+        },
+        {
+          "word": "bytes",
+          "begin": 160060,
+          "end": 160380
+        },
+        {
+          "word": "to",
+          "begin": 160440,
+          "end": 160500
+        },
+        {
+          "word": "NAND.",
+          "begin": 160580,
+          "end": 160960
+        },
+        {
+          "word": "The",
+          "begin": 161200,
+          "end": 161240
+        },
+        {
+          "word": "drive",
+          "begin": 161320,
+          "end": 161780
+        },
+        {
+          "word": "is",
+          "begin": 161840,
+          "end": 161860
+        },
+        {
+          "word": "wearing",
+          "begin": 161900,
+          "end": 162140
+        },
+        {
+          "word": "out",
+          "begin": 162180,
+          "end": 162320
+        },
+        {
+          "word": "far",
+          "begin": 162440,
+          "end": 162520
+        },
+        {
+          "word": "faster",
+          "begin": 162760,
+          "end": 163240
+        },
+        {
+          "word": "than",
+          "begin": 163240,
+          "end": 163360
+        },
+        {
+          "word": "the",
+          "begin": 163360,
+          "end": 163420
+        },
+        {
+          "word": "host",
+          "begin": 163500,
+          "end": 163780
+        },
+        {
+          "word": "write",
+          "begin": 163780,
+          "end": 164040
+        },
+        {
+          "word": "volume",
+          "begin": 164100,
+          "end": 164320
+        },
+        {
+          "word": "alone",
+          "begin": 164340,
+          "end": 164740
+        },
+        {
+          "word": "suggests",
+          "begin": 164800,
+          "end": 165420
+        },
+        {
+          "word": "likely",
+          "begin": 165840,
+          "end": 166120
+        },
+        {
+          "word": "due",
+          "begin": 166200,
+          "end": 166260
+        },
+        {
+          "word": "to",
+          "begin": 166320,
+          "end": 166360
+        },
+        {
+          "word": "heavy",
+          "begin": 166440,
+          "end": 166660
+        },
+        {
+          "word": "random",
+          "begin": 166760,
+          "end": 167080
+        },
+        {
+          "word": "writes,",
+          "begin": 167140,
+          "end": 167520
+        },
+        {
+          "word": "a",
+          "begin": 167960,
+          "end": 168060
+        },
+        {
+          "word": "nearly-full",
+          "begin": 168060,
+          "end": 168520
+        },
+        {
+          "word": "drive,",
+          "begin": 168600,
+          "end": 169040
+        },
+        {
+          "word": "or",
+          "begin": 169440,
+          "end": 169460
+        },
+        {
+          "word": "missing",
+          "begin": 169560,
+          "end": 169840
+        },
+        {
+          "word": "TRIM",
+          "begin": 169900,
+          "end": 170100
+        },
+        {
+          "word": "support.",
+          "begin": 170180,
+          "end": 170620
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

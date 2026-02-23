@@ -1,0 +1,206 @@
+{
+  "sectionId": "sec-security",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Security — Protecting Data at the Hardware Level",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: SSD Security Has Three Layers. SSD security is like securing a vault: encryption (scrambles data so stolen NAND chips are unreadable), authentication (only authorized users can unlock the drive), and sanitization (irreversibly destroy data when decommissioning). TCG Opal provides hardware-based encryption with user/admin passwords.",
+      "blockIndex": 1
+    },
+    {
+      "type": "term",
+      "text": "TCG Opal: A standard for hardware-based full-disk encryption built into the SSD controller. Uses a Data Encryption Key (DEK) to encrypt all data written to NAND, and an Authentication Key (AK) to lock/unlock the drive.",
+      "blockIndex": 2
+    },
+    {
+      "type": "term",
+      "text": "DEK (Data Encryption Key): The symmetric key (typically AES-256) used to encrypt/decrypt all data on the SSD. Stored securely in the controller. Crypto-erasing the DEK instantly makes all data on the drive unrecoverable.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "So far, we've talked about reading, writing, erasing, and updating SSDs. But what about protecting the data on them? If someone steals your laptop — or a decommissioned server drive ends up on eBay — can they read your data?",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "Here's the key insight: software encryption (like BitLocker or LUKS) encrypts data before it reaches the SSD. But there's another approach — the SSD itself can encrypt everything internally, transparently, without any software overhead. This is called a Self-Encrypting Drive (SED).",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "But why encrypt at the hardware level? Three reasons:",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "The drive encrypts all data with AES-256 transparently. The encryption key is generated inside the controller and never leaves the chip. Even the host OS never sees the raw key.",
+      "blockIndex": 7
+    },
+    {
+      "type": "paragraph",
+      "text": "But wait — if it's always encrypted, how does the host read data? The controller decrypts on-the-fly as data leaves the drive. From the host's perspective, it looks like an unencrypted drive. The protection kicks in when the drive is powered off or removed.",
+      "blockIndex": 8
+    },
+    {
+      "type": "paragraph",
+      "text": "If the drive always decrypts for the host, what stops a thief? TCG Opal. It's an industry standard that adds authentication — a password that must be provided before the drive will unlock.",
+      "blockIndex": 9
+    },
+    {
+      "type": "paragraph",
+      "text": "Features: pre-boot authentication (password required before OS loads), per-range locking (different passwords for different LBA ranges), and enterprise key management. TCG Opal communicates with the drive through NVMe Security Send/Receive commands.",
+      "blockIndex": 10
+    },
+    {
+      "type": "paragraph",
+      "text": "If the encryption key never leaves the chip, how does your password unlock the data? The answer is a two-level key hierarchy:",
+      "blockIndex": 11
+    },
+    {
+      "type": "paragraph",
+      "text": "The actual key that encrypts/decrypts your data. Generated randomly by the controller's hardware random number generator during manufacturing. This key never changes — it's the same for the life of the drive (unless you do a crypto erase, which generates a new one).",
+      "blockIndex": 12
+    },
+    {
+      "type": "paragraph",
+      "text": "Derived from your password. The KEK encrypts the DEK. When you type your password, the drive derives the KEK, uses it to decrypt the DEK, and then uses the DEK to decrypt your data. Why this indirection? So you can change your password without re-encrypting the entire drive — only the wrapped DEK needs to be re-encrypted with the new KEK.",
+      "blockIndex": 13
+    },
+    {
+      "type": "paragraph",
+      "text": "And what is &ldquo;crypto erase&rdquo; really? The drive generates a new random DEK. The old DEK is gone. Since all data was encrypted with the old DEK, it's now unreadable — even though the NAND cells still physically hold the encrypted bits. No need to erase billions of cells — just destroy one 256-bit key.",
+      "blockIndex": 14
+    },
+    {
+      "type": "paragraph",
+      "text": "NVMe doesn't handle encryption directly — it provides two &ldquo;tunnel&rdquo; commands that carry security protocol messages between the host and the drive's security subsystem:",
+      "blockIndex": 15
+    },
+    {
+      "type": "paragraph",
+      "text": "Host sends a command or data to the drive's security subsystem. Example: &ldquo;Here is my password, please unlock.&rdquo;",
+      "blockIndex": 16
+    },
+    {
+      "type": "paragraph",
+      "text": "Host reads a response from the drive's security subsystem. Example: &ldquo;Password accepted, drive unlocked.&rdquo;",
+      "blockIndex": 17
+    },
+    {
+      "type": "paragraph",
+      "text": "The SECP field in Security Send/Receive specifies which security protocol to use. Think of it as selecting a language for the conversation:",
+      "blockIndex": 18
+    },
+    {
+      "type": "paragraph",
+      "text": "So how do you actually set a password and lock the drive? TCG Opal uses the Security Send/Receive commands under the hood, but you don't construct those raw NVMe commands yourself. Instead, you use sedutil-cli — an open-source tool that speaks the TCG Opal protocol.",
+      "blockIndex": 19
+    },
+    {
+      "type": "paragraph",
+      "text": "Why not just use nvme-cli? Because nvme-cli doesn't understand TCG Opal's protocol messages. It can send raw Security Send/Receive commands, but the payload format is defined by the TCG Opal specification — a complex binary protocol with sessions, tokens, and method calls. sedutil handles all of that for you.",
+      "blockIndex": 20
+    },
+    {
+      "type": "paragraph",
+      "text": "Here's a chicken-and-egg problem: if the drive is locked, the OS can't boot (the drive won't return any data). But if the OS can't boot, how do you type in your password to unlock the drive?",
+      "blockIndex": 21
+    },
+    {
+      "type": "paragraph",
+      "text": "TCG Opal solves this with MBR shadowing. The idea: the drive has a small hidden storage area called the Shadow MBR. You load a tiny bootable image into it — the PBA (Pre-Boot Authentication) image. This is a minimal Linux system whose only job is to ask for your password.",
+      "blockIndex": 22
+    },
+    {
+      "type": "paragraph",
+      "text": "How does &ldquo;shadowing&rdquo; work exactly? When MBR shadowing is enabled and the drive is locked, reads to the beginning of the drive (where the MBR/boot sector normally lives) return the Shadow MBR content instead of the actual disk content. The BIOS or UEFI sees what looks like a normal bootable drive and loads the PBA image.",
+      "blockIndex": 23
+    },
+    {
+      "type": "paragraph",
+      "text": "The PBA boots, prompts you for your password, and sends it to the drive via TCG Opal commands. Once authenticated, the drive unlocks and disables the shadow — now reads to the beginning of the drive return the actual boot sector. The PBA then triggers a warm reboot, and this time the BIOS sees your real OS and boots normally.",
+      "blockIndex": 24
+    },
+    {
+      "type": "paragraph",
+      "text": "Why not just use BIOS/UEFI password instead? Because a BIOS password only prevents booting — it doesn't encrypt the data. Someone could remove the drive and read it in another machine. SED with MBR shadowing encrypts the data AND prevents unauthorized boot. Even if the drive is moved to another machine, the data stays locked.",
+      "blockIndex": 25
+    },
+    {
+      "type": "paragraph",
+      "text": "If there are multiple locking ranges with different passwords, who manages all of this? TCG Opal has a concept of authorities — different identities with different permissions:",
+      "blockIndex": 26
+    },
+    {
+      "type": "paragraph",
+      "text": "The owner of the drive. Can change all settings, create/delete locking ranges, and manage other authorities. Think of SID as the building owner — they can change any lock, give out any key, or reset the entire system.",
+      "blockIndex": 27
+    },
+    {
+      "type": "paragraph",
+      "text": "The primary administrator. Can lock/unlock ranges and manage day-to-day security operations. The building manager — can lock/unlock doors but can't change the master plan.",
+      "blockIndex": 28
+    },
+    {
+      "type": "paragraph",
+      "text": "Optional user authorities. Each can be assigned to a specific locking range. Tenants — each has a key to their own apartment but can't access others.",
+      "blockIndex": 29
+    },
+    {
+      "type": "paragraph",
+      "text": "What happens if you set the SID password but forget it? You can still PSID revert (physical label) to factory reset. But if you set the Admin1 password and forget it, only the SID or PSID can recover. This layered authority system prevents a single compromised password from giving access to everything.",
+      "blockIndex": 30
+    },
+    {
+      "type": "paragraph",
+      "text": "Why would you need multiple passwords for one drive? Imagine a shared server where the OS partition and the data partition need different access controls. Or a laptop where the recovery partition should stay accessible even when the main partition is locked. TCG Opal supports locking ranges — independent LBA regions, each with its own password and lock state.",
+      "blockIndex": 31
+    },
+    {
+      "type": "paragraph",
+      "text": "Setting up SED encryption from scratch, step by step. Why so many steps? Because security requires explicit intent at every stage — you don't want encryption activating accidentally and locking you out of your own drive.",
+      "blockIndex": 32
+    },
+    {
+      "type": "paragraph",
+      "text": "Once SED is set up, what happens every time you turn on the machine? Here's the boot sequence:",
+      "blockIndex": 33
+    },
+    {
+      "type": "paragraph",
+      "text": "Why the reboot? Because the BIOS already cached the PBA boot sector in memory. A warm reboot forces it to re-read the drive, and now it gets the real OS boot sector because MBRDone disabled the shadow.",
+      "blockIndex": 34
+    },
+    {
+      "type": "paragraph",
+      "text": "What if you forget your password? Every TCG Opal drive has a PSID (Physical Security ID) — a long alphanumeric string printed on the drive's physical label. It's like the master key that the building owner keeps in a safe.",
+      "blockIndex": 35
+    },
+    {
+      "type": "paragraph",
+      "text": "Why is it on a physical label? Because it's meant to require physical access. A remote attacker who compromised your OS can't read the PSID — they'd need to physically look at the drive. This is a deliberate security design: the person with physical possession of the hardware has the ultimate override.",
+      "blockIndex": 36
+    },
+    {
+      "type": "paragraph",
+      "text": "What exactly happens during PSID revert? The drive generates a new DEK (data encryption key). Since all data was encrypted with the old DEK, it's now permanently unreadable. All passwords are cleared. All locking ranges are reset. The drive returns to factory state — ready for a new --initialSetup.",
+      "blockIndex": 37
+    },
+    {
+      "type": "info",
+      "text": "SED vs software encryption — a tradeoff: SED is faster (zero CPU overhead) and simpler, but you're trusting the drive's firmware implementation. Security researchers have found vulnerabilities in some SED implementations (notably Samsung and Crucial drives in 2018 where the DEK wasn't actually protected by the password). Many security-conscious environments use both — software encryption (LUKS/BitLocker) layered on top of hardware encryption — so a flaw in either layer doesn't expose data. Why not just use software encryption alone? Because SED gives you instant crypto erase capability that software alone can't match — and for drive decommissioning, that's invaluable.",
+      "blockIndex": 38
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: A self-encrypting drive (SED) with TCG Opal can 'erase' a 4 TB drive in under one second via crypto erase. How is this possible when physically erasing 4 TB of NAND cells would take minutes? Walk through the key hierarchy and explain exactly what happens during a crypto erase. The answer: The SED encrypts ALL data written to NAND using a Data Encryption Key (DEK) — a randomly generated AES-256 key stored securely in the controller chip. The DEK itself is encrypted by a Key Encryption Key (KEK) derived from your password. During a crypto erase, the controller doesn't touch the NAND at all. It simply generates a new random DEK and discards the old one. Since every bit on the NAND was encrypted with the old DEK, and that key no longer exists anywhere, the encrypted data is now indistinguishable from random noise — cryptographically unrecoverable even with direct NAND chip access. This takes microseconds because it only involves destroying one 256-bit key, regardless of drive capacity. The two-level key hierarchy (DEK + KEK) also explains why you can change your password without re-encrypting the entire drive — only the KEK wrapping needs to be updated, while the DEK stays the same.",
+      "requiresReveal": true,
+      "blockIndex": 39
+    }
+  ]
+}

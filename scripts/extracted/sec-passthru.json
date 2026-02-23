@@ -1,0 +1,196 @@
+{
+  "sectionId": "sec-passthru",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Vendor Passthrough — The Secret Menu",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: Passthru Is a Direct Line to the SSD. NVMe passthru lets you send raw commands directly to the SSD, bypassing the normal kernel drivers. It's like having a direct phone line to the SSD controller — you can send any command, including vendor-specific ones that aren't part of the standard NVMe spec. Useful for firmware diagnostics, testing, and accessing hidden features.",
+      "blockIndex": 1
+    },
+    {
+      "type": "term",
+      "text": "NVMe Passthru: A mechanism (via nvme-cli or /dev/nvmeX ioctl) to send raw NVMe admin or I/O commands directly to the controller, bypassing filesystem and block layer abstractions. Enables vendor-specific commands and low-level diagnostics.",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "We've covered NVMe's standard commands — the ones defined in the NVMe specification that every drive must support. But here's something interesting: every SSD manufacturer also has their own secret commands.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "Why would vendors need custom commands? Because the NVMe spec defines what the drive does (read, write, erase) but not how the internal firmware works. Samsung's garbage collection is different from Intel's. WD's wear leveling algorithm is different from Micron's. Each vendor has internal diagnostics, debug logs, and tuning parameters that are specific to their firmware.",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "What kinds of things do vendor commands do? Things that the standard NVMe spec doesn't cover:",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "The NVMe spec accounts for this by reserving opcode ranges for vendor use:",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "How do you send these? With the nvme admin-passthru and nvme io-passthru commands. &ldquo;Passthru&rdquo; means &ldquo;pass this raw command through to the drive without the driver trying to interpret it.&rdquo; You specify the opcode and CDW values directly — the same dword fields we learned about in the SQE structure from Lesson 8.",
+      "blockIndex": 7
+    },
+    {
+      "type": "paragraph",
+      "text": "But where do you get the opcodes and CDW values? That's the catch — they're proprietary. Each vendor documents their passthru commands in internal engineering specs that are not public. If you work at a drive vendor or as an SSD test engineer, you'll have access to these specs. Otherwise, you typically only use passthru when instructed by the vendor's support team or SDK documentation.",
+      "blockIndex": 8
+    },
+    {
+      "type": "paragraph",
+      "text": "Remember the 64-byte Submission Queue Entry from Lesson 8? Every NVMe command is a 64-byte structure with 16 dwords (DW0-DW15). When you use nvme admin-passthru, you're manually filling in those dwords. Here's how each passthru flag maps to the SQE:",
+      "blockIndex": 9
+    },
+    {
+      "type": "paragraph",
+      "text": "So when you type --opcode=0xC0 --cdw10=0x00000001, what's actually happening? nvme-cli builds a 64-byte SQE in memory. It puts 0xC0 into byte 0 (the opcode field of DW0), puts 0x00000001 into bytes 40-43 (DW10), fills in DW6-DW9 with a pointer to your data buffer, and the kernel fills in the command ID and submits it to the admin queue.",
+      "blockIndex": 10
+    },
+    {
+      "type": "paragraph",
+      "text": "Why can't you set DW0 fully, or DW2-DW5, or DW6-DW9? DW0 contains the CID and flags managed by the kernel. DW6-DW9 are PRP/SGL pointers — memory addresses the kernel sets up for DMA. You don't need to touch these; the kernel handles the DMA mapping. You only control the &ldquo;what to do&rdquo; parts: the opcode, namespace, and CDW10-CDW15 parameters.",
+      "blockIndex": 11
+    },
+    {
+      "type": "paragraph",
+      "text": "Since vendor commands aren't in the spec, nvme-cli can't know what fields they need. Instead, you provide everything manually:",
+      "blockIndex": 12
+    },
+    {
+      "type": "paragraph",
+      "text": "NVMe stores numbers with the smallest byte first. So the value 0x00001000 (4096) isn't stored as 00 00 10 00 — it's stored reversed: 00 10 00 00. This is called little-endian. Try it:",
+      "blockIndex": 13
+    },
+    {
+      "type": "paragraph",
+      "text": "NVMe uses little-endian because it runs over PCIe on x86 CPUs, which are little-endian. Binary data from the drive is also little-endian — if you don't reverse the bytes when reading, you'll misread every value.",
+      "blockIndex": 14
+    },
+    {
+      "type": "paragraph",
+      "text": "A DWord (Double Word) is always 4 bytes. The number is just an index — CDW10 means &ldquo;the 10th dword&rdquo; (bytes 40–43), not 10 bytes. An NVMe SQ entry is 16 DWords × 4 bytes = 64 bytes. Vendor data structures also use 4-byte alignment — each field below spans exactly one dword.",
+      "blockIndex": 15
+    },
+    {
+      "type": "paragraph",
+      "text": "An offset is just a position — how many bytes from the start of the data. Byte 0 is at offset 0, byte 16 is at offset 0x10, byte 32 is at 0x20, and so on. hexdump -C shows your binary data in rows of 16 bytes. Click any byte below to see how it works:",
+      "blockIndex": 16
+    },
+    {
+      "type": "paragraph",
+      "text": "Note: the data below is a fictional example — a made-up vendor health structure to teach hexdump reading. Real vendor data structures are proprietary and not publicly documented. In practice, you'd get the field layout from the vendor's internal spec or SDK documentation.",
+      "blockIndex": 17
+    },
+    {
+      "type": "paragraph",
+      "text": "Many vendor commands transfer data between the host and drive. But what does this data actually look like? And how does it relate to the passthru flags?",
+      "blockIndex": 18
+    },
+    {
+      "type": "paragraph",
+      "text": "Let's think about it: the NVMe command itself is just 64 bytes — the SQE. But some commands need to send or receive much more data. A vendor diagnostic dump might return 4 KB of health telemetry. A firmware patch might require sending a 1 MB binary blob. That data doesn't fit in the SQE.",
+      "blockIndex": 19
+    },
+    {
+      "type": "paragraph",
+      "text": "So where does the data go? Remember DW6-DW9 in the SQE — the PRP (Physical Region Page) pointers? They point to a buffer in host memory. The drive reads from or writes to that buffer via DMA (Direct Memory Access) over PCIe. When you specify --data-len=4096, nvme-cli allocates a 4096-byte buffer, puts its address in DW6-DW9, and the drive fills it.",
+      "blockIndex": 20
+    },
+    {
+      "type": "paragraph",
+      "text": "nvme-cli allocates an empty buffer. The command tells the drive &ldquo;fill this buffer with data.&rdquo; After completion, nvme-cli prints the buffer content to stdout as raw binary.",
+      "blockIndex": 21
+    },
+    {
+      "type": "paragraph",
+      "text": "nvme-cli fills the buffer from --input-file (or stdin if no file is specified). The command tells the drive &ldquo;here is data for you to process.&rdquo;",
+      "blockIndex": 22
+    },
+    {
+      "type": "paragraph",
+      "text": "Let's walk through a complete read example. Suppose the vendor spec says: &ldquo;Opcode 0xC0 with CDW10=0x00000001 returns a 64-byte health structure.&rdquo;",
+      "blockIndex": 23
+    },
+    {
+      "type": "paragraph",
+      "text": "4 rows × 16 bytes = 64 bytes total — matches our --data-len=64. Now let's decode it field by field.",
+      "blockIndex": 24
+    },
+    {
+      "type": "paragraph",
+      "text": "Step 3: Decode it. This is the same data shown in the interactive hexdump explorer above — scroll up and click any byte to see the field name, raw bytes, and little-endian decoded value.",
+      "blockIndex": 25
+    },
+    {
+      "type": "paragraph",
+      "text": "Now let's go the other direction. Suppose the vendor spec says: &ldquo;Opcode 0xC1 with CDW10=0x00000002 accepts a 16-byte configuration structure.&rdquo; The structure has:",
+      "blockIndex": 26
+    },
+    {
+      "type": "paragraph",
+      "text": "You want mode=3, threshold=500, timeout=5000. How do you create the binary file? First, convert each value to little-endian bytes:",
+      "blockIndex": 27
+    },
+    {
+      "type": "paragraph",
+      "text": "What happens under the hood? nvme-cli reads the 16 bytes from config.bin into a buffer, puts the buffer's memory address into DW6-DW9 (the PRP pointers), and submits the SQE with opcode=0xC1 and CDW10=0x00000002. The drive DMAs the 16 bytes from host memory and processes them according to its firmware's definition of opcode 0xC1.",
+      "blockIndex": 28
+    },
+    {
+      "type": "paragraph",
+      "text": "What if you got the endianness wrong? Say you wrote threshold=500 as 00 00 01 f4 (big-endian) instead of f4 01 00 00 (little-endian). The drive would interpret those bytes as 0xF4010000 = 4,093,706,240 — a completely wrong value. This is one of the most common mistakes when working with binary passthru commands.",
+      "blockIndex": 29
+    },
+    {
+      "type": "paragraph",
+      "text": "Can you use python instead of printf? Absolutely. python3 -c \"import struct; open('/tmp/config.bin','wb').write(struct.pack(' — the in the format string means little-endian, I means unsigned 32-bit int, and 4x means 4 padding bytes.",
+      "blockIndex": 30
+    },
+    {
+      "type": "paragraph",
+      "text": "Let's break down a passthru command piece by piece to understand exactly what's happening:",
+      "blockIndex": 31
+    },
+    {
+      "type": "paragraph",
+      "text": "When do you use admin-passthru vs io-passthru? It depends on which queue the command targets:",
+      "blockIndex": 32
+    },
+    {
+      "type": "paragraph",
+      "text": "Sends to the admin queue (qid=0). Used for controller-level operations: diagnostics, configuration, manufacturing commands.",
+      "blockIndex": 33
+    },
+    {
+      "type": "paragraph",
+      "text": "Sends to an I/O queue (qid &ge; 1). Used for namespace-level operations: vendor-specific read/write modes, data transformation commands.",
+      "blockIndex": 34
+    },
+    {
+      "type": "paragraph",
+      "text": "Here's a generic example showing the full workflow — send a vendor command, capture the output, and inspect it:",
+      "blockIndex": 35
+    },
+    {
+      "type": "info",
+      "text": "Vendor opcodes are proprietary — proceed with caution: The opcodes, CDW values, and data formats for vendor commands are proprietary — they are not part of the NVMe specification and are not publicly documented. They vary by vendor, model, and even firmware version. The opcodes 0xC0 and 0xC1 used in these examples are arbitrary placeholders — they are NOT a standard read/write pair. We chose them simply because they're the first two values in the vendor-specific range. The actual vendor commands, their opcodes, and what direction they transfer data all come from the vendor's internal specs. All data structures and field layouts shown above are hypothetical. Sending incorrect passthru commands can cause unexpected behavior or brick a drive. Only send commands when you know exactly what they do.",
+      "blockIndex": 36
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: Why does the NVMe specification reserve opcode ranges (0xC0-0xFF for admin, 0x80-0xFF for I/O) for vendor-specific commands instead of standardizing everything? What would break if every diagnostic and tuning command had to go through the NVMe standards process? The answer: The NVMe spec defines the universal interface — what every SSD must do (read, write, TRIM, SMART). But each vendor's internal implementation is radically different: Samsung's garbage collection algorithm, Intel's wear-leveling strategy, and WD's error recovery are all proprietary trade secrets. Standardizing internal diagnostics would require vendors to expose their firmware architecture, stifling innovation and competitive differentiation. The reserved opcode ranges solve this elegantly: vendors get a sandbox to implement proprietary features (internal telemetry, per-die error rates, GC tuning, manufacturing test modes) without conflicting with standard commands. Passthru provides the mechanism to send these raw commands via nvme-cli, with the user manually specifying opcode and CDW values from the vendor's internal documentation. The tradeoff is portability — vendor commands only work on that vendor's drives. But for SSD test engineers and firmware developers, this direct access to the controller's internals is essential for debugging, qualification testing, and performance tuning that standard SMART data can't provide.",
+      "requiresReveal": true,
+      "blockIndex": 37
+    }
+  ]
+}

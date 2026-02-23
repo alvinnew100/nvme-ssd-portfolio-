@@ -1,0 +1,56 @@
+{
+  "sectionId": "sec-waf",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Write Amplification — The Hidden Cost of Writing",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: Write Amplification Is Wasted Effort. Imagine you want to change one sentence in a book, but you have to rewrite the entire chapter. That's write amplification — the SSD writes more data to NAND than the host actually requested. A WAF of 3.0 means for every 1 GB the host writes, the SSD internally writes 3 GB (due to GC copying valid pages, metadata updates, etc.).",
+      "blockIndex": 1
+    },
+    {
+      "type": "term",
+      "text": "WAF (Write Amplification Factor): The ratio of actual NAND writes to host-requested writes. WAF = NAND writes / Host writes. Ideal WAF is 1.0 (no amplification). Real-world WAF ranges from 1.1 (sequential, TRIM-enabled) to 10+ (random writes, full drive, no TRIM). Lower WAF means better endurance and performance.",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "We just learned that garbage collection copies valid pages when reclaiming blocks. But that copying is itself a write to NAND. This means the SSD writes more data to NAND than the host actually sent.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "The ratio is called the Write Amplification Factor (WAF):",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "A WAF of 1.0 is perfect — the SSD writes only what you asked. A WAF of 3.0 means the SSD writes 3x the data to NAND — tripling the wear on the NAND cells. This directly reduces the drive's lifespan.",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "Why does WAF matter? Because NAND cells have limited P/E (Program/Erase) cycles. If WAF is 3x, your 600 TBW rated drive effectively only lasts 200 TBW of your data. Two factors dominate WAF:",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "Typical WAF values: consumer SSDs under normal use see ~1.5-3x, enterprise drives with steady-state random writes can reach 3-5x, and well-tuned sequential workloads with TRIM approach the ideal 1.0x.",
+      "blockIndex": 7
+    },
+    {
+      "type": "info",
+      "text": "Measuring WAF in practice: Check SMART before and after a workload: Data Units Written shows host writes. For NAND writes, you need the vendor-specific counter (varies by manufacturer). WAF = NAND writes / host writes. Run nvme smart-log /dev/nvme0 and note the values before and after.",
+      "blockIndex": 8
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: An SSD benchmark reports 100 GB of host writes but the SSD's internal NAND write counter shows 300 GB. Derive the Write Amplification Factor and explain what's causing the extra writes. The answer: WAF = NAND writes / Host writes = 300 GB / 100 GB = 3.0. The extra 200 GB comes from garbage collection: when the SSD needs to reclaim blocks, it must read valid pages from partially-empty blocks, write them to new blocks, then erase the old blocks. Each GC cycle amplifies writes. Other contributors include metadata updates, wear-leveling page moves, and write-ahead logging in the FTL. A WAF of 3 means the NAND is wearing out 3x faster than the host workload alone would suggest.",
+      "requiresReveal": true,
+      "blockIndex": 9
+    }
+  ]
+}

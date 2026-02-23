@@ -1,0 +1,66 @@
+{
+  "sectionId": "sec-doorbells",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Ringing the Doorbell — How the SSD Knows There's Work",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: Doorbells Are Notification Buzzers. After the host writes a command to the SQ, it 'rings the doorbell' — a simple register write that tells the SSD 'hey, there's new work.' Without the doorbell, the SSD would have to constantly poll the queue to check for new commands.",
+      "blockIndex": 1
+    },
+    {
+      "type": "term",
+      "text": "Doorbell Register: A 32-bit register in BAR0 that the host writes to notify the SSD of new SQ entries or consumed CQ entries. Each queue pair has two doorbell registers — one for submissions, one for completions.",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "We've seen that the host places commands in the Submission Queue (SQ) in RAM. But the SSD doesn't constantly watch RAM looking for new commands — that would waste power and bandwidth. So how does the SSD know when there's a new command waiting?",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "Think about a hotel front desk. You don't stand at the desk shouting for service — you ring the bell. One quick &ldquo;ding&rdquo; tells the staff &ldquo;someone needs attention.&rdquo; NVMe works the same way.",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "After writing one or more commands to the SQ, the host writes the new tail position to a special register called a doorbell register. This is a single write to a BAR0 address — remember, BAR0 writes travel over PCIe to the SSD hardware. The SSD sees this write, reads the new tail value, and knows exactly how many new commands are waiting.",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "Why is this efficient? Because the host can queue up many commands and ring the doorbell just once. The SSD then processes the entire batch. One PCIe write triggers the processing of dozens of commands — this batching is a key reason NVMe can achieve millions of operations per second.",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "Each queue pair has two doorbells: one for the SQ tail (host tells SSD &ldquo;I added commands&rdquo;) and one for the CQ head (host tells SSD &ldquo;I read your results, you can reuse those slots&rdquo;). Click each doorbell below to see it ring:",
+      "blockIndex": 7
+    },
+    {
+      "type": "paragraph",
+      "text": "The doorbell for queue Q lives at:",
+      "blockIndex": 8
+    },
+    {
+      "type": "paragraph",
+      "text": "Where type is 0 for SQ (submission) or 1 for CQ (completion), and stride is read from the CAP register (usually 4 bytes). So the Admin SQ doorbell is at 0x1000, Admin CQ at 0x1004, I/O queue 1 SQ at 0x1008, I/O queue 1 CQ at 0x100C, and so on.",
+      "blockIndex": 9
+    },
+    {
+      "type": "info",
+      "text": "Shadow Doorbells — even faster in virtual machines: Writing to a BAR0 register is a PCIe MMIO write. In a virtual machine, each MMIO write traps to the hypervisor — an expensive operation. To avoid this, some controllers support Shadow Doorbells: the host writes the new pointer to regular RAM instead, and the controller periodically polls the RAM location. This eliminates the costly MMIO trap and improves VM performance significantly.",
+      "blockIndex": 10
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: If the SSD controller were responsible for polling the Submission Queue instead of relying on the host to ring a doorbell, what performance and power problems would arise? Why does NVMe use the doorbell model instead? The answer: The host CPU writes to the doorbell register (via MMIO) to notify the SSD controller that new commands have been placed in the submission queue. If the SSD polled the queue instead, it would waste PCIe bandwidth by constantly issuing DMA reads to check for new entries — burning power and consuming bus cycles even when no commands are pending. The doorbell model is event-driven: the SSD sleeps until the host writes to the doorbell register, which costs exactly one PCIe Memory Write TLP (4 bytes). Even better, the host can batch multiple commands into the SQ and ring the doorbell once, triggering the SSD to process the entire batch. This is why NVMe achieves millions of IOPS with minimal CPU overhead — the notification cost is amortized across many commands.",
+      "requiresReveal": true,
+      "blockIndex": 11
+    }
+  ]
+}

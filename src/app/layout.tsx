@@ -3,6 +3,7 @@ import { StoryProvider } from "@/context/StoryContext";
 import StoryNav from "@/components/layout/StoryNav";
 import StoryFooter from "@/components/layout/StoryFooter";
 import VoiceoverButton from "@/components/layout/VoiceoverButton";
+import VoiceoverHighlighter from "@/components/layout/VoiceoverHighlighter";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -34,6 +35,7 @@ export default function RootLayout({
           <StoryNav />
           <main className="lg:pl-52">{children}</main>
           <VoiceoverButton />
+          <VoiceoverHighlighter />
           <StoryFooter />
         </StoryProvider>
       </body>

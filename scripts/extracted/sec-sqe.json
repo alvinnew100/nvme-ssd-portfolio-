@@ -1,0 +1,41 @@
+{
+  "sectionId": "sec-sqe",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "What's Inside a Command? — The 64-Byte SQ Entry",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: An SQE Is a Structured Order Form. Every NVMe command is a 64-byte form with specific fields in specific positions. DWord 0 always contains the opcode (what to do) and command ID (tracking number). DWords 6-9 contain data buffer addresses. DWords 10-15 are command-specific parameters. It's like a standardized order form where every field has a fixed position.",
+      "blockIndex": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "In Lesson 6, we learned that commands go into the Submission Queue. But what does a command actually look like? It's not text — it's a precisely structured block of 64 bytes (that's 512 bits, or 16 groups of 4 bytes each).",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "Why exactly 64 bytes? Think of it like a standardized form. Every NVMe command — whether it's &ldquo;read this data&rdquo; or &ldquo;tell me your serial number&rdquo; — uses the same 64-byte form. The first part of the form is always the same (who you are, what you want, where to put the result). The second part changes depending on the specific command.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "Each 4-byte group is called a Command Dword (CDW), numbered 0 through 15. Here's how they're organized:",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "Understanding the 64-byte command format is key to everything that follows. When we build commands with the Command Builder tool later, you'll see how each field maps to specific bytes and bits. When we decode ftrace traces, we'll read CDW10-CDW15 to figure out exactly what command was sent. The 64-byte SQ entry is the fundamental unit of communication between your computer and the SSD.",
+      "blockIndex": 5
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: Why does the NVMe specification mandate that every Submission Queue Entry be exactly the same fixed size, rather than allowing variable-length commands that could be more space-efficient for simple operations? The answer: Every NVMe command is exactly 64 bytes (16 DWords x 4 bytes each). A fixed-size format is essential for a circular queue to work efficiently: the controller can calculate the address of any entry instantly using simple pointer arithmetic (base + index x 64). With variable-length entries, the controller would need to parse each entry to find the next one, destroying the O(1) random access that makes NVMe queues fast. Fixed size also means the DMA engine can fetch commands in predictable chunks, and the host driver can calculate queue fullness by simple pointer comparison. The tradeoff is that simple commands (like Flush, which needs almost no parameters) waste space — but at 64 bytes per entry, the waste is negligible compared to the performance gained from predictable memory layout. This is the same reason CPU cache lines and memory pages are fixed-size.",
+      "requiresReveal": true,
+      "blockIndex": 6
+    }
+  ]
+}

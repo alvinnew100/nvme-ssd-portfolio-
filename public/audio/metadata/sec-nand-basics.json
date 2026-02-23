@@ -1,0 +1,2722 @@
+{
+  "sectionId": "sec-nand-basics",
+  "audioFile": "/audio/sections/sec-nand-basics.mp3",
+  "totalDurationMs": 192560,
+  "fileSizeBytes": 3081600,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "paragraph",
+      "text": "Electrons are trapped here by insulating oxide layers above and below. Once pushed in, they stay — even without power. That's non-volatile storage.",
+      "beginMs": 20,
+      "endMs": 8320,
+      "timestamps": [
+        {
+          "word": "Electrons",
+          "begin": 20,
+          "end": 520
+        },
+        {
+          "word": "are",
+          "begin": 540,
+          "end": 560
+        },
+        {
+          "word": "trapped",
+          "begin": 660,
+          "end": 920
+        },
+        {
+          "word": "here",
+          "begin": 940,
+          "end": 1160
+        },
+        {
+          "word": "by",
+          "begin": 1160,
+          "end": 1220
+        },
+        {
+          "word": "insulating",
+          "begin": 1320,
+          "end": 1760
+        },
+        {
+          "word": "oxide",
+          "begin": 1860,
+          "end": 2220
+        },
+        {
+          "word": "layers",
+          "begin": 2260,
+          "end": 2600
+        },
+        {
+          "word": "above",
+          "begin": 2680,
+          "end": 2920
+        },
+        {
+          "word": "and",
+          "begin": 2940,
+          "end": 3020
+        },
+        {
+          "word": "below.",
+          "begin": 3060,
+          "end": 3240
+        },
+        {
+          "word": "Once",
+          "begin": 3680,
+          "end": 3860
+        },
+        {
+          "word": "pushed",
+          "begin": 3920,
+          "end": 4180
+        },
+        {
+          "word": "in,",
+          "begin": 4220,
+          "end": 4400
+        },
+        {
+          "word": "they",
+          "begin": 4520,
+          "end": 4580
+        },
+        {
+          "word": "stay",
+          "begin": 4680,
+          "end": 4840
+        },
+        {
+          "word": "even",
+          "begin": 5140,
+          "end": 5300
+        },
+        {
+          "word": "without",
+          "begin": 5320,
+          "end": 5560
+        },
+        {
+          "word": "power.",
+          "begin": 5600,
+          "end": 5880
+        },
+        {
+          "word": "That's",
+          "begin": 6300,
+          "end": 6480
+        },
+        {
+          "word": "non-volatile",
+          "begin": 6560,
+          "end": 7140
+        },
+        {
+          "word": "storage.",
+          "begin": 7240,
+          "end": 7680
+        },
+        {
+          "word": "High",
+          "begin": 8240,
+          "end": 8320
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "paragraph",
+      "text": "High voltage on the control gate pushes electrons into the floating gate.",
+      "beginMs": 8460,
+      "endMs": 11580,
+      "timestamps": [
+        {
+          "word": "voltage",
+          "begin": 8460,
+          "end": 8800
+        },
+        {
+          "word": "on",
+          "begin": 8840,
+          "end": 8920
+        },
+        {
+          "word": "the",
+          "begin": 8920,
+          "end": 8980
+        },
+        {
+          "word": "control",
+          "begin": 9040,
+          "end": 9360
+        },
+        {
+          "word": "gate",
+          "begin": 9420,
+          "end": 9620
+        },
+        {
+          "word": "pushes",
+          "begin": 9680,
+          "end": 9960
+        },
+        {
+          "word": "electrons",
+          "begin": 10000,
+          "end": 10560
+        },
+        {
+          "word": "into",
+          "begin": 10600,
+          "end": 10660
+        },
+        {
+          "word": "the",
+          "begin": 10680,
+          "end": 10800
+        },
+        {
+          "word": "floating",
+          "begin": 10900,
+          "end": 11220
+        },
+        {
+          "word": "gate.",
+          "begin": 11280,
+          "end": 11580
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "paragraph",
+      "text": "A medium voltage is applied. If electrons are present, current is blocked (= &ldquo;0&rdquo;). If empty, current flows (= &ldquo;1&rdquo;).",
+      "beginMs": 11820,
+      "endMs": 24020,
+      "timestamps": [
+        {
+          "word": "A",
+          "begin": 11820,
+          "end": 11840
+        },
+        {
+          "word": "medium",
+          "begin": 11940,
+          "end": 12260
+        },
+        {
+          "word": "voltage",
+          "begin": 12320,
+          "end": 12660
+        },
+        {
+          "word": "is",
+          "begin": 12680,
+          "end": 12780
+        },
+        {
+          "word": "applied.",
+          "begin": 12800,
+          "end": 13700
+        },
+        {
+          "word": "If",
+          "begin": 13720,
+          "end": 13820
+        },
+        {
+          "word": "electrons",
+          "begin": 13720,
+          "end": 14240
+        },
+        {
+          "word": "are",
+          "begin": 14260,
+          "end": 14280
+        },
+        {
+          "word": "present,",
+          "begin": 14380,
+          "end": 14840
+        },
+        {
+          "word": "current",
+          "begin": 15120,
+          "end": 15380
+        },
+        {
+          "word": "is",
+          "begin": 15380,
+          "end": 15520
+        },
+        {
+          "word": "blocked",
+          "begin": 15580,
+          "end": 15940
+        },
+        {
+          "word": "(=",
+          "begin": 16040,
+          "end": 16379
+        },
+        {
+          "word": "&ldquo;0&rdquo;).",
+          "begin": 16500,
+          "end": 19020
+        },
+        {
+          "word": "If",
+          "begin": 19120,
+          "end": 19880
+        },
+        {
+          "word": "empty,",
+          "begin": 19120,
+          "end": 19880
+        },
+        {
+          "word": "current",
+          "begin": 20040,
+          "end": 21140
+        },
+        {
+          "word": "flows",
+          "begin": 21140,
+          "end": 21500
+        },
+        {
+          "word": "(=",
+          "begin": 21140,
+          "end": 21440
+        },
+        {
+          "word": "&ldquo;1&rdquo;).",
+          "begin": 21480,
+          "end": 24020
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "heading",
+      "text": "How an SSD Actually Stores a Bit",
+      "beginMs": 24560,
+      "endMs": 28240,
+      "timestamps": [
+        {
+          "word": "How",
+          "begin": 24560,
+          "end": 24580
+        },
+        {
+          "word": "SSD",
+          "begin": 24620,
+          "end": 25340
+        },
+        {
+          "word": "Actually",
+          "begin": 25360,
+          "end": 26320
+        },
+        {
+          "word": "Stores",
+          "begin": 26520,
+          "end": 27200
+        },
+        {
+          "word": "Bit",
+          "begin": 26520,
+          "end": 27200
+        },
+        {
+          "word": "Analogy:",
+          "begin": 27300,
+          "end": 27880
+        },
+        {
+          "word": "NAND",
+          "begin": 28040,
+          "end": 28240
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "analogy",
+      "text": "Analogy: NAND Cells Are Tiny Charge Buckets. Each NAND memory cell is like a tiny bucket that holds electrical charge. To store a '1', push charge into the bucket. To store a '0', leave it empty. The bucket is surrounded by insulation so the charge can't escape — that's why SSDs keep your data when power is off.",
+      "beginMs": 32700,
+      "endMs": 52540,
+      "timestamps": [
+        {
+          "word": "NAND",
+          "begin": 32700,
+          "end": 32960
+        },
+        {
+          "word": "memory",
+          "begin": 33040,
+          "end": 33300
+        },
+        {
+          "word": "cell",
+          "begin": 33420,
+          "end": 33640
+        },
+        {
+          "word": "is",
+          "begin": 33740,
+          "end": 33820
+        },
+        {
+          "word": "like",
+          "begin": 33840,
+          "end": 33980
+        },
+        {
+          "word": "a",
+          "begin": 33980,
+          "end": 34000
+        },
+        {
+          "word": "tiny",
+          "begin": 34080,
+          "end": 34340
+        },
+        {
+          "word": "bucket",
+          "begin": 34420,
+          "end": 34780
+        },
+        {
+          "word": "that",
+          "begin": 34840,
+          "end": 34940
+        },
+        {
+          "word": "holds",
+          "begin": 34980,
+          "end": 35260
+        },
+        {
+          "word": "electrical",
+          "begin": 35340,
+          "end": 35960
+        },
+        {
+          "word": "charge.",
+          "begin": 36200,
+          "end": 37020
+        },
+        {
+          "word": "To",
+          "begin": 37080,
+          "end": 37140
+        },
+        {
+          "word": "store",
+          "begin": 37080,
+          "end": 37260
+        },
+        {
+          "word": "a",
+          "begin": 37300,
+          "end": 37420
+        },
+        {
+          "word": "'1',",
+          "begin": 37420,
+          "end": 37700
+        },
+        {
+          "word": "push",
+          "begin": 38000,
+          "end": 38220
+        },
+        {
+          "word": "charge",
+          "begin": 38320,
+          "end": 38660
+        },
+        {
+          "word": "into",
+          "begin": 38740,
+          "end": 38900
+        },
+        {
+          "word": "the",
+          "begin": 38940,
+          "end": 38980
+        },
+        {
+          "word": "bucket.",
+          "begin": 39040,
+          "end": 39420
+        },
+        {
+          "word": "To",
+          "begin": 39940,
+          "end": 39960
+        },
+        {
+          "word": "store",
+          "begin": 39960,
+          "end": 40360
+        },
+        {
+          "word": "a",
+          "begin": 40380,
+          "end": 40400
+        },
+        {
+          "word": "'0',",
+          "begin": 40500,
+          "end": 41140
+        },
+        {
+          "word": "leave",
+          "begin": 41140,
+          "end": 41300
+        },
+        {
+          "word": "it",
+          "begin": 41300,
+          "end": 41380
+        },
+        {
+          "word": "empty.",
+          "begin": 41440,
+          "end": 41680
+        },
+        {
+          "word": "The",
+          "begin": 42240,
+          "end": 42280
+        },
+        {
+          "word": "bucket",
+          "begin": 42360,
+          "end": 42620
+        },
+        {
+          "word": "is",
+          "begin": 42640,
+          "end": 42720
+        },
+        {
+          "word": "surrounded",
+          "begin": 42780,
+          "end": 43180
+        },
+        {
+          "word": "by",
+          "begin": 43180,
+          "end": 43280
+        },
+        {
+          "word": "insulation",
+          "begin": 43420,
+          "end": 44040
+        },
+        {
+          "word": "so",
+          "begin": 44140,
+          "end": 44200
+        },
+        {
+          "word": "the",
+          "begin": 44240,
+          "end": 44300
+        },
+        {
+          "word": "charge",
+          "begin": 44360,
+          "end": 44640
+        },
+        {
+          "word": "can't",
+          "begin": 44700,
+          "end": 44900
+        },
+        {
+          "word": "escape",
+          "begin": 44900,
+          "end": 45340
+        },
+        {
+          "word": "that's",
+          "begin": 45600,
+          "end": 45800
+        },
+        {
+          "word": "why",
+          "begin": 45860,
+          "end": 46240
+        },
+        {
+          "word": "SSDs",
+          "begin": 46280,
+          "end": 46860
+        },
+        {
+          "word": "keep",
+          "begin": 46860,
+          "end": 47040
+        },
+        {
+          "word": "your",
+          "begin": 47040,
+          "end": 47100
+        },
+        {
+          "word": "data",
+          "begin": 47200,
+          "end": 47440
+        },
+        {
+          "word": "when",
+          "begin": 47560,
+          "end": 47680
+        },
+        {
+          "word": "power",
+          "begin": 47720,
+          "end": 48040
+        },
+        {
+          "word": "is",
+          "begin": 48060,
+          "end": 48160
+        },
+        {
+          "word": "off.",
+          "begin": 48200,
+          "end": 48460
+        },
+        {
+          "word": "NAND",
+          "begin": 49540,
+          "end": 49860
+        },
+        {
+          "word": "Flash",
+          "begin": 49940,
+          "end": 50220
+        },
+        {
+          "word": "Memory:",
+          "begin": 50280,
+          "end": 50560
+        },
+        {
+          "word": "The",
+          "begin": 51100,
+          "end": 51140
+        },
+        {
+          "word": "type",
+          "begin": 51200,
+          "end": 51460
+        },
+        {
+          "word": "of",
+          "begin": 51480,
+          "end": 51560
+        },
+        {
+          "word": "non-volatile",
+          "begin": 51620,
+          "end": 52160
+        },
+        {
+          "word": "memory",
+          "begin": 52260,
+          "end": 52540
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "term",
+      "text": "NAND Flash Memory: The type of non-volatile memory used in SSDs. Named after the NAND logic gate used in its circuit design. Stores data as electrical charges trapped in microscopic floating-gate transistors.",
+      "beginMs": 52660,
+      "endMs": 62520,
+      "timestamps": [
+        {
+          "word": "used",
+          "begin": 52660,
+          "end": 52940
+        },
+        {
+          "word": "in",
+          "begin": 52940,
+          "end": 53020
+        },
+        {
+          "word": "SSDs.",
+          "begin": 53100,
+          "end": 53520
+        },
+        {
+          "word": "Named",
+          "begin": 53740,
+          "end": 54880
+        },
+        {
+          "word": "after",
+          "begin": 54920,
+          "end": 55180
+        },
+        {
+          "word": "the",
+          "begin": 55180,
+          "end": 55220
+        },
+        {
+          "word": "NAND",
+          "begin": 55300,
+          "end": 55560
+        },
+        {
+          "word": "logic",
+          "begin": 55620,
+          "end": 55960
+        },
+        {
+          "word": "gate",
+          "begin": 56000,
+          "end": 56240
+        },
+        {
+          "word": "used",
+          "begin": 56280,
+          "end": 56520
+        },
+        {
+          "word": "in",
+          "begin": 56540,
+          "end": 56320
+        },
+        {
+          "word": "its",
+          "begin": 56340,
+          "end": 56520
+        },
+        {
+          "word": "circuit",
+          "begin": 56540,
+          "end": 56780
+        },
+        {
+          "word": "design.",
+          "begin": 56780,
+          "end": 57580
+        },
+        {
+          "word": "Stores",
+          "begin": 58140,
+          "end": 58500
+        },
+        {
+          "word": "data",
+          "begin": 58560,
+          "end": 58780
+        },
+        {
+          "word": "as",
+          "begin": 58900,
+          "end": 58980
+        },
+        {
+          "word": "electrical",
+          "begin": 59000,
+          "end": 59460
+        },
+        {
+          "word": "charges",
+          "begin": 59540,
+          "end": 59960
+        },
+        {
+          "word": "trapped",
+          "begin": 60040,
+          "end": 60360
+        },
+        {
+          "word": "in",
+          "begin": 60380,
+          "end": 60460
+        },
+        {
+          "word": "microscopic",
+          "begin": 60500,
+          "end": 61180
+        },
+        {
+          "word": "floating-gate",
+          "begin": 61260,
+          "end": 61800
+        },
+        {
+          "word": "transistors.",
+          "begin": 61820,
+          "end": 62520
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "Now we know that data is made of bits (0s and 1s) and that drives organize them into numbered blocks (LBAs). But how does an SSD physically store a bit? It doesn't have spinning platters like a hard drive. Instead, it uses NAND flash memory.",
+      "beginMs": 63400,
+      "endMs": 79620,
+      "timestamps": [
+        {
+          "word": "Now",
+          "begin": 63400,
+          "end": 63480
+        },
+        {
+          "word": "we",
+          "begin": 63600,
+          "end": 63660
+        },
+        {
+          "word": "know",
+          "begin": 63760,
+          "end": 63840
+        },
+        {
+          "word": "that",
+          "begin": 63960,
+          "end": 64080
+        },
+        {
+          "word": "data",
+          "begin": 64140,
+          "end": 64360
+        },
+        {
+          "word": "is",
+          "begin": 64459,
+          "end": 64560
+        },
+        {
+          "word": "made",
+          "begin": 64620,
+          "end": 64800
+        },
+        {
+          "word": "of",
+          "begin": 64819,
+          "end": 64920
+        },
+        {
+          "word": "bits",
+          "begin": 65019,
+          "end": 65200
+        },
+        {
+          "word": "(0s",
+          "begin": 65319,
+          "end": 65980
+        },
+        {
+          "word": "and",
+          "begin": 66120,
+          "end": 66300
+        },
+        {
+          "word": "1s)",
+          "begin": 66300,
+          "end": 66860
+        },
+        {
+          "word": "and",
+          "begin": 67180,
+          "end": 67260
+        },
+        {
+          "word": "that",
+          "begin": 67260,
+          "end": 67380
+        },
+        {
+          "word": "drives",
+          "begin": 67380,
+          "end": 67740
+        },
+        {
+          "word": "organize",
+          "begin": 67840,
+          "end": 68320
+        },
+        {
+          "word": "them",
+          "begin": 68320,
+          "end": 68440
+        },
+        {
+          "word": "into",
+          "begin": 68460,
+          "end": 68620
+        },
+        {
+          "word": "numbered",
+          "begin": 68700,
+          "end": 68980
+        },
+        {
+          "word": "blocks",
+          "begin": 69040,
+          "end": 69440
+        },
+        {
+          "word": "(LBAs).",
+          "begin": 69560,
+          "end": 70380
+        },
+        {
+          "word": "But",
+          "begin": 71000,
+          "end": 71100
+        },
+        {
+          "word": "how",
+          "begin": 71140,
+          "end": 71580
+        },
+        {
+          "word": "does",
+          "begin": 71680,
+          "end": 71840
+        },
+        {
+          "word": "an",
+          "begin": 71880,
+          "end": 72140
+        },
+        {
+          "word": "SSD",
+          "begin": 72320,
+          "end": 72680
+        },
+        {
+          "word": "store",
+          "begin": 72800,
+          "end": 73040
+        },
+        {
+          "word": "a",
+          "begin": 73060,
+          "end": 73080
+        },
+        {
+          "word": "bit?",
+          "begin": 73160,
+          "end": 73420
+        },
+        {
+          "word": "It",
+          "begin": 73980,
+          "end": 74040
+        },
+        {
+          "word": "doesn't",
+          "begin": 74080,
+          "end": 74320
+        },
+        {
+          "word": "have",
+          "begin": 74360,
+          "end": 74500
+        },
+        {
+          "word": "spinning",
+          "begin": 74580,
+          "end": 74860
+        },
+        {
+          "word": "platters",
+          "begin": 74860,
+          "end": 75300
+        },
+        {
+          "word": "like",
+          "begin": 75340,
+          "end": 75480
+        },
+        {
+          "word": "a",
+          "begin": 75480,
+          "end": 75520
+        },
+        {
+          "word": "hard",
+          "begin": 75580,
+          "end": 75840
+        },
+        {
+          "word": "drive.",
+          "begin": 75840,
+          "end": 76180
+        },
+        {
+          "word": "Instead,",
+          "begin": 76560,
+          "end": 76980
+        },
+        {
+          "word": "it",
+          "begin": 77080,
+          "end": 77180
+        },
+        {
+          "word": "uses",
+          "begin": 77180,
+          "end": 77500
+        },
+        {
+          "word": "NAND",
+          "begin": 77620,
+          "end": 77880
+        },
+        {
+          "word": "flash",
+          "begin": 77880,
+          "end": 78040
+        },
+        {
+          "word": "memory.",
+          "begin": 78060,
+          "end": 78660
+        },
+        {
+          "word": "Think",
+          "begin": 79480,
+          "end": 79620
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "Think of each memory cell as a tiny bucket that holds electrical charge. To store a &ldquo;1&rdquo;, you put charge in the bucket. To store a &ldquo;0&rdquo;, you leave it empty. To read the value, you check how much charge is in the bucket.",
+      "beginMs": 79620,
+      "endMs": 97120,
+      "timestamps": [
+        {
+          "word": "of",
+          "begin": 79620,
+          "end": 79740
+        },
+        {
+          "word": "each",
+          "begin": 79860,
+          "end": 80000
+        },
+        {
+          "word": "memory",
+          "begin": 80080,
+          "end": 80320
+        },
+        {
+          "word": "cell",
+          "begin": 80460,
+          "end": 80660
+        },
+        {
+          "word": "as",
+          "begin": 80740,
+          "end": 80820
+        },
+        {
+          "word": "a",
+          "begin": 80820,
+          "end": 80880
+        },
+        {
+          "word": "tiny",
+          "begin": 80960,
+          "end": 81240
+        },
+        {
+          "word": "bucket",
+          "begin": 81360,
+          "end": 81680
+        },
+        {
+          "word": "that",
+          "begin": 81720,
+          "end": 81820
+        },
+        {
+          "word": "holds",
+          "begin": 81860,
+          "end": 82140
+        },
+        {
+          "word": "electrical",
+          "begin": 82160,
+          "end": 82560
+        },
+        {
+          "word": "charge.",
+          "begin": 82680,
+          "end": 83060
+        },
+        {
+          "word": "To",
+          "begin": 84020,
+          "end": 84080
+        },
+        {
+          "word": "store",
+          "begin": 84160,
+          "end": 84400
+        },
+        {
+          "word": "a",
+          "begin": 84540,
+          "end": 84560
+        },
+        {
+          "word": "&ldquo;1&rdquo;,",
+          "begin": 84940,
+          "end": 87100
+        },
+        {
+          "word": "you",
+          "begin": 87620,
+          "end": 87680
+        },
+        {
+          "word": "put",
+          "begin": 87760,
+          "end": 87900
+        },
+        {
+          "word": "charge",
+          "begin": 87900,
+          "end": 88280
+        },
+        {
+          "word": "in",
+          "begin": 88300,
+          "end": 88380
+        },
+        {
+          "word": "the",
+          "begin": 88400,
+          "end": 88440
+        },
+        {
+          "word": "bucket.",
+          "begin": 88500,
+          "end": 88880
+        },
+        {
+          "word": "To",
+          "begin": 89520,
+          "end": 89560
+        },
+        {
+          "word": "store",
+          "begin": 89640,
+          "end": 90040
+        },
+        {
+          "word": "a",
+          "begin": 90300,
+          "end": 90400
+        },
+        {
+          "word": "&ldquo;0&rdquo;,",
+          "begin": 90300,
+          "end": 92500
+        },
+        {
+          "word": "you",
+          "begin": 93200,
+          "end": 93280
+        },
+        {
+          "word": "leave",
+          "begin": 93200,
+          "end": 93460
+        },
+        {
+          "word": "it",
+          "begin": 93500,
+          "end": 93700
+        },
+        {
+          "word": "empty.",
+          "begin": 93700,
+          "end": 93920
+        },
+        {
+          "word": "To",
+          "begin": 93700,
+          "end": 93760
+        },
+        {
+          "word": "read",
+          "begin": 93840,
+          "end": 93920
+        },
+        {
+          "word": "the",
+          "begin": 94000,
+          "end": 94040
+        },
+        {
+          "word": "value,",
+          "begin": 94000,
+          "end": 94160
+        },
+        {
+          "word": "you",
+          "begin": 94200,
+          "end": 94220
+        },
+        {
+          "word": "check",
+          "begin": 94220,
+          "end": 95320
+        },
+        {
+          "word": "how",
+          "begin": 95340,
+          "end": 95360
+        },
+        {
+          "word": "much",
+          "begin": 95440,
+          "end": 95620
+        },
+        {
+          "word": "charge",
+          "begin": 95640,
+          "end": 95960
+        },
+        {
+          "word": "is",
+          "begin": 96000,
+          "end": 96020
+        },
+        {
+          "word": "in",
+          "begin": 96000,
+          "end": 96600
+        },
+        {
+          "word": "the",
+          "begin": 96700,
+          "end": 96800
+        },
+        {
+          "word": "bucket.",
+          "begin": 96880,
+          "end": 97120
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "paragraph",
+      "text": "But how does the charge stay there when you unplug the power? The bucket is actually a microscopic structure called a floating gate — a layer of material surrounded by insulation that traps electrons. Once electrons are pushed in, they can't escape (for years). That's why SSDs keep your data when power is off — the charge is physically trapped.",
+      "beginMs": 96880,
+      "endMs": 117300,
+      "timestamps": [
+        {
+          "word": "But",
+          "begin": 96880,
+          "end": 96940
+        },
+        {
+          "word": "how",
+          "begin": 96940,
+          "end": 97000
+        },
+        {
+          "word": "does",
+          "begin": 97080,
+          "end": 97220
+        },
+        {
+          "word": "the",
+          "begin": 97320,
+          "end": 97440
+        },
+        {
+          "word": "charge",
+          "begin": 97320,
+          "end": 97820
+        },
+        {
+          "word": "stay",
+          "begin": 97880,
+          "end": 98080
+        },
+        {
+          "word": "there",
+          "begin": 98160,
+          "end": 98240
+        },
+        {
+          "word": "when",
+          "begin": 98160,
+          "end": 98400
+        },
+        {
+          "word": "you",
+          "begin": 99200,
+          "end": 99220
+        },
+        {
+          "word": "unplug",
+          "begin": 99220,
+          "end": 99640
+        },
+        {
+          "word": "the",
+          "begin": 99680,
+          "end": 99740
+        },
+        {
+          "word": "power?",
+          "begin": 99820,
+          "end": 101880
+        },
+        {
+          "word": "The",
+          "begin": 102520,
+          "end": 102560
+        },
+        {
+          "word": "bucket",
+          "begin": 102620,
+          "end": 102860
+        },
+        {
+          "word": "is",
+          "begin": 102860,
+          "end": 102960
+        },
+        {
+          "word": "actually",
+          "begin": 103060,
+          "end": 103340
+        },
+        {
+          "word": "a",
+          "begin": 103400,
+          "end": 103420
+        },
+        {
+          "word": "microscopic",
+          "begin": 103480,
+          "end": 104080
+        },
+        {
+          "word": "structure",
+          "begin": 104120,
+          "end": 104440
+        },
+        {
+          "word": "called",
+          "begin": 104560,
+          "end": 104720
+        },
+        {
+          "word": "a",
+          "begin": 104720,
+          "end": 104760
+        },
+        {
+          "word": "floating",
+          "begin": 104860,
+          "end": 105180
+        },
+        {
+          "word": "gate",
+          "begin": 105180,
+          "end": 105500
+        },
+        {
+          "word": "a",
+          "begin": 105800,
+          "end": 105820
+        },
+        {
+          "word": "layer",
+          "begin": 105900,
+          "end": 106160
+        },
+        {
+          "word": "of",
+          "begin": 106180,
+          "end": 106260
+        },
+        {
+          "word": "material",
+          "begin": 106300,
+          "end": 106700
+        },
+        {
+          "word": "surrounded",
+          "begin": 106820,
+          "end": 107220
+        },
+        {
+          "word": "by",
+          "begin": 107240,
+          "end": 107420
+        },
+        {
+          "word": "insulation",
+          "begin": 107420,
+          "end": 107980
+        },
+        {
+          "word": "that",
+          "begin": 108000,
+          "end": 108100
+        },
+        {
+          "word": "traps",
+          "begin": 108100,
+          "end": 108460
+        },
+        {
+          "word": "electrons.",
+          "begin": 108480,
+          "end": 109120
+        },
+        {
+          "word": "Once",
+          "begin": 109440,
+          "end": 109560
+        },
+        {
+          "word": "electrons",
+          "begin": 109580,
+          "end": 110100
+        },
+        {
+          "word": "are",
+          "begin": 110120,
+          "end": 110140
+        },
+        {
+          "word": "pushed",
+          "begin": 110240,
+          "end": 110520
+        },
+        {
+          "word": "in,",
+          "begin": 110560,
+          "end": 110720
+        },
+        {
+          "word": "they",
+          "begin": 110880,
+          "end": 110920
+        },
+        {
+          "word": "can't",
+          "begin": 111020,
+          "end": 111220
+        },
+        {
+          "word": "escape",
+          "begin": 111220,
+          "end": 111600
+        },
+        {
+          "word": "(for",
+          "begin": 111640,
+          "end": 111700
+        },
+        {
+          "word": "years).",
+          "begin": 111820,
+          "end": 112260
+        },
+        {
+          "word": "That's",
+          "begin": 112460,
+          "end": 112620
+        },
+        {
+          "word": "why",
+          "begin": 112660,
+          "end": 112980
+        },
+        {
+          "word": "SSDs",
+          "begin": 113020,
+          "end": 113520
+        },
+        {
+          "word": "keep",
+          "begin": 113600,
+          "end": 113640
+        },
+        {
+          "word": "your",
+          "begin": 113640,
+          "end": 113680
+        },
+        {
+          "word": "data",
+          "begin": 113760,
+          "end": 113980
+        },
+        {
+          "word": "when",
+          "begin": 114040,
+          "end": 114160
+        },
+        {
+          "word": "power",
+          "begin": 114220,
+          "end": 114640
+        },
+        {
+          "word": "is",
+          "begin": 114700,
+          "end": 115280
+        },
+        {
+          "word": "off",
+          "begin": 115280,
+          "end": 115300
+        },
+        {
+          "word": "the",
+          "begin": 115380,
+          "end": 115500
+        },
+        {
+          "word": "charge",
+          "begin": 115660,
+          "end": 115980
+        },
+        {
+          "word": "is",
+          "begin": 116000,
+          "end": 116100
+        },
+        {
+          "word": "physically",
+          "begin": 116000,
+          "end": 116160
+        },
+        {
+          "word": "trapped.",
+          "begin": 116260,
+          "end": 116700
+        },
+        {
+          "word": "Here's",
+          "begin": 117020,
+          "end": 117260
+        },
+        {
+          "word": "the",
+          "begin": 117260,
+          "end": 117300
+        }
+      ]
+    },
+    {
+      "blockIndex": 9,
+      "type": "paragraph",
+      "text": "Here's the clever part: what if you could store more than 1 bit per cell? Instead of just &ldquo;empty&rdquo; or &ldquo;full,&rdquo; you can have 4, 8, or even 16 distinct charge levels in the same cell. Each level represents a different bit pattern.",
+      "beginMs": 117360,
+      "endMs": 129639,
+      "timestamps": [
+        {
+          "word": "clever",
+          "begin": 117360,
+          "end": 117580
+        },
+        {
+          "word": "part:",
+          "begin": 117680,
+          "end": 117940
+        },
+        {
+          "word": "what",
+          "begin": 118160,
+          "end": 118260
+        },
+        {
+          "word": "if",
+          "begin": 118260,
+          "end": 118380
+        },
+        {
+          "word": "you",
+          "begin": 118380,
+          "end": 118420
+        },
+        {
+          "word": "could",
+          "begin": 118420,
+          "end": 118600
+        },
+        {
+          "word": "store",
+          "begin": 118660,
+          "end": 118800
+        },
+        {
+          "word": "more",
+          "begin": 118940,
+          "end": 119020
+        },
+        {
+          "word": "than",
+          "begin": 119120,
+          "end": 119240
+        },
+        {
+          "word": "1",
+          "begin": 119300,
+          "end": 119460
+        },
+        {
+          "word": "bit",
+          "begin": 119520,
+          "end": 119660
+        },
+        {
+          "word": "per",
+          "begin": 119720,
+          "end": 119800
+        },
+        {
+          "word": "cell?",
+          "begin": 119960,
+          "end": 120220
+        },
+        {
+          "word": "Instead",
+          "begin": 120420,
+          "end": 120740
+        },
+        {
+          "word": "of",
+          "begin": 120760,
+          "end": 120820
+        },
+        {
+          "word": "just",
+          "begin": 120880,
+          "end": 121140
+        },
+        {
+          "word": "&ldquo;empty&rdquo;",
+          "begin": 121260,
+          "end": 121820
+        },
+        {
+          "word": "or",
+          "begin": 122100,
+          "end": 122120
+        },
+        {
+          "word": "&ldquo;full,&rdquo;",
+          "begin": 122300,
+          "end": 122540
+        },
+        {
+          "word": "you",
+          "begin": 122540,
+          "end": 122800
+        },
+        {
+          "word": "can",
+          "begin": 122800,
+          "end": 123000
+        },
+        {
+          "word": "have",
+          "begin": 123020,
+          "end": 123140
+        },
+        {
+          "word": "4,",
+          "begin": 123140,
+          "end": 123920
+        },
+        {
+          "word": "8,",
+          "begin": 124040,
+          "end": 124320
+        },
+        {
+          "word": "or",
+          "begin": 124320,
+          "end": 124600
+        },
+        {
+          "word": "even",
+          "begin": 124620,
+          "end": 124800
+        },
+        {
+          "word": "16",
+          "begin": 124860,
+          "end": 125280
+        },
+        {
+          "word": "distinct",
+          "begin": 125320,
+          "end": 125500
+        },
+        {
+          "word": "charge",
+          "begin": 125520,
+          "end": 125900
+        },
+        {
+          "word": "levels",
+          "begin": 125900,
+          "end": 126220
+        },
+        {
+          "word": "in",
+          "begin": 126300,
+          "end": 126380
+        },
+        {
+          "word": "the",
+          "begin": 126380,
+          "end": 126440
+        },
+        {
+          "word": "same",
+          "begin": 126560,
+          "end": 126780
+        },
+        {
+          "word": "cell.",
+          "begin": 126900,
+          "end": 127140
+        },
+        {
+          "word": "Each",
+          "begin": 127480,
+          "end": 127640
+        },
+        {
+          "word": "level",
+          "begin": 127740,
+          "end": 128039
+        },
+        {
+          "word": "represents",
+          "begin": 128039,
+          "end": 128539
+        },
+        {
+          "word": "a",
+          "begin": 128600,
+          "end": 128639
+        },
+        {
+          "word": "different",
+          "begin": 128720,
+          "end": 128979
+        },
+        {
+          "word": "bit",
+          "begin": 128979,
+          "end": 129220
+        },
+        {
+          "word": "pattern.",
+          "begin": 129259,
+          "end": 129639
+        }
+      ]
+    },
+    {
+      "blockIndex": 10,
+      "type": "paragraph",
+      "text": "But what's the catch? More levels per cell means more storage, but it's harder to read accurately (the levels are closer together), slower to write, and the cell wears out faster. It's a fundamental tradeoff between capacity, speed, and durability. Click each type below to compare:",
+      "beginMs": 129880,
+      "endMs": 144120,
+      "timestamps": [
+        {
+          "word": "But",
+          "begin": 129880,
+          "end": 129960
+        },
+        {
+          "word": "what's",
+          "begin": 130000,
+          "end": 130180
+        },
+        {
+          "word": "the",
+          "begin": 130220,
+          "end": 130259
+        },
+        {
+          "word": "catch?",
+          "begin": 130320,
+          "end": 130460
+        },
+        {
+          "word": "More",
+          "begin": 130880,
+          "end": 131100
+        },
+        {
+          "word": "levels",
+          "begin": 131120,
+          "end": 131380
+        },
+        {
+          "word": "per",
+          "begin": 131440,
+          "end": 131520
+        },
+        {
+          "word": "cell",
+          "begin": 131660,
+          "end": 131880
+        },
+        {
+          "word": "means",
+          "begin": 131960,
+          "end": 132180
+        },
+        {
+          "word": "more",
+          "begin": 132240,
+          "end": 132300
+        },
+        {
+          "word": "storage,",
+          "begin": 132460,
+          "end": 132880
+        },
+        {
+          "word": "but",
+          "begin": 133140,
+          "end": 133220
+        },
+        {
+          "word": "it's",
+          "begin": 133220,
+          "end": 133320
+        },
+        {
+          "word": "harder",
+          "begin": 133360,
+          "end": 133680
+        },
+        {
+          "word": "to",
+          "begin": 133680,
+          "end": 133720
+        },
+        {
+          "word": "read",
+          "begin": 133780,
+          "end": 133920
+        },
+        {
+          "word": "accurately",
+          "begin": 134040,
+          "end": 134480
+        },
+        {
+          "word": "(the",
+          "begin": 134600,
+          "end": 134660
+        },
+        {
+          "word": "levels",
+          "begin": 134720,
+          "end": 135040
+        },
+        {
+          "word": "are",
+          "begin": 135120,
+          "end": 135260
+        },
+        {
+          "word": "closer",
+          "begin": 135260,
+          "end": 135560
+        },
+        {
+          "word": "together),",
+          "begin": 135640,
+          "end": 136000
+        },
+        {
+          "word": "slower",
+          "begin": 136380,
+          "end": 136840
+        },
+        {
+          "word": "to",
+          "begin": 136920,
+          "end": 137000
+        },
+        {
+          "word": "write,",
+          "begin": 136920,
+          "end": 137240
+        },
+        {
+          "word": "and",
+          "begin": 137460,
+          "end": 137560
+        },
+        {
+          "word": "the",
+          "begin": 137560,
+          "end": 137600
+        },
+        {
+          "word": "cell",
+          "begin": 137720,
+          "end": 137880
+        },
+        {
+          "word": "wears",
+          "begin": 137940,
+          "end": 138140
+        },
+        {
+          "word": "out",
+          "begin": 138180,
+          "end": 138320
+        },
+        {
+          "word": "faster.",
+          "begin": 138400,
+          "end": 138760
+        },
+        {
+          "word": "It's",
+          "begin": 139160,
+          "end": 139280
+        },
+        {
+          "word": "a",
+          "begin": 139300,
+          "end": 139320
+        },
+        {
+          "word": "fundamental",
+          "begin": 139400,
+          "end": 139860
+        },
+        {
+          "word": "tradeoff",
+          "begin": 139960,
+          "end": 140380
+        },
+        {
+          "word": "between",
+          "begin": 140440,
+          "end": 140700
+        },
+        {
+          "word": "capacity,",
+          "begin": 140740,
+          "end": 141260
+        },
+        {
+          "word": "speed,",
+          "begin": 141560,
+          "end": 141880
+        },
+        {
+          "word": "and",
+          "begin": 142000,
+          "end": 142080
+        },
+        {
+          "word": "durability.",
+          "begin": 142120,
+          "end": 142640
+        },
+        {
+          "word": "Click",
+          "begin": 142880,
+          "end": 143040
+        },
+        {
+          "word": "each",
+          "begin": 143080,
+          "end": 143300
+        },
+        {
+          "word": "type",
+          "begin": 143300,
+          "end": 143480
+        },
+        {
+          "word": "below",
+          "begin": 143500,
+          "end": 143800
+        },
+        {
+          "word": "to",
+          "begin": 143860,
+          "end": 143920
+        },
+        {
+          "word": "compare:",
+          "begin": 143860,
+          "end": 144120
+        }
+      ]
+    },
+    {
+      "blockIndex": 11,
+      "type": "reveal",
+      "text": "Knowledge check: Under what conditions do electrons leak from the floating gate, and what are the consequences for a powered-off SSD sitting on a shelf for years? How does prior wear affect this? The answer: Electrons slowly tunnel through the oxide insulator via quantum mechanical tunneling — a process called charge leakage or data retention loss. The rate depends heavily on temperature (heat provides energy for tunneling) and oxide degradation from prior P/E cycles. A fresh SSD can retain data for 10+ years at room temperature, but a heavily worn SSD (near its endurance limit) may only retain data for months because its oxide is damaged and leakier. This is why enterprise SSDs have stricter data retention specs at higher temperatures, and why it's risky to use a worn SSD for archival cold storage. Powered-on SSDs periodically refresh data (read and rewrite) to counteract leakage.",
+      "beginMs": 144560,
+      "endMs": 192320,
+      "timestamps": [
+        {
+          "word": "Knowledge",
+          "begin": 144560,
+          "end": 144980
+        },
+        {
+          "word": "check:",
+          "begin": 145040,
+          "end": 145240
+        },
+        {
+          "word": "Under",
+          "begin": 145600,
+          "end": 145820
+        },
+        {
+          "word": "what",
+          "begin": 145820,
+          "end": 145920
+        },
+        {
+          "word": "conditions",
+          "begin": 145960,
+          "end": 146480
+        },
+        {
+          "word": "do",
+          "begin": 146520,
+          "end": 146600
+        },
+        {
+          "word": "electrons",
+          "begin": 146700,
+          "end": 147140
+        },
+        {
+          "word": "leak",
+          "begin": 147140,
+          "end": 147440
+        },
+        {
+          "word": "from",
+          "begin": 147460,
+          "end": 147580
+        },
+        {
+          "word": "the",
+          "begin": 147480,
+          "end": 147580
+        },
+        {
+          "word": "floating",
+          "begin": 147600,
+          "end": 147920
+        },
+        {
+          "word": "gate,",
+          "begin": 147920,
+          "end": 147920
+        },
+        {
+          "word": "and",
+          "begin": 147920,
+          "end": 148080
+        },
+        {
+          "word": "what",
+          "begin": 148120,
+          "end": 148340
+        },
+        {
+          "word": "are",
+          "begin": 148660,
+          "end": 148720
+        },
+        {
+          "word": "the",
+          "begin": 148720,
+          "end": 148780
+        },
+        {
+          "word": "consequences",
+          "begin": 148800,
+          "end": 149440
+        },
+        {
+          "word": "for",
+          "begin": 149460,
+          "end": 149580
+        },
+        {
+          "word": "a",
+          "begin": 149640,
+          "end": 149720
+        },
+        {
+          "word": "powered-off",
+          "begin": 149820,
+          "end": 150200
+        },
+        {
+          "word": "SSD",
+          "begin": 150300,
+          "end": 150740
+        },
+        {
+          "word": "sitting",
+          "begin": 150860,
+          "end": 151540
+        },
+        {
+          "word": "on",
+          "begin": 151560,
+          "end": 151640
+        },
+        {
+          "word": "a",
+          "begin": 151660,
+          "end": 151680
+        },
+        {
+          "word": "shelf",
+          "begin": 151720,
+          "end": 151880
+        },
+        {
+          "word": "for",
+          "begin": 151980,
+          "end": 152140
+        },
+        {
+          "word": "years?",
+          "begin": 152200,
+          "end": 152320
+        },
+        {
+          "word": "How",
+          "begin": 152420,
+          "end": 152520
+        },
+        {
+          "word": "does",
+          "begin": 152760,
+          "end": 152840
+        },
+        {
+          "word": "prior",
+          "begin": 153260,
+          "end": 153640
+        },
+        {
+          "word": "wear",
+          "begin": 153640,
+          "end": 153940
+        },
+        {
+          "word": "affect",
+          "begin": 153940,
+          "end": 154340
+        },
+        {
+          "word": "this?",
+          "begin": 154340,
+          "end": 154860
+        },
+        {
+          "word": "The",
+          "begin": 155160,
+          "end": 155200
+        },
+        {
+          "word": "answer:",
+          "begin": 155300,
+          "end": 155540
+        },
+        {
+          "word": "Electrons",
+          "begin": 155940,
+          "end": 156420
+        },
+        {
+          "word": "slowly",
+          "begin": 156520,
+          "end": 156840
+        },
+        {
+          "word": "tunnel",
+          "begin": 156920,
+          "end": 157160
+        },
+        {
+          "word": "through",
+          "begin": 157280,
+          "end": 157380
+        },
+        {
+          "word": "the",
+          "begin": 157440,
+          "end": 157500
+        },
+        {
+          "word": "oxide",
+          "begin": 157600,
+          "end": 157980
+        },
+        {
+          "word": "insulator",
+          "begin": 158040,
+          "end": 158480
+        },
+        {
+          "word": "via",
+          "begin": 158600,
+          "end": 158840
+        },
+        {
+          "word": "quantum",
+          "begin": 158840,
+          "end": 159200
+        },
+        {
+          "word": "mechanical",
+          "begin": 159200,
+          "end": 159600
+        },
+        {
+          "word": "tunneling",
+          "begin": 159680,
+          "end": 160100
+        },
+        {
+          "word": "a",
+          "begin": 160520,
+          "end": 160540
+        },
+        {
+          "word": "process",
+          "begin": 160620,
+          "end": 161020
+        },
+        {
+          "word": "called",
+          "begin": 161080,
+          "end": 161280
+        },
+        {
+          "word": "charge",
+          "begin": 161360,
+          "end": 161640
+        },
+        {
+          "word": "leakage",
+          "begin": 161700,
+          "end": 162360
+        },
+        {
+          "word": "or",
+          "begin": 162400,
+          "end": 162540
+        },
+        {
+          "word": "data",
+          "begin": 162400,
+          "end": 162540
+        },
+        {
+          "word": "retention",
+          "begin": 162600,
+          "end": 163040
+        },
+        {
+          "word": "loss.",
+          "begin": 163080,
+          "end": 163420
+        },
+        {
+          "word": "The",
+          "begin": 163680,
+          "end": 163720
+        },
+        {
+          "word": "rate",
+          "begin": 163800,
+          "end": 163980
+        },
+        {
+          "word": "depends",
+          "begin": 164000,
+          "end": 164360
+        },
+        {
+          "word": "heavily",
+          "begin": 164420,
+          "end": 164700
+        },
+        {
+          "word": "on",
+          "begin": 164800,
+          "end": 164880
+        },
+        {
+          "word": "temperature",
+          "begin": 164920,
+          "end": 165300
+        },
+        {
+          "word": "(heat",
+          "begin": 165400,
+          "end": 165560
+        },
+        {
+          "word": "provides",
+          "begin": 165600,
+          "end": 165960
+        },
+        {
+          "word": "energy",
+          "begin": 166040,
+          "end": 166340
+        },
+        {
+          "word": "for",
+          "begin": 166420,
+          "end": 166480
+        },
+        {
+          "word": "tunneling)",
+          "begin": 166580,
+          "end": 166980
+        },
+        {
+          "word": "and",
+          "begin": 167020,
+          "end": 167100
+        },
+        {
+          "word": "oxide",
+          "begin": 167200,
+          "end": 167560
+        },
+        {
+          "word": "degradation",
+          "begin": 167600,
+          "end": 168180
+        },
+        {
+          "word": "from",
+          "begin": 168240,
+          "end": 168360
+        },
+        {
+          "word": "prior",
+          "begin": 168400,
+          "end": 168660
+        },
+        {
+          "word": "P/E",
+          "begin": 168760,
+          "end": 168860
+        },
+        {
+          "word": "cycles.",
+          "begin": 169080,
+          "end": 169560
+        },
+        {
+          "word": "A",
+          "begin": 169920,
+          "end": 169940
+        },
+        {
+          "word": "fresh",
+          "begin": 170040,
+          "end": 170300
+        },
+        {
+          "word": "SSD",
+          "begin": 170400,
+          "end": 170880
+        },
+        {
+          "word": "can",
+          "begin": 171040,
+          "end": 171160
+        },
+        {
+          "word": "retain",
+          "begin": 171180,
+          "end": 171520
+        },
+        {
+          "word": "data",
+          "begin": 171560,
+          "end": 171900
+        },
+        {
+          "word": "for",
+          "begin": 171980,
+          "end": 172180
+        },
+        {
+          "word": "10+",
+          "begin": 172240,
+          "end": 172480
+        },
+        {
+          "word": "years",
+          "begin": 172520,
+          "end": 172760
+        },
+        {
+          "word": "at",
+          "begin": 172780,
+          "end": 172880
+        },
+        {
+          "word": "room",
+          "begin": 172920,
+          "end": 173060
+        },
+        {
+          "word": "temperature,",
+          "begin": 173120,
+          "end": 174020
+        },
+        {
+          "word": "but",
+          "begin": 174040,
+          "end": 174160
+        },
+        {
+          "word": "a",
+          "begin": 174180,
+          "end": 174200
+        },
+        {
+          "word": "heavily",
+          "begin": 174240,
+          "end": 174400
+        },
+        {
+          "word": "worn",
+          "begin": 174500,
+          "end": 174700
+        },
+        {
+          "word": "SSD",
+          "begin": 174780,
+          "end": 175220
+        },
+        {
+          "word": "(near",
+          "begin": 175360,
+          "end": 175520
+        },
+        {
+          "word": "its",
+          "begin": 175540,
+          "end": 175660
+        },
+        {
+          "word": "endurance",
+          "begin": 175680,
+          "end": 176060
+        },
+        {
+          "word": "limit)",
+          "begin": 176120,
+          "end": 176360
+        },
+        {
+          "word": "may",
+          "begin": 176600,
+          "end": 176660
+        },
+        {
+          "word": "only",
+          "begin": 176780,
+          "end": 176960
+        },
+        {
+          "word": "retain",
+          "begin": 177000,
+          "end": 177320
+        },
+        {
+          "word": "data",
+          "begin": 177360,
+          "end": 177560
+        },
+        {
+          "word": "for",
+          "begin": 177620,
+          "end": 177680
+        },
+        {
+          "word": "months",
+          "begin": 177780,
+          "end": 178100
+        },
+        {
+          "word": "because",
+          "begin": 178160,
+          "end": 178380
+        },
+        {
+          "word": "its",
+          "begin": 178400,
+          "end": 178520
+        },
+        {
+          "word": "oxide",
+          "begin": 178580,
+          "end": 178940
+        },
+        {
+          "word": "is",
+          "begin": 178960,
+          "end": 179040
+        },
+        {
+          "word": "damaged",
+          "begin": 179100,
+          "end": 179480
+        },
+        {
+          "word": "and",
+          "begin": 179520,
+          "end": 179600
+        },
+        {
+          "word": "leakier.",
+          "begin": 179640,
+          "end": 179800
+        },
+        {
+          "word": "This",
+          "begin": 180240,
+          "end": 180380
+        },
+        {
+          "word": "is",
+          "begin": 180400,
+          "end": 180480
+        },
+        {
+          "word": "why",
+          "begin": 180500,
+          "end": 180580
+        },
+        {
+          "word": "enterprise",
+          "begin": 180720,
+          "end": 181180
+        },
+        {
+          "word": "SSDs",
+          "begin": 181180,
+          "end": 180880
+        },
+        {
+          "word": "have",
+          "begin": 180940,
+          "end": 181180
+        },
+        {
+          "word": "stricter",
+          "begin": 181180,
+          "end": 181760
+        },
+        {
+          "word": "data",
+          "begin": 181780,
+          "end": 182000
+        },
+        {
+          "word": "retention",
+          "begin": 182040,
+          "end": 182380
+        },
+        {
+          "word": "specs",
+          "begin": 182420,
+          "end": 182720
+        },
+        {
+          "word": "at",
+          "begin": 182780,
+          "end": 182840
+        },
+        {
+          "word": "higher",
+          "begin": 182840,
+          "end": 183100
+        },
+        {
+          "word": "temperatures,",
+          "begin": 183140,
+          "end": 183780
+        },
+        {
+          "word": "and",
+          "begin": 183820,
+          "end": 183940
+        },
+        {
+          "word": "why",
+          "begin": 183940,
+          "end": 184320
+        },
+        {
+          "word": "it's",
+          "begin": 184640,
+          "end": 184720
+        },
+        {
+          "word": "risky",
+          "begin": 184760,
+          "end": 185020
+        },
+        {
+          "word": "to",
+          "begin": 185020,
+          "end": 185120
+        },
+        {
+          "word": "use",
+          "begin": 185120,
+          "end": 185240
+        },
+        {
+          "word": "a",
+          "begin": 185280,
+          "end": 185340
+        },
+        {
+          "word": "worn",
+          "begin": 185400,
+          "end": 185500
+        },
+        {
+          "word": "SSD",
+          "begin": 185520,
+          "end": 185800
+        },
+        {
+          "word": "for",
+          "begin": 185900,
+          "end": 186080
+        },
+        {
+          "word": "archival",
+          "begin": 186100,
+          "end": 186620
+        },
+        {
+          "word": "cold",
+          "begin": 186720,
+          "end": 186920
+        },
+        {
+          "word": "storage.",
+          "begin": 186920,
+          "end": 187320
+        },
+        {
+          "word": "Powered-on",
+          "begin": 187360,
+          "end": 188240
+        },
+        {
+          "word": "SSDs",
+          "begin": 188300,
+          "end": 188560
+        },
+        {
+          "word": "periodically",
+          "begin": 188640,
+          "end": 189340
+        },
+        {
+          "word": "refresh",
+          "begin": 189400,
+          "end": 189720
+        },
+        {
+          "word": "data",
+          "begin": 189740,
+          "end": 190060
+        },
+        {
+          "word": "(read",
+          "begin": 190060,
+          "end": 190100
+        },
+        {
+          "word": "and",
+          "begin": 190120,
+          "end": 190360
+        },
+        {
+          "word": "rewrite)",
+          "begin": 190420,
+          "end": 190860
+        },
+        {
+          "word": "to",
+          "begin": 190900,
+          "end": 190980
+        },
+        {
+          "word": "counteract",
+          "begin": 191000,
+          "end": 191640
+        },
+        {
+          "word": "leakage.",
+          "begin": 191680,
+          "end": 192320
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

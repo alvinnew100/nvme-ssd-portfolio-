@@ -75,7 +75,7 @@ export default function RevealCard({ id, prompt, answer, answerPreview, hint, di
   };
 
   return (
-    <div className="bg-story-card rounded-2xl p-6 card-shadow my-6">
+    <div data-vo="reveal" className="bg-story-card rounded-2xl p-6 card-shadow my-6">
       <div className="flex items-start gap-3 mb-4">
         <div className="w-8 h-8 rounded-full bg-nvme-amber/10 flex items-center justify-center flex-shrink-0">
           {isMCQ ? (

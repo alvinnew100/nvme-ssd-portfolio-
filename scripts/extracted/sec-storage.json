@@ -1,0 +1,41 @@
+{
+  "sectionId": "sec-storage",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "What Is Storage?",
+      "blockIndex": 0
+    },
+    {
+      "type": "paragraph",
+      "text": "Your computer processes data using its CPU (the processor that performs calculations) and temporarily holds data in RAM (fast memory that loses everything when power is turned off). But your files, apps, and operating system need to survive restarts — that's what storage is for.",
+      "blockIndex": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "Why can't we just use RAM for everything? Two reasons: RAM is volatile (data disappears without power) and it's expensive (~$3-5 per GB vs ~$0.05 per GB for SSD storage). Storage devices like SSDs are non-volatile — they keep your data even when the computer is off.",
+      "blockIndex": 2
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: The Memory Hierarchy Is Like a Kitchen. CPU registers are the ingredients in your hand — instantly accessible but tiny. Cache is the counter space — fast to grab from, but limited. RAM is the fridge — lots of room, quick access, but needs power. An SSD is the pantry — large, keeps food long-term, but takes a walk to get there. An HDD is the basement storage — huge, cheap, but slow to retrieve from.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "This course focuses on SSDs (Solid State Drives) — specifically the kind that use the NVMe protocol to communicate with the CPU. SSDs are the dominant storage technology today because they're fast (thousands of times faster than HDDs for random access), have no moving parts, and are energy-efficient.",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "But before we dive into how SSDs work, we need to understand the highway they use to talk to the rest of the computer — the bus.",
+      "blockIndex": 5
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: If RAM is ~1,000x faster than an SSD, why doesn't the system just use RAM for everything? What fundamental tradeoff forces us to have a storage hierarchy instead of a single memory type? The answer: RAM (DRAM) achieves 50-100 nanosecond access times vs. 10-100 microseconds for SSDs, but it has two fatal flaws for permanent storage: (1) it's volatile — all data vanishes when power is lost, so your files wouldn't survive a reboot, and (2) it costs ~$3-5/GB vs. ~$0.05/GB for SSD storage, making a 1TB RAM-only system prohibitively expensive. The storage hierarchy exists because no single technology optimizes for speed, persistence, and cost simultaneously. Each layer trades one attribute for another: registers are fastest but smallest, SSDs balance speed with persistence, and HDDs maximize capacity at the cost of speed.",
+      "requiresReveal": true,
+      "blockIndex": 6
+    }
+  ]
+}

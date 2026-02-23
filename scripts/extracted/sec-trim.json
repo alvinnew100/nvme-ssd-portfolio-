@@ -1,0 +1,101 @@
+{
+  "sectionId": "sec-trim",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "TRIM and GC — Keeping the SSD Fast",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: TRIM Bridges the Information Gap. When you delete a file, the filesystem marks those blocks as free — but the SSD doesn't know this. Without TRIM, the SSD thinks those blocks still contain valid data and wastes effort preserving them during garbage collection. TRIM is the message that says 'hey, these LBAs are no longer needed — you can erase them whenever.'",
+      "blockIndex": 1
+    },
+    {
+      "type": "term",
+      "text": "TRIM (Dataset Management): An NVMe command (opcode 0x09) that tells the SSD which LBAs are no longer in use by the filesystem. This allows the SSD to mark those pages as invalid immediately, improving garbage collection efficiency and reducing write amplification.",
+      "blockIndex": 2
+    },
+    {
+      "type": "term",
+      "text": "Garbage Collection (GC): A background process in the SSD firmware that reclaims space from blocks containing stale/invalid pages. GC copies valid pages to a new block, then erases the old block to create free space for new writes.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "In Lesson 3, we learned about the FTL — the Flash Translation Layer that writes data to new pages instead of overwriting old ones. Old pages become &ldquo;stale.&rdquo; We also learned that erasing happens at the block level (hundreds of pages at once).",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "But who cleans up those stale pages? And when? If nobody cleans them up, the drive will eventually run out of free pages and have nowhere to write new data. This cleanup process is called Garbage Collection (GC).",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "But here's a deeper question: how does the SSD know which pages are stale? It knows about pages it overwrote (it updated the FTL mapping). But what about pages belonging to deleted files?",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "When you delete a file, the filesystem marks those LBAs as free in its own records. But it doesn't tell the SSD. Why would it? The filesystem just updates its own metadata. The SSD still thinks those pages hold valid data. During garbage collection, it will waste time copying those &ldquo;valid&rdquo; pages to a new block — burning through NAND write cycles for data that nobody needs anymore. This is the problem TRIM solves.",
+      "blockIndex": 7
+    },
+    {
+      "type": "paragraph",
+      "text": "TRIM (via the NVMe Dataset Management command, opcode 0x09) is a message from the OS to the SSD: &ldquo;These LBA ranges are no longer used — you can treat them as free.&rdquo; It bridges the information gap between filesystem and SSD.",
+      "blockIndex": 8
+    },
+    {
+      "type": "paragraph",
+      "text": "Let's watch GC in action. The SSD picks a block with many stale pages (Block A), copies the valid pages to a free block (Block B), then erases Block A to reclaim it. Use the buttons to step through the process:",
+      "blockIndex": 9
+    },
+    {
+      "type": "paragraph",
+      "text": "Recall from Lesson 3: SSD Architecture that every block has a VPC (Valid Page Count) — the number of pages still holding current data. GC uses the VPC table to pick source blocks (lowest VPC = best candidate) and copies their valid pages to spare blocks before erasing. TRIM directly lowers VPC by telling the SSD which pages are no longer needed — making GC faster and cheaper.",
+      "blockIndex": 10
+    },
+    {
+      "type": "paragraph",
+      "text": "Runs when the SSD detects idle time — no host commands for a while. The controller proactively reclaims blocks so free pages are ready when writes arrive.",
+      "blockIndex": 11
+    },
+    {
+      "type": "paragraph",
+      "text": "Triggered when the SSD runs critically low on free pages and a write command arrives. The controller must free space before it can complete the write.",
+      "blockIndex": 12
+    },
+    {
+      "type": "paragraph",
+      "text": "Not all blocks are equally good candidates for GC. The controller picks blocks based on:",
+      "blockIndex": 13
+    },
+    {
+      "type": "paragraph",
+      "text": "If GC needs free blocks to work, what happens when the drive is 100% full? This is where over-provisioning (OP) comes in. The drive reserves a percentage of its total NAND capacity that the host can never see or write to.",
+      "blockIndex": 14
+    },
+    {
+      "type": "paragraph",
+      "text": "If TRIM is so important, should you run it constantly? There are two approaches, each with tradeoffs:",
+      "blockIndex": 15
+    },
+    {
+      "type": "paragraph",
+      "text": "These concepts form a chain — each one affects the next:",
+      "blockIndex": 16
+    },
+    {
+      "type": "info",
+      "text": "Why a nearly-full SSD slows down: When a drive is 90%+ full, there are very few free blocks. Background GC has limited room to work. Writes trigger foreground GC, which blocks your I/O. Combined with less over-provisioning headroom, this is why SSD performance degrades significantly when nearly full. General rule: keep at least 10-20% free space for consistent performance.",
+      "blockIndex": 17
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: A colleague says: 'TRIM is optional — the SSD works fine without it.' Under what conditions is this true, and when does it fail catastrophically? Trace the chain of consequences when TRIM is absent on a heavily-used drive. The answer: Without TRIM, the SSD has no way to know when files are deleted — the filesystem marks LBAs as free internally, but the SSD still considers those pages valid. On a lightly-used drive with plenty of free space, this barely matters because GC has enough free blocks to work with. But as the drive fills up, consequences cascade: GC must copy 'valid' pages that are actually dead data, dramatically increasing write amplification. More GC writes means faster NAND wear. Fewer free blocks forces foreground GC, which blocks host I/O and causes latency spikes. Eventually the drive enters a vicious cycle — high WAF, degraded performance, and shortened lifespan. TRIM breaks this cycle by telling the SSD which pages are stale, so GC skips them entirely.",
+      "requiresReveal": true,
+      "blockIndex": 18
+    }
+  ]
+}

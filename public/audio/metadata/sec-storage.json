@@ -1,0 +1,1912 @@
+{
+  "sectionId": "sec-storage",
+  "audioFile": "/audio/sections/sec-storage.mp3",
+  "totalDurationMs": 146800,
+  "fileSizeBytes": 2349312,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "What Is Storage?",
+      "beginMs": 20,
+      "endMs": 760,
+      "timestamps": [
+        {
+          "word": "What",
+          "begin": 20,
+          "end": 140
+        },
+        {
+          "word": "Is",
+          "begin": 160,
+          "end": 280
+        },
+        {
+          "word": "Storage?",
+          "begin": 320,
+          "end": 760
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "paragraph",
+      "text": "Your computer processes data using its CPU (the processor that performs calculations) and temporarily holds data in RAM (fast memory that loses everything when power is turned off). But your files, apps, and operating system need to survive restarts — that's what storage is for.",
+      "beginMs": 1100,
+      "endMs": 15780,
+      "timestamps": [
+        {
+          "word": "Your",
+          "begin": 1100,
+          "end": 1260
+        },
+        {
+          "word": "computer",
+          "begin": 1260,
+          "end": 1600
+        },
+        {
+          "word": "processes",
+          "begin": 1700,
+          "end": 2200
+        },
+        {
+          "word": "data",
+          "begin": 2240,
+          "end": 2460
+        },
+        {
+          "word": "using",
+          "begin": 2560,
+          "end": 2840
+        },
+        {
+          "word": "its",
+          "begin": 2860,
+          "end": 2980
+        },
+        {
+          "word": "CPU",
+          "begin": 3040,
+          "end": 3560
+        },
+        {
+          "word": "(the",
+          "begin": 3640,
+          "end": 3680
+        },
+        {
+          "word": "processor",
+          "begin": 3680,
+          "end": 4120
+        },
+        {
+          "word": "that",
+          "begin": 4200,
+          "end": 4300
+        },
+        {
+          "word": "performs",
+          "begin": 4340,
+          "end": 4740
+        },
+        {
+          "word": "calculations)",
+          "begin": 4780,
+          "end": 5500
+        },
+        {
+          "word": "and",
+          "begin": 5580,
+          "end": 5660
+        },
+        {
+          "word": "temporarily",
+          "begin": 5680,
+          "end": 6260
+        },
+        {
+          "word": "holds",
+          "begin": 6260,
+          "end": 6560
+        },
+        {
+          "word": "data",
+          "begin": 6560,
+          "end": 6860
+        },
+        {
+          "word": "in",
+          "begin": 7000,
+          "end": 7100
+        },
+        {
+          "word": "RAM",
+          "begin": 7160,
+          "end": 7360
+        },
+        {
+          "word": "(fast",
+          "begin": 7440,
+          "end": 7720
+        },
+        {
+          "word": "memory",
+          "begin": 7780,
+          "end": 8060
+        },
+        {
+          "word": "that",
+          "begin": 8360,
+          "end": 8480
+        },
+        {
+          "word": "loses",
+          "begin": 8520,
+          "end": 8800
+        },
+        {
+          "word": "everything",
+          "begin": 8880,
+          "end": 9260
+        },
+        {
+          "word": "when",
+          "begin": 9280,
+          "end": 9380
+        },
+        {
+          "word": "power",
+          "begin": 9420,
+          "end": 9700
+        },
+        {
+          "word": "is",
+          "begin": 9700,
+          "end": 9780
+        },
+        {
+          "word": "turned",
+          "begin": 9820,
+          "end": 10040
+        },
+        {
+          "word": "off).",
+          "begin": 10080,
+          "end": 10340
+        },
+        {
+          "word": "But",
+          "begin": 10500,
+          "end": 10620
+        },
+        {
+          "word": "your",
+          "begin": 10620,
+          "end": 10820
+        },
+        {
+          "word": "files,",
+          "begin": 10820,
+          "end": 11240
+        },
+        {
+          "word": "apps,",
+          "begin": 11380,
+          "end": 11620
+        },
+        {
+          "word": "and",
+          "begin": 11700,
+          "end": 11780
+        },
+        {
+          "word": "operating",
+          "begin": 11880,
+          "end": 12260
+        },
+        {
+          "word": "system",
+          "begin": 12340,
+          "end": 12640
+        },
+        {
+          "word": "need",
+          "begin": 12680,
+          "end": 12820
+        },
+        {
+          "word": "to",
+          "begin": 12840,
+          "end": 12900
+        },
+        {
+          "word": "survive",
+          "begin": 12980,
+          "end": 13340
+        },
+        {
+          "word": "restarts",
+          "begin": 13380,
+          "end": 13940
+        },
+        {
+          "word": "that's",
+          "begin": 14240,
+          "end": 14480
+        },
+        {
+          "word": "what",
+          "begin": 14480,
+          "end": 14600
+        },
+        {
+          "word": "storage",
+          "begin": 14640,
+          "end": 14980
+        },
+        {
+          "word": "is",
+          "begin": 15020,
+          "end": 15120
+        },
+        {
+          "word": "for.",
+          "begin": 15200,
+          "end": 15280
+        },
+        {
+          "word": "Why",
+          "begin": 15720,
+          "end": 15780
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "paragraph",
+      "text": "Why can't we just use RAM for everything? Two reasons: RAM is volatile (data disappears without power) and it's expensive (~$3-5 per GB vs ~$0.05 per GB for SSD storage). Storage devices like SSDs are non-volatile — they keep your data even when the computer is off.",
+      "beginMs": 15900,
+      "endMs": 34580,
+      "timestamps": [
+        {
+          "word": "can't",
+          "begin": 15900,
+          "end": 16040
+        },
+        {
+          "word": "we",
+          "begin": 16059,
+          "end": 16100
+        },
+        {
+          "word": "just",
+          "begin": 16100,
+          "end": 16400
+        },
+        {
+          "word": "use",
+          "begin": 16420,
+          "end": 16580
+        },
+        {
+          "word": "RAM",
+          "begin": 16640,
+          "end": 16880
+        },
+        {
+          "word": "for",
+          "begin": 16940,
+          "end": 17000
+        },
+        {
+          "word": "everything?",
+          "begin": 17100,
+          "end": 17560
+        },
+        {
+          "word": "Two",
+          "begin": 17720,
+          "end": 17820
+        },
+        {
+          "word": "reasons:",
+          "begin": 17940,
+          "end": 18420
+        },
+        {
+          "word": "RAM",
+          "begin": 18800,
+          "end": 19060
+        },
+        {
+          "word": "is",
+          "begin": 19080,
+          "end": 19180
+        },
+        {
+          "word": "volatile",
+          "begin": 19240,
+          "end": 19560
+        },
+        {
+          "word": "(data",
+          "begin": 19660,
+          "end": 19860
+        },
+        {
+          "word": "disappears",
+          "begin": 19940,
+          "end": 20480
+        },
+        {
+          "word": "without",
+          "begin": 20500,
+          "end": 20720
+        },
+        {
+          "word": "power)",
+          "begin": 20720,
+          "end": 21060
+        },
+        {
+          "word": "and",
+          "begin": 21240,
+          "end": 21320
+        },
+        {
+          "word": "it's",
+          "begin": 21320,
+          "end": 21440
+        },
+        {
+          "word": "expensive",
+          "begin": 21460,
+          "end": 22100
+        },
+        {
+          "word": "(~$3-5",
+          "begin": 22160,
+          "end": 23740
+        },
+        {
+          "word": "per",
+          "begin": 23740,
+          "end": 23800
+        },
+        {
+          "word": "GB",
+          "begin": 23900,
+          "end": 25660
+        },
+        {
+          "word": "vs",
+          "begin": 25740,
+          "end": 25960
+        },
+        {
+          "word": "~$0.05",
+          "begin": 26040,
+          "end": 26320
+        },
+        {
+          "word": "per",
+          "begin": 26320,
+          "end": 26380
+        },
+        {
+          "word": "GB",
+          "begin": 26480,
+          "end": 26720
+        },
+        {
+          "word": "for",
+          "begin": 26860,
+          "end": 26920
+        },
+        {
+          "word": "SSD",
+          "begin": 27040,
+          "end": 27480
+        },
+        {
+          "word": "storage).",
+          "begin": 27620,
+          "end": 28040
+        },
+        {
+          "word": "Storage",
+          "begin": 28420,
+          "end": 28780
+        },
+        {
+          "word": "devices",
+          "begin": 28840,
+          "end": 29900
+        },
+        {
+          "word": "like",
+          "begin": 29960,
+          "end": 30220
+        },
+        {
+          "word": "are",
+          "begin": 30300,
+          "end": 30320
+        },
+        {
+          "word": "non-volatile",
+          "begin": 30420,
+          "end": 30980
+        },
+        {
+          "word": "they",
+          "begin": 31360,
+          "end": 31400
+        },
+        {
+          "word": "keep",
+          "begin": 31500,
+          "end": 31680
+        },
+        {
+          "word": "your",
+          "begin": 31680,
+          "end": 31740
+        },
+        {
+          "word": "data",
+          "begin": 31840,
+          "end": 32040
+        },
+        {
+          "word": "even",
+          "begin": 32200,
+          "end": 32380
+        },
+        {
+          "word": "when",
+          "begin": 32400,
+          "end": 32520
+        },
+        {
+          "word": "the",
+          "begin": 32520,
+          "end": 32560
+        },
+        {
+          "word": "computer",
+          "begin": 32619,
+          "end": 32960
+        },
+        {
+          "word": "is",
+          "begin": 33040,
+          "end": 33140
+        },
+        {
+          "word": "off.",
+          "begin": 33200,
+          "end": 33460
+        },
+        {
+          "word": "Analogy:",
+          "begin": 33660,
+          "end": 34120
+        },
+        {
+          "word": "The",
+          "begin": 34520,
+          "end": 34580
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "analogy",
+      "text": "Analogy: The Memory Hierarchy Is Like a Kitchen. CPU registers are the ingredients in your hand — instantly accessible but tiny. Cache is the counter space — fast to grab from, but limited. RAM is the fridge — lots of room, quick access, but needs power. An SSD is the pantry — large, keeps food long-term, but takes a walk to get there. An HDD is the basement storage — huge, cheap, but slow to retrieve from.",
+      "beginMs": 34640,
+      "endMs": 63900,
+      "timestamps": [
+        {
+          "word": "Memory",
+          "begin": 34640,
+          "end": 34820
+        },
+        {
+          "word": "Hierarchy",
+          "begin": 34820,
+          "end": 35340
+        },
+        {
+          "word": "Is",
+          "begin": 35480,
+          "end": 35560
+        },
+        {
+          "word": "Like",
+          "begin": 35600,
+          "end": 35740
+        },
+        {
+          "word": "a",
+          "begin": 35740,
+          "end": 35760
+        },
+        {
+          "word": "Kitchen.",
+          "begin": 35840,
+          "end": 36180
+        },
+        {
+          "word": "CPU",
+          "begin": 36560,
+          "end": 36900
+        },
+        {
+          "word": "registers",
+          "begin": 37000,
+          "end": 37540
+        },
+        {
+          "word": "are",
+          "begin": 37620,
+          "end": 37720
+        },
+        {
+          "word": "the",
+          "begin": 37720,
+          "end": 37760
+        },
+        {
+          "word": "ingredients",
+          "begin": 37820,
+          "end": 38380
+        },
+        {
+          "word": "in",
+          "begin": 38400,
+          "end": 38480
+        },
+        {
+          "word": "your",
+          "begin": 38500,
+          "end": 38640
+        },
+        {
+          "word": "hand",
+          "begin": 38640,
+          "end": 38960
+        },
+        {
+          "word": "instantly",
+          "begin": 39260,
+          "end": 39660
+        },
+        {
+          "word": "accessible",
+          "begin": 39720,
+          "end": 40220
+        },
+        {
+          "word": "but",
+          "begin": 40320,
+          "end": 40420
+        },
+        {
+          "word": "tiny.",
+          "begin": 40480,
+          "end": 40760
+        },
+        {
+          "word": "Cache",
+          "begin": 41160,
+          "end": 41540
+        },
+        {
+          "word": "is",
+          "begin": 41700,
+          "end": 41780
+        },
+        {
+          "word": "the",
+          "begin": 41820,
+          "end": 41860
+        },
+        {
+          "word": "counter",
+          "begin": 41920,
+          "end": 42180
+        },
+        {
+          "word": "space",
+          "begin": 42280,
+          "end": 42640
+        },
+        {
+          "word": "fast",
+          "begin": 42960,
+          "end": 43200
+        },
+        {
+          "word": "to",
+          "begin": 43220,
+          "end": 43280
+        },
+        {
+          "word": "grab",
+          "begin": 43340,
+          "end": 43560
+        },
+        {
+          "word": "from,",
+          "begin": 43640,
+          "end": 43860
+        },
+        {
+          "word": "but",
+          "begin": 44160,
+          "end": 44260
+        },
+        {
+          "word": "limited.",
+          "begin": 44320,
+          "end": 44700
+        },
+        {
+          "word": "RAM",
+          "begin": 44920,
+          "end": 45460
+        },
+        {
+          "word": "is",
+          "begin": 45720,
+          "end": 45820
+        },
+        {
+          "word": "the",
+          "begin": 45860,
+          "end": 45920
+        },
+        {
+          "word": "fridge",
+          "begin": 46020,
+          "end": 46360
+        },
+        {
+          "word": "lots",
+          "begin": 46740,
+          "end": 46960
+        },
+        {
+          "word": "of",
+          "begin": 47000,
+          "end": 47100
+        },
+        {
+          "word": "room,",
+          "begin": 47120,
+          "end": 47380
+        },
+        {
+          "word": "quick",
+          "begin": 47680,
+          "end": 47900
+        },
+        {
+          "word": "access,",
+          "begin": 48000,
+          "end": 48500
+        },
+        {
+          "word": "but",
+          "begin": 48780,
+          "end": 48920
+        },
+        {
+          "word": "needs",
+          "begin": 48940,
+          "end": 49140
+        },
+        {
+          "word": "power.",
+          "begin": 49140,
+          "end": 50260
+        },
+        {
+          "word": "An",
+          "begin": 50360,
+          "end": 50540
+        },
+        {
+          "word": "SSD",
+          "begin": 50600,
+          "end": 50680
+        },
+        {
+          "word": "is",
+          "begin": 50880,
+          "end": 50960
+        },
+        {
+          "word": "the",
+          "begin": 51000,
+          "end": 51060
+        },
+        {
+          "word": "pantry",
+          "begin": 51120,
+          "end": 51520
+        },
+        {
+          "word": "large,",
+          "begin": 51920,
+          "end": 52320
+        },
+        {
+          "word": "keeps",
+          "begin": 52620,
+          "end": 52880
+        },
+        {
+          "word": "food",
+          "begin": 52960,
+          "end": 53160
+        },
+        {
+          "word": "long-term,",
+          "begin": 53200,
+          "end": 53800
+        },
+        {
+          "word": "but",
+          "begin": 54100,
+          "end": 54180
+        },
+        {
+          "word": "takes",
+          "begin": 54180,
+          "end": 54420
+        },
+        {
+          "word": "a",
+          "begin": 54440,
+          "end": 54500
+        },
+        {
+          "word": "walk",
+          "begin": 54560,
+          "end": 54780
+        },
+        {
+          "word": "to",
+          "begin": 54840,
+          "end": 54880
+        },
+        {
+          "word": "get",
+          "begin": 54920,
+          "end": 55100
+        },
+        {
+          "word": "there.",
+          "begin": 55120,
+          "end": 56420
+        },
+        {
+          "word": "An",
+          "begin": 56640,
+          "end": 56740
+        },
+        {
+          "word": "the",
+          "begin": 56760,
+          "end": 56820
+        },
+        {
+          "word": "basement",
+          "begin": 56880,
+          "end": 57280
+        },
+        {
+          "word": "storage",
+          "begin": 57320,
+          "end": 57820
+        },
+        {
+          "word": "huge,",
+          "begin": 58160,
+          "end": 58540
+        },
+        {
+          "word": "cheap,",
+          "begin": 58940,
+          "end": 59240
+        },
+        {
+          "word": "but",
+          "begin": 59540,
+          "end": 59680
+        },
+        {
+          "word": "slow",
+          "begin": 59740,
+          "end": 59900
+        },
+        {
+          "word": "to",
+          "begin": 59980,
+          "end": 60040
+        },
+        {
+          "word": "retrieve",
+          "begin": 60080,
+          "end": 60440
+        },
+        {
+          "word": "from.",
+          "begin": 60520,
+          "end": 60740
+        },
+        {
+          "word": "This",
+          "begin": 60920,
+          "end": 61060
+        },
+        {
+          "word": "course",
+          "begin": 61120,
+          "end": 61460
+        },
+        {
+          "word": "focuses",
+          "begin": 61460,
+          "end": 61980
+        },
+        {
+          "word": "on",
+          "begin": 62080,
+          "end": 62180
+        },
+        {
+          "word": "SSDs",
+          "begin": 62300,
+          "end": 63020
+        },
+        {
+          "word": "(Solid",
+          "begin": 63300,
+          "end": 63600
+        },
+        {
+          "word": "State",
+          "begin": 63660,
+          "end": 63900
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "This course focuses on SSDs (Solid State Drives) — specifically the kind that use the NVMe protocol to communicate with the CPU. SSDs are the dominant storage technology today because they're fast (thousands of times faster than HDDs for random access), have no moving parts, and are energy-efficient.",
+      "beginMs": 63940,
+      "endMs": 79840,
+      "timestamps": [
+        {
+          "word": "Drives)",
+          "begin": 63940,
+          "end": 64420
+        },
+        {
+          "word": "specifically",
+          "begin": 64660,
+          "end": 65180
+        },
+        {
+          "word": "the",
+          "begin": 65239,
+          "end": 65280
+        },
+        {
+          "word": "kind",
+          "begin": 65360,
+          "end": 65660
+        },
+        {
+          "word": "that",
+          "begin": 65660,
+          "end": 65780
+        },
+        {
+          "word": "use",
+          "begin": 65800,
+          "end": 65980
+        },
+        {
+          "word": "the",
+          "begin": 66020,
+          "end": 66080
+        },
+        {
+          "word": "NVMe",
+          "begin": 66220,
+          "end": 66660
+        },
+        {
+          "word": "protocol",
+          "begin": 66780,
+          "end": 67280
+        },
+        {
+          "word": "to",
+          "begin": 67360,
+          "end": 67420
+        },
+        {
+          "word": "communicate",
+          "begin": 67480,
+          "end": 67980
+        },
+        {
+          "word": "with",
+          "begin": 68020,
+          "end": 68140
+        },
+        {
+          "word": "the",
+          "begin": 68140,
+          "end": 68180
+        },
+        {
+          "word": "CPU.",
+          "begin": 68260,
+          "end": 68700
+        },
+        {
+          "word": "SSDs",
+          "begin": 69040,
+          "end": 69440
+        },
+        {
+          "word": "are",
+          "begin": 69460,
+          "end": 69640
+        },
+        {
+          "word": "the",
+          "begin": 69640,
+          "end": 69840
+        },
+        {
+          "word": "dominant",
+          "begin": 69960,
+          "end": 70380
+        },
+        {
+          "word": "storage",
+          "begin": 70460,
+          "end": 70780
+        },
+        {
+          "word": "technology",
+          "begin": 70840,
+          "end": 71360
+        },
+        {
+          "word": "today",
+          "begin": 71460,
+          "end": 71640
+        },
+        {
+          "word": "because",
+          "begin": 71940,
+          "end": 72180
+        },
+        {
+          "word": "they're",
+          "begin": 72220,
+          "end": 72440
+        },
+        {
+          "word": "fast",
+          "begin": 72440,
+          "end": 72860
+        },
+        {
+          "word": "(thousands",
+          "begin": 73080,
+          "end": 73520
+        },
+        {
+          "word": "of",
+          "begin": 73540,
+          "end": 73600
+        },
+        {
+          "word": "times",
+          "begin": 73600,
+          "end": 74020
+        },
+        {
+          "word": "faster",
+          "begin": 74080,
+          "end": 74440
+        },
+        {
+          "word": "than",
+          "begin": 74520,
+          "end": 74640
+        },
+        {
+          "word": "HDDs",
+          "begin": 74740,
+          "end": 75440
+        },
+        {
+          "word": "for",
+          "begin": 75520,
+          "end": 75680
+        },
+        {
+          "word": "random",
+          "begin": 75720,
+          "end": 76000
+        },
+        {
+          "word": "access),",
+          "begin": 76040,
+          "end": 76580
+        },
+        {
+          "word": "have",
+          "begin": 76820,
+          "end": 76980
+        },
+        {
+          "word": "no",
+          "begin": 77080,
+          "end": 77140
+        },
+        {
+          "word": "moving",
+          "begin": 77280,
+          "end": 77560
+        },
+        {
+          "word": "parts,",
+          "begin": 77620,
+          "end": 78080
+        },
+        {
+          "word": "and",
+          "begin": 78400,
+          "end": 78480
+        },
+        {
+          "word": "are",
+          "begin": 78520,
+          "end": 78700
+        },
+        {
+          "word": "energy-efficient.",
+          "begin": 78700,
+          "end": 79560
+        },
+        {
+          "word": "But",
+          "begin": 79740,
+          "end": 79840
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "But before we dive into how SSDs work, we need to understand the highway they use to talk to the rest of the computer — the bus.",
+      "beginMs": 79860,
+      "endMs": 86940,
+      "timestamps": [
+        {
+          "word": "before",
+          "begin": 79860,
+          "end": 80120
+        },
+        {
+          "word": "we",
+          "begin": 80160,
+          "end": 80220
+        },
+        {
+          "word": "dive",
+          "begin": 80280,
+          "end": 80500
+        },
+        {
+          "word": "into",
+          "begin": 80520,
+          "end": 80660
+        },
+        {
+          "word": "how",
+          "begin": 80720,
+          "end": 80800
+        },
+        {
+          "word": "SSDs",
+          "begin": 80940,
+          "end": 81480
+        },
+        {
+          "word": "work,",
+          "begin": 81540,
+          "end": 81800
+        },
+        {
+          "word": "we",
+          "begin": 82040,
+          "end": 82100
+        },
+        {
+          "word": "need",
+          "begin": 82160,
+          "end": 82300
+        },
+        {
+          "word": "to",
+          "begin": 82320,
+          "end": 82380
+        },
+        {
+          "word": "understand",
+          "begin": 82460,
+          "end": 82940
+        },
+        {
+          "word": "the",
+          "begin": 82960,
+          "end": 83000
+        },
+        {
+          "word": "highway",
+          "begin": 83060,
+          "end": 83340
+        },
+        {
+          "word": "they",
+          "begin": 83440,
+          "end": 83600
+        },
+        {
+          "word": "use",
+          "begin": 83600,
+          "end": 83820
+        },
+        {
+          "word": "to",
+          "begin": 83860,
+          "end": 83920
+        },
+        {
+          "word": "talk",
+          "begin": 83980,
+          "end": 84200
+        },
+        {
+          "word": "to",
+          "begin": 84240,
+          "end": 84280
+        },
+        {
+          "word": "the",
+          "begin": 84320,
+          "end": 84380
+        },
+        {
+          "word": "rest",
+          "begin": 84420,
+          "end": 84660
+        },
+        {
+          "word": "of",
+          "begin": 84440,
+          "end": 84600
+        },
+        {
+          "word": "the",
+          "begin": 84640,
+          "end": 84700
+        },
+        {
+          "word": "computer",
+          "begin": 84700,
+          "end": 85060
+        },
+        {
+          "word": "the",
+          "begin": 85060,
+          "end": 85120
+        },
+        {
+          "word": "bus.",
+          "begin": 85180,
+          "end": 85620
+        },
+        {
+          "word": "Knowledge",
+          "begin": 85620,
+          "end": 86940
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "reveal",
+      "text": "Knowledge check: If RAM is ~1,000x faster than an SSD, why doesn't the system just use RAM for everything? What fundamental tradeoff forces us to have a storage hierarchy instead of a single memory type? The answer: RAM (DRAM) achieves 50-100 nanosecond access times vs. 10-100 microseconds for SSDs, but it has two fatal flaws for permanent storage: (1) it's volatile — all data vanishes when power is lost, so your files wouldn't survive a reboot, and (2) it costs ~$3-5/GB vs. ~$0.05/GB for SSD storage, making a 1TB RAM-only system prohibitively expensive. The storage hierarchy exists because no single technology optimizes for speed, persistence, and cost simultaneously. Each layer trades one attribute for another: registers are fastest but smallest, SSDs balance speed with persistence, and HDDs maximize capacity at the cost of speed.",
+      "beginMs": 86960,
+      "endMs": 146560,
+      "timestamps": [
+        {
+          "word": "check:",
+          "begin": 86960,
+          "end": 87200
+        },
+        {
+          "word": "If",
+          "begin": 87200,
+          "end": 87320
+        },
+        {
+          "word": "RAM",
+          "begin": 87360,
+          "end": 87560
+        },
+        {
+          "word": "is",
+          "begin": 87840,
+          "end": 87940
+        },
+        {
+          "word": "~1,000x",
+          "begin": 87940,
+          "end": 89880
+        },
+        {
+          "word": "faster",
+          "begin": 89940,
+          "end": 90400
+        },
+        {
+          "word": "than",
+          "begin": 90440,
+          "end": 90560
+        },
+        {
+          "word": "an",
+          "begin": 90620,
+          "end": 90760
+        },
+        {
+          "word": "SSD,",
+          "begin": 90620,
+          "end": 91080
+        },
+        {
+          "word": "why",
+          "begin": 91600,
+          "end": 91660
+        },
+        {
+          "word": "doesn't",
+          "begin": 91740,
+          "end": 91980
+        },
+        {
+          "word": "the",
+          "begin": 91980,
+          "end": 92020
+        },
+        {
+          "word": "system",
+          "begin": 92100,
+          "end": 92400
+        },
+        {
+          "word": "just",
+          "begin": 92440,
+          "end": 92620
+        },
+        {
+          "word": "use",
+          "begin": 92640,
+          "end": 92820
+        },
+        {
+          "word": "RAM",
+          "begin": 92880,
+          "end": 93080
+        },
+        {
+          "word": "for",
+          "begin": 93140,
+          "end": 93200
+        },
+        {
+          "word": "everything?",
+          "begin": 93280,
+          "end": 93720
+        },
+        {
+          "word": "What",
+          "begin": 94320,
+          "end": 94480
+        },
+        {
+          "word": "fundamental",
+          "begin": 94560,
+          "end": 94960
+        },
+        {
+          "word": "tradeoff",
+          "begin": 95060,
+          "end": 95500
+        },
+        {
+          "word": "forces",
+          "begin": 95680,
+          "end": 96040
+        },
+        {
+          "word": "us",
+          "begin": 96080,
+          "end": 96220
+        },
+        {
+          "word": "to",
+          "begin": 96260,
+          "end": 96320
+        },
+        {
+          "word": "have",
+          "begin": 96360,
+          "end": 96520
+        },
+        {
+          "word": "a",
+          "begin": 96540,
+          "end": 96660
+        },
+        {
+          "word": "storage",
+          "begin": 96660,
+          "end": 97060
+        },
+        {
+          "word": "hierarchy",
+          "begin": 97060,
+          "end": 97480
+        },
+        {
+          "word": "instead",
+          "begin": 97640,
+          "end": 97940
+        },
+        {
+          "word": "of",
+          "begin": 97940,
+          "end": 98020
+        },
+        {
+          "word": "a",
+          "begin": 98020,
+          "end": 98040
+        },
+        {
+          "word": "single",
+          "begin": 98160,
+          "end": 98380
+        },
+        {
+          "word": "memory",
+          "begin": 98460,
+          "end": 98720
+        },
+        {
+          "word": "type?",
+          "begin": 98820,
+          "end": 99100
+        },
+        {
+          "word": "The",
+          "begin": 99760,
+          "end": 99800
+        },
+        {
+          "word": "answer:",
+          "begin": 99920,
+          "end": 100160
+        },
+        {
+          "word": "RAM",
+          "begin": 100580,
+          "end": 100800
+        },
+        {
+          "word": "(DRAM)",
+          "begin": 100860,
+          "end": 101280
+        },
+        {
+          "word": "achieves",
+          "begin": 101340,
+          "end": 101740
+        },
+        {
+          "word": "50-100",
+          "begin": 101860,
+          "end": 102880
+        },
+        {
+          "word": "nanosecond",
+          "begin": 102920,
+          "end": 103540
+        },
+        {
+          "word": "access",
+          "begin": 103620,
+          "end": 104100
+        },
+        {
+          "word": "times",
+          "begin": 104360,
+          "end": 104620
+        },
+        {
+          "word": "vs.",
+          "begin": 104660,
+          "end": 105140
+        },
+        {
+          "word": "10-100",
+          "begin": 105700,
+          "end": 106620
+        },
+        {
+          "word": "microseconds",
+          "begin": 106660,
+          "end": 107400
+        },
+        {
+          "word": "for",
+          "begin": 107400,
+          "end": 107520
+        },
+        {
+          "word": "SSDs,",
+          "begin": 107640,
+          "end": 108360
+        },
+        {
+          "word": "but",
+          "begin": 108580,
+          "end": 108660
+        },
+        {
+          "word": "it",
+          "begin": 108680,
+          "end": 108760
+        },
+        {
+          "word": "has",
+          "begin": 108780,
+          "end": 109020
+        },
+        {
+          "word": "two",
+          "begin": 109020,
+          "end": 109220
+        },
+        {
+          "word": "fatal",
+          "begin": 109360,
+          "end": 109700
+        },
+        {
+          "word": "flaws",
+          "begin": 109720,
+          "end": 110020
+        },
+        {
+          "word": "for",
+          "begin": 110080,
+          "end": 110140
+        },
+        {
+          "word": "permanent",
+          "begin": 110240,
+          "end": 110600
+        },
+        {
+          "word": "storage:",
+          "begin": 110640,
+          "end": 111400
+        },
+        {
+          "word": "(1)",
+          "begin": 111400,
+          "end": 111540
+        },
+        {
+          "word": "it's",
+          "begin": 111560,
+          "end": 111680
+        },
+        {
+          "word": "volatile",
+          "begin": 111760,
+          "end": 112360
+        },
+        {
+          "word": "all",
+          "begin": 112660,
+          "end": 112780
+        },
+        {
+          "word": "data",
+          "begin": 112840,
+          "end": 113040
+        },
+        {
+          "word": "vanishes",
+          "begin": 113100,
+          "end": 113620
+        },
+        {
+          "word": "when",
+          "begin": 113660,
+          "end": 113760
+        },
+        {
+          "word": "power",
+          "begin": 113800,
+          "end": 114120
+        },
+        {
+          "word": "is",
+          "begin": 114120,
+          "end": 114220
+        },
+        {
+          "word": "lost,",
+          "begin": 114280,
+          "end": 114620
+        },
+        {
+          "word": "so",
+          "begin": 114880,
+          "end": 115000
+        },
+        {
+          "word": "your",
+          "begin": 115020,
+          "end": 115380
+        },
+        {
+          "word": "files",
+          "begin": 115440,
+          "end": 115460
+        },
+        {
+          "word": "wouldn't",
+          "begin": 115500,
+          "end": 115660
+        },
+        {
+          "word": "survive",
+          "begin": 115720,
+          "end": 116060
+        },
+        {
+          "word": "a",
+          "begin": 116080,
+          "end": 116100
+        },
+        {
+          "word": "reboot,",
+          "begin": 116160,
+          "end": 116560
+        },
+        {
+          "word": "and",
+          "begin": 116840,
+          "end": 116940
+        },
+        {
+          "word": "(2)",
+          "begin": 117000,
+          "end": 117120
+        },
+        {
+          "word": "it",
+          "begin": 117280,
+          "end": 117320
+        },
+        {
+          "word": "costs",
+          "begin": 117360,
+          "end": 117800
+        },
+        {
+          "word": "~$3-5/GB",
+          "begin": 117980,
+          "end": 120020
+        },
+        {
+          "word": "vs.",
+          "begin": 120080,
+          "end": 120560
+        },
+        {
+          "word": "~$0.05/GB",
+          "begin": 121100,
+          "end": 123500
+        },
+        {
+          "word": "for",
+          "begin": 123740,
+          "end": 123800
+        },
+        {
+          "word": "SSD",
+          "begin": 123920,
+          "end": 124340
+        },
+        {
+          "word": "storage,",
+          "begin": 124460,
+          "end": 124900
+        },
+        {
+          "word": "making",
+          "begin": 125200,
+          "end": 125460
+        },
+        {
+          "word": "a",
+          "begin": 125500,
+          "end": 125520
+        },
+        {
+          "word": "1TB",
+          "begin": 125620,
+          "end": 126340
+        },
+        {
+          "word": "RAM-only",
+          "begin": 126380,
+          "end": 126840
+        },
+        {
+          "word": "system",
+          "begin": 126960,
+          "end": 127300
+        },
+        {
+          "word": "prohibitively",
+          "begin": 127400,
+          "end": 127960
+        },
+        {
+          "word": "expensive.",
+          "begin": 128020,
+          "end": 128620
+        },
+        {
+          "word": "The",
+          "begin": 128880,
+          "end": 128940
+        },
+        {
+          "word": "storage",
+          "begin": 129000,
+          "end": 129380
+        },
+        {
+          "word": "hierarchy",
+          "begin": 129380,
+          "end": 129780
+        },
+        {
+          "word": "exists",
+          "begin": 129860,
+          "end": 130300
+        },
+        {
+          "word": "because",
+          "begin": 130380,
+          "end": 130639
+        },
+        {
+          "word": "no",
+          "begin": 130699,
+          "end": 130780
+        },
+        {
+          "word": "single",
+          "begin": 130919,
+          "end": 131100
+        },
+        {
+          "word": "technology",
+          "begin": 131200,
+          "end": 131720
+        },
+        {
+          "word": "optimizes",
+          "begin": 131860,
+          "end": 132460
+        },
+        {
+          "word": "for",
+          "begin": 132500,
+          "end": 132560
+        },
+        {
+          "word": "speed,",
+          "begin": 132680,
+          "end": 133020
+        },
+        {
+          "word": "persistence,",
+          "begin": 133320,
+          "end": 133940
+        },
+        {
+          "word": "and",
+          "begin": 134060,
+          "end": 134140
+        },
+        {
+          "word": "cost",
+          "begin": 134200,
+          "end": 134600
+        },
+        {
+          "word": "simultaneously.",
+          "begin": 134720,
+          "end": 135540
+        },
+        {
+          "word": "Each",
+          "begin": 136060,
+          "end": 136220
+        },
+        {
+          "word": "layer",
+          "begin": 136300,
+          "end": 136480
+        },
+        {
+          "word": "trades",
+          "begin": 136600,
+          "end": 136880
+        },
+        {
+          "word": "one",
+          "begin": 136960,
+          "end": 137120
+        },
+        {
+          "word": "attribute",
+          "begin": 137220,
+          "end": 137680
+        },
+        {
+          "word": "for",
+          "begin": 137720,
+          "end": 137820
+        },
+        {
+          "word": "another:",
+          "begin": 137840,
+          "end": 138100
+        },
+        {
+          "word": "registers",
+          "begin": 138500,
+          "end": 139040
+        },
+        {
+          "word": "are",
+          "begin": 139120,
+          "end": 139140
+        },
+        {
+          "word": "fastest",
+          "begin": 139280,
+          "end": 139820
+        },
+        {
+          "word": "but",
+          "begin": 139920,
+          "end": 140040
+        },
+        {
+          "word": "smallest,",
+          "begin": 140080,
+          "end": 140600
+        },
+        {
+          "word": "SSDs",
+          "begin": 140880,
+          "end": 141480
+        },
+        {
+          "word": "balance",
+          "begin": 141540,
+          "end": 141900
+        },
+        {
+          "word": "speed",
+          "begin": 141960,
+          "end": 142260
+        },
+        {
+          "word": "with",
+          "begin": 142300,
+          "end": 142420
+        },
+        {
+          "word": "persistence,",
+          "begin": 142480,
+          "end": 143100
+        },
+        {
+          "word": "and",
+          "begin": 143440,
+          "end": 143540
+        },
+        {
+          "word": "HDDs",
+          "begin": 143540,
+          "end": 144260
+        },
+        {
+          "word": "maximize",
+          "begin": 144320,
+          "end": 144920
+        },
+        {
+          "word": "capacity",
+          "begin": 144920,
+          "end": 145400
+        },
+        {
+          "word": "at",
+          "begin": 145560,
+          "end": 145660
+        },
+        {
+          "word": "the",
+          "begin": 145660,
+          "end": 145700
+        },
+        {
+          "word": "cost",
+          "begin": 145760,
+          "end": 146060
+        },
+        {
+          "word": "of",
+          "begin": 146080,
+          "end": 146140
+        },
+        {
+          "word": "speed.",
+          "begin": 146200,
+          "end": 146560
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

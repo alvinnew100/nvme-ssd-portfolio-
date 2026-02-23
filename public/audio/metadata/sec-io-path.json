@@ -1,0 +1,1659 @@
+{
+  "sectionId": "sec-io-path",
+  "audioFile": "/audio/sections/sec-io-path.mp3",
+  "totalDurationMs": 132840,
+  "fileSizeBytes": 2125824,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "The Complete Journey — From read() to NAND and Back",
+      "beginMs": 0,
+      "endMs": 3260,
+      "timestamps": [
+        {
+          "word": "The",
+          "begin": 0,
+          "end": 40
+        },
+        {
+          "word": "Complete",
+          "begin": 100,
+          "end": 420
+        },
+        {
+          "word": "Journey",
+          "begin": 420,
+          "end": 760
+        },
+        {
+          "word": "From",
+          "begin": 1100,
+          "end": 1240
+        },
+        {
+          "word": "read()",
+          "begin": 1300,
+          "end": 1460
+        },
+        {
+          "word": "to",
+          "begin": 1500,
+          "end": 1580
+        },
+        {
+          "word": "NAND",
+          "begin": 1660,
+          "end": 1980
+        },
+        {
+          "word": "and",
+          "begin": 2020,
+          "end": 2220
+        },
+        {
+          "word": "Back",
+          "begin": 2320,
+          "end": 2360
+        },
+        {
+          "word": "Analogy:",
+          "begin": 2360,
+          "end": 3260
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: The I/O Path Is a 10-Layer Relay Race. A single 4KB read passes through 10 layers: application → syscall → VFS → filesystem → block layer → NVMe driver → PCIe bus → SSD controller → NAND flash → and back up. The NAND read itself takes ~50μs (about 87% of total latency). Everything else combined is just overhead.",
+      "beginMs": 3360,
+      "endMs": 29860,
+      "timestamps": [
+        {
+          "word": "The",
+          "begin": 3360,
+          "end": 3520
+        },
+        {
+          "word": "I/O",
+          "begin": 3600,
+          "end": 4240
+        },
+        {
+          "word": "Path",
+          "begin": 4240,
+          "end": 4380
+        },
+        {
+          "word": "Is",
+          "begin": 4460,
+          "end": 4560
+        },
+        {
+          "word": "a",
+          "begin": 4560,
+          "end": 4640
+        },
+        {
+          "word": "10-Layer",
+          "begin": 4560,
+          "end": 4800
+        },
+        {
+          "word": "Relay",
+          "begin": 4900,
+          "end": 5120
+        },
+        {
+          "word": "Race.",
+          "begin": 5240,
+          "end": 5540
+        },
+        {
+          "word": "A",
+          "begin": 5740,
+          "end": 5760
+        },
+        {
+          "word": "single",
+          "begin": 5860,
+          "end": 6280
+        },
+        {
+          "word": "4KB",
+          "begin": 6420,
+          "end": 6840
+        },
+        {
+          "word": "read",
+          "begin": 6920,
+          "end": 7100
+        },
+        {
+          "word": "passes",
+          "begin": 7100,
+          "end": 7520
+        },
+        {
+          "word": "through",
+          "begin": 7560,
+          "end": 7640
+        },
+        {
+          "word": "10",
+          "begin": 7740,
+          "end": 7940
+        },
+        {
+          "word": "layers:",
+          "begin": 8000,
+          "end": 8400
+        },
+        {
+          "word": "application",
+          "begin": 8680,
+          "end": 9340
+        },
+        {
+          "word": "→",
+          "begin": 9340,
+          "end": 10180
+        },
+        {
+          "word": "syscall",
+          "begin": 10400,
+          "end": 10980
+        },
+        {
+          "word": "→",
+          "begin": 11240,
+          "end": 11700
+        },
+        {
+          "word": "VFS",
+          "begin": 11740,
+          "end": 12480
+        },
+        {
+          "word": "→",
+          "begin": 12520,
+          "end": 13700
+        },
+        {
+          "word": "filesystem",
+          "begin": 13820,
+          "end": 15440
+        },
+        {
+          "word": "→",
+          "begin": 15480,
+          "end": 16180
+        },
+        {
+          "word": "block",
+          "begin": 16360,
+          "end": 16820
+        },
+        {
+          "word": "layer",
+          "begin": 16840,
+          "end": 17020
+        },
+        {
+          "word": "→",
+          "begin": 17020,
+          "end": 17900
+        },
+        {
+          "word": "NVMe",
+          "begin": 18120,
+          "end": 19260
+        },
+        {
+          "word": "driver",
+          "begin": 19280,
+          "end": 21260
+        },
+        {
+          "word": "→",
+          "begin": 21260,
+          "end": 21740
+        },
+        {
+          "word": "PCIe",
+          "begin": 21900,
+          "end": 22180
+        },
+        {
+          "word": "bus",
+          "begin": 22260,
+          "end": 22400
+        },
+        {
+          "word": "→",
+          "begin": 22480,
+          "end": 23020
+        },
+        {
+          "word": "SSD",
+          "begin": 23020,
+          "end": 23380
+        },
+        {
+          "word": "controller",
+          "begin": 23420,
+          "end": 23860
+        },
+        {
+          "word": "→",
+          "begin": 23860,
+          "end": 24340
+        },
+        {
+          "word": "NAND",
+          "begin": 24480,
+          "end": 24820
+        },
+        {
+          "word": "flash",
+          "begin": 24880,
+          "end": 24720
+        },
+        {
+          "word": "→",
+          "begin": 24720,
+          "end": 25200
+        },
+        {
+          "word": "and",
+          "begin": 25220,
+          "end": 24920
+        },
+        {
+          "word": "back",
+          "begin": 25020,
+          "end": 25460
+        },
+        {
+          "word": "up.",
+          "begin": 25500,
+          "end": 25660
+        },
+        {
+          "word": "The",
+          "begin": 25720,
+          "end": 25820
+        },
+        {
+          "word": "read",
+          "begin": 25880,
+          "end": 26040
+        },
+        {
+          "word": "itself",
+          "begin": 26080,
+          "end": 26420
+        },
+        {
+          "word": "(about",
+          "begin": 26080,
+          "end": 26200
+        },
+        {
+          "word": "87%",
+          "begin": 26200,
+          "end": 26240
+        },
+        {
+          "word": "latency).",
+          "begin": 26240,
+          "end": 26420
+        },
+        {
+          "word": "Everything",
+          "begin": 27040,
+          "end": 27400
+        },
+        {
+          "word": "else",
+          "begin": 27440,
+          "end": 27600
+        },
+        {
+          "word": "combined",
+          "begin": 27640,
+          "end": 28160
+        },
+        {
+          "word": "is",
+          "begin": 28260,
+          "end": 28340
+        },
+        {
+          "word": "just",
+          "begin": 28340,
+          "end": 28600
+        },
+        {
+          "word": "overhead.",
+          "begin": 28600,
+          "end": 29100
+        },
+        {
+          "word": "Now",
+          "begin": 29400,
+          "end": 29480
+        },
+        {
+          "word": "that",
+          "begin": 29560,
+          "end": 29680
+        },
+        {
+          "word": "we",
+          "begin": 29680,
+          "end": 29720
+        },
+        {
+          "word": "understand",
+          "begin": 29780,
+          "end": 30260
+        },
+        {
+          "word": "all",
+          "begin": 30260,
+          "end": 29860
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "paragraph",
+      "text": "Now that we understand all the protocol pieces — commands, queues, doorbells, completions — let's trace the entire journey of a single 4KB read. It passes through 10 layers, each one doing something we've already learned about.",
+      "beginMs": 29860,
+      "endMs": 43560,
+      "timestamps": [
+        {
+          "word": "the",
+          "begin": 29860,
+          "end": 29920
+        },
+        {
+          "word": "protocol",
+          "begin": 29980,
+          "end": 30440
+        },
+        {
+          "word": "pieces",
+          "begin": 30480,
+          "end": 30640
+        },
+        {
+          "word": "commands,",
+          "begin": 30640,
+          "end": 31000
+        },
+        {
+          "word": "queues,",
+          "begin": 31060,
+          "end": 31500
+        },
+        {
+          "word": "doorbells,",
+          "begin": 31800,
+          "end": 32360
+        },
+        {
+          "word": "completions",
+          "begin": 32640,
+          "end": 33920
+        },
+        {
+          "word": "let's",
+          "begin": 34160,
+          "end": 34280
+        },
+        {
+          "word": "trace",
+          "begin": 34320,
+          "end": 34740
+        },
+        {
+          "word": "the",
+          "begin": 34740,
+          "end": 35220
+        },
+        {
+          "word": "entire",
+          "begin": 35220,
+          "end": 35560
+        },
+        {
+          "word": "journey",
+          "begin": 35680,
+          "end": 35800
+        },
+        {
+          "word": "of",
+          "begin": 35860,
+          "end": 35980
+        },
+        {
+          "word": "a",
+          "begin": 36080,
+          "end": 36240
+        },
+        {
+          "word": "single",
+          "begin": 36340,
+          "end": 36800
+        },
+        {
+          "word": "4KB",
+          "begin": 36920,
+          "end": 37700
+        },
+        {
+          "word": "read.",
+          "begin": 37740,
+          "end": 38200
+        },
+        {
+          "word": "It",
+          "begin": 38700,
+          "end": 38780
+        },
+        {
+          "word": "passes",
+          "begin": 38820,
+          "end": 39200
+        },
+        {
+          "word": "through",
+          "begin": 39240,
+          "end": 39340
+        },
+        {
+          "word": "10",
+          "begin": 39460,
+          "end": 39660
+        },
+        {
+          "word": "layers,",
+          "begin": 39720,
+          "end": 40140
+        },
+        {
+          "word": "each",
+          "begin": 40400,
+          "end": 40540
+        },
+        {
+          "word": "one",
+          "begin": 40600,
+          "end": 40740
+        },
+        {
+          "word": "doing",
+          "begin": 40780,
+          "end": 40960
+        },
+        {
+          "word": "something",
+          "begin": 41040,
+          "end": 41340
+        },
+        {
+          "word": "we've",
+          "begin": 41360,
+          "end": 41500
+        },
+        {
+          "word": "already",
+          "begin": 41540,
+          "end": 41800
+        },
+        {
+          "word": "learned",
+          "begin": 41880,
+          "end": 42100
+        },
+        {
+          "word": "about.",
+          "begin": 42100,
+          "end": 42480
+        },
+        {
+          "word": "Why",
+          "begin": 43080,
+          "end": 43160
+        },
+        {
+          "word": "trace",
+          "begin": 43300,
+          "end": 43560
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "Why trace the whole path? Because understanding each layer in isolation is different from seeing how they connect. When something goes wrong — a slow read, a timeout, an error — knowing the full path tells you where to look.",
+      "beginMs": 43600,
+      "endMs": 56080,
+      "timestamps": [
+        {
+          "word": "the",
+          "begin": 43600,
+          "end": 43640
+        },
+        {
+          "word": "whole",
+          "begin": 43700,
+          "end": 43900
+        },
+        {
+          "word": "path?",
+          "begin": 43900,
+          "end": 44260
+        },
+        {
+          "word": "Because",
+          "begin": 44820,
+          "end": 45040
+        },
+        {
+          "word": "understanding",
+          "begin": 45100,
+          "end": 45680
+        },
+        {
+          "word": "each",
+          "begin": 45760,
+          "end": 45980
+        },
+        {
+          "word": "layer",
+          "begin": 45980,
+          "end": 46320
+        },
+        {
+          "word": "in",
+          "begin": 46360,
+          "end": 46520
+        },
+        {
+          "word": "isolation",
+          "begin": 46540,
+          "end": 47260
+        },
+        {
+          "word": "is",
+          "begin": 47280,
+          "end": 47400
+        },
+        {
+          "word": "different",
+          "begin": 47400,
+          "end": 47520
+        },
+        {
+          "word": "from",
+          "begin": 47560,
+          "end": 47680
+        },
+        {
+          "word": "seeing",
+          "begin": 47760,
+          "end": 47960
+        },
+        {
+          "word": "how",
+          "begin": 48000,
+          "end": 48080
+        },
+        {
+          "word": "they",
+          "begin": 48160,
+          "end": 48220
+        },
+        {
+          "word": "connect.",
+          "begin": 48320,
+          "end": 48780
+        },
+        {
+          "word": "When",
+          "begin": 49140,
+          "end": 49240
+        },
+        {
+          "word": "something",
+          "begin": 49320,
+          "end": 49600
+        },
+        {
+          "word": "goes",
+          "begin": 49640,
+          "end": 49920
+        },
+        {
+          "word": "wrong",
+          "begin": 49920,
+          "end": 50240
+        },
+        {
+          "word": "a",
+          "begin": 50440,
+          "end": 50460
+        },
+        {
+          "word": "slow",
+          "begin": 50560,
+          "end": 50720
+        },
+        {
+          "word": "read,",
+          "begin": 50900,
+          "end": 51240
+        },
+        {
+          "word": "a",
+          "begin": 51420,
+          "end": 51440
+        },
+        {
+          "word": "timeout,",
+          "begin": 51520,
+          "end": 52080
+        },
+        {
+          "word": "an",
+          "begin": 52300,
+          "end": 52380
+        },
+        {
+          "word": "error",
+          "begin": 52500,
+          "end": 52700
+        },
+        {
+          "word": "knowing",
+          "begin": 53180,
+          "end": 53440
+        },
+        {
+          "word": "the",
+          "begin": 53460,
+          "end": 53500
+        },
+        {
+          "word": "full",
+          "begin": 53600,
+          "end": 53720
+        },
+        {
+          "word": "path",
+          "begin": 53800,
+          "end": 54120
+        },
+        {
+          "word": "tells",
+          "begin": 54180,
+          "end": 54320
+        },
+        {
+          "word": "you",
+          "begin": 54360,
+          "end": 54420
+        },
+        {
+          "word": "where",
+          "begin": 54420,
+          "end": 54580
+        },
+        {
+          "word": "to",
+          "begin": 54660,
+          "end": 54720
+        },
+        {
+          "word": "look.",
+          "begin": 54780,
+          "end": 55040
+        },
+        {
+          "word": "Knowledge",
+          "begin": 55420,
+          "end": 55740
+        },
+        {
+          "word": "check:",
+          "begin": 55820,
+          "end": 56080
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "reveal",
+      "text": "Knowledge check: Given that the NAND read dominates total I/O latency, why do kernel optimizations like io_uring and bypass techniques like SPDK still matter? If the bottleneck is NAND physics, shouldn't software overhead be irrelevant? The answer: NAND read latency (~70us for TLC) accounts for roughly 87% of a single 4KB read at queue depth 1. But software overhead matters enormously at scale. At high queue depths (hundreds of concurrent I/Os), the SSD's internal parallelism hides NAND latency — multiple dies read simultaneously, so the effective per-IO latency drops. At that point, software overhead (syscall cost, context switches, lock contention, interrupt handling) becomes the bottleneck. io_uring reduces syscall overhead by batching submissions and completions in shared ring buffers. SPDK bypasses the kernel entirely, eliminating context switches and interrupt overhead. These optimizations don't speed up a single NAND read, but they dramatically increase throughput (IOPS) when the SSD is handling thousands of concurrent requests — which is exactly how enterprise workloads operate. The 87% figure only tells the story at queue depth 1; at queue depth 128, software overhead can account for over half the total time.",
+      "beginMs": 56380,
+      "endMs": 132720,
+      "timestamps": [
+        {
+          "word": "Given",
+          "begin": 56380,
+          "end": 56580
+        },
+        {
+          "word": "that",
+          "begin": 56620,
+          "end": 56660
+        },
+        {
+          "word": "the",
+          "begin": 56740,
+          "end": 56780
+        },
+        {
+          "word": "NAND",
+          "begin": 56860,
+          "end": 57140
+        },
+        {
+          "word": "read",
+          "begin": 57180,
+          "end": 57380
+        },
+        {
+          "word": "dominates",
+          "begin": 57420,
+          "end": 57900
+        },
+        {
+          "word": "total",
+          "begin": 57980,
+          "end": 58740
+        },
+        {
+          "word": "I/O",
+          "begin": 58760,
+          "end": 59620
+        },
+        {
+          "word": "latency,",
+          "begin": 59660,
+          "end": 60000
+        },
+        {
+          "word": "why",
+          "begin": 60080,
+          "end": 60260
+        },
+        {
+          "word": "do",
+          "begin": 60320,
+          "end": 60360
+        },
+        {
+          "word": "kernel",
+          "begin": 60380,
+          "end": 60620
+        },
+        {
+          "word": "optimizations",
+          "begin": 60660,
+          "end": 61720
+        },
+        {
+          "word": "like",
+          "begin": 61820,
+          "end": 61980
+        },
+        {
+          "word": "io_uring",
+          "begin": 61980,
+          "end": 62620
+        },
+        {
+          "word": "and",
+          "begin": 62680,
+          "end": 62840
+        },
+        {
+          "word": "bypass",
+          "begin": 62880,
+          "end": 63360
+        },
+        {
+          "word": "techniques",
+          "begin": 63400,
+          "end": 63860
+        },
+        {
+          "word": "like",
+          "begin": 63900,
+          "end": 64200
+        },
+        {
+          "word": "SPDK",
+          "begin": 64280,
+          "end": 65500
+        },
+        {
+          "word": "still",
+          "begin": 65540,
+          "end": 65660
+        },
+        {
+          "word": "matter?",
+          "begin": 65720,
+          "end": 66060
+        },
+        {
+          "word": "If",
+          "begin": 66100,
+          "end": 66300
+        },
+        {
+          "word": "the",
+          "begin": 66360,
+          "end": 66380
+        },
+        {
+          "word": "bottleneck",
+          "begin": 66460,
+          "end": 66960
+        },
+        {
+          "word": "is",
+          "begin": 67000,
+          "end": 67220
+        },
+        {
+          "word": "NAND",
+          "begin": 67440,
+          "end": 67620
+        },
+        {
+          "word": "physics,",
+          "begin": 67620,
+          "end": 67980
+        },
+        {
+          "word": "shouldn't",
+          "begin": 68000,
+          "end": 68440
+        },
+        {
+          "word": "software",
+          "begin": 68520,
+          "end": 69080
+        },
+        {
+          "word": "overhead",
+          "begin": 69120,
+          "end": 69500
+        },
+        {
+          "word": "be",
+          "begin": 69500,
+          "end": 69580
+        },
+        {
+          "word": "irrelevant?",
+          "begin": 69500,
+          "end": 69580
+        },
+        {
+          "word": "The",
+          "begin": 70080,
+          "end": 70140
+        },
+        {
+          "word": "answer:",
+          "begin": 70240,
+          "end": 70500
+        },
+        {
+          "word": "NAND",
+          "begin": 70860,
+          "end": 71160
+        },
+        {
+          "word": "read",
+          "begin": 71220,
+          "end": 71920
+        },
+        {
+          "word": "latency",
+          "begin": 72300,
+          "end": 72580
+        },
+        {
+          "word": "(~70us",
+          "begin": 72620,
+          "end": 72660
+        },
+        {
+          "word": "for",
+          "begin": 72680,
+          "end": 73300
+        },
+        {
+          "word": "TLC)",
+          "begin": 73380,
+          "end": 73800
+        },
+        {
+          "word": "accounts",
+          "begin": 73860,
+          "end": 74280
+        },
+        {
+          "word": "for",
+          "begin": 74360,
+          "end": 74780
+        },
+        {
+          "word": "roughly",
+          "begin": 74960,
+          "end": 75120
+        },
+        {
+          "word": "87%",
+          "begin": 75240,
+          "end": 75960
+        },
+        {
+          "word": "of",
+          "begin": 76100,
+          "end": 76180
+        },
+        {
+          "word": "a",
+          "begin": 76200,
+          "end": 76220
+        },
+        {
+          "word": "single",
+          "begin": 76340,
+          "end": 76560
+        },
+        {
+          "word": "4KB",
+          "begin": 76720,
+          "end": 77400
+        },
+        {
+          "word": "read",
+          "begin": 77460,
+          "end": 77720
+        },
+        {
+          "word": "at",
+          "begin": 77840,
+          "end": 77940
+        },
+        {
+          "word": "queue",
+          "begin": 78000,
+          "end": 78120
+        },
+        {
+          "word": "depth",
+          "begin": 78240,
+          "end": 78500
+        },
+        {
+          "word": "1.",
+          "begin": 78580,
+          "end": 78800
+        },
+        {
+          "word": "But",
+          "begin": 79120,
+          "end": 79240
+        },
+        {
+          "word": "software",
+          "begin": 79300,
+          "end": 79660
+        },
+        {
+          "word": "overhead",
+          "begin": 79780,
+          "end": 80180
+        },
+        {
+          "word": "matters",
+          "begin": 80220,
+          "end": 80560
+        },
+        {
+          "word": "enormously",
+          "begin": 80600,
+          "end": 81140
+        },
+        {
+          "word": "at",
+          "begin": 81220,
+          "end": 81320
+        },
+        {
+          "word": "scale.",
+          "begin": 81360,
+          "end": 81720
+        },
+        {
+          "word": "At",
+          "begin": 81900,
+          "end": 81980
+        },
+        {
+          "word": "high",
+          "begin": 82040,
+          "end": 82140
+        },
+        {
+          "word": "queue",
+          "begin": 82320,
+          "end": 82440
+        },
+        {
+          "word": "depths",
+          "begin": 82560,
+          "end": 82880
+        },
+        {
+          "word": "(hundreds",
+          "begin": 82960,
+          "end": 83320
+        },
+        {
+          "word": "of",
+          "begin": 83340,
+          "end": 83400
+        },
+        {
+          "word": "concurrent",
+          "begin": 83460,
+          "end": 83940
+        },
+        {
+          "word": "I/Os),",
+          "begin": 84040,
+          "end": 85200
+        },
+        {
+          "word": "the",
+          "begin": 85240,
+          "end": 84960
+        },
+        {
+          "word": "SSD's",
+          "begin": 85060,
+          "end": 85500
+        },
+        {
+          "word": "internal",
+          "begin": 85500,
+          "end": 86100
+        },
+        {
+          "word": "parallelism",
+          "begin": 86200,
+          "end": 86900
+        },
+        {
+          "word": "hides",
+          "begin": 87000,
+          "end": 87280
+        },
+        {
+          "word": "NAND",
+          "begin": 87340,
+          "end": 87560
+        },
+        {
+          "word": "latency",
+          "begin": 87560,
+          "end": 88060
+        },
+        {
+          "word": "multiple",
+          "begin": 88460,
+          "end": 88780
+        },
+        {
+          "word": "dies",
+          "begin": 88880,
+          "end": 89200
+        },
+        {
+          "word": "read",
+          "begin": 89260,
+          "end": 89420
+        },
+        {
+          "word": "simultaneously,",
+          "begin": 89420,
+          "end": 90320
+        },
+        {
+          "word": "so",
+          "begin": 90660,
+          "end": 90720
+        },
+        {
+          "word": "the",
+          "begin": 90760,
+          "end": 90820
+        },
+        {
+          "word": "effective",
+          "begin": 90880,
+          "end": 91340
+        },
+        {
+          "word": "per-IO",
+          "begin": 91440,
+          "end": 91700
+        },
+        {
+          "word": "latency",
+          "begin": 91980,
+          "end": 92400
+        },
+        {
+          "word": "drops.",
+          "begin": 92520,
+          "end": 92980
+        },
+        {
+          "word": "At",
+          "begin": 93260,
+          "end": 93340
+        },
+        {
+          "word": "that",
+          "begin": 93360,
+          "end": 93500
+        },
+        {
+          "word": "point,",
+          "begin": 93500,
+          "end": 93840
+        },
+        {
+          "word": "software",
+          "begin": 94140,
+          "end": 94520
+        },
+        {
+          "word": "overhead",
+          "begin": 94600,
+          "end": 94980
+        },
+        {
+          "word": "(syscall",
+          "begin": 95060,
+          "end": 95440
+        },
+        {
+          "word": "cost,",
+          "begin": 95500,
+          "end": 95900
+        },
+        {
+          "word": "context",
+          "begin": 96140,
+          "end": 96560
+        },
+        {
+          "word": "switches,",
+          "begin": 96620,
+          "end": 97080
+        },
+        {
+          "word": "lock",
+          "begin": 97420,
+          "end": 97620
+        },
+        {
+          "word": "contention,",
+          "begin": 97640,
+          "end": 98220
+        },
+        {
+          "word": "interrupt",
+          "begin": 98520,
+          "end": 98980
+        },
+        {
+          "word": "handling)",
+          "begin": 99000,
+          "end": 99440
+        },
+        {
+          "word": "becomes",
+          "begin": 99500,
+          "end": 99780
+        },
+        {
+          "word": "the",
+          "begin": 99820,
+          "end": 99920
+        },
+        {
+          "word": "bottleneck.",
+          "begin": 99980,
+          "end": 100520
+        },
+        {
+          "word": "io_uring",
+          "begin": 100960,
+          "end": 101600
+        },
+        {
+          "word": "reduces",
+          "begin": 101640,
+          "end": 102080
+        },
+        {
+          "word": "syscall",
+          "begin": 102080,
+          "end": 102560
+        },
+        {
+          "word": "overhead",
+          "begin": 102640,
+          "end": 103040
+        },
+        {
+          "word": "by",
+          "begin": 103080,
+          "end": 103140
+        },
+        {
+          "word": "batching",
+          "begin": 103260,
+          "end": 103620
+        },
+        {
+          "word": "submissions",
+          "begin": 103700,
+          "end": 104260
+        },
+        {
+          "word": "and",
+          "begin": 104320,
+          "end": 104380
+        },
+        {
+          "word": "completions",
+          "begin": 104440,
+          "end": 105060
+        },
+        {
+          "word": "in",
+          "begin": 105120,
+          "end": 105200
+        },
+        {
+          "word": "shared",
+          "begin": 105320,
+          "end": 105580
+        },
+        {
+          "word": "ring",
+          "begin": 105640,
+          "end": 105800
+        },
+        {
+          "word": "buffers.",
+          "begin": 105860,
+          "end": 106340
+        },
+        {
+          "word": "SPDK",
+          "begin": 106800,
+          "end": 107440
+        },
+        {
+          "word": "bypasses",
+          "begin": 107580,
+          "end": 108180
+        },
+        {
+          "word": "the",
+          "begin": 108220,
+          "end": 108280
+        },
+        {
+          "word": "kernel",
+          "begin": 108360,
+          "end": 108640
+        },
+        {
+          "word": "entirely,",
+          "begin": 108680,
+          "end": 109240
+        },
+        {
+          "word": "eliminating",
+          "begin": 109600,
+          "end": 110120
+        },
+        {
+          "word": "context",
+          "begin": 110180,
+          "end": 110640
+        },
+        {
+          "word": "switches",
+          "begin": 110680,
+          "end": 111220
+        },
+        {
+          "word": "and",
+          "begin": 111280,
+          "end": 111340
+        },
+        {
+          "word": "interrupt",
+          "begin": 111340,
+          "end": 111680
+        },
+        {
+          "word": "overhead.",
+          "begin": 111740,
+          "end": 112240
+        },
+        {
+          "word": "These",
+          "begin": 112520,
+          "end": 112700
+        },
+        {
+          "word": "optimizations",
+          "begin": 112740,
+          "end": 113460
+        },
+        {
+          "word": "don't",
+          "begin": 113540,
+          "end": 113760
+        },
+        {
+          "word": "speed",
+          "begin": 113800,
+          "end": 114020
+        },
+        {
+          "word": "up",
+          "begin": 114060,
+          "end": 114160
+        },
+        {
+          "word": "a",
+          "begin": 114180,
+          "end": 114200
+        },
+        {
+          "word": "single",
+          "begin": 114320,
+          "end": 114540
+        },
+        {
+          "word": "NAND",
+          "begin": 114660,
+          "end": 114920
+        },
+        {
+          "word": "read,",
+          "begin": 115000,
+          "end": 115300
+        },
+        {
+          "word": "but",
+          "begin": 115560,
+          "end": 115660
+        },
+        {
+          "word": "they",
+          "begin": 115680,
+          "end": 115760
+        },
+        {
+          "word": "dramatically",
+          "begin": 115840,
+          "end": 116440
+        },
+        {
+          "word": "increase",
+          "begin": 116560,
+          "end": 116920
+        },
+        {
+          "word": "throughput",
+          "begin": 116980,
+          "end": 117340
+        },
+        {
+          "word": "(IOPS)",
+          "begin": 117340,
+          "end": 117900
+        },
+        {
+          "word": "when",
+          "begin": 118040,
+          "end": 118160
+        },
+        {
+          "word": "the",
+          "begin": 118160,
+          "end": 118200
+        },
+        {
+          "word": "SSD",
+          "begin": 118280,
+          "end": 118700
+        },
+        {
+          "word": "is",
+          "begin": 118780,
+          "end": 118860
+        },
+        {
+          "word": "handling",
+          "begin": 118900,
+          "end": 119260
+        },
+        {
+          "word": "thousands",
+          "begin": 119400,
+          "end": 119800
+        },
+        {
+          "word": "of",
+          "begin": 119800,
+          "end": 119880
+        },
+        {
+          "word": "concurrent",
+          "begin": 119920,
+          "end": 120300
+        },
+        {
+          "word": "requests",
+          "begin": 120320,
+          "end": 120820
+        },
+        {
+          "word": "which",
+          "begin": 121160,
+          "end": 121280
+        },
+        {
+          "word": "is",
+          "begin": 121300,
+          "end": 121400
+        },
+        {
+          "word": "exactly",
+          "begin": 121420,
+          "end": 121880
+        },
+        {
+          "word": "how",
+          "begin": 121960,
+          "end": 122040
+        },
+        {
+          "word": "enterprise",
+          "begin": 122160,
+          "end": 122640
+        },
+        {
+          "word": "workloads",
+          "begin": 122700,
+          "end": 123120
+        },
+        {
+          "word": "operate.",
+          "begin": 123220,
+          "end": 123700
+        },
+        {
+          "word": "The",
+          "begin": 124040,
+          "end": 124080
+        },
+        {
+          "word": "87%",
+          "begin": 124180,
+          "end": 124940
+        },
+        {
+          "word": "figure",
+          "begin": 125020,
+          "end": 125240
+        },
+        {
+          "word": "only",
+          "begin": 125420,
+          "end": 125600
+        },
+        {
+          "word": "tells",
+          "begin": 125680,
+          "end": 125900
+        },
+        {
+          "word": "the",
+          "begin": 125940,
+          "end": 125980
+        },
+        {
+          "word": "story",
+          "begin": 126060,
+          "end": 126360
+        },
+        {
+          "word": "at",
+          "begin": 126480,
+          "end": 126580
+        },
+        {
+          "word": "queue",
+          "begin": 126640,
+          "end": 126760
+        },
+        {
+          "word": "depth",
+          "begin": 126860,
+          "end": 127080
+        },
+        {
+          "word": "1;",
+          "begin": 127180,
+          "end": 127440
+        },
+        {
+          "word": "at",
+          "begin": 127840,
+          "end": 127940
+        },
+        {
+          "word": "queue",
+          "begin": 128000,
+          "end": 128100
+        },
+        {
+          "word": "depth",
+          "begin": 128199,
+          "end": 128400
+        },
+        {
+          "word": "128,",
+          "begin": 128460,
+          "end": 129479
+        },
+        {
+          "word": "software",
+          "begin": 129940,
+          "end": 130300
+        },
+        {
+          "word": "overhead",
+          "begin": 130380,
+          "end": 130759
+        },
+        {
+          "word": "can",
+          "begin": 130800,
+          "end": 130919
+        },
+        {
+          "word": "account",
+          "begin": 130919,
+          "end": 131240
+        },
+        {
+          "word": "for",
+          "begin": 131280,
+          "end": 131340
+        },
+        {
+          "word": "over",
+          "begin": 131440,
+          "end": 131580
+        },
+        {
+          "word": "half",
+          "begin": 131680,
+          "end": 131900
+        },
+        {
+          "word": "the",
+          "begin": 131940,
+          "end": 132000
+        },
+        {
+          "word": "total",
+          "begin": 132060,
+          "end": 132280
+        },
+        {
+          "word": "time.",
+          "begin": 132380,
+          "end": 132720
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

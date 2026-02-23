@@ -1,0 +1,66 @@
+{
+  "sectionId": "sec-nand-basics",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Electrons are trapped here by insulating oxide layers above and below. Once pushed in, they stay — even without power. That's non-volatile storage.",
+      "blockIndex": 0
+    },
+    {
+      "type": "paragraph",
+      "text": "High voltage on the control gate pushes electrons into the floating gate.",
+      "blockIndex": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "A medium voltage is applied. If electrons are present, current is blocked (= &ldquo;0&rdquo;). If empty, current flows (= &ldquo;1&rdquo;).",
+      "blockIndex": 2
+    },
+    {
+      "type": "heading",
+      "text": "How an SSD Actually Stores a Bit",
+      "blockIndex": 3
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: NAND Cells Are Tiny Charge Buckets. Each NAND memory cell is like a tiny bucket that holds electrical charge. To store a '1', push charge into the bucket. To store a '0', leave it empty. The bucket is surrounded by insulation so the charge can't escape — that's why SSDs keep your data when power is off.",
+      "blockIndex": 4
+    },
+    {
+      "type": "term",
+      "text": "NAND Flash Memory: The type of non-volatile memory used in SSDs. Named after the NAND logic gate used in its circuit design. Stores data as electrical charges trapped in microscopic floating-gate transistors.",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "Now we know that data is made of bits (0s and 1s) and that drives organize them into numbered blocks (LBAs). But how does an SSD physically store a bit? It doesn't have spinning platters like a hard drive. Instead, it uses NAND flash memory.",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "Think of each memory cell as a tiny bucket that holds electrical charge. To store a &ldquo;1&rdquo;, you put charge in the bucket. To store a &ldquo;0&rdquo;, you leave it empty. To read the value, you check how much charge is in the bucket.",
+      "blockIndex": 7
+    },
+    {
+      "type": "paragraph",
+      "text": "But how does the charge stay there when you unplug the power? The bucket is actually a microscopic structure called a floating gate — a layer of material surrounded by insulation that traps electrons. Once electrons are pushed in, they can't escape (for years). That's why SSDs keep your data when power is off — the charge is physically trapped.",
+      "blockIndex": 8
+    },
+    {
+      "type": "paragraph",
+      "text": "Here's the clever part: what if you could store more than 1 bit per cell? Instead of just &ldquo;empty&rdquo; or &ldquo;full,&rdquo; you can have 4, 8, or even 16 distinct charge levels in the same cell. Each level represents a different bit pattern.",
+      "blockIndex": 9
+    },
+    {
+      "type": "paragraph",
+      "text": "But what's the catch? More levels per cell means more storage, but it's harder to read accurately (the levels are closer together), slower to write, and the cell wears out faster. It's a fundamental tradeoff between capacity, speed, and durability. Click each type below to compare:",
+      "blockIndex": 10
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: Under what conditions do electrons leak from the floating gate, and what are the consequences for a powered-off SSD sitting on a shelf for years? How does prior wear affect this? The answer: Electrons slowly tunnel through the oxide insulator via quantum mechanical tunneling — a process called charge leakage or data retention loss. The rate depends heavily on temperature (heat provides energy for tunneling) and oxide degradation from prior P/E cycles. A fresh SSD can retain data for 10+ years at room temperature, but a heavily worn SSD (near its endurance limit) may only retain data for months because its oxide is damaged and leakier. This is why enterprise SSDs have stricter data retention specs at higher temperatures, and why it's risky to use a worn SSD for archival cold storage. Powered-on SSDs periodically refresh data (read and rewrite) to counteract leakage.",
+      "requiresReveal": true,
+      "blockIndex": 11
+    }
+  ]
+}

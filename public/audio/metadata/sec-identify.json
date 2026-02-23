@@ -1,0 +1,2091 @@
+{
+  "sectionId": "sec-identify",
+  "audioFile": "/audio/sections/sec-identify.mp3",
+  "totalDurationMs": 164400,
+  "fileSizeBytes": 2630784,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "The First Question — &ldquo;Who Are You?&rdquo;",
+      "beginMs": 0,
+      "endMs": 3020,
+      "timestamps": [
+        {
+          "word": "The",
+          "begin": 0,
+          "end": 60
+        },
+        {
+          "word": "First",
+          "begin": 120,
+          "end": 340
+        },
+        {
+          "word": "Question",
+          "begin": 380,
+          "end": 1300
+        },
+        {
+          "word": "&ldquo;Who",
+          "begin": 1400,
+          "end": 2040
+        },
+        {
+          "word": "Are",
+          "begin": 1460,
+          "end": 1720
+        },
+        {
+          "word": "You?&rdquo;",
+          "begin": 1740,
+          "end": 2320
+        },
+        {
+          "word": "Analogy:",
+          "begin": 2320,
+          "end": 3020
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: Identify Is the SSD's ID Card. The Identify command asks the SSD 'who are you and what can you do?' — like checking someone's ID card. Identify Controller returns the SSD's model, serial number, firmware version, and capabilities. Identify Namespace returns details about a specific storage partition.",
+      "beginMs": 3140,
+      "endMs": 24020,
+      "timestamps": [
+        {
+          "word": "Identify",
+          "begin": 3140,
+          "end": 3860
+        },
+        {
+          "word": "Is",
+          "begin": 3860,
+          "end": 3880
+        },
+        {
+          "word": "the",
+          "begin": 3960,
+          "end": 4040
+        },
+        {
+          "word": "SSD's",
+          "begin": 4520,
+          "end": 4980
+        },
+        {
+          "word": "ID",
+          "begin": 5240,
+          "end": 5380
+        },
+        {
+          "word": "Card.",
+          "begin": 5380,
+          "end": 5540
+        },
+        {
+          "word": "The",
+          "begin": 5640,
+          "end": 5720
+        },
+        {
+          "word": "Identify",
+          "begin": 5820,
+          "end": 6760
+        },
+        {
+          "word": "command",
+          "begin": 6940,
+          "end": 7780
+        },
+        {
+          "word": "asks",
+          "begin": 7780,
+          "end": 7960
+        },
+        {
+          "word": "the",
+          "begin": 8080,
+          "end": 8140
+        },
+        {
+          "word": "SSD",
+          "begin": 8200,
+          "end": 8700
+        },
+        {
+          "word": "'who",
+          "begin": 8820,
+          "end": 8900
+        },
+        {
+          "word": "are",
+          "begin": 8920,
+          "end": 9020
+        },
+        {
+          "word": "you",
+          "begin": 9020,
+          "end": 9280
+        },
+        {
+          "word": "and",
+          "begin": 9320,
+          "end": 9520
+        },
+        {
+          "word": "what",
+          "begin": 9560,
+          "end": 9760
+        },
+        {
+          "word": "can",
+          "begin": 9800,
+          "end": 10140
+        },
+        {
+          "word": "you",
+          "begin": 10140,
+          "end": 10220
+        },
+        {
+          "word": "do?'",
+          "begin": 10440,
+          "end": 10460
+        },
+        {
+          "word": "like",
+          "begin": 10500,
+          "end": 10700
+        },
+        {
+          "word": "checking",
+          "begin": 10700,
+          "end": 10960
+        },
+        {
+          "word": "someone's",
+          "begin": 11040,
+          "end": 11960
+        },
+        {
+          "word": "ID",
+          "begin": 12000,
+          "end": 12160
+        },
+        {
+          "word": "card.",
+          "begin": 12200,
+          "end": 13280
+        },
+        {
+          "word": "Identify",
+          "begin": 13520,
+          "end": 13940
+        },
+        {
+          "word": "Controller",
+          "begin": 14060,
+          "end": 14640
+        },
+        {
+          "word": "returns",
+          "begin": 14640,
+          "end": 15060
+        },
+        {
+          "word": "the",
+          "begin": 15100,
+          "end": 15140
+        },
+        {
+          "word": "SSD's",
+          "begin": 15140,
+          "end": 15920
+        },
+        {
+          "word": "model,",
+          "begin": 15980,
+          "end": 16200
+        },
+        {
+          "word": "serial",
+          "begin": 16620,
+          "end": 16900
+        },
+        {
+          "word": "number,",
+          "begin": 16980,
+          "end": 17240
+        },
+        {
+          "word": "firmware",
+          "begin": 17560,
+          "end": 17840
+        },
+        {
+          "word": "version,",
+          "begin": 17960,
+          "end": 18320
+        },
+        {
+          "word": "and",
+          "begin": 18460,
+          "end": 18540
+        },
+        {
+          "word": "capabilities.",
+          "begin": 18600,
+          "end": 19380
+        },
+        {
+          "word": "Identify",
+          "begin": 19820,
+          "end": 20240
+        },
+        {
+          "word": "Namespace",
+          "begin": 20460,
+          "end": 21020
+        },
+        {
+          "word": "returns",
+          "begin": 21080,
+          "end": 21380
+        },
+        {
+          "word": "details",
+          "begin": 21400,
+          "end": 21920
+        },
+        {
+          "word": "about",
+          "begin": 21920,
+          "end": 22120
+        },
+        {
+          "word": "a",
+          "begin": 22120,
+          "end": 22160
+        },
+        {
+          "word": "specific",
+          "begin": 22200,
+          "end": 22640
+        },
+        {
+          "word": "storage",
+          "begin": 22700,
+          "end": 23000
+        },
+        {
+          "word": "partition.",
+          "begin": 23060,
+          "end": 23600
+        },
+        {
+          "word": "During",
+          "begin": 23780,
+          "end": 24020
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "paragraph",
+      "text": "During boot, we saw that the NVMe driver sends an Identify command as its very first question. But why is this necessary?",
+      "beginMs": 24100,
+      "endMs": 29900,
+      "timestamps": [
+        {
+          "word": "boot,",
+          "begin": 24100,
+          "end": 24380
+        },
+        {
+          "word": "we",
+          "begin": 24600,
+          "end": 24660
+        },
+        {
+          "word": "saw",
+          "begin": 24760,
+          "end": 24820
+        },
+        {
+          "word": "that",
+          "begin": 24920,
+          "end": 25020
+        },
+        {
+          "word": "the",
+          "begin": 25040,
+          "end": 25100
+        },
+        {
+          "word": "NVMe",
+          "begin": 25220,
+          "end": 25700
+        },
+        {
+          "word": "driver",
+          "begin": 25820,
+          "end": 26300
+        },
+        {
+          "word": "sends",
+          "begin": 26320,
+          "end": 26500
+        },
+        {
+          "word": "an",
+          "begin": 26520,
+          "end": 26580
+        },
+        {
+          "word": "Identify",
+          "begin": 26600,
+          "end": 27040
+        },
+        {
+          "word": "command",
+          "begin": 27160,
+          "end": 27560
+        },
+        {
+          "word": "as",
+          "begin": 27640,
+          "end": 27740
+        },
+        {
+          "word": "its",
+          "begin": 27760,
+          "end": 27880
+        },
+        {
+          "word": "very",
+          "begin": 27940,
+          "end": 28120
+        },
+        {
+          "word": "first",
+          "begin": 28220,
+          "end": 28440
+        },
+        {
+          "word": "question.",
+          "begin": 28500,
+          "end": 28940
+        },
+        {
+          "word": "But",
+          "begin": 28940,
+          "end": 28720
+        },
+        {
+          "word": "why",
+          "begin": 28780,
+          "end": 28860
+        },
+        {
+          "word": "is",
+          "begin": 28920,
+          "end": 28960
+        },
+        {
+          "word": "this",
+          "begin": 29360,
+          "end": 29440
+        },
+        {
+          "word": "necessary?",
+          "begin": 29500,
+          "end": 29900
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "Think about meeting someone new. Before you can work together, you need to know: What's your name? What can you do? What are your limits? The Identify command (opcode 0x06) asks exactly these questions. It returns a 4,096-byte data structure — essentially the drive's &ldquo;resume.&rdquo;",
+      "beginMs": 29960,
+      "endMs": 49120,
+      "timestamps": [
+        {
+          "word": "Think",
+          "begin": 29960,
+          "end": 30200
+        },
+        {
+          "word": "about",
+          "begin": 30220,
+          "end": 31020
+        },
+        {
+          "word": "meeting",
+          "begin": 31040,
+          "end": 31180
+        },
+        {
+          "word": "someone",
+          "begin": 31220,
+          "end": 31520
+        },
+        {
+          "word": "new.",
+          "begin": 31520,
+          "end": 31560
+        },
+        {
+          "word": "Before",
+          "begin": 31600,
+          "end": 31860
+        },
+        {
+          "word": "you",
+          "begin": 31860,
+          "end": 31900
+        },
+        {
+          "word": "can",
+          "begin": 31920,
+          "end": 32040
+        },
+        {
+          "word": "work",
+          "begin": 32080,
+          "end": 32740
+        },
+        {
+          "word": "together,",
+          "begin": 32780,
+          "end": 33080
+        },
+        {
+          "word": "you",
+          "begin": 33120,
+          "end": 33200
+        },
+        {
+          "word": "need",
+          "begin": 33240,
+          "end": 33360
+        },
+        {
+          "word": "to",
+          "begin": 33420,
+          "end": 33480
+        },
+        {
+          "word": "know:",
+          "begin": 33560,
+          "end": 33860
+        },
+        {
+          "word": "What's",
+          "begin": 33860,
+          "end": 34080
+        },
+        {
+          "word": "your",
+          "begin": 34120,
+          "end": 34260
+        },
+        {
+          "word": "name?",
+          "begin": 34260,
+          "end": 34320
+        },
+        {
+          "word": "What",
+          "begin": 34600,
+          "end": 34740
+        },
+        {
+          "word": "can",
+          "begin": 34740,
+          "end": 34780
+        },
+        {
+          "word": "you",
+          "begin": 34800,
+          "end": 34840
+        },
+        {
+          "word": "do?",
+          "begin": 34920,
+          "end": 36020
+        },
+        {
+          "word": "What",
+          "begin": 36400,
+          "end": 36500
+        },
+        {
+          "word": "are",
+          "begin": 36520,
+          "end": 36620
+        },
+        {
+          "word": "your",
+          "begin": 36640,
+          "end": 36780
+        },
+        {
+          "word": "limits?",
+          "begin": 36780,
+          "end": 37200
+        },
+        {
+          "word": "The",
+          "begin": 37560,
+          "end": 37600
+        },
+        {
+          "word": "Identify",
+          "begin": 37660,
+          "end": 38100
+        },
+        {
+          "word": "command",
+          "begin": 38220,
+          "end": 38600
+        },
+        {
+          "word": "(opcode",
+          "begin": 38700,
+          "end": 39100
+        },
+        {
+          "word": "0x06)",
+          "begin": 39160,
+          "end": 40240
+        },
+        {
+          "word": "asks",
+          "begin": 40280,
+          "end": 40420
+        },
+        {
+          "word": "exactly",
+          "begin": 40460,
+          "end": 40700
+        },
+        {
+          "word": "these",
+          "begin": 40780,
+          "end": 40940
+        },
+        {
+          "word": "questions.",
+          "begin": 41000,
+          "end": 41560
+        },
+        {
+          "word": "It",
+          "begin": 41960,
+          "end": 42020
+        },
+        {
+          "word": "returns",
+          "begin": 42040,
+          "end": 42360
+        },
+        {
+          "word": "a",
+          "begin": 42400,
+          "end": 43320
+        },
+        {
+          "word": "4,096-byte",
+          "begin": 43340,
+          "end": 44140
+        },
+        {
+          "word": "data",
+          "begin": 44180,
+          "end": 44360
+        },
+        {
+          "word": "structure",
+          "begin": 44440,
+          "end": 44820
+        },
+        {
+          "word": "essentially",
+          "begin": 45360,
+          "end": 45800
+        },
+        {
+          "word": "the",
+          "begin": 45860,
+          "end": 45920
+        },
+        {
+          "word": "drive's",
+          "begin": 46000,
+          "end": 46840
+        },
+        {
+          "word": "&ldquo;resume.&rdquo;",
+          "begin": 47400,
+          "end": 48460
+        },
+        {
+          "word": "What",
+          "begin": 49040,
+          "end": 49120
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "What does the driver learn? The drive's model name, serial number, firmware version, maximum queue size, supported features, and much more. Without this information, the driver can't properly configure the drive.",
+      "beginMs": 49140,
+      "endMs": 59300,
+      "timestamps": [
+        {
+          "word": "does",
+          "begin": 49140,
+          "end": 49280
+        },
+        {
+          "word": "the",
+          "begin": 49320,
+          "end": 49360
+        },
+        {
+          "word": "driver",
+          "begin": 49420,
+          "end": 49700
+        },
+        {
+          "word": "learn?",
+          "begin": 49800,
+          "end": 50080
+        },
+        {
+          "word": "The",
+          "begin": 50240,
+          "end": 50300
+        },
+        {
+          "word": "drive's",
+          "begin": 50360,
+          "end": 50760
+        },
+        {
+          "word": "model",
+          "begin": 50760,
+          "end": 50960
+        },
+        {
+          "word": "name,",
+          "begin": 51040,
+          "end": 51300
+        },
+        {
+          "word": "serial",
+          "begin": 51560,
+          "end": 51860
+        },
+        {
+          "word": "number,",
+          "begin": 51920,
+          "end": 52140
+        },
+        {
+          "word": "firmware",
+          "begin": 52460,
+          "end": 52720
+        },
+        {
+          "word": "version,",
+          "begin": 52840,
+          "end": 53220
+        },
+        {
+          "word": "maximum",
+          "begin": 53420,
+          "end": 53760
+        },
+        {
+          "word": "queue",
+          "begin": 53780,
+          "end": 53620
+        },
+        {
+          "word": "size,",
+          "begin": 53660,
+          "end": 53760
+        },
+        {
+          "word": "supported",
+          "begin": 53780,
+          "end": 53960
+        },
+        {
+          "word": "features,",
+          "begin": 53980,
+          "end": 54780
+        },
+        {
+          "word": "and",
+          "begin": 54800,
+          "end": 54980
+        },
+        {
+          "word": "much",
+          "begin": 55060,
+          "end": 55260
+        },
+        {
+          "word": "more.",
+          "begin": 55300,
+          "end": 55180
+        },
+        {
+          "word": "Without",
+          "begin": 55240,
+          "end": 55940
+        },
+        {
+          "word": "this",
+          "begin": 55940,
+          "end": 56180
+        },
+        {
+          "word": "information,",
+          "begin": 56260,
+          "end": 57160
+        },
+        {
+          "word": "the",
+          "begin": 57160,
+          "end": 57220
+        },
+        {
+          "word": "driver",
+          "begin": 57280,
+          "end": 57520
+        },
+        {
+          "word": "can't",
+          "begin": 57560,
+          "end": 58160
+        },
+        {
+          "word": "properly",
+          "begin": 58220,
+          "end": 58500
+        },
+        {
+          "word": "configure",
+          "begin": 58580,
+          "end": 58900
+        },
+        {
+          "word": "the",
+          "begin": 58920,
+          "end": 58940
+        },
+        {
+          "word": "drive.",
+          "begin": 59040,
+          "end": 59300
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "You can send this command yourself using nvme-cli. The id-ctrl subcommand is a shortcut for &ldquo;Identify Controller&rdquo;:",
+      "beginMs": 59300,
+      "endMs": 69580,
+      "timestamps": [
+        {
+          "word": "You",
+          "begin": 59300,
+          "end": 59340
+        },
+        {
+          "word": "can",
+          "begin": 59340,
+          "end": 59380
+        },
+        {
+          "word": "send",
+          "begin": 59460,
+          "end": 59640
+        },
+        {
+          "word": "this",
+          "begin": 59720,
+          "end": 59840
+        },
+        {
+          "word": "command",
+          "begin": 59860,
+          "end": 60620
+        },
+        {
+          "word": "yourself",
+          "begin": 60680,
+          "end": 61080
+        },
+        {
+          "word": "using",
+          "begin": 61080,
+          "end": 61380
+        },
+        {
+          "word": "nvme-cli.",
+          "begin": 61420,
+          "end": 63320
+        },
+        {
+          "word": "The",
+          "begin": 63760,
+          "end": 63820
+        },
+        {
+          "word": "id-ctrl",
+          "begin": 63980,
+          "end": 64760
+        },
+        {
+          "word": "subcommand",
+          "begin": 64879,
+          "end": 65519
+        },
+        {
+          "word": "is",
+          "begin": 65640,
+          "end": 65720
+        },
+        {
+          "word": "a",
+          "begin": 65740,
+          "end": 65760
+        },
+        {
+          "word": "shortcut",
+          "begin": 65860,
+          "end": 66240
+        },
+        {
+          "word": "for",
+          "begin": 66300,
+          "end": 66380
+        },
+        {
+          "word": "&ldquo;Identify",
+          "begin": 66620,
+          "end": 68240
+        },
+        {
+          "word": "Controller&rdquo;:",
+          "begin": 68380,
+          "end": 69580
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "info",
+      "text": "Why does the driver need to know queue limits?: The driver wants to create as many I/O queues as possible (ideally one per CPU core). But the drive has a limit — maybe it supports 128 queues maximum. The Identify data tells the driver this limit so it doesn't try to create more queues than the drive can handle.",
+      "beginMs": 70100,
+      "endMs": 87200,
+      "timestamps": [
+        {
+          "word": "Why",
+          "begin": 70100,
+          "end": 70180
+        },
+        {
+          "word": "does",
+          "begin": 70280,
+          "end": 70400
+        },
+        {
+          "word": "the",
+          "begin": 70420,
+          "end": 70460
+        },
+        {
+          "word": "driver",
+          "begin": 70520,
+          "end": 70640
+        },
+        {
+          "word": "need",
+          "begin": 70520,
+          "end": 70560
+        },
+        {
+          "word": "to",
+          "begin": 70560,
+          "end": 70640
+        },
+        {
+          "word": "know",
+          "begin": 70740,
+          "end": 70940
+        },
+        {
+          "word": "queue",
+          "begin": 70740,
+          "end": 70800
+        },
+        {
+          "word": "limits?:",
+          "begin": 70880,
+          "end": 71120
+        },
+        {
+          "word": "The",
+          "begin": 71180,
+          "end": 71400
+        },
+        {
+          "word": "driver",
+          "begin": 71180,
+          "end": 71720
+        },
+        {
+          "word": "wants",
+          "begin": 71780,
+          "end": 72420
+        },
+        {
+          "word": "to",
+          "begin": 72480,
+          "end": 72540
+        },
+        {
+          "word": "create",
+          "begin": 72480,
+          "end": 72860
+        },
+        {
+          "word": "as",
+          "begin": 72880,
+          "end": 72960
+        },
+        {
+          "word": "many",
+          "begin": 72960,
+          "end": 73140
+        },
+        {
+          "word": "I/O",
+          "begin": 72960,
+          "end": 73140
+        },
+        {
+          "word": "queues",
+          "begin": 73200,
+          "end": 73320
+        },
+        {
+          "word": "as",
+          "begin": 73200,
+          "end": 73220
+        },
+        {
+          "word": "possible",
+          "begin": 73240,
+          "end": 73500
+        },
+        {
+          "word": "(ideally",
+          "begin": 73520,
+          "end": 73840
+        },
+        {
+          "word": "one",
+          "begin": 74000,
+          "end": 74320
+        },
+        {
+          "word": "per",
+          "begin": 74000,
+          "end": 74020
+        },
+        {
+          "word": "CPU",
+          "begin": 74160,
+          "end": 74440
+        },
+        {
+          "word": "core).",
+          "begin": 74580,
+          "end": 76940
+        },
+        {
+          "word": "But",
+          "begin": 77260,
+          "end": 77300
+        },
+        {
+          "word": "the",
+          "begin": 77360,
+          "end": 77400
+        },
+        {
+          "word": "drive",
+          "begin": 77480,
+          "end": 77760
+        },
+        {
+          "word": "has",
+          "begin": 77760,
+          "end": 77880
+        },
+        {
+          "word": "a",
+          "begin": 77900,
+          "end": 77920
+        },
+        {
+          "word": "limit",
+          "begin": 78000,
+          "end": 78320
+        },
+        {
+          "word": "maybe",
+          "begin": 78580,
+          "end": 78800
+        },
+        {
+          "word": "it",
+          "begin": 78860,
+          "end": 78940
+        },
+        {
+          "word": "supports",
+          "begin": 78960,
+          "end": 79320
+        },
+        {
+          "word": "128",
+          "begin": 79380,
+          "end": 80340
+        },
+        {
+          "word": "queues",
+          "begin": 80340,
+          "end": 80620
+        },
+        {
+          "word": "maximum.",
+          "begin": 80680,
+          "end": 81180
+        },
+        {
+          "word": "The",
+          "begin": 80720,
+          "end": 80920
+        },
+        {
+          "word": "Identify",
+          "begin": 80920,
+          "end": 81640
+        },
+        {
+          "word": "data",
+          "begin": 81740,
+          "end": 81860
+        },
+        {
+          "word": "tells",
+          "begin": 81880,
+          "end": 82020
+        },
+        {
+          "word": "the",
+          "begin": 82020,
+          "end": 82080
+        },
+        {
+          "word": "driver",
+          "begin": 82200,
+          "end": 82620
+        },
+        {
+          "word": "this",
+          "begin": 82620,
+          "end": 82680
+        },
+        {
+          "word": "limit",
+          "begin": 82720,
+          "end": 82940
+        },
+        {
+          "word": "so",
+          "begin": 83040,
+          "end": 83180
+        },
+        {
+          "word": "it",
+          "begin": 83200,
+          "end": 83320
+        },
+        {
+          "word": "doesn't",
+          "begin": 83400,
+          "end": 83700
+        },
+        {
+          "word": "try",
+          "begin": 83920,
+          "end": 84080
+        },
+        {
+          "word": "to",
+          "begin": 84100,
+          "end": 84220
+        },
+        {
+          "word": "create",
+          "begin": 84280,
+          "end": 84400
+        },
+        {
+          "word": "more",
+          "begin": 84420,
+          "end": 84540
+        },
+        {
+          "word": "queues",
+          "begin": 84620,
+          "end": 84760
+        },
+        {
+          "word": "than",
+          "begin": 84780,
+          "end": 84940
+        },
+        {
+          "word": "the",
+          "begin": 85000,
+          "end": 85140
+        },
+        {
+          "word": "drive",
+          "begin": 85280,
+          "end": 85640
+        },
+        {
+          "word": "can",
+          "begin": 85680,
+          "end": 85780
+        },
+        {
+          "word": "handle.",
+          "begin": 85800,
+          "end": 86640
+        },
+        {
+          "word": "Knowledge",
+          "begin": 86900,
+          "end": 87200
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "reveal",
+      "text": "Knowledge check: Why does NVMe split the Identify command into separate Controller (CNS=1) and Namespace (CNS=0) variants, instead of returning all information in a single response? What would go wrong with a 'return everything' approach? The answer: Identify Controller (CNS=1) returns device-wide information — model number, firmware version, maximum queue entries, and supported features. Identify Namespace (CNS=0) returns per-namespace data — capacity, LBA format, and protection settings. They're separate because: (1) A single controller can have hundreds of namespaces. Returning all namespace data in one response would require a massive, variable-size buffer — but NVMe Identify always returns exactly 4,096 bytes for simplicity and predictability. (2) The driver needs controller info first (during boot) to know the device's limits before it even asks about namespaces. (3) Namespace info can change at runtime (namespaces can be created, deleted, or resized), while controller info is mostly static. Separating them lets the driver re-query just the namespace data when a change occurs, without re-fetching the entire controller identity. The CNS field is the selector — like choosing which page of an ID card to read.",
+      "beginMs": 87260,
+      "endMs": 164240,
+      "timestamps": [
+        {
+          "word": "check:",
+          "begin": 87260,
+          "end": 87480
+        },
+        {
+          "word": "Why",
+          "begin": 87740,
+          "end": 87800
+        },
+        {
+          "word": "does",
+          "begin": 87880,
+          "end": 88000
+        },
+        {
+          "word": "NVMe",
+          "begin": 88080,
+          "end": 88500
+        },
+        {
+          "word": "split",
+          "begin": 88640,
+          "end": 88860
+        },
+        {
+          "word": "the",
+          "begin": 88880,
+          "end": 88920
+        },
+        {
+          "word": "Identify",
+          "begin": 88920,
+          "end": 89540
+        },
+        {
+          "word": "command",
+          "begin": 89540,
+          "end": 89880
+        },
+        {
+          "word": "into",
+          "begin": 89920,
+          "end": 90060
+        },
+        {
+          "word": "separate",
+          "begin": 90180,
+          "end": 90440
+        },
+        {
+          "word": "Controller",
+          "begin": 90500,
+          "end": 90900
+        },
+        {
+          "word": "(CNS=1)",
+          "begin": 91060,
+          "end": 92300
+        },
+        {
+          "word": "and",
+          "begin": 92560,
+          "end": 92680
+        },
+        {
+          "word": "Namespace",
+          "begin": 92740,
+          "end": 93300
+        },
+        {
+          "word": "(CNS=0)",
+          "begin": 93380,
+          "end": 94580
+        },
+        {
+          "word": "variants,",
+          "begin": 94700,
+          "end": 95160
+        },
+        {
+          "word": "instead",
+          "begin": 95540,
+          "end": 95820
+        },
+        {
+          "word": "of",
+          "begin": 95840,
+          "end": 95900
+        },
+        {
+          "word": "returning",
+          "begin": 95920,
+          "end": 96260
+        },
+        {
+          "word": "all",
+          "begin": 96260,
+          "end": 96580
+        },
+        {
+          "word": "information",
+          "begin": 96640,
+          "end": 97140
+        },
+        {
+          "word": "in",
+          "begin": 97160,
+          "end": 97240
+        },
+        {
+          "word": "a",
+          "begin": 97240,
+          "end": 97260
+        },
+        {
+          "word": "single",
+          "begin": 97360,
+          "end": 97620
+        },
+        {
+          "word": "response?",
+          "begin": 97620,
+          "end": 98160
+        },
+        {
+          "word": "What",
+          "begin": 98960,
+          "end": 99060
+        },
+        {
+          "word": "would",
+          "begin": 99080,
+          "end": 99180
+        },
+        {
+          "word": "go",
+          "begin": 99240,
+          "end": 99320
+        },
+        {
+          "word": "wrong",
+          "begin": 99460,
+          "end": 99700
+        },
+        {
+          "word": "with",
+          "begin": 99740,
+          "end": 99860
+        },
+        {
+          "word": "'return",
+          "begin": 99900,
+          "end": 100260
+        },
+        {
+          "word": "everything'",
+          "begin": 100320,
+          "end": 100660
+        },
+        {
+          "word": "approach?",
+          "begin": 100680,
+          "end": 101120
+        },
+        {
+          "word": "The",
+          "begin": 101760,
+          "end": 101820
+        },
+        {
+          "word": "answer:",
+          "begin": 101920,
+          "end": 102120
+        },
+        {
+          "word": "Identify",
+          "begin": 102160,
+          "end": 102980
+        },
+        {
+          "word": "Controller",
+          "begin": 103080,
+          "end": 103460
+        },
+        {
+          "word": "(CNS=1)",
+          "begin": 103620,
+          "end": 104880
+        },
+        {
+          "word": "returns",
+          "begin": 105200,
+          "end": 105600
+        },
+        {
+          "word": "device-wide",
+          "begin": 105640,
+          "end": 106180
+        },
+        {
+          "word": "information",
+          "begin": 106220,
+          "end": 106840
+        },
+        {
+          "word": "model",
+          "begin": 107140,
+          "end": 107360
+        },
+        {
+          "word": "number,",
+          "begin": 107440,
+          "end": 108100
+        },
+        {
+          "word": "firmware",
+          "begin": 108100,
+          "end": 108360
+        },
+        {
+          "word": "version,",
+          "begin": 108500,
+          "end": 108900
+        },
+        {
+          "word": "maximum",
+          "begin": 109200,
+          "end": 109620
+        },
+        {
+          "word": "queue",
+          "begin": 109700,
+          "end": 109800
+        },
+        {
+          "word": "entries,",
+          "begin": 109920,
+          "end": 110340
+        },
+        {
+          "word": "and",
+          "begin": 110620,
+          "end": 110700
+        },
+        {
+          "word": "supported",
+          "begin": 110740,
+          "end": 111160
+        },
+        {
+          "word": "features.",
+          "begin": 111220,
+          "end": 111720
+        },
+        {
+          "word": "Identify",
+          "begin": 112320,
+          "end": 112760
+        },
+        {
+          "word": "Namespace",
+          "begin": 112960,
+          "end": 113500
+        },
+        {
+          "word": "(CNS=0)",
+          "begin": 113580,
+          "end": 114760
+        },
+        {
+          "word": "returns",
+          "begin": 114920,
+          "end": 115360
+        },
+        {
+          "word": "per-namespace",
+          "begin": 115440,
+          "end": 116220
+        },
+        {
+          "word": "data",
+          "begin": 116220,
+          "end": 116420
+        },
+        {
+          "word": "capacity,",
+          "begin": 116760,
+          "end": 117280
+        },
+        {
+          "word": "LBA",
+          "begin": 117660,
+          "end": 118000
+        },
+        {
+          "word": "format,",
+          "begin": 118160,
+          "end": 118600
+        },
+        {
+          "word": "and",
+          "begin": 118820,
+          "end": 118920
+        },
+        {
+          "word": "protection",
+          "begin": 118960,
+          "end": 119420
+        },
+        {
+          "word": "settings.",
+          "begin": 119500,
+          "end": 119960
+        },
+        {
+          "word": "They're",
+          "begin": 120600,
+          "end": 120660
+        },
+        {
+          "word": "separate",
+          "begin": 120820,
+          "end": 121200
+        },
+        {
+          "word": "because:",
+          "begin": 121260,
+          "end": 121700
+        },
+        {
+          "word": "(1)",
+          "begin": 121980,
+          "end": 122140
+        },
+        {
+          "word": "A",
+          "begin": 122420,
+          "end": 122500
+        },
+        {
+          "word": "single",
+          "begin": 122520,
+          "end": 122620
+        },
+        {
+          "word": "controller",
+          "begin": 122720,
+          "end": 123120
+        },
+        {
+          "word": "can",
+          "begin": 123220,
+          "end": 123340
+        },
+        {
+          "word": "have",
+          "begin": 123360,
+          "end": 123500
+        },
+        {
+          "word": "hundreds",
+          "begin": 123540,
+          "end": 123880
+        },
+        {
+          "word": "of",
+          "begin": 123880,
+          "end": 123960
+        },
+        {
+          "word": "namespaces.",
+          "begin": 124020,
+          "end": 124780
+        },
+        {
+          "word": "Returning",
+          "begin": 125360,
+          "end": 125740
+        },
+        {
+          "word": "all",
+          "begin": 125840,
+          "end": 125940
+        },
+        {
+          "word": "namespace",
+          "begin": 126020,
+          "end": 126500
+        },
+        {
+          "word": "data",
+          "begin": 126560,
+          "end": 126900
+        },
+        {
+          "word": "in",
+          "begin": 126900,
+          "end": 126960
+        },
+        {
+          "word": "one",
+          "begin": 127020,
+          "end": 127180
+        },
+        {
+          "word": "response",
+          "begin": 127220,
+          "end": 127720
+        },
+        {
+          "word": "would",
+          "begin": 127800,
+          "end": 127900
+        },
+        {
+          "word": "require",
+          "begin": 127920,
+          "end": 128520
+        },
+        {
+          "word": "a",
+          "begin": 128520,
+          "end": 128600
+        },
+        {
+          "word": "massive,",
+          "begin": 128759,
+          "end": 128960
+        },
+        {
+          "word": "variable-size",
+          "begin": 129100,
+          "end": 129800
+        },
+        {
+          "word": "buffer",
+          "begin": 129880,
+          "end": 130139
+        },
+        {
+          "word": "but",
+          "begin": 130479,
+          "end": 130600
+        },
+        {
+          "word": "NVMe",
+          "begin": 130680,
+          "end": 131180
+        },
+        {
+          "word": "Identify",
+          "begin": 131320,
+          "end": 131800
+        },
+        {
+          "word": "always",
+          "begin": 132020,
+          "end": 132360
+        },
+        {
+          "word": "returns",
+          "begin": 132360,
+          "end": 132800
+        },
+        {
+          "word": "exactly",
+          "begin": 132840,
+          "end": 133280
+        },
+        {
+          "word": "4,096",
+          "begin": 133440,
+          "end": 134860
+        },
+        {
+          "word": "bytes",
+          "begin": 134940,
+          "end": 135220
+        },
+        {
+          "word": "for",
+          "begin": 135300,
+          "end": 135340
+        },
+        {
+          "word": "simplicity",
+          "begin": 135440,
+          "end": 135920
+        },
+        {
+          "word": "and",
+          "begin": 136060,
+          "end": 136140
+        },
+        {
+          "word": "predictability.",
+          "begin": 136180,
+          "end": 136840
+        },
+        {
+          "word": "(2)",
+          "begin": 137420,
+          "end": 137520
+        },
+        {
+          "word": "The",
+          "begin": 137960,
+          "end": 138020
+        },
+        {
+          "word": "driver",
+          "begin": 138080,
+          "end": 138360
+        },
+        {
+          "word": "needs",
+          "begin": 138440,
+          "end": 138620
+        },
+        {
+          "word": "controller",
+          "begin": 138680,
+          "end": 139060
+        },
+        {
+          "word": "info",
+          "begin": 139180,
+          "end": 139420
+        },
+        {
+          "word": "first",
+          "begin": 139580,
+          "end": 139900
+        },
+        {
+          "word": "(during",
+          "begin": 140000,
+          "end": 140220
+        },
+        {
+          "word": "boot)",
+          "begin": 140300,
+          "end": 140540
+        },
+        {
+          "word": "to",
+          "begin": 140600,
+          "end": 140680
+        },
+        {
+          "word": "know",
+          "begin": 140740,
+          "end": 140980
+        },
+        {
+          "word": "the",
+          "begin": 141020,
+          "end": 141080
+        },
+        {
+          "word": "device's",
+          "begin": 141020,
+          "end": 141500
+        },
+        {
+          "word": "limits",
+          "begin": 141560,
+          "end": 141880
+        },
+        {
+          "word": "before",
+          "begin": 141960,
+          "end": 142240
+        },
+        {
+          "word": "it",
+          "begin": 142260,
+          "end": 142340
+        },
+        {
+          "word": "even",
+          "begin": 142420,
+          "end": 142600
+        },
+        {
+          "word": "asks",
+          "begin": 142700,
+          "end": 142980
+        },
+        {
+          "word": "about",
+          "begin": 143000,
+          "end": 143220
+        },
+        {
+          "word": "namespaces.",
+          "begin": 143260,
+          "end": 144040
+        },
+        {
+          "word": "(3)",
+          "begin": 144480,
+          "end": 144640
+        },
+        {
+          "word": "Namespace",
+          "begin": 145100,
+          "end": 145620
+        },
+        {
+          "word": "info",
+          "begin": 145680,
+          "end": 146080
+        },
+        {
+          "word": "can",
+          "begin": 146100,
+          "end": 146400
+        },
+        {
+          "word": "change",
+          "begin": 146420,
+          "end": 146620
+        },
+        {
+          "word": "at",
+          "begin": 146620,
+          "end": 146680
+        },
+        {
+          "word": "runtime",
+          "begin": 146620,
+          "end": 147140
+        },
+        {
+          "word": "(namespaces",
+          "begin": 147400,
+          "end": 148040
+        },
+        {
+          "word": "can",
+          "begin": 148100,
+          "end": 148200
+        },
+        {
+          "word": "be",
+          "begin": 148220,
+          "end": 148280
+        },
+        {
+          "word": "created,",
+          "begin": 148360,
+          "end": 148860
+        },
+        {
+          "word": "deleted,",
+          "begin": 149040,
+          "end": 149520
+        },
+        {
+          "word": "or",
+          "begin": 149640,
+          "end": 149660
+        },
+        {
+          "word": "resized),",
+          "begin": 149760,
+          "end": 150400
+        },
+        {
+          "word": "while",
+          "begin": 150520,
+          "end": 150640
+        },
+        {
+          "word": "controller",
+          "begin": 150680,
+          "end": 151100
+        },
+        {
+          "word": "info",
+          "begin": 151200,
+          "end": 151580
+        },
+        {
+          "word": "is",
+          "begin": 151640,
+          "end": 151660
+        },
+        {
+          "word": "mostly",
+          "begin": 151720,
+          "end": 152000
+        },
+        {
+          "word": "static.",
+          "begin": 152100,
+          "end": 152560
+        },
+        {
+          "word": "Separating",
+          "begin": 152980,
+          "end": 153460
+        },
+        {
+          "word": "them",
+          "begin": 153480,
+          "end": 153620
+        },
+        {
+          "word": "lets",
+          "begin": 153680,
+          "end": 153840
+        },
+        {
+          "word": "the",
+          "begin": 153880,
+          "end": 153940
+        },
+        {
+          "word": "driver",
+          "begin": 154000,
+          "end": 154300
+        },
+        {
+          "word": "re-query",
+          "begin": 154400,
+          "end": 154820
+        },
+        {
+          "word": "just",
+          "begin": 154920,
+          "end": 155160
+        },
+        {
+          "word": "the",
+          "begin": 155160,
+          "end": 155200
+        },
+        {
+          "word": "namespace",
+          "begin": 155260,
+          "end": 155760
+        },
+        {
+          "word": "data",
+          "begin": 155800,
+          "end": 156020
+        },
+        {
+          "word": "when",
+          "begin": 156080,
+          "end": 156120
+        },
+        {
+          "word": "a",
+          "begin": 156120,
+          "end": 156160
+        },
+        {
+          "word": "change",
+          "begin": 156180,
+          "end": 156600
+        },
+        {
+          "word": "occurs,",
+          "begin": 156620,
+          "end": 157160
+        },
+        {
+          "word": "without",
+          "begin": 157320,
+          "end": 157580
+        },
+        {
+          "word": "re-fetching",
+          "begin": 157640,
+          "end": 158120
+        },
+        {
+          "word": "the",
+          "begin": 158140,
+          "end": 158200
+        },
+        {
+          "word": "entire",
+          "begin": 158260,
+          "end": 158620
+        },
+        {
+          "word": "controller",
+          "begin": 158720,
+          "end": 159180
+        },
+        {
+          "word": "identity.",
+          "begin": 159220,
+          "end": 159580
+        },
+        {
+          "word": "The",
+          "begin": 159620,
+          "end": 160320
+        },
+        {
+          "word": "CNS",
+          "begin": 160440,
+          "end": 160820
+        },
+        {
+          "word": "field",
+          "begin": 160880,
+          "end": 161120
+        },
+        {
+          "word": "is",
+          "begin": 161140,
+          "end": 161220
+        },
+        {
+          "word": "the",
+          "begin": 161260,
+          "end": 161320
+        },
+        {
+          "word": "selector",
+          "begin": 161400,
+          "end": 161780
+        },
+        {
+          "word": "like",
+          "begin": 162040,
+          "end": 162140
+        },
+        {
+          "word": "choosing",
+          "begin": 162200,
+          "end": 162520
+        },
+        {
+          "word": "which",
+          "begin": 162560,
+          "end": 162700
+        },
+        {
+          "word": "page",
+          "begin": 162760,
+          "end": 163020
+        },
+        {
+          "word": "of",
+          "begin": 163040,
+          "end": 163100
+        },
+        {
+          "word": "an",
+          "begin": 163120,
+          "end": 163180
+        },
+        {
+          "word": "ID",
+          "begin": 163220,
+          "end": 163420
+        },
+        {
+          "word": "card",
+          "begin": 163520,
+          "end": 163760
+        },
+        {
+          "word": "to",
+          "begin": 163800,
+          "end": 163860
+        },
+        {
+          "word": "read.",
+          "begin": 163940,
+          "end": 164240
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

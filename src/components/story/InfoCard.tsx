@@ -38,7 +38,7 @@ export default function InfoCard({
 }: InfoCardProps) {
   const v = variants[variant];
   return (
-    <div className={`rounded-xl border-l-4 ${v.border} ${v.bg} p-5`}>
+    <div data-vo="info" className={`rounded-xl border-l-4 ${v.border} ${v.bg} p-5`}>
       <div className="flex gap-3">
         <div
           className={`flex-shrink-0 w-7 h-7 rounded-full ${v.iconBg} flex items-center justify-center text-xs font-bold`}

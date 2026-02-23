@@ -1,0 +1,96 @@
+{
+  "sectionId": "sec-bar0",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "The key insight: The CPU uses its normal memory instructions (load/store) — it doesn't need special I/O instructions. The hardware routing makes SSD registers &ldquo;look like&rdquo; regular memory addresses. This is why it's called memory-mapped I/O.",
+      "blockIndex": 0
+    },
+    {
+      "type": "heading",
+      "text": "The Control Panel — BAR0 Registers",
+      "blockIndex": 1
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: BAR0 Is the SSD's Control Panel. BAR0 is like a control panel mounted on the front of the SSD. Each register is a button or dial — one enables the controller, another reports status, another sets queue sizes. The CPU accesses these 'buttons' by reading/writing specific memory addresses.",
+      "blockIndex": 2
+    },
+    {
+      "type": "term",
+      "text": "BAR0 (Base Address Register 0): A region of memory-mapped I/O space assigned to the SSD during PCIe enumeration. Contains the NVMe controller's registers — the CPU reads and writes these addresses to configure and control the SSD.",
+      "blockIndex": 3
+    },
+    {
+      "type": "term",
+      "text": "MMIO (Memory-Mapped I/O): A technique where hardware device registers are mapped into the CPU's normal memory address space. The CPU accesses devices by reading/writing to specific memory addresses, just like accessing RAM.",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "We just learned that PCIe connects the SSD to your computer like a highway. But here's a question: when the computer turns on, how does it even talk to the SSD? It doesn't know where the drive's controls are yet.",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "Think of it like moving into a new apartment. The building has a control panel (thermostat, breaker box, etc.), but you first need to know where the panel is before you can use it. During startup, your computer's BIOS (the low-level firmware that runs before your operating system) scans the PCIe bus and says to each device: &ldquo;Your control panel will be at this address in memory.&rdquo;",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "This assigned address is called BAR0 (Base Address Register 0). It's a region of memory that the CPU can read and write to, but instead of accessing RAM, those reads and writes go directly to the SSD's hardware registers. This technique is called Memory-Mapped I/O (MMIO) — the SSD's controls look like regular memory addresses to software.",
+      "blockIndex": 7
+    },
+    {
+      "type": "paragraph",
+      "text": "But why not just use special I/O instructions? Because memory-mapped access is faster — the CPU's normal load/store instructions work directly, and PCIe hardware routes them to the right device. No special CPU instructions needed.",
+      "blockIndex": 8
+    },
+    {
+      "type": "paragraph",
+      "text": "Inside BAR0, the NVMe spec defines specific registers — fixed locations where each knob and dial lives. Here are the key registers and what each one does:",
+      "blockIndex": 9
+    },
+    {
+      "type": "paragraph",
+      "text": "Every PCIe device has a unique address in the format Bus:Device.Function (BDF). When the BIOS scans the PCIe bus during boot, it assigns each device a BDF address and maps its BAR0 to a specific memory range. On Linux, you can see this with lspci:",
+      "blockIndex": 10
+    },
+    {
+      "type": "paragraph",
+      "text": "Bus 01 : Device 00 . Function 0. This is the PCIe address. Bus 01 means it's one hop from the root complex. Device 00 means it's the first device on that bus. Function 0 is the primary function.",
+      "blockIndex": 11
+    },
+    {
+      "type": "paragraph",
+      "text": "This is BAR0 — the memory range where the NVMe registers are mapped. The CPU writes to addresses starting at 0xFE000000, and PCIe routes those writes to the SSD's controller registers. 16K covers all registers + doorbells.",
+      "blockIndex": 12
+    },
+    {
+      "type": "paragraph",
+      "text": "The full path: CPU → PCIe Root Complex (Bus 0) → PCIe Switch/Bridge → Bus 01, Device 00, Function 0 → NVMe SSD. The BDF address is how the kernel's NVMe driver finds and binds to the SSD. You'll also see this path in /sys/bus/pci/devices/0000:01:00.0/ where the kernel exposes the device's config space and resource mappings.",
+      "blockIndex": 13
+    },
+    {
+      "type": "paragraph",
+      "text": "Every NVMe interaction starts and ends with these registers. When the NVMe driver wants to tell the drive &ldquo;I've placed a command for you,&rdquo; it writes to a doorbell register. When it wants to turn the drive on, it writes to CC. When it wants to check if the drive is ready, it reads CSTS.",
+      "blockIndex": 14
+    },
+    {
+      "type": "paragraph",
+      "text": "Think of it this way: The NVMe spec is like a contract. It says &ldquo;at offset 0x14, there will be a configuration register.&rdquo; Any NVMe drive from any manufacturer follows this same layout. That's why one generic NVMe driver works with thousands of different SSDs.",
+      "blockIndex": 15
+    },
+    {
+      "type": "info",
+      "text": "How big is BAR0?: The register area itself is small (a few hundred bytes for the core registers), but the doorbell area grows with the number of queues. Each queue needs two doorbells (submit + complete), and doorbells start at offset 0x1000. With 64 I/O queues, that's about 0x1000 + 128 × 4 = ~0x1200 bytes total. The BIOS allocates enough space for the maximum the drive supports.",
+      "blockIndex": 16
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: A colleague claims that NVMe devices use I/O ports (like legacy PCI devices) to access BAR0 registers. Explain why this is wrong and what mechanism is actually used. The answer: BAR0 uses Memory-Mapped I/O (MMIO), not I/O ports. The SSD's hardware registers are mapped into the CPU's physical address space, so the CPU reads and writes them using normal memory instructions (MOV) rather than special IN/OUT port instructions. MMIO is faster and more flexible than I/O ports — it works with the CPU's memory controller and caching infrastructure, and doesn't require the limited 64KB I/O port address space that legacy PCI devices used.",
+      "requiresReveal": true,
+      "blockIndex": 17
+    }
+  ]
+}

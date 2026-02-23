@@ -1,0 +1,7916 @@
+{
+  "sectionId": "sec-passthru",
+  "audioFile": "/audio/sections/sec-passthru.mp3",
+  "totalDurationMs": 714560,
+  "fileSizeBytes": 11434368,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "Vendor Passthrough — The Secret Menu",
+      "beginMs": 20,
+      "endMs": 2480,
+      "timestamps": [
+        {
+          "word": "Vendor",
+          "begin": 20,
+          "end": 220
+        },
+        {
+          "word": "Passthrough",
+          "begin": 320,
+          "end": 800
+        },
+        {
+          "word": "The",
+          "begin": 1160,
+          "end": 1200
+        },
+        {
+          "word": "Secret",
+          "begin": 1340,
+          "end": 1640
+        },
+        {
+          "word": "Menu",
+          "begin": 1700,
+          "end": 1920
+        },
+        {
+          "word": "Analogy:",
+          "begin": 2000,
+          "end": 2480
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: Passthru Is a Direct Line to the SSD. NVMe passthru lets you send raw commands directly to the SSD, bypassing the normal kernel drivers. It's like having a direct phone line to the SSD controller — you can send any command, including vendor-specific ones that aren't part of the standard NVMe spec. Useful for firmware diagnostics, testing, and accessing hidden features.",
+      "beginMs": 2880,
+      "endMs": 27660,
+      "timestamps": [
+        {
+          "word": "Passthru",
+          "begin": 2880,
+          "end": 3340
+        },
+        {
+          "word": "Is",
+          "begin": 3500,
+          "end": 3600
+        },
+        {
+          "word": "a",
+          "begin": 3620,
+          "end": 3740
+        },
+        {
+          "word": "Direct",
+          "begin": 3740,
+          "end": 4059
+        },
+        {
+          "word": "Line",
+          "begin": 4120,
+          "end": 4380
+        },
+        {
+          "word": "to",
+          "begin": 4420,
+          "end": 4480
+        },
+        {
+          "word": "the",
+          "begin": 4520,
+          "end": 4580
+        },
+        {
+          "word": "SSD.",
+          "begin": 4680,
+          "end": 5100
+        },
+        {
+          "word": "NVMe",
+          "begin": 6000,
+          "end": 6460
+        },
+        {
+          "word": "passthru",
+          "begin": 6600,
+          "end": 7080
+        },
+        {
+          "word": "lets",
+          "begin": 7440,
+          "end": 7600
+        },
+        {
+          "word": "you",
+          "begin": 7620,
+          "end": 7680
+        },
+        {
+          "word": "send",
+          "begin": 7820,
+          "end": 8020
+        },
+        {
+          "word": "raw",
+          "begin": 8119,
+          "end": 8200
+        },
+        {
+          "word": "commands",
+          "begin": 8360,
+          "end": 8800
+        },
+        {
+          "word": "directly",
+          "begin": 8880,
+          "end": 9280
+        },
+        {
+          "word": "to",
+          "begin": 9360,
+          "end": 9420
+        },
+        {
+          "word": "the",
+          "begin": 9420,
+          "end": 9520
+        },
+        {
+          "word": "SSD,",
+          "begin": 9620,
+          "end": 10040
+        },
+        {
+          "word": "bypassing",
+          "begin": 10660,
+          "end": 11240
+        },
+        {
+          "word": "the",
+          "begin": 11280,
+          "end": 11320
+        },
+        {
+          "word": "normal",
+          "begin": 11400,
+          "end": 11640
+        },
+        {
+          "word": "kernel",
+          "begin": 11760,
+          "end": 11980
+        },
+        {
+          "word": "drivers.",
+          "begin": 12080,
+          "end": 12600
+        },
+        {
+          "word": "It's",
+          "begin": 13060,
+          "end": 13180
+        },
+        {
+          "word": "like",
+          "begin": 13200,
+          "end": 13360
+        },
+        {
+          "word": "having",
+          "begin": 13380,
+          "end": 13640
+        },
+        {
+          "word": "a",
+          "begin": 13660,
+          "end": 13680
+        },
+        {
+          "word": "direct",
+          "begin": 13760,
+          "end": 14080
+        },
+        {
+          "word": "phone",
+          "begin": 14180,
+          "end": 14380
+        },
+        {
+          "word": "line",
+          "begin": 14400,
+          "end": 14600
+        },
+        {
+          "word": "to",
+          "begin": 14660,
+          "end": 14720
+        },
+        {
+          "word": "the",
+          "begin": 14760,
+          "end": 14800
+        },
+        {
+          "word": "SSD",
+          "begin": 14900,
+          "end": 15300
+        },
+        {
+          "word": "controller",
+          "begin": 15400,
+          "end": 16260
+        },
+        {
+          "word": "you",
+          "begin": 16280,
+          "end": 16360
+        },
+        {
+          "word": "can",
+          "begin": 16360,
+          "end": 16460
+        },
+        {
+          "word": "send",
+          "begin": 16540,
+          "end": 16740
+        },
+        {
+          "word": "any",
+          "begin": 16860,
+          "end": 16980
+        },
+        {
+          "word": "command,",
+          "begin": 17060,
+          "end": 17500
+        },
+        {
+          "word": "including",
+          "begin": 17800,
+          "end": 18220
+        },
+        {
+          "word": "vendor-specific",
+          "begin": 18280,
+          "end": 19100
+        },
+        {
+          "word": "ones",
+          "begin": 19140,
+          "end": 19420
+        },
+        {
+          "word": "that",
+          "begin": 19480,
+          "end": 19600
+        },
+        {
+          "word": "aren't",
+          "begin": 19700,
+          "end": 19860
+        },
+        {
+          "word": "part",
+          "begin": 19900,
+          "end": 20100
+        },
+        {
+          "word": "of",
+          "begin": 20100,
+          "end": 20160
+        },
+        {
+          "word": "the",
+          "begin": 20180,
+          "end": 20240
+        },
+        {
+          "word": "standard",
+          "begin": 20320,
+          "end": 20720
+        },
+        {
+          "word": "NVMe",
+          "begin": 20800,
+          "end": 21220
+        },
+        {
+          "word": "spec.",
+          "begin": 21360,
+          "end": 21700
+        },
+        {
+          "word": "Useful",
+          "begin": 22240,
+          "end": 22780
+        },
+        {
+          "word": "for",
+          "begin": 22920,
+          "end": 22940
+        },
+        {
+          "word": "firmware",
+          "begin": 22940,
+          "end": 23220
+        },
+        {
+          "word": "diagnostics,",
+          "begin": 23340,
+          "end": 24200
+        },
+        {
+          "word": "testing,",
+          "begin": 24520,
+          "end": 24980
+        },
+        {
+          "word": "and",
+          "begin": 25260,
+          "end": 25360
+        },
+        {
+          "word": "accessing",
+          "begin": 25440,
+          "end": 25940
+        },
+        {
+          "word": "hidden",
+          "begin": 26000,
+          "end": 26220
+        },
+        {
+          "word": "features.",
+          "begin": 26300,
+          "end": 26800
+        },
+        {
+          "word": "NVMe",
+          "begin": 27200,
+          "end": 27660
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "term",
+      "text": "NVMe Passthru: A mechanism (via nvme-cli or /dev/nvmeX ioctl) to send raw NVMe admin or I/O commands directly to the controller, bypassing filesystem and block layer abstractions. Enables vendor-specific commands and low-level diagnostics.",
+      "beginMs": 27800,
+      "endMs": 45740,
+      "timestamps": [
+        {
+          "word": "Passthru:",
+          "begin": 27800,
+          "end": 28120
+        },
+        {
+          "word": "A",
+          "begin": 28160,
+          "end": 28740
+        },
+        {
+          "word": "mechanism",
+          "begin": 28800,
+          "end": 29340
+        },
+        {
+          "word": "(via",
+          "begin": 29420,
+          "end": 29480
+        },
+        {
+          "word": "nvme-cli",
+          "begin": 29720,
+          "end": 30740
+        },
+        {
+          "word": "or",
+          "begin": 31260,
+          "end": 31800
+        },
+        {
+          "word": "/dev/nvmeX",
+          "begin": 31840,
+          "end": 34080
+        },
+        {
+          "word": "ioctl)",
+          "begin": 34160,
+          "end": 34780
+        },
+        {
+          "word": "to",
+          "begin": 34840,
+          "end": 35100
+        },
+        {
+          "word": "send",
+          "begin": 35220,
+          "end": 35440
+        },
+        {
+          "word": "raw",
+          "begin": 35760,
+          "end": 36020
+        },
+        {
+          "word": "NVMe",
+          "begin": 36320,
+          "end": 36880
+        },
+        {
+          "word": "admin",
+          "begin": 37000,
+          "end": 37200
+        },
+        {
+          "word": "or",
+          "begin": 37220,
+          "end": 37300
+        },
+        {
+          "word": "I/O",
+          "begin": 37340,
+          "end": 37740
+        },
+        {
+          "word": "commands",
+          "begin": 37740,
+          "end": 38060
+        },
+        {
+          "word": "directly",
+          "begin": 38060,
+          "end": 38980
+        },
+        {
+          "word": "to",
+          "begin": 39100,
+          "end": 39160
+        },
+        {
+          "word": "the",
+          "begin": 39200,
+          "end": 39240
+        },
+        {
+          "word": "controller,",
+          "begin": 39320,
+          "end": 39900
+        },
+        {
+          "word": "bypassing",
+          "begin": 39980,
+          "end": 40620
+        },
+        {
+          "word": "filesystem",
+          "begin": 40620,
+          "end": 41260
+        },
+        {
+          "word": "and",
+          "begin": 41260,
+          "end": 41540
+        },
+        {
+          "word": "block",
+          "begin": 41620,
+          "end": 42420
+        },
+        {
+          "word": "layer",
+          "begin": 42460,
+          "end": 42880
+        },
+        {
+          "word": "abstractions.",
+          "begin": 42920,
+          "end": 43540
+        },
+        {
+          "word": "Enables",
+          "begin": 43540,
+          "end": 44060
+        },
+        {
+          "word": "vendor-specific",
+          "begin": 44120,
+          "end": 44140
+        },
+        {
+          "word": "commands",
+          "begin": 44240,
+          "end": 44340
+        },
+        {
+          "word": "and",
+          "begin": 44340,
+          "end": 44360
+        },
+        {
+          "word": "low-level",
+          "begin": 44420,
+          "end": 44800
+        },
+        {
+          "word": "diagnostics.",
+          "begin": 44900,
+          "end": 45740
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "We've covered NVMe's standard commands — the ones defined in the NVMe specification that every drive must support. But here's something interesting: every SSD manufacturer also has their own secret commands.",
+      "beginMs": 46180,
+      "endMs": 59100,
+      "timestamps": [
+        {
+          "word": "We've",
+          "begin": 46180,
+          "end": 46320
+        },
+        {
+          "word": "covered",
+          "begin": 46360,
+          "end": 46640
+        },
+        {
+          "word": "NVMe's",
+          "begin": 46700,
+          "end": 47240
+        },
+        {
+          "word": "standard",
+          "begin": 47280,
+          "end": 47640
+        },
+        {
+          "word": "commands",
+          "begin": 47700,
+          "end": 48200
+        },
+        {
+          "word": "the",
+          "begin": 48480,
+          "end": 48520
+        },
+        {
+          "word": "ones",
+          "begin": 48580,
+          "end": 48820
+        },
+        {
+          "word": "defined",
+          "begin": 48860,
+          "end": 49280
+        },
+        {
+          "word": "in",
+          "begin": 49300,
+          "end": 49380
+        },
+        {
+          "word": "the",
+          "begin": 49380,
+          "end": 49420
+        },
+        {
+          "word": "NVMe",
+          "begin": 49540,
+          "end": 49920
+        },
+        {
+          "word": "specification",
+          "begin": 50020,
+          "end": 50840
+        },
+        {
+          "word": "that",
+          "begin": 51000,
+          "end": 51120
+        },
+        {
+          "word": "every",
+          "begin": 51180,
+          "end": 51360
+        },
+        {
+          "word": "drive",
+          "begin": 51440,
+          "end": 51720
+        },
+        {
+          "word": "must",
+          "begin": 51780,
+          "end": 51960
+        },
+        {
+          "word": "support.",
+          "begin": 51980,
+          "end": 52440
+        },
+        {
+          "word": "But",
+          "begin": 52920,
+          "end": 53020
+        },
+        {
+          "word": "here's",
+          "begin": 53060,
+          "end": 53300
+        },
+        {
+          "word": "something",
+          "begin": 53340,
+          "end": 53640
+        },
+        {
+          "word": "interesting:",
+          "begin": 53720,
+          "end": 54260
+        },
+        {
+          "word": "every",
+          "begin": 54600,
+          "end": 54800
+        },
+        {
+          "word": "SSD",
+          "begin": 54960,
+          "end": 55380
+        },
+        {
+          "word": "manufacturer",
+          "begin": 55480,
+          "end": 56160
+        },
+        {
+          "word": "also",
+          "begin": 56540,
+          "end": 56780
+        },
+        {
+          "word": "has",
+          "begin": 56860,
+          "end": 57040
+        },
+        {
+          "word": "their",
+          "begin": 57080,
+          "end": 57200
+        },
+        {
+          "word": "own",
+          "begin": 57300,
+          "end": 57460
+        },
+        {
+          "word": "secret",
+          "begin": 57560,
+          "end": 57840
+        },
+        {
+          "word": "commands.",
+          "begin": 57900,
+          "end": 58400
+        },
+        {
+          "word": "Why",
+          "begin": 58400,
+          "end": 59100
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "Why would vendors need custom commands? Because the NVMe spec defines what the drive does (read, write, erase) but not how the internal firmware works. Samsung's garbage collection is different from Intel's. WD's wear leveling algorithm is different from Micron's. Each vendor has internal diagnostics, debug logs, and tuning parameters that are specific to their firmware.",
+      "beginMs": 59240,
+      "endMs": 81240,
+      "timestamps": [
+        {
+          "word": "would",
+          "begin": 59240,
+          "end": 59360
+        },
+        {
+          "word": "vendors",
+          "begin": 59420,
+          "end": 59840
+        },
+        {
+          "word": "need",
+          "begin": 59900,
+          "end": 60080
+        },
+        {
+          "word": "custom",
+          "begin": 60140,
+          "end": 60500
+        },
+        {
+          "word": "commands?",
+          "begin": 60560,
+          "end": 61100
+        },
+        {
+          "word": "Because",
+          "begin": 61700,
+          "end": 62000
+        },
+        {
+          "word": "the",
+          "begin": 62040,
+          "end": 62080
+        },
+        {
+          "word": "NVMe",
+          "begin": 62080,
+          "end": 62720
+        },
+        {
+          "word": "spec",
+          "begin": 62880,
+          "end": 63220
+        },
+        {
+          "word": "defines",
+          "begin": 63300,
+          "end": 63760
+        },
+        {
+          "word": "what",
+          "begin": 63800,
+          "end": 63960
+        },
+        {
+          "word": "the",
+          "begin": 63980,
+          "end": 64019
+        },
+        {
+          "word": "drive",
+          "begin": 64080,
+          "end": 64400
+        },
+        {
+          "word": "does",
+          "begin": 64459,
+          "end": 64680
+        },
+        {
+          "word": "(read,",
+          "begin": 64760,
+          "end": 65019
+        },
+        {
+          "word": "write,",
+          "begin": 65019,
+          "end": 65740
+        },
+        {
+          "word": "erase)",
+          "begin": 66000,
+          "end": 66380
+        },
+        {
+          "word": "but",
+          "begin": 66460,
+          "end": 66580
+        },
+        {
+          "word": "not",
+          "begin": 66620,
+          "end": 66780
+        },
+        {
+          "word": "how",
+          "begin": 66800,
+          "end": 66880
+        },
+        {
+          "word": "the",
+          "begin": 66960,
+          "end": 67020
+        },
+        {
+          "word": "internal",
+          "begin": 67080,
+          "end": 67420
+        },
+        {
+          "word": "firmware",
+          "begin": 67560,
+          "end": 68040
+        },
+        {
+          "word": "works.",
+          "begin": 68080,
+          "end": 68480
+        },
+        {
+          "word": "Samsung's",
+          "begin": 68840,
+          "end": 69340
+        },
+        {
+          "word": "garbage",
+          "begin": 69400,
+          "end": 69720
+        },
+        {
+          "word": "collection",
+          "begin": 69800,
+          "end": 70220
+        },
+        {
+          "word": "is",
+          "begin": 70240,
+          "end": 70340
+        },
+        {
+          "word": "different",
+          "begin": 70400,
+          "end": 70700
+        },
+        {
+          "word": "from",
+          "begin": 70740,
+          "end": 70860
+        },
+        {
+          "word": "Intel's.",
+          "begin": 70940,
+          "end": 71460
+        },
+        {
+          "word": "WD's",
+          "begin": 71800,
+          "end": 72340
+        },
+        {
+          "word": "wear",
+          "begin": 72400,
+          "end": 72500
+        },
+        {
+          "word": "leveling",
+          "begin": 72680,
+          "end": 73060
+        },
+        {
+          "word": "algorithm",
+          "begin": 73160,
+          "end": 73680
+        },
+        {
+          "word": "is",
+          "begin": 73780,
+          "end": 73880
+        },
+        {
+          "word": "different",
+          "begin": 73940,
+          "end": 74260
+        },
+        {
+          "word": "from",
+          "begin": 74300,
+          "end": 74440
+        },
+        {
+          "word": "Micron's.",
+          "begin": 74480,
+          "end": 75080
+        },
+        {
+          "word": "Each",
+          "begin": 75320,
+          "end": 75500
+        },
+        {
+          "word": "vendor",
+          "begin": 75560,
+          "end": 75960
+        },
+        {
+          "word": "has",
+          "begin": 76040,
+          "end": 76060
+        },
+        {
+          "word": "internal",
+          "begin": 76080,
+          "end": 76440
+        },
+        {
+          "word": "diagnostics,",
+          "begin": 76520,
+          "end": 77360
+        },
+        {
+          "word": "debug",
+          "begin": 77600,
+          "end": 78000
+        },
+        {
+          "word": "logs,",
+          "begin": 78040,
+          "end": 78440
+        },
+        {
+          "word": "and",
+          "begin": 78680,
+          "end": 78780
+        },
+        {
+          "word": "tuning",
+          "begin": 78840,
+          "end": 79140
+        },
+        {
+          "word": "parameters",
+          "begin": 79200,
+          "end": 79800
+        },
+        {
+          "word": "that",
+          "begin": 79860,
+          "end": 79940
+        },
+        {
+          "word": "are",
+          "begin": 79940,
+          "end": 79980
+        },
+        {
+          "word": "specific",
+          "begin": 80080,
+          "end": 80560
+        },
+        {
+          "word": "to",
+          "begin": 80600,
+          "end": 80660
+        },
+        {
+          "word": "their",
+          "begin": 80700,
+          "end": 80760
+        },
+        {
+          "word": "firmware.",
+          "begin": 80920,
+          "end": 81240
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "What kinds of things do vendor commands do? Things that the standard NVMe spec doesn't cover:",
+      "beginMs": 81880,
+      "endMs": 86720,
+      "timestamps": [
+        {
+          "word": "What",
+          "begin": 81880,
+          "end": 82000
+        },
+        {
+          "word": "kinds",
+          "begin": 82040,
+          "end": 82320
+        },
+        {
+          "word": "of",
+          "begin": 82340,
+          "end": 82420
+        },
+        {
+          "word": "things",
+          "begin": 82480,
+          "end": 82740
+        },
+        {
+          "word": "do",
+          "begin": 82780,
+          "end": 82840
+        },
+        {
+          "word": "vendor",
+          "begin": 82920,
+          "end": 83140
+        },
+        {
+          "word": "commands",
+          "begin": 83240,
+          "end": 83620
+        },
+        {
+          "word": "do?",
+          "begin": 83700,
+          "end": 83780
+        },
+        {
+          "word": "Things",
+          "begin": 84240,
+          "end": 84480
+        },
+        {
+          "word": "that",
+          "begin": 84520,
+          "end": 84620
+        },
+        {
+          "word": "the",
+          "begin": 84640,
+          "end": 84700
+        },
+        {
+          "word": "standard",
+          "begin": 84780,
+          "end": 85160
+        },
+        {
+          "word": "NVMe",
+          "begin": 85240,
+          "end": 85680
+        },
+        {
+          "word": "spec",
+          "begin": 85840,
+          "end": 86100
+        },
+        {
+          "word": "doesn't",
+          "begin": 86160,
+          "end": 86420
+        },
+        {
+          "word": "cover:",
+          "begin": 86460,
+          "end": 86720
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "The NVMe spec accounts for this by reserving opcode ranges for vendor use:",
+      "beginMs": 87080,
+      "endMs": 91220,
+      "timestamps": [
+        {
+          "word": "The",
+          "begin": 87080,
+          "end": 87140
+        },
+        {
+          "word": "NVMe",
+          "begin": 87260,
+          "end": 87680
+        },
+        {
+          "word": "spec",
+          "begin": 87800,
+          "end": 88040
+        },
+        {
+          "word": "accounts",
+          "begin": 88060,
+          "end": 88460
+        },
+        {
+          "word": "for",
+          "begin": 88460,
+          "end": 88500
+        },
+        {
+          "word": "this",
+          "begin": 88560,
+          "end": 88760
+        },
+        {
+          "word": "by",
+          "begin": 88820,
+          "end": 89000
+        },
+        {
+          "word": "reserving",
+          "begin": 89000,
+          "end": 89440
+        },
+        {
+          "word": "opcode",
+          "begin": 89520,
+          "end": 89920
+        },
+        {
+          "word": "ranges",
+          "begin": 89960,
+          "end": 90380
+        },
+        {
+          "word": "for",
+          "begin": 90440,
+          "end": 90500
+        },
+        {
+          "word": "vendor",
+          "begin": 90580,
+          "end": 90920
+        },
+        {
+          "word": "use:",
+          "begin": 90920,
+          "end": 91220
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "How do you send these? With the nvme admin-passthru and nvme io-passthru commands. &ldquo;Passthru&rdquo; means &ldquo;pass this raw command through to the drive without the driver trying to interpret it.&rdquo; You specify the opcode and CDW values directly — the same dword fields we learned about in the SQE structure from Lesson 8.",
+      "beginMs": 91600,
+      "endMs": 112440,
+      "timestamps": [
+        {
+          "word": "How",
+          "begin": 91600,
+          "end": 91680
+        },
+        {
+          "word": "do",
+          "begin": 91760,
+          "end": 91800
+        },
+        {
+          "word": "you",
+          "begin": 91820,
+          "end": 91880
+        },
+        {
+          "word": "send",
+          "begin": 92000,
+          "end": 92200
+        },
+        {
+          "word": "these?",
+          "begin": 92240,
+          "end": 92580
+        },
+        {
+          "word": "With",
+          "begin": 93040,
+          "end": 93160
+        },
+        {
+          "word": "the",
+          "begin": 93160,
+          "end": 93220
+        },
+        {
+          "word": "nvme",
+          "begin": 93360,
+          "end": 93820
+        },
+        {
+          "word": "admin-passthru",
+          "begin": 93960,
+          "end": 94820
+        },
+        {
+          "word": "and",
+          "begin": 95080,
+          "end": 95180
+        },
+        {
+          "word": "nvme",
+          "begin": 95240,
+          "end": 95660
+        },
+        {
+          "word": "io-passthru",
+          "begin": 95700,
+          "end": 96640
+        },
+        {
+          "word": "commands.",
+          "begin": 96760,
+          "end": 97300
+        },
+        {
+          "word": "&ldquo;Passthru&rdquo;",
+          "begin": 97540,
+          "end": 99480
+        },
+        {
+          "word": "means",
+          "begin": 97620,
+          "end": 97660
+        },
+        {
+          "word": "&ldquo;pass",
+          "begin": 97700,
+          "end": 98780
+        },
+        {
+          "word": "this",
+          "begin": 98780,
+          "end": 98860
+        },
+        {
+          "word": "raw",
+          "begin": 98900,
+          "end": 98940
+        },
+        {
+          "word": "command",
+          "begin": 99020,
+          "end": 99300
+        },
+        {
+          "word": "through",
+          "begin": 99360,
+          "end": 99440
+        },
+        {
+          "word": "to",
+          "begin": 99460,
+          "end": 99480
+        },
+        {
+          "word": "the",
+          "begin": 99840,
+          "end": 99900
+        },
+        {
+          "word": "drive",
+          "begin": 99980,
+          "end": 100340
+        },
+        {
+          "word": "without",
+          "begin": 100360,
+          "end": 100600
+        },
+        {
+          "word": "the",
+          "begin": 101000,
+          "end": 101100
+        },
+        {
+          "word": "driver",
+          "begin": 101220,
+          "end": 101360
+        },
+        {
+          "word": "trying",
+          "begin": 101440,
+          "end": 101900
+        },
+        {
+          "word": "to",
+          "begin": 101940,
+          "end": 101960
+        },
+        {
+          "word": "interpret",
+          "begin": 102080,
+          "end": 103180
+        },
+        {
+          "word": "it.&rdquo;",
+          "begin": 103180,
+          "end": 104900
+        },
+        {
+          "word": "You",
+          "begin": 105060,
+          "end": 105120
+        },
+        {
+          "word": "specify",
+          "begin": 105200,
+          "end": 105620
+        },
+        {
+          "word": "the",
+          "begin": 105720,
+          "end": 105780
+        },
+        {
+          "word": "opcode",
+          "begin": 105860,
+          "end": 106300
+        },
+        {
+          "word": "and",
+          "begin": 106400,
+          "end": 106500
+        },
+        {
+          "word": "CDW",
+          "begin": 106600,
+          "end": 107180
+        },
+        {
+          "word": "values",
+          "begin": 107260,
+          "end": 107680
+        },
+        {
+          "word": "directly",
+          "begin": 107720,
+          "end": 108060
+        },
+        {
+          "word": "the",
+          "begin": 108080,
+          "end": 108140
+        },
+        {
+          "word": "same",
+          "begin": 108440,
+          "end": 108780
+        },
+        {
+          "word": "dword",
+          "begin": 108840,
+          "end": 109200
+        },
+        {
+          "word": "fields",
+          "begin": 109280,
+          "end": 109620
+        },
+        {
+          "word": "we",
+          "begin": 109660,
+          "end": 109720
+        },
+        {
+          "word": "learned",
+          "begin": 109800,
+          "end": 110020
+        },
+        {
+          "word": "about",
+          "begin": 110020,
+          "end": 110280
+        },
+        {
+          "word": "in",
+          "begin": 110320,
+          "end": 110400
+        },
+        {
+          "word": "the",
+          "begin": 110400,
+          "end": 110440
+        },
+        {
+          "word": "SQE",
+          "begin": 110520,
+          "end": 110920
+        },
+        {
+          "word": "structure",
+          "begin": 111020,
+          "end": 111380
+        },
+        {
+          "word": "from",
+          "begin": 111520,
+          "end": 111640
+        },
+        {
+          "word": "Lesson",
+          "begin": 111680,
+          "end": 111960
+        },
+        {
+          "word": "8.",
+          "begin": 111980,
+          "end": 112000
+        },
+        {
+          "word": "But",
+          "begin": 112360,
+          "end": 112440
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "paragraph",
+      "text": "But where do you get the opcodes and CDW values? That's the catch — they're proprietary. Each vendor documents their passthru commands in internal engineering specs that are not public. If you work at a drive vendor or as an SSD test engineer, you'll have access to these specs. Otherwise, you typically only use passthru when instructed by the vendor's support team or SDK documentation.",
+      "beginMs": 112500,
+      "endMs": 133800,
+      "timestamps": [
+        {
+          "word": "where",
+          "begin": 112500,
+          "end": 112580
+        },
+        {
+          "word": "do",
+          "begin": 112680,
+          "end": 112720
+        },
+        {
+          "word": "you",
+          "begin": 112740,
+          "end": 112800
+        },
+        {
+          "word": "get",
+          "begin": 112860,
+          "end": 112980
+        },
+        {
+          "word": "the",
+          "begin": 113000,
+          "end": 113060
+        },
+        {
+          "word": "opcodes",
+          "begin": 113160,
+          "end": 113640
+        },
+        {
+          "word": "and",
+          "begin": 113700,
+          "end": 113800
+        },
+        {
+          "word": "CDW",
+          "begin": 113880,
+          "end": 114460
+        },
+        {
+          "word": "values?",
+          "begin": 114540,
+          "end": 115020
+        },
+        {
+          "word": "That's",
+          "begin": 115320,
+          "end": 115540
+        },
+        {
+          "word": "the",
+          "begin": 115580,
+          "end": 115620
+        },
+        {
+          "word": "catch",
+          "begin": 115680,
+          "end": 116360
+        },
+        {
+          "word": "they're",
+          "begin": 116440,
+          "end": 116480
+        },
+        {
+          "word": "proprietary.",
+          "begin": 116480,
+          "end": 117120
+        },
+        {
+          "word": "Each",
+          "begin": 117340,
+          "end": 117480
+        },
+        {
+          "word": "vendor",
+          "begin": 117560,
+          "end": 117800
+        },
+        {
+          "word": "documents",
+          "begin": 117900,
+          "end": 118460
+        },
+        {
+          "word": "their",
+          "begin": 118460,
+          "end": 118520
+        },
+        {
+          "word": "passthru",
+          "begin": 118620,
+          "end": 119040
+        },
+        {
+          "word": "commands",
+          "begin": 119140,
+          "end": 119620
+        },
+        {
+          "word": "in",
+          "begin": 119720,
+          "end": 119800
+        },
+        {
+          "word": "internal",
+          "begin": 119820,
+          "end": 120220
+        },
+        {
+          "word": "engineering",
+          "begin": 120300,
+          "end": 120740
+        },
+        {
+          "word": "specs",
+          "begin": 120820,
+          "end": 121180
+        },
+        {
+          "word": "that",
+          "begin": 121240,
+          "end": 121320
+        },
+        {
+          "word": "are",
+          "begin": 121320,
+          "end": 121380
+        },
+        {
+          "word": "not",
+          "begin": 121440,
+          "end": 121600
+        },
+        {
+          "word": "public.",
+          "begin": 121640,
+          "end": 122020
+        },
+        {
+          "word": "If",
+          "begin": 122280,
+          "end": 122380
+        },
+        {
+          "word": "you",
+          "begin": 122380,
+          "end": 122440
+        },
+        {
+          "word": "work",
+          "begin": 122500,
+          "end": 122660
+        },
+        {
+          "word": "at",
+          "begin": 122660,
+          "end": 122660
+        },
+        {
+          "word": "a",
+          "begin": 122660,
+          "end": 122700
+        },
+        {
+          "word": "drive",
+          "begin": 122720,
+          "end": 123120
+        },
+        {
+          "word": "vendor",
+          "begin": 123160,
+          "end": 123400
+        },
+        {
+          "word": "or",
+          "begin": 123200,
+          "end": 123360
+        },
+        {
+          "word": "as",
+          "begin": 123380,
+          "end": 123640
+        },
+        {
+          "word": "an",
+          "begin": 123680,
+          "end": 123820
+        },
+        {
+          "word": "SSD",
+          "begin": 123840,
+          "end": 124180
+        },
+        {
+          "word": "test",
+          "begin": 124180,
+          "end": 124140
+        },
+        {
+          "word": "engineer,",
+          "begin": 124160,
+          "end": 124760
+        },
+        {
+          "word": "you'll",
+          "begin": 124800,
+          "end": 124960
+        },
+        {
+          "word": "have",
+          "begin": 125000,
+          "end": 125120
+        },
+        {
+          "word": "access",
+          "begin": 125140,
+          "end": 125660
+        },
+        {
+          "word": "to",
+          "begin": 125660,
+          "end": 125680
+        },
+        {
+          "word": "these",
+          "begin": 125700,
+          "end": 126620
+        },
+        {
+          "word": "specs.",
+          "begin": 126660,
+          "end": 127080
+        },
+        {
+          "word": "Otherwise,",
+          "begin": 127240,
+          "end": 127760
+        },
+        {
+          "word": "you",
+          "begin": 127820,
+          "end": 127860
+        },
+        {
+          "word": "typically",
+          "begin": 127940,
+          "end": 128320
+        },
+        {
+          "word": "only",
+          "begin": 128440,
+          "end": 128600
+        },
+        {
+          "word": "use",
+          "begin": 128680,
+          "end": 128880
+        },
+        {
+          "word": "passthru",
+          "begin": 128919,
+          "end": 129360
+        },
+        {
+          "word": "when",
+          "begin": 129500,
+          "end": 129620
+        },
+        {
+          "word": "instructed",
+          "begin": 129639,
+          "end": 130139
+        },
+        {
+          "word": "by",
+          "begin": 130139,
+          "end": 130240
+        },
+        {
+          "word": "the",
+          "begin": 130340,
+          "end": 130380
+        },
+        {
+          "word": "vendor's",
+          "begin": 130440,
+          "end": 130780
+        },
+        {
+          "word": "support",
+          "begin": 130840,
+          "end": 131180
+        },
+        {
+          "word": "team",
+          "begin": 131220,
+          "end": 131480
+        },
+        {
+          "word": "or",
+          "begin": 131680,
+          "end": 131700
+        },
+        {
+          "word": "SDK",
+          "begin": 131840,
+          "end": 132260
+        },
+        {
+          "word": "documentation.",
+          "begin": 132380,
+          "end": 133180
+        },
+        {
+          "word": "Remember",
+          "begin": 133480,
+          "end": 133800
+        }
+      ]
+    },
+    {
+      "blockIndex": 9,
+      "type": "paragraph",
+      "text": "Remember the 64-byte Submission Queue Entry from Lesson 8? Every NVMe command is a 64-byte structure with 16 dwords (DW0-DW15). When you use nvme admin-passthru, you're manually filling in those dwords. Here's how each passthru flag maps to the SQE:",
+      "beginMs": 133880,
+      "endMs": 151500,
+      "timestamps": [
+        {
+          "word": "the",
+          "begin": 133880,
+          "end": 133940
+        },
+        {
+          "word": "64-byte",
+          "begin": 134040,
+          "end": 134840
+        },
+        {
+          "word": "Submission",
+          "begin": 134920,
+          "end": 135320
+        },
+        {
+          "word": "Queue",
+          "begin": 135380,
+          "end": 135500
+        },
+        {
+          "word": "Entry",
+          "begin": 135660,
+          "end": 135900
+        },
+        {
+          "word": "from",
+          "begin": 136040,
+          "end": 136180
+        },
+        {
+          "word": "Lesson",
+          "begin": 136220,
+          "end": 136500
+        },
+        {
+          "word": "8?",
+          "begin": 136600,
+          "end": 136820
+        },
+        {
+          "word": "Every",
+          "begin": 137140,
+          "end": 137320
+        },
+        {
+          "word": "NVMe",
+          "begin": 137480,
+          "end": 138060
+        },
+        {
+          "word": "command",
+          "begin": 138200,
+          "end": 138640
+        },
+        {
+          "word": "is",
+          "begin": 138720,
+          "end": 138820
+        },
+        {
+          "word": "a",
+          "begin": 138840,
+          "end": 138860
+        },
+        {
+          "word": "64-byte",
+          "begin": 138960,
+          "end": 139720
+        },
+        {
+          "word": "structure",
+          "begin": 139760,
+          "end": 140420
+        },
+        {
+          "word": "with",
+          "begin": 140420,
+          "end": 140500
+        },
+        {
+          "word": "16",
+          "begin": 140580,
+          "end": 141000
+        },
+        {
+          "word": "dwords",
+          "begin": 141060,
+          "end": 141520
+        },
+        {
+          "word": "(DW0-DW15).",
+          "begin": 141620,
+          "end": 143580
+        },
+        {
+          "word": "When",
+          "begin": 143800,
+          "end": 143940
+        },
+        {
+          "word": "you",
+          "begin": 143940,
+          "end": 144000
+        },
+        {
+          "word": "use",
+          "begin": 144100,
+          "end": 144340
+        },
+        {
+          "word": "nvme",
+          "begin": 144440,
+          "end": 145020
+        },
+        {
+          "word": "admin-passthru,",
+          "begin": 145280,
+          "end": 146140
+        },
+        {
+          "word": "you're",
+          "begin": 146560,
+          "end": 146620
+        },
+        {
+          "word": "manually",
+          "begin": 146720,
+          "end": 147140
+        },
+        {
+          "word": "filling",
+          "begin": 147260,
+          "end": 147520
+        },
+        {
+          "word": "in",
+          "begin": 147540,
+          "end": 147640
+        },
+        {
+          "word": "those",
+          "begin": 147680,
+          "end": 147860
+        },
+        {
+          "word": "dwords.",
+          "begin": 147920,
+          "end": 148440
+        },
+        {
+          "word": "Here's",
+          "begin": 148740,
+          "end": 148980
+        },
+        {
+          "word": "how",
+          "begin": 149000,
+          "end": 149080
+        },
+        {
+          "word": "each",
+          "begin": 149260,
+          "end": 149400
+        },
+        {
+          "word": "passthru",
+          "begin": 149480,
+          "end": 149920
+        },
+        {
+          "word": "flag",
+          "begin": 150060,
+          "end": 150360
+        },
+        {
+          "word": "maps",
+          "begin": 150420,
+          "end": 150720
+        },
+        {
+          "word": "to",
+          "begin": 150760,
+          "end": 150840
+        },
+        {
+          "word": "the",
+          "begin": 150860,
+          "end": 150920
+        },
+        {
+          "word": "SQE:",
+          "begin": 151040,
+          "end": 151500
+        }
+      ]
+    },
+    {
+      "blockIndex": 10,
+      "type": "paragraph",
+      "text": "So when you type --opcode=0xC0 --cdw10=0x00000001, what's actually happening? nvme-cli builds a 64-byte SQE in memory. It puts 0xC0 into byte 0 (the opcode field of DW0), puts 0x00000001 into bytes 40-43 (DW10), fills in DW6-DW9 with a pointer to your data buffer, and the kernel fills in the command ID and submits it to the admin queue.",
+      "beginMs": 152020,
+      "endMs": 185800,
+      "timestamps": [
+        {
+          "word": "So",
+          "begin": 152020,
+          "end": 152080
+        },
+        {
+          "word": "when",
+          "begin": 152160,
+          "end": 152300
+        },
+        {
+          "word": "you",
+          "begin": 152320,
+          "end": 156380
+        },
+        {
+          "word": "type",
+          "begin": 156480,
+          "end": 156740
+        },
+        {
+          "word": "--cdw10=0x00000001,",
+          "begin": 156880,
+          "end": 161260
+        },
+        {
+          "word": "what's",
+          "begin": 161260,
+          "end": 161840
+        },
+        {
+          "word": "actually",
+          "begin": 161860,
+          "end": 162920
+        },
+        {
+          "word": "happening?",
+          "begin": 163180,
+          "end": 163660
+        },
+        {
+          "word": "nvme-cli",
+          "begin": 163680,
+          "end": 164480
+        },
+        {
+          "word": "builds",
+          "begin": 164480,
+          "end": 164800
+        },
+        {
+          "word": "a",
+          "begin": 164880,
+          "end": 165060
+        },
+        {
+          "word": "64-byte",
+          "begin": 164880,
+          "end": 164900
+        },
+        {
+          "word": "SQE",
+          "begin": 165040,
+          "end": 165060
+        },
+        {
+          "word": "in",
+          "begin": 165280,
+          "end": 165360
+        },
+        {
+          "word": "memory.",
+          "begin": 165420,
+          "end": 165720
+        },
+        {
+          "word": "It",
+          "begin": 165920,
+          "end": 166020
+        },
+        {
+          "word": "puts",
+          "begin": 166080,
+          "end": 166280
+        },
+        {
+          "word": "0xC0",
+          "begin": 166400,
+          "end": 167660
+        },
+        {
+          "word": "into",
+          "begin": 167680,
+          "end": 167800
+        },
+        {
+          "word": "byte",
+          "begin": 167900,
+          "end": 168120
+        },
+        {
+          "word": "0",
+          "begin": 168200,
+          "end": 168440
+        },
+        {
+          "word": "(the",
+          "begin": 168580,
+          "end": 168620
+        },
+        {
+          "word": "opcode",
+          "begin": 168780,
+          "end": 169220
+        },
+        {
+          "word": "field",
+          "begin": 169320,
+          "end": 169560
+        },
+        {
+          "word": "of",
+          "begin": 169600,
+          "end": 169620
+        },
+        {
+          "word": "DW0),",
+          "begin": 169620,
+          "end": 171660
+        },
+        {
+          "word": "puts",
+          "begin": 171840,
+          "end": 172020
+        },
+        {
+          "word": "0x00000001",
+          "begin": 172100,
+          "end": 174040
+        },
+        {
+          "word": "into",
+          "begin": 174180,
+          "end": 174340
+        },
+        {
+          "word": "bytes",
+          "begin": 174420,
+          "end": 174820
+        },
+        {
+          "word": "40-43",
+          "begin": 174820,
+          "end": 175980
+        },
+        {
+          "word": "(DW10),",
+          "begin": 176080,
+          "end": 177020
+        },
+        {
+          "word": "fills",
+          "begin": 177500,
+          "end": 177740
+        },
+        {
+          "word": "in",
+          "begin": 177780,
+          "end": 177880
+        },
+        {
+          "word": "DW6-DW9",
+          "begin": 177940,
+          "end": 179760
+        },
+        {
+          "word": "with",
+          "begin": 179820,
+          "end": 179940
+        },
+        {
+          "word": "a",
+          "begin": 179940,
+          "end": 180060
+        },
+        {
+          "word": "pointer",
+          "begin": 180060,
+          "end": 180360
+        },
+        {
+          "word": "to",
+          "begin": 180460,
+          "end": 180520
+        },
+        {
+          "word": "your",
+          "begin": 180540,
+          "end": 180600
+        },
+        {
+          "word": "data",
+          "begin": 180700,
+          "end": 180880
+        },
+        {
+          "word": "buffer,",
+          "begin": 180940,
+          "end": 181220
+        },
+        {
+          "word": "and",
+          "begin": 181620,
+          "end": 181740
+        },
+        {
+          "word": "the",
+          "begin": 181740,
+          "end": 181780
+        },
+        {
+          "word": "kernel",
+          "begin": 181860,
+          "end": 182120
+        },
+        {
+          "word": "fills",
+          "begin": 182280,
+          "end": 182560
+        },
+        {
+          "word": "in",
+          "begin": 182600,
+          "end": 182700
+        },
+        {
+          "word": "the",
+          "begin": 182720,
+          "end": 182760
+        },
+        {
+          "word": "command",
+          "begin": 182820,
+          "end": 183160
+        },
+        {
+          "word": "ID",
+          "begin": 183160,
+          "end": 183580
+        },
+        {
+          "word": "and",
+          "begin": 183900,
+          "end": 184000
+        },
+        {
+          "word": "submits",
+          "begin": 184080,
+          "end": 184400
+        },
+        {
+          "word": "it",
+          "begin": 184440,
+          "end": 184520
+        },
+        {
+          "word": "to",
+          "begin": 184560,
+          "end": 184620
+        },
+        {
+          "word": "the",
+          "begin": 184660,
+          "end": 184720
+        },
+        {
+          "word": "admin",
+          "begin": 184840,
+          "end": 185140
+        },
+        {
+          "word": "queue.",
+          "begin": 185220,
+          "end": 185380
+        },
+        {
+          "word": "Why",
+          "begin": 185720,
+          "end": 185800
+        }
+      ]
+    },
+    {
+      "blockIndex": 11,
+      "type": "paragraph",
+      "text": "Why can't you set DW0 fully, or DW2-DW5, or DW6-DW9? DW0 contains the CID and flags managed by the kernel. DW6-DW9 are PRP/SGL pointers — memory addresses the kernel sets up for DMA. You don't need to touch these; the kernel handles the DMA mapping. You only control the &ldquo;what to do&rdquo; parts: the opcode, namespace, and CDW10-CDW15 parameters.",
+      "beginMs": 185980,
+      "endMs": 220120,
+      "timestamps": [
+        {
+          "word": "can't",
+          "begin": 185980,
+          "end": 186180
+        },
+        {
+          "word": "you",
+          "begin": 186180,
+          "end": 186240
+        },
+        {
+          "word": "set",
+          "begin": 186360,
+          "end": 186500
+        },
+        {
+          "word": "DW0",
+          "begin": 186500,
+          "end": 187400
+        },
+        {
+          "word": "fully,",
+          "begin": 187580,
+          "end": 187820
+        },
+        {
+          "word": "or",
+          "begin": 188200,
+          "end": 188220
+        },
+        {
+          "word": "DW2-DW5,",
+          "begin": 188360,
+          "end": 190700
+        },
+        {
+          "word": "or",
+          "begin": 191000,
+          "end": 191020
+        },
+        {
+          "word": "DW6-DW9?",
+          "begin": 191160,
+          "end": 193140
+        },
+        {
+          "word": "DW0",
+          "begin": 193660,
+          "end": 194460
+        },
+        {
+          "word": "contains",
+          "begin": 194600,
+          "end": 195040
+        },
+        {
+          "word": "the",
+          "begin": 195100,
+          "end": 195140
+        },
+        {
+          "word": "CID",
+          "begin": 195140,
+          "end": 195300
+        },
+        {
+          "word": "and",
+          "begin": 195340,
+          "end": 195920
+        },
+        {
+          "word": "flags",
+          "begin": 196020,
+          "end": 196440
+        },
+        {
+          "word": "managed",
+          "begin": 196500,
+          "end": 196840
+        },
+        {
+          "word": "by",
+          "begin": 196880,
+          "end": 197060
+        },
+        {
+          "word": "the",
+          "begin": 197140,
+          "end": 197240
+        },
+        {
+          "word": "kernel.",
+          "begin": 197140,
+          "end": 197380
+        },
+        {
+          "word": "DW6-DW9",
+          "begin": 198040,
+          "end": 202040
+        },
+        {
+          "word": "are",
+          "begin": 202140,
+          "end": 202220
+        },
+        {
+          "word": "pointers",
+          "begin": 202300,
+          "end": 202860
+        },
+        {
+          "word": "memory",
+          "begin": 203220,
+          "end": 203520
+        },
+        {
+          "word": "addresses",
+          "begin": 203580,
+          "end": 204060
+        },
+        {
+          "word": "the",
+          "begin": 203660,
+          "end": 203740
+        },
+        {
+          "word": "kernel",
+          "begin": 203760,
+          "end": 204060
+        },
+        {
+          "word": "sets",
+          "begin": 204120,
+          "end": 204260
+        },
+        {
+          "word": "up",
+          "begin": 204340,
+          "end": 204500
+        },
+        {
+          "word": "for",
+          "begin": 204660,
+          "end": 204860
+        },
+        {
+          "word": "DMA.",
+          "begin": 204900,
+          "end": 205360
+        },
+        {
+          "word": "You",
+          "begin": 205400,
+          "end": 205520
+        },
+        {
+          "word": "don't",
+          "begin": 205560,
+          "end": 206720
+        },
+        {
+          "word": "need",
+          "begin": 206720,
+          "end": 206760
+        },
+        {
+          "word": "to",
+          "begin": 206760,
+          "end": 206860
+        },
+        {
+          "word": "touch",
+          "begin": 206900,
+          "end": 207140
+        },
+        {
+          "word": "these;",
+          "begin": 207220,
+          "end": 207700
+        },
+        {
+          "word": "the",
+          "begin": 208000,
+          "end": 208040
+        },
+        {
+          "word": "kernel",
+          "begin": 208120,
+          "end": 208420
+        },
+        {
+          "word": "handles",
+          "begin": 208500,
+          "end": 208900
+        },
+        {
+          "word": "the",
+          "begin": 208960,
+          "end": 209000
+        },
+        {
+          "word": "DMA",
+          "begin": 209080,
+          "end": 209400
+        },
+        {
+          "word": "mapping.",
+          "begin": 209520,
+          "end": 209940
+        },
+        {
+          "word": "You",
+          "begin": 210100,
+          "end": 210140
+        },
+        {
+          "word": "only",
+          "begin": 210140,
+          "end": 210440
+        },
+        {
+          "word": "control",
+          "begin": 210520,
+          "end": 211820
+        },
+        {
+          "word": "the",
+          "begin": 211820,
+          "end": 211880
+        },
+        {
+          "word": "to",
+          "begin": 211880,
+          "end": 212100
+        },
+        {
+          "word": "do&rdquo;",
+          "begin": 212360,
+          "end": 212820
+        },
+        {
+          "word": "parts:",
+          "begin": 212880,
+          "end": 213320
+        },
+        {
+          "word": "the",
+          "begin": 213640,
+          "end": 213680
+        },
+        {
+          "word": "opcode,",
+          "begin": 213780,
+          "end": 214260
+        },
+        {
+          "word": "namespace,",
+          "begin": 214440,
+          "end": 215060
+        },
+        {
+          "word": "and",
+          "begin": 215160,
+          "end": 215260
+        },
+        {
+          "word": "CDW10-CDW15",
+          "begin": 215380,
+          "end": 218260
+        },
+        {
+          "word": "parameters.",
+          "begin": 218320,
+          "end": 218940
+        },
+        {
+          "word": "Since",
+          "begin": 219260,
+          "end": 219440
+        },
+        {
+          "word": "vendor",
+          "begin": 219480,
+          "end": 219700
+        },
+        {
+          "word": "commands",
+          "begin": 219780,
+          "end": 220120
+        }
+      ]
+    },
+    {
+      "blockIndex": 12,
+      "type": "paragraph",
+      "text": "Since vendor commands aren't in the spec, nvme-cli can't know what fields they need. Instead, you provide everything manually:",
+      "beginMs": 220240,
+      "endMs": 227120,
+      "timestamps": [
+        {
+          "word": "aren't",
+          "begin": 220240,
+          "end": 220400
+        },
+        {
+          "word": "in",
+          "begin": 220440,
+          "end": 220520
+        },
+        {
+          "word": "the",
+          "begin": 220540,
+          "end": 220580
+        },
+        {
+          "word": "spec,",
+          "begin": 220660,
+          "end": 221020
+        },
+        {
+          "word": "nvme-cli",
+          "begin": 221340,
+          "end": 222840
+        },
+        {
+          "word": "can't",
+          "begin": 223300,
+          "end": 223500
+        },
+        {
+          "word": "know",
+          "begin": 223520,
+          "end": 223640
+        },
+        {
+          "word": "what",
+          "begin": 223780,
+          "end": 223920
+        },
+        {
+          "word": "fields",
+          "begin": 223960,
+          "end": 224240
+        },
+        {
+          "word": "they",
+          "begin": 224240,
+          "end": 224360
+        },
+        {
+          "word": "need.",
+          "begin": 224440,
+          "end": 224680
+        },
+        {
+          "word": "Instead,",
+          "begin": 224840,
+          "end": 225380
+        },
+        {
+          "word": "you",
+          "begin": 225560,
+          "end": 225600
+        },
+        {
+          "word": "provide",
+          "begin": 225680,
+          "end": 226040
+        },
+        {
+          "word": "everything",
+          "begin": 226160,
+          "end": 226580
+        },
+        {
+          "word": "manually:",
+          "begin": 226640,
+          "end": 227120
+        }
+      ]
+    },
+    {
+      "blockIndex": 13,
+      "type": "paragraph",
+      "text": "NVMe stores numbers with the smallest byte first. So the value 0x00001000 (4096) isn't stored as 00 00 10 00 — it's stored reversed: 00 10 00 00. This is called little-endian. Try it:",
+      "beginMs": 227520,
+      "endMs": 253200,
+      "timestamps": [
+        {
+          "word": "NVMe",
+          "begin": 227520,
+          "end": 228100
+        },
+        {
+          "word": "stores",
+          "begin": 228280,
+          "end": 228640
+        },
+        {
+          "word": "numbers",
+          "begin": 228640,
+          "end": 229000
+        },
+        {
+          "word": "with",
+          "begin": 229060,
+          "end": 229200
+        },
+        {
+          "word": "the",
+          "begin": 229200,
+          "end": 229240
+        },
+        {
+          "word": "smallest",
+          "begin": 229360,
+          "end": 229800
+        },
+        {
+          "word": "byte",
+          "begin": 229860,
+          "end": 230180
+        },
+        {
+          "word": "first.",
+          "begin": 230180,
+          "end": 230560
+        },
+        {
+          "word": "So",
+          "begin": 230880,
+          "end": 230940
+        },
+        {
+          "word": "the",
+          "begin": 231020,
+          "end": 231080
+        },
+        {
+          "word": "value",
+          "begin": 231140,
+          "end": 231440
+        },
+        {
+          "word": "(4096)",
+          "begin": 231580,
+          "end": 238660
+        },
+        {
+          "word": "isn't",
+          "begin": 238740,
+          "end": 239220
+        },
+        {
+          "word": "as",
+          "begin": 239260,
+          "end": 239520
+        },
+        {
+          "word": "00",
+          "begin": 239580,
+          "end": 241240
+        },
+        {
+          "word": "10",
+          "begin": 241440,
+          "end": 241680
+        },
+        {
+          "word": "00",
+          "begin": 242040,
+          "end": 242820
+        },
+        {
+          "word": "it's",
+          "begin": 242820,
+          "end": 242940
+        },
+        {
+          "word": "little-endian.",
+          "begin": 242820,
+          "end": 243480
+        },
+        {
+          "word": "Try",
+          "begin": 243620,
+          "end": 244660
+        },
+        {
+          "word": "it:",
+          "begin": 244940,
+          "end": 245100
+        },
+        {
+          "word": "NVMe",
+          "begin": 245260,
+          "end": 245280
+        },
+        {
+          "word": "uses",
+          "begin": 245560,
+          "end": 245900
+        },
+        {
+          "word": "little-endian",
+          "begin": 245960,
+          "end": 246640
+        },
+        {
+          "word": "because",
+          "begin": 246640,
+          "end": 247020
+        },
+        {
+          "word": "it",
+          "begin": 247040,
+          "end": 247100
+        },
+        {
+          "word": "runs",
+          "begin": 247100,
+          "end": 247380
+        },
+        {
+          "word": "over",
+          "begin": 247440,
+          "end": 247740
+        },
+        {
+          "word": "PCIe",
+          "begin": 247880,
+          "end": 250900
+        },
+        {
+          "word": "on",
+          "begin": 251060,
+          "end": 251360
+        },
+        {
+          "word": "which",
+          "begin": 251600,
+          "end": 251720
+        },
+        {
+          "word": "are",
+          "begin": 251760,
+          "end": 251780
+        },
+        {
+          "word": "little-endian.",
+          "begin": 251880,
+          "end": 252560
+        },
+        {
+          "word": "Binary",
+          "begin": 252800,
+          "end": 253200
+        }
+      ]
+    },
+    {
+      "blockIndex": 14,
+      "type": "paragraph",
+      "text": "NVMe uses little-endian because it runs over PCIe on x86 CPUs, which are little-endian. Binary data from the drive is also little-endian — if you don't reverse the bytes when reading, you'll misread every value.",
+      "beginMs": 253300,
+      "endMs": 259339,
+      "timestamps": [
+        {
+          "word": "data",
+          "begin": 253300,
+          "end": 253520
+        },
+        {
+          "word": "from",
+          "begin": 253560,
+          "end": 253740
+        },
+        {
+          "word": "the",
+          "begin": 253760,
+          "end": 253820
+        },
+        {
+          "word": "drive",
+          "begin": 253880,
+          "end": 254260
+        },
+        {
+          "word": "is",
+          "begin": 254320,
+          "end": 254420
+        },
+        {
+          "word": "also",
+          "begin": 254520,
+          "end": 254780
+        },
+        {
+          "word": "little-endian",
+          "begin": 254900,
+          "end": 255600
+        },
+        {
+          "word": "if",
+          "begin": 255840,
+          "end": 255940
+        },
+        {
+          "word": "you",
+          "begin": 255940,
+          "end": 256000
+        },
+        {
+          "word": "don't",
+          "begin": 256079,
+          "end": 256260
+        },
+        {
+          "word": "reverse",
+          "begin": 256260,
+          "end": 256600
+        },
+        {
+          "word": "the",
+          "begin": 256640,
+          "end": 256700
+        },
+        {
+          "word": "bytes",
+          "begin": 256760,
+          "end": 257000
+        },
+        {
+          "word": "when",
+          "begin": 257040,
+          "end": 257180
+        },
+        {
+          "word": "reading,",
+          "begin": 257240,
+          "end": 257600
+        },
+        {
+          "word": "you'll",
+          "begin": 257839,
+          "end": 257959
+        },
+        {
+          "word": "misread",
+          "begin": 258019,
+          "end": 258440
+        },
+        {
+          "word": "every",
+          "begin": 258540,
+          "end": 258700
+        },
+        {
+          "word": "value.",
+          "begin": 258700,
+          "end": 259140
+        },
+        {
+          "word": "A",
+          "begin": 259320,
+          "end": 259339
+        }
+      ]
+    },
+    {
+      "blockIndex": 15,
+      "type": "paragraph",
+      "text": "A DWord (Double Word) is always 4 bytes. The number is just an index — CDW10 means &ldquo;the 10th dword&rdquo; (bytes 40–43), not 10 bytes. An NVMe SQ entry is 16 DWords × 4 bytes = 64 bytes. Vendor data structures also use 4-byte alignment — each field below spans exactly one dword.",
+      "beginMs": 259420,
+      "endMs": 284620,
+      "timestamps": [
+        {
+          "word": "DWord",
+          "begin": 259420,
+          "end": 259779
+        },
+        {
+          "word": "(Double",
+          "begin": 259779,
+          "end": 260040
+        },
+        {
+          "word": "Word)",
+          "begin": 260140,
+          "end": 260380
+        },
+        {
+          "word": "is",
+          "begin": 260440,
+          "end": 260540
+        },
+        {
+          "word": "always",
+          "begin": 260620,
+          "end": 260899
+        },
+        {
+          "word": "4",
+          "begin": 260980,
+          "end": 261060
+        },
+        {
+          "word": "bytes.",
+          "begin": 261200,
+          "end": 261560
+        },
+        {
+          "word": "The",
+          "begin": 261839,
+          "end": 261899
+        },
+        {
+          "word": "number",
+          "begin": 261940,
+          "end": 262340
+        },
+        {
+          "word": "is",
+          "begin": 262380,
+          "end": 262400
+        },
+        {
+          "word": "just",
+          "begin": 262400,
+          "end": 262680
+        },
+        {
+          "word": "an",
+          "begin": 262700,
+          "end": 262760
+        },
+        {
+          "word": "index",
+          "begin": 262840,
+          "end": 263340
+        },
+        {
+          "word": "CDW10",
+          "begin": 263720,
+          "end": 265400
+        },
+        {
+          "word": "means",
+          "begin": 265420,
+          "end": 265500
+        },
+        {
+          "word": "&ldquo;the",
+          "begin": 265600,
+          "end": 267620
+        },
+        {
+          "word": "10th",
+          "begin": 267700,
+          "end": 267800
+        },
+        {
+          "word": "dword&rdquo;",
+          "begin": 267900,
+          "end": 268460
+        },
+        {
+          "word": "(bytes",
+          "begin": 269000,
+          "end": 269260
+        },
+        {
+          "word": "40–43),",
+          "begin": 269340,
+          "end": 270220
+        },
+        {
+          "word": "not",
+          "begin": 270640,
+          "end": 270820
+        },
+        {
+          "word": "10",
+          "begin": 270880,
+          "end": 271080
+        },
+        {
+          "word": "bytes.",
+          "begin": 271140,
+          "end": 273000
+        },
+        {
+          "word": "An",
+          "begin": 273200,
+          "end": 273380
+        },
+        {
+          "word": "SQ",
+          "begin": 273460,
+          "end": 273600
+        },
+        {
+          "word": "entry",
+          "begin": 273880,
+          "end": 274160
+        },
+        {
+          "word": "is",
+          "begin": 274380,
+          "end": 274460
+        },
+        {
+          "word": "16",
+          "begin": 274540,
+          "end": 274960
+        },
+        {
+          "word": "DWords",
+          "begin": 275020,
+          "end": 275460
+        },
+        {
+          "word": "×",
+          "begin": 275480,
+          "end": 275900
+        },
+        {
+          "word": "4",
+          "begin": 275980,
+          "end": 276060
+        },
+        {
+          "word": "bytes",
+          "begin": 276220,
+          "end": 276540
+        },
+        {
+          "word": "=",
+          "begin": 276680,
+          "end": 276880
+        },
+        {
+          "word": "64",
+          "begin": 277040,
+          "end": 277480
+        },
+        {
+          "word": "bytes.",
+          "begin": 277620,
+          "end": 278000
+        },
+        {
+          "word": "Vendor",
+          "begin": 278220,
+          "end": 278460
+        },
+        {
+          "word": "data",
+          "begin": 278560,
+          "end": 278760
+        },
+        {
+          "word": "structures",
+          "begin": 278840,
+          "end": 279340
+        },
+        {
+          "word": "also",
+          "begin": 279480,
+          "end": 279820
+        },
+        {
+          "word": "use",
+          "begin": 279820,
+          "end": 280020
+        },
+        {
+          "word": "4-byte",
+          "begin": 280120,
+          "end": 280540
+        },
+        {
+          "word": "alignment",
+          "begin": 280580,
+          "end": 281080
+        },
+        {
+          "word": "each",
+          "begin": 281280,
+          "end": 281440
+        },
+        {
+          "word": "field",
+          "begin": 281540,
+          "end": 281760
+        },
+        {
+          "word": "below",
+          "begin": 281800,
+          "end": 281980
+        },
+        {
+          "word": "spans",
+          "begin": 282160,
+          "end": 282500
+        },
+        {
+          "word": "exactly",
+          "begin": 282520,
+          "end": 282960
+        },
+        {
+          "word": "one",
+          "begin": 283040,
+          "end": 283200
+        },
+        {
+          "word": "dword.",
+          "begin": 283260,
+          "end": 283680
+        },
+        {
+          "word": "An",
+          "begin": 283940,
+          "end": 284020
+        },
+        {
+          "word": "offset",
+          "begin": 284080,
+          "end": 284460
+        },
+        {
+          "word": "is",
+          "begin": 284520,
+          "end": 284620
+        }
+      ]
+    },
+    {
+      "blockIndex": 16,
+      "type": "paragraph",
+      "text": "An offset is just a position — how many bytes from the start of the data. Byte 0 is at offset 0, byte 16 is at offset 0x10, byte 32 is at 0x20, and so on. hexdump -C shows your binary data in rows of 16 bytes. Click any byte below to see how it works:",
+      "beginMs": 284660,
+      "endMs": 302660,
+      "timestamps": [
+        {
+          "word": "just",
+          "begin": 284660,
+          "end": 284880
+        },
+        {
+          "word": "a",
+          "begin": 284880,
+          "end": 284920
+        },
+        {
+          "word": "position",
+          "begin": 284960,
+          "end": 285440
+        },
+        {
+          "word": "how",
+          "begin": 285700,
+          "end": 285780
+        },
+        {
+          "word": "many",
+          "begin": 285860,
+          "end": 286000
+        },
+        {
+          "word": "bytes",
+          "begin": 286100,
+          "end": 286360
+        },
+        {
+          "word": "from",
+          "begin": 286420,
+          "end": 286540
+        },
+        {
+          "word": "the",
+          "begin": 286540,
+          "end": 286600
+        },
+        {
+          "word": "start",
+          "begin": 286660,
+          "end": 286900
+        },
+        {
+          "word": "of",
+          "begin": 286900,
+          "end": 286960
+        },
+        {
+          "word": "the",
+          "begin": 287000,
+          "end": 287060
+        },
+        {
+          "word": "data.",
+          "begin": 287120,
+          "end": 287360
+        },
+        {
+          "word": "Byte",
+          "begin": 287720,
+          "end": 287920
+        },
+        {
+          "word": "0",
+          "begin": 287980,
+          "end": 288220
+        },
+        {
+          "word": "is",
+          "begin": 288420,
+          "end": 288520
+        },
+        {
+          "word": "at",
+          "begin": 288580,
+          "end": 288700
+        },
+        {
+          "word": "offset",
+          "begin": 288800,
+          "end": 289180
+        },
+        {
+          "word": "0,",
+          "begin": 289240,
+          "end": 289480
+        },
+        {
+          "word": "byte",
+          "begin": 289860,
+          "end": 290060
+        },
+        {
+          "word": "16",
+          "begin": 290140,
+          "end": 290680
+        },
+        {
+          "word": "is",
+          "begin": 290800,
+          "end": 290900
+        },
+        {
+          "word": "at",
+          "begin": 290940,
+          "end": 291060
+        },
+        {
+          "word": "offset",
+          "begin": 291160,
+          "end": 291580
+        },
+        {
+          "word": "0x10,",
+          "begin": 291640,
+          "end": 292560
+        },
+        {
+          "word": "byte",
+          "begin": 292840,
+          "end": 293080
+        },
+        {
+          "word": "32",
+          "begin": 293160,
+          "end": 293560
+        },
+        {
+          "word": "is",
+          "begin": 293840,
+          "end": 293960
+        },
+        {
+          "word": "at",
+          "begin": 294000,
+          "end": 294120
+        },
+        {
+          "word": "0x20,",
+          "begin": 294200,
+          "end": 295080
+        },
+        {
+          "word": "and",
+          "begin": 295400,
+          "end": 295500
+        },
+        {
+          "word": "so",
+          "begin": 295580,
+          "end": 295660
+        },
+        {
+          "word": "on.",
+          "begin": 295820,
+          "end": 296000
+        },
+        {
+          "word": "hexdump",
+          "begin": 296180,
+          "end": 296640
+        },
+        {
+          "word": "-C",
+          "begin": 296740,
+          "end": 296820
+        },
+        {
+          "word": "shows",
+          "begin": 297040,
+          "end": 297280
+        },
+        {
+          "word": "your",
+          "begin": 297300,
+          "end": 297360
+        },
+        {
+          "word": "binary",
+          "begin": 297460,
+          "end": 297840
+        },
+        {
+          "word": "data",
+          "begin": 297920,
+          "end": 298160
+        },
+        {
+          "word": "in",
+          "begin": 298340,
+          "end": 298420
+        },
+        {
+          "word": "rows",
+          "begin": 298500,
+          "end": 298840
+        },
+        {
+          "word": "of",
+          "begin": 298840,
+          "end": 298860
+        },
+        {
+          "word": "16",
+          "begin": 298920,
+          "end": 299340
+        },
+        {
+          "word": "bytes.",
+          "begin": 299380,
+          "end": 299740
+        },
+        {
+          "word": "Click",
+          "begin": 300040,
+          "end": 300280
+        },
+        {
+          "word": "any",
+          "begin": 300360,
+          "end": 300440
+        },
+        {
+          "word": "byte",
+          "begin": 300440,
+          "end": 300760
+        },
+        {
+          "word": "below",
+          "begin": 300800,
+          "end": 300980
+        },
+        {
+          "word": "to",
+          "begin": 301180,
+          "end": 301260
+        },
+        {
+          "word": "see",
+          "begin": 301360,
+          "end": 301440
+        },
+        {
+          "word": "how",
+          "begin": 301520,
+          "end": 301600
+        },
+        {
+          "word": "it",
+          "begin": 301680,
+          "end": 301760
+        },
+        {
+          "word": "works:",
+          "begin": 301800,
+          "end": 302140
+        },
+        {
+          "word": "Note:",
+          "begin": 302420,
+          "end": 302660
+        }
+      ]
+    },
+    {
+      "blockIndex": 17,
+      "type": "paragraph",
+      "text": "Note: the data below is a fictional example — a made-up vendor health structure to teach hexdump reading. Real vendor data structures are proprietary and not publicly documented. In practice, you'd get the field layout from the vendor's internal spec or SDK documentation.",
+      "beginMs": 302920,
+      "endMs": 317560,
+      "timestamps": [
+        {
+          "word": "the",
+          "begin": 302920,
+          "end": 302960
+        },
+        {
+          "word": "data",
+          "begin": 303020,
+          "end": 303180
+        },
+        {
+          "word": "below",
+          "begin": 303240,
+          "end": 303420
+        },
+        {
+          "word": "is",
+          "begin": 303600,
+          "end": 303680
+        },
+        {
+          "word": "a",
+          "begin": 303680,
+          "end": 303720
+        },
+        {
+          "word": "fictional",
+          "begin": 303840,
+          "end": 304220
+        },
+        {
+          "word": "example",
+          "begin": 304240,
+          "end": 304980
+        },
+        {
+          "word": "a",
+          "begin": 305040,
+          "end": 305120
+        },
+        {
+          "word": "made-up",
+          "begin": 305200,
+          "end": 305420
+        },
+        {
+          "word": "vendor",
+          "begin": 305420,
+          "end": 305740
+        },
+        {
+          "word": "health",
+          "begin": 305740,
+          "end": 305920
+        },
+        {
+          "word": "structure",
+          "begin": 305980,
+          "end": 306340
+        },
+        {
+          "word": "to",
+          "begin": 306520,
+          "end": 306600
+        },
+        {
+          "word": "teach",
+          "begin": 306680,
+          "end": 306920
+        },
+        {
+          "word": "hexdump",
+          "begin": 306980,
+          "end": 307440
+        },
+        {
+          "word": "reading.",
+          "begin": 307500,
+          "end": 307840
+        },
+        {
+          "word": "Real",
+          "begin": 308020,
+          "end": 308220
+        },
+        {
+          "word": "vendor",
+          "begin": 308300,
+          "end": 308520
+        },
+        {
+          "word": "data",
+          "begin": 308600,
+          "end": 308800
+        },
+        {
+          "word": "structures",
+          "begin": 308880,
+          "end": 309380
+        },
+        {
+          "word": "are",
+          "begin": 309480,
+          "end": 309500
+        },
+        {
+          "word": "proprietary",
+          "begin": 309580,
+          "end": 310260
+        },
+        {
+          "word": "and",
+          "begin": 310420,
+          "end": 310520
+        },
+        {
+          "word": "not",
+          "begin": 310560,
+          "end": 310760
+        },
+        {
+          "word": "publicly",
+          "begin": 310820,
+          "end": 311220
+        },
+        {
+          "word": "documented.",
+          "begin": 311300,
+          "end": 311960
+        },
+        {
+          "word": "In",
+          "begin": 312160,
+          "end": 312220
+        },
+        {
+          "word": "practice,",
+          "begin": 312280,
+          "end": 312800
+        },
+        {
+          "word": "you'd",
+          "begin": 312920,
+          "end": 313060
+        },
+        {
+          "word": "get",
+          "begin": 313100,
+          "end": 313260
+        },
+        {
+          "word": "the",
+          "begin": 313280,
+          "end": 313320
+        },
+        {
+          "word": "field",
+          "begin": 313420,
+          "end": 313600
+        },
+        {
+          "word": "layout",
+          "begin": 313640,
+          "end": 314060
+        },
+        {
+          "word": "from",
+          "begin": 314120,
+          "end": 314260
+        },
+        {
+          "word": "the",
+          "begin": 314260,
+          "end": 314320
+        },
+        {
+          "word": "vendor's",
+          "begin": 314380,
+          "end": 314740
+        },
+        {
+          "word": "internal",
+          "begin": 314760,
+          "end": 315120
+        },
+        {
+          "word": "spec",
+          "begin": 315240,
+          "end": 315540
+        },
+        {
+          "word": "or",
+          "begin": 315660,
+          "end": 315680
+        },
+        {
+          "word": "SDK",
+          "begin": 315840,
+          "end": 316260
+        },
+        {
+          "word": "documentation.",
+          "begin": 316380,
+          "end": 317240
+        },
+        {
+          "word": "Many",
+          "begin": 317420,
+          "end": 317560
+        }
+      ]
+    },
+    {
+      "blockIndex": 18,
+      "type": "paragraph",
+      "text": "Many vendor commands transfer data between the host and drive. But what does this data actually look like? And how does it relate to the passthru flags?",
+      "beginMs": 317680,
+      "endMs": 325120,
+      "timestamps": [
+        {
+          "word": "vendor",
+          "begin": 317680,
+          "end": 317980
+        },
+        {
+          "word": "commands",
+          "begin": 317980,
+          "end": 318400
+        },
+        {
+          "word": "transfer",
+          "begin": 318480,
+          "end": 318860
+        },
+        {
+          "word": "data",
+          "begin": 318940,
+          "end": 319160
+        },
+        {
+          "word": "between",
+          "begin": 319220,
+          "end": 319520
+        },
+        {
+          "word": "the",
+          "begin": 319520,
+          "end": 319580
+        },
+        {
+          "word": "host",
+          "begin": 319660,
+          "end": 319980
+        },
+        {
+          "word": "and",
+          "begin": 320040,
+          "end": 320180
+        },
+        {
+          "word": "drive.",
+          "begin": 320180,
+          "end": 320580
+        },
+        {
+          "word": "But",
+          "begin": 320960,
+          "end": 321040
+        },
+        {
+          "word": "what",
+          "begin": 321080,
+          "end": 321200
+        },
+        {
+          "word": "does",
+          "begin": 321220,
+          "end": 321340
+        },
+        {
+          "word": "this",
+          "begin": 321340,
+          "end": 321540
+        },
+        {
+          "word": "data",
+          "begin": 321580,
+          "end": 321780
+        },
+        {
+          "word": "actually",
+          "begin": 321900,
+          "end": 322240
+        },
+        {
+          "word": "look",
+          "begin": 322320,
+          "end": 322480
+        },
+        {
+          "word": "like?",
+          "begin": 322500,
+          "end": 322760
+        },
+        {
+          "word": "And",
+          "begin": 323160,
+          "end": 323240
+        },
+        {
+          "word": "how",
+          "begin": 323280,
+          "end": 323360
+        },
+        {
+          "word": "does",
+          "begin": 323440,
+          "end": 323560
+        },
+        {
+          "word": "it",
+          "begin": 323600,
+          "end": 323640
+        },
+        {
+          "word": "relate",
+          "begin": 323640,
+          "end": 323960
+        },
+        {
+          "word": "to",
+          "begin": 324000,
+          "end": 324040
+        },
+        {
+          "word": "the",
+          "begin": 324080,
+          "end": 324120
+        },
+        {
+          "word": "passthru",
+          "begin": 324180,
+          "end": 324600
+        },
+        {
+          "word": "flags?",
+          "begin": 324700,
+          "end": 325120
+        }
+      ]
+    },
+    {
+      "blockIndex": 19,
+      "type": "paragraph",
+      "text": "Let's think about it: the NVMe command itself is just 64 bytes — the SQE. But some commands need to send or receive much more data. A vendor diagnostic dump might return 4 KB of health telemetry. A firmware patch might require sending a 1 MB binary blob. That data doesn't fit in the SQE.",
+      "beginMs": 325440,
+      "endMs": 344160,
+      "timestamps": [
+        {
+          "word": "Let's",
+          "begin": 325440,
+          "end": 325620
+        },
+        {
+          "word": "think",
+          "begin": 325680,
+          "end": 325820
+        },
+        {
+          "word": "about",
+          "begin": 325840,
+          "end": 326200
+        },
+        {
+          "word": "it:",
+          "begin": 326200,
+          "end": 325960
+        },
+        {
+          "word": "the",
+          "begin": 326060,
+          "end": 326120
+        },
+        {
+          "word": "NVMe",
+          "begin": 326180,
+          "end": 326840
+        },
+        {
+          "word": "command",
+          "begin": 326900,
+          "end": 327200
+        },
+        {
+          "word": "itself",
+          "begin": 327220,
+          "end": 327520
+        },
+        {
+          "word": "is",
+          "begin": 327540,
+          "end": 327640
+        },
+        {
+          "word": "just",
+          "begin": 327720,
+          "end": 328160
+        },
+        {
+          "word": "64",
+          "begin": 328220,
+          "end": 328680
+        },
+        {
+          "word": "bytes",
+          "begin": 328720,
+          "end": 329440
+        },
+        {
+          "word": "the",
+          "begin": 329800,
+          "end": 329860
+        },
+        {
+          "word": "SQE.",
+          "begin": 329920,
+          "end": 330340
+        },
+        {
+          "word": "But",
+          "begin": 330840,
+          "end": 330960
+        },
+        {
+          "word": "some",
+          "begin": 331020,
+          "end": 331180
+        },
+        {
+          "word": "commands",
+          "begin": 331240,
+          "end": 331660
+        },
+        {
+          "word": "need",
+          "begin": 331720,
+          "end": 331860
+        },
+        {
+          "word": "to",
+          "begin": 331900,
+          "end": 331960
+        },
+        {
+          "word": "send",
+          "begin": 332080,
+          "end": 332380
+        },
+        {
+          "word": "or",
+          "begin": 332460,
+          "end": 332480
+        },
+        {
+          "word": "receive",
+          "begin": 332560,
+          "end": 332920
+        },
+        {
+          "word": "much",
+          "begin": 333020,
+          "end": 333180
+        },
+        {
+          "word": "more",
+          "begin": 333260,
+          "end": 333320
+        },
+        {
+          "word": "data.",
+          "begin": 333439,
+          "end": 333680
+        },
+        {
+          "word": "A",
+          "begin": 334200,
+          "end": 334300
+        },
+        {
+          "word": "vendor",
+          "begin": 334300,
+          "end": 334540
+        },
+        {
+          "word": "diagnostic",
+          "begin": 334600,
+          "end": 335240
+        },
+        {
+          "word": "dump",
+          "begin": 335300,
+          "end": 335540
+        },
+        {
+          "word": "might",
+          "begin": 335800,
+          "end": 335960
+        },
+        {
+          "word": "return",
+          "begin": 335980,
+          "end": 336340
+        },
+        {
+          "word": "4",
+          "begin": 336460,
+          "end": 336540
+        },
+        {
+          "word": "KB",
+          "begin": 336700,
+          "end": 337200
+        },
+        {
+          "word": "of",
+          "begin": 337300,
+          "end": 337380
+        },
+        {
+          "word": "health",
+          "begin": 337440,
+          "end": 337640
+        },
+        {
+          "word": "telemetry.",
+          "begin": 337700,
+          "end": 338180
+        },
+        {
+          "word": "A",
+          "begin": 338180,
+          "end": 337760
+        },
+        {
+          "word": "firmware",
+          "begin": 337820,
+          "end": 338160
+        },
+        {
+          "word": "patch",
+          "begin": 338160,
+          "end": 338960
+        },
+        {
+          "word": "might",
+          "begin": 339060,
+          "end": 339300
+        },
+        {
+          "word": "require",
+          "begin": 339360,
+          "end": 339560
+        },
+        {
+          "word": "sending",
+          "begin": 339800,
+          "end": 340020
+        },
+        {
+          "word": "a",
+          "begin": 340020,
+          "end": 340160
+        },
+        {
+          "word": "1",
+          "begin": 340160,
+          "end": 340220
+        },
+        {
+          "word": "MB",
+          "begin": 340320,
+          "end": 340640
+        },
+        {
+          "word": "binary",
+          "begin": 340640,
+          "end": 340960
+        },
+        {
+          "word": "blob.",
+          "begin": 341040,
+          "end": 341260
+        },
+        {
+          "word": "That",
+          "begin": 341280,
+          "end": 341380
+        },
+        {
+          "word": "data",
+          "begin": 341380,
+          "end": 341620
+        },
+        {
+          "word": "doesn't",
+          "begin": 341720,
+          "end": 342200
+        },
+        {
+          "word": "fit",
+          "begin": 342240,
+          "end": 343340
+        },
+        {
+          "word": "in",
+          "begin": 343360,
+          "end": 343460
+        },
+        {
+          "word": "the",
+          "begin": 343500,
+          "end": 343580
+        },
+        {
+          "word": "SQE.",
+          "begin": 343640,
+          "end": 343940
+        },
+        {
+          "word": "So",
+          "begin": 343940,
+          "end": 344160
+        }
+      ]
+    },
+    {
+      "blockIndex": 20,
+      "type": "paragraph",
+      "text": "So where does the data go? Remember DW6-DW9 in the SQE — the PRP (Physical Region Page) pointers? They point to a buffer in host memory. The drive reads from or writes to that buffer via DMA (Direct Memory Access) over PCIe. When you specify --data-len=4096, nvme-cli allocates a 4096-byte buffer, puts its address in DW6-DW9, and the drive fills it.",
+      "beginMs": 344220,
+      "endMs": 383300,
+      "timestamps": [
+        {
+          "word": "where",
+          "begin": 344220,
+          "end": 344340
+        },
+        {
+          "word": "does",
+          "begin": 344360,
+          "end": 344640
+        },
+        {
+          "word": "the",
+          "begin": 344700,
+          "end": 344780
+        },
+        {
+          "word": "data",
+          "begin": 344780,
+          "end": 346600
+        },
+        {
+          "word": "go?",
+          "begin": 346660,
+          "end": 347060
+        },
+        {
+          "word": "Remember",
+          "begin": 347580,
+          "end": 348060
+        },
+        {
+          "word": "DW6-DW9",
+          "begin": 348060,
+          "end": 350580
+        },
+        {
+          "word": "in",
+          "begin": 350580,
+          "end": 350660
+        },
+        {
+          "word": "the",
+          "begin": 350680,
+          "end": 350720
+        },
+        {
+          "word": "SQE",
+          "begin": 350840,
+          "end": 352260
+        },
+        {
+          "word": "the",
+          "begin": 352400,
+          "end": 352500
+        },
+        {
+          "word": "(Physical",
+          "begin": 352660,
+          "end": 352980
+        },
+        {
+          "word": "Region",
+          "begin": 353060,
+          "end": 353340
+        },
+        {
+          "word": "Page)",
+          "begin": 353400,
+          "end": 353620
+        },
+        {
+          "word": "pointers?",
+          "begin": 353700,
+          "end": 354220
+        },
+        {
+          "word": "They",
+          "begin": 355220,
+          "end": 355280
+        },
+        {
+          "word": "point",
+          "begin": 355380,
+          "end": 355600
+        },
+        {
+          "word": "to",
+          "begin": 355640,
+          "end": 355720
+        },
+        {
+          "word": "a",
+          "begin": 355780,
+          "end": 355800
+        },
+        {
+          "word": "buffer",
+          "begin": 355860,
+          "end": 356120
+        },
+        {
+          "word": "in",
+          "begin": 356240,
+          "end": 356320
+        },
+        {
+          "word": "host",
+          "begin": 356380,
+          "end": 356640
+        },
+        {
+          "word": "memory.",
+          "begin": 356700,
+          "end": 356980
+        },
+        {
+          "word": "The",
+          "begin": 358140,
+          "end": 358200
+        },
+        {
+          "word": "drive",
+          "begin": 358260,
+          "end": 358580
+        },
+        {
+          "word": "reads",
+          "begin": 358660,
+          "end": 358920
+        },
+        {
+          "word": "from",
+          "begin": 359000,
+          "end": 359260
+        },
+        {
+          "word": "or",
+          "begin": 359520,
+          "end": 359540
+        },
+        {
+          "word": "writes",
+          "begin": 359680,
+          "end": 359940
+        },
+        {
+          "word": "to",
+          "begin": 360020,
+          "end": 360120
+        },
+        {
+          "word": "that",
+          "begin": 360220,
+          "end": 360400
+        },
+        {
+          "word": "buffer",
+          "begin": 360440,
+          "end": 360700
+        },
+        {
+          "word": "via",
+          "begin": 360860,
+          "end": 361000
+        },
+        {
+          "word": "DMA",
+          "begin": 361120,
+          "end": 361700
+        },
+        {
+          "word": "(Direct",
+          "begin": 361900,
+          "end": 362240
+        },
+        {
+          "word": "Memory",
+          "begin": 362320,
+          "end": 362560
+        },
+        {
+          "word": "Access)",
+          "begin": 362700,
+          "end": 363160
+        },
+        {
+          "word": "over",
+          "begin": 363280,
+          "end": 363540
+        },
+        {
+          "word": "PCIe.",
+          "begin": 363540,
+          "end": 364160
+        },
+        {
+          "word": "When",
+          "begin": 365020,
+          "end": 365140
+        },
+        {
+          "word": "you",
+          "begin": 365140,
+          "end": 365200
+        },
+        {
+          "word": "specify",
+          "begin": 365300,
+          "end": 366100
+        },
+        {
+          "word": "nvme-cli",
+          "begin": 366200,
+          "end": 371340
+        },
+        {
+          "word": "allocates",
+          "begin": 371640,
+          "end": 372120
+        },
+        {
+          "word": "a",
+          "begin": 372160,
+          "end": 372380
+        },
+        {
+          "word": "4096-byte",
+          "begin": 372600,
+          "end": 373680
+        },
+        {
+          "word": "buffer,",
+          "begin": 373740,
+          "end": 374000
+        },
+        {
+          "word": "puts",
+          "begin": 374620,
+          "end": 374800
+        },
+        {
+          "word": "its",
+          "begin": 374820,
+          "end": 374940
+        },
+        {
+          "word": "address",
+          "begin": 375060,
+          "end": 375420
+        },
+        {
+          "word": "in",
+          "begin": 375440,
+          "end": 375520
+        },
+        {
+          "word": "DW6-DW9,",
+          "begin": 375600,
+          "end": 377840
+        },
+        {
+          "word": "and",
+          "begin": 378440,
+          "end": 378540
+        },
+        {
+          "word": "the",
+          "begin": 378540,
+          "end": 378580
+        },
+        {
+          "word": "drive",
+          "begin": 378660,
+          "end": 381240
+        },
+        {
+          "word": "fills",
+          "begin": 381620,
+          "end": 382080
+        },
+        {
+          "word": "it.",
+          "begin": 382200,
+          "end": 382319
+        },
+        {
+          "word": "nvme-cli",
+          "begin": 382360,
+          "end": 382379
+        },
+        {
+          "word": "allocates",
+          "begin": 382700,
+          "end": 383200
+        },
+        {
+          "word": "an",
+          "begin": 383220,
+          "end": 383300
+        }
+      ]
+    },
+    {
+      "blockIndex": 21,
+      "type": "paragraph",
+      "text": "nvme-cli allocates an empty buffer. The command tells the drive &ldquo;fill this buffer with data.&rdquo; After completion, nvme-cli prints the buffer content to stdout as raw binary.",
+      "beginMs": 383380,
+      "endMs": 395840,
+      "timestamps": [
+        {
+          "word": "empty",
+          "begin": 383380,
+          "end": 383600
+        },
+        {
+          "word": "buffer.",
+          "begin": 383680,
+          "end": 383940
+        },
+        {
+          "word": "The",
+          "begin": 384720,
+          "end": 384760
+        },
+        {
+          "word": "command",
+          "begin": 384820,
+          "end": 385160
+        },
+        {
+          "word": "tells",
+          "begin": 385200,
+          "end": 385440
+        },
+        {
+          "word": "the",
+          "begin": 385480,
+          "end": 385540
+        },
+        {
+          "word": "drive",
+          "begin": 385600,
+          "end": 385980
+        },
+        {
+          "word": "&ldquo;fill",
+          "begin": 386080,
+          "end": 387420
+        },
+        {
+          "word": "this",
+          "begin": 387420,
+          "end": 387620
+        },
+        {
+          "word": "buffer",
+          "begin": 387620,
+          "end": 388060
+        },
+        {
+          "word": "with",
+          "begin": 388140,
+          "end": 388260
+        },
+        {
+          "word": "data.&rdquo;",
+          "begin": 388340,
+          "end": 389240
+        },
+        {
+          "word": "After",
+          "begin": 390040,
+          "end": 390260
+        },
+        {
+          "word": "completion,",
+          "begin": 390340,
+          "end": 390960
+        },
+        {
+          "word": "nvme-cli",
+          "begin": 391520,
+          "end": 392780
+        },
+        {
+          "word": "prints",
+          "begin": 393020,
+          "end": 393260
+        },
+        {
+          "word": "the",
+          "begin": 393320,
+          "end": 393360
+        },
+        {
+          "word": "buffer",
+          "begin": 393420,
+          "end": 393740
+        },
+        {
+          "word": "content",
+          "begin": 393740,
+          "end": 394160
+        },
+        {
+          "word": "to",
+          "begin": 394160,
+          "end": 394260
+        },
+        {
+          "word": "stdout",
+          "begin": 394360,
+          "end": 394740
+        },
+        {
+          "word": "as",
+          "begin": 394780,
+          "end": 394880
+        },
+        {
+          "word": "raw",
+          "begin": 394900,
+          "end": 395000
+        },
+        {
+          "word": "binary.",
+          "begin": 395080,
+          "end": 395840
+        }
+      ]
+    },
+    {
+      "blockIndex": 22,
+      "type": "paragraph",
+      "text": "nvme-cli fills the buffer from --input-file (or stdin if no file is specified). The command tells the drive &ldquo;here is data for you to process.&rdquo;",
+      "beginMs": 395880,
+      "endMs": 408920,
+      "timestamps": [
+        {
+          "word": "nvme-cli",
+          "begin": 395880,
+          "end": 397480
+        },
+        {
+          "word": "fills",
+          "begin": 397560,
+          "end": 398120
+        },
+        {
+          "word": "the",
+          "begin": 398160,
+          "end": 398300
+        },
+        {
+          "word": "buffer",
+          "begin": 398380,
+          "end": 398880
+        },
+        {
+          "word": "from",
+          "begin": 398880,
+          "end": 399040
+        },
+        {
+          "word": "--input-file",
+          "begin": 399040,
+          "end": 399640
+        },
+        {
+          "word": "(or",
+          "begin": 399720,
+          "end": 399760
+        },
+        {
+          "word": "stdin",
+          "begin": 399800,
+          "end": 400560
+        },
+        {
+          "word": "if",
+          "begin": 400720,
+          "end": 400860
+        },
+        {
+          "word": "no",
+          "begin": 400920,
+          "end": 400980
+        },
+        {
+          "word": "file",
+          "begin": 401060,
+          "end": 401460
+        },
+        {
+          "word": "is",
+          "begin": 401840,
+          "end": 401940
+        },
+        {
+          "word": "specified).",
+          "begin": 402000,
+          "end": 403300
+        },
+        {
+          "word": "The",
+          "begin": 403820,
+          "end": 403860
+        },
+        {
+          "word": "command",
+          "begin": 403900,
+          "end": 404240
+        },
+        {
+          "word": "tells",
+          "begin": 404280,
+          "end": 404500
+        },
+        {
+          "word": "the",
+          "begin": 404500,
+          "end": 404600
+        },
+        {
+          "word": "drive",
+          "begin": 404660,
+          "end": 405000
+        },
+        {
+          "word": "&ldquo;here",
+          "begin": 405100,
+          "end": 406580
+        },
+        {
+          "word": "is",
+          "begin": 406600,
+          "end": 406700
+        },
+        {
+          "word": "data",
+          "begin": 406760,
+          "end": 406960
+        },
+        {
+          "word": "for",
+          "begin": 407060,
+          "end": 407120
+        },
+        {
+          "word": "you",
+          "begin": 407200,
+          "end": 407260
+        },
+        {
+          "word": "to",
+          "begin": 407320,
+          "end": 407360
+        },
+        {
+          "word": "process.&rdquo;",
+          "begin": 407440,
+          "end": 408920
+        }
+      ]
+    },
+    {
+      "blockIndex": 23,
+      "type": "paragraph",
+      "text": "Let's walk through a complete read example. Suppose the vendor spec says: &ldquo;Opcode 0xC0 with CDW10=0x00000001 returns a 64-byte health structure.&rdquo;",
+      "beginMs": 409520,
+      "endMs": 424460,
+      "timestamps": [
+        {
+          "word": "Let's",
+          "begin": 409520,
+          "end": 409660
+        },
+        {
+          "word": "walk",
+          "begin": 409720,
+          "end": 409920
+        },
+        {
+          "word": "through",
+          "begin": 409960,
+          "end": 410040
+        },
+        {
+          "word": "a",
+          "begin": 410080,
+          "end": 410120
+        },
+        {
+          "word": "complete",
+          "begin": 410160,
+          "end": 410540
+        },
+        {
+          "word": "read",
+          "begin": 410540,
+          "end": 410760
+        },
+        {
+          "word": "example.",
+          "begin": 410780,
+          "end": 411200
+        },
+        {
+          "word": "Suppose",
+          "begin": 411820,
+          "end": 412220
+        },
+        {
+          "word": "the",
+          "begin": 412220,
+          "end": 412260
+        },
+        {
+          "word": "vendor",
+          "begin": 412320,
+          "end": 412900
+        },
+        {
+          "word": "spec",
+          "begin": 412980,
+          "end": 415660
+        },
+        {
+          "word": "says:",
+          "begin": 415800,
+          "end": 415880
+        },
+        {
+          "word": "0xC0",
+          "begin": 416000,
+          "end": 420320
+        },
+        {
+          "word": "with",
+          "begin": 420460,
+          "end": 420760
+        },
+        {
+          "word": "returns",
+          "begin": 421200,
+          "end": 421540
+        },
+        {
+          "word": "a",
+          "begin": 421580,
+          "end": 421660
+        },
+        {
+          "word": "64-byte",
+          "begin": 421780,
+          "end": 422660
+        },
+        {
+          "word": "health",
+          "begin": 422660,
+          "end": 422860
+        },
+        {
+          "word": "structure.&rdquo;",
+          "begin": 422920,
+          "end": 423300
+        },
+        {
+          "word": "4",
+          "begin": 423920,
+          "end": 424000
+        },
+        {
+          "word": "rows",
+          "begin": 424200,
+          "end": 424460
+        }
+      ]
+    },
+    {
+      "blockIndex": 24,
+      "type": "paragraph",
+      "text": "4 rows × 16 bytes = 64 bytes total — matches our --data-len=64. Now let's decode it field by field.",
+      "beginMs": 424520,
+      "endMs": 433100,
+      "timestamps": [
+        {
+          "word": "×",
+          "begin": 424520,
+          "end": 424580
+        },
+        {
+          "word": "16",
+          "begin": 424740,
+          "end": 425140
+        },
+        {
+          "word": "bytes",
+          "begin": 425200,
+          "end": 425520
+        },
+        {
+          "word": "=",
+          "begin": 425600,
+          "end": 425920
+        },
+        {
+          "word": "64",
+          "begin": 425980,
+          "end": 426420
+        },
+        {
+          "word": "bytes",
+          "begin": 426540,
+          "end": 426780
+        },
+        {
+          "word": "total",
+          "begin": 426860,
+          "end": 427100
+        },
+        {
+          "word": "matches",
+          "begin": 427500,
+          "end": 428120
+        },
+        {
+          "word": "our",
+          "begin": 428160,
+          "end": 428340
+        },
+        {
+          "word": "--data-len=64.",
+          "begin": 428440,
+          "end": 429620
+        },
+        {
+          "word": "Now",
+          "begin": 430400,
+          "end": 430640
+        },
+        {
+          "word": "let's",
+          "begin": 430640,
+          "end": 430820
+        },
+        {
+          "word": "decode",
+          "begin": 430860,
+          "end": 431180
+        },
+        {
+          "word": "it",
+          "begin": 431200,
+          "end": 431280
+        },
+        {
+          "word": "field",
+          "begin": 431360,
+          "end": 431580
+        },
+        {
+          "word": "by",
+          "begin": 431640,
+          "end": 431700
+        },
+        {
+          "word": "field.",
+          "begin": 431860,
+          "end": 432220
+        },
+        {
+          "word": "Step",
+          "begin": 432880,
+          "end": 433100
+        }
+      ]
+    },
+    {
+      "blockIndex": 25,
+      "type": "paragraph",
+      "text": "Step 3: Decode it. This is the same data shown in the interactive hexdump explorer above — scroll up and click any byte to see the field name, raw bytes, and little-endian decoded value.",
+      "beginMs": 433160,
+      "endMs": 444200,
+      "timestamps": [
+        {
+          "word": "3:",
+          "begin": 433160,
+          "end": 433300
+        },
+        {
+          "word": "it.",
+          "begin": 433300,
+          "end": 433320
+        },
+        {
+          "word": "This",
+          "begin": 434240,
+          "end": 434380
+        },
+        {
+          "word": "is",
+          "begin": 434400,
+          "end": 434480
+        },
+        {
+          "word": "the",
+          "begin": 434480,
+          "end": 434600
+        },
+        {
+          "word": "same",
+          "begin": 434740,
+          "end": 434980
+        },
+        {
+          "word": "data",
+          "begin": 435040,
+          "end": 435260
+        },
+        {
+          "word": "shown",
+          "begin": 435380,
+          "end": 435600
+        },
+        {
+          "word": "in",
+          "begin": 435600,
+          "end": 435680
+        },
+        {
+          "word": "the",
+          "begin": 435680,
+          "end": 435740
+        },
+        {
+          "word": "interactive",
+          "begin": 435820,
+          "end": 436300
+        },
+        {
+          "word": "hexdump",
+          "begin": 436340,
+          "end": 436780
+        },
+        {
+          "word": "explorer",
+          "begin": 436800,
+          "end": 437200
+        },
+        {
+          "word": "above",
+          "begin": 437280,
+          "end": 437700
+        },
+        {
+          "word": "scroll",
+          "begin": 438040,
+          "end": 438360
+        },
+        {
+          "word": "up",
+          "begin": 438400,
+          "end": 438580
+        },
+        {
+          "word": "and",
+          "begin": 438660,
+          "end": 438740
+        },
+        {
+          "word": "click",
+          "begin": 438800,
+          "end": 439040
+        },
+        {
+          "word": "any",
+          "begin": 439160,
+          "end": 439280
+        },
+        {
+          "word": "byte",
+          "begin": 439380,
+          "end": 439600
+        },
+        {
+          "word": "to",
+          "begin": 439640,
+          "end": 439700
+        },
+        {
+          "word": "see",
+          "begin": 439800,
+          "end": 439880
+        },
+        {
+          "word": "the",
+          "begin": 439960,
+          "end": 440000
+        },
+        {
+          "word": "field",
+          "begin": 440100,
+          "end": 440340
+        },
+        {
+          "word": "name,",
+          "begin": 440340,
+          "end": 440620
+        },
+        {
+          "word": "raw",
+          "begin": 440840,
+          "end": 440920
+        },
+        {
+          "word": "bytes,",
+          "begin": 441080,
+          "end": 441460
+        },
+        {
+          "word": "and",
+          "begin": 441580,
+          "end": 441680
+        },
+        {
+          "word": "little-endian",
+          "begin": 441740,
+          "end": 442360
+        },
+        {
+          "word": "decoded",
+          "begin": 442400,
+          "end": 442800
+        },
+        {
+          "word": "value.",
+          "begin": 442840,
+          "end": 443120
+        },
+        {
+          "word": "Now",
+          "begin": 443880,
+          "end": 443940
+        },
+        {
+          "word": "let's",
+          "begin": 444040,
+          "end": 444200
+        }
+      ]
+    },
+    {
+      "blockIndex": 26,
+      "type": "paragraph",
+      "text": "Now let's go the other direction. Suppose the vendor spec says: &ldquo;Opcode 0xC1 with CDW10=0x00000002 accepts a 16-byte configuration structure.&rdquo; The structure has:",
+      "beginMs": 444260,
+      "endMs": 458800,
+      "timestamps": [
+        {
+          "word": "go",
+          "begin": 444260,
+          "end": 444320
+        },
+        {
+          "word": "the",
+          "begin": 444380,
+          "end": 444440
+        },
+        {
+          "word": "other",
+          "begin": 444500,
+          "end": 444600
+        },
+        {
+          "word": "direction.",
+          "begin": 444680,
+          "end": 445180
+        },
+        {
+          "word": "Suppose",
+          "begin": 445660,
+          "end": 446059
+        },
+        {
+          "word": "the",
+          "begin": 446059,
+          "end": 446100
+        },
+        {
+          "word": "vendor",
+          "begin": 446160,
+          "end": 446720
+        },
+        {
+          "word": "spec",
+          "begin": 446800,
+          "end": 448780
+        },
+        {
+          "word": "says:",
+          "begin": 448900,
+          "end": 448980
+        },
+        {
+          "word": "0xC1",
+          "begin": 449100,
+          "end": 449660
+        },
+        {
+          "word": "with",
+          "begin": 449760,
+          "end": 449960
+        },
+        {
+          "word": "CDW10=0x00000002",
+          "begin": 450060,
+          "end": 453300
+        },
+        {
+          "word": "accepts",
+          "begin": 453840,
+          "end": 454220
+        },
+        {
+          "word": "a",
+          "begin": 454240,
+          "end": 454280
+        },
+        {
+          "word": "16-byte",
+          "begin": 454380,
+          "end": 455120
+        },
+        {
+          "word": "configuration",
+          "begin": 455160,
+          "end": 455860
+        },
+        {
+          "word": "structure.&rdquo;",
+          "begin": 455940,
+          "end": 457360
+        },
+        {
+          "word": "The",
+          "begin": 457400,
+          "end": 457460
+        },
+        {
+          "word": "structure",
+          "begin": 457520,
+          "end": 458400
+        },
+        {
+          "word": "has:",
+          "begin": 458480,
+          "end": 458660
+        },
+        {
+          "word": "You",
+          "begin": 458720,
+          "end": 458800
+        }
+      ]
+    },
+    {
+      "blockIndex": 27,
+      "type": "paragraph",
+      "text": "You want mode=3, threshold=500, timeout=5000. How do you create the binary file? First, convert each value to little-endian bytes:",
+      "beginMs": 464140,
+      "endMs": 472800,
+      "timestamps": [
+        {
+          "word": "you",
+          "begin": 464140,
+          "end": 464200
+        },
+        {
+          "word": "create",
+          "begin": 464280,
+          "end": 464580
+        },
+        {
+          "word": "the",
+          "begin": 464580,
+          "end": 464660
+        },
+        {
+          "word": "binary",
+          "begin": 464720,
+          "end": 465060
+        },
+        {
+          "word": "file?",
+          "begin": 465160,
+          "end": 465420
+        },
+        {
+          "word": "First,",
+          "begin": 466140,
+          "end": 466520
+        },
+        {
+          "word": "convert",
+          "begin": 466800,
+          "end": 467140
+        },
+        {
+          "word": "each",
+          "begin": 467240,
+          "end": 467400
+        },
+        {
+          "word": "value",
+          "begin": 467460,
+          "end": 467760
+        },
+        {
+          "word": "to",
+          "begin": 467860,
+          "end": 467920
+        },
+        {
+          "word": "little-endian",
+          "begin": 468040,
+          "end": 468680
+        },
+        {
+          "word": "bytes:",
+          "begin": 468740,
+          "end": 469120
+        },
+        {
+          "word": "What",
+          "begin": 469460,
+          "end": 469580
+        },
+        {
+          "word": "happens",
+          "begin": 469600,
+          "end": 469960
+        },
+        {
+          "word": "under",
+          "begin": 470020,
+          "end": 470160
+        },
+        {
+          "word": "the",
+          "begin": 470220,
+          "end": 470280
+        },
+        {
+          "word": "hood?",
+          "begin": 470360,
+          "end": 470600
+        },
+        {
+          "word": "nvme-cli",
+          "begin": 471240,
+          "end": 472260
+        },
+        {
+          "word": "reads",
+          "begin": 472620,
+          "end": 472800
+        }
+      ]
+    },
+    {
+      "blockIndex": 28,
+      "type": "paragraph",
+      "text": "What happens under the hood? nvme-cli reads the 16 bytes from config.bin into a buffer, puts the buffer's memory address into DW6-DW9 (the PRP pointers), and submits the SQE with opcode=0xC1 and CDW10=0x00000002. The drive DMAs the 16 bytes from host memory and processes them according to its firmware's definition of opcode 0xC1.",
+      "beginMs": 472840,
+      "endMs": 501180,
+      "timestamps": [
+        {
+          "word": "the",
+          "begin": 472840,
+          "end": 472880
+        },
+        {
+          "word": "16",
+          "begin": 473000,
+          "end": 473440
+        },
+        {
+          "word": "bytes",
+          "begin": 473500,
+          "end": 473780
+        },
+        {
+          "word": "from",
+          "begin": 473840,
+          "end": 473960
+        },
+        {
+          "word": "config.bin",
+          "begin": 474040,
+          "end": 474960
+        },
+        {
+          "word": "into",
+          "begin": 475080,
+          "end": 475280
+        },
+        {
+          "word": "a",
+          "begin": 475340,
+          "end": 475500
+        },
+        {
+          "word": "buffer,",
+          "begin": 475620,
+          "end": 476240
+        },
+        {
+          "word": "puts",
+          "begin": 476320,
+          "end": 476460
+        },
+        {
+          "word": "the",
+          "begin": 476520,
+          "end": 476600
+        },
+        {
+          "word": "buffer's",
+          "begin": 476680,
+          "end": 476860
+        },
+        {
+          "word": "memory",
+          "begin": 476920,
+          "end": 477180
+        },
+        {
+          "word": "address",
+          "begin": 477240,
+          "end": 477580
+        },
+        {
+          "word": "into",
+          "begin": 477660,
+          "end": 477840
+        },
+        {
+          "word": "DW6-DW9",
+          "begin": 477920,
+          "end": 480740
+        },
+        {
+          "word": "(the",
+          "begin": 480900,
+          "end": 480980
+        },
+        {
+          "word": "pointers),",
+          "begin": 481100,
+          "end": 481660
+        },
+        {
+          "word": "and",
+          "begin": 481960,
+          "end": 482040
+        },
+        {
+          "word": "submits",
+          "begin": 482100,
+          "end": 482440
+        },
+        {
+          "word": "the",
+          "begin": 482500,
+          "end": 483420
+        },
+        {
+          "word": "SQE",
+          "begin": 483520,
+          "end": 486000
+        },
+        {
+          "word": "with",
+          "begin": 486120,
+          "end": 486300
+        },
+        {
+          "word": "opcode=0xC1",
+          "begin": 486380,
+          "end": 487360
+        },
+        {
+          "word": "and",
+          "begin": 487520,
+          "end": 487780
+        },
+        {
+          "word": "CDW10=0x00000002.",
+          "begin": 487800,
+          "end": 489340
+        },
+        {
+          "word": "The",
+          "begin": 489960,
+          "end": 490000
+        },
+        {
+          "word": "drive",
+          "begin": 490080,
+          "end": 490380
+        },
+        {
+          "word": "DMAs",
+          "begin": 490460,
+          "end": 491440
+        },
+        {
+          "word": "the",
+          "begin": 491580,
+          "end": 491640
+        },
+        {
+          "word": "16",
+          "begin": 491760,
+          "end": 492240
+        },
+        {
+          "word": "bytes",
+          "begin": 492320,
+          "end": 492640
+        },
+        {
+          "word": "from",
+          "begin": 492700,
+          "end": 492820
+        },
+        {
+          "word": "host",
+          "begin": 492860,
+          "end": 493140
+        },
+        {
+          "word": "memory",
+          "begin": 493200,
+          "end": 493460
+        },
+        {
+          "word": "and",
+          "begin": 493860,
+          "end": 494020
+        },
+        {
+          "word": "processes",
+          "begin": 494040,
+          "end": 494520
+        },
+        {
+          "word": "them",
+          "begin": 494560,
+          "end": 494700
+        },
+        {
+          "word": "according",
+          "begin": 494700,
+          "end": 495060
+        },
+        {
+          "word": "to",
+          "begin": 495120,
+          "end": 495180
+        },
+        {
+          "word": "its",
+          "begin": 495220,
+          "end": 495340
+        },
+        {
+          "word": "firmware's",
+          "begin": 495420,
+          "end": 495820
+        },
+        {
+          "word": "definition",
+          "begin": 495880,
+          "end": 496400
+        },
+        {
+          "word": "of",
+          "begin": 496420,
+          "end": 496520
+        },
+        {
+          "word": "opcode",
+          "begin": 496620,
+          "end": 496940
+        },
+        {
+          "word": "0xC1.",
+          "begin": 497000,
+          "end": 497860
+        },
+        {
+          "word": "What",
+          "begin": 500560,
+          "end": 500700
+        },
+        {
+          "word": "if",
+          "begin": 500700,
+          "end": 500820
+        },
+        {
+          "word": "you",
+          "begin": 500820,
+          "end": 500880
+        },
+        {
+          "word": "got",
+          "begin": 500940,
+          "end": 501080
+        },
+        {
+          "word": "the",
+          "begin": 501120,
+          "end": 501180
+        }
+      ]
+    },
+    {
+      "blockIndex": 29,
+      "type": "paragraph",
+      "text": "What if you got the endianness wrong? Say you wrote threshold=500 as 00 00 01 f4 (big-endian) instead of f4 01 00 00 (little-endian). The drive would interpret those bytes as 0xF4010000 = 4,093,706,240 — a completely wrong value. This is one of the most common mistakes when working with binary passthru commands.",
+      "beginMs": 502880,
+      "endMs": 534820,
+      "timestamps": [
+        {
+          "word": "you",
+          "begin": 502880,
+          "end": 504200
+        },
+        {
+          "word": "wrote",
+          "begin": 504280,
+          "end": 504560
+        },
+        {
+          "word": "threshold=500",
+          "begin": 504560,
+          "end": 504780
+        },
+        {
+          "word": "as",
+          "begin": 504780,
+          "end": 505020
+        },
+        {
+          "word": "00",
+          "begin": 505100,
+          "end": 506860
+        },
+        {
+          "word": "01",
+          "begin": 506920,
+          "end": 507140
+        },
+        {
+          "word": "f4",
+          "begin": 507240,
+          "end": 508600
+        },
+        {
+          "word": "(big-endian)",
+          "begin": 508720,
+          "end": 509600
+        },
+        {
+          "word": "instead",
+          "begin": 509600,
+          "end": 508940
+        },
+        {
+          "word": "(little-endian).",
+          "begin": 508960,
+          "end": 509820
+        },
+        {
+          "word": "The",
+          "begin": 509820,
+          "end": 509860
+        },
+        {
+          "word": "interpret",
+          "begin": 509920,
+          "end": 510440
+        },
+        {
+          "word": "4,093,706,240",
+          "begin": 510480,
+          "end": 511520
+        },
+        {
+          "word": "a",
+          "begin": 511520,
+          "end": 511560
+        },
+        {
+          "word": "completely",
+          "begin": 511600,
+          "end": 512080
+        },
+        {
+          "word": "wrong",
+          "begin": 512440,
+          "end": 513340
+        },
+        {
+          "word": "value.",
+          "begin": 513420,
+          "end": 513740
+        },
+        {
+          "word": "This",
+          "begin": 514360,
+          "end": 514500
+        },
+        {
+          "word": "is",
+          "begin": 514520,
+          "end": 514640
+        },
+        {
+          "word": "one",
+          "begin": 514660,
+          "end": 514780
+        },
+        {
+          "word": "of",
+          "begin": 514780,
+          "end": 514840
+        },
+        {
+          "word": "the",
+          "begin": 514880,
+          "end": 514920
+        },
+        {
+          "word": "most",
+          "begin": 514960,
+          "end": 515180
+        },
+        {
+          "word": "common",
+          "begin": 515220,
+          "end": 515500
+        },
+        {
+          "word": "mistakes",
+          "begin": 515540,
+          "end": 516000
+        },
+        {
+          "word": "when",
+          "begin": 516040,
+          "end": 516160
+        },
+        {
+          "word": "working",
+          "begin": 516220,
+          "end": 516520
+        },
+        {
+          "word": "with",
+          "begin": 516540,
+          "end": 516660
+        },
+        {
+          "word": "binary",
+          "begin": 516740,
+          "end": 517120
+        },
+        {
+          "word": "passthru",
+          "begin": 517240,
+          "end": 517680
+        },
+        {
+          "word": "commands.",
+          "begin": 517800,
+          "end": 518240
+        },
+        {
+          "word": "Can",
+          "begin": 518320,
+          "end": 519540
+        },
+        {
+          "word": "you",
+          "begin": 519540,
+          "end": 519600
+        },
+        {
+          "word": "use",
+          "begin": 519680,
+          "end": 519860
+        },
+        {
+          "word": "python",
+          "begin": 519920,
+          "end": 520340
+        },
+        {
+          "word": "instead",
+          "begin": 520400,
+          "end": 520740
+        },
+        {
+          "word": "of",
+          "begin": 520740,
+          "end": 520820
+        },
+        {
+          "word": "printf?",
+          "begin": 520920,
+          "end": 521460
+        },
+        {
+          "word": "Absolutely.",
+          "begin": 522440,
+          "end": 523020
+        },
+        {
+          "word": "python3",
+          "begin": 523600,
+          "end": 524540
+        },
+        {
+          "word": "-c",
+          "begin": 524640,
+          "end": 524720
+        },
+        {
+          "word": "\"import",
+          "begin": 525000,
+          "end": 525360
+        },
+        {
+          "word": "struct;",
+          "begin": 525400,
+          "end": 525780
+        },
+        {
+          "word": "open('/tmp/config.bin','wb').write(struct.pack('",
+          "begin": 526240,
+          "end": 532200
+        },
+        {
+          "word": "the",
+          "begin": 532260,
+          "end": 532380
+        },
+        {
+          "word": "in",
+          "begin": 532600,
+          "end": 532640
+        },
+        {
+          "word": "the",
+          "begin": 533360,
+          "end": 533420
+        },
+        {
+          "word": "format",
+          "begin": 533520,
+          "end": 533660
+        },
+        {
+          "word": "string",
+          "begin": 533660,
+          "end": 533860
+        },
+        {
+          "word": "means",
+          "begin": 533980,
+          "end": 534240
+        },
+        {
+          "word": "little-endian,",
+          "begin": 534280,
+          "end": 534820
+        }
+      ]
+    },
+    {
+      "blockIndex": 30,
+      "type": "paragraph",
+      "text": "Can you use python instead of printf? Absolutely. python3 -c \"import struct; open('/tmp/config.bin','wb').write(struct.pack(' — the in the format string means little-endian, I means unsigned 32-bit int, and 4x means 4 padding bytes.",
+      "beginMs": 534920,
+      "endMs": 541900,
+      "timestamps": [
+        {
+          "word": "means",
+          "begin": 534920,
+          "end": 535280
+        },
+        {
+          "word": "unsigned",
+          "begin": 535360,
+          "end": 536580
+        },
+        {
+          "word": "32-bit",
+          "begin": 536640,
+          "end": 537360
+        },
+        {
+          "word": "int,",
+          "begin": 537380,
+          "end": 537820
+        },
+        {
+          "word": "and",
+          "begin": 537860,
+          "end": 538220
+        },
+        {
+          "word": "means",
+          "begin": 538300,
+          "end": 538740
+        },
+        {
+          "word": "4",
+          "begin": 538840,
+          "end": 539120
+        },
+        {
+          "word": "padding",
+          "begin": 539240,
+          "end": 539560
+        },
+        {
+          "word": "bytes.",
+          "begin": 539600,
+          "end": 540700
+        },
+        {
+          "word": "Let's",
+          "begin": 541280,
+          "end": 541500
+        },
+        {
+          "word": "break",
+          "begin": 541500,
+          "end": 541660
+        },
+        {
+          "word": "down",
+          "begin": 541680,
+          "end": 541860
+        },
+        {
+          "word": "a",
+          "begin": 541860,
+          "end": 541900
+        }
+      ]
+    },
+    {
+      "blockIndex": 31,
+      "type": "paragraph",
+      "text": "Let's break down a passthru command piece by piece to understand exactly what's happening:",
+      "beginMs": 541960,
+      "endMs": 545500,
+      "timestamps": [
+        {
+          "word": "passthru",
+          "begin": 541960,
+          "end": 542360
+        },
+        {
+          "word": "command",
+          "begin": 542440,
+          "end": 542800
+        },
+        {
+          "word": "piece",
+          "begin": 542880,
+          "end": 543100
+        },
+        {
+          "word": "by",
+          "begin": 543140,
+          "end": 543220
+        },
+        {
+          "word": "piece",
+          "begin": 543360,
+          "end": 543660
+        },
+        {
+          "word": "to",
+          "begin": 543700,
+          "end": 543760
+        },
+        {
+          "word": "understand",
+          "begin": 543840,
+          "end": 544360
+        },
+        {
+          "word": "exactly",
+          "begin": 544380,
+          "end": 544800
+        },
+        {
+          "word": "what's",
+          "begin": 544860,
+          "end": 545040
+        },
+        {
+          "word": "happening:",
+          "begin": 545060,
+          "end": 545500
+        }
+      ]
+    },
+    {
+      "blockIndex": 32,
+      "type": "paragraph",
+      "text": "When do you use admin-passthru vs io-passthru? It depends on which queue the command targets:",
+      "beginMs": 545500,
+      "endMs": 551700,
+      "timestamps": [
+        {
+          "word": "When",
+          "begin": 545500,
+          "end": 545320
+        },
+        {
+          "word": "do",
+          "begin": 545340,
+          "end": 545400
+        },
+        {
+          "word": "you",
+          "begin": 545480,
+          "end": 545520
+        },
+        {
+          "word": "use",
+          "begin": 546120,
+          "end": 546300
+        },
+        {
+          "word": "admin-passthru",
+          "begin": 546300,
+          "end": 547120
+        },
+        {
+          "word": "vs",
+          "begin": 547180,
+          "end": 547640
+        },
+        {
+          "word": "io-passthru?",
+          "begin": 547660,
+          "end": 548600
+        },
+        {
+          "word": "It",
+          "begin": 548680,
+          "end": 548860
+        },
+        {
+          "word": "depends",
+          "begin": 548940,
+          "end": 549900
+        },
+        {
+          "word": "on",
+          "begin": 549900,
+          "end": 550020
+        },
+        {
+          "word": "which",
+          "begin": 550080,
+          "end": 550360
+        },
+        {
+          "word": "queue",
+          "begin": 550420,
+          "end": 550560
+        },
+        {
+          "word": "the",
+          "begin": 550620,
+          "end": 550660
+        },
+        {
+          "word": "command",
+          "begin": 550760,
+          "end": 551020
+        },
+        {
+          "word": "targets:",
+          "begin": 551080,
+          "end": 551700
+        }
+      ]
+    },
+    {
+      "blockIndex": 33,
+      "type": "paragraph",
+      "text": "Sends to the admin queue (qid=0). Used for controller-level operations: diagnostics, configuration, manufacturing commands.",
+      "beginMs": 551700,
+      "endMs": 560600,
+      "timestamps": [
+        {
+          "word": "Sends",
+          "begin": 551700,
+          "end": 551980
+        },
+        {
+          "word": "to",
+          "begin": 552480,
+          "end": 552660
+        },
+        {
+          "word": "the",
+          "begin": 552720,
+          "end": 552800
+        },
+        {
+          "word": "admin",
+          "begin": 552820,
+          "end": 553240
+        },
+        {
+          "word": "queue",
+          "begin": 553280,
+          "end": 553400
+        },
+        {
+          "word": "(qid=0).",
+          "begin": 553480,
+          "end": 555060
+        },
+        {
+          "word": "Used",
+          "begin": 555540,
+          "end": 555740
+        },
+        {
+          "word": "for",
+          "begin": 555780,
+          "end": 555840
+        },
+        {
+          "word": "controller-level",
+          "begin": 555920,
+          "end": 556580
+        },
+        {
+          "word": "operations:",
+          "begin": 556620,
+          "end": 557300
+        },
+        {
+          "word": "diagnostics,",
+          "begin": 557300,
+          "end": 558240
+        },
+        {
+          "word": "configuration,",
+          "begin": 558400,
+          "end": 559180
+        },
+        {
+          "word": "manufacturing",
+          "begin": 559400,
+          "end": 560080
+        },
+        {
+          "word": "commands.",
+          "begin": 560120,
+          "end": 560600
+        }
+      ]
+    },
+    {
+      "blockIndex": 34,
+      "type": "paragraph",
+      "text": "Sends to an I/O queue (qid &ge; 1). Used for namespace-level operations: vendor-specific read/write modes, data transformation commands.",
+      "beginMs": 560980,
+      "endMs": 570280,
+      "timestamps": [
+        {
+          "word": "Sends",
+          "begin": 560980,
+          "end": 561220
+        },
+        {
+          "word": "to",
+          "begin": 561040,
+          "end": 561160
+        },
+        {
+          "word": "an",
+          "begin": 561200,
+          "end": 561300
+        },
+        {
+          "word": "I/O",
+          "begin": 561320,
+          "end": 562060
+        },
+        {
+          "word": "queue",
+          "begin": 562240,
+          "end": 563360
+        },
+        {
+          "word": "(qid",
+          "begin": 563440,
+          "end": 563560
+        },
+        {
+          "word": "1).",
+          "begin": 563620,
+          "end": 563880
+        },
+        {
+          "word": "Used",
+          "begin": 564220,
+          "end": 564440
+        },
+        {
+          "word": "for",
+          "begin": 564500,
+          "end": 564540
+        },
+        {
+          "word": "namespace-level",
+          "begin": 564640,
+          "end": 565420
+        },
+        {
+          "word": "operations:",
+          "begin": 565460,
+          "end": 566160
+        },
+        {
+          "word": "vendor-specific",
+          "begin": 566420,
+          "end": 567200
+        },
+        {
+          "word": "read/write",
+          "begin": 567280,
+          "end": 567740
+        },
+        {
+          "word": "modes,",
+          "begin": 567800,
+          "end": 568140
+        },
+        {
+          "word": "data",
+          "begin": 568360,
+          "end": 568560
+        },
+        {
+          "word": "transformation",
+          "begin": 568640,
+          "end": 569300
+        },
+        {
+          "word": "commands.",
+          "begin": 569360,
+          "end": 569880
+        },
+        {
+          "word": "Here's",
+          "begin": 570060,
+          "end": 570280
+        }
+      ]
+    },
+    {
+      "blockIndex": 35,
+      "type": "paragraph",
+      "text": "Here's a generic example showing the full workflow — send a vendor command, capture the output, and inspect it:",
+      "beginMs": 570300,
+      "endMs": 576520,
+      "timestamps": [
+        {
+          "word": "a",
+          "begin": 570300,
+          "end": 570320
+        },
+        {
+          "word": "generic",
+          "begin": 570380,
+          "end": 570760
+        },
+        {
+          "word": "example",
+          "begin": 570780,
+          "end": 571180
+        },
+        {
+          "word": "showing",
+          "begin": 571340,
+          "end": 571580
+        },
+        {
+          "word": "the",
+          "begin": 571600,
+          "end": 571640
+        },
+        {
+          "word": "full",
+          "begin": 571740,
+          "end": 571880
+        },
+        {
+          "word": "workflow",
+          "begin": 571960,
+          "end": 572340
+        },
+        {
+          "word": "send",
+          "begin": 572760,
+          "end": 572960
+        },
+        {
+          "word": "a",
+          "begin": 572960,
+          "end": 573060
+        },
+        {
+          "word": "vendor",
+          "begin": 573060,
+          "end": 573260
+        },
+        {
+          "word": "command,",
+          "begin": 573340,
+          "end": 573759
+        },
+        {
+          "word": "capture",
+          "begin": 574040,
+          "end": 574600
+        },
+        {
+          "word": "the",
+          "begin": 574680,
+          "end": 574780
+        },
+        {
+          "word": "output,",
+          "begin": 574840,
+          "end": 575220
+        },
+        {
+          "word": "and",
+          "begin": 575220,
+          "end": 575480
+        },
+        {
+          "word": "inspect",
+          "begin": 575500,
+          "end": 576300
+        },
+        {
+          "word": "it:",
+          "begin": 576319,
+          "end": 576439
+        },
+        {
+          "word": "Vendor",
+          "begin": 576319,
+          "end": 576520
+        }
+      ]
+    },
+    {
+      "blockIndex": 36,
+      "type": "info",
+      "text": "Vendor opcodes are proprietary — proceed with caution: The opcodes, CDW values, and data formats for vendor commands are proprietary — they are not part of the NVMe specification and are not publicly documented. They vary by vendor, model, and even firmware version. The opcodes 0xC0 and 0xC1 used in these examples are arbitrary placeholders — they are NOT a standard read/write pair. We chose them simply because they're the first two values in the vendor-specific range. The actual vendor commands, their opcodes, and what direction they transfer data all come from the vendor's internal specs. All data structures and field layouts shown above are hypothetical. Sending incorrect passthru commands can cause unexpected behavior or brick a drive. Only send commands when you know exactly what they do.",
+      "beginMs": 576639,
+      "endMs": 624560,
+      "timestamps": [
+        {
+          "word": "opcodes",
+          "begin": 576639,
+          "end": 577120
+        },
+        {
+          "word": "are",
+          "begin": 577160,
+          "end": 577180
+        },
+        {
+          "word": "proprietary",
+          "begin": 577280,
+          "end": 577960
+        },
+        {
+          "word": "proceed",
+          "begin": 578280,
+          "end": 578620
+        },
+        {
+          "word": "with",
+          "begin": 578639,
+          "end": 578740
+        },
+        {
+          "word": "caution:",
+          "begin": 578800,
+          "end": 579240
+        },
+        {
+          "word": "The",
+          "begin": 579480,
+          "end": 579520
+        },
+        {
+          "word": "opcodes,",
+          "begin": 579640,
+          "end": 580240
+        },
+        {
+          "word": "CDW",
+          "begin": 580500,
+          "end": 581040
+        },
+        {
+          "word": "values,",
+          "begin": 581140,
+          "end": 581660
+        },
+        {
+          "word": "and",
+          "begin": 582020,
+          "end": 582120
+        },
+        {
+          "word": "data",
+          "begin": 582160,
+          "end": 582340
+        },
+        {
+          "word": "formats",
+          "begin": 582440,
+          "end": 582860
+        },
+        {
+          "word": "for",
+          "begin": 582920,
+          "end": 582980
+        },
+        {
+          "word": "vendor",
+          "begin": 583080,
+          "end": 583280
+        },
+        {
+          "word": "commands",
+          "begin": 583380,
+          "end": 583760
+        },
+        {
+          "word": "are",
+          "begin": 583780,
+          "end": 583800
+        },
+        {
+          "word": "proprietary",
+          "begin": 583900,
+          "end": 584560
+        },
+        {
+          "word": "they",
+          "begin": 584800,
+          "end": 584840
+        },
+        {
+          "word": "are",
+          "begin": 584900,
+          "end": 585020
+        },
+        {
+          "word": "not",
+          "begin": 585020,
+          "end": 585180
+        },
+        {
+          "word": "part",
+          "begin": 585180,
+          "end": 585280
+        },
+        {
+          "word": "of",
+          "begin": 585320,
+          "end": 585340
+        },
+        {
+          "word": "the",
+          "begin": 585420,
+          "end": 585600
+        },
+        {
+          "word": "NVMe",
+          "begin": 585720,
+          "end": 586160
+        },
+        {
+          "word": "specification",
+          "begin": 586280,
+          "end": 587120
+        },
+        {
+          "word": "and",
+          "begin": 587260,
+          "end": 587360
+        },
+        {
+          "word": "are",
+          "begin": 587380,
+          "end": 587500
+        },
+        {
+          "word": "not",
+          "begin": 587500,
+          "end": 587660
+        },
+        {
+          "word": "publicly",
+          "begin": 587720,
+          "end": 588080
+        },
+        {
+          "word": "documented.",
+          "begin": 588160,
+          "end": 588860
+        },
+        {
+          "word": "They",
+          "begin": 589320,
+          "end": 589380
+        },
+        {
+          "word": "vary",
+          "begin": 589480,
+          "end": 589680
+        },
+        {
+          "word": "by",
+          "begin": 589740,
+          "end": 589800
+        },
+        {
+          "word": "vendor,",
+          "begin": 589940,
+          "end": 590200
+        },
+        {
+          "word": "model,",
+          "begin": 590500,
+          "end": 590720
+        },
+        {
+          "word": "and",
+          "begin": 591000,
+          "end": 591120
+        },
+        {
+          "word": "even",
+          "begin": 591200,
+          "end": 591380
+        },
+        {
+          "word": "firmware",
+          "begin": 591480,
+          "end": 591720
+        },
+        {
+          "word": "version.",
+          "begin": 591860,
+          "end": 592220
+        },
+        {
+          "word": "The",
+          "begin": 592440,
+          "end": 592500
+        },
+        {
+          "word": "opcodes",
+          "begin": 592580,
+          "end": 593040
+        },
+        {
+          "word": "0xC0",
+          "begin": 593120,
+          "end": 594100
+        },
+        {
+          "word": "and",
+          "begin": 594320,
+          "end": 594440
+        },
+        {
+          "word": "0xC1",
+          "begin": 594500,
+          "end": 595320
+        },
+        {
+          "word": "used",
+          "begin": 595420,
+          "end": 595660
+        },
+        {
+          "word": "in",
+          "begin": 595660,
+          "end": 595740
+        },
+        {
+          "word": "these",
+          "begin": 595760,
+          "end": 595900
+        },
+        {
+          "word": "examples",
+          "begin": 595920,
+          "end": 596840
+        },
+        {
+          "word": "are",
+          "begin": 597020,
+          "end": 597140
+        },
+        {
+          "word": "arbitrary",
+          "begin": 597140,
+          "end": 597420
+        },
+        {
+          "word": "placeholders",
+          "begin": 597500,
+          "end": 598160
+        },
+        {
+          "word": "they",
+          "begin": 598640,
+          "end": 598680
+        },
+        {
+          "word": "are",
+          "begin": 598740,
+          "end": 598860
+        },
+        {
+          "word": "NOT",
+          "begin": 598860,
+          "end": 599020
+        },
+        {
+          "word": "a",
+          "begin": 599020,
+          "end": 599040
+        },
+        {
+          "word": "standard",
+          "begin": 599120,
+          "end": 599400
+        },
+        {
+          "word": "read/write",
+          "begin": 599400,
+          "end": 600020
+        },
+        {
+          "word": "pair.",
+          "begin": 600060,
+          "end": 600780
+        },
+        {
+          "word": "We",
+          "begin": 600780,
+          "end": 600820
+        },
+        {
+          "word": "chose",
+          "begin": 600900,
+          "end": 601140
+        },
+        {
+          "word": "them",
+          "begin": 601160,
+          "end": 601300
+        },
+        {
+          "word": "simply",
+          "begin": 601400,
+          "end": 601640
+        },
+        {
+          "word": "because",
+          "begin": 601700,
+          "end": 602040
+        },
+        {
+          "word": "they're",
+          "begin": 602080,
+          "end": 602340
+        },
+        {
+          "word": "the",
+          "begin": 602380,
+          "end": 602440
+        },
+        {
+          "word": "first",
+          "begin": 602380,
+          "end": 602560
+        },
+        {
+          "word": "two",
+          "begin": 602620,
+          "end": 602700
+        },
+        {
+          "word": "values",
+          "begin": 602780,
+          "end": 603220
+        },
+        {
+          "word": "in",
+          "begin": 603280,
+          "end": 603360
+        },
+        {
+          "word": "the",
+          "begin": 603360,
+          "end": 603420
+        },
+        {
+          "word": "vendor-specific",
+          "begin": 603480,
+          "end": 604240
+        },
+        {
+          "word": "range.",
+          "begin": 604300,
+          "end": 604620
+        },
+        {
+          "word": "The",
+          "begin": 604800,
+          "end": 604840
+        },
+        {
+          "word": "actual",
+          "begin": 604940,
+          "end": 605220
+        },
+        {
+          "word": "vendor",
+          "begin": 605320,
+          "end": 605560
+        },
+        {
+          "word": "commands,",
+          "begin": 605660,
+          "end": 606160
+        },
+        {
+          "word": "their",
+          "begin": 606440,
+          "end": 606560
+        },
+        {
+          "word": "opcodes,",
+          "begin": 606640,
+          "end": 607200
+        },
+        {
+          "word": "and",
+          "begin": 607580,
+          "end": 607660
+        },
+        {
+          "word": "what",
+          "begin": 607700,
+          "end": 607840
+        },
+        {
+          "word": "direction",
+          "begin": 607860,
+          "end": 608260
+        },
+        {
+          "word": "they",
+          "begin": 608280,
+          "end": 608340
+        },
+        {
+          "word": "transfer",
+          "begin": 608420,
+          "end": 608780
+        },
+        {
+          "word": "data",
+          "begin": 608860,
+          "end": 609100
+        },
+        {
+          "word": "all",
+          "begin": 609580,
+          "end": 609680
+        },
+        {
+          "word": "come",
+          "begin": 609760,
+          "end": 609920
+        },
+        {
+          "word": "from",
+          "begin": 609980,
+          "end": 610100
+        },
+        {
+          "word": "the",
+          "begin": 610140,
+          "end": 610180
+        },
+        {
+          "word": "vendor's",
+          "begin": 610240,
+          "end": 610620
+        },
+        {
+          "word": "internal",
+          "begin": 610640,
+          "end": 611000
+        },
+        {
+          "word": "specs.",
+          "begin": 611100,
+          "end": 611540
+        },
+        {
+          "word": "All",
+          "begin": 612120,
+          "end": 612240
+        },
+        {
+          "word": "data",
+          "begin": 612300,
+          "end": 612500
+        },
+        {
+          "word": "structures",
+          "begin": 612580,
+          "end": 613040
+        },
+        {
+          "word": "and",
+          "begin": 613060,
+          "end": 613160
+        },
+        {
+          "word": "field",
+          "begin": 613240,
+          "end": 613460
+        },
+        {
+          "word": "layouts",
+          "begin": 613500,
+          "end": 613880
+        },
+        {
+          "word": "shown",
+          "begin": 613980,
+          "end": 614160
+        },
+        {
+          "word": "above",
+          "begin": 614180,
+          "end": 614560
+        },
+        {
+          "word": "are",
+          "begin": 614660,
+          "end": 614740
+        },
+        {
+          "word": "hypothetical.",
+          "begin": 614760,
+          "end": 615280
+        },
+        {
+          "word": "Sending",
+          "begin": 615780,
+          "end": 616080
+        },
+        {
+          "word": "incorrect",
+          "begin": 616160,
+          "end": 616600
+        },
+        {
+          "word": "passthru",
+          "begin": 616660,
+          "end": 617020
+        },
+        {
+          "word": "commands",
+          "begin": 617120,
+          "end": 617560
+        },
+        {
+          "word": "can",
+          "begin": 617620,
+          "end": 617720
+        },
+        {
+          "word": "cause",
+          "begin": 617780,
+          "end": 618040
+        },
+        {
+          "word": "unexpected",
+          "begin": 618120,
+          "end": 618640
+        },
+        {
+          "word": "behavior",
+          "begin": 618680,
+          "end": 619040
+        },
+        {
+          "word": "or",
+          "begin": 619200,
+          "end": 619340
+        },
+        {
+          "word": "brick",
+          "begin": 619340,
+          "end": 619480
+        },
+        {
+          "word": "a",
+          "begin": 619500,
+          "end": 619580
+        },
+        {
+          "word": "drive.",
+          "begin": 619580,
+          "end": 619960
+        },
+        {
+          "word": "Only",
+          "begin": 620720,
+          "end": 620880
+        },
+        {
+          "word": "send",
+          "begin": 621000,
+          "end": 621200
+        },
+        {
+          "word": "commands",
+          "begin": 621240,
+          "end": 621680
+        },
+        {
+          "word": "when",
+          "begin": 621720,
+          "end": 621820
+        },
+        {
+          "word": "you",
+          "begin": 621820,
+          "end": 621880
+        },
+        {
+          "word": "know",
+          "begin": 621920,
+          "end": 622000
+        },
+        {
+          "word": "exactly",
+          "begin": 622060,
+          "end": 622460
+        },
+        {
+          "word": "what",
+          "begin": 622520,
+          "end": 622620
+        },
+        {
+          "word": "they",
+          "begin": 622640,
+          "end": 622720
+        },
+        {
+          "word": "do.",
+          "begin": 622800,
+          "end": 622880
+        },
+        {
+          "word": "Knowledge",
+          "begin": 623560,
+          "end": 623840
+        },
+        {
+          "word": "check:",
+          "begin": 623840,
+          "end": 624220
+        },
+        {
+          "word": "Why",
+          "begin": 624500,
+          "end": 624560
+        }
+      ]
+    },
+    {
+      "blockIndex": 37,
+      "type": "reveal",
+      "text": "Knowledge check: Why does the NVMe specification reserve opcode ranges (0xC0-0xFF for admin, 0x80-0xFF for I/O) for vendor-specific commands instead of standardizing everything? What would break if every diagnostic and tuning command had to go through the NVMe standards process? The answer: The NVMe spec defines the universal interface — what every SSD must do (read, write, TRIM, SMART). But each vendor's internal implementation is radically different: Samsung's garbage collection algorithm, Intel's wear-leveling strategy, and WD's error recovery are all proprietary trade secrets. Standardizing internal diagnostics would require vendors to expose their firmware architecture, stifling innovation and competitive differentiation. The reserved opcode ranges solve this elegantly: vendors get a sandbox to implement proprietary features (internal telemetry, per-die error rates, GC tuning, manufacturing test modes) without conflicting with standard commands. Passthru provides the mechanism to send these raw commands via nvme-cli, with the user manually specifying opcode and CDW values from the vendor's internal documentation. The tradeoff is portability — vendor commands only work on that vendor's drives. But for SSD test engineers and firmware developers, this direct access to the controller's internals is essential for debugging, qualification testing, and performance tuning that standard SMART data can't provide.",
+      "beginMs": 624640,
+      "endMs": 714160,
+      "timestamps": [
+        {
+          "word": "does",
+          "begin": 624640,
+          "end": 624780
+        },
+        {
+          "word": "the",
+          "begin": 624800,
+          "end": 624860
+        },
+        {
+          "word": "NVMe",
+          "begin": 624960,
+          "end": 625400
+        },
+        {
+          "word": "specification",
+          "begin": 625500,
+          "end": 626260
+        },
+        {
+          "word": "reserve",
+          "begin": 626300,
+          "end": 626660
+        },
+        {
+          "word": "opcode",
+          "begin": 626760,
+          "end": 627160
+        },
+        {
+          "word": "ranges",
+          "begin": 627180,
+          "end": 627660
+        },
+        {
+          "word": "(0xC0-0xFF",
+          "begin": 628040,
+          "end": 630260
+        },
+        {
+          "word": "for",
+          "begin": 630420,
+          "end": 630480
+        },
+        {
+          "word": "admin,",
+          "begin": 630620,
+          "end": 631020
+        },
+        {
+          "word": "0x80-0xFF",
+          "begin": 631420,
+          "end": 633860
+        },
+        {
+          "word": "for",
+          "begin": 633880,
+          "end": 633900
+        },
+        {
+          "word": "I/O)",
+          "begin": 634060,
+          "end": 634820
+        },
+        {
+          "word": "for",
+          "begin": 634920,
+          "end": 635060
+        },
+        {
+          "word": "vendor-specific",
+          "begin": 634920,
+          "end": 635620
+        },
+        {
+          "word": "commands",
+          "begin": 635660,
+          "end": 636080
+        },
+        {
+          "word": "instead",
+          "begin": 636140,
+          "end": 636440
+        },
+        {
+          "word": "of",
+          "begin": 636460,
+          "end": 636520
+        },
+        {
+          "word": "standardizing",
+          "begin": 636560,
+          "end": 637220
+        },
+        {
+          "word": "everything?",
+          "begin": 637260,
+          "end": 637680
+        },
+        {
+          "word": "What",
+          "begin": 638140,
+          "end": 638260
+        },
+        {
+          "word": "would",
+          "begin": 638280,
+          "end": 638380
+        },
+        {
+          "word": "break",
+          "begin": 638380,
+          "end": 638720
+        },
+        {
+          "word": "if",
+          "begin": 638760,
+          "end": 638860
+        },
+        {
+          "word": "every",
+          "begin": 638960,
+          "end": 639140
+        },
+        {
+          "word": "diagnostic",
+          "begin": 639220,
+          "end": 639880
+        },
+        {
+          "word": "and",
+          "begin": 639940,
+          "end": 640020
+        },
+        {
+          "word": "tuning",
+          "begin": 640080,
+          "end": 640360
+        },
+        {
+          "word": "command",
+          "begin": 640400,
+          "end": 640800
+        },
+        {
+          "word": "had",
+          "begin": 640860,
+          "end": 641000
+        },
+        {
+          "word": "to",
+          "begin": 641040,
+          "end": 641080
+        },
+        {
+          "word": "go",
+          "begin": 641140,
+          "end": 641200
+        },
+        {
+          "word": "through",
+          "begin": 641320,
+          "end": 641400
+        },
+        {
+          "word": "the",
+          "begin": 641460,
+          "end": 641620
+        },
+        {
+          "word": "NVMe",
+          "begin": 641620,
+          "end": 642020
+        },
+        {
+          "word": "standards",
+          "begin": 642140,
+          "end": 642560
+        },
+        {
+          "word": "process?",
+          "begin": 642640,
+          "end": 643140
+        },
+        {
+          "word": "The",
+          "begin": 643800,
+          "end": 643860
+        },
+        {
+          "word": "answer:",
+          "begin": 643960,
+          "end": 644220
+        },
+        {
+          "word": "The",
+          "begin": 644780,
+          "end": 644840
+        },
+        {
+          "word": "NVMe",
+          "begin": 644960,
+          "end": 645420
+        },
+        {
+          "word": "spec",
+          "begin": 645560,
+          "end": 645820
+        },
+        {
+          "word": "defines",
+          "begin": 645880,
+          "end": 646320
+        },
+        {
+          "word": "the",
+          "begin": 646380,
+          "end": 646420
+        },
+        {
+          "word": "universal",
+          "begin": 646480,
+          "end": 646920
+        },
+        {
+          "word": "interface",
+          "begin": 647040,
+          "end": 647620
+        },
+        {
+          "word": "what",
+          "begin": 648100,
+          "end": 648140
+        },
+        {
+          "word": "every",
+          "begin": 648140,
+          "end": 648420
+        },
+        {
+          "word": "SSD",
+          "begin": 648520,
+          "end": 648920
+        },
+        {
+          "word": "must",
+          "begin": 649000,
+          "end": 649200
+        },
+        {
+          "word": "do",
+          "begin": 649240,
+          "end": 649300
+        },
+        {
+          "word": "(read,",
+          "begin": 649440,
+          "end": 649720
+        },
+        {
+          "word": "write,",
+          "begin": 650180,
+          "end": 650460
+        },
+        {
+          "word": "TRIM,",
+          "begin": 650920,
+          "end": 651220
+        },
+        {
+          "word": "SMART).",
+          "begin": 651740,
+          "end": 652100
+        },
+        {
+          "word": "But",
+          "begin": 652560,
+          "end": 652680
+        },
+        {
+          "word": "each",
+          "begin": 652760,
+          "end": 653020
+        },
+        {
+          "word": "vendor's",
+          "begin": 653020,
+          "end": 653380
+        },
+        {
+          "word": "internal",
+          "begin": 653440,
+          "end": 653800
+        },
+        {
+          "word": "implementation",
+          "begin": 653900,
+          "end": 654680
+        },
+        {
+          "word": "is",
+          "begin": 654740,
+          "end": 654840
+        },
+        {
+          "word": "radically",
+          "begin": 654960,
+          "end": 655380
+        },
+        {
+          "word": "different:",
+          "begin": 655460,
+          "end": 655859
+        },
+        {
+          "word": "Samsung's",
+          "begin": 656340,
+          "end": 656820
+        },
+        {
+          "word": "garbage",
+          "begin": 656880,
+          "end": 657260
+        },
+        {
+          "word": "collection",
+          "begin": 657260,
+          "end": 657640
+        },
+        {
+          "word": "algorithm,",
+          "begin": 657720,
+          "end": 658240
+        },
+        {
+          "word": "Intel's",
+          "begin": 658600,
+          "end": 659000
+        },
+        {
+          "word": "wear-leveling",
+          "begin": 659080,
+          "end": 659620
+        },
+        {
+          "word": "strategy,",
+          "begin": 659680,
+          "end": 660120
+        },
+        {
+          "word": "and",
+          "begin": 660600,
+          "end": 660680
+        },
+        {
+          "word": "WD's",
+          "begin": 660720,
+          "end": 661240
+        },
+        {
+          "word": "error",
+          "begin": 661360,
+          "end": 661620
+        },
+        {
+          "word": "recovery",
+          "begin": 661620,
+          "end": 662020
+        },
+        {
+          "word": "are",
+          "begin": 662020,
+          "end": 662260
+        },
+        {
+          "word": "all",
+          "begin": 662460,
+          "end": 662580
+        },
+        {
+          "word": "proprietary",
+          "begin": 662660,
+          "end": 663280
+        },
+        {
+          "word": "trade",
+          "begin": 663380,
+          "end": 663660
+        },
+        {
+          "word": "secrets.",
+          "begin": 663720,
+          "end": 664200
+        },
+        {
+          "word": "Standardizing",
+          "begin": 664660,
+          "end": 665340
+        },
+        {
+          "word": "internal",
+          "begin": 665360,
+          "end": 665700
+        },
+        {
+          "word": "diagnostics",
+          "begin": 665760,
+          "end": 666520
+        },
+        {
+          "word": "would",
+          "begin": 666580,
+          "end": 666700
+        },
+        {
+          "word": "require",
+          "begin": 666720,
+          "end": 667080
+        },
+        {
+          "word": "vendors",
+          "begin": 667180,
+          "end": 667520
+        },
+        {
+          "word": "to",
+          "begin": 667580,
+          "end": 667640
+        },
+        {
+          "word": "expose",
+          "begin": 667700,
+          "end": 668220
+        },
+        {
+          "word": "their",
+          "begin": 668220,
+          "end": 668280
+        },
+        {
+          "word": "firmware",
+          "begin": 668420,
+          "end": 668700
+        },
+        {
+          "word": "architecture,",
+          "begin": 668860,
+          "end": 669400
+        },
+        {
+          "word": "stifling",
+          "begin": 669920,
+          "end": 670400
+        },
+        {
+          "word": "innovation",
+          "begin": 670440,
+          "end": 671020
+        },
+        {
+          "word": "and",
+          "begin": 671120,
+          "end": 671180
+        },
+        {
+          "word": "competitive",
+          "begin": 671220,
+          "end": 671720
+        },
+        {
+          "word": "differentiation.",
+          "begin": 671780,
+          "end": 672680
+        },
+        {
+          "word": "The",
+          "begin": 673000,
+          "end": 673040
+        },
+        {
+          "word": "reserved",
+          "begin": 673100,
+          "end": 673480
+        },
+        {
+          "word": "opcode",
+          "begin": 673560,
+          "end": 673940
+        },
+        {
+          "word": "ranges",
+          "begin": 673980,
+          "end": 674340
+        },
+        {
+          "word": "solve",
+          "begin": 674420,
+          "end": 674660
+        },
+        {
+          "word": "this",
+          "begin": 674720,
+          "end": 674880
+        },
+        {
+          "word": "elegantly:",
+          "begin": 674960,
+          "end": 675300
+        },
+        {
+          "word": "vendors",
+          "begin": 675320,
+          "end": 676340
+        },
+        {
+          "word": "get",
+          "begin": 676380,
+          "end": 676480
+        },
+        {
+          "word": "a",
+          "begin": 676480,
+          "end": 676520
+        },
+        {
+          "word": "sandbox",
+          "begin": 676640,
+          "end": 677120
+        },
+        {
+          "word": "to",
+          "begin": 677140,
+          "end": 677280
+        },
+        {
+          "word": "implement",
+          "begin": 677340,
+          "end": 677700
+        },
+        {
+          "word": "proprietary",
+          "begin": 677700,
+          "end": 678380
+        },
+        {
+          "word": "features",
+          "begin": 678500,
+          "end": 678860
+        },
+        {
+          "word": "(internal",
+          "begin": 678920,
+          "end": 679260
+        },
+        {
+          "word": "telemetry,",
+          "begin": 679340,
+          "end": 679840
+        },
+        {
+          "word": "per-die",
+          "begin": 680380,
+          "end": 680640
+        },
+        {
+          "word": "error",
+          "begin": 680840,
+          "end": 681140
+        },
+        {
+          "word": "rates,",
+          "begin": 681180,
+          "end": 681480
+        },
+        {
+          "word": "GC",
+          "begin": 681860,
+          "end": 682180
+        },
+        {
+          "word": "tuning,",
+          "begin": 682320,
+          "end": 682740
+        },
+        {
+          "word": "manufacturing",
+          "begin": 683220,
+          "end": 683860
+        },
+        {
+          "word": "test",
+          "begin": 683920,
+          "end": 684180
+        },
+        {
+          "word": "modes)",
+          "begin": 684240,
+          "end": 684460
+        },
+        {
+          "word": "without",
+          "begin": 684500,
+          "end": 684780
+        },
+        {
+          "word": "conflicting",
+          "begin": 684780,
+          "end": 685300
+        },
+        {
+          "word": "with",
+          "begin": 685340,
+          "end": 685440
+        },
+        {
+          "word": "standard",
+          "begin": 685500,
+          "end": 685880
+        },
+        {
+          "word": "commands.",
+          "begin": 685940,
+          "end": 686480
+        },
+        {
+          "word": "Passthru",
+          "begin": 687040,
+          "end": 687440
+        },
+        {
+          "word": "provides",
+          "begin": 687559,
+          "end": 687979
+        },
+        {
+          "word": "the",
+          "begin": 687979,
+          "end": 688020
+        },
+        {
+          "word": "mechanism",
+          "begin": 688080,
+          "end": 688559
+        },
+        {
+          "word": "to",
+          "begin": 688600,
+          "end": 688660
+        },
+        {
+          "word": "send",
+          "begin": 688780,
+          "end": 688960
+        },
+        {
+          "word": "these",
+          "begin": 689000,
+          "end": 689160
+        },
+        {
+          "word": "raw",
+          "begin": 689240,
+          "end": 689320
+        },
+        {
+          "word": "commands",
+          "begin": 689460,
+          "end": 689840
+        },
+        {
+          "word": "via",
+          "begin": 689860,
+          "end": 690020
+        },
+        {
+          "word": "nvme-cli,",
+          "begin": 690080,
+          "end": 692240
+        },
+        {
+          "word": "with",
+          "begin": 692240,
+          "end": 692280
+        },
+        {
+          "word": "the",
+          "begin": 692360,
+          "end": 692420
+        },
+        {
+          "word": "user",
+          "begin": 692500,
+          "end": 692740
+        },
+        {
+          "word": "manually",
+          "begin": 692880,
+          "end": 693280
+        },
+        {
+          "word": "specifying",
+          "begin": 693360,
+          "end": 693960
+        },
+        {
+          "word": "opcode",
+          "begin": 694060,
+          "end": 694560
+        },
+        {
+          "word": "and",
+          "begin": 694680,
+          "end": 694960
+        },
+        {
+          "word": "CDW",
+          "begin": 695100,
+          "end": 695540
+        },
+        {
+          "word": "values",
+          "begin": 695620,
+          "end": 696100
+        },
+        {
+          "word": "from",
+          "begin": 696100,
+          "end": 696320
+        },
+        {
+          "word": "the",
+          "begin": 696340,
+          "end": 696400
+        },
+        {
+          "word": "vendor's",
+          "begin": 696460,
+          "end": 696820
+        },
+        {
+          "word": "internal",
+          "begin": 696840,
+          "end": 697160
+        },
+        {
+          "word": "documentation.",
+          "begin": 697240,
+          "end": 698080
+        },
+        {
+          "word": "The",
+          "begin": 698580,
+          "end": 698620
+        },
+        {
+          "word": "tradeoff",
+          "begin": 698680,
+          "end": 699080
+        },
+        {
+          "word": "is",
+          "begin": 699100,
+          "end": 699180
+        },
+        {
+          "word": "portability",
+          "begin": 699240,
+          "end": 699740
+        },
+        {
+          "word": "vendor",
+          "begin": 699740,
+          "end": 700600
+        },
+        {
+          "word": "commands",
+          "begin": 700600,
+          "end": 700960
+        },
+        {
+          "word": "only",
+          "begin": 701040,
+          "end": 701200
+        },
+        {
+          "word": "work",
+          "begin": 701280,
+          "end": 701480
+        },
+        {
+          "word": "on",
+          "begin": 701500,
+          "end": 701520
+        },
+        {
+          "word": "that",
+          "begin": 701600,
+          "end": 701740
+        },
+        {
+          "word": "vendor's",
+          "begin": 701780,
+          "end": 702080
+        },
+        {
+          "word": "drives.",
+          "begin": 702120,
+          "end": 702580
+        },
+        {
+          "word": "But",
+          "begin": 703080,
+          "end": 703180
+        },
+        {
+          "word": "for",
+          "begin": 703220,
+          "end": 703280
+        },
+        {
+          "word": "SSD",
+          "begin": 703380,
+          "end": 703760
+        },
+        {
+          "word": "test",
+          "begin": 703860,
+          "end": 704120
+        },
+        {
+          "word": "engineers",
+          "begin": 704140,
+          "end": 704640
+        },
+        {
+          "word": "and",
+          "begin": 704680,
+          "end": 704760
+        },
+        {
+          "word": "firmware",
+          "begin": 704820,
+          "end": 705080
+        },
+        {
+          "word": "developers,",
+          "begin": 705160,
+          "end": 705740
+        },
+        {
+          "word": "this",
+          "begin": 706000,
+          "end": 706120
+        },
+        {
+          "word": "direct",
+          "begin": 706160,
+          "end": 706480
+        },
+        {
+          "word": "access",
+          "begin": 706580,
+          "end": 706920
+        },
+        {
+          "word": "to",
+          "begin": 706960,
+          "end": 707020
+        },
+        {
+          "word": "the",
+          "begin": 707060,
+          "end": 707100
+        },
+        {
+          "word": "controller's",
+          "begin": 707160,
+          "end": 707620
+        },
+        {
+          "word": "internals",
+          "begin": 707640,
+          "end": 708200
+        },
+        {
+          "word": "is",
+          "begin": 708300,
+          "end": 708400
+        },
+        {
+          "word": "essential",
+          "begin": 708420,
+          "end": 708940
+        },
+        {
+          "word": "for",
+          "begin": 708940,
+          "end": 708980
+        },
+        {
+          "word": "debugging,",
+          "begin": 709060,
+          "end": 709560
+        },
+        {
+          "word": "qualification",
+          "begin": 709840,
+          "end": 710500
+        },
+        {
+          "word": "testing,",
+          "begin": 710540,
+          "end": 710940
+        },
+        {
+          "word": "and",
+          "begin": 711280,
+          "end": 711360
+        },
+        {
+          "word": "performance",
+          "begin": 711400,
+          "end": 711900
+        },
+        {
+          "word": "tuning",
+          "begin": 711960,
+          "end": 712300
+        },
+        {
+          "word": "that",
+          "begin": 712360,
+          "end": 712480
+        },
+        {
+          "word": "standard",
+          "begin": 712540,
+          "end": 712900
+        },
+        {
+          "word": "SMART",
+          "begin": 712940,
+          "end": 713180
+        },
+        {
+          "word": "data",
+          "begin": 713220,
+          "end": 713400
+        },
+        {
+          "word": "can't",
+          "begin": 713500,
+          "end": 713680
+        },
+        {
+          "word": "provide.",
+          "begin": 713720,
+          "end": 714160
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

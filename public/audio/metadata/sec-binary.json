@@ -1,0 +1,3203 @@
+{
+  "sectionId": "sec-binary",
+  "audioFile": "/audio/sections/sec-binary.mp3",
+  "totalDurationMs": 256279,
+  "fileSizeBytes": 4101120,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "Everything Starts with a Bit",
+      "beginMs": 80,
+      "endMs": 1080,
+      "timestamps": [
+        {
+          "word": "Everything",
+          "begin": 80,
+          "end": 400
+        },
+        {
+          "word": "Starts",
+          "begin": 460,
+          "end": 740
+        },
+        {
+          "word": "with",
+          "begin": 760,
+          "end": 860
+        },
+        {
+          "word": "a",
+          "begin": 880,
+          "end": 900
+        },
+        {
+          "word": "Bit",
+          "begin": 980,
+          "end": 1080
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: A Bit Is a Light Switch. Every piece of data — photos, videos, documents, apps — is made of billions of tiny on/off switches called bits. Off is 0, on is 1. That's it. Everything your computer does comes down to billions of these simple yes/no decisions.",
+      "beginMs": 1100,
+      "endMs": 17680,
+      "timestamps": [
+        {
+          "word": "Analogy:",
+          "begin": 1100,
+          "end": 1520
+        },
+        {
+          "word": "A",
+          "begin": 1820,
+          "end": 1840
+        },
+        {
+          "word": "Bit",
+          "begin": 1940,
+          "end": 2060
+        },
+        {
+          "word": "Is",
+          "begin": 2080,
+          "end": 2160
+        },
+        {
+          "word": "a",
+          "begin": 2160,
+          "end": 2200
+        },
+        {
+          "word": "Light",
+          "begin": 2280,
+          "end": 2480
+        },
+        {
+          "word": "Switch.",
+          "begin": 2540,
+          "end": 2800
+        },
+        {
+          "word": "Every",
+          "begin": 3200,
+          "end": 3400
+        },
+        {
+          "word": "piece",
+          "begin": 3480,
+          "end": 3680
+        },
+        {
+          "word": "of",
+          "begin": 3700,
+          "end": 3780
+        },
+        {
+          "word": "data",
+          "begin": 3840,
+          "end": 4059
+        },
+        {
+          "word": "photos,",
+          "begin": 4340,
+          "end": 4800
+        },
+        {
+          "word": "videos,",
+          "begin": 4960,
+          "end": 5580
+        },
+        {
+          "word": "documents,",
+          "begin": 5580,
+          "end": 6080
+        },
+        {
+          "word": "apps",
+          "begin": 6140,
+          "end": 5820
+        },
+        {
+          "word": "is",
+          "begin": 5820,
+          "end": 5860
+        },
+        {
+          "word": "made",
+          "begin": 5900,
+          "end": 6060
+        },
+        {
+          "word": "of",
+          "begin": 6060,
+          "end": 6080
+        },
+        {
+          "word": "billions",
+          "begin": 6140,
+          "end": 7060
+        },
+        {
+          "word": "of",
+          "begin": 7060,
+          "end": 7260
+        },
+        {
+          "word": "tiny",
+          "begin": 7260,
+          "end": 7580
+        },
+        {
+          "word": "on/off",
+          "begin": 7600,
+          "end": 7840
+        },
+        {
+          "word": "switches",
+          "begin": 7900,
+          "end": 8840
+        },
+        {
+          "word": "called",
+          "begin": 8900,
+          "end": 9000
+        },
+        {
+          "word": "bits.",
+          "begin": 9080,
+          "end": 9380
+        },
+        {
+          "word": "Off",
+          "begin": 9440,
+          "end": 9520
+        },
+        {
+          "word": "is",
+          "begin": 9540,
+          "end": 9560
+        },
+        {
+          "word": "0,",
+          "begin": 9660,
+          "end": 10380
+        },
+        {
+          "word": "on",
+          "begin": 10520,
+          "end": 10560
+        },
+        {
+          "word": "is",
+          "begin": 10580,
+          "end": 10800
+        },
+        {
+          "word": "1.",
+          "begin": 10900,
+          "end": 11280
+        },
+        {
+          "word": "That's",
+          "begin": 11380,
+          "end": 12320
+        },
+        {
+          "word": "it.",
+          "begin": 12380,
+          "end": 12560
+        },
+        {
+          "word": "Everything",
+          "begin": 12760,
+          "end": 13120
+        },
+        {
+          "word": "your",
+          "begin": 13140,
+          "end": 13200
+        },
+        {
+          "word": "computer",
+          "begin": 13280,
+          "end": 13620
+        },
+        {
+          "word": "does",
+          "begin": 13700,
+          "end": 13980
+        },
+        {
+          "word": "comes",
+          "begin": 14040,
+          "end": 14240
+        },
+        {
+          "word": "down",
+          "begin": 14280,
+          "end": 14560
+        },
+        {
+          "word": "to",
+          "begin": 14660,
+          "end": 14720
+        },
+        {
+          "word": "billions",
+          "begin": 14660,
+          "end": 15040
+        },
+        {
+          "word": "of",
+          "begin": 15060,
+          "end": 15140
+        },
+        {
+          "word": "these",
+          "begin": 15180,
+          "end": 15380
+        },
+        {
+          "word": "simple",
+          "begin": 15420,
+          "end": 15680
+        },
+        {
+          "word": "yes/no",
+          "begin": 15840,
+          "end": 16320
+        },
+        {
+          "word": "decisions.",
+          "begin": 16320,
+          "end": 16880
+        },
+        {
+          "word": "Bit:",
+          "begin": 17220,
+          "end": 17520
+        },
+        {
+          "word": "The",
+          "begin": 17640,
+          "end": 17680
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "term",
+      "text": "Bit: The smallest unit of data in computing — a single 0 or 1. Short for 'binary digit.' Every other unit of data (bytes, kilobytes, etc.) is built from groups of bits.",
+      "beginMs": 17780,
+      "endMs": 28060,
+      "timestamps": [
+        {
+          "word": "smallest",
+          "begin": 17780,
+          "end": 18200
+        },
+        {
+          "word": "unit",
+          "begin": 18240,
+          "end": 18480
+        },
+        {
+          "word": "of",
+          "begin": 18480,
+          "end": 18560
+        },
+        {
+          "word": "data",
+          "begin": 18620,
+          "end": 18800
+        },
+        {
+          "word": "in",
+          "begin": 18880,
+          "end": 18940
+        },
+        {
+          "word": "computing",
+          "begin": 19000,
+          "end": 19540
+        },
+        {
+          "word": "a",
+          "begin": 19720,
+          "end": 19740
+        },
+        {
+          "word": "single",
+          "begin": 19880,
+          "end": 20120
+        },
+        {
+          "word": "0",
+          "begin": 20300,
+          "end": 20940
+        },
+        {
+          "word": "or",
+          "begin": 20980,
+          "end": 21200
+        },
+        {
+          "word": "1.",
+          "begin": 21540,
+          "end": 21720
+        },
+        {
+          "word": "Short",
+          "begin": 21720,
+          "end": 21740
+        },
+        {
+          "word": "for",
+          "begin": 21800,
+          "end": 21880
+        },
+        {
+          "word": "'binary",
+          "begin": 22200,
+          "end": 22600
+        },
+        {
+          "word": "digit.'",
+          "begin": 22700,
+          "end": 23060
+        },
+        {
+          "word": "Every",
+          "begin": 23400,
+          "end": 23600
+        },
+        {
+          "word": "other",
+          "begin": 23680,
+          "end": 23800
+        },
+        {
+          "word": "unit",
+          "begin": 23900,
+          "end": 24140
+        },
+        {
+          "word": "of",
+          "begin": 24160,
+          "end": 24220
+        },
+        {
+          "word": "data",
+          "begin": 24280,
+          "end": 24460
+        },
+        {
+          "word": "(bytes,",
+          "begin": 24560,
+          "end": 25100
+        },
+        {
+          "word": "kilobytes,",
+          "begin": 25100,
+          "end": 25660
+        },
+        {
+          "word": "etc.)",
+          "begin": 25720,
+          "end": 26160
+        },
+        {
+          "word": "is",
+          "begin": 26360,
+          "end": 26460
+        },
+        {
+          "word": "built",
+          "begin": 26520,
+          "end": 26660
+        },
+        {
+          "word": "from",
+          "begin": 26680,
+          "end": 26900
+        },
+        {
+          "word": "groups",
+          "begin": 26980,
+          "end": 27060
+        },
+        {
+          "word": "of",
+          "begin": 27060,
+          "end": 27160
+        },
+        {
+          "word": "bits.",
+          "begin": 27220,
+          "end": 27360
+        },
+        {
+          "word": "Think",
+          "begin": 27440,
+          "end": 28060
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "Think of a light switch. It's either off or on. That's a bit — the smallest piece of data a computer can work with. Off is 0, on is 1. Every photo, video, document, and app on your computer is made of billions of these tiny switches.",
+      "beginMs": 28080,
+      "endMs": 42260,
+      "timestamps": [
+        {
+          "word": "of",
+          "begin": 28080,
+          "end": 28160
+        },
+        {
+          "word": "a",
+          "begin": 28200,
+          "end": 28340
+        },
+        {
+          "word": "light",
+          "begin": 28400,
+          "end": 28620
+        },
+        {
+          "word": "switch.",
+          "begin": 28680,
+          "end": 29000
+        },
+        {
+          "word": "It's",
+          "begin": 29240,
+          "end": 29360
+        },
+        {
+          "word": "either",
+          "begin": 29400,
+          "end": 29540
+        },
+        {
+          "word": "off",
+          "begin": 29700,
+          "end": 29960
+        },
+        {
+          "word": "or",
+          "begin": 30080,
+          "end": 30260
+        },
+        {
+          "word": "on.",
+          "begin": 30460,
+          "end": 30500
+        },
+        {
+          "word": "That's",
+          "begin": 30820,
+          "end": 31040
+        },
+        {
+          "word": "a",
+          "begin": 31060,
+          "end": 31080
+        },
+        {
+          "word": "bit",
+          "begin": 31160,
+          "end": 31420
+        },
+        {
+          "word": "the",
+          "begin": 31520,
+          "end": 31560
+        },
+        {
+          "word": "smallest",
+          "begin": 31680,
+          "end": 32100
+        },
+        {
+          "word": "piece",
+          "begin": 32159,
+          "end": 32380
+        },
+        {
+          "word": "of",
+          "begin": 32400,
+          "end": 32479
+        },
+        {
+          "word": "data",
+          "begin": 32540,
+          "end": 32759
+        },
+        {
+          "word": "a",
+          "begin": 32840,
+          "end": 32880
+        },
+        {
+          "word": "computer",
+          "begin": 32940,
+          "end": 33280
+        },
+        {
+          "word": "can",
+          "begin": 33360,
+          "end": 33480
+        },
+        {
+          "word": "work",
+          "begin": 33520,
+          "end": 33740
+        },
+        {
+          "word": "with.",
+          "begin": 33760,
+          "end": 34020
+        },
+        {
+          "word": "Off",
+          "begin": 34220,
+          "end": 34420
+        },
+        {
+          "word": "is",
+          "begin": 34460,
+          "end": 34560
+        },
+        {
+          "word": "0,",
+          "begin": 34640,
+          "end": 34900
+        },
+        {
+          "word": "on",
+          "begin": 35300,
+          "end": 35460
+        },
+        {
+          "word": "is",
+          "begin": 35500,
+          "end": 35600
+        },
+        {
+          "word": "1.",
+          "begin": 35680,
+          "end": 35960
+        },
+        {
+          "word": "Every",
+          "begin": 36280,
+          "end": 36440
+        },
+        {
+          "word": "photo,",
+          "begin": 36620,
+          "end": 36880
+        },
+        {
+          "word": "video,",
+          "begin": 37140,
+          "end": 37440
+        },
+        {
+          "word": "document,",
+          "begin": 37800,
+          "end": 38300
+        },
+        {
+          "word": "and",
+          "begin": 38400,
+          "end": 38480
+        },
+        {
+          "word": "app",
+          "begin": 38600,
+          "end": 38780
+        },
+        {
+          "word": "on",
+          "begin": 38820,
+          "end": 38900
+        },
+        {
+          "word": "your",
+          "begin": 38900,
+          "end": 38960
+        },
+        {
+          "word": "computer",
+          "begin": 39040,
+          "end": 39660
+        },
+        {
+          "word": "is",
+          "begin": 39700,
+          "end": 39740
+        },
+        {
+          "word": "made",
+          "begin": 39800,
+          "end": 39960
+        },
+        {
+          "word": "of",
+          "begin": 39960,
+          "end": 40080
+        },
+        {
+          "word": "billions",
+          "begin": 40180,
+          "end": 40600
+        },
+        {
+          "word": "of",
+          "begin": 40620,
+          "end": 40720
+        },
+        {
+          "word": "these",
+          "begin": 40740,
+          "end": 40900
+        },
+        {
+          "word": "tiny",
+          "begin": 40960,
+          "end": 41220
+        },
+        {
+          "word": "switches.",
+          "begin": 41340,
+          "end": 41840
+        },
+        {
+          "word": "But",
+          "begin": 42160,
+          "end": 42260
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "But why only 0 and 1? Why not 0 through 9 like normal numbers? Because electronic circuits are most reliable when they only need to distinguish between two states — voltage above a threshold (1) or below it (0). More states would mean smaller margins and more errors. (We'll see this exact tradeoff later when we look at how NAND cells store multiple bits.)",
+      "beginMs": 42320,
+      "endMs": 64000,
+      "timestamps": [
+        {
+          "word": "why",
+          "begin": 42320,
+          "end": 42420
+        },
+        {
+          "word": "only",
+          "begin": 42640,
+          "end": 42840
+        },
+        {
+          "word": "0",
+          "begin": 43060,
+          "end": 43300
+        },
+        {
+          "word": "and",
+          "begin": 43460,
+          "end": 43540
+        },
+        {
+          "word": "1?",
+          "begin": 43620,
+          "end": 43900
+        },
+        {
+          "word": "Why",
+          "begin": 44220,
+          "end": 44300
+        },
+        {
+          "word": "not",
+          "begin": 44440,
+          "end": 44660
+        },
+        {
+          "word": "0",
+          "begin": 44680,
+          "end": 45260
+        },
+        {
+          "word": "through",
+          "begin": 45300,
+          "end": 45360
+        },
+        {
+          "word": "9",
+          "begin": 45480,
+          "end": 45840
+        },
+        {
+          "word": "like",
+          "begin": 45920,
+          "end": 46100
+        },
+        {
+          "word": "normal",
+          "begin": 46160,
+          "end": 46400
+        },
+        {
+          "word": "numbers?",
+          "begin": 46500,
+          "end": 46980
+        },
+        {
+          "word": "Because",
+          "begin": 47120,
+          "end": 47360
+        },
+        {
+          "word": "electronic",
+          "begin": 47380,
+          "end": 47920
+        },
+        {
+          "word": "circuits",
+          "begin": 48000,
+          "end": 48360
+        },
+        {
+          "word": "are",
+          "begin": 48420,
+          "end": 48440
+        },
+        {
+          "word": "most",
+          "begin": 48560,
+          "end": 48800
+        },
+        {
+          "word": "reliable",
+          "begin": 48840,
+          "end": 49440
+        },
+        {
+          "word": "when",
+          "begin": 49440,
+          "end": 49560
+        },
+        {
+          "word": "they",
+          "begin": 49560,
+          "end": 49620
+        },
+        {
+          "word": "only",
+          "begin": 49760,
+          "end": 49960
+        },
+        {
+          "word": "need",
+          "begin": 50040,
+          "end": 50180
+        },
+        {
+          "word": "to",
+          "begin": 50200,
+          "end": 50280
+        },
+        {
+          "word": "distinguish",
+          "begin": 50320,
+          "end": 50880
+        },
+        {
+          "word": "between",
+          "begin": 50880,
+          "end": 51260
+        },
+        {
+          "word": "two",
+          "begin": 51340,
+          "end": 51440
+        },
+        {
+          "word": "states",
+          "begin": 51600,
+          "end": 52060
+        },
+        {
+          "word": "voltage",
+          "begin": 52360,
+          "end": 52720
+        },
+        {
+          "word": "above",
+          "begin": 52760,
+          "end": 53020
+        },
+        {
+          "word": "a",
+          "begin": 53040,
+          "end": 53080
+        },
+        {
+          "word": "threshold",
+          "begin": 53160,
+          "end": 53640
+        },
+        {
+          "word": "(1)",
+          "begin": 53700,
+          "end": 53940
+        },
+        {
+          "word": "or",
+          "begin": 53940,
+          "end": 54160
+        },
+        {
+          "word": "below",
+          "begin": 54320,
+          "end": 54560
+        },
+        {
+          "word": "it",
+          "begin": 54700,
+          "end": 54820
+        },
+        {
+          "word": "(0).",
+          "begin": 54940,
+          "end": 55200
+        },
+        {
+          "word": "More",
+          "begin": 55680,
+          "end": 55740
+        },
+        {
+          "word": "states",
+          "begin": 55940,
+          "end": 56320
+        },
+        {
+          "word": "would",
+          "begin": 56360,
+          "end": 56460
+        },
+        {
+          "word": "mean",
+          "begin": 56500,
+          "end": 56680
+        },
+        {
+          "word": "smaller",
+          "begin": 56800,
+          "end": 57100
+        },
+        {
+          "word": "margins",
+          "begin": 57200,
+          "end": 57760
+        },
+        {
+          "word": "and",
+          "begin": 57840,
+          "end": 57940
+        },
+        {
+          "word": "more",
+          "begin": 57980,
+          "end": 58060
+        },
+        {
+          "word": "errors.",
+          "begin": 58260,
+          "end": 58700
+        },
+        {
+          "word": "(We'll",
+          "begin": 58920,
+          "end": 59000
+        },
+        {
+          "word": "see",
+          "begin": 59080,
+          "end": 59160
+        },
+        {
+          "word": "this",
+          "begin": 59220,
+          "end": 59380
+        },
+        {
+          "word": "exact",
+          "begin": 59420,
+          "end": 59880
+        },
+        {
+          "word": "tradeoff",
+          "begin": 59900,
+          "end": 60240
+        },
+        {
+          "word": "later",
+          "begin": 60280,
+          "end": 60660
+        },
+        {
+          "word": "when",
+          "begin": 60660,
+          "end": 60760
+        },
+        {
+          "word": "we",
+          "begin": 60780,
+          "end": 60840
+        },
+        {
+          "word": "look",
+          "begin": 60920,
+          "end": 61040
+        },
+        {
+          "word": "at",
+          "begin": 61060,
+          "end": 61140
+        },
+        {
+          "word": "how",
+          "begin": 61180,
+          "end": 61260
+        },
+        {
+          "word": "NAND",
+          "begin": 61420,
+          "end": 61720
+        },
+        {
+          "word": "cells",
+          "begin": 61840,
+          "end": 62180
+        },
+        {
+          "word": "store",
+          "begin": 62220,
+          "end": 62540
+        },
+        {
+          "word": "multiple",
+          "begin": 62540,
+          "end": 62860
+        },
+        {
+          "word": "bits.)",
+          "begin": 62980,
+          "end": 63340
+        },
+        {
+          "word": "A",
+          "begin": 63980,
+          "end": 64000
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "A single bit isn't very useful — it can only represent two things (yes/no, true/false). So how do we represent something more complex, like a letter or a number? By grouping 8 bits together into a byte.",
+      "beginMs": 64120,
+      "endMs": 77500,
+      "timestamps": [
+        {
+          "word": "single",
+          "begin": 64120,
+          "end": 64340
+        },
+        {
+          "word": "bit",
+          "begin": 64459,
+          "end": 64640
+        },
+        {
+          "word": "isn't",
+          "begin": 64700,
+          "end": 64900
+        },
+        {
+          "word": "very",
+          "begin": 64920,
+          "end": 65000
+        },
+        {
+          "word": "useful",
+          "begin": 65040,
+          "end": 65519
+        },
+        {
+          "word": "it",
+          "begin": 65960,
+          "end": 66000
+        },
+        {
+          "word": "can",
+          "begin": 66040,
+          "end": 66140
+        },
+        {
+          "word": "only",
+          "begin": 66220,
+          "end": 66400
+        },
+        {
+          "word": "represent",
+          "begin": 66480,
+          "end": 66900
+        },
+        {
+          "word": "two",
+          "begin": 66900,
+          "end": 67100
+        },
+        {
+          "word": "things",
+          "begin": 67240,
+          "end": 67500
+        },
+        {
+          "word": "(yes/no,",
+          "begin": 67560,
+          "end": 68260
+        },
+        {
+          "word": "true/false).",
+          "begin": 68660,
+          "end": 69140
+        },
+        {
+          "word": "So",
+          "begin": 69460,
+          "end": 69620
+        },
+        {
+          "word": "how",
+          "begin": 69620,
+          "end": 69680
+        },
+        {
+          "word": "do",
+          "begin": 69760,
+          "end": 69800
+        },
+        {
+          "word": "we",
+          "begin": 69840,
+          "end": 69900
+        },
+        {
+          "word": "represent",
+          "begin": 70000,
+          "end": 70460
+        },
+        {
+          "word": "something",
+          "begin": 70520,
+          "end": 70820
+        },
+        {
+          "word": "more",
+          "begin": 70820,
+          "end": 70960
+        },
+        {
+          "word": "complex,",
+          "begin": 71100,
+          "end": 71780
+        },
+        {
+          "word": "like",
+          "begin": 72080,
+          "end": 72220
+        },
+        {
+          "word": "a",
+          "begin": 72240,
+          "end": 72260
+        },
+        {
+          "word": "letter",
+          "begin": 72360,
+          "end": 72560
+        },
+        {
+          "word": "or",
+          "begin": 72820,
+          "end": 72920
+        },
+        {
+          "word": "a",
+          "begin": 72940,
+          "end": 72960
+        },
+        {
+          "word": "number?",
+          "begin": 73040,
+          "end": 73280
+        },
+        {
+          "word": "By",
+          "begin": 73880,
+          "end": 73920
+        },
+        {
+          "word": "grouping",
+          "begin": 74020,
+          "end": 74320
+        },
+        {
+          "word": "8",
+          "begin": 74440,
+          "end": 74600
+        },
+        {
+          "word": "bits",
+          "begin": 74660,
+          "end": 74880
+        },
+        {
+          "word": "together",
+          "begin": 74940,
+          "end": 75440
+        },
+        {
+          "word": "into",
+          "begin": 75460,
+          "end": 75600
+        },
+        {
+          "word": "a",
+          "begin": 75660,
+          "end": 75680
+        },
+        {
+          "word": "byte.",
+          "begin": 75780,
+          "end": 76080
+        },
+        {
+          "word": "Byte:",
+          "begin": 76700,
+          "end": 77500
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "term",
+      "text": "Byte: A group of 8 bits. Can represent 256 different values (2^8). One byte is enough for a single letter, a small number, or one color channel in an image.",
+      "beginMs": 77540,
+      "endMs": 88420,
+      "timestamps": [
+        {
+          "word": "A",
+          "begin": 77540,
+          "end": 77600
+        },
+        {
+          "word": "group",
+          "begin": 77700,
+          "end": 77820
+        },
+        {
+          "word": "of",
+          "begin": 77940,
+          "end": 78100
+        },
+        {
+          "word": "8",
+          "begin": 78180,
+          "end": 78500
+        },
+        {
+          "word": "bits.",
+          "begin": 79120,
+          "end": 79360
+        },
+        {
+          "word": "Can",
+          "begin": 79120,
+          "end": 79240
+        },
+        {
+          "word": "represent",
+          "begin": 79300,
+          "end": 79760
+        },
+        {
+          "word": "256",
+          "begin": 79840,
+          "end": 80920
+        },
+        {
+          "word": "different",
+          "begin": 81000,
+          "end": 81280
+        },
+        {
+          "word": "values",
+          "begin": 81340,
+          "end": 82920
+        },
+        {
+          "word": "(2^8).",
+          "begin": 83000,
+          "end": 83260
+        },
+        {
+          "word": "One",
+          "begin": 83740,
+          "end": 83920
+        },
+        {
+          "word": "byte",
+          "begin": 83980,
+          "end": 84240
+        },
+        {
+          "word": "is",
+          "begin": 84280,
+          "end": 84360
+        },
+        {
+          "word": "enough",
+          "begin": 84380,
+          "end": 84640
+        },
+        {
+          "word": "for",
+          "begin": 84640,
+          "end": 84800
+        },
+        {
+          "word": "a",
+          "begin": 84800,
+          "end": 84820
+        },
+        {
+          "word": "single",
+          "begin": 84960,
+          "end": 85260
+        },
+        {
+          "word": "letter,",
+          "begin": 85260,
+          "end": 85860
+        },
+        {
+          "word": "a",
+          "begin": 85960,
+          "end": 86060
+        },
+        {
+          "word": "small",
+          "begin": 85960,
+          "end": 86180
+        },
+        {
+          "word": "number,",
+          "begin": 86240,
+          "end": 86940
+        },
+        {
+          "word": "or",
+          "begin": 87060,
+          "end": 87100
+        },
+        {
+          "word": "one",
+          "begin": 87120,
+          "end": 87240
+        },
+        {
+          "word": "color",
+          "begin": 87280,
+          "end": 87500
+        },
+        {
+          "word": "channel",
+          "begin": 87580,
+          "end": 87860
+        },
+        {
+          "word": "in",
+          "begin": 87900,
+          "end": 87960
+        },
+        {
+          "word": "an",
+          "begin": 87960,
+          "end": 88080
+        },
+        {
+          "word": "image.",
+          "begin": 88100,
+          "end": 88420
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "A byte can represent 256 different values (2×2×2×2×2×2×2×2 = 256), which is enough for a single letter, a small number, or a single color channel in an image.",
+      "beginMs": 88180,
+      "endMs": 101040,
+      "timestamps": [
+        {
+          "word": "A",
+          "begin": 88180,
+          "end": 88240
+        },
+        {
+          "word": "byte",
+          "begin": 88380,
+          "end": 89320
+        },
+        {
+          "word": "can",
+          "begin": 89360,
+          "end": 89320
+        },
+        {
+          "word": "represent",
+          "begin": 89360,
+          "end": 89860
+        },
+        {
+          "word": "256",
+          "begin": 89860,
+          "end": 90620
+        },
+        {
+          "word": "different",
+          "begin": 90660,
+          "end": 91160
+        },
+        {
+          "word": "values",
+          "begin": 91220,
+          "end": 91440
+        },
+        {
+          "word": "256),",
+          "begin": 91440,
+          "end": 94660
+        },
+        {
+          "word": "which",
+          "begin": 94980,
+          "end": 95140
+        },
+        {
+          "word": "is",
+          "begin": 95140,
+          "end": 95220
+        },
+        {
+          "word": "enough",
+          "begin": 95240,
+          "end": 95520
+        },
+        {
+          "word": "for",
+          "begin": 95560,
+          "end": 95660
+        },
+        {
+          "word": "a",
+          "begin": 95660,
+          "end": 95680
+        },
+        {
+          "word": "single",
+          "begin": 95800,
+          "end": 96100
+        },
+        {
+          "word": "letter,",
+          "begin": 96100,
+          "end": 96820
+        },
+        {
+          "word": "a",
+          "begin": 96880,
+          "end": 96960
+        },
+        {
+          "word": "small",
+          "begin": 96880,
+          "end": 97040
+        },
+        {
+          "word": "number,",
+          "begin": 97100,
+          "end": 97340
+        },
+        {
+          "word": "or",
+          "begin": 97760,
+          "end": 97840
+        },
+        {
+          "word": "a",
+          "begin": 97840,
+          "end": 97880
+        },
+        {
+          "word": "single",
+          "begin": 97980,
+          "end": 98460
+        },
+        {
+          "word": "color",
+          "begin": 98560,
+          "end": 98840
+        },
+        {
+          "word": "channel",
+          "begin": 98880,
+          "end": 99200
+        },
+        {
+          "word": "in",
+          "begin": 99220,
+          "end": 99440
+        },
+        {
+          "word": "image.",
+          "begin": 99220,
+          "end": 99440
+        },
+        {
+          "word": "Storage",
+          "begin": 100060,
+          "end": 100500
+        },
+        {
+          "word": "drives",
+          "begin": 100500,
+          "end": 100760
+        },
+        {
+          "word": "hold",
+          "begin": 100780,
+          "end": 101040
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "paragraph",
+      "text": "Storage drives hold billions of bytes. A 1 TB (terabyte) SSD holds about 1 trillion bytes — or 8 trillion individual bits. But how does the SSD physically store each of those bits? That's exactly what we'll explore after we understand how these bits are addressed.",
+      "beginMs": 101120,
+      "endMs": 117320,
+      "timestamps": [
+        {
+          "word": "billions",
+          "begin": 101120,
+          "end": 101480
+        },
+        {
+          "word": "of",
+          "begin": 101500,
+          "end": 101560
+        },
+        {
+          "word": "bytes.",
+          "begin": 101620,
+          "end": 101960
+        },
+        {
+          "word": "A",
+          "begin": 102340,
+          "end": 102460
+        },
+        {
+          "word": "1",
+          "begin": 102460,
+          "end": 102640
+        },
+        {
+          "word": "(terabyte)",
+          "begin": 102700,
+          "end": 103140
+        },
+        {
+          "word": "SSD",
+          "begin": 103240,
+          "end": 103700
+        },
+        {
+          "word": "holds",
+          "begin": 104180,
+          "end": 104380
+        },
+        {
+          "word": "about",
+          "begin": 104380,
+          "end": 104620
+        },
+        {
+          "word": "1",
+          "begin": 104680,
+          "end": 104840
+        },
+        {
+          "word": "trillion",
+          "begin": 104920,
+          "end": 105280
+        },
+        {
+          "word": "bytes",
+          "begin": 105340,
+          "end": 106060
+        },
+        {
+          "word": "or",
+          "begin": 106220,
+          "end": 106320
+        },
+        {
+          "word": "8",
+          "begin": 106320,
+          "end": 106400
+        },
+        {
+          "word": "trillion",
+          "begin": 106400,
+          "end": 106740
+        },
+        {
+          "word": "individual",
+          "begin": 106760,
+          "end": 107200
+        },
+        {
+          "word": "bits.",
+          "begin": 107300,
+          "end": 107640
+        },
+        {
+          "word": "But",
+          "begin": 108320,
+          "end": 108420
+        },
+        {
+          "word": "how",
+          "begin": 108440,
+          "end": 109060
+        },
+        {
+          "word": "does",
+          "begin": 109100,
+          "end": 109240
+        },
+        {
+          "word": "the",
+          "begin": 109300,
+          "end": 109360
+        },
+        {
+          "word": "SSD",
+          "begin": 109520,
+          "end": 109840
+        },
+        {
+          "word": "store",
+          "begin": 109920,
+          "end": 110120
+        },
+        {
+          "word": "each",
+          "begin": 110360,
+          "end": 110480
+        },
+        {
+          "word": "of",
+          "begin": 110520,
+          "end": 110580
+        },
+        {
+          "word": "those",
+          "begin": 110620,
+          "end": 110800
+        },
+        {
+          "word": "bits?",
+          "begin": 110860,
+          "end": 111200
+        },
+        {
+          "word": "That's",
+          "begin": 111720,
+          "end": 111920
+        },
+        {
+          "word": "exactly",
+          "begin": 111940,
+          "end": 112360
+        },
+        {
+          "word": "what",
+          "begin": 112420,
+          "end": 112540
+        },
+        {
+          "word": "we'll",
+          "begin": 112580,
+          "end": 112680
+        },
+        {
+          "word": "explore",
+          "begin": 112700,
+          "end": 113040
+        },
+        {
+          "word": "after",
+          "begin": 113740,
+          "end": 113920
+        },
+        {
+          "word": "we",
+          "begin": 113980,
+          "end": 114040
+        },
+        {
+          "word": "understand",
+          "begin": 114100,
+          "end": 114580
+        },
+        {
+          "word": "how",
+          "begin": 114600,
+          "end": 114680
+        },
+        {
+          "word": "these",
+          "begin": 114760,
+          "end": 114920
+        },
+        {
+          "word": "bits",
+          "begin": 115000,
+          "end": 115220
+        },
+        {
+          "word": "are",
+          "begin": 115260,
+          "end": 115340
+        },
+        {
+          "word": "addressed.",
+          "begin": 115360,
+          "end": 115880
+        },
+        {
+          "word": "Why",
+          "begin": 115880,
+          "end": 116620
+        },
+        {
+          "word": "do",
+          "begin": 116720,
+          "end": 116760
+        },
+        {
+          "word": "engineers",
+          "begin": 116840,
+          "end": 117320
+        }
+      ]
+    },
+    {
+      "blockIndex": 9,
+      "type": "paragraph",
+      "text": "Why do engineers use hex instead of decimal? Each hex digit = exactly 4 bits. Two hex digits = 1 byte. It's compact and maps perfectly to binary.",
+      "beginMs": 117340,
+      "endMs": 127640,
+      "timestamps": [
+        {
+          "word": "use",
+          "begin": 117340,
+          "end": 117480
+        },
+        {
+          "word": "hex",
+          "begin": 117540,
+          "end": 117820
+        },
+        {
+          "word": "instead",
+          "begin": 117840,
+          "end": 118160
+        },
+        {
+          "word": "of",
+          "begin": 118160,
+          "end": 118220
+        },
+        {
+          "word": "decimal?",
+          "begin": 118280,
+          "end": 119580
+        },
+        {
+          "word": "Each",
+          "begin": 119580,
+          "end": 119800
+        },
+        {
+          "word": "hex",
+          "begin": 119800,
+          "end": 120020
+        },
+        {
+          "word": "digit",
+          "begin": 120080,
+          "end": 120400
+        },
+        {
+          "word": "=",
+          "begin": 120520,
+          "end": 120780
+        },
+        {
+          "word": "exactly",
+          "begin": 120800,
+          "end": 121220
+        },
+        {
+          "word": "4",
+          "begin": 121360,
+          "end": 121440
+        },
+        {
+          "word": "bits.",
+          "begin": 121600,
+          "end": 121940
+        },
+        {
+          "word": "Two",
+          "begin": 122820,
+          "end": 122920
+        },
+        {
+          "word": "hex",
+          "begin": 123020,
+          "end": 123260
+        },
+        {
+          "word": "digits",
+          "begin": 123320,
+          "end": 123700
+        },
+        {
+          "word": "=",
+          "begin": 123800,
+          "end": 124040
+        },
+        {
+          "word": "1",
+          "begin": 124100,
+          "end": 124260
+        },
+        {
+          "word": "byte.",
+          "begin": 124320,
+          "end": 124600
+        },
+        {
+          "word": "It's",
+          "begin": 125360,
+          "end": 125480
+        },
+        {
+          "word": "compact",
+          "begin": 125540,
+          "end": 126160
+        },
+        {
+          "word": "and",
+          "begin": 126240,
+          "end": 126320
+        },
+        {
+          "word": "maps",
+          "begin": 126360,
+          "end": 126600
+        },
+        {
+          "word": "perfectly",
+          "begin": 126660,
+          "end": 127040
+        },
+        {
+          "word": "to",
+          "begin": 127120,
+          "end": 127180
+        },
+        {
+          "word": "binary.",
+          "begin": 127240,
+          "end": 127640
+        }
+      ]
+    },
+    {
+      "blockIndex": 10,
+      "type": "reveal",
+      "text": "Knowledge check: How would you convert the binary number 10110010 to decimal from first principles? Why does each bit position have a specific 'weight,' and what pattern do those weights follow? The answer: Each bit position represents a power of 2, doubling from right to left: 1, 2, 4, 8, 16, 32, 64, 128. This is because binary is base-2 — each digit position is worth 2^n where n is the position (starting from 0 on the right). For 10110010: bit 7 (128) + bit 5 (32) + bit 4 (16) + bit 1 (2) = 178. The weights follow powers of 2 because that's the fundamental property of positional numeral systems — just as decimal digits have weights of 1, 10, 100, 1000 (powers of 10), binary digits have weights of 1, 2, 4, 8 (powers of 2).",
+      "beginMs": 128360,
+      "endMs": 192000,
+      "timestamps": [
+        {
+          "word": "Knowledge",
+          "begin": 128360,
+          "end": 128660
+        },
+        {
+          "word": "check:",
+          "begin": 128759,
+          "end": 129060
+        },
+        {
+          "word": "How",
+          "begin": 129539,
+          "end": 129620
+        },
+        {
+          "word": "would",
+          "begin": 129699,
+          "end": 129820
+        },
+        {
+          "word": "you",
+          "begin": 129820,
+          "end": 129860
+        },
+        {
+          "word": "convert",
+          "begin": 129940,
+          "end": 130300
+        },
+        {
+          "word": "the",
+          "begin": 130320,
+          "end": 130360
+        },
+        {
+          "word": "binary",
+          "begin": 130419,
+          "end": 130800
+        },
+        {
+          "word": "number",
+          "begin": 130860,
+          "end": 131080
+        },
+        {
+          "word": "10110010",
+          "begin": 131200,
+          "end": 133980
+        },
+        {
+          "word": "to",
+          "begin": 134020,
+          "end": 134080
+        },
+        {
+          "word": "decimal",
+          "begin": 134140,
+          "end": 134500
+        },
+        {
+          "word": "from",
+          "begin": 134640,
+          "end": 134760
+        },
+        {
+          "word": "first",
+          "begin": 134840,
+          "end": 135040
+        },
+        {
+          "word": "principles?",
+          "begin": 135080,
+          "end": 135680
+        },
+        {
+          "word": "Why",
+          "begin": 136480,
+          "end": 136540
+        },
+        {
+          "word": "does",
+          "begin": 136660,
+          "end": 136800
+        },
+        {
+          "word": "each",
+          "begin": 136860,
+          "end": 137080
+        },
+        {
+          "word": "bit",
+          "begin": 137080,
+          "end": 137180
+        },
+        {
+          "word": "position",
+          "begin": 137240,
+          "end": 137660
+        },
+        {
+          "word": "have",
+          "begin": 137700,
+          "end": 137840
+        },
+        {
+          "word": "a",
+          "begin": 137840,
+          "end": 137880
+        },
+        {
+          "word": "specific",
+          "begin": 137940,
+          "end": 138440
+        },
+        {
+          "word": "'weight,'",
+          "begin": 138480,
+          "end": 138780
+        },
+        {
+          "word": "and",
+          "begin": 139520,
+          "end": 139600
+        },
+        {
+          "word": "what",
+          "begin": 139640,
+          "end": 139800
+        },
+        {
+          "word": "pattern",
+          "begin": 139840,
+          "end": 140180
+        },
+        {
+          "word": "do",
+          "begin": 140220,
+          "end": 140260
+        },
+        {
+          "word": "those",
+          "begin": 140320,
+          "end": 140520
+        },
+        {
+          "word": "weights",
+          "begin": 140560,
+          "end": 140820
+        },
+        {
+          "word": "follow?",
+          "begin": 140880,
+          "end": 141160
+        },
+        {
+          "word": "The",
+          "begin": 141900,
+          "end": 141960
+        },
+        {
+          "word": "answer:",
+          "begin": 142080,
+          "end": 142340
+        },
+        {
+          "word": "Each",
+          "begin": 142980,
+          "end": 143120
+        },
+        {
+          "word": "bit",
+          "begin": 143220,
+          "end": 143360
+        },
+        {
+          "word": "position",
+          "begin": 143400,
+          "end": 143820
+        },
+        {
+          "word": "represents",
+          "begin": 143880,
+          "end": 144360
+        },
+        {
+          "word": "a",
+          "begin": 144360,
+          "end": 144420
+        },
+        {
+          "word": "power",
+          "begin": 144480,
+          "end": 145080
+        },
+        {
+          "word": "of",
+          "begin": 145160,
+          "end": 145900
+        },
+        {
+          "word": "2,",
+          "begin": 145960,
+          "end": 146000
+        },
+        {
+          "word": "doubling",
+          "begin": 145960,
+          "end": 146180
+        },
+        {
+          "word": "from",
+          "begin": 146260,
+          "end": 146400
+        },
+        {
+          "word": "right",
+          "begin": 146460,
+          "end": 146660
+        },
+        {
+          "word": "to",
+          "begin": 146700,
+          "end": 146760
+        },
+        {
+          "word": "left:",
+          "begin": 146840,
+          "end": 147200
+        },
+        {
+          "word": "1,",
+          "begin": 147580,
+          "end": 147800
+        },
+        {
+          "word": "2,",
+          "begin": 148120,
+          "end": 148220
+        },
+        {
+          "word": "4,",
+          "begin": 148780,
+          "end": 148880
+        },
+        {
+          "word": "8,",
+          "begin": 149460,
+          "end": 149740
+        },
+        {
+          "word": "16,",
+          "begin": 150120,
+          "end": 150680
+        },
+        {
+          "word": "32,",
+          "begin": 151000,
+          "end": 151400
+        },
+        {
+          "word": "64,",
+          "begin": 151600,
+          "end": 152060
+        },
+        {
+          "word": "128.",
+          "begin": 152620,
+          "end": 154340
+        },
+        {
+          "word": "This",
+          "begin": 154340,
+          "end": 154480
+        },
+        {
+          "word": "is",
+          "begin": 154500,
+          "end": 154600
+        },
+        {
+          "word": "because",
+          "begin": 154640,
+          "end": 154960
+        },
+        {
+          "word": "binary",
+          "begin": 155040,
+          "end": 155480
+        },
+        {
+          "word": "is",
+          "begin": 155660,
+          "end": 155780
+        },
+        {
+          "word": "base-2",
+          "begin": 155860,
+          "end": 156320
+        },
+        {
+          "word": "each",
+          "begin": 157100,
+          "end": 157260
+        },
+        {
+          "word": "digit",
+          "begin": 157340,
+          "end": 157640
+        },
+        {
+          "word": "position",
+          "begin": 157640,
+          "end": 158060
+        },
+        {
+          "word": "is",
+          "begin": 158080,
+          "end": 159420
+        },
+        {
+          "word": "worth",
+          "begin": 159420,
+          "end": 159440
+        },
+        {
+          "word": "2^n",
+          "begin": 159520,
+          "end": 159720
+        },
+        {
+          "word": "where",
+          "begin": 160040,
+          "end": 160100
+        },
+        {
+          "word": "n",
+          "begin": 160280,
+          "end": 160400
+        },
+        {
+          "word": "is",
+          "begin": 160440,
+          "end": 160520
+        },
+        {
+          "word": "the",
+          "begin": 160560,
+          "end": 160600
+        },
+        {
+          "word": "position",
+          "begin": 160660,
+          "end": 161060
+        },
+        {
+          "word": "(starting",
+          "begin": 161140,
+          "end": 161440
+        },
+        {
+          "word": "from",
+          "begin": 161500,
+          "end": 161640
+        },
+        {
+          "word": "0",
+          "begin": 161720,
+          "end": 161940
+        },
+        {
+          "word": "on",
+          "begin": 162060,
+          "end": 162160
+        },
+        {
+          "word": "the",
+          "begin": 162160,
+          "end": 162200
+        },
+        {
+          "word": "right).",
+          "begin": 162280,
+          "end": 162580
+        },
+        {
+          "word": "For",
+          "begin": 163120,
+          "end": 166340
+        },
+        {
+          "word": "bit",
+          "begin": 166680,
+          "end": 166860
+        },
+        {
+          "word": "7",
+          "begin": 166960,
+          "end": 167280
+        },
+        {
+          "word": "(128)",
+          "begin": 167560,
+          "end": 168580
+        },
+        {
+          "word": "+",
+          "begin": 168580,
+          "end": 168800
+        },
+        {
+          "word": "bit",
+          "begin": 168880,
+          "end": 169060
+        },
+        {
+          "word": "5",
+          "begin": 169140,
+          "end": 169460
+        },
+        {
+          "word": "(32)",
+          "begin": 169460,
+          "end": 169840
+        },
+        {
+          "word": "+",
+          "begin": 170300,
+          "end": 170560
+        },
+        {
+          "word": "bit",
+          "begin": 170640,
+          "end": 170800
+        },
+        {
+          "word": "4",
+          "begin": 170880,
+          "end": 170960
+        },
+        {
+          "word": "(16)",
+          "begin": 171160,
+          "end": 171720
+        },
+        {
+          "word": "+",
+          "begin": 172000,
+          "end": 172240
+        },
+        {
+          "word": "bit",
+          "begin": 172320,
+          "end": 172500
+        },
+        {
+          "word": "1",
+          "begin": 172580,
+          "end": 172760
+        },
+        {
+          "word": "(2)",
+          "begin": 172860,
+          "end": 172980
+        },
+        {
+          "word": "=",
+          "begin": 173440,
+          "end": 173740
+        },
+        {
+          "word": "178.",
+          "begin": 173820,
+          "end": 174680
+        },
+        {
+          "word": "The",
+          "begin": 175200,
+          "end": 175240
+        },
+        {
+          "word": "weights",
+          "begin": 175320,
+          "end": 175580
+        },
+        {
+          "word": "follow",
+          "begin": 175660,
+          "end": 175860
+        },
+        {
+          "word": "powers",
+          "begin": 175960,
+          "end": 176320
+        },
+        {
+          "word": "of",
+          "begin": 176340,
+          "end": 176420
+        },
+        {
+          "word": "2",
+          "begin": 176480,
+          "end": 176620
+        },
+        {
+          "word": "because",
+          "begin": 176860,
+          "end": 177120
+        },
+        {
+          "word": "that's",
+          "begin": 177160,
+          "end": 177400
+        },
+        {
+          "word": "the",
+          "begin": 177440,
+          "end": 177500
+        },
+        {
+          "word": "fundamental",
+          "begin": 177600,
+          "end": 178160
+        },
+        {
+          "word": "property",
+          "begin": 178160,
+          "end": 178500
+        },
+        {
+          "word": "of",
+          "begin": 178500,
+          "end": 178720
+        },
+        {
+          "word": "positional",
+          "begin": 178780,
+          "end": 179200
+        },
+        {
+          "word": "numeral",
+          "begin": 179300,
+          "end": 179700
+        },
+        {
+          "word": "systems",
+          "begin": 179720,
+          "end": 180060
+        },
+        {
+          "word": "just",
+          "begin": 180180,
+          "end": 180680
+        },
+        {
+          "word": "as",
+          "begin": 180720,
+          "end": 180820
+        },
+        {
+          "word": "decimal",
+          "begin": 180880,
+          "end": 181200
+        },
+        {
+          "word": "digits",
+          "begin": 181260,
+          "end": 181560
+        },
+        {
+          "word": "have",
+          "begin": 181600,
+          "end": 181740
+        },
+        {
+          "word": "weights",
+          "begin": 181800,
+          "end": 182060
+        },
+        {
+          "word": "of",
+          "begin": 182100,
+          "end": 182500
+        },
+        {
+          "word": "1,",
+          "begin": 182840,
+          "end": 183120
+        },
+        {
+          "word": "10,",
+          "begin": 183540,
+          "end": 183680
+        },
+        {
+          "word": "100,",
+          "begin": 183720,
+          "end": 184440
+        },
+        {
+          "word": "1000",
+          "begin": 184520,
+          "end": 184860
+        },
+        {
+          "word": "(powers",
+          "begin": 184900,
+          "end": 185260
+        },
+        {
+          "word": "of",
+          "begin": 185280,
+          "end": 185340
+        },
+        {
+          "word": "10),",
+          "begin": 185400,
+          "end": 185660
+        },
+        {
+          "word": "binary",
+          "begin": 185660,
+          "end": 186620
+        },
+        {
+          "word": "digits",
+          "begin": 186700,
+          "end": 187000
+        },
+        {
+          "word": "have",
+          "begin": 187040,
+          "end": 187180
+        },
+        {
+          "word": "weights",
+          "begin": 187240,
+          "end": 187480
+        },
+        {
+          "word": "of",
+          "begin": 187500,
+          "end": 187600
+        },
+        {
+          "word": "1,",
+          "begin": 187660,
+          "end": 187880
+        },
+        {
+          "word": "2,",
+          "begin": 187880,
+          "end": 188320
+        },
+        {
+          "word": "4,",
+          "begin": 188800,
+          "end": 188840
+        },
+        {
+          "word": "8",
+          "begin": 188880,
+          "end": 189720
+        },
+        {
+          "word": "(powers",
+          "begin": 189760,
+          "end": 190100
+        },
+        {
+          "word": "of",
+          "begin": 190120,
+          "end": 190180
+        },
+        {
+          "word": "2).",
+          "begin": 190260,
+          "end": 190360
+        },
+        {
+          "word": "Knowledge",
+          "begin": 190980,
+          "end": 191280
+        },
+        {
+          "word": "check:",
+          "begin": 191380,
+          "end": 191640
+        },
+        {
+          "word": "Why",
+          "begin": 191920,
+          "end": 192000
+        }
+      ],
+      "requiresReveal": true
+    },
+    {
+      "blockIndex": 11,
+      "type": "reveal",
+      "text": "Knowledge check: Why is 1 KB exactly 1,024 bytes instead of 1,000? What fundamental property of computer hardware makes powers of 2 the natural unit, and when does this convention cause real-world confusion? The answer: 1 KB = 2^10 = 1,024 bytes because computer memory is built from binary circuits — address lines double the addressable space with each addition (1 line = 2 addresses, 2 lines = 4, 10 lines = 1,024). Using powers of 2 aligns with hardware reality. This causes real-world confusion because storage manufacturers use the SI definition (1 KB = 1,000 bytes), so a '1 TB' drive has 1,000,000,000,000 bytes but the OS reports ~931 GiB (using binary gibibytes). The IEC introduced unambiguous prefixes — KiB (1,024), MiB (1,048,576), GiB (1,073,741,824) — but adoption is inconsistent.",
+      "beginMs": 192160,
+      "endMs": 256019,
+      "timestamps": [
+        {
+          "word": "is",
+          "begin": 192160,
+          "end": 192260
+        },
+        {
+          "word": "1",
+          "begin": 192320,
+          "end": 192480
+        },
+        {
+          "word": "KB",
+          "begin": 192540,
+          "end": 192960
+        },
+        {
+          "word": "exactly",
+          "begin": 193020,
+          "end": 193480
+        },
+        {
+          "word": "1,024",
+          "begin": 193580,
+          "end": 194720
+        },
+        {
+          "word": "bytes",
+          "begin": 194840,
+          "end": 195100
+        },
+        {
+          "word": "instead",
+          "begin": 195180,
+          "end": 195520
+        },
+        {
+          "word": "of",
+          "begin": 195540,
+          "end": 195620
+        },
+        {
+          "word": "1,000?",
+          "begin": 195660,
+          "end": 196320
+        },
+        {
+          "word": "What",
+          "begin": 197360,
+          "end": 197500
+        },
+        {
+          "word": "fundamental",
+          "begin": 197580,
+          "end": 198140
+        },
+        {
+          "word": "property",
+          "begin": 198140,
+          "end": 198460
+        },
+        {
+          "word": "of",
+          "begin": 198540,
+          "end": 198600
+        },
+        {
+          "word": "computer",
+          "begin": 198660,
+          "end": 199020
+        },
+        {
+          "word": "hardware",
+          "begin": 199100,
+          "end": 199380
+        },
+        {
+          "word": "makes",
+          "begin": 199500,
+          "end": 199700
+        },
+        {
+          "word": "powers",
+          "begin": 199760,
+          "end": 200100
+        },
+        {
+          "word": "of",
+          "begin": 200100,
+          "end": 200180
+        },
+        {
+          "word": "2",
+          "begin": 200240,
+          "end": 200340
+        },
+        {
+          "word": "the",
+          "begin": 200460,
+          "end": 200500
+        },
+        {
+          "word": "natural",
+          "begin": 200560,
+          "end": 201000
+        },
+        {
+          "word": "unit,",
+          "begin": 201000,
+          "end": 201320
+        },
+        {
+          "word": "and",
+          "begin": 201760,
+          "end": 201840
+        },
+        {
+          "word": "when",
+          "begin": 201900,
+          "end": 202060
+        },
+        {
+          "word": "does",
+          "begin": 202100,
+          "end": 202220
+        },
+        {
+          "word": "this",
+          "begin": 202240,
+          "end": 202360
+        },
+        {
+          "word": "convention",
+          "begin": 202420,
+          "end": 202900
+        },
+        {
+          "word": "cause",
+          "begin": 202960,
+          "end": 203180
+        },
+        {
+          "word": "real-world",
+          "begin": 203260,
+          "end": 203720
+        },
+        {
+          "word": "confusion?",
+          "begin": 203760,
+          "end": 204320
+        },
+        {
+          "word": "The",
+          "begin": 204680,
+          "end": 204740
+        },
+        {
+          "word": "answer:",
+          "begin": 204820,
+          "end": 205080
+        },
+        {
+          "word": "1",
+          "begin": 205660,
+          "end": 205800
+        },
+        {
+          "word": "KB",
+          "begin": 205860,
+          "end": 206260
+        },
+        {
+          "word": "=",
+          "begin": 206320,
+          "end": 207460
+        },
+        {
+          "word": "2^10",
+          "begin": 207520,
+          "end": 207820
+        },
+        {
+          "word": "=",
+          "begin": 207900,
+          "end": 208200
+        },
+        {
+          "word": "1,024",
+          "begin": 208260,
+          "end": 209360
+        },
+        {
+          "word": "bytes",
+          "begin": 209480,
+          "end": 209820
+        },
+        {
+          "word": "because",
+          "begin": 210200,
+          "end": 210440
+        },
+        {
+          "word": "computer",
+          "begin": 210480,
+          "end": 210760
+        },
+        {
+          "word": "memory",
+          "begin": 210760,
+          "end": 211040
+        },
+        {
+          "word": "is",
+          "begin": 211060,
+          "end": 211120
+        },
+        {
+          "word": "built",
+          "begin": 211160,
+          "end": 211540
+        },
+        {
+          "word": "from",
+          "begin": 211560,
+          "end": 211840
+        },
+        {
+          "word": "binary",
+          "begin": 211880,
+          "end": 212220
+        },
+        {
+          "word": "circuits",
+          "begin": 212340,
+          "end": 212740
+        },
+        {
+          "word": "address",
+          "begin": 213200,
+          "end": 213520
+        },
+        {
+          "word": "lines",
+          "begin": 213560,
+          "end": 213820
+        },
+        {
+          "word": "double",
+          "begin": 213900,
+          "end": 214180
+        },
+        {
+          "word": "the",
+          "begin": 214180,
+          "end": 214220
+        },
+        {
+          "word": "addressable",
+          "begin": 214280,
+          "end": 214740
+        },
+        {
+          "word": "space",
+          "begin": 214840,
+          "end": 215200
+        },
+        {
+          "word": "with",
+          "begin": 215260,
+          "end": 215400
+        },
+        {
+          "word": "each",
+          "begin": 215460,
+          "end": 215600
+        },
+        {
+          "word": "addition",
+          "begin": 215640,
+          "end": 216000
+        },
+        {
+          "word": "(1",
+          "begin": 216080,
+          "end": 216240
+        },
+        {
+          "word": "line",
+          "begin": 216300,
+          "end": 216520
+        },
+        {
+          "word": "=",
+          "begin": 216600,
+          "end": 216960
+        },
+        {
+          "word": "2",
+          "begin": 217040,
+          "end": 217140
+        },
+        {
+          "word": "addresses,",
+          "begin": 217260,
+          "end": 217840
+        },
+        {
+          "word": "2",
+          "begin": 218200,
+          "end": 218300
+        },
+        {
+          "word": "lines",
+          "begin": 218420,
+          "end": 218720
+        },
+        {
+          "word": "=",
+          "begin": 218760,
+          "end": 219040
+        },
+        {
+          "word": "4,",
+          "begin": 219120,
+          "end": 219200
+        },
+        {
+          "word": "10",
+          "begin": 219760,
+          "end": 219960
+        },
+        {
+          "word": "lines",
+          "begin": 220020,
+          "end": 220340
+        },
+        {
+          "word": "=",
+          "begin": 220420,
+          "end": 220720
+        },
+        {
+          "word": "1,024).",
+          "begin": 220780,
+          "end": 221840
+        },
+        {
+          "word": "Using",
+          "begin": 222200,
+          "end": 222460
+        },
+        {
+          "word": "powers",
+          "begin": 222520,
+          "end": 222940
+        },
+        {
+          "word": "of",
+          "begin": 222940,
+          "end": 222960
+        },
+        {
+          "word": "2",
+          "begin": 223020,
+          "end": 223140
+        },
+        {
+          "word": "aligns",
+          "begin": 223340,
+          "end": 223740
+        },
+        {
+          "word": "with",
+          "begin": 223780,
+          "end": 223880
+        },
+        {
+          "word": "hardware",
+          "begin": 223920,
+          "end": 224220
+        },
+        {
+          "word": "reality.",
+          "begin": 224320,
+          "end": 224760
+        },
+        {
+          "word": "This",
+          "begin": 225160,
+          "end": 225320
+        },
+        {
+          "word": "causes",
+          "begin": 225360,
+          "end": 225740
+        },
+        {
+          "word": "real-world",
+          "begin": 225820,
+          "end": 226240
+        },
+        {
+          "word": "confusion",
+          "begin": 226280,
+          "end": 226780
+        },
+        {
+          "word": "because",
+          "begin": 226820,
+          "end": 227080
+        },
+        {
+          "word": "storage",
+          "begin": 227160,
+          "end": 227460
+        },
+        {
+          "word": "manufacturers",
+          "begin": 227520,
+          "end": 228500
+        },
+        {
+          "word": "use",
+          "begin": 228500,
+          "end": 228700
+        },
+        {
+          "word": "the",
+          "begin": 228820,
+          "end": 228920
+        },
+        {
+          "word": "SI",
+          "begin": 228820,
+          "end": 228920
+        },
+        {
+          "word": "definition",
+          "begin": 229040,
+          "end": 229620
+        },
+        {
+          "word": "(1",
+          "begin": 229720,
+          "end": 229900
+        },
+        {
+          "word": "KB",
+          "begin": 229960,
+          "end": 230420
+        },
+        {
+          "word": "=",
+          "begin": 230500,
+          "end": 230800
+        },
+        {
+          "word": "1,000",
+          "begin": 230860,
+          "end": 231400
+        },
+        {
+          "word": "bytes),",
+          "begin": 231440,
+          "end": 231760
+        },
+        {
+          "word": "so",
+          "begin": 232120,
+          "end": 232300
+        },
+        {
+          "word": "a",
+          "begin": 232400,
+          "end": 232420
+        },
+        {
+          "word": "'1",
+          "begin": 232420,
+          "end": 232580
+        },
+        {
+          "word": "TB'",
+          "begin": 232640,
+          "end": 233080
+        },
+        {
+          "word": "drive",
+          "begin": 233120,
+          "end": 233620
+        },
+        {
+          "word": "has",
+          "begin": 233680,
+          "end": 233840
+        },
+        {
+          "word": "1,000,000,000,000",
+          "begin": 233920,
+          "end": 234160
+        },
+        {
+          "word": "bytes",
+          "begin": 234180,
+          "end": 234140
+        },
+        {
+          "word": "but",
+          "begin": 234140,
+          "end": 234260
+        },
+        {
+          "word": "the",
+          "begin": 234320,
+          "end": 234560
+        },
+        {
+          "word": "OS",
+          "begin": 234580,
+          "end": 234800
+        },
+        {
+          "word": "reports",
+          "begin": 234800,
+          "end": 235320
+        },
+        {
+          "word": "~931",
+          "begin": 235400,
+          "end": 236380
+        },
+        {
+          "word": "GiB",
+          "begin": 236440,
+          "end": 237420
+        },
+        {
+          "word": "(using",
+          "begin": 237480,
+          "end": 237760
+        },
+        {
+          "word": "binary",
+          "begin": 237820,
+          "end": 238180
+        },
+        {
+          "word": "gibibytes).",
+          "begin": 238260,
+          "end": 238860
+        },
+        {
+          "word": "The",
+          "begin": 239200,
+          "end": 239240
+        },
+        {
+          "word": "IEC",
+          "begin": 239380,
+          "end": 239840
+        },
+        {
+          "word": "introduced",
+          "begin": 240000,
+          "end": 240460
+        },
+        {
+          "word": "unambiguous",
+          "begin": 240580,
+          "end": 241180
+        },
+        {
+          "word": "prefixes",
+          "begin": 241240,
+          "end": 244100
+        },
+        {
+          "word": "KiB",
+          "begin": 244560,
+          "end": 244880
+        },
+        {
+          "word": "(1,024),",
+          "begin": 245080,
+          "end": 246760
+        },
+        {
+          "word": "MiB",
+          "begin": 246960,
+          "end": 247180
+        },
+        {
+          "word": "(1,048,576),",
+          "begin": 247200,
+          "end": 248640
+        },
+        {
+          "word": "GiB",
+          "begin": 248680,
+          "end": 249060
+        },
+        {
+          "word": "(1,073,741,824)",
+          "begin": 249260,
+          "end": 254560
+        },
+        {
+          "word": "but",
+          "begin": 254560,
+          "end": 254700
+        },
+        {
+          "word": "adoption",
+          "begin": 254740,
+          "end": 255440
+        },
+        {
+          "word": "is",
+          "begin": 255460,
+          "end": 255480
+        },
+        {
+          "word": "inconsistent.",
+          "begin": 255460,
+          "end": 256019
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

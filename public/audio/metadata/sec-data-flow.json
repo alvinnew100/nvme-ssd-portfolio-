@@ -1,0 +1,2227 @@
+{
+  "sectionId": "sec-data-flow",
+  "audioFile": "/audio/sections/sec-data-flow.mp3",
+  "totalDurationMs": 183320,
+  "fileSizeBytes": 2933760,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "How Data Gets From Disk to CPU",
+      "beginMs": 100,
+      "endMs": 1960,
+      "timestamps": [
+        {
+          "word": "How",
+          "begin": 100,
+          "end": 160
+        },
+        {
+          "word": "Data",
+          "begin": 280,
+          "end": 480
+        },
+        {
+          "word": "Gets",
+          "begin": 520,
+          "end": 700
+        },
+        {
+          "word": "From",
+          "begin": 740,
+          "end": 880
+        },
+        {
+          "word": "Disk",
+          "begin": 940,
+          "end": 1260
+        },
+        {
+          "word": "to",
+          "begin": 1260,
+          "end": 1520
+        },
+        {
+          "word": "CPU",
+          "begin": 1620,
+          "end": 1960
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "paragraph",
+      "text": "When you open a file, a complex chain of events happens in milliseconds. Your application asks the operating system (the software that manages your computer's hardware — like Windows, macOS, or Linux), which passes the request through several layers down to the SSD hardware, and back up again.",
+      "beginMs": 1960,
+      "endMs": 19560,
+      "timestamps": [
+        {
+          "word": "When",
+          "begin": 1960,
+          "end": 2840
+        },
+        {
+          "word": "you",
+          "begin": 2840,
+          "end": 2980
+        },
+        {
+          "word": "open",
+          "begin": 2980,
+          "end": 3320
+        },
+        {
+          "word": "a",
+          "begin": 3320,
+          "end": 3340
+        },
+        {
+          "word": "file,",
+          "begin": 3440,
+          "end": 3800
+        },
+        {
+          "word": "a",
+          "begin": 4120,
+          "end": 4160
+        },
+        {
+          "word": "complex",
+          "begin": 4220,
+          "end": 4660
+        },
+        {
+          "word": "chain",
+          "begin": 4660,
+          "end": 4920
+        },
+        {
+          "word": "of",
+          "begin": 4940,
+          "end": 5020
+        },
+        {
+          "word": "events",
+          "begin": 5040,
+          "end": 5400
+        },
+        {
+          "word": "happens",
+          "begin": 5400,
+          "end": 5720
+        },
+        {
+          "word": "in",
+          "begin": 5740,
+          "end": 5820
+        },
+        {
+          "word": "milliseconds.",
+          "begin": 5860,
+          "end": 6580
+        },
+        {
+          "word": "Your",
+          "begin": 6880,
+          "end": 6960
+        },
+        {
+          "word": "application",
+          "begin": 7020,
+          "end": 7600
+        },
+        {
+          "word": "asks",
+          "begin": 7700,
+          "end": 8000
+        },
+        {
+          "word": "the",
+          "begin": 8039,
+          "end": 8100
+        },
+        {
+          "word": "operating",
+          "begin": 8200,
+          "end": 8600
+        },
+        {
+          "word": "system",
+          "begin": 8680,
+          "end": 9040
+        },
+        {
+          "word": "(the",
+          "begin": 9100,
+          "end": 9160
+        },
+        {
+          "word": "software",
+          "begin": 9260,
+          "end": 9620
+        },
+        {
+          "word": "that",
+          "begin": 9720,
+          "end": 9860
+        },
+        {
+          "word": "manages",
+          "begin": 9880,
+          "end": 10360
+        },
+        {
+          "word": "your",
+          "begin": 10360,
+          "end": 10420
+        },
+        {
+          "word": "computer's",
+          "begin": 10500,
+          "end": 10980
+        },
+        {
+          "word": "hardware",
+          "begin": 10980,
+          "end": 11280
+        },
+        {
+          "word": "like",
+          "begin": 11760,
+          "end": 11920
+        },
+        {
+          "word": "Windows,",
+          "begin": 11980,
+          "end": 12500
+        },
+        {
+          "word": "macOS,",
+          "begin": 12660,
+          "end": 13560
+        },
+        {
+          "word": "or",
+          "begin": 13600,
+          "end": 13680
+        },
+        {
+          "word": "Linux),",
+          "begin": 13600,
+          "end": 13940
+        },
+        {
+          "word": "which",
+          "begin": 14240,
+          "end": 14360
+        },
+        {
+          "word": "passes",
+          "begin": 14420,
+          "end": 14760
+        },
+        {
+          "word": "the",
+          "begin": 14800,
+          "end": 14840
+        },
+        {
+          "word": "request",
+          "begin": 14880,
+          "end": 15300
+        },
+        {
+          "word": "through",
+          "begin": 15300,
+          "end": 15360
+        },
+        {
+          "word": "several",
+          "begin": 15480,
+          "end": 15680
+        },
+        {
+          "word": "layers",
+          "begin": 15800,
+          "end": 16180
+        },
+        {
+          "word": "down",
+          "begin": 16180,
+          "end": 16440
+        },
+        {
+          "word": "to",
+          "begin": 16480,
+          "end": 16540
+        },
+        {
+          "word": "the",
+          "begin": 16580,
+          "end": 16640
+        },
+        {
+          "word": "SSD",
+          "begin": 16720,
+          "end": 17100
+        },
+        {
+          "word": "hardware,",
+          "begin": 17220,
+          "end": 17520
+        },
+        {
+          "word": "and",
+          "begin": 17960,
+          "end": 18040
+        },
+        {
+          "word": "back",
+          "begin": 18080,
+          "end": 18280
+        },
+        {
+          "word": "up",
+          "begin": 18300,
+          "end": 18420
+        },
+        {
+          "word": "again.",
+          "begin": 18440,
+          "end": 18720
+        },
+        {
+          "word": "Analogy:",
+          "begin": 19100,
+          "end": 19560
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "analogy",
+      "text": "Analogy: The I/O Path Is Like a Restaurant Order. You (the application) tell the waiter (the OS) what you want. The waiter writes it on an order slip (NVMe command) and puts it on the kitchen counter (submission queue). The chef (SSD controller) picks it up, retrieves the ingredients from the pantry (NAND flash), plates the dish, and puts it on the pickup counter (completion queue). The waiter delivers it to your table.",
+      "beginMs": 19980,
+      "endMs": 44200,
+      "timestamps": [
+        {
+          "word": "The",
+          "begin": 19980,
+          "end": 20040
+        },
+        {
+          "word": "I/O",
+          "begin": 20180,
+          "end": 20700
+        },
+        {
+          "word": "Path",
+          "begin": 20900,
+          "end": 21100
+        },
+        {
+          "word": "Is",
+          "begin": 21120,
+          "end": 21140
+        },
+        {
+          "word": "Like",
+          "begin": 21140,
+          "end": 21260
+        },
+        {
+          "word": "a",
+          "begin": 21280,
+          "end": 21300
+        },
+        {
+          "word": "Restaurant",
+          "begin": 21360,
+          "end": 21760
+        },
+        {
+          "word": "Order.",
+          "begin": 21760,
+          "end": 22000
+        },
+        {
+          "word": "You",
+          "begin": 22620,
+          "end": 22700
+        },
+        {
+          "word": "(the",
+          "begin": 22780,
+          "end": 22840
+        },
+        {
+          "word": "application)",
+          "begin": 22940,
+          "end": 23500
+        },
+        {
+          "word": "tell",
+          "begin": 23560,
+          "end": 23700
+        },
+        {
+          "word": "the",
+          "begin": 23740,
+          "end": 23800
+        },
+        {
+          "word": "waiter",
+          "begin": 23860,
+          "end": 24180
+        },
+        {
+          "word": "(the",
+          "begin": 24200,
+          "end": 24620
+        },
+        {
+          "word": "OS)",
+          "begin": 24680,
+          "end": 24800
+        },
+        {
+          "word": "you",
+          "begin": 24800,
+          "end": 24860
+        },
+        {
+          "word": "want.",
+          "begin": 24940,
+          "end": 25260
+        },
+        {
+          "word": "The",
+          "begin": 26880,
+          "end": 26920
+        },
+        {
+          "word": "waiter",
+          "begin": 26980,
+          "end": 27180
+        },
+        {
+          "word": "writes",
+          "begin": 27280,
+          "end": 27520
+        },
+        {
+          "word": "it",
+          "begin": 27560,
+          "end": 27640
+        },
+        {
+          "word": "on",
+          "begin": 27720,
+          "end": 27820
+        },
+        {
+          "word": "an",
+          "begin": 27820,
+          "end": 27900
+        },
+        {
+          "word": "order",
+          "begin": 28000,
+          "end": 28160
+        },
+        {
+          "word": "slip",
+          "begin": 28280,
+          "end": 28540
+        },
+        {
+          "word": "(NVMe",
+          "begin": 28680,
+          "end": 29400
+        },
+        {
+          "word": "command)",
+          "begin": 29520,
+          "end": 29980
+        },
+        {
+          "word": "and",
+          "begin": 30300,
+          "end": 30360
+        },
+        {
+          "word": "puts",
+          "begin": 30420,
+          "end": 30620
+        },
+        {
+          "word": "it",
+          "begin": 30620,
+          "end": 30700
+        },
+        {
+          "word": "on",
+          "begin": 30720,
+          "end": 30800
+        },
+        {
+          "word": "the",
+          "begin": 30800,
+          "end": 30840
+        },
+        {
+          "word": "kitchen",
+          "begin": 30920,
+          "end": 31180
+        },
+        {
+          "word": "counter",
+          "begin": 31240,
+          "end": 31480
+        },
+        {
+          "word": "(submission",
+          "begin": 31600,
+          "end": 32000
+        },
+        {
+          "word": "queue).",
+          "begin": 32080,
+          "end": 32220
+        },
+        {
+          "word": "The",
+          "begin": 32860,
+          "end": 32920
+        },
+        {
+          "word": "chef",
+          "begin": 33020,
+          "end": 33260
+        },
+        {
+          "word": "(SSD",
+          "begin": 33360,
+          "end": 33760
+        },
+        {
+          "word": "controller)",
+          "begin": 33880,
+          "end": 34300
+        },
+        {
+          "word": "picks",
+          "begin": 34400,
+          "end": 34620
+        },
+        {
+          "word": "it",
+          "begin": 34640,
+          "end": 34720
+        },
+        {
+          "word": "up,",
+          "begin": 34740,
+          "end": 34940
+        },
+        {
+          "word": "retrieves",
+          "begin": 35140,
+          "end": 35560
+        },
+        {
+          "word": "the",
+          "begin": 35580,
+          "end": 35640
+        },
+        {
+          "word": "ingredients",
+          "begin": 35700,
+          "end": 36220
+        },
+        {
+          "word": "from",
+          "begin": 36260,
+          "end": 36380
+        },
+        {
+          "word": "the",
+          "begin": 36400,
+          "end": 36440
+        },
+        {
+          "word": "pantry",
+          "begin": 36520,
+          "end": 36860
+        },
+        {
+          "word": "(NAND",
+          "begin": 36920,
+          "end": 37180
+        },
+        {
+          "word": "flash),",
+          "begin": 37280,
+          "end": 37640
+        },
+        {
+          "word": "plates",
+          "begin": 38040,
+          "end": 38280
+        },
+        {
+          "word": "the",
+          "begin": 38340,
+          "end": 38400
+        },
+        {
+          "word": "dish,",
+          "begin": 38440,
+          "end": 38740
+        },
+        {
+          "word": "and",
+          "begin": 39100,
+          "end": 39160
+        },
+        {
+          "word": "puts",
+          "begin": 39220,
+          "end": 39380
+        },
+        {
+          "word": "it",
+          "begin": 39400,
+          "end": 39420
+        },
+        {
+          "word": "on",
+          "begin": 39420,
+          "end": 39480
+        },
+        {
+          "word": "the",
+          "begin": 39500,
+          "end": 39520
+        },
+        {
+          "word": "pickup",
+          "begin": 39580,
+          "end": 39800
+        },
+        {
+          "word": "counter",
+          "begin": 39860,
+          "end": 40280
+        },
+        {
+          "word": "(completion",
+          "begin": 40380,
+          "end": 40860
+        },
+        {
+          "word": "queue).",
+          "begin": 40940,
+          "end": 41040
+        },
+        {
+          "word": "The",
+          "begin": 41040,
+          "end": 41060
+        },
+        {
+          "word": "waiter",
+          "begin": 41000,
+          "end": 41820
+        },
+        {
+          "word": "delivers",
+          "begin": 41860,
+          "end": 42240
+        },
+        {
+          "word": "it",
+          "begin": 42260,
+          "end": 42380
+        },
+        {
+          "word": "to",
+          "begin": 42460,
+          "end": 42520
+        },
+        {
+          "word": "your",
+          "begin": 42540,
+          "end": 42620
+        },
+        {
+          "word": "table.",
+          "begin": 42620,
+          "end": 43140
+        },
+        {
+          "word": "But",
+          "begin": 44100,
+          "end": 44200
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "But how does the CPU actually &ldquo;talk to&rdquo; the SSD? Hardware devices have tiny built-in memory locations called registers — each one controls a specific function (like &ldquo;start processing commands&rdquo; or &ldquo;report your status&rdquo;). The CPU accesses these registers through a technique called Memory-Mapped I/O (MMIO): the SSD's registers are assigned normal memory addresses, so the CPU can read or write them just like reading or writing RAM.",
+      "beginMs": 44260,
+      "endMs": 83140,
+      "timestamps": [
+        {
+          "word": "how",
+          "begin": 44260,
+          "end": 44360
+        },
+        {
+          "word": "does",
+          "begin": 44460,
+          "end": 44600
+        },
+        {
+          "word": "the",
+          "begin": 44640,
+          "end": 44700
+        },
+        {
+          "word": "CPU",
+          "begin": 44800,
+          "end": 45240
+        },
+        {
+          "word": "actually",
+          "begin": 45520,
+          "end": 46480
+        },
+        {
+          "word": "&ldquo;talk",
+          "begin": 46600,
+          "end": 49080
+        },
+        {
+          "word": "to&rdquo;",
+          "begin": 49260,
+          "end": 50400
+        },
+        {
+          "word": "the",
+          "begin": 51160,
+          "end": 51340
+        },
+        {
+          "word": "SSD?",
+          "begin": 51340,
+          "end": 51840
+        },
+        {
+          "word": "Hardware",
+          "begin": 52760,
+          "end": 53020
+        },
+        {
+          "word": "devices",
+          "begin": 53080,
+          "end": 53660
+        },
+        {
+          "word": "have",
+          "begin": 53760,
+          "end": 53900
+        },
+        {
+          "word": "tiny",
+          "begin": 53900,
+          "end": 54320
+        },
+        {
+          "word": "built-in",
+          "begin": 54460,
+          "end": 54840
+        },
+        {
+          "word": "memory",
+          "begin": 54900,
+          "end": 55160
+        },
+        {
+          "word": "locations",
+          "begin": 55240,
+          "end": 55840
+        },
+        {
+          "word": "called",
+          "begin": 55900,
+          "end": 56100
+        },
+        {
+          "word": "registers",
+          "begin": 56160,
+          "end": 56820
+        },
+        {
+          "word": "each",
+          "begin": 57420,
+          "end": 57580
+        },
+        {
+          "word": "one",
+          "begin": 57640,
+          "end": 57820
+        },
+        {
+          "word": "controls",
+          "begin": 57880,
+          "end": 58340
+        },
+        {
+          "word": "a",
+          "begin": 58360,
+          "end": 58380
+        },
+        {
+          "word": "specific",
+          "begin": 58480,
+          "end": 58960
+        },
+        {
+          "word": "function",
+          "begin": 59040,
+          "end": 59440
+        },
+        {
+          "word": "(like",
+          "begin": 59500,
+          "end": 59680
+        },
+        {
+          "word": "&ldquo;start",
+          "begin": 59880,
+          "end": 61420
+        },
+        {
+          "word": "processing",
+          "begin": 61420,
+          "end": 61960
+        },
+        {
+          "word": "commands&rdquo;",
+          "begin": 62000,
+          "end": 63500
+        },
+        {
+          "word": "or",
+          "begin": 63680,
+          "end": 63700
+        },
+        {
+          "word": "&ldquo;report",
+          "begin": 63980,
+          "end": 65459
+        },
+        {
+          "word": "your",
+          "begin": 65459,
+          "end": 65519
+        },
+        {
+          "word": "status&rdquo;).",
+          "begin": 65660,
+          "end": 67020
+        },
+        {
+          "word": "The",
+          "begin": 67480,
+          "end": 67520
+        },
+        {
+          "word": "CPU",
+          "begin": 67660,
+          "end": 68060
+        },
+        {
+          "word": "accesses",
+          "begin": 68220,
+          "end": 68720
+        },
+        {
+          "word": "these",
+          "begin": 68760,
+          "end": 68920
+        },
+        {
+          "word": "registers",
+          "begin": 68960,
+          "end": 69500
+        },
+        {
+          "word": "through",
+          "begin": 69560,
+          "end": 69640
+        },
+        {
+          "word": "a",
+          "begin": 69700,
+          "end": 69720
+        },
+        {
+          "word": "technique",
+          "begin": 69800,
+          "end": 70260
+        },
+        {
+          "word": "called",
+          "begin": 70380,
+          "end": 70660
+        },
+        {
+          "word": "Memory-Mapped",
+          "begin": 71100,
+          "end": 71840
+        },
+        {
+          "word": "(MMIO):",
+          "begin": 72100,
+          "end": 73400
+        },
+        {
+          "word": "the",
+          "begin": 74160,
+          "end": 74200
+        },
+        {
+          "word": "SSD's",
+          "begin": 74360,
+          "end": 75080
+        },
+        {
+          "word": "registers",
+          "begin": 75140,
+          "end": 75700
+        },
+        {
+          "word": "are",
+          "begin": 75780,
+          "end": 75860
+        },
+        {
+          "word": "assigned",
+          "begin": 75880,
+          "end": 76340
+        },
+        {
+          "word": "normal",
+          "begin": 76520,
+          "end": 76780
+        },
+        {
+          "word": "memory",
+          "begin": 76880,
+          "end": 77140
+        },
+        {
+          "word": "addresses,",
+          "begin": 77300,
+          "end": 77920
+        },
+        {
+          "word": "so",
+          "begin": 77920,
+          "end": 78340
+        },
+        {
+          "word": "the",
+          "begin": 78400,
+          "end": 78440
+        },
+        {
+          "word": "CPU",
+          "begin": 78540,
+          "end": 78940
+        },
+        {
+          "word": "can",
+          "begin": 79040,
+          "end": 79180
+        },
+        {
+          "word": "read",
+          "begin": 79260,
+          "end": 79480
+        },
+        {
+          "word": "or",
+          "begin": 79560,
+          "end": 79580
+        },
+        {
+          "word": "write",
+          "begin": 79700,
+          "end": 79940
+        },
+        {
+          "word": "them",
+          "begin": 79940,
+          "end": 80120
+        },
+        {
+          "word": "just",
+          "begin": 80280,
+          "end": 80540
+        },
+        {
+          "word": "like",
+          "begin": 80580,
+          "end": 80760
+        },
+        {
+          "word": "reading",
+          "begin": 80860,
+          "end": 81160
+        },
+        {
+          "word": "or",
+          "begin": 81240,
+          "end": 81260
+        },
+        {
+          "word": "writing",
+          "begin": 81400,
+          "end": 81720
+        },
+        {
+          "word": "RAM.",
+          "begin": 81800,
+          "end": 82140
+        },
+        {
+          "word": "This",
+          "begin": 82840,
+          "end": 83000
+        },
+        {
+          "word": "is",
+          "begin": 83020,
+          "end": 83140
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "This is exactly how NVMe works: the SSD's control registers are mapped into a region of memory called BAR0 (Base Address Register 0). When the CPU writes to an address in BAR0, the SSD receives it as a command. We'll explore this in detail in Lesson 6.",
+      "beginMs": 83180,
+      "endMs": 102840,
+      "timestamps": [
+        {
+          "word": "exactly",
+          "begin": 83180,
+          "end": 83660
+        },
+        {
+          "word": "how",
+          "begin": 83740,
+          "end": 83820
+        },
+        {
+          "word": "NVMe",
+          "begin": 84020,
+          "end": 84460
+        },
+        {
+          "word": "works:",
+          "begin": 84580,
+          "end": 85020
+        },
+        {
+          "word": "the",
+          "begin": 84600,
+          "end": 85580
+        },
+        {
+          "word": "SSD's",
+          "begin": 85720,
+          "end": 86100
+        },
+        {
+          "word": "control",
+          "begin": 86100,
+          "end": 86780
+        },
+        {
+          "word": "registers",
+          "begin": 86840,
+          "end": 87420
+        },
+        {
+          "word": "are",
+          "begin": 87520,
+          "end": 87680
+        },
+        {
+          "word": "mapped",
+          "begin": 87680,
+          "end": 87960
+        },
+        {
+          "word": "into",
+          "begin": 88040,
+          "end": 88220
+        },
+        {
+          "word": "a",
+          "begin": 88280,
+          "end": 88420
+        },
+        {
+          "word": "region",
+          "begin": 88440,
+          "end": 88720
+        },
+        {
+          "word": "of",
+          "begin": 88740,
+          "end": 88820
+        },
+        {
+          "word": "memory",
+          "begin": 88880,
+          "end": 89180
+        },
+        {
+          "word": "called",
+          "begin": 89360,
+          "end": 90300
+        },
+        {
+          "word": "BAR0",
+          "begin": 90520,
+          "end": 90820
+        },
+        {
+          "word": "(Base",
+          "begin": 91060,
+          "end": 91260
+        },
+        {
+          "word": "Address",
+          "begin": 91300,
+          "end": 92140
+        },
+        {
+          "word": "Register",
+          "begin": 92160,
+          "end": 92900
+        },
+        {
+          "word": "0).",
+          "begin": 93080,
+          "end": 94400
+        },
+        {
+          "word": "When",
+          "begin": 94420,
+          "end": 94480
+        },
+        {
+          "word": "the",
+          "begin": 94580,
+          "end": 94680
+        },
+        {
+          "word": "CPU",
+          "begin": 94580,
+          "end": 95020
+        },
+        {
+          "word": "writes",
+          "begin": 95160,
+          "end": 95420
+        },
+        {
+          "word": "to",
+          "begin": 95480,
+          "end": 95560
+        },
+        {
+          "word": "an",
+          "begin": 95620,
+          "end": 95680
+        },
+        {
+          "word": "address",
+          "begin": 95700,
+          "end": 96140
+        },
+        {
+          "word": "in",
+          "begin": 96220,
+          "end": 96780
+        },
+        {
+          "word": "BAR0,",
+          "begin": 97000,
+          "end": 97260
+        },
+        {
+          "word": "the",
+          "begin": 97820,
+          "end": 97880
+        },
+        {
+          "word": "SSD",
+          "begin": 98000,
+          "end": 98480
+        },
+        {
+          "word": "receives",
+          "begin": 98600,
+          "end": 99040
+        },
+        {
+          "word": "it",
+          "begin": 99080,
+          "end": 99180
+        },
+        {
+          "word": "as",
+          "begin": 99260,
+          "end": 99380
+        },
+        {
+          "word": "a",
+          "begin": 99400,
+          "end": 99500
+        },
+        {
+          "word": "command.",
+          "begin": 99500,
+          "end": 100020
+        },
+        {
+          "word": "We'll",
+          "begin": 100560,
+          "end": 100700
+        },
+        {
+          "word": "explore",
+          "begin": 100720,
+          "end": 101040
+        },
+        {
+          "word": "this",
+          "begin": 101160,
+          "end": 101320
+        },
+        {
+          "word": "in",
+          "begin": 101360,
+          "end": 101440
+        },
+        {
+          "word": "detail",
+          "begin": 101480,
+          "end": 101860
+        },
+        {
+          "word": "in",
+          "begin": 101920,
+          "end": 102020
+        },
+        {
+          "word": "Lesson",
+          "begin": 102040,
+          "end": 102340
+        },
+        {
+          "word": "6.",
+          "begin": 102480,
+          "end": 102840
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "info",
+      "text": "Why This Matters: Understanding this data flow is the foundation for everything that follows. When we talk about queues, doorbells, DMA, and interrupts in later lessons, you'll know exactly where they fit in this pipeline. The entire NVMe protocol is designed to make this flow as fast as possible.",
+      "beginMs": 103220,
+      "endMs": 120400,
+      "timestamps": [
+        {
+          "word": "Why",
+          "begin": 103220,
+          "end": 103440
+        },
+        {
+          "word": "This",
+          "begin": 103440,
+          "end": 103600
+        },
+        {
+          "word": "Matters:",
+          "begin": 103660,
+          "end": 104120
+        },
+        {
+          "word": "Understanding",
+          "begin": 104500,
+          "end": 105080
+        },
+        {
+          "word": "this",
+          "begin": 105120,
+          "end": 105260
+        },
+        {
+          "word": "data",
+          "begin": 105320,
+          "end": 105500
+        },
+        {
+          "word": "flow",
+          "begin": 105580,
+          "end": 105700
+        },
+        {
+          "word": "is",
+          "begin": 105880,
+          "end": 105960
+        },
+        {
+          "word": "the",
+          "begin": 106000,
+          "end": 106060
+        },
+        {
+          "word": "foundation",
+          "begin": 106120,
+          "end": 106640
+        },
+        {
+          "word": "for",
+          "begin": 106720,
+          "end": 106780
+        },
+        {
+          "word": "everything",
+          "begin": 106900,
+          "end": 107280
+        },
+        {
+          "word": "that",
+          "begin": 107320,
+          "end": 107440
+        },
+        {
+          "word": "follows.",
+          "begin": 107500,
+          "end": 108000
+        },
+        {
+          "word": "When",
+          "begin": 108680,
+          "end": 108780
+        },
+        {
+          "word": "we",
+          "begin": 108800,
+          "end": 108840
+        },
+        {
+          "word": "talk",
+          "begin": 108840,
+          "end": 108860
+        },
+        {
+          "word": "about",
+          "begin": 108860,
+          "end": 109140
+        },
+        {
+          "word": "queues,",
+          "begin": 109140,
+          "end": 109380
+        },
+        {
+          "word": "doorbells,",
+          "begin": 109380,
+          "end": 109920
+        },
+        {
+          "word": "DMA,",
+          "begin": 110200,
+          "end": 111240
+        },
+        {
+          "word": "and",
+          "begin": 111280,
+          "end": 111640
+        },
+        {
+          "word": "interrupts",
+          "begin": 111700,
+          "end": 112180
+        },
+        {
+          "word": "in",
+          "begin": 112240,
+          "end": 112320
+        },
+        {
+          "word": "later",
+          "begin": 112360,
+          "end": 112540
+        },
+        {
+          "word": "lessons,",
+          "begin": 112640,
+          "end": 113120
+        },
+        {
+          "word": "you'll",
+          "begin": 113440,
+          "end": 113560
+        },
+        {
+          "word": "know",
+          "begin": 113600,
+          "end": 113680
+        },
+        {
+          "word": "exactly",
+          "begin": 113760,
+          "end": 114240
+        },
+        {
+          "word": "where",
+          "begin": 114320,
+          "end": 114480
+        },
+        {
+          "word": "they",
+          "begin": 114480,
+          "end": 114660
+        },
+        {
+          "word": "fit",
+          "begin": 114660,
+          "end": 114820
+        },
+        {
+          "word": "in",
+          "begin": 114880,
+          "end": 114960
+        },
+        {
+          "word": "this",
+          "begin": 114980,
+          "end": 115140
+        },
+        {
+          "word": "pipeline.",
+          "begin": 115200,
+          "end": 115700
+        },
+        {
+          "word": "The",
+          "begin": 116280,
+          "end": 116320
+        },
+        {
+          "word": "entire",
+          "begin": 116380,
+          "end": 116780
+        },
+        {
+          "word": "NVMe",
+          "begin": 116920,
+          "end": 117300
+        },
+        {
+          "word": "protocol",
+          "begin": 117420,
+          "end": 117900
+        },
+        {
+          "word": "is",
+          "begin": 117980,
+          "end": 118060
+        },
+        {
+          "word": "designed",
+          "begin": 118100,
+          "end": 118460
+        },
+        {
+          "word": "to",
+          "begin": 118500,
+          "end": 118560
+        },
+        {
+          "word": "make",
+          "begin": 118600,
+          "end": 118780
+        },
+        {
+          "word": "this",
+          "begin": 118820,
+          "end": 118980
+        },
+        {
+          "word": "flow",
+          "begin": 119040,
+          "end": 119380
+        },
+        {
+          "word": "as",
+          "begin": 119440,
+          "end": 119460
+        },
+        {
+          "word": "fast",
+          "begin": 119540,
+          "end": 119840
+        },
+        {
+          "word": "as",
+          "begin": 119860,
+          "end": 119940
+        },
+        {
+          "word": "possible.",
+          "begin": 120000,
+          "end": 120400
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "reveal",
+      "text": "Knowledge check: Why is it elegant that the CPU 'doesn't know' it's talking to an SSD when using Memory-Mapped I/O? What would the alternative look like, and why would it be worse? The answer: In MMIO, the SSD's control registers are mapped to normal memory addresses. The CPU reads and writes these addresses as if they were RAM, but the hardware silently routes those accesses to the SSD's registers via PCIe. This is elegant because the CPU uses the same load/store instructions it already knows — no special I/O instructions needed. The alternative (port-mapped I/O using IN/OUT instructions) requires separate address spaces, special privilege levels, and can't leverage the CPU's existing memory infrastructure like caches and TLBs. MMIO also scales better: any number of devices can be mapped into the vast 64-bit address space, whereas I/O ports are limited to a 16-bit address range (65,536 ports total).",
+      "beginMs": 121120,
+      "endMs": 182680,
+      "timestamps": [
+        {
+          "word": "Knowledge",
+          "begin": 121120,
+          "end": 121420
+        },
+        {
+          "word": "check:",
+          "begin": 121500,
+          "end": 121760
+        },
+        {
+          "word": "Why",
+          "begin": 122060,
+          "end": 122140
+        },
+        {
+          "word": "is",
+          "begin": 122260,
+          "end": 122360
+        },
+        {
+          "word": "it",
+          "begin": 122380,
+          "end": 122460
+        },
+        {
+          "word": "elegant",
+          "begin": 122540,
+          "end": 122900
+        },
+        {
+          "word": "that",
+          "begin": 122920,
+          "end": 122980
+        },
+        {
+          "word": "the",
+          "begin": 123040,
+          "end": 123080
+        },
+        {
+          "word": "CPU",
+          "begin": 123200,
+          "end": 123600
+        },
+        {
+          "word": "'doesn't",
+          "begin": 123700,
+          "end": 123960
+        },
+        {
+          "word": "know'",
+          "begin": 123960,
+          "end": 124060
+        },
+        {
+          "word": "it's",
+          "begin": 124160,
+          "end": 124260
+        },
+        {
+          "word": "talking",
+          "begin": 124320,
+          "end": 124660
+        },
+        {
+          "word": "to",
+          "begin": 124700,
+          "end": 124760
+        },
+        {
+          "word": "an",
+          "begin": 124820,
+          "end": 124900
+        },
+        {
+          "word": "SSD",
+          "begin": 124940,
+          "end": 125400
+        },
+        {
+          "word": "when",
+          "begin": 125580,
+          "end": 125720
+        },
+        {
+          "word": "using",
+          "begin": 125760,
+          "end": 126040
+        },
+        {
+          "word": "Memory-Mapped",
+          "begin": 126080,
+          "end": 126620
+        },
+        {
+          "word": "I/O?",
+          "begin": 126740,
+          "end": 127920
+        },
+        {
+          "word": "What",
+          "begin": 127960,
+          "end": 128020
+        },
+        {
+          "word": "would",
+          "begin": 128039,
+          "end": 128199
+        },
+        {
+          "word": "the",
+          "begin": 128259,
+          "end": 128360
+        },
+        {
+          "word": "alternative",
+          "begin": 128419,
+          "end": 128880
+        },
+        {
+          "word": "look",
+          "begin": 128900,
+          "end": 129320
+        },
+        {
+          "word": "like,",
+          "begin": 129360,
+          "end": 129680
+        },
+        {
+          "word": "and",
+          "begin": 129680,
+          "end": 129820
+        },
+        {
+          "word": "why",
+          "begin": 129860,
+          "end": 129919
+        },
+        {
+          "word": "would",
+          "begin": 130020,
+          "end": 130380
+        },
+        {
+          "word": "worse?",
+          "begin": 130020,
+          "end": 130380
+        },
+        {
+          "word": "The",
+          "begin": 131000,
+          "end": 131039
+        },
+        {
+          "word": "answer:",
+          "begin": 131160,
+          "end": 131440
+        },
+        {
+          "word": "In",
+          "begin": 131900,
+          "end": 132040
+        },
+        {
+          "word": "MMIO,",
+          "begin": 132180,
+          "end": 132700
+        },
+        {
+          "word": "the",
+          "begin": 133160,
+          "end": 133220
+        },
+        {
+          "word": "SSD's",
+          "begin": 133320,
+          "end": 133760
+        },
+        {
+          "word": "control",
+          "begin": 133860,
+          "end": 134280
+        },
+        {
+          "word": "registers",
+          "begin": 134340,
+          "end": 134680
+        },
+        {
+          "word": "are",
+          "begin": 134700,
+          "end": 135000
+        },
+        {
+          "word": "mapped",
+          "begin": 135100,
+          "end": 135320
+        },
+        {
+          "word": "to",
+          "begin": 135340,
+          "end": 135520
+        },
+        {
+          "word": "normal",
+          "begin": 135600,
+          "end": 136080
+        },
+        {
+          "word": "memory",
+          "begin": 136080,
+          "end": 136200
+        },
+        {
+          "word": "addresses.",
+          "begin": 136240,
+          "end": 136820
+        },
+        {
+          "word": "The",
+          "begin": 137320,
+          "end": 137360
+        },
+        {
+          "word": "CPU",
+          "begin": 137480,
+          "end": 137880
+        },
+        {
+          "word": "reads",
+          "begin": 138040,
+          "end": 138360
+        },
+        {
+          "word": "and",
+          "begin": 138440,
+          "end": 138540
+        },
+        {
+          "word": "writes",
+          "begin": 138600,
+          "end": 138840
+        },
+        {
+          "word": "these",
+          "begin": 138900,
+          "end": 139060
+        },
+        {
+          "word": "addresses",
+          "begin": 139080,
+          "end": 139580
+        },
+        {
+          "word": "as",
+          "begin": 139680,
+          "end": 139800
+        },
+        {
+          "word": "if",
+          "begin": 139820,
+          "end": 139920
+        },
+        {
+          "word": "they",
+          "begin": 139960,
+          "end": 140140
+        },
+        {
+          "word": "were",
+          "begin": 140260,
+          "end": 140340
+        },
+        {
+          "word": "RAM,",
+          "begin": 140560,
+          "end": 140600
+        },
+        {
+          "word": "but",
+          "begin": 140840,
+          "end": 140940
+        },
+        {
+          "word": "the",
+          "begin": 140960,
+          "end": 141020
+        },
+        {
+          "word": "hardware",
+          "begin": 141100,
+          "end": 141400
+        },
+        {
+          "word": "silently",
+          "begin": 141600,
+          "end": 141980
+        },
+        {
+          "word": "routes",
+          "begin": 141980,
+          "end": 142320
+        },
+        {
+          "word": "those",
+          "begin": 142320,
+          "end": 142560
+        },
+        {
+          "word": "accesses",
+          "begin": 142640,
+          "end": 143220
+        },
+        {
+          "word": "to",
+          "begin": 143220,
+          "end": 143360
+        },
+        {
+          "word": "the",
+          "begin": 143400,
+          "end": 143460
+        },
+        {
+          "word": "SSD's",
+          "begin": 143560,
+          "end": 144100
+        },
+        {
+          "word": "registers",
+          "begin": 144160,
+          "end": 144720
+        },
+        {
+          "word": "via",
+          "begin": 144880,
+          "end": 145060
+        },
+        {
+          "word": "PCIe.",
+          "begin": 145160,
+          "end": 145800
+        },
+        {
+          "word": "This",
+          "begin": 146620,
+          "end": 146760
+        },
+        {
+          "word": "is",
+          "begin": 146780,
+          "end": 146860
+        },
+        {
+          "word": "elegant",
+          "begin": 146960,
+          "end": 147360
+        },
+        {
+          "word": "because",
+          "begin": 147500,
+          "end": 147740
+        },
+        {
+          "word": "the",
+          "begin": 147760,
+          "end": 147820
+        },
+        {
+          "word": "CPU",
+          "begin": 147940,
+          "end": 148280
+        },
+        {
+          "word": "uses",
+          "begin": 148280,
+          "end": 148700
+        },
+        {
+          "word": "the",
+          "begin": 148700,
+          "end": 148760
+        },
+        {
+          "word": "same",
+          "begin": 148820,
+          "end": 148940
+        },
+        {
+          "word": "load/store",
+          "begin": 149040,
+          "end": 149840
+        },
+        {
+          "word": "instructions",
+          "begin": 149880,
+          "end": 150540
+        },
+        {
+          "word": "it",
+          "begin": 150640,
+          "end": 150700
+        },
+        {
+          "word": "already",
+          "begin": 150740,
+          "end": 150980
+        },
+        {
+          "word": "knows",
+          "begin": 151080,
+          "end": 151480
+        },
+        {
+          "word": "no",
+          "begin": 151760,
+          "end": 151820
+        },
+        {
+          "word": "special",
+          "begin": 151960,
+          "end": 152320
+        },
+        {
+          "word": "I/O",
+          "begin": 152420,
+          "end": 153020
+        },
+        {
+          "word": "instructions",
+          "begin": 153060,
+          "end": 153660
+        },
+        {
+          "word": "needed.",
+          "begin": 153740,
+          "end": 154080
+        },
+        {
+          "word": "The",
+          "begin": 154660,
+          "end": 154720
+        },
+        {
+          "word": "alternative",
+          "begin": 154780,
+          "end": 155320
+        },
+        {
+          "word": "(port-mapped",
+          "begin": 155400,
+          "end": 155960
+        },
+        {
+          "word": "I/O",
+          "begin": 156080,
+          "end": 157300
+        },
+        {
+          "word": "using",
+          "begin": 157300,
+          "end": 158200
+        },
+        {
+          "word": "IN/OUT",
+          "begin": 158240,
+          "end": 158720
+        },
+        {
+          "word": "instructions)",
+          "begin": 158740,
+          "end": 159700
+        },
+        {
+          "word": "requires",
+          "begin": 159780,
+          "end": 160100
+        },
+        {
+          "word": "separate",
+          "begin": 160100,
+          "end": 160280
+        },
+        {
+          "word": "address",
+          "begin": 160280,
+          "end": 160340
+        },
+        {
+          "word": "spaces,",
+          "begin": 160460,
+          "end": 161020
+        },
+        {
+          "word": "special",
+          "begin": 161340,
+          "end": 161640
+        },
+        {
+          "word": "privilege",
+          "begin": 161760,
+          "end": 162200
+        },
+        {
+          "word": "levels,",
+          "begin": 162200,
+          "end": 163040
+        },
+        {
+          "word": "and",
+          "begin": 163140,
+          "end": 163240
+        },
+        {
+          "word": "can't",
+          "begin": 163240,
+          "end": 163280
+        },
+        {
+          "word": "leverage",
+          "begin": 163320,
+          "end": 163620
+        },
+        {
+          "word": "the",
+          "begin": 163680,
+          "end": 163740
+        },
+        {
+          "word": "CPU's",
+          "begin": 163840,
+          "end": 164360
+        },
+        {
+          "word": "existing",
+          "begin": 164380,
+          "end": 164840
+        },
+        {
+          "word": "memory",
+          "begin": 164900,
+          "end": 165160
+        },
+        {
+          "word": "infrastructure",
+          "begin": 165260,
+          "end": 165860
+        },
+        {
+          "word": "like",
+          "begin": 166240,
+          "end": 166380
+        },
+        {
+          "word": "caches",
+          "begin": 166420,
+          "end": 166960
+        },
+        {
+          "word": "and",
+          "begin": 167120,
+          "end": 167220
+        },
+        {
+          "word": "TLBs.",
+          "begin": 167260,
+          "end": 167960
+        },
+        {
+          "word": "MMIO",
+          "begin": 168680,
+          "end": 170160
+        },
+        {
+          "word": "scales",
+          "begin": 170300,
+          "end": 170620
+        },
+        {
+          "word": "better:",
+          "begin": 170660,
+          "end": 171340
+        },
+        {
+          "word": "any",
+          "begin": 171340,
+          "end": 171520
+        },
+        {
+          "word": "number",
+          "begin": 171580,
+          "end": 171900
+        },
+        {
+          "word": "of",
+          "begin": 171900,
+          "end": 172060
+        },
+        {
+          "word": "devices",
+          "begin": 172200,
+          "end": 172520
+        },
+        {
+          "word": "can",
+          "begin": 172540,
+          "end": 172760
+        },
+        {
+          "word": "be",
+          "begin": 172540,
+          "end": 172600
+        },
+        {
+          "word": "mapped",
+          "begin": 172680,
+          "end": 172940
+        },
+        {
+          "word": "into",
+          "begin": 172960,
+          "end": 173120
+        },
+        {
+          "word": "the",
+          "begin": 173160,
+          "end": 173180
+        },
+        {
+          "word": "vast",
+          "begin": 173180,
+          "end": 173620
+        },
+        {
+          "word": "64-bit",
+          "begin": 173740,
+          "end": 174360
+        },
+        {
+          "word": "address",
+          "begin": 174380,
+          "end": 174640
+        },
+        {
+          "word": "space,",
+          "begin": 174660,
+          "end": 174860
+        },
+        {
+          "word": "whereas",
+          "begin": 174880,
+          "end": 175260
+        },
+        {
+          "word": "I/O",
+          "begin": 175620,
+          "end": 175820
+        },
+        {
+          "word": "ports",
+          "begin": 175940,
+          "end": 176880
+        },
+        {
+          "word": "are",
+          "begin": 177040,
+          "end": 177180
+        },
+        {
+          "word": "limited",
+          "begin": 177180,
+          "end": 177460
+        },
+        {
+          "word": "to",
+          "begin": 177460,
+          "end": 177540
+        },
+        {
+          "word": "a",
+          "begin": 177580,
+          "end": 177680
+        },
+        {
+          "word": "16-bit",
+          "begin": 177800,
+          "end": 178460
+        },
+        {
+          "word": "address",
+          "begin": 178520,
+          "end": 178840
+        },
+        {
+          "word": "range",
+          "begin": 178920,
+          "end": 179200
+        },
+        {
+          "word": "(65,536",
+          "begin": 179320,
+          "end": 182020
+        },
+        {
+          "word": "ports",
+          "begin": 182080,
+          "end": 182380
+        },
+        {
+          "word": "total).",
+          "begin": 182440,
+          "end": 182680
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

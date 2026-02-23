@@ -1,0 +1,31 @@
+{
+  "sectionId": "sec-io-path",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "The Complete Journey — From read() to NAND and Back",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: The I/O Path Is a 10-Layer Relay Race. A single 4KB read passes through 10 layers: application → syscall → VFS → filesystem → block layer → NVMe driver → PCIe bus → SSD controller → NAND flash → and back up. The NAND read itself takes ~50μs (about 87% of total latency). Everything else combined is just overhead.",
+      "blockIndex": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "Now that we understand all the protocol pieces — commands, queues, doorbells, completions — let's trace the entire journey of a single 4KB read. It passes through 10 layers, each one doing something we've already learned about.",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "Why trace the whole path? Because understanding each layer in isolation is different from seeing how they connect. When something goes wrong — a slow read, a timeout, an error — knowing the full path tells you where to look.",
+      "blockIndex": 3
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: Given that the NAND read dominates total I/O latency, why do kernel optimizations like io_uring and bypass techniques like SPDK still matter? If the bottleneck is NAND physics, shouldn't software overhead be irrelevant? The answer: NAND read latency (~70us for TLC) accounts for roughly 87% of a single 4KB read at queue depth 1. But software overhead matters enormously at scale. At high queue depths (hundreds of concurrent I/Os), the SSD's internal parallelism hides NAND latency — multiple dies read simultaneously, so the effective per-IO latency drops. At that point, software overhead (syscall cost, context switches, lock contention, interrupt handling) becomes the bottleneck. io_uring reduces syscall overhead by batching submissions and completions in shared ring buffers. SPDK bypasses the kernel entirely, eliminating context switches and interrupt overhead. These optimizations don't speed up a single NAND read, but they dramatically increase throughput (IOPS) when the SSD is handling thousands of concurrent requests — which is exactly how enterprise workloads operate. The 87% figure only tells the story at queue depth 1; at queue depth 128, software overhead can account for over half the total time.",
+      "requiresReveal": true,
+      "blockIndex": 4
+    }
+  ]
+}

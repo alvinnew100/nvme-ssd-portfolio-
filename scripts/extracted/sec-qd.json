@@ -1,0 +1,51 @@
+{
+  "sectionId": "sec-qd",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Queue Depth (QD) is how many commands are in-flight simultaneously — submitted to the SSD but not yet completed. A single NVMe submission queue can hold up to 65,535 entries. Higher QD lets the SSD's controller keep all its NAND dies busy in parallel.",
+      "blockIndex": 0
+    },
+    {
+      "type": "paragraph",
+      "text": "Only 1 command in-flight. The CPU waits idle while the SSD reads NAND. Most NAND dies are idle. Measures pure latency but wastes bandwidth.",
+      "blockIndex": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "Enough commands to keep most NAND dies busy. Latency increases slightly but IOPS scales dramatically. This is the typical operating range for high-performance storage workloads.",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "All dies are saturated — adding more commands just increases queue wait time. Latency climbs steeply while IOPS barely improves. The SSD is at maximum throughput.",
+      "blockIndex": 3
+    },
+    {
+      "type": "heading",
+      "text": "Queue Depth and IOPS",
+      "blockIndex": 4
+    },
+    {
+      "type": "term",
+      "text": "IOPS (I/O Operations Per Second): A measure of how many read or write operations a storage device can complete per second. Higher queue depth generally increases IOPS by keeping more NAND dies busy in parallel.",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "An SSD contains multiple NAND dies, each capable of operating independently. But to keep them all busy, the host needs to submit multiple commands at once. Queue depth determines how well the controller can parallelize work across NAND dies.",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "Think of it like a restaurant with 8 chefs (NAND dies). If you order one dish at a time (QD1), 7 chefs stand idle. If you order 8 dishes at once (QD8), every chef is cooking — your food arrives much faster overall, even though each dish takes the same time.",
+      "blockIndex": 7
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: Why does a typical NVMe SSD achieve only ~15K IOPS at QD1 despite being capable of 250K+ IOPS at higher queue depths? What specific hardware resources are being wasted at QD1, and why can't the controller optimize around this? The answer: At QD1 (single command in flight), the SSD achieves only ~10-20K IOPS because only one NAND die is active at a time while all others sit idle. A typical SSD has 8-16 dies across 4-8 channels, each capable of independent operation — but with only one command pending, the controller can only read from one die while the rest wait. The IOPS at QD1 is essentially 1 / (single_read_latency), where a NAND page read takes ~50-100us, giving ~10-20K IOPS. The controller can't optimize around this because it has no advance knowledge of what the host will request next — it must wait for each command to complete before receiving the next one. At QD32, 32 commands are in-flight simultaneously, allowing the controller to dispatch reads across many dies in parallel, multiplying throughput while each individual read still takes the same ~50-100us.",
+      "requiresReveal": true,
+      "blockIndex": 8
+    }
+  ]
+}

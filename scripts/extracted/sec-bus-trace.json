@@ -1,0 +1,61 @@
+{
+  "sectionId": "sec-bus-trace",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Seeing It All in Action — A PCIe Bus Trace",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: A Bus Trace Is an X-Ray of Data Flow. A PCIe bus trace captures every transaction between the host and SSD — like a security camera recording every package that passes through a mail sorting facility. You can see doorbell writes, DMA transfers, and interrupt signals at the individual packet level.",
+      "blockIndex": 1
+    },
+    {
+      "type": "term",
+      "text": "DMA (Direct Memory Access): A mechanism where the SSD reads from or writes to host RAM directly, without involving the CPU for each byte. The SSD's DMA engine fetches commands from SQs and delivers data/completions — this is what makes NVMe fast.",
+      "blockIndex": 2
+    },
+    {
+      "type": "term",
+      "text": "MSI-X (Message Signaled Interrupts - Extended): A modern interrupt mechanism where the SSD notifies the CPU by writing a small message to a specific memory address, rather than using a physical interrupt pin. Allows per-queue interrupt steering to specific CPU cores.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "We've learned all the concepts separately — PCIe, BAR0, queues, and doorbells. Now let's see how they work together during a single NVMe Read command. Every step below is a real PCIe packet (called a Transaction Layer Packet, or TLP) traveling between the host and SSD.",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "Why does this matter? When you debug NVMe performance or trace issues, you'll see these exact packet types. Understanding this flow helps you pinpoint where time is being spent — is it the doorbell write? The DMA data transfer? The NAND read time?",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "The 7-step trace below shows the complete lifecycle of a single 4KB NVMe Read command across the PCIe bus:",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "The CPU writes to a memory address that's actually mapped to the SSD's hardware register (BAR0). Used for doorbell writes — the CPU tells the SSD &ldquo;new command is waiting.&rdquo; Extremely fast (a single PCIe write TLP).",
+      "blockIndex": 7
+    },
+    {
+      "type": "paragraph",
+      "text": "The SSD reads or writes the host's RAM directly, without the CPU being involved. The SSD becomes a &ldquo;bus master&rdquo; on PCIe and initiates its own memory transactions. This is how commands are fetched and data is delivered — the CPU is free to do other work.",
+      "blockIndex": 8
+    },
+    {
+      "type": "paragraph",
+      "text": "How the SSD notifies the CPU that work is done. Instead of a physical interrupt wire, MSI-X is a PCIe memory write to a special address that the CPU's interrupt controller recognizes. Each CPU core can have its own interrupt vector — no sharing, no routing confusion.",
+      "blockIndex": 9
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: In the bus trace, you see both 'DMA Read' (the SSD fetching from host RAM) and 'DMA Write' (the SSD writing to host RAM). Under the hood, these map to different PCIe TLP types. Why does PCIe need separate transaction types for device-initiated reads vs. writes, and what would break if it only had one? The answer: PCIe uses different TLP types because reads and writes have fundamentally different flow control needs. A DMA Write from the SSD is a Memory Write (MWr) TLP — it's a 'posted' transaction, meaning the SSD fires it and doesn't wait for acknowledgment. This is fast but one-directional. A DMA Read is a Memory Read (MRd) request TLP — the SSD asks the host 'give me data at this address,' and the host responds with a Completion with Data (CplD) TLP containing the requested bytes. This is a split transaction: request goes one way, data comes back later. If PCIe only had writes, the SSD couldn't fetch commands from the host's Submission Queue (it needs to read host RAM). If it only had reads, the SSD couldn't deliver data or post completion entries (it needs to write to host RAM). The split design also allows the bus to stay busy — while the SSD waits for a read completion, other writes and requests can flow through the PCIe lanes.",
+      "requiresReveal": true,
+      "blockIndex": 10
+    }
+  ]
+}

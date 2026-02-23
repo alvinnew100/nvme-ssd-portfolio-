@@ -1,0 +1,3107 @@
+{
+  "sectionId": "sec-doorbells",
+  "audioFile": "/audio/sections/sec-doorbells.mp3",
+  "totalDurationMs": 234160,
+  "fileSizeBytes": 3747072,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "Ringing the Doorbell — How the SSD Knows There's Work",
+      "beginMs": 20,
+      "endMs": 3020,
+      "timestamps": [
+        {
+          "word": "Ringing",
+          "begin": 20,
+          "end": 140
+        },
+        {
+          "word": "the",
+          "begin": 160,
+          "end": 220
+        },
+        {
+          "word": "Doorbell",
+          "begin": 280,
+          "end": 700
+        },
+        {
+          "word": "How",
+          "begin": 920,
+          "end": 1000
+        },
+        {
+          "word": "the",
+          "begin": 1100,
+          "end": 1160
+        },
+        {
+          "word": "SSD",
+          "begin": 1280,
+          "end": 1720
+        },
+        {
+          "word": "Knows",
+          "begin": 1840,
+          "end": 2060
+        },
+        {
+          "word": "There's",
+          "begin": 2080,
+          "end": 2280
+        },
+        {
+          "word": "Work",
+          "begin": 2340,
+          "end": 2560
+        },
+        {
+          "word": "Analogy:",
+          "begin": 2580,
+          "end": 3020
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: Doorbells Are Notification Buzzers. After the host writes a command to the SQ, it 'rings the doorbell' — a simple register write that tells the SSD 'hey, there's new work.' Without the doorbell, the SSD would have to constantly poll the queue to check for new commands.",
+      "beginMs": 3320,
+      "endMs": 19360,
+      "timestamps": [
+        {
+          "word": "Doorbells",
+          "begin": 3320,
+          "end": 3740
+        },
+        {
+          "word": "Are",
+          "begin": 3760,
+          "end": 3780
+        },
+        {
+          "word": "Notification",
+          "begin": 3880,
+          "end": 4540
+        },
+        {
+          "word": "Buzzers.",
+          "begin": 4600,
+          "end": 5080
+        },
+        {
+          "word": "After",
+          "begin": 5600,
+          "end": 5780
+        },
+        {
+          "word": "the",
+          "begin": 5840,
+          "end": 5880
+        },
+        {
+          "word": "host",
+          "begin": 5960,
+          "end": 6260
+        },
+        {
+          "word": "writes",
+          "begin": 6300,
+          "end": 6520
+        },
+        {
+          "word": "a",
+          "begin": 6540,
+          "end": 6560
+        },
+        {
+          "word": "command",
+          "begin": 6620,
+          "end": 7020
+        },
+        {
+          "word": "to",
+          "begin": 7060,
+          "end": 7120
+        },
+        {
+          "word": "the",
+          "begin": 7160,
+          "end": 7200
+        },
+        {
+          "word": "SQ,",
+          "begin": 7320,
+          "end": 7620
+        },
+        {
+          "word": "it",
+          "begin": 7640,
+          "end": 8200
+        },
+        {
+          "word": "'rings",
+          "begin": 8260,
+          "end": 8480
+        },
+        {
+          "word": "the",
+          "begin": 8300,
+          "end": 8420
+        },
+        {
+          "word": "doorbell'",
+          "begin": 8460,
+          "end": 8660
+        },
+        {
+          "word": "a",
+          "begin": 8660,
+          "end": 9260
+        },
+        {
+          "word": "simple",
+          "begin": 9360,
+          "end": 9560
+        },
+        {
+          "word": "register",
+          "begin": 9660,
+          "end": 10060
+        },
+        {
+          "word": "write",
+          "begin": 10160,
+          "end": 10380
+        },
+        {
+          "word": "that",
+          "begin": 10440,
+          "end": 10540
+        },
+        {
+          "word": "tells",
+          "begin": 10580,
+          "end": 10820
+        },
+        {
+          "word": "the",
+          "begin": 10840,
+          "end": 10900
+        },
+        {
+          "word": "SSD",
+          "begin": 11000,
+          "end": 11440
+        },
+        {
+          "word": "'hey,",
+          "begin": 11760,
+          "end": 11860
+        },
+        {
+          "word": "there's",
+          "begin": 12220,
+          "end": 12420
+        },
+        {
+          "word": "new",
+          "begin": 12500,
+          "end": 12560
+        },
+        {
+          "word": "work.'",
+          "begin": 12680,
+          "end": 12980
+        },
+        {
+          "word": "Without",
+          "begin": 13500,
+          "end": 13760
+        },
+        {
+          "word": "the",
+          "begin": 13800,
+          "end": 13860
+        },
+        {
+          "word": "doorbell,",
+          "begin": 13920,
+          "end": 14360
+        },
+        {
+          "word": "the",
+          "begin": 14580,
+          "end": 14620
+        },
+        {
+          "word": "SSD",
+          "begin": 14720,
+          "end": 15180
+        },
+        {
+          "word": "would",
+          "begin": 15280,
+          "end": 15380
+        },
+        {
+          "word": "have",
+          "begin": 15400,
+          "end": 15560
+        },
+        {
+          "word": "to",
+          "begin": 15600,
+          "end": 15640
+        },
+        {
+          "word": "constantly",
+          "begin": 15720,
+          "end": 16239
+        },
+        {
+          "word": "poll",
+          "begin": 16360,
+          "end": 16560
+        },
+        {
+          "word": "the",
+          "begin": 16460,
+          "end": 16660
+        },
+        {
+          "word": "queue",
+          "begin": 16740,
+          "end": 16840
+        },
+        {
+          "word": "to",
+          "begin": 16860,
+          "end": 16880
+        },
+        {
+          "word": "check",
+          "begin": 17040,
+          "end": 17400
+        },
+        {
+          "word": "for",
+          "begin": 17440,
+          "end": 17600
+        },
+        {
+          "word": "new",
+          "begin": 17600,
+          "end": 17660
+        },
+        {
+          "word": "commands.",
+          "begin": 17760,
+          "end": 18320
+        },
+        {
+          "word": "Doorbell",
+          "begin": 19000,
+          "end": 19360
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "term",
+      "text": "Doorbell Register: A 32-bit register in BAR0 that the host writes to notify the SSD of new SQ entries or consumed CQ entries. Each queue pair has two doorbell registers — one for submissions, one for completions.",
+      "beginMs": 19420,
+      "endMs": 34300,
+      "timestamps": [
+        {
+          "word": "Register:",
+          "begin": 19420,
+          "end": 20300
+        },
+        {
+          "word": "A",
+          "begin": 20520,
+          "end": 20600
+        },
+        {
+          "word": "32-bit",
+          "begin": 20520,
+          "end": 21200
+        },
+        {
+          "word": "register",
+          "begin": 21260,
+          "end": 21680
+        },
+        {
+          "word": "in",
+          "begin": 21800,
+          "end": 22340
+        },
+        {
+          "word": "BAR0",
+          "begin": 22520,
+          "end": 22980
+        },
+        {
+          "word": "that",
+          "begin": 23060,
+          "end": 23200
+        },
+        {
+          "word": "the",
+          "begin": 23240,
+          "end": 23300
+        },
+        {
+          "word": "host",
+          "begin": 23240,
+          "end": 23500
+        },
+        {
+          "word": "writes",
+          "begin": 23560,
+          "end": 23940
+        },
+        {
+          "word": "to",
+          "begin": 24000,
+          "end": 24080
+        },
+        {
+          "word": "notify",
+          "begin": 24000,
+          "end": 24340
+        },
+        {
+          "word": "the",
+          "begin": 24440,
+          "end": 24500
+        },
+        {
+          "word": "SSD",
+          "begin": 24620,
+          "end": 25080
+        },
+        {
+          "word": "of",
+          "begin": 25220,
+          "end": 25320
+        },
+        {
+          "word": "new",
+          "begin": 25400,
+          "end": 25460
+        },
+        {
+          "word": "SQ",
+          "begin": 25640,
+          "end": 25960
+        },
+        {
+          "word": "entries",
+          "begin": 26100,
+          "end": 26540
+        },
+        {
+          "word": "or",
+          "begin": 26680,
+          "end": 26700
+        },
+        {
+          "word": "consumed",
+          "begin": 26800,
+          "end": 27240
+        },
+        {
+          "word": "CQ",
+          "begin": 27340,
+          "end": 27640
+        },
+        {
+          "word": "entries.",
+          "begin": 27780,
+          "end": 28260
+        },
+        {
+          "word": "Each",
+          "begin": 28760,
+          "end": 29020
+        },
+        {
+          "word": "queue",
+          "begin": 29020,
+          "end": 29140
+        },
+        {
+          "word": "pair",
+          "begin": 29240,
+          "end": 29360
+        },
+        {
+          "word": "has",
+          "begin": 29540,
+          "end": 29700
+        },
+        {
+          "word": "two",
+          "begin": 29780,
+          "end": 29880
+        },
+        {
+          "word": "doorbell",
+          "begin": 30000,
+          "end": 30340
+        },
+        {
+          "word": "registers",
+          "begin": 30400,
+          "end": 31360
+        },
+        {
+          "word": "one",
+          "begin": 31360,
+          "end": 31500
+        },
+        {
+          "word": "for",
+          "begin": 31560,
+          "end": 31620
+        },
+        {
+          "word": "submissions,",
+          "begin": 31720,
+          "end": 32320
+        },
+        {
+          "word": "one",
+          "begin": 32580,
+          "end": 32700
+        },
+        {
+          "word": "for",
+          "begin": 32759,
+          "end": 32820
+        },
+        {
+          "word": "completions.",
+          "begin": 32900,
+          "end": 33600
+        },
+        {
+          "word": "We've",
+          "begin": 34160,
+          "end": 34300
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "We've seen that the host places commands in the Submission Queue (SQ) in RAM. But the SSD doesn't constantly watch RAM looking for new commands — that would waste power and bandwidth. So how does the SSD know when there's a new command waiting?",
+      "beginMs": 34380,
+      "endMs": 47780,
+      "timestamps": [
+        {
+          "word": "seen",
+          "begin": 34380,
+          "end": 34560
+        },
+        {
+          "word": "that",
+          "begin": 34560,
+          "end": 34700
+        },
+        {
+          "word": "the",
+          "begin": 34700,
+          "end": 34740
+        },
+        {
+          "word": "host",
+          "begin": 34840,
+          "end": 35120
+        },
+        {
+          "word": "places",
+          "begin": 35180,
+          "end": 35540
+        },
+        {
+          "word": "commands",
+          "begin": 35600,
+          "end": 36040
+        },
+        {
+          "word": "in",
+          "begin": 36100,
+          "end": 36180
+        },
+        {
+          "word": "the",
+          "begin": 36180,
+          "end": 36220
+        },
+        {
+          "word": "Submission",
+          "begin": 36300,
+          "end": 36740
+        },
+        {
+          "word": "Queue",
+          "begin": 36820,
+          "end": 36920
+        },
+        {
+          "word": "(SQ)",
+          "begin": 36920,
+          "end": 37460
+        },
+        {
+          "word": "in",
+          "begin": 37620,
+          "end": 37700
+        },
+        {
+          "word": "RAM.",
+          "begin": 37700,
+          "end": 38080
+        },
+        {
+          "word": "But",
+          "begin": 38480,
+          "end": 38560
+        },
+        {
+          "word": "the",
+          "begin": 38600,
+          "end": 38660
+        },
+        {
+          "word": "SSD",
+          "begin": 38720,
+          "end": 39160
+        },
+        {
+          "word": "doesn't",
+          "begin": 39280,
+          "end": 39520
+        },
+        {
+          "word": "constantly",
+          "begin": 39580,
+          "end": 40040
+        },
+        {
+          "word": "watch",
+          "begin": 40140,
+          "end": 40360
+        },
+        {
+          "word": "RAM",
+          "begin": 40440,
+          "end": 40700
+        },
+        {
+          "word": "looking",
+          "begin": 40760,
+          "end": 40980
+        },
+        {
+          "word": "for",
+          "begin": 41040,
+          "end": 41100
+        },
+        {
+          "word": "new",
+          "begin": 41180,
+          "end": 41240
+        },
+        {
+          "word": "commands",
+          "begin": 41340,
+          "end": 41920
+        },
+        {
+          "word": "that",
+          "begin": 42300,
+          "end": 42420
+        },
+        {
+          "word": "would",
+          "begin": 42440,
+          "end": 42540
+        },
+        {
+          "word": "waste",
+          "begin": 42600,
+          "end": 42840
+        },
+        {
+          "word": "power",
+          "begin": 42900,
+          "end": 43360
+        },
+        {
+          "word": "and",
+          "begin": 43360,
+          "end": 43380
+        },
+        {
+          "word": "bandwidth.",
+          "begin": 43420,
+          "end": 43900
+        },
+        {
+          "word": "So",
+          "begin": 44340,
+          "end": 44420
+        },
+        {
+          "word": "how",
+          "begin": 44520,
+          "end": 44600
+        },
+        {
+          "word": "does",
+          "begin": 44680,
+          "end": 44780
+        },
+        {
+          "word": "the",
+          "begin": 44780,
+          "end": 44880
+        },
+        {
+          "word": "SSD",
+          "begin": 44940,
+          "end": 45380
+        },
+        {
+          "word": "know",
+          "begin": 45580,
+          "end": 45680
+        },
+        {
+          "word": "when",
+          "begin": 45840,
+          "end": 45940
+        },
+        {
+          "word": "there's",
+          "begin": 45980,
+          "end": 46140
+        },
+        {
+          "word": "a",
+          "begin": 46160,
+          "end": 46180
+        },
+        {
+          "word": "new",
+          "begin": 46260,
+          "end": 46320
+        },
+        {
+          "word": "command",
+          "begin": 46440,
+          "end": 46760
+        },
+        {
+          "word": "waiting?",
+          "begin": 46760,
+          "end": 47200
+        },
+        {
+          "word": "Think",
+          "begin": 47640,
+          "end": 47780
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "Think about a hotel front desk. You don't stand at the desk shouting for service — you ring the bell. One quick &ldquo;ding&rdquo; tells the staff &ldquo;someone needs attention.&rdquo; NVMe works the same way.",
+      "beginMs": 47800,
+      "endMs": 60660,
+      "timestamps": [
+        {
+          "word": "about",
+          "begin": 47800,
+          "end": 48020
+        },
+        {
+          "word": "a",
+          "begin": 48020,
+          "end": 48120
+        },
+        {
+          "word": "hotel",
+          "begin": 48120,
+          "end": 48420
+        },
+        {
+          "word": "front",
+          "begin": 48540,
+          "end": 48740
+        },
+        {
+          "word": "desk.",
+          "begin": 48800,
+          "end": 49200
+        },
+        {
+          "word": "don't",
+          "begin": 49440,
+          "end": 49600
+        },
+        {
+          "word": "stand",
+          "begin": 49600,
+          "end": 49820
+        },
+        {
+          "word": "at",
+          "begin": 49840,
+          "end": 49940
+        },
+        {
+          "word": "the",
+          "begin": 49940,
+          "end": 50000
+        },
+        {
+          "word": "desk",
+          "begin": 50120,
+          "end": 50400
+        },
+        {
+          "word": "shouting",
+          "begin": 50420,
+          "end": 50580
+        },
+        {
+          "word": "for",
+          "begin": 50640,
+          "end": 50940
+        },
+        {
+          "word": "service",
+          "begin": 51000,
+          "end": 51540
+        },
+        {
+          "word": "you",
+          "begin": 51540,
+          "end": 51600
+        },
+        {
+          "word": "ring",
+          "begin": 51680,
+          "end": 51780
+        },
+        {
+          "word": "the",
+          "begin": 51840,
+          "end": 52000
+        },
+        {
+          "word": "bell.",
+          "begin": 52020,
+          "end": 52140
+        },
+        {
+          "word": "One",
+          "begin": 52140,
+          "end": 52340
+        },
+        {
+          "word": "quick",
+          "begin": 52460,
+          "end": 52660
+        },
+        {
+          "word": "&ldquo;ding&rdquo;",
+          "begin": 52700,
+          "end": 53420
+        },
+        {
+          "word": "tells",
+          "begin": 53600,
+          "end": 54140
+        },
+        {
+          "word": "the",
+          "begin": 54160,
+          "end": 54280
+        },
+        {
+          "word": "staff",
+          "begin": 54320,
+          "end": 54460
+        },
+        {
+          "word": "&ldquo;someone",
+          "begin": 54500,
+          "end": 58080
+        },
+        {
+          "word": "same",
+          "begin": 58080,
+          "end": 58100
+        },
+        {
+          "word": "After",
+          "begin": 58780,
+          "end": 59120
+        },
+        {
+          "word": "writing",
+          "begin": 59120,
+          "end": 59400
+        },
+        {
+          "word": "one",
+          "begin": 59460,
+          "end": 59620
+        },
+        {
+          "word": "or",
+          "begin": 59640,
+          "end": 59660
+        },
+        {
+          "word": "more",
+          "begin": 59760,
+          "end": 59980
+        },
+        {
+          "word": "commands",
+          "begin": 59980,
+          "end": 60440
+        },
+        {
+          "word": "to",
+          "begin": 60500,
+          "end": 60560
+        },
+        {
+          "word": "the",
+          "begin": 60600,
+          "end": 60660
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "After writing one or more commands to the SQ, the host writes the new tail position to a special register called a doorbell register. This is a single write to a BAR0 address — remember, BAR0 writes travel over PCIe to the SSD hardware. The SSD sees this write, reads the new tail value, and knows exactly how many new commands are waiting.",
+      "beginMs": 61600,
+      "endMs": 83120,
+      "timestamps": [
+        {
+          "word": "the",
+          "begin": 61600,
+          "end": 61640
+        },
+        {
+          "word": "host",
+          "begin": 61700,
+          "end": 62000
+        },
+        {
+          "word": "writes",
+          "begin": 62040,
+          "end": 62280
+        },
+        {
+          "word": "the",
+          "begin": 62360,
+          "end": 62400
+        },
+        {
+          "word": "new",
+          "begin": 62500,
+          "end": 62560
+        },
+        {
+          "word": "tail",
+          "begin": 62700,
+          "end": 62980
+        },
+        {
+          "word": "position",
+          "begin": 62980,
+          "end": 63420
+        },
+        {
+          "word": "to",
+          "begin": 63500,
+          "end": 63580
+        },
+        {
+          "word": "a",
+          "begin": 63640,
+          "end": 63660
+        },
+        {
+          "word": "special",
+          "begin": 63740,
+          "end": 64040
+        },
+        {
+          "word": "register",
+          "begin": 64140,
+          "end": 64540
+        },
+        {
+          "word": "called",
+          "begin": 64640,
+          "end": 64840
+        },
+        {
+          "word": "a",
+          "begin": 64840,
+          "end": 64860
+        },
+        {
+          "word": "doorbell",
+          "begin": 64959,
+          "end": 65300
+        },
+        {
+          "word": "register.",
+          "begin": 65360,
+          "end": 65760
+        },
+        {
+          "word": "This",
+          "begin": 66740,
+          "end": 66880
+        },
+        {
+          "word": "is",
+          "begin": 66900,
+          "end": 67000
+        },
+        {
+          "word": "a",
+          "begin": 67020,
+          "end": 67040
+        },
+        {
+          "word": "single",
+          "begin": 67160,
+          "end": 67400
+        },
+        {
+          "word": "write",
+          "begin": 67520,
+          "end": 67780
+        },
+        {
+          "word": "to",
+          "begin": 67820,
+          "end": 67900
+        },
+        {
+          "word": "a",
+          "begin": 67940,
+          "end": 68420
+        },
+        {
+          "word": "BAR0",
+          "begin": 68640,
+          "end": 68980
+        },
+        {
+          "word": "address",
+          "begin": 68980,
+          "end": 69420
+        },
+        {
+          "word": "remember,",
+          "begin": 70240,
+          "end": 71440
+        },
+        {
+          "word": "BAR0",
+          "begin": 71640,
+          "end": 71880
+        },
+        {
+          "word": "writes",
+          "begin": 72000,
+          "end": 72260
+        },
+        {
+          "word": "travel",
+          "begin": 72340,
+          "end": 72680
+        },
+        {
+          "word": "over",
+          "begin": 72720,
+          "end": 72880
+        },
+        {
+          "word": "PCIe",
+          "begin": 73000,
+          "end": 73640
+        },
+        {
+          "word": "to",
+          "begin": 73880,
+          "end": 73960
+        },
+        {
+          "word": "the",
+          "begin": 74000,
+          "end": 74040
+        },
+        {
+          "word": "SSD",
+          "begin": 74140,
+          "end": 74580
+        },
+        {
+          "word": "hardware.",
+          "begin": 74700,
+          "end": 75020
+        },
+        {
+          "word": "The",
+          "begin": 75800,
+          "end": 75860
+        },
+        {
+          "word": "SSD",
+          "begin": 75940,
+          "end": 76380
+        },
+        {
+          "word": "sees",
+          "begin": 76580,
+          "end": 76780
+        },
+        {
+          "word": "this",
+          "begin": 76820,
+          "end": 76980
+        },
+        {
+          "word": "write,",
+          "begin": 77060,
+          "end": 77340
+        },
+        {
+          "word": "reads",
+          "begin": 77720,
+          "end": 77960
+        },
+        {
+          "word": "the",
+          "begin": 78000,
+          "end": 78060
+        },
+        {
+          "word": "new",
+          "begin": 78140,
+          "end": 78200
+        },
+        {
+          "word": "tail",
+          "begin": 78320,
+          "end": 78540
+        },
+        {
+          "word": "value,",
+          "begin": 78600,
+          "end": 78900
+        },
+        {
+          "word": "and",
+          "begin": 79400,
+          "end": 79500
+        },
+        {
+          "word": "knows",
+          "begin": 79540,
+          "end": 79800
+        },
+        {
+          "word": "exactly",
+          "begin": 79820,
+          "end": 80260
+        },
+        {
+          "word": "how",
+          "begin": 80260,
+          "end": 80440
+        },
+        {
+          "word": "many",
+          "begin": 80540,
+          "end": 80600
+        },
+        {
+          "word": "new",
+          "begin": 80640,
+          "end": 80860
+        },
+        {
+          "word": "commands",
+          "begin": 80980,
+          "end": 81400
+        },
+        {
+          "word": "are",
+          "begin": 81440,
+          "end": 81460
+        },
+        {
+          "word": "waiting.",
+          "begin": 81560,
+          "end": 81880
+        },
+        {
+          "word": "Why",
+          "begin": 82640,
+          "end": 82720
+        },
+        {
+          "word": "is",
+          "begin": 82840,
+          "end": 82920
+        },
+        {
+          "word": "this",
+          "begin": 82960,
+          "end": 83120
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "Why is this efficient? Because the host can queue up many commands and ring the doorbell just once. The SSD then processes the entire batch. One PCIe write triggers the processing of dozens of commands — this batching is a key reason NVMe can achieve millions of operations per second.",
+      "beginMs": 83140,
+      "endMs": 100120,
+      "timestamps": [
+        {
+          "word": "efficient?",
+          "begin": 83140,
+          "end": 83620
+        },
+        {
+          "word": "Because",
+          "begin": 84460,
+          "end": 84720
+        },
+        {
+          "word": "the",
+          "begin": 84760,
+          "end": 84800
+        },
+        {
+          "word": "host",
+          "begin": 84880,
+          "end": 85160
+        },
+        {
+          "word": "can",
+          "begin": 85220,
+          "end": 85340
+        },
+        {
+          "word": "queue",
+          "begin": 85400,
+          "end": 85500
+        },
+        {
+          "word": "up",
+          "begin": 85500,
+          "end": 85740
+        },
+        {
+          "word": "many",
+          "begin": 85800,
+          "end": 85960
+        },
+        {
+          "word": "commands",
+          "begin": 86060,
+          "end": 86540
+        },
+        {
+          "word": "and",
+          "begin": 86620,
+          "end": 86720
+        },
+        {
+          "word": "ring",
+          "begin": 86780,
+          "end": 86920
+        },
+        {
+          "word": "the",
+          "begin": 86960,
+          "end": 87000
+        },
+        {
+          "word": "doorbell",
+          "begin": 87080,
+          "end": 87440
+        },
+        {
+          "word": "just",
+          "begin": 87520,
+          "end": 87740
+        },
+        {
+          "word": "once.",
+          "begin": 87800,
+          "end": 88140
+        },
+        {
+          "word": "The",
+          "begin": 89020,
+          "end": 89080
+        },
+        {
+          "word": "SSD",
+          "begin": 89180,
+          "end": 89620
+        },
+        {
+          "word": "then",
+          "begin": 89760,
+          "end": 89920
+        },
+        {
+          "word": "processes",
+          "begin": 89980,
+          "end": 90580
+        },
+        {
+          "word": "the",
+          "begin": 90620,
+          "end": 90680
+        },
+        {
+          "word": "entire",
+          "begin": 90740,
+          "end": 91140
+        },
+        {
+          "word": "batch.",
+          "begin": 91240,
+          "end": 91600
+        },
+        {
+          "word": "One",
+          "begin": 92300,
+          "end": 92460
+        },
+        {
+          "word": "PCIe",
+          "begin": 92540,
+          "end": 93020
+        },
+        {
+          "word": "write",
+          "begin": 93100,
+          "end": 93260
+        },
+        {
+          "word": "triggers",
+          "begin": 93260,
+          "end": 93600
+        },
+        {
+          "word": "the",
+          "begin": 93640,
+          "end": 93680
+        },
+        {
+          "word": "processing",
+          "begin": 93720,
+          "end": 94240
+        },
+        {
+          "word": "of",
+          "begin": 94260,
+          "end": 94340
+        },
+        {
+          "word": "dozens",
+          "begin": 94400,
+          "end": 94760
+        },
+        {
+          "word": "of",
+          "begin": 94780,
+          "end": 94860
+        },
+        {
+          "word": "commands",
+          "begin": 94900,
+          "end": 95300
+        },
+        {
+          "word": "this",
+          "begin": 95300,
+          "end": 95840
+        },
+        {
+          "word": "batching",
+          "begin": 95900,
+          "end": 96260
+        },
+        {
+          "word": "is",
+          "begin": 96280,
+          "end": 96360
+        },
+        {
+          "word": "a",
+          "begin": 96380,
+          "end": 96480
+        },
+        {
+          "word": "key",
+          "begin": 96480,
+          "end": 96600
+        },
+        {
+          "word": "reason",
+          "begin": 96740,
+          "end": 97040
+        },
+        {
+          "word": "NVMe",
+          "begin": 97120,
+          "end": 97520
+        },
+        {
+          "word": "can",
+          "begin": 97620,
+          "end": 97720
+        },
+        {
+          "word": "achieve",
+          "begin": 97740,
+          "end": 98080
+        },
+        {
+          "word": "millions",
+          "begin": 98180,
+          "end": 98500
+        },
+        {
+          "word": "of",
+          "begin": 98520,
+          "end": 98600
+        },
+        {
+          "word": "operations",
+          "begin": 98640,
+          "end": 99180
+        },
+        {
+          "word": "per",
+          "begin": 99220,
+          "end": 99300
+        },
+        {
+          "word": "second.",
+          "begin": 99420,
+          "end": 99760
+        },
+        {
+          "word": "Each",
+          "begin": 99980,
+          "end": 100120
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "Each queue pair has two doorbells: one for the SQ tail (host tells SSD &ldquo;I added commands&rdquo;) and one for the CQ head (host tells SSD &ldquo;I read your results, you can reuse those slots&rdquo;). Click each doorbell below to see it ring:",
+      "beginMs": 100200,
+      "endMs": 118880,
+      "timestamps": [
+        {
+          "word": "queue",
+          "begin": 100200,
+          "end": 100320
+        },
+        {
+          "word": "pair",
+          "begin": 100440,
+          "end": 100800
+        },
+        {
+          "word": "has",
+          "begin": 100800,
+          "end": 100960
+        },
+        {
+          "word": "two",
+          "begin": 101060,
+          "end": 101160
+        },
+        {
+          "word": "doorbells:",
+          "begin": 101260,
+          "end": 101820
+        },
+        {
+          "word": "one",
+          "begin": 102120,
+          "end": 102280
+        },
+        {
+          "word": "for",
+          "begin": 102280,
+          "end": 102360
+        },
+        {
+          "word": "the",
+          "begin": 102360,
+          "end": 102460
+        },
+        {
+          "word": "SQ",
+          "begin": 102460,
+          "end": 102620
+        },
+        {
+          "word": "tail",
+          "begin": 102720,
+          "end": 102900
+        },
+        {
+          "word": "(host",
+          "begin": 103000,
+          "end": 104460
+        },
+        {
+          "word": "tells",
+          "begin": 104780,
+          "end": 105860
+        },
+        {
+          "word": "SSD",
+          "begin": 106040,
+          "end": 106260
+        },
+        {
+          "word": "commands&rdquo;)",
+          "begin": 106300,
+          "end": 107320
+        },
+        {
+          "word": "and",
+          "begin": 107820,
+          "end": 107900
+        },
+        {
+          "word": "one",
+          "begin": 107960,
+          "end": 108140
+        },
+        {
+          "word": "for",
+          "begin": 108200,
+          "end": 108360
+        },
+        {
+          "word": "the",
+          "begin": 108480,
+          "end": 108560
+        },
+        {
+          "word": "CQ",
+          "begin": 108680,
+          "end": 108820
+        },
+        {
+          "word": "head",
+          "begin": 108960,
+          "end": 109120
+        },
+        {
+          "word": "(host",
+          "begin": 109180,
+          "end": 110380
+        },
+        {
+          "word": "tells",
+          "begin": 110620,
+          "end": 110700
+        },
+        {
+          "word": "&ldquo;I",
+          "begin": 110800,
+          "end": 111700
+        },
+        {
+          "word": "read",
+          "begin": 111800,
+          "end": 111960
+        },
+        {
+          "word": "your",
+          "begin": 111980,
+          "end": 112020
+        },
+        {
+          "word": "results,",
+          "begin": 112080,
+          "end": 112620
+        },
+        {
+          "word": "you",
+          "begin": 112920,
+          "end": 112980
+        },
+        {
+          "word": "can",
+          "begin": 113040,
+          "end": 113160
+        },
+        {
+          "word": "reuse",
+          "begin": 113200,
+          "end": 113540
+        },
+        {
+          "word": "those",
+          "begin": 113580,
+          "end": 113740
+        },
+        {
+          "word": "slots&rdquo;).",
+          "begin": 113800,
+          "end": 115840
+        },
+        {
+          "word": "Click",
+          "begin": 116080,
+          "end": 116260
+        },
+        {
+          "word": "each",
+          "begin": 116340,
+          "end": 116640
+        },
+        {
+          "word": "doorbell",
+          "begin": 116740,
+          "end": 117100
+        },
+        {
+          "word": "below",
+          "begin": 117260,
+          "end": 117600
+        },
+        {
+          "word": "to",
+          "begin": 117620,
+          "end": 117640
+        },
+        {
+          "word": "see",
+          "begin": 117640,
+          "end": 117720
+        },
+        {
+          "word": "it",
+          "begin": 117760,
+          "end": 117920
+        },
+        {
+          "word": "ring:",
+          "begin": 117920,
+          "end": 118300
+        },
+        {
+          "word": "The",
+          "begin": 118360,
+          "end": 118440
+        },
+        {
+          "word": "doorbell",
+          "begin": 118580,
+          "end": 118820
+        },
+        {
+          "word": "for",
+          "begin": 118820,
+          "end": 118880
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "paragraph",
+      "text": "The doorbell for queue Q lives at:",
+      "beginMs": 118980,
+      "endMs": 120160,
+      "timestamps": [
+        {
+          "word": "queue",
+          "begin": 118980,
+          "end": 119120
+        },
+        {
+          "word": "Q",
+          "begin": 119260,
+          "end": 119420
+        },
+        {
+          "word": "lives",
+          "begin": 119680,
+          "end": 119880
+        },
+        {
+          "word": "at:",
+          "begin": 119940,
+          "end": 120160
+        }
+      ]
+    },
+    {
+      "blockIndex": 9,
+      "type": "paragraph",
+      "text": "Where type is 0 for SQ (submission) or 1 for CQ (completion), and stride is read from the CAP register (usually 4 bytes). So the Admin SQ doorbell is at 0x1000, Admin CQ at 0x1004, I/O queue 1 SQ at 0x1008, I/O queue 1 CQ at 0x100C, and so on.",
+      "beginMs": 120480,
+      "endMs": 145340,
+      "timestamps": [
+        {
+          "word": "Where",
+          "begin": 120480,
+          "end": 120820
+        },
+        {
+          "word": "type",
+          "begin": 120960,
+          "end": 121100
+        },
+        {
+          "word": "is",
+          "begin": 121100,
+          "end": 121100
+        },
+        {
+          "word": "0",
+          "begin": 121100,
+          "end": 121360
+        },
+        {
+          "word": "for",
+          "begin": 121500,
+          "end": 121560
+        },
+        {
+          "word": "SQ",
+          "begin": 121660,
+          "end": 122140
+        },
+        {
+          "word": "(submission)",
+          "begin": 122140,
+          "end": 122660
+        },
+        {
+          "word": "or",
+          "begin": 122820,
+          "end": 122980
+        },
+        {
+          "word": "1",
+          "begin": 122980,
+          "end": 123140
+        },
+        {
+          "word": "for",
+          "begin": 123220,
+          "end": 123520
+        },
+        {
+          "word": "CQ",
+          "begin": 123620,
+          "end": 123740
+        },
+        {
+          "word": "(completion),",
+          "begin": 123840,
+          "end": 124400
+        },
+        {
+          "word": "and",
+          "begin": 124400,
+          "end": 124000
+        },
+        {
+          "word": "stride",
+          "begin": 124040,
+          "end": 124840
+        },
+        {
+          "word": "is",
+          "begin": 124840,
+          "end": 124860
+        },
+        {
+          "word": "read",
+          "begin": 124920,
+          "end": 125020
+        },
+        {
+          "word": "from",
+          "begin": 125020,
+          "end": 125100
+        },
+        {
+          "word": "the",
+          "begin": 125220,
+          "end": 125280
+        },
+        {
+          "word": "CAP",
+          "begin": 125340,
+          "end": 125360
+        },
+        {
+          "word": "register",
+          "begin": 125420,
+          "end": 125780
+        },
+        {
+          "word": "(usually",
+          "begin": 125780,
+          "end": 126060
+        },
+        {
+          "word": "4",
+          "begin": 126180,
+          "end": 126280
+        },
+        {
+          "word": "bytes).",
+          "begin": 126360,
+          "end": 127680
+        },
+        {
+          "word": "So",
+          "begin": 127920,
+          "end": 127980
+        },
+        {
+          "word": "the",
+          "begin": 128039,
+          "end": 128080
+        },
+        {
+          "word": "Admin",
+          "begin": 128199,
+          "end": 128500
+        },
+        {
+          "word": "SQ",
+          "begin": 128580,
+          "end": 128880
+        },
+        {
+          "word": "doorbell",
+          "begin": 128979,
+          "end": 129419
+        },
+        {
+          "word": "is",
+          "begin": 129520,
+          "end": 129620
+        },
+        {
+          "word": "at",
+          "begin": 129639,
+          "end": 129740
+        },
+        {
+          "word": "0x1000,",
+          "begin": 129740,
+          "end": 132060
+        },
+        {
+          "word": "Admin",
+          "begin": 132160,
+          "end": 132560
+        },
+        {
+          "word": "CQ",
+          "begin": 132680,
+          "end": 132820
+        },
+        {
+          "word": "at",
+          "begin": 133040,
+          "end": 133160
+        },
+        {
+          "word": "I/O",
+          "begin": 133240,
+          "end": 135640
+        },
+        {
+          "word": "queue",
+          "begin": 135820,
+          "end": 135980
+        },
+        {
+          "word": "1",
+          "begin": 136120,
+          "end": 136560
+        },
+        {
+          "word": "SQ",
+          "begin": 136620,
+          "end": 136780
+        },
+        {
+          "word": "at",
+          "begin": 136980,
+          "end": 137100
+        },
+        {
+          "word": "I/O",
+          "begin": 137160,
+          "end": 139540
+        },
+        {
+          "word": "queue",
+          "begin": 139700,
+          "end": 139840
+        },
+        {
+          "word": "1",
+          "begin": 139980,
+          "end": 140500
+        },
+        {
+          "word": "CQ",
+          "begin": 140560,
+          "end": 140620
+        },
+        {
+          "word": "at",
+          "begin": 140880,
+          "end": 140980
+        },
+        {
+          "word": "0x100C,",
+          "begin": 141040,
+          "end": 142840
+        },
+        {
+          "word": "and",
+          "begin": 143360,
+          "end": 143480
+        },
+        {
+          "word": "so",
+          "begin": 143580,
+          "end": 143820
+        },
+        {
+          "word": "on.",
+          "begin": 143940,
+          "end": 144480
+        },
+        {
+          "word": "Shadow",
+          "begin": 144480,
+          "end": 144700
+        },
+        {
+          "word": "Doorbells",
+          "begin": 144800,
+          "end": 145340
+        }
+      ]
+    },
+    {
+      "blockIndex": 10,
+      "type": "info",
+      "text": "Shadow Doorbells — even faster in virtual machines: Writing to a BAR0 register is a PCIe MMIO write. In a virtual machine, each MMIO write traps to the hypervisor — an expensive operation. To avoid this, some controllers support Shadow Doorbells: the host writes the new pointer to regular RAM instead, and the controller periodically polls the RAM location. This eliminates the costly MMIO trap and improves VM performance significantly.",
+      "beginMs": 145520,
+      "endMs": 172800,
+      "timestamps": [
+        {
+          "word": "even",
+          "begin": 145520,
+          "end": 145720
+        },
+        {
+          "word": "faster",
+          "begin": 145820,
+          "end": 146160
+        },
+        {
+          "word": "in",
+          "begin": 146240,
+          "end": 146320
+        },
+        {
+          "word": "virtual",
+          "begin": 146360,
+          "end": 146680
+        },
+        {
+          "word": "machines:",
+          "begin": 146740,
+          "end": 147220
+        },
+        {
+          "word": "Writing",
+          "begin": 147560,
+          "end": 148040
+        },
+        {
+          "word": "to",
+          "begin": 148120,
+          "end": 148540
+        },
+        {
+          "word": "a",
+          "begin": 148720,
+          "end": 148920
+        },
+        {
+          "word": "BAR0",
+          "begin": 148720,
+          "end": 149080
+        },
+        {
+          "word": "register",
+          "begin": 149160,
+          "end": 149800
+        },
+        {
+          "word": "is",
+          "begin": 149860,
+          "end": 150020
+        },
+        {
+          "word": "a",
+          "begin": 150060,
+          "end": 150200
+        },
+        {
+          "word": "PCIe",
+          "begin": 150380,
+          "end": 150400
+        },
+        {
+          "word": "MMIO",
+          "begin": 150600,
+          "end": 151240
+        },
+        {
+          "word": "write.",
+          "begin": 151500,
+          "end": 151820
+        },
+        {
+          "word": "In",
+          "begin": 152200,
+          "end": 152280
+        },
+        {
+          "word": "a",
+          "begin": 152300,
+          "end": 152320
+        },
+        {
+          "word": "virtual",
+          "begin": 152380,
+          "end": 152700
+        },
+        {
+          "word": "machine,",
+          "begin": 152780,
+          "end": 153200
+        },
+        {
+          "word": "each",
+          "begin": 153380,
+          "end": 153540
+        },
+        {
+          "word": "MMIO",
+          "begin": 153660,
+          "end": 154240
+        },
+        {
+          "word": "write",
+          "begin": 154460,
+          "end": 154760
+        },
+        {
+          "word": "traps",
+          "begin": 155040,
+          "end": 155320
+        },
+        {
+          "word": "to",
+          "begin": 155360,
+          "end": 155420
+        },
+        {
+          "word": "the",
+          "begin": 155460,
+          "end": 155520
+        },
+        {
+          "word": "hypervisor",
+          "begin": 155580,
+          "end": 156580
+        },
+        {
+          "word": "an",
+          "begin": 156600,
+          "end": 156740
+        },
+        {
+          "word": "expensive",
+          "begin": 156600,
+          "end": 157100
+        },
+        {
+          "word": "operation.",
+          "begin": 157140,
+          "end": 157720
+        },
+        {
+          "word": "To",
+          "begin": 158080,
+          "end": 158140
+        },
+        {
+          "word": "avoid",
+          "begin": 158200,
+          "end": 158500
+        },
+        {
+          "word": "this,",
+          "begin": 158500,
+          "end": 158800
+        },
+        {
+          "word": "some",
+          "begin": 159080,
+          "end": 159220
+        },
+        {
+          "word": "controllers",
+          "begin": 159280,
+          "end": 159760
+        },
+        {
+          "word": "support",
+          "begin": 159800,
+          "end": 160160
+        },
+        {
+          "word": "Shadow",
+          "begin": 160240,
+          "end": 160440
+        },
+        {
+          "word": "Doorbells:",
+          "begin": 160520,
+          "end": 160920
+        },
+        {
+          "word": "the",
+          "begin": 161040,
+          "end": 161080
+        },
+        {
+          "word": "host",
+          "begin": 161600,
+          "end": 161980
+        },
+        {
+          "word": "writes",
+          "begin": 161980,
+          "end": 162240
+        },
+        {
+          "word": "the",
+          "begin": 162040,
+          "end": 162100
+        },
+        {
+          "word": "new",
+          "begin": 162200,
+          "end": 162220
+        },
+        {
+          "word": "pointer",
+          "begin": 162220,
+          "end": 162760
+        },
+        {
+          "word": "to",
+          "begin": 162800,
+          "end": 163060
+        },
+        {
+          "word": "regular",
+          "begin": 163140,
+          "end": 163440
+        },
+        {
+          "word": "RAM",
+          "begin": 163520,
+          "end": 163740
+        },
+        {
+          "word": "instead,",
+          "begin": 163740,
+          "end": 164240
+        },
+        {
+          "word": "and",
+          "begin": 164560,
+          "end": 164640
+        },
+        {
+          "word": "the",
+          "begin": 164640,
+          "end": 164700
+        },
+        {
+          "word": "controller",
+          "begin": 164760,
+          "end": 165160
+        },
+        {
+          "word": "periodically",
+          "begin": 165260,
+          "end": 165840
+        },
+        {
+          "word": "polls",
+          "begin": 165940,
+          "end": 166240
+        },
+        {
+          "word": "the",
+          "begin": 166280,
+          "end": 166320
+        },
+        {
+          "word": "RAM",
+          "begin": 166400,
+          "end": 166600
+        },
+        {
+          "word": "location.",
+          "begin": 166640,
+          "end": 167140
+        },
+        {
+          "word": "This",
+          "begin": 167720,
+          "end": 167860
+        },
+        {
+          "word": "eliminates",
+          "begin": 167960,
+          "end": 168380
+        },
+        {
+          "word": "the",
+          "begin": 168420,
+          "end": 168480
+        },
+        {
+          "word": "costly",
+          "begin": 168540,
+          "end": 168900
+        },
+        {
+          "word": "MMIO",
+          "begin": 168900,
+          "end": 169480
+        },
+        {
+          "word": "trap",
+          "begin": 169620,
+          "end": 169940
+        },
+        {
+          "word": "and",
+          "begin": 170220,
+          "end": 170300
+        },
+        {
+          "word": "improves",
+          "begin": 170300,
+          "end": 170720
+        },
+        {
+          "word": "VM",
+          "begin": 170780,
+          "end": 171040
+        },
+        {
+          "word": "performance",
+          "begin": 171100,
+          "end": 171540
+        },
+        {
+          "word": "significantly.",
+          "begin": 171620,
+          "end": 172240
+        },
+        {
+          "word": "Knowledge",
+          "begin": 172560,
+          "end": 172800
+        }
+      ]
+    },
+    {
+      "blockIndex": 11,
+      "type": "reveal",
+      "text": "Knowledge check: If the SSD controller were responsible for polling the Submission Queue instead of relying on the host to ring a doorbell, what performance and power problems would arise? Why does NVMe use the doorbell model instead? The answer: The host CPU writes to the doorbell register (via MMIO) to notify the SSD controller that new commands have been placed in the submission queue. If the SSD polled the queue instead, it would waste PCIe bandwidth by constantly issuing DMA reads to check for new entries — burning power and consuming bus cycles even when no commands are pending. The doorbell model is event-driven: the SSD sleeps until the host writes to the doorbell register, which costs exactly one PCIe Memory Write TLP (4 bytes). Even better, the host can batch multiple commands into the SQ and ring the doorbell once, triggering the SSD to process the entire batch. This is why NVMe achieves millions of IOPS with minimal CPU overhead — the notification cost is amortized across many commands.",
+      "beginMs": 172860,
+      "endMs": 233680,
+      "timestamps": [
+        {
+          "word": "check:",
+          "begin": 172860,
+          "end": 173980
+        },
+        {
+          "word": "If",
+          "begin": 174020,
+          "end": 174160
+        },
+        {
+          "word": "the",
+          "begin": 174220,
+          "end": 174280
+        },
+        {
+          "word": "controller",
+          "begin": 174400,
+          "end": 175040
+        },
+        {
+          "word": "were",
+          "begin": 175040,
+          "end": 175080
+        },
+        {
+          "word": "responsible",
+          "begin": 175040,
+          "end": 175720
+        },
+        {
+          "word": "for",
+          "begin": 175820,
+          "end": 176040
+        },
+        {
+          "word": "polling",
+          "begin": 176080,
+          "end": 176360
+        },
+        {
+          "word": "the",
+          "begin": 176400,
+          "end": 176440
+        },
+        {
+          "word": "Submission",
+          "begin": 176520,
+          "end": 177140
+        },
+        {
+          "word": "Queue",
+          "begin": 177200,
+          "end": 177380
+        },
+        {
+          "word": "instead",
+          "begin": 177380,
+          "end": 177600
+        },
+        {
+          "word": "of",
+          "begin": 177620,
+          "end": 177760
+        },
+        {
+          "word": "relying",
+          "begin": 177800,
+          "end": 178100
+        },
+        {
+          "word": "on",
+          "begin": 178140,
+          "end": 178380
+        },
+        {
+          "word": "the",
+          "begin": 178380,
+          "end": 178440
+        },
+        {
+          "word": "host",
+          "begin": 178500,
+          "end": 178640
+        },
+        {
+          "word": "to",
+          "begin": 178640,
+          "end": 178680
+        },
+        {
+          "word": "ring",
+          "begin": 178740,
+          "end": 179000
+        },
+        {
+          "word": "a",
+          "begin": 179040,
+          "end": 179180
+        },
+        {
+          "word": "doorbell,",
+          "begin": 179520,
+          "end": 179880
+        },
+        {
+          "word": "what",
+          "begin": 179920,
+          "end": 180160
+        },
+        {
+          "word": "performance",
+          "begin": 180200,
+          "end": 180760
+        },
+        {
+          "word": "and",
+          "begin": 180780,
+          "end": 180900
+        },
+        {
+          "word": "power",
+          "begin": 180920,
+          "end": 181100
+        },
+        {
+          "word": "problems",
+          "begin": 181140,
+          "end": 181720
+        },
+        {
+          "word": "would",
+          "begin": 182440,
+          "end": 182640
+        },
+        {
+          "word": "arise?",
+          "begin": 182660,
+          "end": 183100
+        },
+        {
+          "word": "Why",
+          "begin": 183120,
+          "end": 183260
+        },
+        {
+          "word": "does",
+          "begin": 183360,
+          "end": 183720
+        },
+        {
+          "word": "NVMe",
+          "begin": 183740,
+          "end": 184120
+        },
+        {
+          "word": "use",
+          "begin": 184260,
+          "end": 184380
+        },
+        {
+          "word": "the",
+          "begin": 184440,
+          "end": 184520
+        },
+        {
+          "word": "model",
+          "begin": 184440,
+          "end": 184700
+        },
+        {
+          "word": "instead?",
+          "begin": 184740,
+          "end": 185200
+        },
+        {
+          "word": "The",
+          "begin": 185600,
+          "end": 185660
+        },
+        {
+          "word": "answer:",
+          "begin": 185740,
+          "end": 186460
+        },
+        {
+          "word": "The",
+          "begin": 186540,
+          "end": 186620
+        },
+        {
+          "word": "host",
+          "begin": 186540,
+          "end": 186840
+        },
+        {
+          "word": "CPU",
+          "begin": 186900,
+          "end": 187320
+        },
+        {
+          "word": "writes",
+          "begin": 187440,
+          "end": 187760
+        },
+        {
+          "word": "to",
+          "begin": 187760,
+          "end": 187800
+        },
+        {
+          "word": "the",
+          "begin": 187840,
+          "end": 187900
+        },
+        {
+          "word": "doorbell",
+          "begin": 187960,
+          "end": 188320
+        },
+        {
+          "word": "register",
+          "begin": 188380,
+          "end": 188740
+        },
+        {
+          "word": "(via",
+          "begin": 188880,
+          "end": 189020
+        },
+        {
+          "word": "MMIO)",
+          "begin": 189180,
+          "end": 190500
+        },
+        {
+          "word": "to",
+          "begin": 190560,
+          "end": 190620
+        },
+        {
+          "word": "notify",
+          "begin": 190680,
+          "end": 191800
+        },
+        {
+          "word": "the",
+          "begin": 191840,
+          "end": 192100
+        },
+        {
+          "word": "controller",
+          "begin": 192460,
+          "end": 192880
+        },
+        {
+          "word": "that",
+          "begin": 192940,
+          "end": 193120
+        },
+        {
+          "word": "new",
+          "begin": 193120,
+          "end": 193140
+        },
+        {
+          "word": "commands",
+          "begin": 193140,
+          "end": 193240
+        },
+        {
+          "word": "have",
+          "begin": 193240,
+          "end": 193320
+        },
+        {
+          "word": "been",
+          "begin": 193360,
+          "end": 193460
+        },
+        {
+          "word": "placed",
+          "begin": 193520,
+          "end": 193840
+        },
+        {
+          "word": "in",
+          "begin": 193860,
+          "end": 193920
+        },
+        {
+          "word": "the",
+          "begin": 193920,
+          "end": 193980
+        },
+        {
+          "word": "submission",
+          "begin": 194060,
+          "end": 194440
+        },
+        {
+          "word": "queue.",
+          "begin": 194520,
+          "end": 194640
+        },
+        {
+          "word": "If",
+          "begin": 195200,
+          "end": 195780
+        },
+        {
+          "word": "the",
+          "begin": 195840,
+          "end": 195900
+        },
+        {
+          "word": "polled",
+          "begin": 196080,
+          "end": 196300
+        },
+        {
+          "word": "the",
+          "begin": 196300,
+          "end": 196360
+        },
+        {
+          "word": "queue",
+          "begin": 196420,
+          "end": 196520
+        },
+        {
+          "word": "instead,",
+          "begin": 196600,
+          "end": 197120
+        },
+        {
+          "word": "it",
+          "begin": 197340,
+          "end": 197400
+        },
+        {
+          "word": "would",
+          "begin": 197420,
+          "end": 197540
+        },
+        {
+          "word": "waste",
+          "begin": 197600,
+          "end": 197880
+        },
+        {
+          "word": "PCIe",
+          "begin": 197920,
+          "end": 198360
+        },
+        {
+          "word": "bandwidth",
+          "begin": 198460,
+          "end": 198900
+        },
+        {
+          "word": "by",
+          "begin": 198960,
+          "end": 199140
+        },
+        {
+          "word": "constantly",
+          "begin": 199140,
+          "end": 199600
+        },
+        {
+          "word": "issuing",
+          "begin": 199720,
+          "end": 200060
+        },
+        {
+          "word": "DMA",
+          "begin": 200060,
+          "end": 200460
+        },
+        {
+          "word": "reads",
+          "begin": 200620,
+          "end": 200980
+        },
+        {
+          "word": "to",
+          "begin": 201040,
+          "end": 201080
+        },
+        {
+          "word": "check",
+          "begin": 201180,
+          "end": 201380
+        },
+        {
+          "word": "for",
+          "begin": 201440,
+          "end": 201480
+        },
+        {
+          "word": "new",
+          "begin": 201560,
+          "end": 201640
+        },
+        {
+          "word": "entries",
+          "begin": 201780,
+          "end": 202280
+        },
+        {
+          "word": "burning",
+          "begin": 202800,
+          "end": 203060
+        },
+        {
+          "word": "power",
+          "begin": 203140,
+          "end": 203420
+        },
+        {
+          "word": "and",
+          "begin": 203580,
+          "end": 203660
+        },
+        {
+          "word": "consuming",
+          "begin": 203700,
+          "end": 204140
+        },
+        {
+          "word": "bus",
+          "begin": 204220,
+          "end": 204380
+        },
+        {
+          "word": "cycles",
+          "begin": 204420,
+          "end": 204840
+        },
+        {
+          "word": "even",
+          "begin": 204980,
+          "end": 205200
+        },
+        {
+          "word": "when",
+          "begin": 205240,
+          "end": 205360
+        },
+        {
+          "word": "no",
+          "begin": 205400,
+          "end": 205480
+        },
+        {
+          "word": "commands",
+          "begin": 205600,
+          "end": 206140
+        },
+        {
+          "word": "are",
+          "begin": 206200,
+          "end": 206300
+        },
+        {
+          "word": "pending.",
+          "begin": 206200,
+          "end": 206520
+        },
+        {
+          "word": "The",
+          "begin": 207080,
+          "end": 207120
+        },
+        {
+          "word": "doorbell",
+          "begin": 207220,
+          "end": 207600
+        },
+        {
+          "word": "model",
+          "begin": 207680,
+          "end": 208180
+        },
+        {
+          "word": "is",
+          "begin": 208200,
+          "end": 208320
+        },
+        {
+          "word": "event-driven:",
+          "begin": 208340,
+          "end": 209740
+        },
+        {
+          "word": "the",
+          "begin": 209800,
+          "end": 209860
+        },
+        {
+          "word": "sleeps",
+          "begin": 210040,
+          "end": 210380
+        },
+        {
+          "word": "until",
+          "begin": 210400,
+          "end": 210640
+        },
+        {
+          "word": "the",
+          "begin": 210640,
+          "end": 210680
+        },
+        {
+          "word": "host",
+          "begin": 210740,
+          "end": 211020
+        },
+        {
+          "word": "writes",
+          "begin": 211080,
+          "end": 211300
+        },
+        {
+          "word": "to",
+          "begin": 211360,
+          "end": 211400
+        },
+        {
+          "word": "the",
+          "begin": 211440,
+          "end": 211500
+        },
+        {
+          "word": "doorbell",
+          "begin": 211560,
+          "end": 211900
+        },
+        {
+          "word": "register,",
+          "begin": 211980,
+          "end": 212380
+        },
+        {
+          "word": "which",
+          "begin": 212880,
+          "end": 213080
+        },
+        {
+          "word": "costs",
+          "begin": 213080,
+          "end": 213380
+        },
+        {
+          "word": "exactly",
+          "begin": 213420,
+          "end": 213800
+        },
+        {
+          "word": "one",
+          "begin": 213800,
+          "end": 214100
+        },
+        {
+          "word": "PCIe",
+          "begin": 214160,
+          "end": 214680
+        },
+        {
+          "word": "Memory",
+          "begin": 215000,
+          "end": 215260
+        },
+        {
+          "word": "Write",
+          "begin": 215260,
+          "end": 215640
+        },
+        {
+          "word": "TLP",
+          "begin": 215760,
+          "end": 216220
+        },
+        {
+          "word": "(4",
+          "begin": 216460,
+          "end": 216540
+        },
+        {
+          "word": "bytes).",
+          "begin": 216680,
+          "end": 217100
+        },
+        {
+          "word": "Even",
+          "begin": 217640,
+          "end": 217840
+        },
+        {
+          "word": "better,",
+          "begin": 217900,
+          "end": 218100
+        },
+        {
+          "word": "the",
+          "begin": 218520,
+          "end": 218580
+        },
+        {
+          "word": "host",
+          "begin": 218640,
+          "end": 218900
+        },
+        {
+          "word": "can",
+          "begin": 218960,
+          "end": 219060
+        },
+        {
+          "word": "batch",
+          "begin": 219120,
+          "end": 219340
+        },
+        {
+          "word": "multiple",
+          "begin": 219440,
+          "end": 219860
+        },
+        {
+          "word": "commands",
+          "begin": 219860,
+          "end": 220280
+        },
+        {
+          "word": "into",
+          "begin": 220340,
+          "end": 220480
+        },
+        {
+          "word": "the",
+          "begin": 220500,
+          "end": 220560
+        },
+        {
+          "word": "SQ",
+          "begin": 220640,
+          "end": 220960
+        },
+        {
+          "word": "and",
+          "begin": 221200,
+          "end": 221300
+        },
+        {
+          "word": "ring",
+          "begin": 221340,
+          "end": 221480
+        },
+        {
+          "word": "the",
+          "begin": 221500,
+          "end": 221540
+        },
+        {
+          "word": "doorbell",
+          "begin": 221600,
+          "end": 221940
+        },
+        {
+          "word": "once,",
+          "begin": 222000,
+          "end": 222340
+        },
+        {
+          "word": "triggering",
+          "begin": 222720,
+          "end": 223040
+        },
+        {
+          "word": "the",
+          "begin": 223080,
+          "end": 223120
+        },
+        {
+          "word": "SSD",
+          "begin": 223220,
+          "end": 223660
+        },
+        {
+          "word": "to",
+          "begin": 223800,
+          "end": 223860
+        },
+        {
+          "word": "process",
+          "begin": 223940,
+          "end": 224340
+        },
+        {
+          "word": "the",
+          "begin": 224380,
+          "end": 224440
+        },
+        {
+          "word": "entire",
+          "begin": 224480,
+          "end": 224840
+        },
+        {
+          "word": "batch.",
+          "begin": 224940,
+          "end": 225020
+        },
+        {
+          "word": "This",
+          "begin": 225860,
+          "end": 226000
+        },
+        {
+          "word": "is",
+          "begin": 226020,
+          "end": 226100
+        },
+        {
+          "word": "why",
+          "begin": 226140,
+          "end": 226200
+        },
+        {
+          "word": "NVMe",
+          "begin": 226360,
+          "end": 226860
+        },
+        {
+          "word": "achieves",
+          "begin": 227080,
+          "end": 227460
+        },
+        {
+          "word": "millions",
+          "begin": 227620,
+          "end": 228000
+        },
+        {
+          "word": "of",
+          "begin": 228000,
+          "end": 228080
+        },
+        {
+          "word": "IOPS",
+          "begin": 228180,
+          "end": 228560
+        },
+        {
+          "word": "with",
+          "begin": 228600,
+          "end": 228700
+        },
+        {
+          "word": "minimal",
+          "begin": 228700,
+          "end": 229040
+        },
+        {
+          "word": "CPU",
+          "begin": 229180,
+          "end": 229540
+        },
+        {
+          "word": "overhead",
+          "begin": 229700,
+          "end": 230180
+        },
+        {
+          "word": "the",
+          "begin": 230520,
+          "end": 230560
+        },
+        {
+          "word": "notification",
+          "begin": 230620,
+          "end": 231220
+        },
+        {
+          "word": "cost",
+          "begin": 231280,
+          "end": 231640
+        },
+        {
+          "word": "is",
+          "begin": 231680,
+          "end": 231780
+        },
+        {
+          "word": "amortized",
+          "begin": 231880,
+          "end": 232460
+        },
+        {
+          "word": "across",
+          "begin": 232500,
+          "end": 232880
+        },
+        {
+          "word": "many",
+          "begin": 232940,
+          "end": 233100
+        },
+        {
+          "word": "commands.",
+          "begin": 233180,
+          "end": 233680
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

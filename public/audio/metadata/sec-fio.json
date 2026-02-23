@@ -1,0 +1,5246 @@
+{
+  "sectionId": "sec-fio",
+  "audioFile": "/audio/sections/sec-fio.mp3",
+  "totalDurationMs": 420040,
+  "fileSizeBytes": 6721920,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "Benchmarking with fio — Measuring Your SSD",
+      "beginMs": 20,
+      "endMs": 2920,
+      "timestamps": [
+        {
+          "word": "Benchmarking",
+          "begin": 20,
+          "end": 580
+        },
+        {
+          "word": "with",
+          "begin": 600,
+          "end": 720
+        },
+        {
+          "word": "fio",
+          "begin": 780,
+          "end": 1060
+        },
+        {
+          "word": "Measuring",
+          "begin": 1440,
+          "end": 1800
+        },
+        {
+          "word": "Your",
+          "begin": 1820,
+          "end": 1880
+        },
+        {
+          "word": "SSD",
+          "begin": 2020,
+          "end": 2440
+        },
+        {
+          "word": "Analogy:",
+          "begin": 2500,
+          "end": 2920
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: fio Is a Storage Stress-Tester. fio (Flexible I/O tester) is like a gym workout program for your SSD. You specify the exercise (random reads, sequential writes, mixed), the intensity (queue depth, number of jobs), and the duration. fio runs the workout and reports how the SSD performed — IOPS, bandwidth, and latency percentiles.",
+      "beginMs": 3380,
+      "endMs": 24540,
+      "timestamps": [
+        {
+          "word": "fio",
+          "begin": 3380,
+          "end": 3740
+        },
+        {
+          "word": "Is",
+          "begin": 3740,
+          "end": 3820
+        },
+        {
+          "word": "a",
+          "begin": 3840,
+          "end": 3860
+        },
+        {
+          "word": "Storage",
+          "begin": 3960,
+          "end": 4480
+        },
+        {
+          "word": "Stress-Tester.",
+          "begin": 4520,
+          "end": 5060
+        },
+        {
+          "word": "fio",
+          "begin": 5540,
+          "end": 5900
+        },
+        {
+          "word": "(Flexible",
+          "begin": 5900,
+          "end": 6240
+        },
+        {
+          "word": "I/O",
+          "begin": 6420,
+          "end": 6740
+        },
+        {
+          "word": "tester)",
+          "begin": 6740,
+          "end": 7240
+        },
+        {
+          "word": "is",
+          "begin": 7300,
+          "end": 7320
+        },
+        {
+          "word": "like",
+          "begin": 7340,
+          "end": 7480
+        },
+        {
+          "word": "a",
+          "begin": 7480,
+          "end": 7500
+        },
+        {
+          "word": "gym",
+          "begin": 7600,
+          "end": 7800
+        },
+        {
+          "word": "workout",
+          "begin": 7860,
+          "end": 8200
+        },
+        {
+          "word": "program",
+          "begin": 8240,
+          "end": 8620
+        },
+        {
+          "word": "for",
+          "begin": 8620,
+          "end": 8760
+        },
+        {
+          "word": "your",
+          "begin": 8800,
+          "end": 8860
+        },
+        {
+          "word": "SSD.",
+          "begin": 8980,
+          "end": 9400
+        },
+        {
+          "word": "You",
+          "begin": 9800,
+          "end": 9840
+        },
+        {
+          "word": "specify",
+          "begin": 9940,
+          "end": 10520
+        },
+        {
+          "word": "the",
+          "begin": 10520,
+          "end": 10560
+        },
+        {
+          "word": "exercise",
+          "begin": 10680,
+          "end": 11240
+        },
+        {
+          "word": "(random",
+          "begin": 11320,
+          "end": 11680
+        },
+        {
+          "word": "reads,",
+          "begin": 11740,
+          "end": 12040
+        },
+        {
+          "word": "sequential",
+          "begin": 12080,
+          "end": 12820
+        },
+        {
+          "word": "writes,",
+          "begin": 12940,
+          "end": 13300
+        },
+        {
+          "word": "mixed),",
+          "begin": 13620,
+          "end": 13980
+        },
+        {
+          "word": "the",
+          "begin": 14200,
+          "end": 14260
+        },
+        {
+          "word": "intensity",
+          "begin": 14320,
+          "end": 14800
+        },
+        {
+          "word": "(queue",
+          "begin": 14880,
+          "end": 14980
+        },
+        {
+          "word": "depth,",
+          "begin": 15080,
+          "end": 15400
+        },
+        {
+          "word": "number",
+          "begin": 15660,
+          "end": 15880
+        },
+        {
+          "word": "of",
+          "begin": 15900,
+          "end": 15980
+        },
+        {
+          "word": "jobs),",
+          "begin": 16059,
+          "end": 16480
+        },
+        {
+          "word": "and",
+          "begin": 16640,
+          "end": 16740
+        },
+        {
+          "word": "the",
+          "begin": 16740,
+          "end": 16800
+        },
+        {
+          "word": "duration.",
+          "begin": 16860,
+          "end": 17360
+        },
+        {
+          "word": "fio",
+          "begin": 17760,
+          "end": 18020
+        },
+        {
+          "word": "runs",
+          "begin": 18140,
+          "end": 18340
+        },
+        {
+          "word": "the",
+          "begin": 18380,
+          "end": 18440
+        },
+        {
+          "word": "workout",
+          "begin": 18500,
+          "end": 18920
+        },
+        {
+          "word": "and",
+          "begin": 18980,
+          "end": 19060
+        },
+        {
+          "word": "reports",
+          "begin": 19080,
+          "end": 19520
+        },
+        {
+          "word": "how",
+          "begin": 19520,
+          "end": 19580
+        },
+        {
+          "word": "the",
+          "begin": 19660,
+          "end": 19820
+        },
+        {
+          "word": "SSD",
+          "begin": 19820,
+          "end": 20200
+        },
+        {
+          "word": "performed",
+          "begin": 20300,
+          "end": 20800
+        },
+        {
+          "word": "IOPS,",
+          "begin": 21160,
+          "end": 21620
+        },
+        {
+          "word": "bandwidth,",
+          "begin": 21880,
+          "end": 22380
+        },
+        {
+          "word": "and",
+          "begin": 22520,
+          "end": 22640
+        },
+        {
+          "word": "latency",
+          "begin": 22680,
+          "end": 23040
+        },
+        {
+          "word": "percentiles.",
+          "begin": 23120,
+          "end": 23840
+        },
+        {
+          "word": "fio",
+          "begin": 24100,
+          "end": 24540
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "term",
+      "text": "fio (Flexible I/O Tester): The industry-standard open-source tool for benchmarking and stress-testing storage devices. Supports custom workload definitions: I/O pattern, block size, queue depth, thread count, and duration. Results include IOPS, bandwidth, and latency histograms.",
+      "beginMs": 24560,
+      "endMs": 41640,
+      "timestamps": [
+        {
+          "word": "(Flexible",
+          "begin": 24560,
+          "end": 25120
+        },
+        {
+          "word": "I/O",
+          "begin": 25280,
+          "end": 26420
+        },
+        {
+          "word": "Tester):",
+          "begin": 26420,
+          "end": 26660
+        },
+        {
+          "word": "The",
+          "begin": 26660,
+          "end": 26480
+        },
+        {
+          "word": "industry-standard",
+          "begin": 26540,
+          "end": 27200
+        },
+        {
+          "word": "open-source",
+          "begin": 27280,
+          "end": 27780
+        },
+        {
+          "word": "tool",
+          "begin": 27840,
+          "end": 28040
+        },
+        {
+          "word": "for",
+          "begin": 28120,
+          "end": 28200
+        },
+        {
+          "word": "benchmarking",
+          "begin": 28280,
+          "end": 28860
+        },
+        {
+          "word": "and",
+          "begin": 28940,
+          "end": 29020
+        },
+        {
+          "word": "stress-testing",
+          "begin": 29060,
+          "end": 29720
+        },
+        {
+          "word": "storage",
+          "begin": 29780,
+          "end": 30160
+        },
+        {
+          "word": "devices.",
+          "begin": 30160,
+          "end": 30680
+        },
+        {
+          "word": "Supports",
+          "begin": 31120,
+          "end": 31480
+        },
+        {
+          "word": "custom",
+          "begin": 31540,
+          "end": 31880
+        },
+        {
+          "word": "workload",
+          "begin": 31920,
+          "end": 32299
+        },
+        {
+          "word": "definitions:",
+          "begin": 32320,
+          "end": 33000
+        },
+        {
+          "word": "I/O",
+          "begin": 33240,
+          "end": 33440
+        },
+        {
+          "word": "pattern,",
+          "begin": 33580,
+          "end": 33980
+        },
+        {
+          "word": "block",
+          "begin": 34260,
+          "end": 34500
+        },
+        {
+          "word": "size,",
+          "begin": 34580,
+          "end": 35000
+        },
+        {
+          "word": "queue",
+          "begin": 35220,
+          "end": 35340
+        },
+        {
+          "word": "depth,",
+          "begin": 35440,
+          "end": 35800
+        },
+        {
+          "word": "thread",
+          "begin": 36120,
+          "end": 36320
+        },
+        {
+          "word": "count,",
+          "begin": 36380,
+          "end": 36700
+        },
+        {
+          "word": "and",
+          "begin": 36980,
+          "end": 37060
+        },
+        {
+          "word": "duration.",
+          "begin": 37100,
+          "end": 37600
+        },
+        {
+          "word": "Results",
+          "begin": 38020,
+          "end": 38380
+        },
+        {
+          "word": "include",
+          "begin": 38420,
+          "end": 38760
+        },
+        {
+          "word": "IOPS,",
+          "begin": 38860,
+          "end": 39360
+        },
+        {
+          "word": "bandwidth,",
+          "begin": 39640,
+          "end": 40120
+        },
+        {
+          "word": "and",
+          "begin": 40360,
+          "end": 40460
+        },
+        {
+          "word": "latency",
+          "begin": 40500,
+          "end": 40880
+        },
+        {
+          "word": "histograms.",
+          "begin": 40940,
+          "end": 41640
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "We've set up a filesystem and mounted our NVMe drive. Now the question: how fast is it actually? SSD manufacturers advertise speeds like &ldquo;7,000 MB/s read,&rdquo; but those numbers only tell part of the story. Real-world performance depends on the I/O pattern: random vs sequential, read vs write, block size, and how many requests are in flight simultaneously.",
+      "beginMs": 41980,
+      "endMs": 64099,
+      "timestamps": [
+        {
+          "word": "We've",
+          "begin": 41980,
+          "end": 42100
+        },
+        {
+          "word": "set",
+          "begin": 42100,
+          "end": 42320
+        },
+        {
+          "word": "up",
+          "begin": 42320,
+          "end": 42420
+        },
+        {
+          "word": "a",
+          "begin": 42440,
+          "end": 42460
+        },
+        {
+          "word": "filesystem",
+          "begin": 42540,
+          "end": 43180
+        },
+        {
+          "word": "and",
+          "begin": 43260,
+          "end": 43340
+        },
+        {
+          "word": "mounted",
+          "begin": 43400,
+          "end": 43720
+        },
+        {
+          "word": "our",
+          "begin": 43760,
+          "end": 43780
+        },
+        {
+          "word": "NVMe",
+          "begin": 43940,
+          "end": 44400
+        },
+        {
+          "word": "drive.",
+          "begin": 44520,
+          "end": 44920
+        },
+        {
+          "word": "Now",
+          "begin": 45320,
+          "end": 45520
+        },
+        {
+          "word": "the",
+          "begin": 45520,
+          "end": 45560
+        },
+        {
+          "word": "question:",
+          "begin": 45620,
+          "end": 46060
+        },
+        {
+          "word": "how",
+          "begin": 46060,
+          "end": 46400
+        },
+        {
+          "word": "fast",
+          "begin": 46540,
+          "end": 46860
+        },
+        {
+          "word": "is",
+          "begin": 46880,
+          "end": 46980
+        },
+        {
+          "word": "it",
+          "begin": 47000,
+          "end": 47060
+        },
+        {
+          "word": "actually?",
+          "begin": 47120,
+          "end": 47500
+        },
+        {
+          "word": "SSD",
+          "begin": 47780,
+          "end": 48240
+        },
+        {
+          "word": "manufacturers",
+          "begin": 48340,
+          "end": 49380
+        },
+        {
+          "word": "advertise",
+          "begin": 49380,
+          "end": 49840
+        },
+        {
+          "word": "speeds",
+          "begin": 49840,
+          "end": 50180
+        },
+        {
+          "word": "like",
+          "begin": 50180,
+          "end": 50420
+        },
+        {
+          "word": "read,&rdquo;",
+          "begin": 50500,
+          "end": 52900
+        },
+        {
+          "word": "but",
+          "begin": 53160,
+          "end": 53300
+        },
+        {
+          "word": "those",
+          "begin": 53300,
+          "end": 53560
+        },
+        {
+          "word": "numbers",
+          "begin": 53560,
+          "end": 53900
+        },
+        {
+          "word": "only",
+          "begin": 53960,
+          "end": 54120
+        },
+        {
+          "word": "tell",
+          "begin": 54200,
+          "end": 54360
+        },
+        {
+          "word": "part",
+          "begin": 54420,
+          "end": 54640
+        },
+        {
+          "word": "of",
+          "begin": 54660,
+          "end": 54720
+        },
+        {
+          "word": "the",
+          "begin": 54760,
+          "end": 54820
+        },
+        {
+          "word": "story.",
+          "begin": 54900,
+          "end": 55200
+        },
+        {
+          "word": "Real-world",
+          "begin": 55440,
+          "end": 55900
+        },
+        {
+          "word": "performance",
+          "begin": 55900,
+          "end": 56500
+        },
+        {
+          "word": "depends",
+          "begin": 56540,
+          "end": 56920
+        },
+        {
+          "word": "on",
+          "begin": 56940,
+          "end": 57020
+        },
+        {
+          "word": "the",
+          "begin": 57020,
+          "end": 57040
+        },
+        {
+          "word": "I/O",
+          "begin": 57040,
+          "end": 57580
+        },
+        {
+          "word": "pattern:",
+          "begin": 57720,
+          "end": 58120
+        },
+        {
+          "word": "random",
+          "begin": 58420,
+          "end": 58740
+        },
+        {
+          "word": "vs",
+          "begin": 58800,
+          "end": 59080
+        },
+        {
+          "word": "sequential,",
+          "begin": 59140,
+          "end": 60100
+        },
+        {
+          "word": "read",
+          "begin": 60120,
+          "end": 60320
+        },
+        {
+          "word": "vs",
+          "begin": 60380,
+          "end": 60700
+        },
+        {
+          "word": "write,",
+          "begin": 60760,
+          "end": 61060
+        },
+        {
+          "word": "block",
+          "begin": 61360,
+          "end": 61620
+        },
+        {
+          "word": "size,",
+          "begin": 61700,
+          "end": 62060
+        },
+        {
+          "word": "and",
+          "begin": 62280,
+          "end": 62360
+        },
+        {
+          "word": "how",
+          "begin": 62380,
+          "end": 62460
+        },
+        {
+          "word": "many",
+          "begin": 62540,
+          "end": 62680
+        },
+        {
+          "word": "requests",
+          "begin": 62760,
+          "end": 63160
+        },
+        {
+          "word": "are",
+          "begin": 63160,
+          "end": 62960
+        },
+        {
+          "word": "in",
+          "begin": 62960,
+          "end": 63140
+        },
+        {
+          "word": "flight",
+          "begin": 63140,
+          "end": 63380
+        },
+        {
+          "word": "simultaneously.",
+          "begin": 63460,
+          "end": 64580
+        },
+        {
+          "word": "Why",
+          "begin": 63520,
+          "end": 63860
+        },
+        {
+          "word": "can't",
+          "begin": 63940,
+          "end": 64099
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "Why can't you just copy a large file and time it? Because file copies are sequential reads and writes through the filesystem — they only test one dimension of SSD performance. A database server doing 10,000 random 4K reads per second has completely different needs than a video editor streaming 2 GB/s sequentially.",
+      "beginMs": 64160,
+      "endMs": 83820,
+      "timestamps": [
+        {
+          "word": "you",
+          "begin": 64160,
+          "end": 64180
+        },
+        {
+          "word": "just",
+          "begin": 64239,
+          "end": 64580
+        },
+        {
+          "word": "copy",
+          "begin": 64959,
+          "end": 65160
+        },
+        {
+          "word": "a",
+          "begin": 65200,
+          "end": 65280
+        },
+        {
+          "word": "large",
+          "begin": 65300,
+          "end": 65600
+        },
+        {
+          "word": "file",
+          "begin": 65660,
+          "end": 66080
+        },
+        {
+          "word": "and",
+          "begin": 66120,
+          "end": 66300
+        },
+        {
+          "word": "time",
+          "begin": 66380,
+          "end": 67080
+        },
+        {
+          "word": "it?",
+          "begin": 67100,
+          "end": 67300
+        },
+        {
+          "word": "Because",
+          "begin": 67460,
+          "end": 67760
+        },
+        {
+          "word": "file",
+          "begin": 67820,
+          "end": 68040
+        },
+        {
+          "word": "copies",
+          "begin": 68120,
+          "end": 68480
+        },
+        {
+          "word": "are",
+          "begin": 68520,
+          "end": 68540
+        },
+        {
+          "word": "sequential",
+          "begin": 68660,
+          "end": 69040
+        },
+        {
+          "word": "reads",
+          "begin": 69160,
+          "end": 69460
+        },
+        {
+          "word": "and",
+          "begin": 69520,
+          "end": 69600
+        },
+        {
+          "word": "writes",
+          "begin": 69640,
+          "end": 69880
+        },
+        {
+          "word": "through",
+          "begin": 69940,
+          "end": 70000
+        },
+        {
+          "word": "the",
+          "begin": 70060,
+          "end": 70100
+        },
+        {
+          "word": "filesystem",
+          "begin": 70180,
+          "end": 70900
+        },
+        {
+          "word": "they",
+          "begin": 71160,
+          "end": 71220
+        },
+        {
+          "word": "only",
+          "begin": 71300,
+          "end": 71440
+        },
+        {
+          "word": "test",
+          "begin": 71520,
+          "end": 71740
+        },
+        {
+          "word": "one",
+          "begin": 71820,
+          "end": 72000
+        },
+        {
+          "word": "dimension",
+          "begin": 72020,
+          "end": 72460
+        },
+        {
+          "word": "of",
+          "begin": 72460,
+          "end": 72540
+        },
+        {
+          "word": "SSD",
+          "begin": 72580,
+          "end": 73000
+        },
+        {
+          "word": "performance.",
+          "begin": 73120,
+          "end": 73740
+        },
+        {
+          "word": "A",
+          "begin": 74040,
+          "end": 74140
+        },
+        {
+          "word": "database",
+          "begin": 74140,
+          "end": 74580
+        },
+        {
+          "word": "server",
+          "begin": 74640,
+          "end": 75240
+        },
+        {
+          "word": "doing",
+          "begin": 75320,
+          "end": 75520
+        },
+        {
+          "word": "10,000",
+          "begin": 75600,
+          "end": 75940
+        },
+        {
+          "word": "random",
+          "begin": 75980,
+          "end": 76320
+        },
+        {
+          "word": "4K",
+          "begin": 76440,
+          "end": 76980
+        },
+        {
+          "word": "reads",
+          "begin": 77040,
+          "end": 77240
+        },
+        {
+          "word": "per",
+          "begin": 77320,
+          "end": 77400
+        },
+        {
+          "word": "second",
+          "begin": 77520,
+          "end": 77900
+        },
+        {
+          "word": "has",
+          "begin": 78100,
+          "end": 78220
+        },
+        {
+          "word": "completely",
+          "begin": 78260,
+          "end": 78760
+        },
+        {
+          "word": "different",
+          "begin": 78840,
+          "end": 79080
+        },
+        {
+          "word": "needs",
+          "begin": 79080,
+          "end": 79480
+        },
+        {
+          "word": "than",
+          "begin": 79520,
+          "end": 79560
+        },
+        {
+          "word": "a",
+          "begin": 79560,
+          "end": 79680
+        },
+        {
+          "word": "video",
+          "begin": 79740,
+          "end": 79980
+        },
+        {
+          "word": "editor",
+          "begin": 80100,
+          "end": 80340
+        },
+        {
+          "word": "streaming",
+          "begin": 80560,
+          "end": 80920
+        },
+        {
+          "word": "2",
+          "begin": 81000,
+          "end": 81100
+        },
+        {
+          "word": "GB/s",
+          "begin": 81200,
+          "end": 82160
+        },
+        {
+          "word": "sequentially.",
+          "begin": 82220,
+          "end": 82760
+        },
+        {
+          "word": "fio",
+          "begin": 83420,
+          "end": 83820
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "fio (Flexible I/O Tester) is the industry-standard tool for answering these questions. It lets you simulate any workload pattern and measures three critical metrics:",
+      "beginMs": 83820,
+      "endMs": 91800,
+      "timestamps": [
+        {
+          "word": "(Flexible",
+          "begin": 83820,
+          "end": 84220
+        },
+        {
+          "word": "I/O",
+          "begin": 84340,
+          "end": 84540
+        },
+        {
+          "word": "Tester)",
+          "begin": 84680,
+          "end": 85000
+        },
+        {
+          "word": "is",
+          "begin": 85160,
+          "end": 85260
+        },
+        {
+          "word": "the",
+          "begin": 85300,
+          "end": 85340
+        },
+        {
+          "word": "industry-standard",
+          "begin": 85440,
+          "end": 86240
+        },
+        {
+          "word": "tool",
+          "begin": 86300,
+          "end": 86540
+        },
+        {
+          "word": "for",
+          "begin": 86640,
+          "end": 86700
+        },
+        {
+          "word": "answering",
+          "begin": 86820,
+          "end": 87180
+        },
+        {
+          "word": "these",
+          "begin": 87200,
+          "end": 87340
+        },
+        {
+          "word": "questions.",
+          "begin": 87400,
+          "end": 87960
+        },
+        {
+          "word": "It",
+          "begin": 88320,
+          "end": 88380
+        },
+        {
+          "word": "lets",
+          "begin": 88400,
+          "end": 88580
+        },
+        {
+          "word": "you",
+          "begin": 88600,
+          "end": 88640
+        },
+        {
+          "word": "simulate",
+          "begin": 88800,
+          "end": 89200
+        },
+        {
+          "word": "any",
+          "begin": 89280,
+          "end": 89400
+        },
+        {
+          "word": "workload",
+          "begin": 89500,
+          "end": 89820
+        },
+        {
+          "word": "pattern",
+          "begin": 89880,
+          "end": 90200
+        },
+        {
+          "word": "and",
+          "begin": 90280,
+          "end": 90400
+        },
+        {
+          "word": "measures",
+          "begin": 90400,
+          "end": 90680
+        },
+        {
+          "word": "three",
+          "begin": 90760,
+          "end": 90880
+        },
+        {
+          "word": "critical",
+          "begin": 90980,
+          "end": 91260
+        },
+        {
+          "word": "metrics:",
+          "begin": 91320,
+          "end": 91800
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "But wait — IOPS and bandwidth are related, right? Yes! IOPS × block_size = bandwidth. If you do 1,000,000 IOPS at 4K, that's 4 GB/s bandwidth. If you do 50,000 IOPS at 128K, that's 6.4 GB/s. The SSD has a maximum for both — it can't exceed its IOPS limit OR its bandwidth limit, whichever it hits first.",
+      "beginMs": 92060,
+      "endMs": 116340,
+      "timestamps": [
+        {
+          "word": "But",
+          "begin": 92060,
+          "end": 92160
+        },
+        {
+          "word": "wait",
+          "begin": 92200,
+          "end": 92500
+        },
+        {
+          "word": "IOPS",
+          "begin": 92840,
+          "end": 93180
+        },
+        {
+          "word": "and",
+          "begin": 93200,
+          "end": 93280
+        },
+        {
+          "word": "bandwidth",
+          "begin": 93320,
+          "end": 93680
+        },
+        {
+          "word": "are",
+          "begin": 93720,
+          "end": 93740
+        },
+        {
+          "word": "related,",
+          "begin": 93820,
+          "end": 94280
+        },
+        {
+          "word": "right?",
+          "begin": 94500,
+          "end": 94800
+        },
+        {
+          "word": "Yes!",
+          "begin": 95100,
+          "end": 95460
+        },
+        {
+          "word": "IOPS",
+          "begin": 95880,
+          "end": 96280
+        },
+        {
+          "word": "×",
+          "begin": 96320,
+          "end": 96620
+        },
+        {
+          "word": "block_size",
+          "begin": 96680,
+          "end": 97360
+        },
+        {
+          "word": "=",
+          "begin": 97480,
+          "end": 97800
+        },
+        {
+          "word": "bandwidth.",
+          "begin": 97880,
+          "end": 98420
+        },
+        {
+          "word": "If",
+          "begin": 98880,
+          "end": 98960
+        },
+        {
+          "word": "you",
+          "begin": 98960,
+          "end": 99020
+        },
+        {
+          "word": "do",
+          "begin": 99080,
+          "end": 99140
+        },
+        {
+          "word": "1,000,000",
+          "begin": 99260,
+          "end": 99720
+        },
+        {
+          "word": "IOPS",
+          "begin": 99720,
+          "end": 100200
+        },
+        {
+          "word": "at",
+          "begin": 100240,
+          "end": 100300
+        },
+        {
+          "word": "4K,",
+          "begin": 100300,
+          "end": 100740
+        },
+        {
+          "word": "that's",
+          "begin": 101220,
+          "end": 101400
+        },
+        {
+          "word": "4",
+          "begin": 101500,
+          "end": 101580
+        },
+        {
+          "word": "GB/s",
+          "begin": 101780,
+          "end": 102620
+        },
+        {
+          "word": "bandwidth.",
+          "begin": 102680,
+          "end": 103180
+        },
+        {
+          "word": "If",
+          "begin": 103700,
+          "end": 103780
+        },
+        {
+          "word": "you",
+          "begin": 103800,
+          "end": 103980
+        },
+        {
+          "word": "do",
+          "begin": 104100,
+          "end": 104240
+        },
+        {
+          "word": "50,000",
+          "begin": 104100,
+          "end": 104780
+        },
+        {
+          "word": "IOPS",
+          "begin": 104880,
+          "end": 105280
+        },
+        {
+          "word": "at",
+          "begin": 105320,
+          "end": 105380
+        },
+        {
+          "word": "128K,",
+          "begin": 105440,
+          "end": 106820
+        },
+        {
+          "word": "that's",
+          "begin": 106920,
+          "end": 107100
+        },
+        {
+          "word": "GB/s.",
+          "begin": 107160,
+          "end": 108620
+        },
+        {
+          "word": "The",
+          "begin": 109000,
+          "end": 109040
+        },
+        {
+          "word": "SSD",
+          "begin": 109140,
+          "end": 109560
+        },
+        {
+          "word": "has",
+          "begin": 109660,
+          "end": 109800
+        },
+        {
+          "word": "a",
+          "begin": 109820,
+          "end": 109840
+        },
+        {
+          "word": "maximum",
+          "begin": 109900,
+          "end": 110340
+        },
+        {
+          "word": "for",
+          "begin": 110400,
+          "end": 110460
+        },
+        {
+          "word": "both",
+          "begin": 110540,
+          "end": 110880
+        },
+        {
+          "word": "it",
+          "begin": 111120,
+          "end": 111160
+        },
+        {
+          "word": "can't",
+          "begin": 111220,
+          "end": 111420
+        },
+        {
+          "word": "exceed",
+          "begin": 111420,
+          "end": 111760
+        },
+        {
+          "word": "its",
+          "begin": 111780,
+          "end": 111880
+        },
+        {
+          "word": "IOPS",
+          "begin": 111980,
+          "end": 112320
+        },
+        {
+          "word": "limit",
+          "begin": 112400,
+          "end": 112620
+        },
+        {
+          "word": "OR",
+          "begin": 112720,
+          "end": 112740
+        },
+        {
+          "word": "its",
+          "begin": 112940,
+          "end": 113040
+        },
+        {
+          "word": "bandwidth",
+          "begin": 113120,
+          "end": 113560
+        },
+        {
+          "word": "limit,",
+          "begin": 113600,
+          "end": 113880
+        },
+        {
+          "word": "whichever",
+          "begin": 114100,
+          "end": 114420
+        },
+        {
+          "word": "it",
+          "begin": 114440,
+          "end": 114520
+        },
+        {
+          "word": "hits",
+          "begin": 114540,
+          "end": 114800
+        },
+        {
+          "word": "first.",
+          "begin": 114800,
+          "end": 115180
+        },
+        {
+          "word": "fio",
+          "begin": 115620,
+          "end": 115840
+        },
+        {
+          "word": "works",
+          "begin": 115960,
+          "end": 116220
+        },
+        {
+          "word": "by",
+          "begin": 116280,
+          "end": 116340
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "fio works by running &ldquo;jobs&rdquo; — you tell it what I/O pattern to generate, and it hammers the drive while collecting detailed statistics. Let's explore the presets first, then dive into what each parameter does.",
+      "beginMs": 116460,
+      "endMs": 130520,
+      "timestamps": [
+        {
+          "word": "running",
+          "begin": 116460,
+          "end": 116760
+        },
+        {
+          "word": "&ldquo;jobs&rdquo;",
+          "begin": 116840,
+          "end": 119060
+        },
+        {
+          "word": "you",
+          "begin": 119520,
+          "end": 119540
+        },
+        {
+          "word": "tell",
+          "begin": 119700,
+          "end": 119800
+        },
+        {
+          "word": "it",
+          "begin": 119960,
+          "end": 120440
+        },
+        {
+          "word": "what",
+          "begin": 120440,
+          "end": 120580
+        },
+        {
+          "word": "I/O",
+          "begin": 120580,
+          "end": 120680
+        },
+        {
+          "word": "pattern",
+          "begin": 120740,
+          "end": 121000
+        },
+        {
+          "word": "to",
+          "begin": 121000,
+          "end": 121060
+        },
+        {
+          "word": "generate,",
+          "begin": 121000,
+          "end": 121860
+        },
+        {
+          "word": "and",
+          "begin": 121900,
+          "end": 122020
+        },
+        {
+          "word": "it",
+          "begin": 122020,
+          "end": 122100
+        },
+        {
+          "word": "hammers",
+          "begin": 122020,
+          "end": 122640
+        },
+        {
+          "word": "the",
+          "begin": 122640,
+          "end": 122680
+        },
+        {
+          "word": "drive",
+          "begin": 122720,
+          "end": 123040
+        },
+        {
+          "word": "while",
+          "begin": 122720,
+          "end": 122820
+        },
+        {
+          "word": "collecting",
+          "begin": 122820,
+          "end": 123300
+        },
+        {
+          "word": "detailed",
+          "begin": 123320,
+          "end": 123860
+        },
+        {
+          "word": "statistics.",
+          "begin": 123320,
+          "end": 123860
+        },
+        {
+          "word": "Let's",
+          "begin": 123900,
+          "end": 124100
+        },
+        {
+          "word": "explore",
+          "begin": 124100,
+          "end": 124640
+        },
+        {
+          "word": "the",
+          "begin": 124100,
+          "end": 124120
+        },
+        {
+          "word": "presets",
+          "begin": 124160,
+          "end": 124700
+        },
+        {
+          "word": "first,",
+          "begin": 124740,
+          "end": 124940
+        },
+        {
+          "word": "then",
+          "begin": 124740,
+          "end": 124800
+        },
+        {
+          "word": "dive",
+          "begin": 124860,
+          "end": 125100
+        },
+        {
+          "word": "into",
+          "begin": 125120,
+          "end": 126200
+        },
+        {
+          "word": "what",
+          "begin": 125120,
+          "end": 126180
+        },
+        {
+          "word": "each",
+          "begin": 126180,
+          "end": 126320
+        },
+        {
+          "word": "parameter",
+          "begin": 126340,
+          "end": 128100
+        },
+        {
+          "word": "does.",
+          "begin": 128139,
+          "end": 129960
+        },
+        {
+          "word": "Why",
+          "begin": 130440,
+          "end": 130520
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "paragraph",
+      "text": "Why does my SSD benchmark show 5 GB/s for the first 30 seconds, then drop to 1.5 GB/s? Because most consumer SSDs have an SLC cache — a portion of the TLC/QLC NAND that temporarily operates in faster SLC mode (1 bit per cell instead of 3-4). Writes go to this fast cache first.",
+      "beginMs": 130639,
+      "endMs": 154600,
+      "timestamps": [
+        {
+          "word": "does",
+          "begin": 130639,
+          "end": 130759
+        },
+        {
+          "word": "my",
+          "begin": 130800,
+          "end": 131020
+        },
+        {
+          "word": "SSD",
+          "begin": 131020,
+          "end": 131440
+        },
+        {
+          "word": "benchmark",
+          "begin": 131540,
+          "end": 132040
+        },
+        {
+          "word": "show",
+          "begin": 132100,
+          "end": 132440
+        },
+        {
+          "word": "5",
+          "begin": 132600,
+          "end": 132640
+        },
+        {
+          "word": "GB/s",
+          "begin": 132700,
+          "end": 133620
+        },
+        {
+          "word": "for",
+          "begin": 133680,
+          "end": 133740
+        },
+        {
+          "word": "the",
+          "begin": 133780,
+          "end": 133820
+        },
+        {
+          "word": "first",
+          "begin": 133920,
+          "end": 134160
+        },
+        {
+          "word": "30",
+          "begin": 134200,
+          "end": 134400
+        },
+        {
+          "word": "seconds,",
+          "begin": 134500,
+          "end": 135740
+        },
+        {
+          "word": "then",
+          "begin": 135800,
+          "end": 136240
+        },
+        {
+          "word": "drop",
+          "begin": 136320,
+          "end": 136840
+        },
+        {
+          "word": "to",
+          "begin": 136980,
+          "end": 137040
+        },
+        {
+          "word": "GB/s?",
+          "begin": 137140,
+          "end": 137560
+        },
+        {
+          "word": "Because",
+          "begin": 138200,
+          "end": 138440
+        },
+        {
+          "word": "most",
+          "begin": 138500,
+          "end": 138800
+        },
+        {
+          "word": "consumer",
+          "begin": 138800,
+          "end": 139180
+        },
+        {
+          "word": "SSDs",
+          "begin": 139300,
+          "end": 139900
+        },
+        {
+          "word": "have",
+          "begin": 139940,
+          "end": 140100
+        },
+        {
+          "word": "an",
+          "begin": 140100,
+          "end": 140180
+        },
+        {
+          "word": "SLC",
+          "begin": 140280,
+          "end": 140700
+        },
+        {
+          "word": "cache",
+          "begin": 140820,
+          "end": 141220
+        },
+        {
+          "word": "a",
+          "begin": 141480,
+          "end": 141500
+        },
+        {
+          "word": "portion",
+          "begin": 141580,
+          "end": 141920
+        },
+        {
+          "word": "of",
+          "begin": 141940,
+          "end": 142000
+        },
+        {
+          "word": "the",
+          "begin": 142040,
+          "end": 142080
+        },
+        {
+          "word": "TLC/QLC",
+          "begin": 142160,
+          "end": 143400
+        },
+        {
+          "word": "NAND",
+          "begin": 143520,
+          "end": 143700
+        },
+        {
+          "word": "that",
+          "begin": 143700,
+          "end": 143760
+        },
+        {
+          "word": "temporarily",
+          "begin": 143800,
+          "end": 144500
+        },
+        {
+          "word": "operates",
+          "begin": 144580,
+          "end": 146040
+        },
+        {
+          "word": "in",
+          "begin": 146080,
+          "end": 146220
+        },
+        {
+          "word": "faster",
+          "begin": 146260,
+          "end": 146660
+        },
+        {
+          "word": "SLC",
+          "begin": 146700,
+          "end": 146960
+        },
+        {
+          "word": "mode",
+          "begin": 147020,
+          "end": 147280
+        },
+        {
+          "word": "(1",
+          "begin": 147300,
+          "end": 147480
+        },
+        {
+          "word": "bit",
+          "begin": 147600,
+          "end": 147860
+        },
+        {
+          "word": "per",
+          "begin": 147860,
+          "end": 147940
+        },
+        {
+          "word": "cell",
+          "begin": 147960,
+          "end": 148100
+        },
+        {
+          "word": "instead",
+          "begin": 148140,
+          "end": 148660
+        },
+        {
+          "word": "of",
+          "begin": 148700,
+          "end": 148760
+        },
+        {
+          "word": "3-4).",
+          "begin": 148760,
+          "end": 151320
+        },
+        {
+          "word": "Writes",
+          "begin": 152120,
+          "end": 152360
+        },
+        {
+          "word": "go",
+          "begin": 152420,
+          "end": 152660
+        },
+        {
+          "word": "to",
+          "begin": 152700,
+          "end": 152760
+        },
+        {
+          "word": "this",
+          "begin": 152700,
+          "end": 152860
+        },
+        {
+          "word": "fast",
+          "begin": 152940,
+          "end": 153220
+        },
+        {
+          "word": "cache",
+          "begin": 153280,
+          "end": 153660
+        },
+        {
+          "word": "first.",
+          "begin": 153760,
+          "end": 154160
+        },
+        {
+          "word": "But",
+          "begin": 154420,
+          "end": 154540
+        },
+        {
+          "word": "the",
+          "begin": 154540,
+          "end": 154600
+        }
+      ]
+    },
+    {
+      "blockIndex": 9,
+      "type": "paragraph",
+      "text": "But the SLC cache has a finite size (typically 10-100 GB depending on the drive and how full it is). Once it fills up, writes fall back to direct TLC/QLC programming — which is 2-5x slower. Short benchmarks only measure cache speed. To see real sustained performance, you need to:",
+      "beginMs": 154680,
+      "endMs": 175380,
+      "timestamps": [
+        {
+          "word": "SLC",
+          "begin": 154680,
+          "end": 155120
+        },
+        {
+          "word": "cache",
+          "begin": 155240,
+          "end": 155580
+        },
+        {
+          "word": "has",
+          "begin": 155600,
+          "end": 155740
+        },
+        {
+          "word": "a",
+          "begin": 155760,
+          "end": 155780
+        },
+        {
+          "word": "finite",
+          "begin": 155880,
+          "end": 156260
+        },
+        {
+          "word": "size",
+          "begin": 156320,
+          "end": 156640
+        },
+        {
+          "word": "(typically",
+          "begin": 156700,
+          "end": 157040
+        },
+        {
+          "word": "10-100",
+          "begin": 157160,
+          "end": 158080
+        },
+        {
+          "word": "GB",
+          "begin": 158120,
+          "end": 158380
+        },
+        {
+          "word": "depending",
+          "begin": 158540,
+          "end": 158960
+        },
+        {
+          "word": "on",
+          "begin": 159000,
+          "end": 159100
+        },
+        {
+          "word": "the",
+          "begin": 159100,
+          "end": 159160
+        },
+        {
+          "word": "drive",
+          "begin": 159220,
+          "end": 159560
+        },
+        {
+          "word": "and",
+          "begin": 159580,
+          "end": 159660
+        },
+        {
+          "word": "how",
+          "begin": 159700,
+          "end": 159780
+        },
+        {
+          "word": "full",
+          "begin": 159940,
+          "end": 160080
+        },
+        {
+          "word": "it",
+          "begin": 160100,
+          "end": 160180
+        },
+        {
+          "word": "is).",
+          "begin": 160220,
+          "end": 160460
+        },
+        {
+          "word": "Once",
+          "begin": 161140,
+          "end": 161360
+        },
+        {
+          "word": "it",
+          "begin": 161380,
+          "end": 161460
+        },
+        {
+          "word": "fills",
+          "begin": 161520,
+          "end": 161780
+        },
+        {
+          "word": "up,",
+          "begin": 161840,
+          "end": 161980
+        },
+        {
+          "word": "writes",
+          "begin": 162060,
+          "end": 162540
+        },
+        {
+          "word": "fall",
+          "begin": 162620,
+          "end": 162760
+        },
+        {
+          "word": "back",
+          "begin": 162820,
+          "end": 163040
+        },
+        {
+          "word": "to",
+          "begin": 163080,
+          "end": 163140
+        },
+        {
+          "word": "direct",
+          "begin": 163200,
+          "end": 163500
+        },
+        {
+          "word": "TLC/QLC",
+          "begin": 163580,
+          "end": 164700
+        },
+        {
+          "word": "programming",
+          "begin": 164820,
+          "end": 165220
+        },
+        {
+          "word": "which",
+          "begin": 165280,
+          "end": 165580
+        },
+        {
+          "word": "is",
+          "begin": 165620,
+          "end": 165700
+        },
+        {
+          "word": "2-5x",
+          "begin": 165760,
+          "end": 166920
+        },
+        {
+          "word": "slower.",
+          "begin": 166920,
+          "end": 169360
+        },
+        {
+          "word": "Short",
+          "begin": 169980,
+          "end": 170200
+        },
+        {
+          "word": "benchmarks",
+          "begin": 170240,
+          "end": 170780
+        },
+        {
+          "word": "only",
+          "begin": 170900,
+          "end": 171080
+        },
+        {
+          "word": "measure",
+          "begin": 171160,
+          "end": 171360
+        },
+        {
+          "word": "cache",
+          "begin": 171460,
+          "end": 171720
+        },
+        {
+          "word": "speed.",
+          "begin": 171780,
+          "end": 172100
+        },
+        {
+          "word": "To",
+          "begin": 172440,
+          "end": 172500
+        },
+        {
+          "word": "see",
+          "begin": 172600,
+          "end": 172660
+        },
+        {
+          "word": "real",
+          "begin": 172800,
+          "end": 172960
+        },
+        {
+          "word": "sustained",
+          "begin": 173040,
+          "end": 173480
+        },
+        {
+          "word": "performance,",
+          "begin": 173540,
+          "end": 174160
+        },
+        {
+          "word": "you",
+          "begin": 174220,
+          "end": 174260
+        },
+        {
+          "word": "need",
+          "begin": 174260,
+          "end": 174360
+        },
+        {
+          "word": "to:",
+          "begin": 174360,
+          "end": 174660
+        },
+        {
+          "word": "Instead",
+          "begin": 175160,
+          "end": 175380
+        }
+      ]
+    },
+    {
+      "blockIndex": 10,
+      "type": "paragraph",
+      "text": "Instead of passing everything on the command line, fio can read a .fio jobfile — an INI-style config file that defines one or more jobs. This is cleaner for complex tests and lets you save configurations for reproducible benchmarking.",
+      "beginMs": 175400,
+      "endMs": 189020,
+      "timestamps": [
+        {
+          "word": "of",
+          "begin": 175400,
+          "end": 175580
+        },
+        {
+          "word": "passing",
+          "begin": 175640,
+          "end": 176000
+        },
+        {
+          "word": "everything",
+          "begin": 176040,
+          "end": 176420
+        },
+        {
+          "word": "on",
+          "begin": 176460,
+          "end": 176560
+        },
+        {
+          "word": "the",
+          "begin": 176560,
+          "end": 176620
+        },
+        {
+          "word": "command",
+          "begin": 176680,
+          "end": 176980
+        },
+        {
+          "word": "line,",
+          "begin": 176980,
+          "end": 177300
+        },
+        {
+          "word": "fio",
+          "begin": 177640,
+          "end": 177820
+        },
+        {
+          "word": "can",
+          "begin": 177940,
+          "end": 178080
+        },
+        {
+          "word": "read",
+          "begin": 178120,
+          "end": 178280
+        },
+        {
+          "word": "a",
+          "begin": 178300,
+          "end": 178580
+        },
+        {
+          "word": ".fio",
+          "begin": 178640,
+          "end": 178820
+        },
+        {
+          "word": "jobfile",
+          "begin": 178940,
+          "end": 180480
+        },
+        {
+          "word": "an",
+          "begin": 180580,
+          "end": 180900
+        },
+        {
+          "word": "INI-style",
+          "begin": 180580,
+          "end": 181360
+        },
+        {
+          "word": "config",
+          "begin": 181420,
+          "end": 181760
+        },
+        {
+          "word": "file",
+          "begin": 181840,
+          "end": 182100
+        },
+        {
+          "word": "that",
+          "begin": 182160,
+          "end": 182280
+        },
+        {
+          "word": "defines",
+          "begin": 182300,
+          "end": 182740
+        },
+        {
+          "word": "one",
+          "begin": 182800,
+          "end": 183000
+        },
+        {
+          "word": "or",
+          "begin": 183080,
+          "end": 183100
+        },
+        {
+          "word": "more",
+          "begin": 183220,
+          "end": 183300
+        },
+        {
+          "word": "jobs.",
+          "begin": 183480,
+          "end": 183940
+        },
+        {
+          "word": "This",
+          "begin": 184520,
+          "end": 184660
+        },
+        {
+          "word": "is",
+          "begin": 184680,
+          "end": 184760
+        },
+        {
+          "word": "cleaner",
+          "begin": 184820,
+          "end": 185060
+        },
+        {
+          "word": "for",
+          "begin": 185160,
+          "end": 185200
+        },
+        {
+          "word": "complex",
+          "begin": 185280,
+          "end": 185760
+        },
+        {
+          "word": "tests",
+          "begin": 185840,
+          "end": 186220
+        },
+        {
+          "word": "and",
+          "begin": 186220,
+          "end": 186220
+        },
+        {
+          "word": "lets",
+          "begin": 186220,
+          "end": 186420
+        },
+        {
+          "word": "you",
+          "begin": 186460,
+          "end": 186520
+        },
+        {
+          "word": "save",
+          "begin": 186580,
+          "end": 186720
+        },
+        {
+          "word": "configurations",
+          "begin": 186840,
+          "end": 187880
+        },
+        {
+          "word": "for",
+          "begin": 187920,
+          "end": 188020
+        },
+        {
+          "word": "reproducible",
+          "begin": 188020,
+          "end": 188800
+        },
+        {
+          "word": "benchmarking.",
+          "begin": 188880,
+          "end": 189520
+        },
+        {
+          "word": "A",
+          "begin": 189520,
+          "end": 189020
+        }
+      ]
+    },
+    {
+      "blockIndex": 11,
+      "type": "paragraph",
+      "text": "A jobfile has a [global] section that sets defaults, and each [job-name] section can override any global setting. This lets you run mixed workloads — e.g., 70% read + 30% write simultaneously — in a single test run.",
+      "beginMs": 190200,
+      "endMs": 205280,
+      "timestamps": [
+        {
+          "word": "a",
+          "begin": 190200,
+          "end": 190340
+        },
+        {
+          "word": "[global]",
+          "begin": 190340,
+          "end": 190820
+        },
+        {
+          "word": "section",
+          "begin": 190900,
+          "end": 191360
+        },
+        {
+          "word": "that",
+          "begin": 191440,
+          "end": 191620
+        },
+        {
+          "word": "sets",
+          "begin": 191680,
+          "end": 192000
+        },
+        {
+          "word": "defaults,",
+          "begin": 192060,
+          "end": 192460
+        },
+        {
+          "word": "and",
+          "begin": 192460,
+          "end": 192600
+        },
+        {
+          "word": "each",
+          "begin": 192640,
+          "end": 192900
+        },
+        {
+          "word": "[job-name]",
+          "begin": 192900,
+          "end": 194180
+        },
+        {
+          "word": "section",
+          "begin": 194280,
+          "end": 194760
+        },
+        {
+          "word": "can",
+          "begin": 194860,
+          "end": 195120
+        },
+        {
+          "word": "override",
+          "begin": 195160,
+          "end": 195740
+        },
+        {
+          "word": "any",
+          "begin": 195740,
+          "end": 195920
+        },
+        {
+          "word": "global",
+          "begin": 196060,
+          "end": 196520
+        },
+        {
+          "word": "setting.",
+          "begin": 196600,
+          "end": 197100
+        },
+        {
+          "word": "This",
+          "begin": 197740,
+          "end": 197900
+        },
+        {
+          "word": "lets",
+          "begin": 197920,
+          "end": 198100
+        },
+        {
+          "word": "you",
+          "begin": 198140,
+          "end": 198180
+        },
+        {
+          "word": "run",
+          "begin": 198260,
+          "end": 198440
+        },
+        {
+          "word": "mixed",
+          "begin": 198520,
+          "end": 198800
+        },
+        {
+          "word": "workloads",
+          "begin": 198860,
+          "end": 199380
+        },
+        {
+          "word": "e.g.,",
+          "begin": 199380,
+          "end": 199200
+        },
+        {
+          "word": "70%",
+          "begin": 199360,
+          "end": 200180
+        },
+        {
+          "word": "read",
+          "begin": 200180,
+          "end": 200300
+        },
+        {
+          "word": "+",
+          "begin": 200320,
+          "end": 200760
+        },
+        {
+          "word": "30%",
+          "begin": 200880,
+          "end": 201300
+        },
+        {
+          "word": "write",
+          "begin": 201320,
+          "end": 201580
+        },
+        {
+          "word": "simultaneously",
+          "begin": 201660,
+          "end": 202340
+        },
+        {
+          "word": "in",
+          "begin": 202340,
+          "end": 202640
+        },
+        {
+          "word": "a",
+          "begin": 202640,
+          "end": 202680
+        },
+        {
+          "word": "single",
+          "begin": 202700,
+          "end": 203320
+        },
+        {
+          "word": "test",
+          "begin": 203340,
+          "end": 203640
+        },
+        {
+          "word": "run.",
+          "begin": 203640,
+          "end": 203820
+        },
+        {
+          "word": "One",
+          "begin": 203880,
+          "end": 204000
+        },
+        {
+          "word": "request",
+          "begin": 204000,
+          "end": 204900
+        },
+        {
+          "word": "at",
+          "begin": 204920,
+          "end": 205000
+        },
+        {
+          "word": "a",
+          "begin": 205000,
+          "end": 205100
+        },
+        {
+          "word": "time.",
+          "begin": 205160,
+          "end": 205280
+        }
+      ]
+    },
+    {
+      "blockIndex": 12,
+      "type": "paragraph",
+      "text": "One request at a time. The application sends a read/write and waits (blocks) until it completes before sending the next one. Like ordering food and standing at the counter until it's ready. Simple but slow — the SSD is idle while the app processes results.",
+      "beginMs": 206820,
+      "endMs": 221240,
+      "timestamps": [
+        {
+          "word": "a",
+          "begin": 206820,
+          "end": 206880
+        },
+        {
+          "word": "read/write",
+          "begin": 206880,
+          "end": 207540
+        },
+        {
+          "word": "and",
+          "begin": 207540,
+          "end": 207260
+        },
+        {
+          "word": "waits",
+          "begin": 207360,
+          "end": 207560
+        },
+        {
+          "word": "(blocks)",
+          "begin": 207600,
+          "end": 208100
+        },
+        {
+          "word": "until",
+          "begin": 208200,
+          "end": 208360
+        },
+        {
+          "word": "it",
+          "begin": 208380,
+          "end": 208520
+        },
+        {
+          "word": "completes",
+          "begin": 208520,
+          "end": 209100
+        },
+        {
+          "word": "before",
+          "begin": 209140,
+          "end": 209360
+        },
+        {
+          "word": "sending",
+          "begin": 209400,
+          "end": 209780
+        },
+        {
+          "word": "the",
+          "begin": 209800,
+          "end": 209880
+        },
+        {
+          "word": "next",
+          "begin": 209880,
+          "end": 210220
+        },
+        {
+          "word": "one.",
+          "begin": 210260,
+          "end": 211040
+        },
+        {
+          "word": "Like",
+          "begin": 211440,
+          "end": 211580
+        },
+        {
+          "word": "ordering",
+          "begin": 211640,
+          "end": 211940
+        },
+        {
+          "word": "food",
+          "begin": 212040,
+          "end": 212240
+        },
+        {
+          "word": "and",
+          "begin": 212260,
+          "end": 212340
+        },
+        {
+          "word": "standing",
+          "begin": 212420,
+          "end": 212760
+        },
+        {
+          "word": "at",
+          "begin": 212760,
+          "end": 212860
+        },
+        {
+          "word": "the",
+          "begin": 212860,
+          "end": 212900
+        },
+        {
+          "word": "counter",
+          "begin": 212960,
+          "end": 213200
+        },
+        {
+          "word": "until",
+          "begin": 213260,
+          "end": 213500
+        },
+        {
+          "word": "it's",
+          "begin": 213500,
+          "end": 213620
+        },
+        {
+          "word": "ready.",
+          "begin": 213680,
+          "end": 213860
+        },
+        {
+          "word": "Simple",
+          "begin": 214360,
+          "end": 214600
+        },
+        {
+          "word": "but",
+          "begin": 214780,
+          "end": 214900
+        },
+        {
+          "word": "slow",
+          "begin": 214980,
+          "end": 215140
+        },
+        {
+          "word": "the",
+          "begin": 215600,
+          "end": 215640
+        },
+        {
+          "word": "SSD",
+          "begin": 215720,
+          "end": 216120
+        },
+        {
+          "word": "is",
+          "begin": 216200,
+          "end": 216300
+        },
+        {
+          "word": "idle",
+          "begin": 216300,
+          "end": 216600
+        },
+        {
+          "word": "while",
+          "begin": 216760,
+          "end": 216900
+        },
+        {
+          "word": "the",
+          "begin": 216920,
+          "end": 216980
+        },
+        {
+          "word": "app",
+          "begin": 217080,
+          "end": 217200
+        },
+        {
+          "word": "processes",
+          "begin": 217240,
+          "end": 217780
+        },
+        {
+          "word": "results.",
+          "begin": 217840,
+          "end": 218300
+        },
+        {
+          "word": "Submit",
+          "begin": 218740,
+          "end": 219040
+        },
+        {
+          "word": "multiple",
+          "begin": 219080,
+          "end": 219440
+        },
+        {
+          "word": "requests",
+          "begin": 219480,
+          "end": 219980
+        },
+        {
+          "word": "without",
+          "begin": 220000,
+          "end": 220260
+        },
+        {
+          "word": "waiting.",
+          "begin": 220320,
+          "end": 220640
+        },
+        {
+          "word": "The",
+          "begin": 221200,
+          "end": 221240
+        }
+      ]
+    },
+    {
+      "blockIndex": 13,
+      "type": "paragraph",
+      "text": "Submit multiple requests without waiting. The application fires off many reads/writes and collects completions later. Like ordering from multiple counters simultaneously. The SSD's multiple NAND channels stay busy.",
+      "beginMs": 221300,
+      "endMs": 231340,
+      "timestamps": [
+        {
+          "word": "application",
+          "begin": 221300,
+          "end": 221800
+        },
+        {
+          "word": "fires",
+          "begin": 221880,
+          "end": 222340
+        },
+        {
+          "word": "off",
+          "begin": 222340,
+          "end": 222360
+        },
+        {
+          "word": "many",
+          "begin": 222440,
+          "end": 222620
+        },
+        {
+          "word": "reads/writes",
+          "begin": 222720,
+          "end": 223860
+        },
+        {
+          "word": "and",
+          "begin": 223960,
+          "end": 224020
+        },
+        {
+          "word": "collects",
+          "begin": 224080,
+          "end": 224380
+        },
+        {
+          "word": "completions",
+          "begin": 224440,
+          "end": 224980
+        },
+        {
+          "word": "later.",
+          "begin": 225040,
+          "end": 225260
+        },
+        {
+          "word": "Like",
+          "begin": 225720,
+          "end": 225880
+        },
+        {
+          "word": "ordering",
+          "begin": 225940,
+          "end": 226220
+        },
+        {
+          "word": "from",
+          "begin": 226280,
+          "end": 226420
+        },
+        {
+          "word": "multiple",
+          "begin": 226440,
+          "end": 226760
+        },
+        {
+          "word": "counters",
+          "begin": 226860,
+          "end": 227220
+        },
+        {
+          "word": "simultaneously.",
+          "begin": 227280,
+          "end": 228120
+        },
+        {
+          "word": "The",
+          "begin": 228480,
+          "end": 228540
+        },
+        {
+          "word": "SSD's",
+          "begin": 228620,
+          "end": 229180
+        },
+        {
+          "word": "multiple",
+          "begin": 229260,
+          "end": 229620
+        },
+        {
+          "word": "NAND",
+          "begin": 229740,
+          "end": 229960
+        },
+        {
+          "word": "channels",
+          "begin": 230020,
+          "end": 230520
+        },
+        {
+          "word": "stay",
+          "begin": 230540,
+          "end": 230940
+        },
+        {
+          "word": "busy.",
+          "begin": 231280,
+          "end": 231340
+        }
+      ]
+    },
+    {
+      "blockIndex": 14,
+      "type": "paragraph",
+      "text": "Connection to NVMe queues: Remember from Lesson 6 — NVMe has deep queues (64K entries). Synchronous I/O can only use QD=1. To leverage NVMe's parallelism, you must use async I/O.",
+      "beginMs": 231340,
+      "endMs": 245420,
+      "timestamps": [
+        {
+          "word": "Connection",
+          "begin": 231340,
+          "end": 231700
+        },
+        {
+          "word": "to",
+          "begin": 231760,
+          "end": 231800
+        },
+        {
+          "word": "NVMe",
+          "begin": 231900,
+          "end": 232320
+        },
+        {
+          "word": "queues:",
+          "begin": 232440,
+          "end": 232840
+        },
+        {
+          "word": "Remember",
+          "begin": 233060,
+          "end": 233400
+        },
+        {
+          "word": "from",
+          "begin": 233500,
+          "end": 233640
+        },
+        {
+          "word": "Lesson",
+          "begin": 233680,
+          "end": 233960
+        },
+        {
+          "word": "6",
+          "begin": 234080,
+          "end": 234420
+        },
+        {
+          "word": "NVMe",
+          "begin": 234640,
+          "end": 235080
+        },
+        {
+          "word": "has",
+          "begin": 235180,
+          "end": 235360
+        },
+        {
+          "word": "deep",
+          "begin": 235440,
+          "end": 235620
+        },
+        {
+          "word": "queues",
+          "begin": 235700,
+          "end": 236060
+        },
+        {
+          "word": "(64K",
+          "begin": 236260,
+          "end": 237180
+        },
+        {
+          "word": "entries).",
+          "begin": 237260,
+          "end": 237780
+        },
+        {
+          "word": "Synchronous",
+          "begin": 238140,
+          "end": 238360
+        },
+        {
+          "word": "I/O",
+          "begin": 238360,
+          "end": 238860
+        },
+        {
+          "word": "can",
+          "begin": 239060,
+          "end": 239180
+        },
+        {
+          "word": "only",
+          "begin": 239260,
+          "end": 240640
+        },
+        {
+          "word": "use",
+          "begin": 240720,
+          "end": 240980
+        },
+        {
+          "word": "To",
+          "begin": 241320,
+          "end": 241380
+        },
+        {
+          "word": "leverage",
+          "begin": 241440,
+          "end": 241780
+        },
+        {
+          "word": "NVMe's",
+          "begin": 241880,
+          "end": 242440
+        },
+        {
+          "word": "parallelism,",
+          "begin": 242440,
+          "end": 243260
+        },
+        {
+          "word": "you",
+          "begin": 243440,
+          "end": 243480
+        },
+        {
+          "word": "must",
+          "begin": 243540,
+          "end": 243780
+        },
+        {
+          "word": "use",
+          "begin": 243800,
+          "end": 243960
+        },
+        {
+          "word": "async",
+          "begin": 244080,
+          "end": 244520
+        },
+        {
+          "word": "I/O.",
+          "begin": 244620,
+          "end": 245280
+        },
+        {
+          "word": "When",
+          "begin": 245300,
+          "end": 245340
+        },
+        {
+          "word": "an",
+          "begin": 245340,
+          "end": 245420
+        }
+      ]
+    },
+    {
+      "blockIndex": 15,
+      "type": "paragraph",
+      "text": "When an application writes data, it may sit in the OS buffer cache or the SSD's volatile write cache. fsync() forces all buffered writes to be flushed to stable storage. Databases use fsync to guarantee durability — &ldquo;if I get an fsync success, this data survived a power loss.&rdquo;",
+      "beginMs": 245500,
+      "endMs": 264080,
+      "timestamps": [
+        {
+          "word": "application",
+          "begin": 245500,
+          "end": 246100
+        },
+        {
+          "word": "writes",
+          "begin": 246100,
+          "end": 246400
+        },
+        {
+          "word": "data,",
+          "begin": 246480,
+          "end": 246720
+        },
+        {
+          "word": "it",
+          "begin": 246960,
+          "end": 247020
+        },
+        {
+          "word": "may",
+          "begin": 247020,
+          "end": 247120
+        },
+        {
+          "word": "sit",
+          "begin": 247300,
+          "end": 247480
+        },
+        {
+          "word": "in",
+          "begin": 247540,
+          "end": 247640
+        },
+        {
+          "word": "the",
+          "begin": 247640,
+          "end": 247700
+        },
+        {
+          "word": "OS",
+          "begin": 247820,
+          "end": 248100
+        },
+        {
+          "word": "buffer",
+          "begin": 248160,
+          "end": 248380
+        },
+        {
+          "word": "cache",
+          "begin": 248480,
+          "end": 248840
+        },
+        {
+          "word": "or",
+          "begin": 249040,
+          "end": 249060
+        },
+        {
+          "word": "the",
+          "begin": 249160,
+          "end": 249220
+        },
+        {
+          "word": "SSD's",
+          "begin": 249300,
+          "end": 249860
+        },
+        {
+          "word": "volatile",
+          "begin": 249940,
+          "end": 250280
+        },
+        {
+          "word": "write",
+          "begin": 250400,
+          "end": 250580
+        },
+        {
+          "word": "cache.",
+          "begin": 250640,
+          "end": 251020
+        },
+        {
+          "word": "fsync()",
+          "begin": 251260,
+          "end": 251680
+        },
+        {
+          "word": "forces",
+          "begin": 251760,
+          "end": 252160
+        },
+        {
+          "word": "all",
+          "begin": 252260,
+          "end": 252360
+        },
+        {
+          "word": "buffered",
+          "begin": 252420,
+          "end": 252740
+        },
+        {
+          "word": "writes",
+          "begin": 252780,
+          "end": 253040
+        },
+        {
+          "word": "to",
+          "begin": 253080,
+          "end": 253120
+        },
+        {
+          "word": "be",
+          "begin": 253160,
+          "end": 253220
+        },
+        {
+          "word": "flushed",
+          "begin": 253320,
+          "end": 253580
+        },
+        {
+          "word": "to",
+          "begin": 253640,
+          "end": 253700
+        },
+        {
+          "word": "stable",
+          "begin": 253780,
+          "end": 254180
+        },
+        {
+          "word": "storage.",
+          "begin": 254180,
+          "end": 254600
+        },
+        {
+          "word": "Databases",
+          "begin": 254880,
+          "end": 255540
+        },
+        {
+          "word": "use",
+          "begin": 255580,
+          "end": 255800
+        },
+        {
+          "word": "fsync",
+          "begin": 255860,
+          "end": 256240
+        },
+        {
+          "word": "to",
+          "begin": 256300,
+          "end": 256360
+        },
+        {
+          "word": "guarantee",
+          "begin": 256399,
+          "end": 256740
+        },
+        {
+          "word": "durability",
+          "begin": 256820,
+          "end": 257220
+        },
+        {
+          "word": "&ldquo;if",
+          "begin": 257220,
+          "end": 258320
+        },
+        {
+          "word": "I",
+          "begin": 258339,
+          "end": 258820
+        },
+        {
+          "word": "get",
+          "begin": 258860,
+          "end": 259060
+        },
+        {
+          "word": "an",
+          "begin": 259060,
+          "end": 259220
+        },
+        {
+          "word": "fsync",
+          "begin": 259300,
+          "end": 259660
+        },
+        {
+          "word": "success,",
+          "begin": 259720,
+          "end": 260260
+        },
+        {
+          "word": "this",
+          "begin": 260519,
+          "end": 260680
+        },
+        {
+          "word": "data",
+          "begin": 260760,
+          "end": 260940
+        },
+        {
+          "word": "survived",
+          "begin": 261040,
+          "end": 261440
+        },
+        {
+          "word": "a",
+          "begin": 261440,
+          "end": 261540
+        },
+        {
+          "word": "power",
+          "begin": 261540,
+          "end": 261779
+        },
+        {
+          "word": "loss.&rdquo;",
+          "begin": 261860,
+          "end": 263520
+        },
+        {
+          "word": "When",
+          "begin": 263960,
+          "end": 264080
+        }
+      ]
+    },
+    {
+      "blockIndex": 16,
+      "type": "paragraph",
+      "text": "When a database does INSERT + fsync, the database isn't done until fsync returns. The SSD must flush its volatile cache to NAND. SSDs with capacitor-backed caches can acknowledge fsync instantly (data is safe even on power loss). Cheaper SSDs without capacitors must actually write to NAND first — much slower.",
+      "beginMs": 264100,
+      "endMs": 284340,
+      "timestamps": [
+        {
+          "word": "a",
+          "begin": 264100,
+          "end": 264120
+        },
+        {
+          "word": "database",
+          "begin": 264180,
+          "end": 264640
+        },
+        {
+          "word": "does",
+          "begin": 264680,
+          "end": 264880
+        },
+        {
+          "word": "INSERT",
+          "begin": 264960,
+          "end": 265320
+        },
+        {
+          "word": "+",
+          "begin": 265360,
+          "end": 265600
+        },
+        {
+          "word": "fsync,",
+          "begin": 265680,
+          "end": 266120
+        },
+        {
+          "word": "the",
+          "begin": 266360,
+          "end": 266400
+        },
+        {
+          "word": "database",
+          "begin": 266460,
+          "end": 266900
+        },
+        {
+          "word": "isn't",
+          "begin": 266980,
+          "end": 267200
+        },
+        {
+          "word": "done",
+          "begin": 267240,
+          "end": 267420
+        },
+        {
+          "word": "until",
+          "begin": 267440,
+          "end": 267660
+        },
+        {
+          "word": "fsync",
+          "begin": 267760,
+          "end": 268120
+        },
+        {
+          "word": "returns.",
+          "begin": 268160,
+          "end": 268720
+        },
+        {
+          "word": "The",
+          "begin": 269240,
+          "end": 269280
+        },
+        {
+          "word": "SSD",
+          "begin": 269380,
+          "end": 269800
+        },
+        {
+          "word": "must",
+          "begin": 269880,
+          "end": 270040
+        },
+        {
+          "word": "flush",
+          "begin": 270100,
+          "end": 270320
+        },
+        {
+          "word": "its",
+          "begin": 270340,
+          "end": 270440
+        },
+        {
+          "word": "volatile",
+          "begin": 270500,
+          "end": 270820
+        },
+        {
+          "word": "cache",
+          "begin": 270920,
+          "end": 271220
+        },
+        {
+          "word": "to",
+          "begin": 271280,
+          "end": 271340
+        },
+        {
+          "word": "NAND.",
+          "begin": 271400,
+          "end": 271760
+        },
+        {
+          "word": "SSDs",
+          "begin": 272120,
+          "end": 272760
+        },
+        {
+          "word": "with",
+          "begin": 272820,
+          "end": 272920
+        },
+        {
+          "word": "capacitor-backed",
+          "begin": 272980,
+          "end": 273760
+        },
+        {
+          "word": "caches",
+          "begin": 273820,
+          "end": 274320
+        },
+        {
+          "word": "can",
+          "begin": 274400,
+          "end": 274520
+        },
+        {
+          "word": "acknowledge",
+          "begin": 274540,
+          "end": 274940
+        },
+        {
+          "word": "fsync",
+          "begin": 275040,
+          "end": 275400
+        },
+        {
+          "word": "instantly",
+          "begin": 275480,
+          "end": 275800
+        },
+        {
+          "word": "(data",
+          "begin": 275800,
+          "end": 276180
+        },
+        {
+          "word": "is",
+          "begin": 276300,
+          "end": 276380
+        },
+        {
+          "word": "safe",
+          "begin": 276460,
+          "end": 276680
+        },
+        {
+          "word": "even",
+          "begin": 276760,
+          "end": 276940
+        },
+        {
+          "word": "on",
+          "begin": 276960,
+          "end": 277040
+        },
+        {
+          "word": "power",
+          "begin": 277100,
+          "end": 277720
+        },
+        {
+          "word": "loss).",
+          "begin": 278220,
+          "end": 278620
+        },
+        {
+          "word": "Cheaper",
+          "begin": 278700,
+          "end": 279240
+        },
+        {
+          "word": "SSDs",
+          "begin": 279240,
+          "end": 279960
+        },
+        {
+          "word": "without",
+          "begin": 279960,
+          "end": 280320
+        },
+        {
+          "word": "capacitors",
+          "begin": 280340,
+          "end": 281060
+        },
+        {
+          "word": "must",
+          "begin": 281100,
+          "end": 281400
+        },
+        {
+          "word": "actually",
+          "begin": 281440,
+          "end": 282380
+        },
+        {
+          "word": "write",
+          "begin": 282680,
+          "end": 282740
+        },
+        {
+          "word": "to",
+          "begin": 282800,
+          "end": 282820
+        },
+        {
+          "word": "NAND",
+          "begin": 282820,
+          "end": 282840
+        },
+        {
+          "word": "first",
+          "begin": 282920,
+          "end": 282960
+        },
+        {
+          "word": "slower.",
+          "begin": 283000,
+          "end": 283220
+        },
+        {
+          "word": "fio's",
+          "begin": 283620,
+          "end": 283940
+        },
+        {
+          "word": "output",
+          "begin": 284000,
+          "end": 284340
+        }
+      ]
+    },
+    {
+      "blockIndex": 17,
+      "type": "paragraph",
+      "text": "fio's output looks intimidating, but once you know what each line means, it tells you everything about your SSD's behavior:",
+      "beginMs": 284360,
+      "endMs": 289640,
+      "timestamps": [
+        {
+          "word": "looks",
+          "begin": 284360,
+          "end": 284520
+        },
+        {
+          "word": "intimidating,",
+          "begin": 284560,
+          "end": 285220
+        },
+        {
+          "word": "but",
+          "begin": 285440,
+          "end": 285520
+        },
+        {
+          "word": "once",
+          "begin": 285560,
+          "end": 285760
+        },
+        {
+          "word": "you",
+          "begin": 285780,
+          "end": 285840
+        },
+        {
+          "word": "know",
+          "begin": 285900,
+          "end": 286080
+        },
+        {
+          "word": "what",
+          "begin": 286080,
+          "end": 286180
+        },
+        {
+          "word": "each",
+          "begin": 286260,
+          "end": 286400
+        },
+        {
+          "word": "line",
+          "begin": 286480,
+          "end": 286680
+        },
+        {
+          "word": "means,",
+          "begin": 286720,
+          "end": 287120
+        },
+        {
+          "word": "it",
+          "begin": 287240,
+          "end": 287320
+        },
+        {
+          "word": "tells",
+          "begin": 287360,
+          "end": 287600
+        },
+        {
+          "word": "you",
+          "begin": 287620,
+          "end": 287660
+        },
+        {
+          "word": "everything",
+          "begin": 287800,
+          "end": 288220
+        },
+        {
+          "word": "about",
+          "begin": 288220,
+          "end": 288100
+        },
+        {
+          "word": "your",
+          "begin": 288120,
+          "end": 288260
+        },
+        {
+          "word": "SSD's",
+          "begin": 288260,
+          "end": 288920
+        },
+        {
+          "word": "behavior:",
+          "begin": 288980,
+          "end": 289640
+        }
+      ]
+    },
+    {
+      "blockIndex": 18,
+      "type": "paragraph",
+      "text": "If you run two fio tests on the same drive and get wildly different results, what went wrong? Probably nothing — you measured two different things:",
+      "beginMs": 289800,
+      "endMs": 296340,
+      "timestamps": [
+        {
+          "word": "If",
+          "begin": 289800,
+          "end": 289880
+        },
+        {
+          "word": "you",
+          "begin": 289900,
+          "end": 289960
+        },
+        {
+          "word": "run",
+          "begin": 290020,
+          "end": 290160
+        },
+        {
+          "word": "two",
+          "begin": 290200,
+          "end": 290300
+        },
+        {
+          "word": "fio",
+          "begin": 290400,
+          "end": 290620
+        },
+        {
+          "word": "tests",
+          "begin": 290680,
+          "end": 290960
+        },
+        {
+          "word": "on",
+          "begin": 290980,
+          "end": 291060
+        },
+        {
+          "word": "the",
+          "begin": 291060,
+          "end": 291120
+        },
+        {
+          "word": "same",
+          "begin": 291220,
+          "end": 291400
+        },
+        {
+          "word": "drive",
+          "begin": 291440,
+          "end": 291760
+        },
+        {
+          "word": "and",
+          "begin": 291800,
+          "end": 291880
+        },
+        {
+          "word": "get",
+          "begin": 291900,
+          "end": 292020
+        },
+        {
+          "word": "wildly",
+          "begin": 292100,
+          "end": 292440
+        },
+        {
+          "word": "different",
+          "begin": 292520,
+          "end": 292780
+        },
+        {
+          "word": "results,",
+          "begin": 292780,
+          "end": 293240
+        },
+        {
+          "word": "what",
+          "begin": 292800,
+          "end": 292920
+        },
+        {
+          "word": "went",
+          "begin": 292960,
+          "end": 293240
+        },
+        {
+          "word": "wrong?",
+          "begin": 293600,
+          "end": 293700
+        },
+        {
+          "word": "Probably",
+          "begin": 293740,
+          "end": 294000
+        },
+        {
+          "word": "nothing",
+          "begin": 294200,
+          "end": 294640
+        },
+        {
+          "word": "you",
+          "begin": 294640,
+          "end": 294680
+        },
+        {
+          "word": "measured",
+          "begin": 294740,
+          "end": 295080
+        },
+        {
+          "word": "two",
+          "begin": 295180,
+          "end": 295240
+        },
+        {
+          "word": "different",
+          "begin": 295360,
+          "end": 295780
+        },
+        {
+          "word": "things:",
+          "begin": 295840,
+          "end": 296000
+        },
+        {
+          "word": "Fresh",
+          "begin": 296060,
+          "end": 296340
+        }
+      ]
+    },
+    {
+      "blockIndex": 19,
+      "type": "paragraph",
+      "text": "Fresh drive, SLC cache not full, GC not active. This is what spec sheets advertise. Typically 2-5x higher than steady state for write workloads.",
+      "beginMs": 296340,
+      "endMs": 306320,
+      "timestamps": [
+        {
+          "word": "drive,",
+          "begin": 296340,
+          "end": 296460
+        },
+        {
+          "word": "SLC",
+          "begin": 296460,
+          "end": 297280
+        },
+        {
+          "word": "cache",
+          "begin": 297280,
+          "end": 297440
+        },
+        {
+          "word": "not",
+          "begin": 297520,
+          "end": 297620
+        },
+        {
+          "word": "full,",
+          "begin": 297840,
+          "end": 298260
+        },
+        {
+          "word": "GC",
+          "begin": 298300,
+          "end": 298580
+        },
+        {
+          "word": "not",
+          "begin": 298580,
+          "end": 298880
+        },
+        {
+          "word": "active.",
+          "begin": 298900,
+          "end": 299300
+        },
+        {
+          "word": "This",
+          "begin": 299580,
+          "end": 299800
+        },
+        {
+          "word": "is",
+          "begin": 299820,
+          "end": 299940
+        },
+        {
+          "word": "what",
+          "begin": 299980,
+          "end": 300140
+        },
+        {
+          "word": "spec",
+          "begin": 300240,
+          "end": 300500
+        },
+        {
+          "word": "sheets",
+          "begin": 301080,
+          "end": 301380
+        },
+        {
+          "word": "advertise.",
+          "begin": 301400,
+          "end": 302660
+        },
+        {
+          "word": "Typically",
+          "begin": 303220,
+          "end": 303540
+        },
+        {
+          "word": "2-5x",
+          "begin": 303620,
+          "end": 304360
+        },
+        {
+          "word": "higher",
+          "begin": 304380,
+          "end": 304700
+        },
+        {
+          "word": "than",
+          "begin": 304700,
+          "end": 304800
+        },
+        {
+          "word": "steady",
+          "begin": 304860,
+          "end": 305080
+        },
+        {
+          "word": "state",
+          "begin": 305160,
+          "end": 305360
+        },
+        {
+          "word": "for",
+          "begin": 305400,
+          "end": 305460
+        },
+        {
+          "word": "write",
+          "begin": 305540,
+          "end": 305700
+        },
+        {
+          "word": "workloads.",
+          "begin": 305740,
+          "end": 306320
+        }
+      ]
+    },
+    {
+      "blockIndex": 20,
+      "type": "paragraph",
+      "text": "Drive is mostly full, SLC cache exhausted, GC running continuously. This is real-world performance under sustained load. The only number that matters for servers and databases.",
+      "beginMs": 306680,
+      "endMs": 316380,
+      "timestamps": [
+        {
+          "word": "Drive",
+          "begin": 306680,
+          "end": 306900
+        },
+        {
+          "word": "is",
+          "begin": 306920,
+          "end": 307000
+        },
+        {
+          "word": "mostly",
+          "begin": 307060,
+          "end": 307320
+        },
+        {
+          "word": "full,",
+          "begin": 307460,
+          "end": 307680
+        },
+        {
+          "word": "SLC",
+          "begin": 307920,
+          "end": 308300
+        },
+        {
+          "word": "cache",
+          "begin": 308400,
+          "end": 308660
+        },
+        {
+          "word": "exhausted,",
+          "begin": 308680,
+          "end": 309260
+        },
+        {
+          "word": "GC",
+          "begin": 309520,
+          "end": 309780
+        },
+        {
+          "word": "running",
+          "begin": 309880,
+          "end": 310100
+        },
+        {
+          "word": "continuously.",
+          "begin": 310140,
+          "end": 310760
+        },
+        {
+          "word": "This",
+          "begin": 311200,
+          "end": 311320
+        },
+        {
+          "word": "is",
+          "begin": 311340,
+          "end": 311440
+        },
+        {
+          "word": "real-world",
+          "begin": 311520,
+          "end": 311960
+        },
+        {
+          "word": "performance",
+          "begin": 311960,
+          "end": 312460
+        },
+        {
+          "word": "under",
+          "begin": 312500,
+          "end": 312640
+        },
+        {
+          "word": "sustained",
+          "begin": 312720,
+          "end": 313140
+        },
+        {
+          "word": "load.",
+          "begin": 313220,
+          "end": 313520
+        },
+        {
+          "word": "The",
+          "begin": 313860,
+          "end": 313900
+        },
+        {
+          "word": "only",
+          "begin": 314040,
+          "end": 314200
+        },
+        {
+          "word": "number",
+          "begin": 314260,
+          "end": 314560
+        },
+        {
+          "word": "that",
+          "begin": 314620,
+          "end": 314640
+        },
+        {
+          "word": "matters",
+          "begin": 314680,
+          "end": 315120
+        },
+        {
+          "word": "for",
+          "begin": 315240,
+          "end": 315320
+        },
+        {
+          "word": "servers",
+          "begin": 315400,
+          "end": 315700
+        },
+        {
+          "word": "and",
+          "begin": 315740,
+          "end": 315980
+        },
+        {
+          "word": "databases.",
+          "begin": 315740,
+          "end": 316380
+        }
+      ]
+    },
+    {
+      "blockIndex": 21,
+      "type": "info",
+      "text": "CAUTION: fio on raw devices destroys data: Using --filename=/dev/nvme0n1 writes directly to the block device, overwriting ALL data — filesystem, partitions, everything. Always double-check the device name with lsblk before running fio. For safe testing, use a file path (--filename=/tmp/fio.dat) instead — slightly less accurate but won't destroy your data.",
+      "beginMs": 316960,
+      "endMs": 341380,
+      "timestamps": [
+        {
+          "word": "CAUTION:",
+          "begin": 316960,
+          "end": 317400
+        },
+        {
+          "word": "fio",
+          "begin": 317680,
+          "end": 318040
+        },
+        {
+          "word": "on",
+          "begin": 318100,
+          "end": 318120
+        },
+        {
+          "word": "raw",
+          "begin": 318160,
+          "end": 318240
+        },
+        {
+          "word": "devices",
+          "begin": 318360,
+          "end": 318800
+        },
+        {
+          "word": "destroys",
+          "begin": 318840,
+          "end": 319280
+        },
+        {
+          "word": "data:",
+          "begin": 319340,
+          "end": 319960
+        },
+        {
+          "word": "Using",
+          "begin": 319960,
+          "end": 320280
+        },
+        {
+          "word": "--filename=/dev/nvme0n1",
+          "begin": 320380,
+          "end": 323360
+        },
+        {
+          "word": "writes",
+          "begin": 323740,
+          "end": 323960
+        },
+        {
+          "word": "directly",
+          "begin": 324000,
+          "end": 324360
+        },
+        {
+          "word": "to",
+          "begin": 324440,
+          "end": 324480
+        },
+        {
+          "word": "the",
+          "begin": 324520,
+          "end": 324580
+        },
+        {
+          "word": "block",
+          "begin": 324640,
+          "end": 324860
+        },
+        {
+          "word": "device,",
+          "begin": 324900,
+          "end": 325300
+        },
+        {
+          "word": "overwriting",
+          "begin": 325740,
+          "end": 326380
+        },
+        {
+          "word": "ALL",
+          "begin": 326520,
+          "end": 326620
+        },
+        {
+          "word": "data",
+          "begin": 326700,
+          "end": 326880
+        },
+        {
+          "word": "filesystem,",
+          "begin": 327320,
+          "end": 328000
+        },
+        {
+          "word": "partitions,",
+          "begin": 328280,
+          "end": 328900
+        },
+        {
+          "word": "everything.",
+          "begin": 329240,
+          "end": 329680
+        },
+        {
+          "word": "Always",
+          "begin": 330020,
+          "end": 330260
+        },
+        {
+          "word": "double-check",
+          "begin": 330300,
+          "end": 330760
+        },
+        {
+          "word": "the",
+          "begin": 330800,
+          "end": 330840
+        },
+        {
+          "word": "device",
+          "begin": 330880,
+          "end": 331220
+        },
+        {
+          "word": "name",
+          "begin": 331260,
+          "end": 331480
+        },
+        {
+          "word": "with",
+          "begin": 331480,
+          "end": 331580
+        },
+        {
+          "word": "lsblk",
+          "begin": 331680,
+          "end": 332400
+        },
+        {
+          "word": "before",
+          "begin": 332560,
+          "end": 332780
+        },
+        {
+          "word": "running",
+          "begin": 332900,
+          "end": 333120
+        },
+        {
+          "word": "fio.",
+          "begin": 333200,
+          "end": 333500
+        },
+        {
+          "word": "For",
+          "begin": 333800,
+          "end": 333840
+        },
+        {
+          "word": "safe",
+          "begin": 333960,
+          "end": 334160
+        },
+        {
+          "word": "testing,",
+          "begin": 334200,
+          "end": 334620
+        },
+        {
+          "word": "use",
+          "begin": 334900,
+          "end": 335060
+        },
+        {
+          "word": "a",
+          "begin": 335080,
+          "end": 335120
+        },
+        {
+          "word": "file",
+          "begin": 335200,
+          "end": 335420
+        },
+        {
+          "word": "path",
+          "begin": 335500,
+          "end": 335820
+        },
+        {
+          "word": "less",
+          "begin": 336080,
+          "end": 336520
+        },
+        {
+          "word": "accurate",
+          "begin": 336660,
+          "end": 338020
+        },
+        {
+          "word": "but",
+          "begin": 338060,
+          "end": 338180
+        },
+        {
+          "word": "won't",
+          "begin": 338180,
+          "end": 338420
+        },
+        {
+          "word": "destroy",
+          "begin": 338460,
+          "end": 338680
+        },
+        {
+          "word": "check:",
+          "begin": 338720,
+          "end": 339460
+        },
+        {
+          "word": "A",
+          "begin": 339520,
+          "end": 339660
+        },
+        {
+          "word": "shows",
+          "begin": 339520,
+          "end": 339540
+        },
+        {
+          "word": "an",
+          "begin": 339640,
+          "end": 339860
+        },
+        {
+          "word": "at",
+          "begin": 340160,
+          "end": 340240
+        },
+        {
+          "word": "QD1",
+          "begin": 340320,
+          "end": 341060
+        },
+        {
+          "word": "but",
+          "begin": 341160,
+          "end": 341380
+        }
+      ]
+    },
+    {
+      "blockIndex": 22,
+      "type": "reveal",
+      "text": "Knowledge check: A benchmark shows an NVMe SSD doing 50,000 IOPS at QD1 but 900,000 IOPS at QD128. Why does increasing queue depth improve performance by 18x? What is happening inside the SSD at the hardware level that explains this massive difference? The answer: At QD1 (iodepth=1), only one I/O request is in flight at a time. The SSD has multiple NAND dies connected across several channels (typically 4-8), but only one die is active — the rest sit idle waiting. The host sends a request, waits for the SSD to read from a single die (~50-100us), gets the response, then sends the next. At QD128, 128 requests are in flight simultaneously. The SSD's controller can distribute these across all NAND channels and dies in parallel — while one die is reading, others are already processing different requests. This channel-level parallelism is the key: an 8-channel controller with 2 dies per channel can theoretically serve 16 requests simultaneously. Additionally, deeper queues allow the controller's internal scheduler to reorder requests for optimal NAND access patterns, reducing die conflicts and improving throughput. The relationship is IOPS x block_size = bandwidth, so at QD128 with 4K blocks: 900K x 4K = 3.6 GB/s — approaching the PCIe lane limit.",
+      "beginMs": 341540,
+      "endMs": 419720,
+      "timestamps": [
+        {
+          "word": "Why",
+          "begin": 341540,
+          "end": 341620
+        },
+        {
+          "word": "does",
+          "begin": 341720,
+          "end": 341880
+        },
+        {
+          "word": "increasing",
+          "begin": 341900,
+          "end": 342360
+        },
+        {
+          "word": "queue",
+          "begin": 342440,
+          "end": 342540
+        },
+        {
+          "word": "depth",
+          "begin": 342540,
+          "end": 342720
+        },
+        {
+          "word": "improve",
+          "begin": 342740,
+          "end": 343160
+        },
+        {
+          "word": "performance",
+          "begin": 343220,
+          "end": 344000
+        },
+        {
+          "word": "by",
+          "begin": 344060,
+          "end": 344120
+        },
+        {
+          "word": "18x?",
+          "begin": 344260,
+          "end": 345040
+        },
+        {
+          "word": "What",
+          "begin": 345660,
+          "end": 345760
+        },
+        {
+          "word": "is",
+          "begin": 345780,
+          "end": 345880
+        },
+        {
+          "word": "happening",
+          "begin": 345920,
+          "end": 346300
+        },
+        {
+          "word": "inside",
+          "begin": 346340,
+          "end": 346680
+        },
+        {
+          "word": "the",
+          "begin": 346680,
+          "end": 346860
+        },
+        {
+          "word": "SSD",
+          "begin": 346860,
+          "end": 347300
+        },
+        {
+          "word": "at",
+          "begin": 347300,
+          "end": 347640
+        },
+        {
+          "word": "the",
+          "begin": 347640,
+          "end": 347680
+        },
+        {
+          "word": "hardware",
+          "begin": 347760,
+          "end": 348040
+        },
+        {
+          "word": "level",
+          "begin": 348180,
+          "end": 348580
+        },
+        {
+          "word": "that",
+          "begin": 348620,
+          "end": 348740
+        },
+        {
+          "word": "explains",
+          "begin": 348740,
+          "end": 349160
+        },
+        {
+          "word": "this",
+          "begin": 349200,
+          "end": 349340
+        },
+        {
+          "word": "massive",
+          "begin": 349400,
+          "end": 349760
+        },
+        {
+          "word": "difference?",
+          "begin": 349820,
+          "end": 350280
+        },
+        {
+          "word": "The",
+          "begin": 350820,
+          "end": 350880
+        },
+        {
+          "word": "answer:",
+          "begin": 351020,
+          "end": 351280
+        },
+        {
+          "word": "At",
+          "begin": 351680,
+          "end": 351760
+        },
+        {
+          "word": "(iodepth=1),",
+          "begin": 351780,
+          "end": 354300
+        },
+        {
+          "word": "only",
+          "begin": 354300,
+          "end": 354800
+        },
+        {
+          "word": "one",
+          "begin": 354900,
+          "end": 354940
+        },
+        {
+          "word": "I/O",
+          "begin": 354960,
+          "end": 355380
+        },
+        {
+          "word": "request",
+          "begin": 355480,
+          "end": 356000
+        },
+        {
+          "word": "is",
+          "begin": 356300,
+          "end": 356420
+        },
+        {
+          "word": "in",
+          "begin": 356440,
+          "end": 356520
+        },
+        {
+          "word": "flight",
+          "begin": 356620,
+          "end": 356900
+        },
+        {
+          "word": "at",
+          "begin": 356960,
+          "end": 357020
+        },
+        {
+          "word": "a",
+          "begin": 357040,
+          "end": 357060
+        },
+        {
+          "word": "time.",
+          "begin": 357140,
+          "end": 357440
+        },
+        {
+          "word": "The",
+          "begin": 357820,
+          "end": 358540
+        },
+        {
+          "word": "has",
+          "begin": 358700,
+          "end": 358860
+        },
+        {
+          "word": "multiple",
+          "begin": 358940,
+          "end": 360080
+        },
+        {
+          "word": "NAND",
+          "begin": 360240,
+          "end": 360540
+        },
+        {
+          "word": "connected",
+          "begin": 360600,
+          "end": 361000
+        },
+        {
+          "word": "across",
+          "begin": 361020,
+          "end": 361360
+        },
+        {
+          "word": "several",
+          "begin": 361420,
+          "end": 361660
+        },
+        {
+          "word": "channels",
+          "begin": 361740,
+          "end": 362180
+        },
+        {
+          "word": "(typically",
+          "begin": 362280,
+          "end": 362620
+        },
+        {
+          "word": "4-8),",
+          "begin": 362760,
+          "end": 363420
+        },
+        {
+          "word": "but",
+          "begin": 363680,
+          "end": 363780
+        },
+        {
+          "word": "only",
+          "begin": 363860,
+          "end": 364060
+        },
+        {
+          "word": "one",
+          "begin": 364160,
+          "end": 364340
+        },
+        {
+          "word": "die",
+          "begin": 364380,
+          "end": 364460
+        },
+        {
+          "word": "is",
+          "begin": 364600,
+          "end": 364700
+        },
+        {
+          "word": "active",
+          "begin": 364780,
+          "end": 365220
+        },
+        {
+          "word": "the",
+          "begin": 365500,
+          "end": 365540
+        },
+        {
+          "word": "rest",
+          "begin": 365620,
+          "end": 365900
+        },
+        {
+          "word": "sit",
+          "begin": 366000,
+          "end": 366140
+        },
+        {
+          "word": "idle",
+          "begin": 366240,
+          "end": 366400
+        },
+        {
+          "word": "waiting.",
+          "begin": 366520,
+          "end": 366860
+        },
+        {
+          "word": "The",
+          "begin": 367240,
+          "end": 367280
+        },
+        {
+          "word": "host",
+          "begin": 367360,
+          "end": 367700
+        },
+        {
+          "word": "sends",
+          "begin": 367780,
+          "end": 368000
+        },
+        {
+          "word": "a",
+          "begin": 368020,
+          "end": 368040
+        },
+        {
+          "word": "request,",
+          "begin": 368080,
+          "end": 368680
+        },
+        {
+          "word": "waits",
+          "begin": 368960,
+          "end": 369180
+        },
+        {
+          "word": "for",
+          "begin": 369240,
+          "end": 369800
+        },
+        {
+          "word": "the",
+          "begin": 369860,
+          "end": 369940
+        },
+        {
+          "word": "to",
+          "begin": 370060,
+          "end": 370120
+        },
+        {
+          "word": "read",
+          "begin": 370200,
+          "end": 370400
+        },
+        {
+          "word": "from",
+          "begin": 370460,
+          "end": 370580
+        },
+        {
+          "word": "a",
+          "begin": 370600,
+          "end": 370620
+        },
+        {
+          "word": "single",
+          "begin": 370740,
+          "end": 370960
+        },
+        {
+          "word": "die",
+          "begin": 371080,
+          "end": 371180
+        },
+        {
+          "word": "(~50-100us),",
+          "begin": 371680,
+          "end": 373320
+        },
+        {
+          "word": "gets",
+          "begin": 373600,
+          "end": 373800
+        },
+        {
+          "word": "the",
+          "begin": 373840,
+          "end": 373900
+        },
+        {
+          "word": "response,",
+          "begin": 373920,
+          "end": 374360
+        },
+        {
+          "word": "then",
+          "begin": 374440,
+          "end": 374460
+        },
+        {
+          "word": "sends",
+          "begin": 374740,
+          "end": 375000
+        },
+        {
+          "word": "the",
+          "begin": 375040,
+          "end": 375060
+        },
+        {
+          "word": "next.",
+          "begin": 375120,
+          "end": 375300
+        },
+        {
+          "word": "At",
+          "begin": 375300,
+          "end": 375460
+        },
+        {
+          "word": "128",
+          "begin": 375620,
+          "end": 378900
+        },
+        {
+          "word": "requests",
+          "begin": 378940,
+          "end": 379480
+        },
+        {
+          "word": "are",
+          "begin": 379540,
+          "end": 379620
+        },
+        {
+          "word": "in",
+          "begin": 379640,
+          "end": 379720
+        },
+        {
+          "word": "flight",
+          "begin": 379800,
+          "end": 380080
+        },
+        {
+          "word": "simultaneously.",
+          "begin": 380140,
+          "end": 381000
+        },
+        {
+          "word": "The",
+          "begin": 381320,
+          "end": 381380
+        },
+        {
+          "word": "SSD's",
+          "begin": 381480,
+          "end": 382040
+        },
+        {
+          "word": "controller",
+          "begin": 382080,
+          "end": 382460
+        },
+        {
+          "word": "can",
+          "begin": 382560,
+          "end": 382660
+        },
+        {
+          "word": "distribute",
+          "begin": 382700,
+          "end": 383160
+        },
+        {
+          "word": "these",
+          "begin": 383200,
+          "end": 383400
+        },
+        {
+          "word": "across",
+          "begin": 383400,
+          "end": 383560
+        },
+        {
+          "word": "all",
+          "begin": 383580,
+          "end": 384020
+        },
+        {
+          "word": "NAND",
+          "begin": 384100,
+          "end": 384300
+        },
+        {
+          "word": "channels",
+          "begin": 384300,
+          "end": 384840
+        },
+        {
+          "word": "and",
+          "begin": 385000,
+          "end": 385260
+        },
+        {
+          "word": "dies",
+          "begin": 385440,
+          "end": 385560
+        },
+        {
+          "word": "in",
+          "begin": 385600,
+          "end": 385620
+        },
+        {
+          "word": "parallel",
+          "begin": 385620,
+          "end": 386060
+        },
+        {
+          "word": "while",
+          "begin": 386340,
+          "end": 386560
+        },
+        {
+          "word": "one",
+          "begin": 386560,
+          "end": 386720
+        },
+        {
+          "word": "die",
+          "begin": 386760,
+          "end": 387020
+        },
+        {
+          "word": "is",
+          "begin": 387060,
+          "end": 387100
+        },
+        {
+          "word": "reading,",
+          "begin": 387160,
+          "end": 387480
+        },
+        {
+          "word": "others",
+          "begin": 387720,
+          "end": 388000
+        },
+        {
+          "word": "are",
+          "begin": 388020,
+          "end": 388040
+        },
+        {
+          "word": "already",
+          "begin": 388160,
+          "end": 388360
+        },
+        {
+          "word": "processing",
+          "begin": 388440,
+          "end": 388940
+        },
+        {
+          "word": "different",
+          "begin": 388980,
+          "end": 389240
+        },
+        {
+          "word": "requests.",
+          "begin": 389260,
+          "end": 389840
+        },
+        {
+          "word": "This",
+          "begin": 390080,
+          "end": 390200
+        },
+        {
+          "word": "channel-level",
+          "begin": 390280,
+          "end": 390780
+        },
+        {
+          "word": "parallelism",
+          "begin": 390880,
+          "end": 391540
+        },
+        {
+          "word": "is",
+          "begin": 391560,
+          "end": 391640
+        },
+        {
+          "word": "the",
+          "begin": 391680,
+          "end": 391720
+        },
+        {
+          "word": "key:",
+          "begin": 391800,
+          "end": 391920
+        },
+        {
+          "word": "an",
+          "begin": 392400,
+          "end": 392460
+        },
+        {
+          "word": "8-channel",
+          "begin": 392460,
+          "end": 393060
+        },
+        {
+          "word": "controller",
+          "begin": 393080,
+          "end": 393480
+        },
+        {
+          "word": "with",
+          "begin": 393580,
+          "end": 393700
+        },
+        {
+          "word": "2",
+          "begin": 393800,
+          "end": 393900
+        },
+        {
+          "word": "dies",
+          "begin": 394000,
+          "end": 394240
+        },
+        {
+          "word": "per",
+          "begin": 394300,
+          "end": 394360
+        },
+        {
+          "word": "channel",
+          "begin": 394460,
+          "end": 394720
+        },
+        {
+          "word": "can",
+          "begin": 394860,
+          "end": 394960
+        },
+        {
+          "word": "theoretically",
+          "begin": 395040,
+          "end": 395540
+        },
+        {
+          "word": "serve",
+          "begin": 395640,
+          "end": 395840
+        },
+        {
+          "word": "16",
+          "begin": 395920,
+          "end": 396320
+        },
+        {
+          "word": "requests",
+          "begin": 396340,
+          "end": 396780
+        },
+        {
+          "word": "simultaneously.",
+          "begin": 396820,
+          "end": 397660
+        },
+        {
+          "word": "Additionally,",
+          "begin": 397960,
+          "end": 398440
+        },
+        {
+          "word": "deeper",
+          "begin": 398560,
+          "end": 398800
+        },
+        {
+          "word": "queues",
+          "begin": 398900,
+          "end": 399140
+        },
+        {
+          "word": "allow",
+          "begin": 399160,
+          "end": 399300
+        },
+        {
+          "word": "the",
+          "begin": 399400,
+          "end": 399460
+        },
+        {
+          "word": "controller's",
+          "begin": 399520,
+          "end": 400020
+        },
+        {
+          "word": "internal",
+          "begin": 400080,
+          "end": 400420
+        },
+        {
+          "word": "scheduler",
+          "begin": 400520,
+          "end": 400900
+        },
+        {
+          "word": "to",
+          "begin": 401020,
+          "end": 401100
+        },
+        {
+          "word": "reorder",
+          "begin": 401180,
+          "end": 401600
+        },
+        {
+          "word": "requests",
+          "begin": 401600,
+          "end": 402080
+        },
+        {
+          "word": "for",
+          "begin": 402140,
+          "end": 402200
+        },
+        {
+          "word": "optimal",
+          "begin": 402300,
+          "end": 402600
+        },
+        {
+          "word": "NAND",
+          "begin": 402700,
+          "end": 402920
+        },
+        {
+          "word": "access",
+          "begin": 402960,
+          "end": 403300
+        },
+        {
+          "word": "patterns,",
+          "begin": 403360,
+          "end": 403780
+        },
+        {
+          "word": "reducing",
+          "begin": 404100,
+          "end": 404500
+        },
+        {
+          "word": "die",
+          "begin": 404540,
+          "end": 404780
+        },
+        {
+          "word": "conflicts",
+          "begin": 404780,
+          "end": 405300
+        },
+        {
+          "word": "and",
+          "begin": 405360,
+          "end": 405460
+        },
+        {
+          "word": "improving",
+          "begin": 405460,
+          "end": 405860
+        },
+        {
+          "word": "throughput.",
+          "begin": 405940,
+          "end": 406400
+        },
+        {
+          "word": "The",
+          "begin": 406720,
+          "end": 406760
+        },
+        {
+          "word": "relationship",
+          "begin": 406820,
+          "end": 407440
+        },
+        {
+          "word": "is",
+          "begin": 407440,
+          "end": 407520
+        },
+        {
+          "word": "IOPS",
+          "begin": 407520,
+          "end": 408020
+        },
+        {
+          "word": "x",
+          "begin": 408120,
+          "end": 408280
+        },
+        {
+          "word": "block_size",
+          "begin": 408340,
+          "end": 408940
+        },
+        {
+          "word": "=",
+          "begin": 408960,
+          "end": 409440
+        },
+        {
+          "word": "bandwidth,",
+          "begin": 409500,
+          "end": 410000
+        },
+        {
+          "word": "so",
+          "begin": 410300,
+          "end": 410380
+        },
+        {
+          "word": "at",
+          "begin": 410460,
+          "end": 410560
+        },
+        {
+          "word": "QD128",
+          "begin": 410660,
+          "end": 411820
+        },
+        {
+          "word": "with",
+          "begin": 411900,
+          "end": 412000
+        },
+        {
+          "word": "4K",
+          "begin": 412000,
+          "end": 412580
+        },
+        {
+          "word": "blocks:",
+          "begin": 412600,
+          "end": 412940
+        },
+        {
+          "word": "900K",
+          "begin": 413380,
+          "end": 414100
+        },
+        {
+          "word": "x",
+          "begin": 414360,
+          "end": 414520
+        },
+        {
+          "word": "4K",
+          "begin": 414580,
+          "end": 415680
+        },
+        {
+          "word": "=",
+          "begin": 415800,
+          "end": 416820
+        },
+        {
+          "word": "3.6",
+          "begin": 416940,
+          "end": 417340
+        },
+        {
+          "word": "approaching",
+          "begin": 417760,
+          "end": 418220
+        },
+        {
+          "word": "the",
+          "begin": 418239,
+          "end": 418299
+        },
+        {
+          "word": "PCIe",
+          "begin": 418360,
+          "end": 419220
+        },
+        {
+          "word": "lane",
+          "begin": 419340,
+          "end": 419360
+        },
+        {
+          "word": "limit.",
+          "begin": 419399,
+          "end": 419720
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "sectionId": "sec-tracing",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "ftrace NVMe Tracing — Watching Commands in Real Time",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: Tracing Shows What's Really Happening. Tracing tools (ftrace, blktrace, perf) are like putting sensors on every step of the I/O path. They show exactly how long each layer takes, where bottlenecks occur, and which operations are being queued. Essential for diagnosing 'the SSD feels slow' problems — usually the bottleneck isn't the SSD itself.",
+      "blockIndex": 1
+    },
+    {
+      "type": "term",
+      "text": "ftrace: Linux's built-in function tracer. Can trace kernel functions related to NVMe and block I/O with nanosecond precision. Accessed via /sys/kernel/debug/tracing/ or the trace-cmd wrapper.",
+      "blockIndex": 2
+    },
+    {
+      "type": "term",
+      "text": "blktrace: A specialized Linux tool that records all block I/O events (queue, merge, issue, complete) for a specific device. Combined with blkparse, it shows the complete lifecycle of each I/O request through the block layer.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "We've learned how NVMe commands work: the host writes a 64-byte Submission Queue Entry, rings a doorbell, the drive processes it, and posts a Completion Queue Entry. But when something goes wrong — a command takes too long, an error appears, performance drops — how do you actually see what's happening?",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "You trace it. Linux has a built-in tracing framework called ftrace (short for &ldquo;function tracer&rdquo;). It can record events inside the kernel — including every NVMe command that's submitted and completed. Think of it as a security camera for the I/O path: you can see exactly what commands were sent, when, to which queue, and whether they succeeded.",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "Why not just use application-level logging? Because application logs only show what the app asked for. They don't show what the kernel actually did. A single application write() call might be split into multiple NVMe commands, reordered by the I/O scheduler, or delayed by write-back caching. ftrace shows the ground truth — what actually hit the hardware.",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "How does ftrace work internally? The Linux kernel has tracepoints — pre-defined instrumentation hooks compiled into the source code. When you enable a tracepoint, the kernel writes a record to a ring buffer every time that code path executes. Reading the trace pipe gives you a stream of these records, timestamped to microsecond precision.",
+      "blockIndex": 7
+    },
+    {
+      "type": "paragraph",
+      "text": "Why is this useful?",
+      "blockIndex": 8
+    },
+    {
+      "type": "paragraph",
+      "text": "The NVMe driver exposes two trace events. Together, they give you the complete lifecycle of every command:",
+      "blockIndex": 9
+    },
+    {
+      "type": "paragraph",
+      "text": "Fires when a command is submitted — the SQE is placed into the submission queue. Logs the opcode, queue ID, namespace, command ID, and all CDW fields (the command's raw parameters in hex).",
+      "blockIndex": 10
+    },
+    {
+      "type": "paragraph",
+      "text": "Fires when the drive's response arrives — the CQE is processed. Shows the status code (success or error), command result, retries, and flags. The time between setup and complete is the command's latency.",
+      "blockIndex": 11
+    },
+    {
+      "type": "paragraph",
+      "text": "But NVMe events only show what hits the drive. What about everything that happens before that? A write() system call goes through the filesystem, the block layer (I/O scheduler, merging, reordering), and then finally the NVMe driver. The block layer has its own trace events that show the I/O pipeline:",
+      "blockIndex": 12
+    },
+    {
+      "type": "paragraph",
+      "text": "In block layer trace output, you'll see short letter codes for the operation type. These are combinations of the base operation and modifier flags:",
+      "blockIndex": 13
+    },
+    {
+      "type": "paragraph",
+      "text": "But you'll often see two-letter codes like RS, WS, or DS. What does the S mean? The second letter is a modifier flag that gets appended to the base operation:",
+      "blockIndex": 14
+    },
+    {
+      "type": "paragraph",
+      "text": "So &ldquo;DS&rdquo; means a synchronous discard (TRIM) request, and &ldquo;RS&rdquo; means a synchronous read. These flags tell you not just what the kernel is doing, but how urgently — sync requests can't be reordered, while async ones can be batched and optimized by the I/O scheduler.",
+      "blockIndex": 15
+    },
+    {
+      "type": "info",
+      "text": "These are constructed examples: The trace output shown below is not captured from a live system. These examples are constructed based on the kernel's NVMe tracepoint format definition to illustrate what each field means. The structure and format are accurate — this is what you would see on a real system, but the specific timestamps, PIDs, and values are illustrative. You can paste them into the Trace Decoder tool below to decode the CDW fields.",
+      "blockIndex": 16
+    },
+    {
+      "type": "paragraph",
+      "text": "Let's start with the most common command — a Read. The NVMe tracepoint logs each command with its raw CDW (Command Dword) values in hex:",
+      "blockIndex": 17
+    },
+    {
+      "type": "paragraph",
+      "text": "For a Read command (opcode 0x02), the NVMe spec defines what each CDW field contains:",
+      "blockIndex": 18
+    },
+    {
+      "type": "paragraph",
+      "text": "Summary: this Read command reads 8 blocks (32 KB) starting at LBA 0 from namespace 1, on I/O queue 1, with no special flags — and it succeeded.",
+      "blockIndex": 19
+    },
+    {
+      "type": "paragraph",
+      "text": "Now a Write command. The CDW layout for Write (opcode 0x01) is almost identical to Read:",
+      "blockIndex": 20
+    },
+    {
+      "type": "paragraph",
+      "text": "Summary: this Write command writes 256 blocks (1 MB) starting at LBA 4096, with FUA forced, on I/O queue 2 — and succeeded. Notice it went to queue 2 while the Read was on queue 1 — the kernel spreads I/O across queues for parallelism.",
+      "blockIndex": 21
+    },
+    {
+      "type": "paragraph",
+      "text": "What about a Flush? The Flush command (opcode 0x00) tells the drive to persist all cached data:",
+      "blockIndex": 22
+    },
+    {
+      "type": "paragraph",
+      "text": "And TRIM? TRIM is sent as a Dataset Management command (opcode 0x09):",
+      "blockIndex": 23
+    },
+    {
+      "type": "paragraph",
+      "text": "What about admin commands? They go to queue 0 (the admin queue). Here's an Identify Controller command:",
+      "blockIndex": 24
+    },
+    {
+      "type": "paragraph",
+      "text": "Note: Newer kernel versions may show a more decoded format (e.g., io_cmd_read slba=0, len=7 instead of raw CDW hex). The trace decoder tool below works with the CDW format shown above. The sample traces you can load in the decoder also use this format.",
+      "blockIndex": 25
+    },
+    {
+      "type": "paragraph",
+      "text": "Block layer events use a different format. They show the device major:minor, operation flags, byte size, starting sector, and sector count:",
+      "blockIndex": 26
+    },
+    {
+      "type": "paragraph",
+      "text": "Notice the flags: R = async read, WS = synchronous write, DS = synchronous discard (TRIM). The sync flag (S) means the request must complete in order — it can't be reordered past other sync requests.",
+      "blockIndex": 27
+    },
+    {
+      "type": "paragraph",
+      "text": "With both block and NVMe events enabled, you can trace a single I/O through the entire stack:",
+      "blockIndex": 28
+    },
+    {
+      "type": "paragraph",
+      "text": "Why is this breakdown useful? If total I/O latency is high but device latency is normal, the bottleneck is in the software stack (I/O scheduler, filesystem, or driver overhead). If device latency is high, the SSD itself is slow (GC, thermal throttling, or a firmware issue).",
+      "blockIndex": 29
+    },
+    {
+      "type": "info",
+      "text": "ftrace vs blktrace vs bpftrace: ftrace is built into the kernel — no installation needed, always available. blktrace is a dedicated block layer tracing tool with richer formatting but requires installation. bpftrace (eBPF-based) is the most powerful — you can write custom scripts that filter, aggregate, and compute histograms in kernel space. For quick debugging, ftrace is fastest to set up. For production monitoring, bpftrace is more flexible. All three read from the same kernel tracepoints — they just present the data differently.",
+      "blockIndex": 30
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: Your application reports 200 microsecond average I/O latency, but users complain about intermittent slowness. How would you use ftrace and blktrace together to pinpoint whether the bottleneck is in the kernel I/O stack or the SSD itself? What specific timestamps would you compare? The answer: Enable both NVMe and block layer trace events simultaneously. For each I/O, compare three key timestamps: (1) block_rq_issue — when the block layer hands the request to the NVMe driver, (2) nvme_setup_cmd — when the driver submits the command to the SSD's submission queue, and (3) nvme_complete_rq — when the SSD posts the completion. The gap between rq_issue and setup_cmd reveals driver/software overhead. The gap between setup_cmd and complete_rq is the actual SSD device latency. If device latency spikes to milliseconds during normal sub-100us operations, the SSD is likely doing foreground garbage collection or thermal throttling. If device latency is stable but total latency is high, the bottleneck is in the I/O scheduler, filesystem journaling, or queue contention. Look for patterns: spikes correlating with write bursts suggest GC, while steady high latency on one qid suggests CPU affinity issues.",
+      "requiresReveal": true,
+      "blockIndex": 31
+    }
+  ]
+}

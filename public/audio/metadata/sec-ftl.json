@@ -1,0 +1,2246 @@
+{
+  "sectionId": "sec-ftl",
+  "audioFile": "/audio/sections/sec-ftl.mp3",
+  "totalDurationMs": 158600,
+  "fileSizeBytes": 2538240,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "The Flash Translation Layer (FTL)",
+      "beginMs": 40,
+      "endMs": 2240,
+      "timestamps": [
+        {
+          "word": "The",
+          "begin": 40,
+          "end": 100
+        },
+        {
+          "word": "Flash",
+          "begin": 180,
+          "end": 480
+        },
+        {
+          "word": "Translation",
+          "begin": 560,
+          "end": 1160
+        },
+        {
+          "word": "Layer",
+          "begin": 1160,
+          "end": 1620
+        },
+        {
+          "word": "(FTL)",
+          "begin": 1720,
+          "end": 2240
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: The FTL Is a Library Card Catalog. Imagine a library that can't erase single pages — only whole shelves. When you update a book, the librarian writes the new version on a fresh shelf, updates the card catalog to point there, and marks the old copy as 'outdated.' Later, a cleanup crew (garbage collection) moves valid books off shelves with too many outdated copies, then clears those shelves for reuse.",
+      "beginMs": 2320,
+      "endMs": 25260,
+      "timestamps": [
+        {
+          "word": "Analogy:",
+          "begin": 2320,
+          "end": 3460
+        },
+        {
+          "word": "The",
+          "begin": 3520,
+          "end": 3620
+        },
+        {
+          "word": "FTL",
+          "begin": 3780,
+          "end": 3940
+        },
+        {
+          "word": "Is",
+          "begin": 3960,
+          "end": 4059
+        },
+        {
+          "word": "a",
+          "begin": 4080,
+          "end": 4100
+        },
+        {
+          "word": "Library",
+          "begin": 4200,
+          "end": 4520
+        },
+        {
+          "word": "Card",
+          "begin": 4600,
+          "end": 4840
+        },
+        {
+          "word": "Catalog.",
+          "begin": 4900,
+          "end": 5420
+        },
+        {
+          "word": "Imagine",
+          "begin": 5780,
+          "end": 6160
+        },
+        {
+          "word": "a",
+          "begin": 6180,
+          "end": 6200
+        },
+        {
+          "word": "library",
+          "begin": 6280,
+          "end": 6640
+        },
+        {
+          "word": "that",
+          "begin": 6720,
+          "end": 6820
+        },
+        {
+          "word": "can't",
+          "begin": 6880,
+          "end": 7100
+        },
+        {
+          "word": "erase",
+          "begin": 7120,
+          "end": 7420
+        },
+        {
+          "word": "single",
+          "begin": 7500,
+          "end": 7700
+        },
+        {
+          "word": "pages",
+          "begin": 7800,
+          "end": 8280
+        },
+        {
+          "word": "only",
+          "begin": 8420,
+          "end": 8600
+        },
+        {
+          "word": "whole",
+          "begin": 8700,
+          "end": 8860
+        },
+        {
+          "word": "shelves.",
+          "begin": 8980,
+          "end": 9440
+        },
+        {
+          "word": "When",
+          "begin": 9580,
+          "end": 9700
+        },
+        {
+          "word": "you",
+          "begin": 9700,
+          "end": 9760
+        },
+        {
+          "word": "update",
+          "begin": 9860,
+          "end": 10140
+        },
+        {
+          "word": "a",
+          "begin": 10140,
+          "end": 10160
+        },
+        {
+          "word": "book,",
+          "begin": 10240,
+          "end": 10500
+        },
+        {
+          "word": "the",
+          "begin": 10760,
+          "end": 10800
+        },
+        {
+          "word": "librarian",
+          "begin": 10860,
+          "end": 11360
+        },
+        {
+          "word": "writes",
+          "begin": 11420,
+          "end": 11660
+        },
+        {
+          "word": "the",
+          "begin": 11700,
+          "end": 11760
+        },
+        {
+          "word": "new",
+          "begin": 11820,
+          "end": 11900
+        },
+        {
+          "word": "version",
+          "begin": 12000,
+          "end": 12220
+        },
+        {
+          "word": "on",
+          "begin": 12240,
+          "end": 12320
+        },
+        {
+          "word": "a",
+          "begin": 12360,
+          "end": 12380
+        },
+        {
+          "word": "fresh",
+          "begin": 12400,
+          "end": 12580
+        },
+        {
+          "word": "shelf,",
+          "begin": 12580,
+          "end": 12840
+        },
+        {
+          "word": "updates",
+          "begin": 12880,
+          "end": 13620
+        },
+        {
+          "word": "the",
+          "begin": 13620,
+          "end": 13680
+        },
+        {
+          "word": "card",
+          "begin": 13760,
+          "end": 13900
+        },
+        {
+          "word": "catalog",
+          "begin": 13960,
+          "end": 14660
+        },
+        {
+          "word": "to",
+          "begin": 14720,
+          "end": 14760
+        },
+        {
+          "word": "point",
+          "begin": 14840,
+          "end": 15060
+        },
+        {
+          "word": "there,",
+          "begin": 15100,
+          "end": 15180
+        },
+        {
+          "word": "and",
+          "begin": 15660,
+          "end": 15740
+        },
+        {
+          "word": "marks",
+          "begin": 15780,
+          "end": 16059
+        },
+        {
+          "word": "the",
+          "begin": 16059,
+          "end": 16100
+        },
+        {
+          "word": "old",
+          "begin": 16200,
+          "end": 16340
+        },
+        {
+          "word": "copy",
+          "begin": 16400,
+          "end": 16660
+        },
+        {
+          "word": "as",
+          "begin": 16660,
+          "end": 16840
+        },
+        {
+          "word": "'outdated.'",
+          "begin": 16940,
+          "end": 17460
+        },
+        {
+          "word": "Later,",
+          "begin": 17680,
+          "end": 17880
+        },
+        {
+          "word": "a",
+          "begin": 18060,
+          "end": 18080
+        },
+        {
+          "word": "cleanup",
+          "begin": 18160,
+          "end": 18480
+        },
+        {
+          "word": "crew",
+          "begin": 18520,
+          "end": 18640
+        },
+        {
+          "word": "(garbage",
+          "begin": 18760,
+          "end": 19080
+        },
+        {
+          "word": "collection)",
+          "begin": 19140,
+          "end": 19600
+        },
+        {
+          "word": "moves",
+          "begin": 19680,
+          "end": 19900
+        },
+        {
+          "word": "valid",
+          "begin": 19960,
+          "end": 20220
+        },
+        {
+          "word": "books",
+          "begin": 20280,
+          "end": 20500
+        },
+        {
+          "word": "off",
+          "begin": 20560,
+          "end": 20680
+        },
+        {
+          "word": "shelves",
+          "begin": 20760,
+          "end": 21080
+        },
+        {
+          "word": "with",
+          "begin": 21120,
+          "end": 21220
+        },
+        {
+          "word": "too",
+          "begin": 21300,
+          "end": 21400
+        },
+        {
+          "word": "many",
+          "begin": 21480,
+          "end": 21620
+        },
+        {
+          "word": "outdated",
+          "begin": 21740,
+          "end": 22120
+        },
+        {
+          "word": "copies,",
+          "begin": 22180,
+          "end": 22660
+        },
+        {
+          "word": "then",
+          "begin": 22940,
+          "end": 23060
+        },
+        {
+          "word": "clears",
+          "begin": 23140,
+          "end": 23400
+        },
+        {
+          "word": "those",
+          "begin": 23440,
+          "end": 23600
+        },
+        {
+          "word": "shelves",
+          "begin": 23660,
+          "end": 23960
+        },
+        {
+          "word": "for",
+          "begin": 24000,
+          "end": 24160
+        },
+        {
+          "word": "reuse.",
+          "begin": 24160,
+          "end": 24620
+        },
+        {
+          "word": "FTL",
+          "begin": 24780,
+          "end": 25260
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "term",
+      "text": "FTL (Flash Translation Layer): The firmware inside the SSD controller that translates logical addresses (LBAs from the host) to physical NAND page locations. It handles out-of-place writes, garbage collection, and wear leveling — all invisible to the host operating system.",
+      "beginMs": 25400,
+      "endMs": 41640,
+      "timestamps": [
+        {
+          "word": "(Flash",
+          "begin": 25400,
+          "end": 25680
+        },
+        {
+          "word": "Translation",
+          "begin": 25720,
+          "end": 26300
+        },
+        {
+          "word": "Layer):",
+          "begin": 26300,
+          "end": 26540
+        },
+        {
+          "word": "The",
+          "begin": 26840,
+          "end": 26880
+        },
+        {
+          "word": "firmware",
+          "begin": 26980,
+          "end": 27380
+        },
+        {
+          "word": "inside",
+          "begin": 27380,
+          "end": 28180
+        },
+        {
+          "word": "the",
+          "begin": 28240,
+          "end": 28320
+        },
+        {
+          "word": "controller",
+          "begin": 28420,
+          "end": 28860
+        },
+        {
+          "word": "that",
+          "begin": 29200,
+          "end": 29300
+        },
+        {
+          "word": "translates",
+          "begin": 29340,
+          "end": 29840
+        },
+        {
+          "word": "logical",
+          "begin": 29920,
+          "end": 30300
+        },
+        {
+          "word": "addresses",
+          "begin": 30400,
+          "end": 30960
+        },
+        {
+          "word": "(LBAs",
+          "begin": 31080,
+          "end": 31840
+        },
+        {
+          "word": "from",
+          "begin": 31920,
+          "end": 32060
+        },
+        {
+          "word": "the",
+          "begin": 32060,
+          "end": 32119
+        },
+        {
+          "word": "host)",
+          "begin": 32180,
+          "end": 32520
+        },
+        {
+          "word": "to",
+          "begin": 32520,
+          "end": 32700
+        },
+        {
+          "word": "physical",
+          "begin": 32800,
+          "end": 33280
+        },
+        {
+          "word": "NAND",
+          "begin": 33340,
+          "end": 33780
+        },
+        {
+          "word": "page",
+          "begin": 33920,
+          "end": 34160
+        },
+        {
+          "word": "locations.",
+          "begin": 34200,
+          "end": 34840
+        },
+        {
+          "word": "It",
+          "begin": 35040,
+          "end": 35100
+        },
+        {
+          "word": "handles",
+          "begin": 35120,
+          "end": 35440
+        },
+        {
+          "word": "out-of-place",
+          "begin": 35540,
+          "end": 36020
+        },
+        {
+          "word": "writes,",
+          "begin": 36080,
+          "end": 36400
+        },
+        {
+          "word": "garbage",
+          "begin": 36600,
+          "end": 36880
+        },
+        {
+          "word": "collection,",
+          "begin": 36940,
+          "end": 37420
+        },
+        {
+          "word": "and",
+          "begin": 37560,
+          "end": 37640
+        },
+        {
+          "word": "wear",
+          "begin": 37680,
+          "end": 37900
+        },
+        {
+          "word": "leveling",
+          "begin": 37900,
+          "end": 38280
+        },
+        {
+          "word": "all",
+          "begin": 38540,
+          "end": 38680
+        },
+        {
+          "word": "invisible",
+          "begin": 38720,
+          "end": 39040
+        },
+        {
+          "word": "to",
+          "begin": 39080,
+          "end": 39120
+        },
+        {
+          "word": "the",
+          "begin": 39220,
+          "end": 39280
+        },
+        {
+          "word": "host",
+          "begin": 39320,
+          "end": 39680
+        },
+        {
+          "word": "operating",
+          "begin": 39760,
+          "end": 40160
+        },
+        {
+          "word": "system.",
+          "begin": 40240,
+          "end": 40580
+        },
+        {
+          "word": "Remember",
+          "begin": 41200,
+          "end": 41500
+        },
+        {
+          "word": "the",
+          "begin": 41580,
+          "end": 41640
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "Remember the &ldquo;shredding the whole notebook&rdquo; problem from the hierarchy section? You can write individual pages, but erasing requires wiping entire blocks (hundreds of pages). So what happens when you want to update just one page's worth of data?",
+      "beginMs": 43440,
+      "endMs": 56360,
+      "timestamps": [
+        {
+          "word": "the",
+          "begin": 43440,
+          "end": 43500
+        },
+        {
+          "word": "whole",
+          "begin": 43580,
+          "end": 43760
+        },
+        {
+          "word": "notebook&rdquo;",
+          "begin": 43820,
+          "end": 45340
+        },
+        {
+          "word": "problem",
+          "begin": 45340,
+          "end": 45680
+        },
+        {
+          "word": "from",
+          "begin": 45740,
+          "end": 45860
+        },
+        {
+          "word": "the",
+          "begin": 45880,
+          "end": 45920
+        },
+        {
+          "word": "hierarchy",
+          "begin": 45980,
+          "end": 46440
+        },
+        {
+          "word": "section?",
+          "begin": 46540,
+          "end": 46920
+        },
+        {
+          "word": "You",
+          "begin": 47060,
+          "end": 47100
+        },
+        {
+          "word": "can",
+          "begin": 47160,
+          "end": 47280
+        },
+        {
+          "word": "write",
+          "begin": 47320,
+          "end": 47480
+        },
+        {
+          "word": "individual",
+          "begin": 47560,
+          "end": 48020
+        },
+        {
+          "word": "pages,",
+          "begin": 48080,
+          "end": 48580
+        },
+        {
+          "word": "but",
+          "begin": 48840,
+          "end": 48940
+        },
+        {
+          "word": "erasing",
+          "begin": 48940,
+          "end": 49380
+        },
+        {
+          "word": "requires",
+          "begin": 49400,
+          "end": 49840
+        },
+        {
+          "word": "wiping",
+          "begin": 49900,
+          "end": 50200
+        },
+        {
+          "word": "entire",
+          "begin": 50220,
+          "end": 50720
+        },
+        {
+          "word": "blocks",
+          "begin": 50740,
+          "end": 51060
+        },
+        {
+          "word": "(hundreds",
+          "begin": 51100,
+          "end": 51440
+        },
+        {
+          "word": "of",
+          "begin": 51460,
+          "end": 51520
+        },
+        {
+          "word": "pages).",
+          "begin": 51580,
+          "end": 52460
+        },
+        {
+          "word": "So",
+          "begin": 52480,
+          "end": 52500
+        },
+        {
+          "word": "what",
+          "begin": 52580,
+          "end": 52700
+        },
+        {
+          "word": "happens",
+          "begin": 52740,
+          "end": 53120
+        },
+        {
+          "word": "when",
+          "begin": 53140,
+          "end": 53260
+        },
+        {
+          "word": "you",
+          "begin": 53260,
+          "end": 53320
+        },
+        {
+          "word": "want",
+          "begin": 53380,
+          "end": 53500
+        },
+        {
+          "word": "to",
+          "begin": 53520,
+          "end": 53580
+        },
+        {
+          "word": "update",
+          "begin": 53660,
+          "end": 53980
+        },
+        {
+          "word": "just",
+          "begin": 53980,
+          "end": 54240
+        },
+        {
+          "word": "one",
+          "begin": 54300,
+          "end": 54460
+        },
+        {
+          "word": "page's",
+          "begin": 54520,
+          "end": 54880
+        },
+        {
+          "word": "worth",
+          "begin": 54920,
+          "end": 55100
+        },
+        {
+          "word": "of",
+          "begin": 55120,
+          "end": 55180
+        },
+        {
+          "word": "data?",
+          "begin": 55240,
+          "end": 55460
+        },
+        {
+          "word": "The",
+          "begin": 55800,
+          "end": 55860
+        },
+        {
+          "word": "SSD",
+          "begin": 55960,
+          "end": 56360
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "The SSD can't erase a whole block just to update one page — that would destroy all the other data in that block. Instead, the controller uses a clever trick called the Flash Translation Layer (FTL). Instead of overwriting the old page, it writes the new data to a completely different, free page somewhere else on the drive, then updates a mapping table to point the LBA at the new location.",
+      "beginMs": 56500,
+      "endMs": 77600,
+      "timestamps": [
+        {
+          "word": "can't",
+          "begin": 56500,
+          "end": 56700
+        },
+        {
+          "word": "erase",
+          "begin": 56720,
+          "end": 57020
+        },
+        {
+          "word": "a",
+          "begin": 57040,
+          "end": 57080
+        },
+        {
+          "word": "whole",
+          "begin": 57140,
+          "end": 57300
+        },
+        {
+          "word": "block",
+          "begin": 57380,
+          "end": 57700
+        },
+        {
+          "word": "just",
+          "begin": 57800,
+          "end": 57960
+        },
+        {
+          "word": "to",
+          "begin": 58000,
+          "end": 58040
+        },
+        {
+          "word": "update",
+          "begin": 58140,
+          "end": 58440
+        },
+        {
+          "word": "one",
+          "begin": 58500,
+          "end": 58640
+        },
+        {
+          "word": "page",
+          "begin": 58700,
+          "end": 59060
+        },
+        {
+          "word": "that",
+          "begin": 59360,
+          "end": 59460
+        },
+        {
+          "word": "would",
+          "begin": 59480,
+          "end": 59560
+        },
+        {
+          "word": "destroy",
+          "begin": 59600,
+          "end": 60120
+        },
+        {
+          "word": "all",
+          "begin": 60160,
+          "end": 60200
+        },
+        {
+          "word": "the",
+          "begin": 60240,
+          "end": 60280
+        },
+        {
+          "word": "other",
+          "begin": 60380,
+          "end": 60520
+        },
+        {
+          "word": "data",
+          "begin": 60620,
+          "end": 60840
+        },
+        {
+          "word": "in",
+          "begin": 60900,
+          "end": 60980
+        },
+        {
+          "word": "that",
+          "begin": 60980,
+          "end": 61120
+        },
+        {
+          "word": "block.",
+          "begin": 61180,
+          "end": 61540
+        },
+        {
+          "word": "Instead,",
+          "begin": 61960,
+          "end": 62480
+        },
+        {
+          "word": "the",
+          "begin": 62760,
+          "end": 62800
+        },
+        {
+          "word": "controller",
+          "begin": 62860,
+          "end": 63340
+        },
+        {
+          "word": "uses",
+          "begin": 63340,
+          "end": 63600
+        },
+        {
+          "word": "a",
+          "begin": 63380,
+          "end": 63400
+        },
+        {
+          "word": "clever",
+          "begin": 63480,
+          "end": 63740
+        },
+        {
+          "word": "trick",
+          "begin": 63740,
+          "end": 63940
+        },
+        {
+          "word": "called",
+          "begin": 63940,
+          "end": 64180
+        },
+        {
+          "word": "the",
+          "begin": 64180,
+          "end": 64239
+        },
+        {
+          "word": "Flash",
+          "begin": 64360,
+          "end": 64700
+        },
+        {
+          "word": "Translation",
+          "begin": 64700,
+          "end": 65400
+        },
+        {
+          "word": "Layer",
+          "begin": 65440,
+          "end": 65720
+        },
+        {
+          "word": "(FTL).",
+          "begin": 65780,
+          "end": 67080
+        },
+        {
+          "word": "Instead",
+          "begin": 67360,
+          "end": 67660
+        },
+        {
+          "word": "of",
+          "begin": 67660,
+          "end": 67760
+        },
+        {
+          "word": "overwriting",
+          "begin": 67820,
+          "end": 68280
+        },
+        {
+          "word": "the",
+          "begin": 68280,
+          "end": 68340
+        },
+        {
+          "word": "old",
+          "begin": 68360,
+          "end": 68620
+        },
+        {
+          "word": "page,",
+          "begin": 68680,
+          "end": 69080
+        },
+        {
+          "word": "it",
+          "begin": 69420,
+          "end": 69500
+        },
+        {
+          "word": "writes",
+          "begin": 69540,
+          "end": 69820
+        },
+        {
+          "word": "the",
+          "begin": 69820,
+          "end": 69860
+        },
+        {
+          "word": "new",
+          "begin": 69940,
+          "end": 70000
+        },
+        {
+          "word": "data",
+          "begin": 70120,
+          "end": 70340
+        },
+        {
+          "word": "to",
+          "begin": 70440,
+          "end": 70500
+        },
+        {
+          "word": "a",
+          "begin": 70560,
+          "end": 70580
+        },
+        {
+          "word": "completely",
+          "begin": 70640,
+          "end": 71080
+        },
+        {
+          "word": "different,",
+          "begin": 71200,
+          "end": 71520
+        },
+        {
+          "word": "free",
+          "begin": 71240,
+          "end": 71420
+        },
+        {
+          "word": "page",
+          "begin": 71420,
+          "end": 71580
+        },
+        {
+          "word": "somewhere",
+          "begin": 71840,
+          "end": 71920
+        },
+        {
+          "word": "else",
+          "begin": 71920,
+          "end": 72080
+        },
+        {
+          "word": "on",
+          "begin": 72160,
+          "end": 72360
+        },
+        {
+          "word": "the",
+          "begin": 72440,
+          "end": 72500
+        },
+        {
+          "word": "drive,",
+          "begin": 72560,
+          "end": 72860
+        },
+        {
+          "word": "then",
+          "begin": 72940,
+          "end": 73100
+        },
+        {
+          "word": "updates",
+          "begin": 73100,
+          "end": 73900
+        },
+        {
+          "word": "a",
+          "begin": 73900,
+          "end": 74100
+        },
+        {
+          "word": "mapping",
+          "begin": 74160,
+          "end": 74380
+        },
+        {
+          "word": "table",
+          "begin": 74380,
+          "end": 74820
+        },
+        {
+          "word": "to",
+          "begin": 74880,
+          "end": 74980
+        },
+        {
+          "word": "point",
+          "begin": 75080,
+          "end": 75320
+        },
+        {
+          "word": "the",
+          "begin": 75400,
+          "end": 75500
+        },
+        {
+          "word": "LBA",
+          "begin": 75560,
+          "end": 75720
+        },
+        {
+          "word": "at",
+          "begin": 75820,
+          "end": 75920
+        },
+        {
+          "word": "the",
+          "begin": 75980,
+          "end": 76040
+        },
+        {
+          "word": "new",
+          "begin": 76160,
+          "end": 76360
+        },
+        {
+          "word": "location.",
+          "begin": 76440,
+          "end": 77200
+        },
+        {
+          "word": "The",
+          "begin": 77540,
+          "end": 77600
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "The old page still exists but now contains outdated data — it's called &ldquo;stale.&rdquo; Stale pages waste space. They'll be cleaned up later by a process called garbage collection.",
+      "beginMs": 77740,
+      "endMs": 89860,
+      "timestamps": [
+        {
+          "word": "old",
+          "begin": 77740,
+          "end": 77980
+        },
+        {
+          "word": "page",
+          "begin": 77980,
+          "end": 78280
+        },
+        {
+          "word": "still",
+          "begin": 78280,
+          "end": 78460
+        },
+        {
+          "word": "exists",
+          "begin": 78480,
+          "end": 79000
+        },
+        {
+          "word": "but",
+          "begin": 79000,
+          "end": 79200
+        },
+        {
+          "word": "now",
+          "begin": 79200,
+          "end": 79320
+        },
+        {
+          "word": "contains",
+          "begin": 79480,
+          "end": 79960
+        },
+        {
+          "word": "outdated",
+          "begin": 80060,
+          "end": 80500
+        },
+        {
+          "word": "data",
+          "begin": 80500,
+          "end": 80820
+        },
+        {
+          "word": "it's",
+          "begin": 81120,
+          "end": 81900
+        },
+        {
+          "word": "called",
+          "begin": 82040,
+          "end": 82600
+        },
+        {
+          "word": "&ldquo;stale.&rdquo;",
+          "begin": 83120,
+          "end": 84100
+        },
+        {
+          "word": "Stale",
+          "begin": 84620,
+          "end": 84860
+        },
+        {
+          "word": "pages",
+          "begin": 84920,
+          "end": 85560
+        },
+        {
+          "word": "waste",
+          "begin": 85580,
+          "end": 86340
+        },
+        {
+          "word": "space.",
+          "begin": 86360,
+          "end": 86560
+        },
+        {
+          "word": "They'll",
+          "begin": 86560,
+          "end": 86800
+        },
+        {
+          "word": "be",
+          "begin": 86800,
+          "end": 86880
+        },
+        {
+          "word": "cleaned",
+          "begin": 86960,
+          "end": 87340
+        },
+        {
+          "word": "up",
+          "begin": 87380,
+          "end": 87580
+        },
+        {
+          "word": "later",
+          "begin": 87620,
+          "end": 88040
+        },
+        {
+          "word": "by",
+          "begin": 88100,
+          "end": 88260
+        },
+        {
+          "word": "a",
+          "begin": 88300,
+          "end": 88520
+        },
+        {
+          "word": "process",
+          "begin": 88300,
+          "end": 88780
+        },
+        {
+          "word": "called",
+          "begin": 88860,
+          "end": 89200
+        },
+        {
+          "word": "collection.",
+          "begin": 88860,
+          "end": 89380
+        },
+        {
+          "word": "Let's",
+          "begin": 89600,
+          "end": 89740
+        },
+        {
+          "word": "see",
+          "begin": 89800,
+          "end": 89860
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "Let's see how this works visually, then try it yourself:",
+      "beginMs": 89940,
+      "endMs": 92060,
+      "timestamps": [
+        {
+          "word": "how",
+          "begin": 89940,
+          "end": 90020
+        },
+        {
+          "word": "this",
+          "begin": 90080,
+          "end": 90220
+        },
+        {
+          "word": "works",
+          "begin": 90280,
+          "end": 90520
+        },
+        {
+          "word": "visually,",
+          "begin": 90560,
+          "end": 90940
+        },
+        {
+          "word": "then",
+          "begin": 91160,
+          "end": 91280
+        },
+        {
+          "word": "try",
+          "begin": 91320,
+          "end": 91420
+        },
+        {
+          "word": "it",
+          "begin": 91520,
+          "end": 91580
+        },
+        {
+          "word": "yourself:",
+          "begin": 91580,
+          "end": 92060
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "reveal",
+      "text": "Knowledge check: Why is out-of-place writing not merely a software optimization but an absolute physical necessity for NAND flash? What would need to change at the silicon level to allow in-place overwrites? The answer: NAND flash pages can only be programmed (written) once per erase cycle — once electrons are pushed into the floating gate, you can't selectively add more to change the stored value. You can only remove electrons via a high-voltage erase, which affects the entire block (128-256 pages). To overwrite a single page in place, you'd need to erase its entire block first, destroying all other data in that block. The FTL avoids this by writing updated data to a fresh, pre-erased page and updating the mapping table to redirect the LBA to the new location. To enable true in-place overwrites, the silicon would need per-page erase capability — which would require electrically isolating each page's cells on separate substrate wells, dramatically increasing die area and manufacturing complexity. This is why no NAND flash supports in-place overwrites; it's a fundamental physical limitation, not a design choice.",
+      "beginMs": 92260,
+      "endMs": 158060,
+      "timestamps": [
+        {
+          "word": "Knowledge",
+          "begin": 92260,
+          "end": 92540
+        },
+        {
+          "word": "check:",
+          "begin": 92620,
+          "end": 92880
+        },
+        {
+          "word": "Why",
+          "begin": 93040,
+          "end": 93120
+        },
+        {
+          "word": "is",
+          "begin": 93260,
+          "end": 93360
+        },
+        {
+          "word": "out-of-place",
+          "begin": 93440,
+          "end": 93920
+        },
+        {
+          "word": "writing",
+          "begin": 93980,
+          "end": 94320
+        },
+        {
+          "word": "not",
+          "begin": 94400,
+          "end": 94580
+        },
+        {
+          "word": "merely",
+          "begin": 94640,
+          "end": 94900
+        },
+        {
+          "word": "a",
+          "begin": 95040,
+          "end": 95060
+        },
+        {
+          "word": "software",
+          "begin": 95180,
+          "end": 95520
+        },
+        {
+          "word": "optimization",
+          "begin": 95660,
+          "end": 96400
+        },
+        {
+          "word": "but",
+          "begin": 96520,
+          "end": 96600
+        },
+        {
+          "word": "an",
+          "begin": 96620,
+          "end": 96700
+        },
+        {
+          "word": "absolute",
+          "begin": 96840,
+          "end": 97340
+        },
+        {
+          "word": "physical",
+          "begin": 97440,
+          "end": 97820
+        },
+        {
+          "word": "necessity",
+          "begin": 97820,
+          "end": 98280
+        },
+        {
+          "word": "for",
+          "begin": 98500,
+          "end": 98560
+        },
+        {
+          "word": "NAND",
+          "begin": 98680,
+          "end": 98940
+        },
+        {
+          "word": "flash?",
+          "begin": 98960,
+          "end": 99480
+        },
+        {
+          "word": "What",
+          "begin": 99720,
+          "end": 99840
+        },
+        {
+          "word": "would",
+          "begin": 99860,
+          "end": 100000
+        },
+        {
+          "word": "need",
+          "begin": 100020,
+          "end": 100140
+        },
+        {
+          "word": "to",
+          "begin": 100180,
+          "end": 100240
+        },
+        {
+          "word": "change",
+          "begin": 100320,
+          "end": 100860
+        },
+        {
+          "word": "at",
+          "begin": 100880,
+          "end": 100900
+        },
+        {
+          "word": "the",
+          "begin": 101000,
+          "end": 101060
+        },
+        {
+          "word": "silicon",
+          "begin": 101100,
+          "end": 101320
+        },
+        {
+          "word": "level",
+          "begin": 101380,
+          "end": 101560
+        },
+        {
+          "word": "to",
+          "begin": 101720,
+          "end": 101780
+        },
+        {
+          "word": "allow",
+          "begin": 101840,
+          "end": 102220
+        },
+        {
+          "word": "in-place",
+          "begin": 102220,
+          "end": 102600
+        },
+        {
+          "word": "overwrites?",
+          "begin": 102700,
+          "end": 103240
+        },
+        {
+          "word": "The",
+          "begin": 103720,
+          "end": 103780
+        },
+        {
+          "word": "answer:",
+          "begin": 103900,
+          "end": 104160
+        },
+        {
+          "word": "NAND",
+          "begin": 104680,
+          "end": 104900
+        },
+        {
+          "word": "flash",
+          "begin": 104980,
+          "end": 105240
+        },
+        {
+          "word": "pages",
+          "begin": 105240,
+          "end": 105680
+        },
+        {
+          "word": "can",
+          "begin": 105720,
+          "end": 105840
+        },
+        {
+          "word": "only",
+          "begin": 105860,
+          "end": 106040
+        },
+        {
+          "word": "be",
+          "begin": 106100,
+          "end": 106160
+        },
+        {
+          "word": "programmed",
+          "begin": 106240,
+          "end": 106720
+        },
+        {
+          "word": "(written)",
+          "begin": 106800,
+          "end": 106940
+        },
+        {
+          "word": "once",
+          "begin": 106940,
+          "end": 107020
+        },
+        {
+          "word": "per",
+          "begin": 107120,
+          "end": 107160
+        },
+        {
+          "word": "erase",
+          "begin": 107180,
+          "end": 107900
+        },
+        {
+          "word": "cycle",
+          "begin": 107900,
+          "end": 108220
+        },
+        {
+          "word": "once",
+          "begin": 108760,
+          "end": 108960
+        },
+        {
+          "word": "electrons",
+          "begin": 109000,
+          "end": 109460
+        },
+        {
+          "word": "are",
+          "begin": 109460,
+          "end": 109520
+        },
+        {
+          "word": "pushed",
+          "begin": 109620,
+          "end": 109880
+        },
+        {
+          "word": "into",
+          "begin": 109900,
+          "end": 110040
+        },
+        {
+          "word": "the",
+          "begin": 110080,
+          "end": 110120
+        },
+        {
+          "word": "floating",
+          "begin": 110200,
+          "end": 110500
+        },
+        {
+          "word": "gate,",
+          "begin": 110540,
+          "end": 110820
+        },
+        {
+          "word": "you",
+          "begin": 111100,
+          "end": 111140
+        },
+        {
+          "word": "can't",
+          "begin": 111220,
+          "end": 111400
+        },
+        {
+          "word": "selectively",
+          "begin": 111400,
+          "end": 111780
+        },
+        {
+          "word": "add",
+          "begin": 111800,
+          "end": 111860
+        },
+        {
+          "word": "more",
+          "begin": 111900,
+          "end": 112100
+        },
+        {
+          "word": "to",
+          "begin": 112220,
+          "end": 112380
+        },
+        {
+          "word": "change",
+          "begin": 112560,
+          "end": 113020
+        },
+        {
+          "word": "the",
+          "begin": 113020,
+          "end": 113060
+        },
+        {
+          "word": "stored",
+          "begin": 113120,
+          "end": 113380
+        },
+        {
+          "word": "value.",
+          "begin": 113420,
+          "end": 113760
+        },
+        {
+          "word": "You",
+          "begin": 114200,
+          "end": 114240
+        },
+        {
+          "word": "can",
+          "begin": 114300,
+          "end": 114400
+        },
+        {
+          "word": "only",
+          "begin": 114420,
+          "end": 114580
+        },
+        {
+          "word": "remove",
+          "begin": 114640,
+          "end": 114940
+        },
+        {
+          "word": "electrons",
+          "begin": 114960,
+          "end": 115520
+        },
+        {
+          "word": "via",
+          "begin": 115560,
+          "end": 115580
+        },
+        {
+          "word": "a",
+          "begin": 115580,
+          "end": 115860
+        },
+        {
+          "word": "high-voltage",
+          "begin": 115940,
+          "end": 116480
+        },
+        {
+          "word": "erase,",
+          "begin": 116500,
+          "end": 116960
+        },
+        {
+          "word": "which",
+          "begin": 117220,
+          "end": 117340
+        },
+        {
+          "word": "affects",
+          "begin": 117380,
+          "end": 117740
+        },
+        {
+          "word": "the",
+          "begin": 117760,
+          "end": 117840
+        },
+        {
+          "word": "entire",
+          "begin": 117860,
+          "end": 118180
+        },
+        {
+          "word": "block",
+          "begin": 118280,
+          "end": 118580
+        },
+        {
+          "word": "(128-256",
+          "begin": 118660,
+          "end": 120640
+        },
+        {
+          "word": "pages).",
+          "begin": 120700,
+          "end": 121180
+        },
+        {
+          "word": "To",
+          "begin": 122540,
+          "end": 122600
+        },
+        {
+          "word": "overwrite",
+          "begin": 122700,
+          "end": 123320
+        },
+        {
+          "word": "a",
+          "begin": 123360,
+          "end": 123440
+        },
+        {
+          "word": "single",
+          "begin": 123460,
+          "end": 123940
+        },
+        {
+          "word": "page",
+          "begin": 124000,
+          "end": 124700
+        },
+        {
+          "word": "in",
+          "begin": 124700,
+          "end": 124740
+        },
+        {
+          "word": "place,",
+          "begin": 124800,
+          "end": 125040
+        },
+        {
+          "word": "you'd",
+          "begin": 125060,
+          "end": 125160
+        },
+        {
+          "word": "need",
+          "begin": 125220,
+          "end": 125480
+        },
+        {
+          "word": "to",
+          "begin": 125540,
+          "end": 125620
+        },
+        {
+          "word": "erase",
+          "begin": 125640,
+          "end": 126080
+        },
+        {
+          "word": "its",
+          "begin": 126120,
+          "end": 126380
+        },
+        {
+          "word": "entire",
+          "begin": 126420,
+          "end": 127120
+        },
+        {
+          "word": "block",
+          "begin": 127160,
+          "end": 127520
+        },
+        {
+          "word": "first,",
+          "begin": 127620,
+          "end": 127820
+        },
+        {
+          "word": "destroying",
+          "begin": 127920,
+          "end": 128380
+        },
+        {
+          "word": "all",
+          "begin": 128400,
+          "end": 128500
+        },
+        {
+          "word": "other",
+          "begin": 128500,
+          "end": 128680
+        },
+        {
+          "word": "that",
+          "begin": 128500,
+          "end": 128520
+        },
+        {
+          "word": "block.",
+          "begin": 128560,
+          "end": 128919
+        },
+        {
+          "word": "The",
+          "begin": 129580,
+          "end": 129940
+        },
+        {
+          "word": "FTL",
+          "begin": 130039,
+          "end": 130180
+        },
+        {
+          "word": "avoids",
+          "begin": 130199,
+          "end": 130560
+        },
+        {
+          "word": "this",
+          "begin": 130600,
+          "end": 130800
+        },
+        {
+          "word": "by",
+          "begin": 130860,
+          "end": 130919
+        },
+        {
+          "word": "writing",
+          "begin": 131039,
+          "end": 131320
+        },
+        {
+          "word": "updated",
+          "begin": 131400,
+          "end": 131760
+        },
+        {
+          "word": "data",
+          "begin": 131760,
+          "end": 132040
+        },
+        {
+          "word": "to",
+          "begin": 132180,
+          "end": 132240
+        },
+        {
+          "word": "a",
+          "begin": 132300,
+          "end": 132320
+        },
+        {
+          "word": "fresh,",
+          "begin": 132440,
+          "end": 132680
+        },
+        {
+          "word": "pre-erased",
+          "begin": 132780,
+          "end": 133420
+        },
+        {
+          "word": "page",
+          "begin": 133420,
+          "end": 133960
+        },
+        {
+          "word": "and",
+          "begin": 134020,
+          "end": 134180
+        },
+        {
+          "word": "updating",
+          "begin": 134020,
+          "end": 134400
+        },
+        {
+          "word": "the",
+          "begin": 134420,
+          "end": 134460
+        },
+        {
+          "word": "mapping",
+          "begin": 134520,
+          "end": 134820
+        },
+        {
+          "word": "table",
+          "begin": 134880,
+          "end": 135500
+        },
+        {
+          "word": "to",
+          "begin": 135560,
+          "end": 135620
+        },
+        {
+          "word": "redirect",
+          "begin": 135560,
+          "end": 136140
+        },
+        {
+          "word": "the",
+          "begin": 136200,
+          "end": 136260
+        },
+        {
+          "word": "LBA",
+          "begin": 136360,
+          "end": 136380
+        },
+        {
+          "word": "to",
+          "begin": 136600,
+          "end": 136660
+        },
+        {
+          "word": "the",
+          "begin": 136720,
+          "end": 136760
+        },
+        {
+          "word": "new",
+          "begin": 136840,
+          "end": 136900
+        },
+        {
+          "word": "location.",
+          "begin": 137000,
+          "end": 137620
+        },
+        {
+          "word": "To",
+          "begin": 138440,
+          "end": 138520
+        },
+        {
+          "word": "enable",
+          "begin": 138580,
+          "end": 138840
+        },
+        {
+          "word": "true",
+          "begin": 138980,
+          "end": 139120
+        },
+        {
+          "word": "in-place",
+          "begin": 139220,
+          "end": 139580
+        },
+        {
+          "word": "overwrites,",
+          "begin": 139620,
+          "end": 140120
+        },
+        {
+          "word": "the",
+          "begin": 140460,
+          "end": 140520
+        },
+        {
+          "word": "silicon",
+          "begin": 140600,
+          "end": 140920
+        },
+        {
+          "word": "would",
+          "begin": 140940,
+          "end": 141060
+        },
+        {
+          "word": "need",
+          "begin": 141080,
+          "end": 141240
+        },
+        {
+          "word": "per-page",
+          "begin": 141300,
+          "end": 141800
+        },
+        {
+          "word": "erase",
+          "begin": 141840,
+          "end": 142120
+        },
+        {
+          "word": "capability",
+          "begin": 142160,
+          "end": 142700
+        },
+        {
+          "word": "which",
+          "begin": 143120,
+          "end": 143240
+        },
+        {
+          "word": "would",
+          "begin": 143300,
+          "end": 143400
+        },
+        {
+          "word": "require",
+          "begin": 143420,
+          "end": 143980
+        },
+        {
+          "word": "electrically",
+          "begin": 143980,
+          "end": 144360
+        },
+        {
+          "word": "isolating",
+          "begin": 144480,
+          "end": 144960
+        },
+        {
+          "word": "each",
+          "begin": 145040,
+          "end": 145160
+        },
+        {
+          "word": "page's",
+          "begin": 145240,
+          "end": 145540
+        },
+        {
+          "word": "cells",
+          "begin": 145640,
+          "end": 145920
+        },
+        {
+          "word": "on",
+          "begin": 146000,
+          "end": 146080
+        },
+        {
+          "word": "separate",
+          "begin": 146200,
+          "end": 146480
+        },
+        {
+          "word": "substrate",
+          "begin": 146520,
+          "end": 146920
+        },
+        {
+          "word": "wells,",
+          "begin": 146980,
+          "end": 147340
+        },
+        {
+          "word": "dramatically",
+          "begin": 147720,
+          "end": 148200
+        },
+        {
+          "word": "increasing",
+          "begin": 148320,
+          "end": 148760
+        },
+        {
+          "word": "die",
+          "begin": 148360,
+          "end": 148400
+        },
+        {
+          "word": "area",
+          "begin": 148440,
+          "end": 148660
+        },
+        {
+          "word": "and",
+          "begin": 148680,
+          "end": 149660
+        },
+        {
+          "word": "manufacturing",
+          "begin": 149680,
+          "end": 150340
+        },
+        {
+          "word": "complexity.",
+          "begin": 150380,
+          "end": 150920
+        },
+        {
+          "word": "This",
+          "begin": 151840,
+          "end": 152000
+        },
+        {
+          "word": "is",
+          "begin": 152020,
+          "end": 152120
+        },
+        {
+          "word": "why",
+          "begin": 152160,
+          "end": 152240
+        },
+        {
+          "word": "no",
+          "begin": 152380,
+          "end": 152660
+        },
+        {
+          "word": "NAND",
+          "begin": 152760,
+          "end": 152820
+        },
+        {
+          "word": "flash",
+          "begin": 152880,
+          "end": 153200
+        },
+        {
+          "word": "supports",
+          "begin": 153280,
+          "end": 153620
+        },
+        {
+          "word": "in-place",
+          "begin": 153640,
+          "end": 153960
+        },
+        {
+          "word": "overwrites;",
+          "begin": 154000,
+          "end": 154540
+        },
+        {
+          "word": "it's",
+          "begin": 154960,
+          "end": 155040
+        },
+        {
+          "word": "a",
+          "begin": 155060,
+          "end": 155100
+        },
+        {
+          "word": "fundamental",
+          "begin": 155200,
+          "end": 155680
+        },
+        {
+          "word": "physical",
+          "begin": 155780,
+          "end": 156080
+        },
+        {
+          "word": "limitation,",
+          "begin": 156140,
+          "end": 156760
+        },
+        {
+          "word": "not",
+          "begin": 157020,
+          "end": 157200
+        },
+        {
+          "word": "a",
+          "begin": 157200,
+          "end": 157240
+        },
+        {
+          "word": "design",
+          "begin": 157280,
+          "end": 157620
+        },
+        {
+          "word": "choice.",
+          "begin": 157680,
+          "end": 158060
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

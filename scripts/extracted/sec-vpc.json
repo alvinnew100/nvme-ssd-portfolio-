@@ -1,0 +1,51 @@
+{
+  "sectionId": "sec-vpc",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "Every block has a VPC (Valid Page Count) — how many of its pages still contain current, referenced data. Lower VPC = fewer pages to copy during GC = less write amplification. The GC engine maintains a VPC table and picks the block with the lowest VPC as the source block.",
+      "blockIndex": 0
+    },
+    {
+      "type": "paragraph",
+      "text": "Every NAND block cycles through these stages. Understanding this lifecycle is key to understanding GC, wear leveling, and TRIM — they all operate on blocks at different stages.",
+      "blockIndex": 1
+    },
+    {
+      "type": "heading",
+      "text": "Block Management — VPC, Block Types, and GC",
+      "blockIndex": 2
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: Block Management Is Like a Parking Garage. Think of NAND blocks as parking spaces in a garage. Some are actively being used (dynamic blocks), some hold cars that never move (static/cold blocks), and some are kept empty in reserve (spare blocks). The garage manager (FTL) tracks which spaces have the most abandoned cars (low VPC) and periodically clears them out (garbage collection) to free up space.",
+      "blockIndex": 3
+    },
+    {
+      "type": "term",
+      "text": "VPC (Valid Page Count): The number of pages in a NAND block that still contain current, referenced data. Lower VPC means fewer valid pages to copy during garbage collection, making that block a more efficient candidate for reclamation.",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "The controller's FTL firmware manages thousands of NAND blocks. To understand how garbage collection, wear leveling, and TRIM work (covered in Lesson 11), you need to understand how the FTL classifies and manages these blocks.",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "Why does block classification matter? Because the FTL makes different decisions for different block types — where to write new data, what to move during wear leveling, and which blocks to erase during garbage collection. These decisions directly affect performance, endurance, and write amplification.",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "These concepts form the foundation of SSD performance and longevity:",
+      "blockIndex": 7
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: Why does the garbage collector prioritize blocks with the fewest valid pages rather than the oldest blocks or random blocks? What metric does it optimize, and what would happen if it chose blocks randomly instead? The answer: The GC engine picks the block with the lowest VPC (Valid Page Count) because it must copy all valid pages to a new block before erasing. Choosing the block with the fewest valid pages minimizes write amplification — the ratio of actual NAND writes to host-requested writes. A block with VPC=2 out of 256 pages requires copying only 2 pages to reclaim 254 free pages (excellent efficiency). A block with VPC=250 would require copying 250 pages to reclaim only 6 pages (terrible efficiency). Random selection would average these extremes, dramatically increasing write amplification, which accelerates wear and reduces the drive's effective lifespan. The GC maintains a VPC table in DRAM for O(1) lookup of the best candidate. Erase count, by contrast, is used for wear leveling decisions, not GC source selection — these are separate optimization goals.",
+      "requiresReveal": true,
+      "blockIndex": 8
+    }
+  ]
+}

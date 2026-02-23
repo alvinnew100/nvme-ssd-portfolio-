@@ -1,0 +1,96 @@
+{
+  "sectionId": "sec-firmware",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Firmware Updates — Upgrading the SSD's Brain",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: Firmware Updates Are Brain Surgery. Updating SSD firmware is like updating the operating system on a computer — the SSD's controller has its own software (firmware) that manages all operations. Firmware updates can fix bugs, improve performance, or add features. But a failed update can brick the drive, so most SSDs support dual-bank firmware (two copies) for safe rollback.",
+      "blockIndex": 1
+    },
+    {
+      "type": "term",
+      "text": "Firmware: The software that runs on the SSD controller's embedded processor. Manages the FTL, error correction, wear leveling, command processing, and all other SSD operations. Stored in a dedicated NAND region and loaded into controller SRAM at boot.",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "Remember the SSD controller from Lesson 3? It's the processor that runs the FTL, manages wear leveling, handles garbage collection, and processes every NVMe command. All of that behavior is controlled by firmware — software that runs on the controller chip.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "But why would firmware need updating? Because bugs exist. A firmware bug might cause rare data corruption, poor garbage collection under specific workloads, or incorrect SMART reporting. Manufacturers continuously improve firmware — fixing bugs, optimizing performance, and adding new features.",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "Here's what makes SSD firmware updates interesting: the drive has multiple firmware slots — like having multiple versions of an app installed simultaneously. You can download a new version into one slot while the old version keeps running in another. If the update goes wrong, you can switch back. This is done through two NVMe admin commands:",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "Think of firmware slots like save slots in a video game. Each slot holds a different firmware version, and the drive can only run one at a time. Try it: select a target slot, choose a commit action, and click &ldquo;Apply&rdquo; to see what happens.",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "Why not just send the entire file in one command? Because firmware images can be several megabytes, but a single NVMe command can only carry a limited amount of data. So the download command transfers the firmware binary in chunks — multiple smaller pieces that the controller reassembles.",
+      "blockIndex": 7
+    },
+    {
+      "type": "paragraph",
+      "text": "The good news: nvme-cli handles the chunking automatically. You just point it at the firmware file:",
+      "blockIndex": 8
+    },
+    {
+      "type": "paragraph",
+      "text": "After the image is downloaded, you need to commit it — telling the controller what to do with it. But why are there 4 different commit actions? Because different situations need different levels of urgency and risk:",
+      "blockIndex": 9
+    },
+    {
+      "type": "paragraph",
+      "text": "The commit command takes a slot number (-s) and a commit action (-a). Click each CA below to see how it works:",
+      "blockIndex": 10
+    },
+    {
+      "type": "paragraph",
+      "text": "Here's what a real firmware update looks like from start to finish. Notice how each step has a verification — you never blindly trust that it worked:",
+      "blockIndex": 11
+    },
+    {
+      "type": "paragraph",
+      "text": "Target firmware slot (1-7). Slot 1 is often read-only (factory image). The number of available slots varies by drive — check the FRMW field in Identify Controller. Most consumer drives have 2-4 slots.",
+      "blockIndex": 12
+    },
+    {
+      "type": "paragraph",
+      "text": "Commit Action (0-3). Determines download, activation, and reset behavior. CA1 is the safest for production. CA3 avoids downtime but isn't universally supported.",
+      "blockIndex": 13
+    },
+    {
+      "type": "paragraph",
+      "text": "Path to the firmware binary file for fw-download. The file is transferred in chunks (default 4KB, configurable with --xfer). The drive may impose a minimum granularity (FWUG).",
+      "blockIndex": 14
+    },
+    {
+      "type": "paragraph",
+      "text": "Byte 260 of Identify Controller. Bits [4:1] = number of FW slots. Bit 0 = slot 1 is read-only. Bit 5 = activation without reset supported (required for CA3).",
+      "blockIndex": 15
+    },
+    {
+      "type": "info",
+      "text": "Firmware update risks — why slots matter: A power loss during firmware commit can brick the drive if it has no backup boot firmware. This is exactly why multiple slots exist — slot 1 (read-only factory firmware) acts as a safety net. Enterprise drives often have dual-boot firmware so they can always fall back. Always ensure stable power during updates, and never overwrite your only working firmware slot.",
+      "blockIndex": 16
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: You need to update firmware on 1,000 production NVMe SSDs in a data center with zero data loss and minimal downtime. Walk through your strategy: which Commit Action would you use, why multiple firmware slots matter, and what's your rollback plan if the new firmware has a bug? The answer: Use CA1 (download + activate on next reset) for maximum safety and control. First, verify all drives have at least 2 writable firmware slots using 'nvme id-ctrl | grep FRMW'. Stage the new firmware into slot 2 (keeping the current working firmware in slot 1) across all 1,000 drives during business hours — this causes no disruption since CA1 doesn't activate until reset. Then during a maintenance window, reset drives in rolling batches (e.g., 50 at a time) to activate the new firmware. After each batch, verify with 'nvme fw-log' that the new firmware is active and run a quick health check (SMART log, basic I/O test). If the new firmware causes issues in any batch, use CA2 to reactivate slot 1 (the old firmware) on affected drives — no re-download needed since the old image is still in its slot. This is exactly why multiple slots exist: slot 1 (often read-only factory firmware) acts as an ultimate safety net, while writable slots let you stage, test, and roll back without risk. Never use CA3 (immediate activation) across a fleet — if it causes a bug, you have no controlled rollback window.",
+      "requiresReveal": true,
+      "blockIndex": 17
+    }
+  ]
+}

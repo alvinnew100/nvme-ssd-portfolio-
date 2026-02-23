@@ -1,0 +1,4345 @@
+{
+  "sectionId": "sec-trim",
+  "audioFile": "/audio/sections/sec-trim.mp3",
+  "totalDurationMs": 296400,
+  "fileSizeBytes": 4743168,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "TRIM and GC — Keeping the SSD Fast",
+      "beginMs": 40,
+      "endMs": 2840,
+      "timestamps": [
+        {
+          "word": "TRIM",
+          "begin": 40,
+          "end": 160
+        },
+        {
+          "word": "and",
+          "begin": 160,
+          "end": 320
+        },
+        {
+          "word": "GC",
+          "begin": 360,
+          "end": 780
+        },
+        {
+          "word": "Keeping",
+          "begin": 1080,
+          "end": 1340
+        },
+        {
+          "word": "the",
+          "begin": 1400,
+          "end": 1440
+        },
+        {
+          "word": "SSD",
+          "begin": 1560,
+          "end": 1960
+        },
+        {
+          "word": "Fast",
+          "begin": 2060,
+          "end": 2360
+        },
+        {
+          "word": "Analogy:",
+          "begin": 2380,
+          "end": 2840
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: TRIM Bridges the Information Gap. When you delete a file, the filesystem marks those blocks as free — but the SSD doesn't know this. Without TRIM, the SSD thinks those blocks still contain valid data and wastes effort preserving them during garbage collection. TRIM is the message that says 'hey, these LBAs are no longer needed — you can erase them whenever.'",
+      "beginMs": 3420,
+      "endMs": 23460,
+      "timestamps": [
+        {
+          "word": "TRIM",
+          "begin": 3420,
+          "end": 3660
+        },
+        {
+          "word": "Bridges",
+          "begin": 3740,
+          "end": 4120
+        },
+        {
+          "word": "the",
+          "begin": 4120,
+          "end": 4220
+        },
+        {
+          "word": "Information",
+          "begin": 4300,
+          "end": 4840
+        },
+        {
+          "word": "Gap.",
+          "begin": 4880,
+          "end": 5160
+        },
+        {
+          "word": "When",
+          "begin": 5700,
+          "end": 5820
+        },
+        {
+          "word": "you",
+          "begin": 5820,
+          "end": 5880
+        },
+        {
+          "word": "delete",
+          "begin": 5940,
+          "end": 6220
+        },
+        {
+          "word": "a",
+          "begin": 6220,
+          "end": 6260
+        },
+        {
+          "word": "file,",
+          "begin": 6340,
+          "end": 6800
+        },
+        {
+          "word": "the",
+          "begin": 6880,
+          "end": 6960
+        },
+        {
+          "word": "filesystem",
+          "begin": 6880,
+          "end": 7460
+        },
+        {
+          "word": "marks",
+          "begin": 7520,
+          "end": 7740
+        },
+        {
+          "word": "those",
+          "begin": 7800,
+          "end": 7960
+        },
+        {
+          "word": "blocks",
+          "begin": 8020,
+          "end": 8300
+        },
+        {
+          "word": "as",
+          "begin": 8340,
+          "end": 8440
+        },
+        {
+          "word": "free",
+          "begin": 8520,
+          "end": 8620
+        },
+        {
+          "word": "but",
+          "begin": 8920,
+          "end": 9020
+        },
+        {
+          "word": "the",
+          "begin": 9040,
+          "end": 9100
+        },
+        {
+          "word": "SSD",
+          "begin": 9200,
+          "end": 9580
+        },
+        {
+          "word": "doesn't",
+          "begin": 9640,
+          "end": 9880
+        },
+        {
+          "word": "know",
+          "begin": 9880,
+          "end": 9980
+        },
+        {
+          "word": "this.",
+          "begin": 10100,
+          "end": 10380
+        },
+        {
+          "word": "Without",
+          "begin": 10680,
+          "end": 10960
+        },
+        {
+          "word": "TRIM,",
+          "begin": 11020,
+          "end": 11340
+        },
+        {
+          "word": "the",
+          "begin": 11520,
+          "end": 11560
+        },
+        {
+          "word": "SSD",
+          "begin": 11660,
+          "end": 12040
+        },
+        {
+          "word": "thinks",
+          "begin": 12160,
+          "end": 12360
+        },
+        {
+          "word": "those",
+          "begin": 12420,
+          "end": 12600
+        },
+        {
+          "word": "blocks",
+          "begin": 12660,
+          "end": 12940
+        },
+        {
+          "word": "still",
+          "begin": 12980,
+          "end": 13140
+        },
+        {
+          "word": "contain",
+          "begin": 13200,
+          "end": 13540
+        },
+        {
+          "word": "valid",
+          "begin": 13600,
+          "end": 13880
+        },
+        {
+          "word": "data",
+          "begin": 13920,
+          "end": 14140
+        },
+        {
+          "word": "and",
+          "begin": 14140,
+          "end": 14360
+        },
+        {
+          "word": "wastes",
+          "begin": 14420,
+          "end": 14680
+        },
+        {
+          "word": "effort",
+          "begin": 14760,
+          "end": 14980
+        },
+        {
+          "word": "preserving",
+          "begin": 15040,
+          "end": 15460
+        },
+        {
+          "word": "them",
+          "begin": 15500,
+          "end": 15620
+        },
+        {
+          "word": "during",
+          "begin": 15680,
+          "end": 15880
+        },
+        {
+          "word": "garbage",
+          "begin": 15920,
+          "end": 16239
+        },
+        {
+          "word": "collection.",
+          "begin": 16300,
+          "end": 16760
+        },
+        {
+          "word": "TRIM",
+          "begin": 17260,
+          "end": 17500
+        },
+        {
+          "word": "is",
+          "begin": 17540,
+          "end": 17620
+        },
+        {
+          "word": "the",
+          "begin": 17660,
+          "end": 17720
+        },
+        {
+          "word": "message",
+          "begin": 17780,
+          "end": 18120
+        },
+        {
+          "word": "that",
+          "begin": 18200,
+          "end": 18340
+        },
+        {
+          "word": "says",
+          "begin": 18400,
+          "end": 18700
+        },
+        {
+          "word": "'hey,",
+          "begin": 18980,
+          "end": 19080
+        },
+        {
+          "word": "these",
+          "begin": 19520,
+          "end": 19700
+        },
+        {
+          "word": "LBAs",
+          "begin": 19760,
+          "end": 20220
+        },
+        {
+          "word": "are",
+          "begin": 20260,
+          "end": 20280
+        },
+        {
+          "word": "no",
+          "begin": 20380,
+          "end": 20440
+        },
+        {
+          "word": "longer",
+          "begin": 20520,
+          "end": 20760
+        },
+        {
+          "word": "needed",
+          "begin": 20840,
+          "end": 21180
+        },
+        {
+          "word": "you",
+          "begin": 21300,
+          "end": 21360
+        },
+        {
+          "word": "can",
+          "begin": 21420,
+          "end": 21540
+        },
+        {
+          "word": "erase",
+          "begin": 21540,
+          "end": 21900
+        },
+        {
+          "word": "them",
+          "begin": 21900,
+          "end": 22020
+        },
+        {
+          "word": "whenever.'",
+          "begin": 22020,
+          "end": 22340
+        },
+        {
+          "word": "TRIM",
+          "begin": 22780,
+          "end": 22980
+        },
+        {
+          "word": "(Dataset",
+          "begin": 23040,
+          "end": 23460
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "term",
+      "text": "TRIM (Dataset Management): An NVMe command (opcode 0x09) that tells the SSD which LBAs are no longer in use by the filesystem. This allows the SSD to mark those pages as invalid immediately, improving garbage collection efficiency and reducing write amplification.",
+      "beginMs": 23500,
+      "endMs": 37560,
+      "timestamps": [
+        {
+          "word": "Management):",
+          "begin": 23500,
+          "end": 24000
+        },
+        {
+          "word": "An",
+          "begin": 24180,
+          "end": 24260
+        },
+        {
+          "word": "NVMe",
+          "begin": 24340,
+          "end": 24800
+        },
+        {
+          "word": "command",
+          "begin": 24880,
+          "end": 25240
+        },
+        {
+          "word": "(opcode",
+          "begin": 25320,
+          "end": 25740
+        },
+        {
+          "word": "0x09)",
+          "begin": 25800,
+          "end": 26380
+        },
+        {
+          "word": "that",
+          "begin": 26440,
+          "end": 26540
+        },
+        {
+          "word": "tells",
+          "begin": 26580,
+          "end": 26820
+        },
+        {
+          "word": "the",
+          "begin": 26820,
+          "end": 26920
+        },
+        {
+          "word": "SSD",
+          "begin": 27020,
+          "end": 27440
+        },
+        {
+          "word": "which",
+          "begin": 27580,
+          "end": 27720
+        },
+        {
+          "word": "LBAs",
+          "begin": 27800,
+          "end": 28300
+        },
+        {
+          "word": "are",
+          "begin": 28340,
+          "end": 28460
+        },
+        {
+          "word": "no",
+          "begin": 28460,
+          "end": 28520
+        },
+        {
+          "word": "longer",
+          "begin": 28620,
+          "end": 28860
+        },
+        {
+          "word": "in",
+          "begin": 28940,
+          "end": 29020
+        },
+        {
+          "word": "use",
+          "begin": 29040,
+          "end": 29240
+        },
+        {
+          "word": "by",
+          "begin": 29240,
+          "end": 29360
+        },
+        {
+          "word": "the",
+          "begin": 29420,
+          "end": 29480
+        },
+        {
+          "word": "filesystem.",
+          "begin": 29560,
+          "end": 30220
+        },
+        {
+          "word": "This",
+          "begin": 30520,
+          "end": 30660
+        },
+        {
+          "word": "allows",
+          "begin": 30700,
+          "end": 31100
+        },
+        {
+          "word": "the",
+          "begin": 31100,
+          "end": 31140
+        },
+        {
+          "word": "SSD",
+          "begin": 31240,
+          "end": 31620
+        },
+        {
+          "word": "to",
+          "begin": 31720,
+          "end": 31800
+        },
+        {
+          "word": "mark",
+          "begin": 31840,
+          "end": 32040
+        },
+        {
+          "word": "those",
+          "begin": 32080,
+          "end": 32240
+        },
+        {
+          "word": "pages",
+          "begin": 32299,
+          "end": 32820
+        },
+        {
+          "word": "as",
+          "begin": 32860,
+          "end": 33020
+        },
+        {
+          "word": "invalid",
+          "begin": 32860,
+          "end": 33300
+        },
+        {
+          "word": "immediately,",
+          "begin": 33300,
+          "end": 33780
+        },
+        {
+          "word": "improving",
+          "begin": 33920,
+          "end": 34360
+        },
+        {
+          "word": "garbage",
+          "begin": 34400,
+          "end": 34720
+        },
+        {
+          "word": "collection",
+          "begin": 34780,
+          "end": 35180
+        },
+        {
+          "word": "efficiency",
+          "begin": 35200,
+          "end": 35720
+        },
+        {
+          "word": "and",
+          "begin": 35940,
+          "end": 36080
+        },
+        {
+          "word": "reducing",
+          "begin": 36120,
+          "end": 36520
+        },
+        {
+          "word": "write",
+          "begin": 36580,
+          "end": 36760
+        },
+        {
+          "word": "amplification.",
+          "begin": 36820,
+          "end": 37560
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "term",
+      "text": "Garbage Collection (GC): A background process in the SSD firmware that reclaims space from blocks containing stale/invalid pages. GC copies valid pages to a new block, then erases the old block to create free space for new writes.",
+      "beginMs": 37940,
+      "endMs": 51540,
+      "timestamps": [
+        {
+          "word": "Garbage",
+          "begin": 37940,
+          "end": 38260
+        },
+        {
+          "word": "Collection",
+          "begin": 38320,
+          "end": 38720
+        },
+        {
+          "word": "(GC):",
+          "begin": 38720,
+          "end": 39140
+        },
+        {
+          "word": "A",
+          "begin": 39520,
+          "end": 39540
+        },
+        {
+          "word": "background",
+          "begin": 39600,
+          "end": 40000
+        },
+        {
+          "word": "process",
+          "begin": 40060,
+          "end": 41020
+        },
+        {
+          "word": "in",
+          "begin": 41060,
+          "end": 41180
+        },
+        {
+          "word": "the",
+          "begin": 41240,
+          "end": 41320
+        },
+        {
+          "word": "firmware",
+          "begin": 41480,
+          "end": 41780
+        },
+        {
+          "word": "that",
+          "begin": 41960,
+          "end": 42080
+        },
+        {
+          "word": "reclaims",
+          "begin": 42120,
+          "end": 42500
+        },
+        {
+          "word": "space",
+          "begin": 42600,
+          "end": 42900
+        },
+        {
+          "word": "from",
+          "begin": 42960,
+          "end": 43080
+        },
+        {
+          "word": "blocks",
+          "begin": 43140,
+          "end": 43440
+        },
+        {
+          "word": "containing",
+          "begin": 43480,
+          "end": 43880
+        },
+        {
+          "word": "stale/invalid",
+          "begin": 43940,
+          "end": 44700
+        },
+        {
+          "word": "pages.",
+          "begin": 44760,
+          "end": 45940
+        },
+        {
+          "word": "GC",
+          "begin": 45980,
+          "end": 46400
+        },
+        {
+          "word": "copies",
+          "begin": 46480,
+          "end": 46520
+        },
+        {
+          "word": "valid",
+          "begin": 46560,
+          "end": 46840
+        },
+        {
+          "word": "pages",
+          "begin": 46880,
+          "end": 47240
+        },
+        {
+          "word": "to",
+          "begin": 47300,
+          "end": 47360
+        },
+        {
+          "word": "a",
+          "begin": 47420,
+          "end": 47440
+        },
+        {
+          "word": "new",
+          "begin": 47520,
+          "end": 47580
+        },
+        {
+          "word": "block,",
+          "begin": 47700,
+          "end": 48000
+        },
+        {
+          "word": "then",
+          "begin": 48240,
+          "end": 48360
+        },
+        {
+          "word": "erases",
+          "begin": 48380,
+          "end": 48800
+        },
+        {
+          "word": "the",
+          "begin": 48840,
+          "end": 48880
+        },
+        {
+          "word": "old",
+          "begin": 49000,
+          "end": 49160
+        },
+        {
+          "word": "block",
+          "begin": 49200,
+          "end": 49460
+        },
+        {
+          "word": "to",
+          "begin": 49500,
+          "end": 49540
+        },
+        {
+          "word": "create",
+          "begin": 49600,
+          "end": 49880
+        },
+        {
+          "word": "free",
+          "begin": 49960,
+          "end": 50040
+        },
+        {
+          "word": "space",
+          "begin": 50160,
+          "end": 50440
+        },
+        {
+          "word": "for",
+          "begin": 50500,
+          "end": 50560
+        },
+        {
+          "word": "new",
+          "begin": 50640,
+          "end": 50720
+        },
+        {
+          "word": "writes.",
+          "begin": 50800,
+          "end": 51180
+        },
+        {
+          "word": "In",
+          "begin": 51440,
+          "end": 51540
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "In Lesson 3, we learned about the FTL — the Flash Translation Layer that writes data to new pages instead of overwriting old ones. Old pages become &ldquo;stale.&rdquo; We also learned that erasing happens at the block level (hundreds of pages at once).",
+      "beginMs": 51580,
+      "endMs": 66940,
+      "timestamps": [
+        {
+          "word": "Lesson",
+          "begin": 51580,
+          "end": 51860
+        },
+        {
+          "word": "3,",
+          "begin": 51920,
+          "end": 52060
+        },
+        {
+          "word": "we",
+          "begin": 52360,
+          "end": 52400
+        },
+        {
+          "word": "learned",
+          "begin": 52500,
+          "end": 52720
+        },
+        {
+          "word": "about",
+          "begin": 52720,
+          "end": 53280
+        },
+        {
+          "word": "the",
+          "begin": 53340,
+          "end": 53440
+        },
+        {
+          "word": "FTL",
+          "begin": 53600,
+          "end": 53760
+        },
+        {
+          "word": "the",
+          "begin": 53960,
+          "end": 54000
+        },
+        {
+          "word": "Flash",
+          "begin": 54100,
+          "end": 54340
+        },
+        {
+          "word": "Translation",
+          "begin": 54400,
+          "end": 54920
+        },
+        {
+          "word": "Layer",
+          "begin": 54960,
+          "end": 55160
+        },
+        {
+          "word": "that",
+          "begin": 55360,
+          "end": 55440
+        },
+        {
+          "word": "writes",
+          "begin": 55440,
+          "end": 55720
+        },
+        {
+          "word": "data",
+          "begin": 55780,
+          "end": 55980
+        },
+        {
+          "word": "to",
+          "begin": 56060,
+          "end": 56120
+        },
+        {
+          "word": "new",
+          "begin": 56200,
+          "end": 56280
+        },
+        {
+          "word": "pages",
+          "begin": 56380,
+          "end": 56820
+        },
+        {
+          "word": "instead",
+          "begin": 56920,
+          "end": 57220
+        },
+        {
+          "word": "of",
+          "begin": 57240,
+          "end": 57320
+        },
+        {
+          "word": "overwriting",
+          "begin": 57380,
+          "end": 57900
+        },
+        {
+          "word": "old",
+          "begin": 58000,
+          "end": 58160
+        },
+        {
+          "word": "ones.",
+          "begin": 58180,
+          "end": 58560
+        },
+        {
+          "word": "Old",
+          "begin": 58880,
+          "end": 59040
+        },
+        {
+          "word": "pages",
+          "begin": 59080,
+          "end": 59460
+        },
+        {
+          "word": "become",
+          "begin": 59520,
+          "end": 60600
+        },
+        {
+          "word": "&ldquo;stale.&rdquo;",
+          "begin": 61140,
+          "end": 62120
+        },
+        {
+          "word": "We",
+          "begin": 62640,
+          "end": 62700
+        },
+        {
+          "word": "also",
+          "begin": 62800,
+          "end": 63020
+        },
+        {
+          "word": "learned",
+          "begin": 63120,
+          "end": 63360
+        },
+        {
+          "word": "that",
+          "begin": 63400,
+          "end": 63500
+        },
+        {
+          "word": "erasing",
+          "begin": 63520,
+          "end": 63960
+        },
+        {
+          "word": "happens",
+          "begin": 64000,
+          "end": 64379
+        },
+        {
+          "word": "at",
+          "begin": 64400,
+          "end": 64500
+        },
+        {
+          "word": "the",
+          "begin": 64500,
+          "end": 64540
+        },
+        {
+          "word": "block",
+          "begin": 64599,
+          "end": 64860
+        },
+        {
+          "word": "level",
+          "begin": 64900,
+          "end": 65200
+        },
+        {
+          "word": "(hundreds",
+          "begin": 65200,
+          "end": 65540
+        },
+        {
+          "word": "of",
+          "begin": 65540,
+          "end": 65600
+        },
+        {
+          "word": "pages",
+          "begin": 65600,
+          "end": 66000
+        },
+        {
+          "word": "at",
+          "begin": 66020,
+          "end": 66100
+        },
+        {
+          "word": "once).",
+          "begin": 66140,
+          "end": 66500
+        },
+        {
+          "word": "But",
+          "begin": 66840,
+          "end": 66940
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "But who cleans up those stale pages? And when? If nobody cleans them up, the drive will eventually run out of free pages and have nowhere to write new data. This cleanup process is called Garbage Collection (GC).",
+      "beginMs": 66980,
+      "endMs": 77720,
+      "timestamps": [
+        {
+          "word": "who",
+          "begin": 66980,
+          "end": 67060
+        },
+        {
+          "word": "cleans",
+          "begin": 67160,
+          "end": 67460
+        },
+        {
+          "word": "up",
+          "begin": 67500,
+          "end": 67620
+        },
+        {
+          "word": "those",
+          "begin": 67680,
+          "end": 67840
+        },
+        {
+          "word": "stale",
+          "begin": 67900,
+          "end": 68120
+        },
+        {
+          "word": "pages?",
+          "begin": 68180,
+          "end": 68680
+        },
+        {
+          "word": "And",
+          "begin": 68880,
+          "end": 68980
+        },
+        {
+          "word": "when?",
+          "begin": 69040,
+          "end": 69300
+        },
+        {
+          "word": "If",
+          "begin": 69600,
+          "end": 69680
+        },
+        {
+          "word": "nobody",
+          "begin": 69680,
+          "end": 70020
+        },
+        {
+          "word": "cleans",
+          "begin": 70100,
+          "end": 70340
+        },
+        {
+          "word": "them",
+          "begin": 70360,
+          "end": 70460
+        },
+        {
+          "word": "up,",
+          "begin": 70460,
+          "end": 70560
+        },
+        {
+          "word": "the",
+          "begin": 70600,
+          "end": 70620
+        },
+        {
+          "word": "drive",
+          "begin": 70760,
+          "end": 71360
+        },
+        {
+          "word": "will",
+          "begin": 71380,
+          "end": 71480
+        },
+        {
+          "word": "eventually",
+          "begin": 71500,
+          "end": 71960
+        },
+        {
+          "word": "run",
+          "begin": 72060,
+          "end": 72220
+        },
+        {
+          "word": "out",
+          "begin": 72220,
+          "end": 72360
+        },
+        {
+          "word": "of",
+          "begin": 72380,
+          "end": 72440
+        },
+        {
+          "word": "free",
+          "begin": 72500,
+          "end": 72600
+        },
+        {
+          "word": "pages",
+          "begin": 72720,
+          "end": 73140
+        },
+        {
+          "word": "and",
+          "begin": 73220,
+          "end": 73300
+        },
+        {
+          "word": "have",
+          "begin": 73320,
+          "end": 73480
+        },
+        {
+          "word": "nowhere",
+          "begin": 73540,
+          "end": 73820
+        },
+        {
+          "word": "to",
+          "begin": 73820,
+          "end": 73860
+        },
+        {
+          "word": "write",
+          "begin": 73920,
+          "end": 74100
+        },
+        {
+          "word": "new",
+          "begin": 74140,
+          "end": 74200
+        },
+        {
+          "word": "data.",
+          "begin": 74300,
+          "end": 74560
+        },
+        {
+          "word": "This",
+          "begin": 75000,
+          "end": 75180
+        },
+        {
+          "word": "cleanup",
+          "begin": 75240,
+          "end": 75580
+        },
+        {
+          "word": "process",
+          "begin": 75600,
+          "end": 76000
+        },
+        {
+          "word": "is",
+          "begin": 76040,
+          "end": 76120
+        },
+        {
+          "word": "called",
+          "begin": 76160,
+          "end": 76380
+        },
+        {
+          "word": "Garbage",
+          "begin": 76440,
+          "end": 76780
+        },
+        {
+          "word": "Collection",
+          "begin": 76860,
+          "end": 77320
+        },
+        {
+          "word": "(GC).",
+          "begin": 77380,
+          "end": 77720
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "But here's a deeper question: how does the SSD know which pages are stale? It knows about pages it overwrote (it updated the FTL mapping). But what about pages belonging to deleted files?",
+      "beginMs": 78400,
+      "endMs": 88500,
+      "timestamps": [
+        {
+          "word": "But",
+          "begin": 78400,
+          "end": 78500
+        },
+        {
+          "word": "here's",
+          "begin": 78540,
+          "end": 78760
+        },
+        {
+          "word": "a",
+          "begin": 78780,
+          "end": 78940
+        },
+        {
+          "word": "deeper",
+          "begin": 79040,
+          "end": 79240
+        },
+        {
+          "word": "question:",
+          "begin": 79240,
+          "end": 79660
+        },
+        {
+          "word": "how",
+          "begin": 80020,
+          "end": 80100
+        },
+        {
+          "word": "does",
+          "begin": 80200,
+          "end": 80320
+        },
+        {
+          "word": "the",
+          "begin": 80360,
+          "end": 80420
+        },
+        {
+          "word": "SSD",
+          "begin": 80520,
+          "end": 80980
+        },
+        {
+          "word": "know",
+          "begin": 81080,
+          "end": 81160
+        },
+        {
+          "word": "which",
+          "begin": 81300,
+          "end": 81620
+        },
+        {
+          "word": "pages",
+          "begin": 81720,
+          "end": 81860
+        },
+        {
+          "word": "are",
+          "begin": 81900,
+          "end": 81920
+        },
+        {
+          "word": "stale?",
+          "begin": 82040,
+          "end": 82420
+        },
+        {
+          "word": "It",
+          "begin": 82640,
+          "end": 82740
+        },
+        {
+          "word": "knows",
+          "begin": 82780,
+          "end": 82980
+        },
+        {
+          "word": "about",
+          "begin": 82980,
+          "end": 83200
+        },
+        {
+          "word": "pages",
+          "begin": 83240,
+          "end": 83620
+        },
+        {
+          "word": "it",
+          "begin": 83640,
+          "end": 83720
+        },
+        {
+          "word": "overwrote",
+          "begin": 83760,
+          "end": 84580
+        },
+        {
+          "word": "(it",
+          "begin": 84620,
+          "end": 84780
+        },
+        {
+          "word": "updated",
+          "begin": 84620,
+          "end": 85000
+        },
+        {
+          "word": "the",
+          "begin": 85000,
+          "end": 85060
+        },
+        {
+          "word": "FTL",
+          "begin": 85120,
+          "end": 85460
+        },
+        {
+          "word": "mapping).",
+          "begin": 85520,
+          "end": 85920
+        },
+        {
+          "word": "But",
+          "begin": 86200,
+          "end": 86280
+        },
+        {
+          "word": "what",
+          "begin": 86300,
+          "end": 86400
+        },
+        {
+          "word": "about",
+          "begin": 86400,
+          "end": 86600
+        },
+        {
+          "word": "pages",
+          "begin": 86660,
+          "end": 87040
+        },
+        {
+          "word": "belonging",
+          "begin": 87100,
+          "end": 87500
+        },
+        {
+          "word": "to",
+          "begin": 87540,
+          "end": 87600
+        },
+        {
+          "word": "deleted",
+          "begin": 87660,
+          "end": 87980
+        },
+        {
+          "word": "files?",
+          "begin": 87980,
+          "end": 88500
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "When you delete a file, the filesystem marks those LBAs as free in its own records. But it doesn't tell the SSD. Why would it? The filesystem just updates its own metadata. The SSD still thinks those pages hold valid data. During garbage collection, it will waste time copying those &ldquo;valid&rdquo; pages to a new block — burning through NAND write cycles for data that nobody needs anymore. This is the problem TRIM solves.",
+      "beginMs": 89000,
+      "endMs": 115560,
+      "timestamps": [
+        {
+          "word": "When",
+          "begin": 89000,
+          "end": 89120
+        },
+        {
+          "word": "you",
+          "begin": 89140,
+          "end": 89180
+        },
+        {
+          "word": "delete",
+          "begin": 89260,
+          "end": 89540
+        },
+        {
+          "word": "a",
+          "begin": 89540,
+          "end": 89560
+        },
+        {
+          "word": "file,",
+          "begin": 89680,
+          "end": 89940
+        },
+        {
+          "word": "the",
+          "begin": 90280,
+          "end": 90320
+        },
+        {
+          "word": "filesystem",
+          "begin": 90420,
+          "end": 91060
+        },
+        {
+          "word": "marks",
+          "begin": 91100,
+          "end": 91360
+        },
+        {
+          "word": "those",
+          "begin": 91400,
+          "end": 91580
+        },
+        {
+          "word": "LBAs",
+          "begin": 91660,
+          "end": 92180
+        },
+        {
+          "word": "as",
+          "begin": 92200,
+          "end": 92300
+        },
+        {
+          "word": "free",
+          "begin": 92400,
+          "end": 92520
+        },
+        {
+          "word": "in",
+          "begin": 92720,
+          "end": 92800
+        },
+        {
+          "word": "its",
+          "begin": 92800,
+          "end": 92920
+        },
+        {
+          "word": "own",
+          "begin": 92960,
+          "end": 93140
+        },
+        {
+          "word": "records.",
+          "begin": 93140,
+          "end": 93600
+        },
+        {
+          "word": "But",
+          "begin": 94040,
+          "end": 94140
+        },
+        {
+          "word": "it",
+          "begin": 94140,
+          "end": 94220
+        },
+        {
+          "word": "doesn't",
+          "begin": 94260,
+          "end": 94520
+        },
+        {
+          "word": "tell",
+          "begin": 94560,
+          "end": 94720
+        },
+        {
+          "word": "the",
+          "begin": 94640,
+          "end": 94820
+        },
+        {
+          "word": "SSD.",
+          "begin": 94880,
+          "end": 95320
+        },
+        {
+          "word": "Why",
+          "begin": 95880,
+          "end": 95960
+        },
+        {
+          "word": "would",
+          "begin": 96100,
+          "end": 96240
+        },
+        {
+          "word": "it?",
+          "begin": 96260,
+          "end": 96440
+        },
+        {
+          "word": "The",
+          "begin": 96840,
+          "end": 96880
+        },
+        {
+          "word": "filesystem",
+          "begin": 97000,
+          "end": 97620
+        },
+        {
+          "word": "just",
+          "begin": 97700,
+          "end": 97900
+        },
+        {
+          "word": "updates",
+          "begin": 97940,
+          "end": 98260
+        },
+        {
+          "word": "its",
+          "begin": 98280,
+          "end": 98400
+        },
+        {
+          "word": "own",
+          "begin": 98460,
+          "end": 98580
+        },
+        {
+          "word": "metadata.",
+          "begin": 98620,
+          "end": 99060
+        },
+        {
+          "word": "The",
+          "begin": 99640,
+          "end": 99680
+        },
+        {
+          "word": "SSD",
+          "begin": 99760,
+          "end": 100180
+        },
+        {
+          "word": "still",
+          "begin": 100320,
+          "end": 100520
+        },
+        {
+          "word": "thinks",
+          "begin": 100600,
+          "end": 100800
+        },
+        {
+          "word": "those",
+          "begin": 100840,
+          "end": 101020
+        },
+        {
+          "word": "pages",
+          "begin": 101080,
+          "end": 101460
+        },
+        {
+          "word": "hold",
+          "begin": 101500,
+          "end": 101680
+        },
+        {
+          "word": "valid",
+          "begin": 101720,
+          "end": 102000
+        },
+        {
+          "word": "data.",
+          "begin": 102000,
+          "end": 102280
+        },
+        {
+          "word": "During",
+          "begin": 102760,
+          "end": 102980
+        },
+        {
+          "word": "garbage",
+          "begin": 103040,
+          "end": 103360
+        },
+        {
+          "word": "collection,",
+          "begin": 103420,
+          "end": 103880
+        },
+        {
+          "word": "it",
+          "begin": 104000,
+          "end": 104040
+        },
+        {
+          "word": "will",
+          "begin": 104060,
+          "end": 104140
+        },
+        {
+          "word": "waste",
+          "begin": 104200,
+          "end": 104440
+        },
+        {
+          "word": "time",
+          "begin": 104460,
+          "end": 104740
+        },
+        {
+          "word": "copying",
+          "begin": 104740,
+          "end": 105160
+        },
+        {
+          "word": "those",
+          "begin": 105200,
+          "end": 106740
+        },
+        {
+          "word": "&ldquo;valid&rdquo;",
+          "begin": 106740,
+          "end": 107640
+        },
+        {
+          "word": "pages",
+          "begin": 108120,
+          "end": 108480
+        },
+        {
+          "word": "to",
+          "begin": 108520,
+          "end": 108580
+        },
+        {
+          "word": "a",
+          "begin": 108640,
+          "end": 108660
+        },
+        {
+          "word": "new",
+          "begin": 108720,
+          "end": 108780
+        },
+        {
+          "word": "block",
+          "begin": 108880,
+          "end": 109260
+        },
+        {
+          "word": "burning",
+          "begin": 109600,
+          "end": 109880
+        },
+        {
+          "word": "through",
+          "begin": 109960,
+          "end": 110040
+        },
+        {
+          "word": "NAND",
+          "begin": 110160,
+          "end": 110440
+        },
+        {
+          "word": "write",
+          "begin": 110480,
+          "end": 110660
+        },
+        {
+          "word": "cycles",
+          "begin": 110660,
+          "end": 111100
+        },
+        {
+          "word": "for",
+          "begin": 111140,
+          "end": 111200
+        },
+        {
+          "word": "data",
+          "begin": 111300,
+          "end": 111520
+        },
+        {
+          "word": "that",
+          "begin": 111600,
+          "end": 111720
+        },
+        {
+          "word": "nobody",
+          "begin": 111720,
+          "end": 112040
+        },
+        {
+          "word": "needs",
+          "begin": 112140,
+          "end": 112360
+        },
+        {
+          "word": "anymore.",
+          "begin": 112400,
+          "end": 112620
+        },
+        {
+          "word": "This",
+          "begin": 113320,
+          "end": 113480
+        },
+        {
+          "word": "is",
+          "begin": 113520,
+          "end": 113600
+        },
+        {
+          "word": "the",
+          "begin": 113640,
+          "end": 113680
+        },
+        {
+          "word": "problem",
+          "begin": 113760,
+          "end": 114140
+        },
+        {
+          "word": "TRIM",
+          "begin": 114220,
+          "end": 114440
+        },
+        {
+          "word": "solves.",
+          "begin": 114560,
+          "end": 115020
+        },
+        {
+          "word": "TRIM",
+          "begin": 115300,
+          "end": 115560
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "paragraph",
+      "text": "TRIM (via the NVMe Dataset Management command, opcode 0x09) is a message from the OS to the SSD: &ldquo;These LBA ranges are no longer used — you can treat them as free.&rdquo; It bridges the information gap between filesystem and SSD.",
+      "beginMs": 115640,
+      "endMs": 132920,
+      "timestamps": [
+        {
+          "word": "(via",
+          "begin": 115640,
+          "end": 115880
+        },
+        {
+          "word": "the",
+          "begin": 115880,
+          "end": 115920
+        },
+        {
+          "word": "NVMe",
+          "begin": 116040,
+          "end": 116500
+        },
+        {
+          "word": "Dataset",
+          "begin": 116640,
+          "end": 117120
+        },
+        {
+          "word": "Management",
+          "begin": 117180,
+          "end": 117640
+        },
+        {
+          "word": "command,",
+          "begin": 117680,
+          "end": 118120
+        },
+        {
+          "word": "opcode",
+          "begin": 118640,
+          "end": 119080
+        },
+        {
+          "word": "0x09)",
+          "begin": 119140,
+          "end": 119760
+        },
+        {
+          "word": "is",
+          "begin": 119820,
+          "end": 119920
+        },
+        {
+          "word": "a",
+          "begin": 119940,
+          "end": 119960
+        },
+        {
+          "word": "message",
+          "begin": 120040,
+          "end": 120360
+        },
+        {
+          "word": "from",
+          "begin": 120420,
+          "end": 120540
+        },
+        {
+          "word": "the",
+          "begin": 120560,
+          "end": 120620
+        },
+        {
+          "word": "OS",
+          "begin": 120720,
+          "end": 121060
+        },
+        {
+          "word": "to",
+          "begin": 121120,
+          "end": 121180
+        },
+        {
+          "word": "the",
+          "begin": 121220,
+          "end": 121280
+        },
+        {
+          "word": "SSD:",
+          "begin": 121380,
+          "end": 121840
+        },
+        {
+          "word": "&ldquo;These",
+          "begin": 122540,
+          "end": 124020
+        },
+        {
+          "word": "LBA",
+          "begin": 124080,
+          "end": 124560
+        },
+        {
+          "word": "ranges",
+          "begin": 124560,
+          "end": 124960
+        },
+        {
+          "word": "are",
+          "begin": 125020,
+          "end": 125040
+        },
+        {
+          "word": "no",
+          "begin": 125160,
+          "end": 125380
+        },
+        {
+          "word": "longer",
+          "begin": 125380,
+          "end": 125740
+        },
+        {
+          "word": "used",
+          "begin": 125740,
+          "end": 126120
+        },
+        {
+          "word": "you",
+          "begin": 126140,
+          "end": 126180
+        },
+        {
+          "word": "can",
+          "begin": 126240,
+          "end": 126340
+        },
+        {
+          "word": "treat",
+          "begin": 126380,
+          "end": 126560
+        },
+        {
+          "word": "them",
+          "begin": 126560,
+          "end": 126740
+        },
+        {
+          "word": "as",
+          "begin": 126760,
+          "end": 126880
+        },
+        {
+          "word": "free.&rdquo;",
+          "begin": 126980,
+          "end": 129020
+        },
+        {
+          "word": "It",
+          "begin": 129039,
+          "end": 129080
+        },
+        {
+          "word": "bridges",
+          "begin": 129160,
+          "end": 129500
+        },
+        {
+          "word": "the",
+          "begin": 129539,
+          "end": 129580
+        },
+        {
+          "word": "information",
+          "begin": 129660,
+          "end": 130220
+        },
+        {
+          "word": "gap",
+          "begin": 130280,
+          "end": 130479
+        },
+        {
+          "word": "between",
+          "begin": 130520,
+          "end": 130800
+        },
+        {
+          "word": "filesystem",
+          "begin": 130900,
+          "end": 131540
+        },
+        {
+          "word": "and",
+          "begin": 131640,
+          "end": 131740
+        },
+        {
+          "word": "SSD.",
+          "begin": 131820,
+          "end": 132260
+        },
+        {
+          "word": "Let's",
+          "begin": 132760,
+          "end": 132920
+        }
+      ]
+    },
+    {
+      "blockIndex": 9,
+      "type": "paragraph",
+      "text": "Let's watch GC in action. The SSD picks a block with many stale pages (Block A), copies the valid pages to a free block (Block B), then erases Block A to reclaim it. Use the buttons to step through the process:",
+      "beginMs": 132980,
+      "endMs": 144700,
+      "timestamps": [
+        {
+          "word": "watch",
+          "begin": 132980,
+          "end": 133200
+        },
+        {
+          "word": "GC",
+          "begin": 133320,
+          "end": 133640
+        },
+        {
+          "word": "in",
+          "begin": 133720,
+          "end": 133800
+        },
+        {
+          "word": "action.",
+          "begin": 133900,
+          "end": 134300
+        },
+        {
+          "word": "The",
+          "begin": 134640,
+          "end": 134680
+        },
+        {
+          "word": "SSD",
+          "begin": 134780,
+          "end": 135200
+        },
+        {
+          "word": "picks",
+          "begin": 135300,
+          "end": 135520
+        },
+        {
+          "word": "a",
+          "begin": 135540,
+          "end": 135560
+        },
+        {
+          "word": "block",
+          "begin": 135620,
+          "end": 135940
+        },
+        {
+          "word": "with",
+          "begin": 135940,
+          "end": 136060
+        },
+        {
+          "word": "many",
+          "begin": 136140,
+          "end": 136300
+        },
+        {
+          "word": "stale",
+          "begin": 136400,
+          "end": 136620
+        },
+        {
+          "word": "pages",
+          "begin": 136700,
+          "end": 137080
+        },
+        {
+          "word": "(Block",
+          "begin": 137140,
+          "end": 137400
+        },
+        {
+          "word": "A),",
+          "begin": 137520,
+          "end": 137540
+        },
+        {
+          "word": "copies",
+          "begin": 138080,
+          "end": 138460
+        },
+        {
+          "word": "the",
+          "begin": 138480,
+          "end": 138540
+        },
+        {
+          "word": "valid",
+          "begin": 138600,
+          "end": 138880
+        },
+        {
+          "word": "pages",
+          "begin": 138940,
+          "end": 139340
+        },
+        {
+          "word": "to",
+          "begin": 139380,
+          "end": 139440
+        },
+        {
+          "word": "a",
+          "begin": 139480,
+          "end": 139500
+        },
+        {
+          "word": "free",
+          "begin": 139620,
+          "end": 139700
+        },
+        {
+          "word": "block",
+          "begin": 139820,
+          "end": 140100
+        },
+        {
+          "word": "(Block",
+          "begin": 140180,
+          "end": 140420
+        },
+        {
+          "word": "B),",
+          "begin": 140500,
+          "end": 140560
+        },
+        {
+          "word": "then",
+          "begin": 141220,
+          "end": 141340
+        },
+        {
+          "word": "erases",
+          "begin": 141360,
+          "end": 141820
+        },
+        {
+          "word": "Block",
+          "begin": 141880,
+          "end": 142140
+        },
+        {
+          "word": "A",
+          "begin": 142260,
+          "end": 142540
+        },
+        {
+          "word": "to",
+          "begin": 142600,
+          "end": 142620
+        },
+        {
+          "word": "reclaim",
+          "begin": 142620,
+          "end": 143000
+        },
+        {
+          "word": "it.",
+          "begin": 143020,
+          "end": 143180
+        },
+        {
+          "word": "Use",
+          "begin": 143380,
+          "end": 143560
+        },
+        {
+          "word": "the",
+          "begin": 143600,
+          "end": 143640
+        },
+        {
+          "word": "buttons",
+          "begin": 143700,
+          "end": 143860
+        },
+        {
+          "word": "to",
+          "begin": 143860,
+          "end": 143900
+        },
+        {
+          "word": "step",
+          "begin": 143900,
+          "end": 144060
+        },
+        {
+          "word": "through",
+          "begin": 144060,
+          "end": 144120
+        },
+        {
+          "word": "the",
+          "begin": 144180,
+          "end": 144300
+        },
+        {
+          "word": "process:",
+          "begin": 144380,
+          "end": 144700
+        }
+      ]
+    },
+    {
+      "blockIndex": 10,
+      "type": "paragraph",
+      "text": "Recall from Lesson 3: SSD Architecture that every block has a VPC (Valid Page Count) — the number of pages still holding current data. GC uses the VPC table to pick source blocks (lowest VPC = best candidate) and copies their valid pages to spare blocks before erasing. TRIM directly lowers VPC by telling the SSD which pages are no longer needed — making GC faster and cheaper.",
+      "beginMs": 144720,
+      "endMs": 172860,
+      "timestamps": [
+        {
+          "word": "Recall",
+          "begin": 144720,
+          "end": 145040
+        },
+        {
+          "word": "from",
+          "begin": 145240,
+          "end": 145840
+        },
+        {
+          "word": "Lesson",
+          "begin": 145920,
+          "end": 146500
+        },
+        {
+          "word": "3:",
+          "begin": 146600,
+          "end": 146700
+        },
+        {
+          "word": "Architecture",
+          "begin": 146740,
+          "end": 147940
+        },
+        {
+          "word": "that",
+          "begin": 148040,
+          "end": 148160
+        },
+        {
+          "word": "every",
+          "begin": 148200,
+          "end": 148420
+        },
+        {
+          "word": "block",
+          "begin": 148520,
+          "end": 148820
+        },
+        {
+          "word": "has",
+          "begin": 148820,
+          "end": 149000
+        },
+        {
+          "word": "a",
+          "begin": 149020,
+          "end": 149480
+        },
+        {
+          "word": "VPC",
+          "begin": 149560,
+          "end": 150100
+        },
+        {
+          "word": "Page",
+          "begin": 150220,
+          "end": 150520
+        },
+        {
+          "word": "Count)",
+          "begin": 150560,
+          "end": 151180
+        },
+        {
+          "word": "the",
+          "begin": 151600,
+          "end": 151660
+        },
+        {
+          "word": "number",
+          "begin": 151700,
+          "end": 151920
+        },
+        {
+          "word": "of",
+          "begin": 151960,
+          "end": 152040
+        },
+        {
+          "word": "pages",
+          "begin": 152100,
+          "end": 152540
+        },
+        {
+          "word": "still",
+          "begin": 152640,
+          "end": 152840
+        },
+        {
+          "word": "holding",
+          "begin": 152900,
+          "end": 153200
+        },
+        {
+          "word": "current",
+          "begin": 153260,
+          "end": 153500
+        },
+        {
+          "word": "data.",
+          "begin": 153500,
+          "end": 153800
+        },
+        {
+          "word": "GC",
+          "begin": 154040,
+          "end": 154360
+        },
+        {
+          "word": "uses",
+          "begin": 154480,
+          "end": 155280
+        },
+        {
+          "word": "the",
+          "begin": 155440,
+          "end": 155500
+        },
+        {
+          "word": "table",
+          "begin": 155620,
+          "end": 155900
+        },
+        {
+          "word": "to",
+          "begin": 156040,
+          "end": 156100
+        },
+        {
+          "word": "pick",
+          "begin": 156180,
+          "end": 156340
+        },
+        {
+          "word": "source",
+          "begin": 156440,
+          "end": 156740
+        },
+        {
+          "word": "blocks",
+          "begin": 156760,
+          "end": 157020
+        },
+        {
+          "word": "(lowest",
+          "begin": 157120,
+          "end": 157440
+        },
+        {
+          "word": "VPC",
+          "begin": 157500,
+          "end": 158000
+        },
+        {
+          "word": "=",
+          "begin": 158160,
+          "end": 158440
+        },
+        {
+          "word": "best",
+          "begin": 158520,
+          "end": 158740
+        },
+        {
+          "word": "candidate)",
+          "begin": 158780,
+          "end": 159300
+        },
+        {
+          "word": "and",
+          "begin": 159740,
+          "end": 159820
+        },
+        {
+          "word": "copies",
+          "begin": 159880,
+          "end": 160220
+        },
+        {
+          "word": "their",
+          "begin": 160220,
+          "end": 160320
+        },
+        {
+          "word": "valid",
+          "begin": 160420,
+          "end": 160700
+        },
+        {
+          "word": "pages",
+          "begin": 160760,
+          "end": 161160
+        },
+        {
+          "word": "to",
+          "begin": 161200,
+          "end": 161260
+        },
+        {
+          "word": "spare",
+          "begin": 161340,
+          "end": 161500
+        },
+        {
+          "word": "blocks",
+          "begin": 161660,
+          "end": 162020
+        },
+        {
+          "word": "before",
+          "begin": 162080,
+          "end": 162280
+        },
+        {
+          "word": "erasing.",
+          "begin": 162400,
+          "end": 162880
+        },
+        {
+          "word": "TRIM",
+          "begin": 163300,
+          "end": 164040
+        },
+        {
+          "word": "directly",
+          "begin": 164120,
+          "end": 164500
+        },
+        {
+          "word": "lowers",
+          "begin": 164500,
+          "end": 164940
+        },
+        {
+          "word": "VPC",
+          "begin": 165000,
+          "end": 165540
+        },
+        {
+          "word": "by",
+          "begin": 165720,
+          "end": 165780
+        },
+        {
+          "word": "telling",
+          "begin": 165900,
+          "end": 166760
+        },
+        {
+          "word": "the",
+          "begin": 166820,
+          "end": 166900
+        },
+        {
+          "word": "which",
+          "begin": 167160,
+          "end": 167300
+        },
+        {
+          "word": "pages",
+          "begin": 167380,
+          "end": 167760
+        },
+        {
+          "word": "are",
+          "begin": 167800,
+          "end": 167820
+        },
+        {
+          "word": "no",
+          "begin": 167920,
+          "end": 167980
+        },
+        {
+          "word": "longer",
+          "begin": 168080,
+          "end": 168320
+        },
+        {
+          "word": "needed",
+          "begin": 168420,
+          "end": 168760
+        },
+        {
+          "word": "making",
+          "begin": 169140,
+          "end": 169400
+        },
+        {
+          "word": "GC",
+          "begin": 169480,
+          "end": 170020
+        },
+        {
+          "word": "faster",
+          "begin": 170160,
+          "end": 170300
+        },
+        {
+          "word": "and",
+          "begin": 170440,
+          "end": 170520
+        },
+        {
+          "word": "cheaper.",
+          "begin": 170580,
+          "end": 170860
+        },
+        {
+          "word": "Runs",
+          "begin": 171060,
+          "end": 171300
+        },
+        {
+          "word": "when",
+          "begin": 171320,
+          "end": 171440
+        },
+        {
+          "word": "the",
+          "begin": 171440,
+          "end": 171500
+        },
+        {
+          "word": "SSD",
+          "begin": 171600,
+          "end": 172000
+        },
+        {
+          "word": "detects",
+          "begin": 172080,
+          "end": 172480
+        },
+        {
+          "word": "idle",
+          "begin": 172600,
+          "end": 172860
+        }
+      ]
+    },
+    {
+      "blockIndex": 11,
+      "type": "paragraph",
+      "text": "Runs when the SSD detects idle time — no host commands for a while. The controller proactively reclaims blocks so free pages are ready when writes arrive.",
+      "beginMs": 172860,
+      "endMs": 180520,
+      "timestamps": [
+        {
+          "word": "time",
+          "begin": 172860,
+          "end": 173160
+        },
+        {
+          "word": "no",
+          "begin": 173460,
+          "end": 173680
+        },
+        {
+          "word": "host",
+          "begin": 173680,
+          "end": 173980
+        },
+        {
+          "word": "commands",
+          "begin": 173980,
+          "end": 174340
+        },
+        {
+          "word": "for",
+          "begin": 174380,
+          "end": 174500
+        },
+        {
+          "word": "a",
+          "begin": 174500,
+          "end": 174540
+        },
+        {
+          "word": "while.",
+          "begin": 174580,
+          "end": 174880
+        },
+        {
+          "word": "The",
+          "begin": 175240,
+          "end": 175280
+        },
+        {
+          "word": "controller",
+          "begin": 175340,
+          "end": 175920
+        },
+        {
+          "word": "proactively",
+          "begin": 175920,
+          "end": 176480
+        },
+        {
+          "word": "reclaims",
+          "begin": 176560,
+          "end": 177000
+        },
+        {
+          "word": "blocks",
+          "begin": 177100,
+          "end": 177520
+        },
+        {
+          "word": "so",
+          "begin": 177600,
+          "end": 177660
+        },
+        {
+          "word": "free",
+          "begin": 177800,
+          "end": 177900
+        },
+        {
+          "word": "pages",
+          "begin": 178000,
+          "end": 178300
+        },
+        {
+          "word": "are",
+          "begin": 178300,
+          "end": 178360
+        },
+        {
+          "word": "ready",
+          "begin": 178480,
+          "end": 178680
+        },
+        {
+          "word": "when",
+          "begin": 178820,
+          "end": 178940
+        },
+        {
+          "word": "writes",
+          "begin": 179000,
+          "end": 179260
+        },
+        {
+          "word": "arrive.",
+          "begin": 179300,
+          "end": 179740
+        },
+        {
+          "word": "Triggered",
+          "begin": 180120,
+          "end": 180520
+        }
+      ]
+    },
+    {
+      "blockIndex": 12,
+      "type": "paragraph",
+      "text": "Triggered when the SSD runs critically low on free pages and a write command arrives. The controller must free space before it can complete the write.",
+      "beginMs": 180560,
+      "endMs": 188180,
+      "timestamps": [
+        {
+          "word": "when",
+          "begin": 180560,
+          "end": 180680
+        },
+        {
+          "word": "the",
+          "begin": 180680,
+          "end": 180720
+        },
+        {
+          "word": "SSD",
+          "begin": 180820,
+          "end": 181220
+        },
+        {
+          "word": "runs",
+          "begin": 181320,
+          "end": 181540
+        },
+        {
+          "word": "critically",
+          "begin": 181620,
+          "end": 181960
+        },
+        {
+          "word": "low",
+          "begin": 182060,
+          "end": 182120
+        },
+        {
+          "word": "on",
+          "begin": 182280,
+          "end": 182380
+        },
+        {
+          "word": "free",
+          "begin": 182480,
+          "end": 182560
+        },
+        {
+          "word": "pages",
+          "begin": 182660,
+          "end": 183140
+        },
+        {
+          "word": "and",
+          "begin": 183380,
+          "end": 183580
+        },
+        {
+          "word": "a",
+          "begin": 183600,
+          "end": 183720
+        },
+        {
+          "word": "write",
+          "begin": 183800,
+          "end": 184020
+        },
+        {
+          "word": "command",
+          "begin": 184060,
+          "end": 184380
+        },
+        {
+          "word": "arrives.",
+          "begin": 184400,
+          "end": 184900
+        },
+        {
+          "word": "The",
+          "begin": 185120,
+          "end": 185160
+        },
+        {
+          "word": "controller",
+          "begin": 185220,
+          "end": 185620
+        },
+        {
+          "word": "must",
+          "begin": 185760,
+          "end": 186020
+        },
+        {
+          "word": "free",
+          "begin": 186080,
+          "end": 186140
+        },
+        {
+          "word": "space",
+          "begin": 186140,
+          "end": 186360
+        },
+        {
+          "word": "before",
+          "begin": 186420,
+          "end": 187080
+        },
+        {
+          "word": "it",
+          "begin": 187080,
+          "end": 187160
+        },
+        {
+          "word": "can",
+          "begin": 187180,
+          "end": 187280
+        },
+        {
+          "word": "complete",
+          "begin": 187340,
+          "end": 187700
+        },
+        {
+          "word": "the",
+          "begin": 187700,
+          "end": 187800
+        },
+        {
+          "word": "write.",
+          "begin": 187880,
+          "end": 188180
+        }
+      ]
+    },
+    {
+      "blockIndex": 13,
+      "type": "paragraph",
+      "text": "Not all blocks are equally good candidates for GC. The controller picks blocks based on:",
+      "beginMs": 188600,
+      "endMs": 193480,
+      "timestamps": [
+        {
+          "word": "Not",
+          "begin": 188600,
+          "end": 188780
+        },
+        {
+          "word": "all",
+          "begin": 188820,
+          "end": 188900
+        },
+        {
+          "word": "blocks",
+          "begin": 188980,
+          "end": 189320
+        },
+        {
+          "word": "are",
+          "begin": 189360,
+          "end": 189380
+        },
+        {
+          "word": "equally",
+          "begin": 189520,
+          "end": 189800
+        },
+        {
+          "word": "good",
+          "begin": 189880,
+          "end": 190020
+        },
+        {
+          "word": "candidates",
+          "begin": 190080,
+          "end": 190560
+        },
+        {
+          "word": "for",
+          "begin": 190620,
+          "end": 190680
+        },
+        {
+          "word": "GC.",
+          "begin": 190780,
+          "end": 191120
+        },
+        {
+          "word": "The",
+          "begin": 191660,
+          "end": 191720
+        },
+        {
+          "word": "controller",
+          "begin": 191780,
+          "end": 192200
+        },
+        {
+          "word": "picks",
+          "begin": 192300,
+          "end": 192500
+        },
+        {
+          "word": "blocks",
+          "begin": 192580,
+          "end": 192860
+        },
+        {
+          "word": "based",
+          "begin": 192940,
+          "end": 193240
+        },
+        {
+          "word": "on:",
+          "begin": 193280,
+          "end": 193480
+        }
+      ]
+    },
+    {
+      "blockIndex": 14,
+      "type": "paragraph",
+      "text": "If GC needs free blocks to work, what happens when the drive is 100% full? This is where over-provisioning (OP) comes in. The drive reserves a percentage of its total NAND capacity that the host can never see or write to.",
+      "beginMs": 193760,
+      "endMs": 205920,
+      "timestamps": [
+        {
+          "word": "If",
+          "begin": 193760,
+          "end": 193840
+        },
+        {
+          "word": "GC",
+          "begin": 193920,
+          "end": 194200
+        },
+        {
+          "word": "needs",
+          "begin": 194300,
+          "end": 194480
+        },
+        {
+          "word": "free",
+          "begin": 194480,
+          "end": 194660
+        },
+        {
+          "word": "blocks",
+          "begin": 194740,
+          "end": 195000
+        },
+        {
+          "word": "to",
+          "begin": 195060,
+          "end": 195100
+        },
+        {
+          "word": "work,",
+          "begin": 195180,
+          "end": 195500
+        },
+        {
+          "word": "what",
+          "begin": 195980,
+          "end": 196100
+        },
+        {
+          "word": "happens",
+          "begin": 196140,
+          "end": 196500
+        },
+        {
+          "word": "when",
+          "begin": 196540,
+          "end": 196640
+        },
+        {
+          "word": "the",
+          "begin": 196640,
+          "end": 196700
+        },
+        {
+          "word": "drive",
+          "begin": 196760,
+          "end": 197020
+        },
+        {
+          "word": "is",
+          "begin": 197040,
+          "end": 197120
+        },
+        {
+          "word": "100%",
+          "begin": 197160,
+          "end": 198000
+        },
+        {
+          "word": "full?",
+          "begin": 198000,
+          "end": 198360
+        },
+        {
+          "word": "This",
+          "begin": 198720,
+          "end": 198940
+        },
+        {
+          "word": "is",
+          "begin": 199020,
+          "end": 199100
+        },
+        {
+          "word": "where",
+          "begin": 199160,
+          "end": 199320
+        },
+        {
+          "word": "over-provisioning",
+          "begin": 199420,
+          "end": 200180
+        },
+        {
+          "word": "(OP)",
+          "begin": 200300,
+          "end": 200580
+        },
+        {
+          "word": "comes",
+          "begin": 200680,
+          "end": 200940
+        },
+        {
+          "word": "in.",
+          "begin": 200940,
+          "end": 200860
+        },
+        {
+          "word": "The",
+          "begin": 200920,
+          "end": 201020
+        },
+        {
+          "word": "drive",
+          "begin": 201140,
+          "end": 201960
+        },
+        {
+          "word": "reserves",
+          "begin": 201980,
+          "end": 202360
+        },
+        {
+          "word": "a",
+          "begin": 202380,
+          "end": 202540
+        },
+        {
+          "word": "percentage",
+          "begin": 202660,
+          "end": 203100
+        },
+        {
+          "word": "of",
+          "begin": 203100,
+          "end": 203200
+        },
+        {
+          "word": "its",
+          "begin": 203200,
+          "end": 203240
+        },
+        {
+          "word": "total",
+          "begin": 203300,
+          "end": 203560
+        },
+        {
+          "word": "NAND",
+          "begin": 203700,
+          "end": 203940
+        },
+        {
+          "word": "capacity",
+          "begin": 203940,
+          "end": 204260
+        },
+        {
+          "word": "that",
+          "begin": 204400,
+          "end": 204500
+        },
+        {
+          "word": "the",
+          "begin": 204500,
+          "end": 204560
+        },
+        {
+          "word": "host",
+          "begin": 204660,
+          "end": 204820
+        },
+        {
+          "word": "can",
+          "begin": 204820,
+          "end": 204960
+        },
+        {
+          "word": "never",
+          "begin": 204960,
+          "end": 205200
+        },
+        {
+          "word": "see",
+          "begin": 205200,
+          "end": 205280
+        },
+        {
+          "word": "or",
+          "begin": 205320,
+          "end": 205400
+        },
+        {
+          "word": "write",
+          "begin": 205460,
+          "end": 205660
+        },
+        {
+          "word": "to.",
+          "begin": 205840,
+          "end": 205920
+        }
+      ]
+    },
+    {
+      "blockIndex": 15,
+      "type": "paragraph",
+      "text": "If TRIM is so important, should you run it constantly? There are two approaches, each with tradeoffs:",
+      "beginMs": 206080,
+      "endMs": 212360,
+      "timestamps": [
+        {
+          "word": "If",
+          "begin": 206080,
+          "end": 206360
+        },
+        {
+          "word": "TRIM",
+          "begin": 206380,
+          "end": 206540
+        },
+        {
+          "word": "is",
+          "begin": 207040,
+          "end": 207120
+        },
+        {
+          "word": "so",
+          "begin": 207200,
+          "end": 207280
+        },
+        {
+          "word": "important,",
+          "begin": 207280,
+          "end": 207860
+        },
+        {
+          "word": "should",
+          "begin": 207900,
+          "end": 208120
+        },
+        {
+          "word": "you",
+          "begin": 208140,
+          "end": 208180
+        },
+        {
+          "word": "run",
+          "begin": 208180,
+          "end": 208220
+        },
+        {
+          "word": "it",
+          "begin": 208280,
+          "end": 208300
+        },
+        {
+          "word": "constantly?",
+          "begin": 208600,
+          "end": 209740
+        },
+        {
+          "word": "There",
+          "begin": 210080,
+          "end": 210180
+        },
+        {
+          "word": "are",
+          "begin": 210200,
+          "end": 210440
+        },
+        {
+          "word": "two",
+          "begin": 210520,
+          "end": 210540
+        },
+        {
+          "word": "approaches,",
+          "begin": 210540,
+          "end": 211120
+        },
+        {
+          "word": "each",
+          "begin": 211400,
+          "end": 211560
+        },
+        {
+          "word": "with",
+          "begin": 211620,
+          "end": 211720
+        },
+        {
+          "word": "tradeoffs:",
+          "begin": 211800,
+          "end": 212360
+        }
+      ]
+    },
+    {
+      "blockIndex": 16,
+      "type": "paragraph",
+      "text": "These concepts form a chain — each one affects the next:",
+      "beginMs": 212720,
+      "endMs": 216380,
+      "timestamps": [
+        {
+          "word": "These",
+          "begin": 212720,
+          "end": 212920
+        },
+        {
+          "word": "concepts",
+          "begin": 212980,
+          "end": 213480
+        },
+        {
+          "word": "form",
+          "begin": 213500,
+          "end": 213760
+        },
+        {
+          "word": "a",
+          "begin": 213780,
+          "end": 214020
+        },
+        {
+          "word": "chain",
+          "begin": 214220,
+          "end": 214780
+        },
+        {
+          "word": "each",
+          "begin": 214780,
+          "end": 214880
+        },
+        {
+          "word": "one",
+          "begin": 214880,
+          "end": 215060
+        },
+        {
+          "word": "affects",
+          "begin": 214880,
+          "end": 215220
+        },
+        {
+          "word": "the",
+          "begin": 215280,
+          "end": 215320
+        },
+        {
+          "word": "next:",
+          "begin": 215380,
+          "end": 215800
+        },
+        {
+          "word": "Why",
+          "begin": 216160,
+          "end": 216380
+        }
+      ]
+    },
+    {
+      "blockIndex": 17,
+      "type": "info",
+      "text": "Why a nearly-full SSD slows down: When a drive is 90%+ full, there are very few free blocks. Background GC has limited room to work. Writes trigger foreground GC, which blocks your I/O. Combined with less over-provisioning headroom, this is why SSD performance degrades significantly when nearly full. General rule: keep at least 10-20% free space for consistent performance.",
+      "beginMs": 216480,
+      "endMs": 240600,
+      "timestamps": [
+        {
+          "word": "a",
+          "begin": 216480,
+          "end": 216540
+        },
+        {
+          "word": "nearly-full",
+          "begin": 216480,
+          "end": 217060
+        },
+        {
+          "word": "SSD",
+          "begin": 217140,
+          "end": 217600
+        },
+        {
+          "word": "slows",
+          "begin": 217760,
+          "end": 218060
+        },
+        {
+          "word": "down:",
+          "begin": 218100,
+          "end": 218420
+        },
+        {
+          "word": "When",
+          "begin": 218800,
+          "end": 218900
+        },
+        {
+          "word": "a",
+          "begin": 218900,
+          "end": 218960
+        },
+        {
+          "word": "drive",
+          "begin": 219020,
+          "end": 219320
+        },
+        {
+          "word": "is",
+          "begin": 219340,
+          "end": 219420
+        },
+        {
+          "word": "90%+",
+          "begin": 219500,
+          "end": 220480
+        },
+        {
+          "word": "full,",
+          "begin": 220560,
+          "end": 220780
+        },
+        {
+          "word": "there",
+          "begin": 221080,
+          "end": 221200
+        },
+        {
+          "word": "are",
+          "begin": 221220,
+          "end": 221240
+        },
+        {
+          "word": "very",
+          "begin": 221340,
+          "end": 221560
+        },
+        {
+          "word": "few",
+          "begin": 221680,
+          "end": 221780
+        },
+        {
+          "word": "free",
+          "begin": 221960,
+          "end": 222040
+        },
+        {
+          "word": "blocks.",
+          "begin": 222140,
+          "end": 222620
+        },
+        {
+          "word": "Background",
+          "begin": 223060,
+          "end": 223480
+        },
+        {
+          "word": "GC",
+          "begin": 223540,
+          "end": 223880
+        },
+        {
+          "word": "has",
+          "begin": 224040,
+          "end": 224200
+        },
+        {
+          "word": "limited",
+          "begin": 224280,
+          "end": 224600
+        },
+        {
+          "word": "room",
+          "begin": 224660,
+          "end": 224820
+        },
+        {
+          "word": "to",
+          "begin": 224880,
+          "end": 224940
+        },
+        {
+          "word": "work.",
+          "begin": 225020,
+          "end": 225300
+        },
+        {
+          "word": "Writes",
+          "begin": 225620,
+          "end": 225860
+        },
+        {
+          "word": "trigger",
+          "begin": 225940,
+          "end": 226160
+        },
+        {
+          "word": "foreground",
+          "begin": 226300,
+          "end": 226760
+        },
+        {
+          "word": "GC,",
+          "begin": 226840,
+          "end": 227220
+        },
+        {
+          "word": "which",
+          "begin": 227620,
+          "end": 227760
+        },
+        {
+          "word": "blocks",
+          "begin": 227840,
+          "end": 228180
+        },
+        {
+          "word": "your",
+          "begin": 228200,
+          "end": 228400
+        },
+        {
+          "word": "I/O.",
+          "begin": 228560,
+          "end": 229140
+        },
+        {
+          "word": "Combined",
+          "begin": 229140,
+          "end": 229580
+        },
+        {
+          "word": "with",
+          "begin": 229620,
+          "end": 229740
+        },
+        {
+          "word": "less",
+          "begin": 229800,
+          "end": 230000
+        },
+        {
+          "word": "over-provisioning",
+          "begin": 230080,
+          "end": 230780
+        },
+        {
+          "word": "headroom,",
+          "begin": 230860,
+          "end": 231040
+        },
+        {
+          "word": "this",
+          "begin": 231100,
+          "end": 231600
+        },
+        {
+          "word": "is",
+          "begin": 231620,
+          "end": 231720
+        },
+        {
+          "word": "why",
+          "begin": 231760,
+          "end": 231920
+        },
+        {
+          "word": "SSD",
+          "begin": 231960,
+          "end": 232760
+        },
+        {
+          "word": "performance",
+          "begin": 232900,
+          "end": 233400
+        },
+        {
+          "word": "degrades",
+          "begin": 233440,
+          "end": 233840
+        },
+        {
+          "word": "significantly",
+          "begin": 233900,
+          "end": 234560
+        },
+        {
+          "word": "when",
+          "begin": 234660,
+          "end": 234760
+        },
+        {
+          "word": "nearly",
+          "begin": 234780,
+          "end": 235080
+        },
+        {
+          "word": "full.",
+          "begin": 235220,
+          "end": 235300
+        },
+        {
+          "word": "General",
+          "begin": 235920,
+          "end": 236200
+        },
+        {
+          "word": "rule:",
+          "begin": 236340,
+          "end": 236620
+        },
+        {
+          "word": "keep",
+          "begin": 236960,
+          "end": 237180
+        },
+        {
+          "word": "at",
+          "begin": 237200,
+          "end": 237280
+        },
+        {
+          "word": "least",
+          "begin": 237300,
+          "end": 237500
+        },
+        {
+          "word": "10-20%",
+          "begin": 237500,
+          "end": 238600
+        },
+        {
+          "word": "free",
+          "begin": 238700,
+          "end": 238800
+        },
+        {
+          "word": "space",
+          "begin": 238920,
+          "end": 239240
+        },
+        {
+          "word": "for",
+          "begin": 239300,
+          "end": 239360
+        },
+        {
+          "word": "consistent",
+          "begin": 239440,
+          "end": 239940
+        },
+        {
+          "word": "performance.",
+          "begin": 239980,
+          "end": 240600
+        }
+      ]
+    },
+    {
+      "blockIndex": 18,
+      "type": "reveal",
+      "text": "Knowledge check: A colleague says: 'TRIM is optional — the SSD works fine without it.' Under what conditions is this true, and when does it fail catastrophically? Trace the chain of consequences when TRIM is absent on a heavily-used drive. The answer: Without TRIM, the SSD has no way to know when files are deleted — the filesystem marks LBAs as free internally, but the SSD still considers those pages valid. On a lightly-used drive with plenty of free space, this barely matters because GC has enough free blocks to work with. But as the drive fills up, consequences cascade: GC must copy 'valid' pages that are actually dead data, dramatically increasing write amplification. More GC writes means faster NAND wear. Fewer free blocks forces foreground GC, which blocks host I/O and causes latency spikes. Eventually the drive enters a vicious cycle — high WAF, degraded performance, and shortened lifespan. TRIM breaks this cycle by telling the SSD which pages are stale, so GC skips them entirely.",
+      "beginMs": 240920,
+      "endMs": 296200,
+      "timestamps": [
+        {
+          "word": "Knowledge",
+          "begin": 240920,
+          "end": 241440
+        },
+        {
+          "word": "check:",
+          "begin": 241600,
+          "end": 242000
+        },
+        {
+          "word": "A",
+          "begin": 242060,
+          "end": 242080
+        },
+        {
+          "word": "colleague",
+          "begin": 242060,
+          "end": 242280
+        },
+        {
+          "word": "says:",
+          "begin": 242360,
+          "end": 242640
+        },
+        {
+          "word": "'TRIM",
+          "begin": 242880,
+          "end": 243080
+        },
+        {
+          "word": "is",
+          "begin": 243100,
+          "end": 243200
+        },
+        {
+          "word": "optional",
+          "begin": 243280,
+          "end": 243620
+        },
+        {
+          "word": "the",
+          "begin": 243840,
+          "end": 243900
+        },
+        {
+          "word": "SSD",
+          "begin": 244000,
+          "end": 244400
+        },
+        {
+          "word": "works",
+          "begin": 244500,
+          "end": 244700
+        },
+        {
+          "word": "fine",
+          "begin": 244740,
+          "end": 244940
+        },
+        {
+          "word": "without",
+          "begin": 244960,
+          "end": 245260
+        },
+        {
+          "word": "it.'",
+          "begin": 245280,
+          "end": 245380
+        },
+        {
+          "word": "Under",
+          "begin": 245660,
+          "end": 245800
+        },
+        {
+          "word": "what",
+          "begin": 245880,
+          "end": 246020
+        },
+        {
+          "word": "conditions",
+          "begin": 246060,
+          "end": 246500
+        },
+        {
+          "word": "is",
+          "begin": 246520,
+          "end": 246620
+        },
+        {
+          "word": "this",
+          "begin": 246660,
+          "end": 246820
+        },
+        {
+          "word": "true,",
+          "begin": 246880,
+          "end": 247020
+        },
+        {
+          "word": "and",
+          "begin": 247280,
+          "end": 247360
+        },
+        {
+          "word": "when",
+          "begin": 247400,
+          "end": 247540
+        },
+        {
+          "word": "does",
+          "begin": 247560,
+          "end": 247680
+        },
+        {
+          "word": "it",
+          "begin": 247700,
+          "end": 247780
+        },
+        {
+          "word": "fail",
+          "begin": 247840,
+          "end": 248040
+        },
+        {
+          "word": "catastrophically?",
+          "begin": 248100,
+          "end": 248840
+        },
+        {
+          "word": "Trace",
+          "begin": 249220,
+          "end": 249480
+        },
+        {
+          "word": "the",
+          "begin": 249280,
+          "end": 249340
+        },
+        {
+          "word": "chain",
+          "begin": 249460,
+          "end": 249840
+        },
+        {
+          "word": "of",
+          "begin": 249840,
+          "end": 249900
+        },
+        {
+          "word": "consequences",
+          "begin": 249960,
+          "end": 250640
+        },
+        {
+          "word": "when",
+          "begin": 250680,
+          "end": 250800
+        },
+        {
+          "word": "TRIM",
+          "begin": 250860,
+          "end": 251060
+        },
+        {
+          "word": "is",
+          "begin": 250920,
+          "end": 251060
+        },
+        {
+          "word": "absent",
+          "begin": 251080,
+          "end": 251440
+        },
+        {
+          "word": "on",
+          "begin": 251460,
+          "end": 251560
+        },
+        {
+          "word": "a",
+          "begin": 251620,
+          "end": 251720
+        },
+        {
+          "word": "heavily-used",
+          "begin": 251800,
+          "end": 252420
+        },
+        {
+          "word": "drive.",
+          "begin": 252420,
+          "end": 252840
+        },
+        {
+          "word": "The",
+          "begin": 253000,
+          "end": 253040
+        },
+        {
+          "word": "answer:",
+          "begin": 253160,
+          "end": 253420
+        },
+        {
+          "word": "Without",
+          "begin": 253660,
+          "end": 253940
+        },
+        {
+          "word": "TRIM,",
+          "begin": 254000,
+          "end": 254280
+        },
+        {
+          "word": "the",
+          "begin": 254560,
+          "end": 254620
+        },
+        {
+          "word": "SSD",
+          "begin": 254720,
+          "end": 255120
+        },
+        {
+          "word": "has",
+          "begin": 255220,
+          "end": 255380
+        },
+        {
+          "word": "no",
+          "begin": 255440,
+          "end": 255520
+        },
+        {
+          "word": "way",
+          "begin": 255620,
+          "end": 255780
+        },
+        {
+          "word": "to",
+          "begin": 255780,
+          "end": 255820
+        },
+        {
+          "word": "know",
+          "begin": 255880,
+          "end": 255940
+        },
+        {
+          "word": "when",
+          "begin": 256060,
+          "end": 256180
+        },
+        {
+          "word": "files",
+          "begin": 256260,
+          "end": 256580
+        },
+        {
+          "word": "are",
+          "begin": 256600,
+          "end": 256620
+        },
+        {
+          "word": "deleted",
+          "begin": 256680,
+          "end": 257120
+        },
+        {
+          "word": "the",
+          "begin": 257460,
+          "end": 257500
+        },
+        {
+          "word": "filesystem",
+          "begin": 257580,
+          "end": 258140
+        },
+        {
+          "word": "marks",
+          "begin": 258180,
+          "end": 258420
+        },
+        {
+          "word": "LBAs",
+          "begin": 258500,
+          "end": 258980
+        },
+        {
+          "word": "as",
+          "begin": 259000,
+          "end": 259100
+        },
+        {
+          "word": "free",
+          "begin": 259200,
+          "end": 259280
+        },
+        {
+          "word": "internally,",
+          "begin": 259380,
+          "end": 259820
+        },
+        {
+          "word": "but",
+          "begin": 260040,
+          "end": 260160
+        },
+        {
+          "word": "the",
+          "begin": 260160,
+          "end": 260200
+        },
+        {
+          "word": "SSD",
+          "begin": 260300,
+          "end": 260680
+        },
+        {
+          "word": "still",
+          "begin": 260780,
+          "end": 260940
+        },
+        {
+          "word": "considers",
+          "begin": 261020,
+          "end": 261460
+        },
+        {
+          "word": "those",
+          "begin": 261500,
+          "end": 261660
+        },
+        {
+          "word": "pages",
+          "begin": 261700,
+          "end": 262020
+        },
+        {
+          "word": "valid.",
+          "begin": 262060,
+          "end": 262420
+        },
+        {
+          "word": "On",
+          "begin": 262600,
+          "end": 262700
+        },
+        {
+          "word": "a",
+          "begin": 262700,
+          "end": 262740
+        },
+        {
+          "word": "lightly-used",
+          "begin": 262800,
+          "end": 263340
+        },
+        {
+          "word": "drive",
+          "begin": 263340,
+          "end": 263620
+        },
+        {
+          "word": "with",
+          "begin": 263640,
+          "end": 263740
+        },
+        {
+          "word": "plenty",
+          "begin": 263800,
+          "end": 264000
+        },
+        {
+          "word": "of",
+          "begin": 264060,
+          "end": 264120
+        },
+        {
+          "word": "free",
+          "begin": 264160,
+          "end": 264280
+        },
+        {
+          "word": "space,",
+          "begin": 264400,
+          "end": 264780
+        },
+        {
+          "word": "this",
+          "begin": 265080,
+          "end": 265220
+        },
+        {
+          "word": "barely",
+          "begin": 265300,
+          "end": 265540
+        },
+        {
+          "word": "matters",
+          "begin": 265620,
+          "end": 265980
+        },
+        {
+          "word": "because",
+          "begin": 266020,
+          "end": 266280
+        },
+        {
+          "word": "GC",
+          "begin": 266340,
+          "end": 266620
+        },
+        {
+          "word": "has",
+          "begin": 266680,
+          "end": 266840
+        },
+        {
+          "word": "enough",
+          "begin": 266860,
+          "end": 267100
+        },
+        {
+          "word": "free",
+          "begin": 267100,
+          "end": 267260
+        },
+        {
+          "word": "blocks",
+          "begin": 267360,
+          "end": 267640
+        },
+        {
+          "word": "to",
+          "begin": 267660,
+          "end": 267720
+        },
+        {
+          "word": "work",
+          "begin": 267760,
+          "end": 267960
+        },
+        {
+          "word": "with.",
+          "begin": 267980,
+          "end": 268200
+        },
+        {
+          "word": "But",
+          "begin": 268320,
+          "end": 268420
+        },
+        {
+          "word": "as",
+          "begin": 268440,
+          "end": 268580
+        },
+        {
+          "word": "the",
+          "begin": 268600,
+          "end": 268660
+        },
+        {
+          "word": "drive",
+          "begin": 268720,
+          "end": 269000
+        },
+        {
+          "word": "fills",
+          "begin": 269060,
+          "end": 269300
+        },
+        {
+          "word": "up,",
+          "begin": 269340,
+          "end": 269540
+        },
+        {
+          "word": "consequences",
+          "begin": 269760,
+          "end": 270240
+        },
+        {
+          "word": "cascade:",
+          "begin": 270260,
+          "end": 270620
+        },
+        {
+          "word": "GC",
+          "begin": 270680,
+          "end": 271540
+        },
+        {
+          "word": "must",
+          "begin": 271640,
+          "end": 271800
+        },
+        {
+          "word": "copy",
+          "begin": 271840,
+          "end": 272100
+        },
+        {
+          "word": "'valid'",
+          "begin": 272200,
+          "end": 272460
+        },
+        {
+          "word": "pages",
+          "begin": 272500,
+          "end": 272900
+        },
+        {
+          "word": "that",
+          "begin": 272940,
+          "end": 273040
+        },
+        {
+          "word": "are",
+          "begin": 273060,
+          "end": 273080
+        },
+        {
+          "word": "actually",
+          "begin": 273200,
+          "end": 273499
+        },
+        {
+          "word": "dead",
+          "begin": 273580,
+          "end": 273760
+        },
+        {
+          "word": "data,",
+          "begin": 273820,
+          "end": 274040
+        },
+        {
+          "word": "dramatically",
+          "begin": 274360,
+          "end": 274840
+        },
+        {
+          "word": "increasing",
+          "begin": 274900,
+          "end": 275360
+        },
+        {
+          "word": "write",
+          "begin": 275420,
+          "end": 275580
+        },
+        {
+          "word": "amplification.",
+          "begin": 275660,
+          "end": 276420
+        },
+        {
+          "word": "More",
+          "begin": 276740,
+          "end": 276800
+        },
+        {
+          "word": "GC",
+          "begin": 276980,
+          "end": 277240
+        },
+        {
+          "word": "writes",
+          "begin": 277340,
+          "end": 277660
+        },
+        {
+          "word": "means",
+          "begin": 277820,
+          "end": 278020
+        },
+        {
+          "word": "faster",
+          "begin": 278100,
+          "end": 278420
+        },
+        {
+          "word": "NAND",
+          "begin": 278520,
+          "end": 278880
+        },
+        {
+          "word": "wear.",
+          "begin": 279000,
+          "end": 279080
+        },
+        {
+          "word": "Fewer",
+          "begin": 279360,
+          "end": 279560
+        },
+        {
+          "word": "free",
+          "begin": 279720,
+          "end": 279800
+        },
+        {
+          "word": "blocks",
+          "begin": 279940,
+          "end": 280260
+        },
+        {
+          "word": "forces",
+          "begin": 280360,
+          "end": 280720
+        },
+        {
+          "word": "foreground",
+          "begin": 280780,
+          "end": 281220
+        },
+        {
+          "word": "GC,",
+          "begin": 281220,
+          "end": 281620
+        },
+        {
+          "word": "which",
+          "begin": 281940,
+          "end": 282180
+        },
+        {
+          "word": "blocks",
+          "begin": 282200,
+          "end": 282460
+        },
+        {
+          "word": "host",
+          "begin": 282480,
+          "end": 282760
+        },
+        {
+          "word": "I/O",
+          "begin": 282820,
+          "end": 283040
+        },
+        {
+          "word": "and",
+          "begin": 283180,
+          "end": 283240
+        },
+        {
+          "word": "causes",
+          "begin": 283300,
+          "end": 283640
+        },
+        {
+          "word": "latency",
+          "begin": 283700,
+          "end": 284040
+        },
+        {
+          "word": "spikes.",
+          "begin": 284120,
+          "end": 284560
+        },
+        {
+          "word": "Eventually",
+          "begin": 284920,
+          "end": 285340
+        },
+        {
+          "word": "the",
+          "begin": 285420,
+          "end": 285480
+        },
+        {
+          "word": "drive",
+          "begin": 285540,
+          "end": 285820
+        },
+        {
+          "word": "enters",
+          "begin": 285880,
+          "end": 286180
+        },
+        {
+          "word": "a",
+          "begin": 286200,
+          "end": 286220
+        },
+        {
+          "word": "vicious",
+          "begin": 286300,
+          "end": 286580
+        },
+        {
+          "word": "cycle",
+          "begin": 286640,
+          "end": 287860
+        },
+        {
+          "word": "high",
+          "begin": 287880,
+          "end": 288020
+        },
+        {
+          "word": "WAF,",
+          "begin": 288160,
+          "end": 288380
+        },
+        {
+          "word": "degraded",
+          "begin": 288560,
+          "end": 288940
+        },
+        {
+          "word": "performance,",
+          "begin": 288980,
+          "end": 289580
+        },
+        {
+          "word": "and",
+          "begin": 289840,
+          "end": 289920
+        },
+        {
+          "word": "shortened",
+          "begin": 290000,
+          "end": 290300
+        },
+        {
+          "word": "lifespan.",
+          "begin": 290340,
+          "end": 290900
+        },
+        {
+          "word": "TRIM",
+          "begin": 291100,
+          "end": 291300
+        },
+        {
+          "word": "breaks",
+          "begin": 291360,
+          "end": 291600
+        },
+        {
+          "word": "this",
+          "begin": 291640,
+          "end": 291780
+        },
+        {
+          "word": "cycle",
+          "begin": 291840,
+          "end": 292100
+        },
+        {
+          "word": "by",
+          "begin": 292180,
+          "end": 292240
+        },
+        {
+          "word": "telling",
+          "begin": 292340,
+          "end": 292620
+        },
+        {
+          "word": "the",
+          "begin": 292640,
+          "end": 292700
+        },
+        {
+          "word": "SSD",
+          "begin": 292780,
+          "end": 293200
+        },
+        {
+          "word": "which",
+          "begin": 293320,
+          "end": 293620
+        },
+        {
+          "word": "pages",
+          "begin": 293720,
+          "end": 294120
+        },
+        {
+          "word": "are",
+          "begin": 294160,
+          "end": 294400
+        },
+        {
+          "word": "stale,",
+          "begin": 294660,
+          "end": 295300
+        },
+        {
+          "word": "so",
+          "begin": 295340,
+          "end": 295400
+        },
+        {
+          "word": "GC",
+          "begin": 295460,
+          "end": 295620
+        },
+        {
+          "word": "skips",
+          "begin": 295620,
+          "end": 295780
+        },
+        {
+          "word": "them",
+          "begin": 295820,
+          "end": 295940
+        },
+        {
+          "word": "entirely.",
+          "begin": 296040,
+          "end": 296200
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

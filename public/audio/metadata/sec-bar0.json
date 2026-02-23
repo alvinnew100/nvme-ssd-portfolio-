@@ -1,0 +1,4151 @@
+{
+  "sectionId": "sec-bar0",
+  "audioFile": "/audio/sections/sec-bar0.mp3",
+  "totalDurationMs": 330320,
+  "fileSizeBytes": 5286144,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "paragraph",
+      "text": "The key insight: The CPU uses its normal memory instructions (load/store) — it doesn't need special I/O instructions. The hardware routing makes SSD registers &ldquo;look like&rdquo; regular memory addresses. This is why it's called memory-mapped I/O.",
+      "beginMs": 40,
+      "endMs": 16160,
+      "timestamps": [
+        {
+          "word": "The",
+          "begin": 40,
+          "end": 80
+        },
+        {
+          "word": "key",
+          "begin": 140,
+          "end": 240
+        },
+        {
+          "word": "insight:",
+          "begin": 320,
+          "end": 740
+        },
+        {
+          "word": "The",
+          "begin": 920,
+          "end": 980
+        },
+        {
+          "word": "CPU",
+          "begin": 1060,
+          "end": 1500
+        },
+        {
+          "word": "uses",
+          "begin": 1600,
+          "end": 1780
+        },
+        {
+          "word": "its",
+          "begin": 1780,
+          "end": 2040
+        },
+        {
+          "word": "normal",
+          "begin": 2100,
+          "end": 2460
+        },
+        {
+          "word": "memory",
+          "begin": 2520,
+          "end": 2700
+        },
+        {
+          "word": "instructions",
+          "begin": 2700,
+          "end": 3240
+        },
+        {
+          "word": "(load/store)",
+          "begin": 3280,
+          "end": 4100
+        },
+        {
+          "word": "it",
+          "begin": 4400,
+          "end": 4440
+        },
+        {
+          "word": "doesn't",
+          "begin": 4480,
+          "end": 4720
+        },
+        {
+          "word": "need",
+          "begin": 4720,
+          "end": 4900
+        },
+        {
+          "word": "special",
+          "begin": 4940,
+          "end": 5300
+        },
+        {
+          "word": "I/O",
+          "begin": 5360,
+          "end": 5780
+        },
+        {
+          "word": "instructions.",
+          "begin": 5840,
+          "end": 6540
+        },
+        {
+          "word": "The",
+          "begin": 6880,
+          "end": 6940
+        },
+        {
+          "word": "hardware",
+          "begin": 6980,
+          "end": 7260
+        },
+        {
+          "word": "routing",
+          "begin": 7360,
+          "end": 7660
+        },
+        {
+          "word": "makes",
+          "begin": 7700,
+          "end": 7900
+        },
+        {
+          "word": "SSD",
+          "begin": 7940,
+          "end": 8320
+        },
+        {
+          "word": "registers",
+          "begin": 8400,
+          "end": 10560
+        },
+        {
+          "word": "&ldquo;look",
+          "begin": 10640,
+          "end": 11240
+        },
+        {
+          "word": "regular",
+          "begin": 11700,
+          "end": 11980
+        },
+        {
+          "word": "memory",
+          "begin": 12040,
+          "end": 12300
+        },
+        {
+          "word": "addresses.",
+          "begin": 12360,
+          "end": 12900
+        },
+        {
+          "word": "This",
+          "begin": 13240,
+          "end": 13360
+        },
+        {
+          "word": "is",
+          "begin": 13380,
+          "end": 13480
+        },
+        {
+          "word": "why",
+          "begin": 13520,
+          "end": 13580
+        },
+        {
+          "word": "it's",
+          "begin": 13680,
+          "end": 13780
+        },
+        {
+          "word": "called",
+          "begin": 13840,
+          "end": 14040
+        },
+        {
+          "word": "memory-mapped",
+          "begin": 14100,
+          "end": 14700
+        },
+        {
+          "word": "I/O.",
+          "begin": 14780,
+          "end": 15780
+        },
+        {
+          "word": "The",
+          "begin": 15840,
+          "end": 15880
+        },
+        {
+          "word": "Control",
+          "begin": 15900,
+          "end": 16160
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "heading",
+      "text": "The Control Panel — BAR0 Registers",
+      "beginMs": 16200,
+      "endMs": 19100,
+      "timestamps": [
+        {
+          "word": "Panel",
+          "begin": 16200,
+          "end": 17060
+        },
+        {
+          "word": "BAR0",
+          "begin": 17220,
+          "end": 17420
+        },
+        {
+          "word": "Registers",
+          "begin": 17500,
+          "end": 17940
+        },
+        {
+          "word": "Analogy:",
+          "begin": 17960,
+          "end": 19100
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "analogy",
+      "text": "Analogy: BAR0 Is the SSD's Control Panel. BAR0 is like a control panel mounted on the front of the SSD. Each register is a button or dial — one enables the controller, another reports status, another sets queue sizes. The CPU accesses these 'buttons' by reading/writing specific memory addresses.",
+      "beginMs": 19280,
+      "endMs": 36860,
+      "timestamps": [
+        {
+          "word": "BAR0",
+          "begin": 19280,
+          "end": 19500
+        },
+        {
+          "word": "Is",
+          "begin": 19840,
+          "end": 19940
+        },
+        {
+          "word": "the",
+          "begin": 19980,
+          "end": 20040
+        },
+        {
+          "word": "SSD's",
+          "begin": 20100,
+          "end": 20620
+        },
+        {
+          "word": "Control",
+          "begin": 20660,
+          "end": 20980
+        },
+        {
+          "word": "Panel.",
+          "begin": 21040,
+          "end": 22000
+        },
+        {
+          "word": "BAR0",
+          "begin": 22160,
+          "end": 22600
+        },
+        {
+          "word": "is",
+          "begin": 22660,
+          "end": 22680
+        },
+        {
+          "word": "like",
+          "begin": 22700,
+          "end": 22960
+        },
+        {
+          "word": "a",
+          "begin": 22980,
+          "end": 23040
+        },
+        {
+          "word": "control",
+          "begin": 23080,
+          "end": 23260
+        },
+        {
+          "word": "panel",
+          "begin": 23300,
+          "end": 23520
+        },
+        {
+          "word": "mounted",
+          "begin": 23600,
+          "end": 23900
+        },
+        {
+          "word": "on",
+          "begin": 23920,
+          "end": 24000
+        },
+        {
+          "word": "the",
+          "begin": 24000,
+          "end": 24060
+        },
+        {
+          "word": "front",
+          "begin": 24140,
+          "end": 24300
+        },
+        {
+          "word": "of",
+          "begin": 24300,
+          "end": 24380
+        },
+        {
+          "word": "the",
+          "begin": 24400,
+          "end": 24440
+        },
+        {
+          "word": "SSD.",
+          "begin": 24520,
+          "end": 24960
+        },
+        {
+          "word": "Each",
+          "begin": 25540,
+          "end": 25680
+        },
+        {
+          "word": "register",
+          "begin": 25740,
+          "end": 26180
+        },
+        {
+          "word": "is",
+          "begin": 26180,
+          "end": 26260
+        },
+        {
+          "word": "a",
+          "begin": 26280,
+          "end": 26460
+        },
+        {
+          "word": "button",
+          "begin": 26520,
+          "end": 26640
+        },
+        {
+          "word": "or",
+          "begin": 26660,
+          "end": 26680
+        },
+        {
+          "word": "dial",
+          "begin": 26780,
+          "end": 27120
+        },
+        {
+          "word": "one",
+          "begin": 27380,
+          "end": 27520
+        },
+        {
+          "word": "enables",
+          "begin": 27540,
+          "end": 27960
+        },
+        {
+          "word": "the",
+          "begin": 28020,
+          "end": 28120
+        },
+        {
+          "word": "controller,",
+          "begin": 28020,
+          "end": 28860
+        },
+        {
+          "word": "another",
+          "begin": 28900,
+          "end": 29080
+        },
+        {
+          "word": "reports",
+          "begin": 29160,
+          "end": 29600
+        },
+        {
+          "word": "status,",
+          "begin": 29600,
+          "end": 30080
+        },
+        {
+          "word": "another",
+          "begin": 30240,
+          "end": 30480
+        },
+        {
+          "word": "sets",
+          "begin": 30580,
+          "end": 30800
+        },
+        {
+          "word": "queue",
+          "begin": 30860,
+          "end": 30960
+        },
+        {
+          "word": "sizes.",
+          "begin": 31080,
+          "end": 31620
+        },
+        {
+          "word": "The",
+          "begin": 31960,
+          "end": 32020
+        },
+        {
+          "word": "CPU",
+          "begin": 32119,
+          "end": 32479
+        },
+        {
+          "word": "accesses",
+          "begin": 32580,
+          "end": 33040
+        },
+        {
+          "word": "these",
+          "begin": 33080,
+          "end": 33220
+        },
+        {
+          "word": "'buttons'",
+          "begin": 33280,
+          "end": 33540
+        },
+        {
+          "word": "by",
+          "begin": 33540,
+          "end": 33820
+        },
+        {
+          "word": "reading/writing",
+          "begin": 33940,
+          "end": 34560
+        },
+        {
+          "word": "specific",
+          "begin": 34620,
+          "end": 35080
+        },
+        {
+          "word": "memory",
+          "begin": 35140,
+          "end": 35360
+        },
+        {
+          "word": "addresses.",
+          "begin": 35460,
+          "end": 36080
+        },
+        {
+          "word": "BAR0",
+          "begin": 36380,
+          "end": 36860
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "term",
+      "text": "BAR0 (Base Address Register 0): A region of memory-mapped I/O space assigned to the SSD during PCIe enumeration. Contains the NVMe controller's registers — the CPU reads and writes these addresses to configure and control the SSD.",
+      "beginMs": 36980,
+      "endMs": 55540,
+      "timestamps": [
+        {
+          "word": "(Base",
+          "begin": 36980,
+          "end": 37200
+        },
+        {
+          "word": "Address",
+          "begin": 37280,
+          "end": 37600
+        },
+        {
+          "word": "Register",
+          "begin": 37660,
+          "end": 38020
+        },
+        {
+          "word": "0):",
+          "begin": 38160,
+          "end": 38860
+        },
+        {
+          "word": "A",
+          "begin": 38940,
+          "end": 39020
+        },
+        {
+          "word": "region",
+          "begin": 39120,
+          "end": 39440
+        },
+        {
+          "word": "of",
+          "begin": 39480,
+          "end": 39500
+        },
+        {
+          "word": "memory-mapped",
+          "begin": 39480,
+          "end": 40040
+        },
+        {
+          "word": "I/O",
+          "begin": 40160,
+          "end": 40360
+        },
+        {
+          "word": "space",
+          "begin": 40520,
+          "end": 40920
+        },
+        {
+          "word": "assigned",
+          "begin": 41240,
+          "end": 41700
+        },
+        {
+          "word": "to",
+          "begin": 41740,
+          "end": 42320
+        },
+        {
+          "word": "the",
+          "begin": 42400,
+          "end": 42480
+        },
+        {
+          "word": "during",
+          "begin": 42920,
+          "end": 43140
+        },
+        {
+          "word": "PCIe",
+          "begin": 43220,
+          "end": 43780
+        },
+        {
+          "word": "enumeration.",
+          "begin": 43980,
+          "end": 44700
+        },
+        {
+          "word": "Contains",
+          "begin": 44980,
+          "end": 45740
+        },
+        {
+          "word": "the",
+          "begin": 45840,
+          "end": 45920
+        },
+        {
+          "word": "NVMe",
+          "begin": 46040,
+          "end": 46260
+        },
+        {
+          "word": "controller's",
+          "begin": 46440,
+          "end": 46960
+        },
+        {
+          "word": "registers",
+          "begin": 47020,
+          "end": 47940
+        },
+        {
+          "word": "the",
+          "begin": 47940,
+          "end": 47980
+        },
+        {
+          "word": "CPU",
+          "begin": 48080,
+          "end": 48460
+        },
+        {
+          "word": "reads",
+          "begin": 48580,
+          "end": 48860
+        },
+        {
+          "word": "and",
+          "begin": 48880,
+          "end": 48960
+        },
+        {
+          "word": "writes",
+          "begin": 49020,
+          "end": 49280
+        },
+        {
+          "word": "these",
+          "begin": 49340,
+          "end": 49480
+        },
+        {
+          "word": "addresses",
+          "begin": 49540,
+          "end": 50120
+        },
+        {
+          "word": "to",
+          "begin": 50400,
+          "end": 50440
+        },
+        {
+          "word": "configure",
+          "begin": 50500,
+          "end": 50900
+        },
+        {
+          "word": "and",
+          "begin": 51040,
+          "end": 51180
+        },
+        {
+          "word": "control",
+          "begin": 51180,
+          "end": 52180
+        },
+        {
+          "word": "the",
+          "begin": 52260,
+          "end": 52340
+        },
+        {
+          "word": "MMIO",
+          "begin": 52700,
+          "end": 53300
+        },
+        {
+          "word": "(Memory-Mapped",
+          "begin": 53780,
+          "end": 54400
+        },
+        {
+          "word": "I/O):",
+          "begin": 54520,
+          "end": 55540
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "term",
+      "text": "MMIO (Memory-Mapped I/O): A technique where hardware device registers are mapped into the CPU's normal memory address space. The CPU accesses devices by reading/writing to specific memory addresses, just like accessing RAM.",
+      "beginMs": 55540,
+      "endMs": 68660,
+      "timestamps": [
+        {
+          "word": "technique",
+          "begin": 55540,
+          "end": 55940
+        },
+        {
+          "word": "where",
+          "begin": 55980,
+          "end": 56200
+        },
+        {
+          "word": "hardware",
+          "begin": 56200,
+          "end": 56500
+        },
+        {
+          "word": "device",
+          "begin": 56600,
+          "end": 56920
+        },
+        {
+          "word": "registers",
+          "begin": 56960,
+          "end": 57500
+        },
+        {
+          "word": "are",
+          "begin": 57640,
+          "end": 57660
+        },
+        {
+          "word": "mapped",
+          "begin": 57760,
+          "end": 58060
+        },
+        {
+          "word": "into",
+          "begin": 58080,
+          "end": 58240
+        },
+        {
+          "word": "the",
+          "begin": 58280,
+          "end": 58320
+        },
+        {
+          "word": "CPU's",
+          "begin": 58440,
+          "end": 58840
+        },
+        {
+          "word": "normal",
+          "begin": 58960,
+          "end": 59320
+        },
+        {
+          "word": "memory",
+          "begin": 59420,
+          "end": 59700
+        },
+        {
+          "word": "address",
+          "begin": 59820,
+          "end": 60180
+        },
+        {
+          "word": "space.",
+          "begin": 60200,
+          "end": 60620
+        },
+        {
+          "word": "The",
+          "begin": 61060,
+          "end": 61100
+        },
+        {
+          "word": "CPU",
+          "begin": 61200,
+          "end": 61580
+        },
+        {
+          "word": "accesses",
+          "begin": 61740,
+          "end": 62260
+        },
+        {
+          "word": "devices",
+          "begin": 62320,
+          "end": 62880
+        },
+        {
+          "word": "by",
+          "begin": 62940,
+          "end": 63020
+        },
+        {
+          "word": "reading/writing",
+          "begin": 63160,
+          "end": 64800
+        },
+        {
+          "word": "to",
+          "begin": 64800,
+          "end": 65300
+        },
+        {
+          "word": "specific",
+          "begin": 65360,
+          "end": 65840
+        },
+        {
+          "word": "memory",
+          "begin": 65880,
+          "end": 66140
+        },
+        {
+          "word": "addresses,",
+          "begin": 66240,
+          "end": 66820
+        },
+        {
+          "word": "just",
+          "begin": 67340,
+          "end": 67520
+        },
+        {
+          "word": "like",
+          "begin": 67520,
+          "end": 67700
+        },
+        {
+          "word": "accessing",
+          "begin": 67780,
+          "end": 68260
+        },
+        {
+          "word": "RAM.",
+          "begin": 68340,
+          "end": 68660
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "We just learned that PCIe connects the SSD to your computer like a highway. But here's a question: when the computer turns on, how does it even talk to the SSD? It doesn't know where the drive's controls are yet.",
+      "beginMs": 68860,
+      "endMs": 80000,
+      "timestamps": [
+        {
+          "word": "We",
+          "begin": 68860,
+          "end": 68900
+        },
+        {
+          "word": "just",
+          "begin": 68960,
+          "end": 69160
+        },
+        {
+          "word": "learned",
+          "begin": 69200,
+          "end": 69460
+        },
+        {
+          "word": "that",
+          "begin": 69480,
+          "end": 69580
+        },
+        {
+          "word": "PCIe",
+          "begin": 69580,
+          "end": 70200
+        },
+        {
+          "word": "connects",
+          "begin": 70340,
+          "end": 70640
+        },
+        {
+          "word": "the",
+          "begin": 70680,
+          "end": 70740
+        },
+        {
+          "word": "SSD",
+          "begin": 70820,
+          "end": 71240
+        },
+        {
+          "word": "to",
+          "begin": 71340,
+          "end": 71400
+        },
+        {
+          "word": "your",
+          "begin": 71440,
+          "end": 71500
+        },
+        {
+          "word": "computer",
+          "begin": 71600,
+          "end": 71960
+        },
+        {
+          "word": "like",
+          "begin": 72060,
+          "end": 72220
+        },
+        {
+          "word": "a",
+          "begin": 72220,
+          "end": 72260
+        },
+        {
+          "word": "highway.",
+          "begin": 72320,
+          "end": 72620
+        },
+        {
+          "word": "But",
+          "begin": 73080,
+          "end": 73160
+        },
+        {
+          "word": "here's",
+          "begin": 73180,
+          "end": 73400
+        },
+        {
+          "word": "a",
+          "begin": 73400,
+          "end": 73500
+        },
+        {
+          "word": "question:",
+          "begin": 73520,
+          "end": 73920
+        },
+        {
+          "word": "when",
+          "begin": 74320,
+          "end": 74420
+        },
+        {
+          "word": "the",
+          "begin": 74420,
+          "end": 74460
+        },
+        {
+          "word": "computer",
+          "begin": 74500,
+          "end": 74820
+        },
+        {
+          "word": "turns",
+          "begin": 74900,
+          "end": 75180
+        },
+        {
+          "word": "on,",
+          "begin": 75240,
+          "end": 75500
+        },
+        {
+          "word": "how",
+          "begin": 75800,
+          "end": 75880
+        },
+        {
+          "word": "does",
+          "begin": 75940,
+          "end": 76080
+        },
+        {
+          "word": "it",
+          "begin": 76080,
+          "end": 76160
+        },
+        {
+          "word": "even",
+          "begin": 76180,
+          "end": 76360
+        },
+        {
+          "word": "talk",
+          "begin": 76420,
+          "end": 76680
+        },
+        {
+          "word": "to",
+          "begin": 76720,
+          "end": 76760
+        },
+        {
+          "word": "the",
+          "begin": 76800,
+          "end": 76860
+        },
+        {
+          "word": "SSD?",
+          "begin": 76940,
+          "end": 77380
+        },
+        {
+          "word": "It",
+          "begin": 77920,
+          "end": 77980
+        },
+        {
+          "word": "doesn't",
+          "begin": 78020,
+          "end": 78240
+        },
+        {
+          "word": "know",
+          "begin": 78240,
+          "end": 78420
+        },
+        {
+          "word": "where",
+          "begin": 78520,
+          "end": 78580
+        },
+        {
+          "word": "the",
+          "begin": 78640,
+          "end": 78700
+        },
+        {
+          "word": "drive's",
+          "begin": 78760,
+          "end": 79060
+        },
+        {
+          "word": "controls",
+          "begin": 79100,
+          "end": 79520
+        },
+        {
+          "word": "are",
+          "begin": 79580,
+          "end": 79600
+        },
+        {
+          "word": "yet.",
+          "begin": 79740,
+          "end": 80000
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "Think of it like moving into a new apartment. The building has a control panel (thermostat, breaker box, etc.), but you first need to know where the panel is before you can use it. During startup, your computer's BIOS (the low-level firmware that runs before your operating system) scans the PCIe bus and says to each device: &ldquo;Your control panel will be at this address in memory.&rdquo;",
+      "beginMs": 80160,
+      "endMs": 100980,
+      "timestamps": [
+        {
+          "word": "Think",
+          "begin": 80160,
+          "end": 80300
+        },
+        {
+          "word": "of",
+          "begin": 80300,
+          "end": 80380
+        },
+        {
+          "word": "it",
+          "begin": 80380,
+          "end": 80460
+        },
+        {
+          "word": "like",
+          "begin": 80500,
+          "end": 80680
+        },
+        {
+          "word": "moving",
+          "begin": 80720,
+          "end": 80980
+        },
+        {
+          "word": "into",
+          "begin": 81000,
+          "end": 81160
+        },
+        {
+          "word": "a",
+          "begin": 81220,
+          "end": 81240
+        },
+        {
+          "word": "new",
+          "begin": 81320,
+          "end": 81380
+        },
+        {
+          "word": "apartment.",
+          "begin": 81460,
+          "end": 82020
+        },
+        {
+          "word": "The",
+          "begin": 82280,
+          "end": 82320
+        },
+        {
+          "word": "building",
+          "begin": 82380,
+          "end": 82660
+        },
+        {
+          "word": "has",
+          "begin": 82680,
+          "end": 82820
+        },
+        {
+          "word": "a",
+          "begin": 82820,
+          "end": 82840
+        },
+        {
+          "word": "control",
+          "begin": 82900,
+          "end": 83220
+        },
+        {
+          "word": "panel",
+          "begin": 83280,
+          "end": 83480
+        },
+        {
+          "word": "(thermostat,",
+          "begin": 83620,
+          "end": 84280
+        },
+        {
+          "word": "breaker",
+          "begin": 84560,
+          "end": 84800
+        },
+        {
+          "word": "box,",
+          "begin": 84880,
+          "end": 85200
+        },
+        {
+          "word": "etc.),",
+          "begin": 85280,
+          "end": 85600
+        },
+        {
+          "word": "but",
+          "begin": 85640,
+          "end": 86180
+        },
+        {
+          "word": "you",
+          "begin": 86180,
+          "end": 86240
+        },
+        {
+          "word": "first",
+          "begin": 86240,
+          "end": 86480
+        },
+        {
+          "word": "need",
+          "begin": 86480,
+          "end": 86700
+        },
+        {
+          "word": "to",
+          "begin": 86700,
+          "end": 86800
+        },
+        {
+          "word": "know",
+          "begin": 86840,
+          "end": 86960
+        },
+        {
+          "word": "where",
+          "begin": 87020,
+          "end": 87260
+        },
+        {
+          "word": "the",
+          "begin": 87340,
+          "end": 87380
+        },
+        {
+          "word": "panel",
+          "begin": 87440,
+          "end": 87760
+        },
+        {
+          "word": "is",
+          "begin": 87900,
+          "end": 88120
+        },
+        {
+          "word": "before",
+          "begin": 88180,
+          "end": 88360
+        },
+        {
+          "word": "you",
+          "begin": 88440,
+          "end": 88500
+        },
+        {
+          "word": "can",
+          "begin": 88560,
+          "end": 88680
+        },
+        {
+          "word": "use",
+          "begin": 88720,
+          "end": 88920
+        },
+        {
+          "word": "it.",
+          "begin": 88960,
+          "end": 89120
+        },
+        {
+          "word": "During",
+          "begin": 89240,
+          "end": 89480
+        },
+        {
+          "word": "startup,",
+          "begin": 89580,
+          "end": 90020
+        },
+        {
+          "word": "your",
+          "begin": 90060,
+          "end": 90120
+        },
+        {
+          "word": "computer's",
+          "begin": 90200,
+          "end": 90600
+        },
+        {
+          "word": "BIOS",
+          "begin": 90660,
+          "end": 91060
+        },
+        {
+          "word": "(the",
+          "begin": 91060,
+          "end": 91100
+        },
+        {
+          "word": "low-level",
+          "begin": 91180,
+          "end": 91640
+        },
+        {
+          "word": "firmware",
+          "begin": 91640,
+          "end": 91880
+        },
+        {
+          "word": "that",
+          "begin": 91960,
+          "end": 92080
+        },
+        {
+          "word": "runs",
+          "begin": 92120,
+          "end": 92300
+        },
+        {
+          "word": "before",
+          "begin": 92340,
+          "end": 92520
+        },
+        {
+          "word": "your",
+          "begin": 92600,
+          "end": 92660
+        },
+        {
+          "word": "operating",
+          "begin": 92780,
+          "end": 93140
+        },
+        {
+          "word": "system)",
+          "begin": 93220,
+          "end": 93500
+        },
+        {
+          "word": "scans",
+          "begin": 93600,
+          "end": 93920
+        },
+        {
+          "word": "the",
+          "begin": 93940,
+          "end": 94000
+        },
+        {
+          "word": "PCIe",
+          "begin": 94060,
+          "end": 94580
+        },
+        {
+          "word": "bus",
+          "begin": 94680,
+          "end": 94960
+        },
+        {
+          "word": "and",
+          "begin": 95220,
+          "end": 95320
+        },
+        {
+          "word": "says",
+          "begin": 95380,
+          "end": 95560
+        },
+        {
+          "word": "to",
+          "begin": 95600,
+          "end": 95740
+        },
+        {
+          "word": "each",
+          "begin": 95740,
+          "end": 95860
+        },
+        {
+          "word": "device:",
+          "begin": 95900,
+          "end": 96320
+        },
+        {
+          "word": "&ldquo;Your",
+          "begin": 96640,
+          "end": 97760
+        },
+        {
+          "word": "control",
+          "begin": 97840,
+          "end": 98140
+        },
+        {
+          "word": "panel",
+          "begin": 98200,
+          "end": 98420
+        },
+        {
+          "word": "will",
+          "begin": 98480,
+          "end": 98560
+        },
+        {
+          "word": "be",
+          "begin": 98620,
+          "end": 98680
+        },
+        {
+          "word": "at",
+          "begin": 98740,
+          "end": 98820
+        },
+        {
+          "word": "this",
+          "begin": 98840,
+          "end": 99000
+        },
+        {
+          "word": "address",
+          "begin": 99040,
+          "end": 99380
+        },
+        {
+          "word": "in",
+          "begin": 99480,
+          "end": 99560
+        },
+        {
+          "word": "memory.&rdquo;",
+          "begin": 99600,
+          "end": 100980
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "This assigned address is called BAR0 (Base Address Register 0). It's a region of memory that the CPU can read and write to, but instead of accessing RAM, those reads and writes go directly to the SSD's hardware registers. This technique is called Memory-Mapped I/O (MMIO) — the SSD's controls look like regular memory addresses to software.",
+      "beginMs": 101200,
+      "endMs": 119560,
+      "timestamps": [
+        {
+          "word": "This",
+          "begin": 101200,
+          "end": 101320
+        },
+        {
+          "word": "assigned",
+          "begin": 101340,
+          "end": 101660
+        },
+        {
+          "word": "address",
+          "begin": 101680,
+          "end": 102040
+        },
+        {
+          "word": "is",
+          "begin": 102120,
+          "end": 102200
+        },
+        {
+          "word": "called",
+          "begin": 102240,
+          "end": 102820
+        },
+        {
+          "word": "BAR0",
+          "begin": 102960,
+          "end": 103160
+        },
+        {
+          "word": "(Base",
+          "begin": 103280,
+          "end": 103640
+        },
+        {
+          "word": "Address",
+          "begin": 103660,
+          "end": 104000
+        },
+        {
+          "word": "Register",
+          "begin": 104000,
+          "end": 104460
+        },
+        {
+          "word": "0).",
+          "begin": 104460,
+          "end": 105100
+        },
+        {
+          "word": "It's",
+          "begin": 105120,
+          "end": 105340
+        },
+        {
+          "word": "a",
+          "begin": 105340,
+          "end": 105420
+        },
+        {
+          "word": "region",
+          "begin": 105460,
+          "end": 105680
+        },
+        {
+          "word": "of",
+          "begin": 105700,
+          "end": 105800
+        },
+        {
+          "word": "memory",
+          "begin": 105800,
+          "end": 105940
+        },
+        {
+          "word": "that",
+          "begin": 106040,
+          "end": 106220
+        },
+        {
+          "word": "the",
+          "begin": 106220,
+          "end": 106280
+        },
+        {
+          "word": "CPU",
+          "begin": 106340,
+          "end": 106740
+        },
+        {
+          "word": "can",
+          "begin": 106800,
+          "end": 106920
+        },
+        {
+          "word": "read",
+          "begin": 106960,
+          "end": 107000
+        },
+        {
+          "word": "and",
+          "begin": 107020,
+          "end": 107200
+        },
+        {
+          "word": "write",
+          "begin": 107260,
+          "end": 107680
+        },
+        {
+          "word": "to,",
+          "begin": 107720,
+          "end": 107780
+        },
+        {
+          "word": "but",
+          "begin": 107800,
+          "end": 107960
+        },
+        {
+          "word": "instead",
+          "begin": 107980,
+          "end": 108060
+        },
+        {
+          "word": "of",
+          "begin": 108060,
+          "end": 108140
+        },
+        {
+          "word": "accessing",
+          "begin": 108180,
+          "end": 108640
+        },
+        {
+          "word": "RAM,",
+          "begin": 108700,
+          "end": 108980
+        },
+        {
+          "word": "those",
+          "begin": 109240,
+          "end": 109420
+        },
+        {
+          "word": "reads",
+          "begin": 109480,
+          "end": 109700
+        },
+        {
+          "word": "and",
+          "begin": 109720,
+          "end": 109800
+        },
+        {
+          "word": "writes",
+          "begin": 109840,
+          "end": 110100
+        },
+        {
+          "word": "go",
+          "begin": 110100,
+          "end": 110240
+        },
+        {
+          "word": "directly",
+          "begin": 110240,
+          "end": 110560
+        },
+        {
+          "word": "to",
+          "begin": 110640,
+          "end": 110700
+        },
+        {
+          "word": "the",
+          "begin": 110740,
+          "end": 110800
+        },
+        {
+          "word": "SSD's",
+          "begin": 110860,
+          "end": 111360
+        },
+        {
+          "word": "hardware",
+          "begin": 111420,
+          "end": 111680
+        },
+        {
+          "word": "registers.",
+          "begin": 111780,
+          "end": 112340
+        },
+        {
+          "word": "This",
+          "begin": 112520,
+          "end": 112660
+        },
+        {
+          "word": "technique",
+          "begin": 112720,
+          "end": 113100
+        },
+        {
+          "word": "is",
+          "begin": 113140,
+          "end": 113240
+        },
+        {
+          "word": "called",
+          "begin": 113280,
+          "end": 113480
+        },
+        {
+          "word": "Memory-Mapped",
+          "begin": 113500,
+          "end": 113680
+        },
+        {
+          "word": "(MMIO)",
+          "begin": 113740,
+          "end": 115980
+        },
+        {
+          "word": "the",
+          "begin": 116080,
+          "end": 116100
+        },
+        {
+          "word": "SSD's",
+          "begin": 116120,
+          "end": 116480
+        },
+        {
+          "word": "controls",
+          "begin": 116520,
+          "end": 116960
+        },
+        {
+          "word": "look",
+          "begin": 117000,
+          "end": 117120
+        },
+        {
+          "word": "like",
+          "begin": 117140,
+          "end": 117280
+        },
+        {
+          "word": "regular",
+          "begin": 117320,
+          "end": 117600
+        },
+        {
+          "word": "memory",
+          "begin": 117680,
+          "end": 117920
+        },
+        {
+          "word": "addresses",
+          "begin": 117980,
+          "end": 118420
+        },
+        {
+          "word": "to",
+          "begin": 118460,
+          "end": 118520
+        },
+        {
+          "word": "software.",
+          "begin": 118620,
+          "end": 118960
+        },
+        {
+          "word": "But",
+          "begin": 119340,
+          "end": 119440
+        },
+        {
+          "word": "why",
+          "begin": 119480,
+          "end": 119560
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "paragraph",
+      "text": "But why not just use special I/O instructions? Because memory-mapped access is faster — the CPU's normal load/store instructions work directly, and PCIe hardware routes them to the right device. No special CPU instructions needed.",
+      "beginMs": 119640,
+      "endMs": 133440,
+      "timestamps": [
+        {
+          "word": "not",
+          "begin": 119640,
+          "end": 119760
+        },
+        {
+          "word": "just",
+          "begin": 119760,
+          "end": 119980
+        },
+        {
+          "word": "use",
+          "begin": 120000,
+          "end": 120160
+        },
+        {
+          "word": "special",
+          "begin": 120220,
+          "end": 120660
+        },
+        {
+          "word": "I/O",
+          "begin": 120800,
+          "end": 120940
+        },
+        {
+          "word": "instructions?",
+          "begin": 120960,
+          "end": 121580
+        },
+        {
+          "word": "Because",
+          "begin": 121780,
+          "end": 122040
+        },
+        {
+          "word": "memory-mapped",
+          "begin": 122120,
+          "end": 122700
+        },
+        {
+          "word": "access",
+          "begin": 122800,
+          "end": 123160
+        },
+        {
+          "word": "is",
+          "begin": 123180,
+          "end": 123280
+        },
+        {
+          "word": "faster",
+          "begin": 123360,
+          "end": 123720
+        },
+        {
+          "word": "the",
+          "begin": 124080,
+          "end": 124120
+        },
+        {
+          "word": "CPU's",
+          "begin": 124220,
+          "end": 124780
+        },
+        {
+          "word": "normal",
+          "begin": 124860,
+          "end": 125100
+        },
+        {
+          "word": "load/store",
+          "begin": 125220,
+          "end": 125860
+        },
+        {
+          "word": "instructions",
+          "begin": 125860,
+          "end": 126420
+        },
+        {
+          "word": "work",
+          "begin": 126460,
+          "end": 126620
+        },
+        {
+          "word": "directly,",
+          "begin": 126660,
+          "end": 127060
+        },
+        {
+          "word": "and",
+          "begin": 127440,
+          "end": 127520
+        },
+        {
+          "word": "PCIe",
+          "begin": 127560,
+          "end": 128240
+        },
+        {
+          "word": "hardware",
+          "begin": 128240,
+          "end": 128520
+        },
+        {
+          "word": "routes",
+          "begin": 128660,
+          "end": 128880
+        },
+        {
+          "word": "them",
+          "begin": 128919,
+          "end": 129039
+        },
+        {
+          "word": "to",
+          "begin": 129080,
+          "end": 129139
+        },
+        {
+          "word": "the",
+          "begin": 129180,
+          "end": 129240
+        },
+        {
+          "word": "right",
+          "begin": 129300,
+          "end": 129479
+        },
+        {
+          "word": "device.",
+          "begin": 129500,
+          "end": 129960
+        },
+        {
+          "word": "No",
+          "begin": 130400,
+          "end": 130460
+        },
+        {
+          "word": "special",
+          "begin": 130600,
+          "end": 130880
+        },
+        {
+          "word": "CPU",
+          "begin": 131000,
+          "end": 131360
+        },
+        {
+          "word": "instructions",
+          "begin": 131440,
+          "end": 132020
+        },
+        {
+          "word": "needed.",
+          "begin": 132080,
+          "end": 132420
+        },
+        {
+          "word": "Inside",
+          "begin": 132680,
+          "end": 133440
+        }
+      ]
+    },
+    {
+      "blockIndex": 9,
+      "type": "paragraph",
+      "text": "Inside BAR0, the NVMe spec defines specific registers — fixed locations where each knob and dial lives. Here are the key registers and what each one does:",
+      "beginMs": 133600,
+      "endMs": 142680,
+      "timestamps": [
+        {
+          "word": "BAR0,",
+          "begin": 133600,
+          "end": 134220
+        },
+        {
+          "word": "the",
+          "begin": 134220,
+          "end": 134260
+        },
+        {
+          "word": "NVMe",
+          "begin": 134400,
+          "end": 134880
+        },
+        {
+          "word": "spec",
+          "begin": 135020,
+          "end": 135340
+        },
+        {
+          "word": "defines",
+          "begin": 135420,
+          "end": 135800
+        },
+        {
+          "word": "specific",
+          "begin": 135840,
+          "end": 136280
+        },
+        {
+          "word": "registers",
+          "begin": 136340,
+          "end": 136940
+        },
+        {
+          "word": "fixed",
+          "begin": 137220,
+          "end": 137460
+        },
+        {
+          "word": "locations",
+          "begin": 137460,
+          "end": 138040
+        },
+        {
+          "word": "where",
+          "begin": 138080,
+          "end": 138140
+        },
+        {
+          "word": "each",
+          "begin": 138300,
+          "end": 138540
+        },
+        {
+          "word": "knob",
+          "begin": 138540,
+          "end": 138760
+        },
+        {
+          "word": "and",
+          "begin": 138780,
+          "end": 138860
+        },
+        {
+          "word": "dial",
+          "begin": 138900,
+          "end": 139260
+        },
+        {
+          "word": "lives.",
+          "begin": 139260,
+          "end": 139640
+        },
+        {
+          "word": "Here",
+          "begin": 139960,
+          "end": 140140
+        },
+        {
+          "word": "are",
+          "begin": 140140,
+          "end": 140160
+        },
+        {
+          "word": "the",
+          "begin": 140220,
+          "end": 140260
+        },
+        {
+          "word": "key",
+          "begin": 140340,
+          "end": 140440
+        },
+        {
+          "word": "registers",
+          "begin": 140520,
+          "end": 141140
+        },
+        {
+          "word": "and",
+          "begin": 141260,
+          "end": 141340
+        },
+        {
+          "word": "what",
+          "begin": 141380,
+          "end": 141520
+        },
+        {
+          "word": "each",
+          "begin": 141540,
+          "end": 141720
+        },
+        {
+          "word": "one",
+          "begin": 141720,
+          "end": 141840
+        },
+        {
+          "word": "does:",
+          "begin": 141880,
+          "end": 142220
+        },
+        {
+          "word": "Every",
+          "begin": 142500,
+          "end": 142680
+        }
+      ]
+    },
+    {
+      "blockIndex": 10,
+      "type": "paragraph",
+      "text": "Every PCIe device has a unique address in the format Bus:Device.Function (BDF). When the BIOS scans the PCIe bus during boot, it assigns each device a BDF address and maps its BAR0 to a specific memory range. On Linux, you can see this with lspci:",
+      "beginMs": 142780,
+      "endMs": 161440,
+      "timestamps": [
+        {
+          "word": "PCIe",
+          "begin": 142780,
+          "end": 143360
+        },
+        {
+          "word": "device",
+          "begin": 143440,
+          "end": 143820
+        },
+        {
+          "word": "has",
+          "begin": 143860,
+          "end": 144000
+        },
+        {
+          "word": "a",
+          "begin": 144020,
+          "end": 144100
+        },
+        {
+          "word": "unique",
+          "begin": 144100,
+          "end": 144400
+        },
+        {
+          "word": "address",
+          "begin": 144500,
+          "end": 144880
+        },
+        {
+          "word": "in",
+          "begin": 144980,
+          "end": 145060
+        },
+        {
+          "word": "the",
+          "begin": 145060,
+          "end": 145100
+        },
+        {
+          "word": "format",
+          "begin": 145200,
+          "end": 145980
+        },
+        {
+          "word": "Bus:Device.Function",
+          "begin": 146300,
+          "end": 147620
+        },
+        {
+          "word": "(BDF).",
+          "begin": 147980,
+          "end": 148880
+        },
+        {
+          "word": "When",
+          "begin": 149080,
+          "end": 149180
+        },
+        {
+          "word": "the",
+          "begin": 149180,
+          "end": 149240
+        },
+        {
+          "word": "BIOS",
+          "begin": 149300,
+          "end": 149680
+        },
+        {
+          "word": "scans",
+          "begin": 149740,
+          "end": 150060
+        },
+        {
+          "word": "the",
+          "begin": 150100,
+          "end": 150160
+        },
+        {
+          "word": "PCIe",
+          "begin": 150220,
+          "end": 150760
+        },
+        {
+          "word": "bus",
+          "begin": 150860,
+          "end": 151120
+        },
+        {
+          "word": "during",
+          "begin": 151200,
+          "end": 151400
+        },
+        {
+          "word": "boot,",
+          "begin": 151480,
+          "end": 151740
+        },
+        {
+          "word": "it",
+          "begin": 152040,
+          "end": 152100
+        },
+        {
+          "word": "assigns",
+          "begin": 152120,
+          "end": 152500
+        },
+        {
+          "word": "each",
+          "begin": 152620,
+          "end": 152760
+        },
+        {
+          "word": "device",
+          "begin": 152840,
+          "end": 153220
+        },
+        {
+          "word": "a",
+          "begin": 153320,
+          "end": 153960
+        },
+        {
+          "word": "BDF",
+          "begin": 154020,
+          "end": 154440
+        },
+        {
+          "word": "and",
+          "begin": 154800,
+          "end": 154900
+        },
+        {
+          "word": "maps",
+          "begin": 154940,
+          "end": 155240
+        },
+        {
+          "word": "its",
+          "begin": 155320,
+          "end": 155860
+        },
+        {
+          "word": "BAR0",
+          "begin": 156040,
+          "end": 156260
+        },
+        {
+          "word": "to",
+          "begin": 156480,
+          "end": 156540
+        },
+        {
+          "word": "a",
+          "begin": 156580,
+          "end": 156680
+        },
+        {
+          "word": "specific",
+          "begin": 156680,
+          "end": 157160
+        },
+        {
+          "word": "memory",
+          "begin": 157220,
+          "end": 157480
+        },
+        {
+          "word": "range.",
+          "begin": 157580,
+          "end": 157940
+        },
+        {
+          "word": "On",
+          "begin": 158440,
+          "end": 158540
+        },
+        {
+          "word": "Linux,",
+          "begin": 158580,
+          "end": 158960
+        },
+        {
+          "word": "you",
+          "begin": 159080,
+          "end": 159120
+        },
+        {
+          "word": "can",
+          "begin": 159180,
+          "end": 159300
+        },
+        {
+          "word": "see",
+          "begin": 159380,
+          "end": 159460
+        },
+        {
+          "word": "this",
+          "begin": 159540,
+          "end": 159740
+        },
+        {
+          "word": "with",
+          "begin": 159780,
+          "end": 159900
+        },
+        {
+          "word": "lspci:",
+          "begin": 160000,
+          "end": 160740
+        },
+        {
+          "word": "Bus",
+          "begin": 161240,
+          "end": 161440
+        }
+      ]
+    },
+    {
+      "blockIndex": 11,
+      "type": "paragraph",
+      "text": "Bus 01 : Device 00 . Function 0. This is the PCIe address. Bus 01 means it's one hop from the root complex. Device 00 means it's the first device on that bus. Function 0 is the primary function.",
+      "beginMs": 161500,
+      "endMs": 176220,
+      "timestamps": [
+        {
+          "word": "01",
+          "begin": 161500,
+          "end": 162120
+        },
+        {
+          "word": "Device",
+          "begin": 162420,
+          "end": 162780
+        },
+        {
+          "word": "00",
+          "begin": 162840,
+          "end": 163420
+        },
+        {
+          "word": "Function",
+          "begin": 163800,
+          "end": 164140
+        },
+        {
+          "word": "0.",
+          "begin": 164220,
+          "end": 164840
+        },
+        {
+          "word": "This",
+          "begin": 164900,
+          "end": 165020
+        },
+        {
+          "word": "is",
+          "begin": 165020,
+          "end": 165080
+        },
+        {
+          "word": "the",
+          "begin": 165080,
+          "end": 165120
+        },
+        {
+          "word": "PCIe",
+          "begin": 165200,
+          "end": 165720
+        },
+        {
+          "word": "address.",
+          "begin": 165860,
+          "end": 166280
+        },
+        {
+          "word": "Bus",
+          "begin": 166520,
+          "end": 166620
+        },
+        {
+          "word": "01",
+          "begin": 166620,
+          "end": 167260
+        },
+        {
+          "word": "means",
+          "begin": 167340,
+          "end": 167600
+        },
+        {
+          "word": "it's",
+          "begin": 167680,
+          "end": 167800
+        },
+        {
+          "word": "one",
+          "begin": 167880,
+          "end": 168060
+        },
+        {
+          "word": "hop",
+          "begin": 168100,
+          "end": 168340
+        },
+        {
+          "word": "from",
+          "begin": 168400,
+          "end": 168520
+        },
+        {
+          "word": "the",
+          "begin": 168540,
+          "end": 168580
+        },
+        {
+          "word": "root",
+          "begin": 168640,
+          "end": 168800
+        },
+        {
+          "word": "complex.",
+          "begin": 168840,
+          "end": 169420
+        },
+        {
+          "word": "Device",
+          "begin": 169760,
+          "end": 169880
+        },
+        {
+          "word": "00",
+          "begin": 169880,
+          "end": 170720
+        },
+        {
+          "word": "means",
+          "begin": 171080,
+          "end": 171300
+        },
+        {
+          "word": "it's",
+          "begin": 171360,
+          "end": 171480
+        },
+        {
+          "word": "the",
+          "begin": 171520,
+          "end": 171580
+        },
+        {
+          "word": "first",
+          "begin": 171660,
+          "end": 171900
+        },
+        {
+          "word": "device",
+          "begin": 171920,
+          "end": 172300
+        },
+        {
+          "word": "on",
+          "begin": 172400,
+          "end": 172500
+        },
+        {
+          "word": "that",
+          "begin": 172520,
+          "end": 172660
+        },
+        {
+          "word": "bus.",
+          "begin": 172720,
+          "end": 173020
+        },
+        {
+          "word": "Function",
+          "begin": 173360,
+          "end": 173680
+        },
+        {
+          "word": "0",
+          "begin": 173760,
+          "end": 173960
+        },
+        {
+          "word": "is",
+          "begin": 174160,
+          "end": 174240
+        },
+        {
+          "word": "the",
+          "begin": 174280,
+          "end": 174320
+        },
+        {
+          "word": "primary",
+          "begin": 174400,
+          "end": 174720
+        },
+        {
+          "word": "function.",
+          "begin": 174820,
+          "end": 175220
+        },
+        {
+          "word": "This",
+          "begin": 175520,
+          "end": 175660
+        },
+        {
+          "word": "is",
+          "begin": 175680,
+          "end": 176220
+        }
+      ]
+    },
+    {
+      "blockIndex": 12,
+      "type": "paragraph",
+      "text": "This is BAR0 — the memory range where the NVMe registers are mapped. The CPU writes to addresses starting at 0xFE000000, and PCIe routes those writes to the SSD's controller registers. 16K covers all registers + doorbells.",
+      "beginMs": 176420,
+      "endMs": 192760,
+      "timestamps": [
+        {
+          "word": "BAR0",
+          "begin": 176420,
+          "end": 176660
+        },
+        {
+          "word": "the",
+          "begin": 177040,
+          "end": 177080
+        },
+        {
+          "word": "memory",
+          "begin": 177140,
+          "end": 177380
+        },
+        {
+          "word": "range",
+          "begin": 177400,
+          "end": 177760
+        },
+        {
+          "word": "where",
+          "begin": 177820,
+          "end": 177980
+        },
+        {
+          "word": "the",
+          "begin": 177980,
+          "end": 178000
+        },
+        {
+          "word": "NVMe",
+          "begin": 178120,
+          "end": 178560
+        },
+        {
+          "word": "registers",
+          "begin": 178660,
+          "end": 179160
+        },
+        {
+          "word": "are",
+          "begin": 179200,
+          "end": 179220
+        },
+        {
+          "word": "mapped.",
+          "begin": 179320,
+          "end": 179660
+        },
+        {
+          "word": "The",
+          "begin": 179800,
+          "end": 179840
+        },
+        {
+          "word": "CPU",
+          "begin": 179940,
+          "end": 180340
+        },
+        {
+          "word": "writes",
+          "begin": 180460,
+          "end": 180680
+        },
+        {
+          "word": "to",
+          "begin": 180720,
+          "end": 180800
+        },
+        {
+          "word": "addresses",
+          "begin": 180840,
+          "end": 181280
+        },
+        {
+          "word": "starting",
+          "begin": 181280,
+          "end": 181640
+        },
+        {
+          "word": "at",
+          "begin": 181660,
+          "end": 181760
+        },
+        {
+          "word": "0xFE000000,",
+          "begin": 181800,
+          "end": 185100
+        },
+        {
+          "word": "and",
+          "begin": 185520,
+          "end": 185600
+        },
+        {
+          "word": "PCIe",
+          "begin": 185640,
+          "end": 186200
+        },
+        {
+          "word": "routes",
+          "begin": 186320,
+          "end": 186580
+        },
+        {
+          "word": "those",
+          "begin": 186640,
+          "end": 186860
+        },
+        {
+          "word": "writes",
+          "begin": 186920,
+          "end": 187160
+        },
+        {
+          "word": "to",
+          "begin": 187220,
+          "end": 187280
+        },
+        {
+          "word": "the",
+          "begin": 187320,
+          "end": 187360
+        },
+        {
+          "word": "SSD's",
+          "begin": 187460,
+          "end": 187980
+        },
+        {
+          "word": "controller",
+          "begin": 188040,
+          "end": 188480
+        },
+        {
+          "word": "registers.",
+          "begin": 188480,
+          "end": 189620
+        },
+        {
+          "word": "16K",
+          "begin": 189640,
+          "end": 190200
+        },
+        {
+          "word": "covers",
+          "begin": 190420,
+          "end": 190700
+        },
+        {
+          "word": "all",
+          "begin": 190780,
+          "end": 190900
+        },
+        {
+          "word": "registers",
+          "begin": 190960,
+          "end": 191480
+        },
+        {
+          "word": "+",
+          "begin": 191540,
+          "end": 191740
+        },
+        {
+          "word": "doorbells.",
+          "begin": 191800,
+          "end": 192300
+        },
+        {
+          "word": "The",
+          "begin": 192600,
+          "end": 192760
+        }
+      ]
+    },
+    {
+      "blockIndex": 13,
+      "type": "paragraph",
+      "text": "The full path: CPU → PCIe Root Complex (Bus 0) → PCIe Switch/Bridge → Bus 01, Device 00, Function 0 → NVMe SSD. The BDF address is how the kernel's NVMe driver finds and binds to the SSD. You'll also see this path in /sys/bus/pci/devices/0000:01:00.0/ where the kernel exposes the device's config space and resource mappings.",
+      "beginMs": 192760,
+      "endMs": 228800,
+      "timestamps": [
+        {
+          "word": "full",
+          "begin": 192760,
+          "end": 193080
+        },
+        {
+          "word": "path:",
+          "begin": 193280,
+          "end": 193740
+        },
+        {
+          "word": "CPU",
+          "begin": 193840,
+          "end": 193920
+        },
+        {
+          "word": "→",
+          "begin": 194040,
+          "end": 194720
+        },
+        {
+          "word": "PCIe",
+          "begin": 194980,
+          "end": 195600
+        },
+        {
+          "word": "Root",
+          "begin": 195600,
+          "end": 195780
+        },
+        {
+          "word": "Complex",
+          "begin": 195840,
+          "end": 196560
+        },
+        {
+          "word": "(Bus",
+          "begin": 196840,
+          "end": 197060
+        },
+        {
+          "word": "0)",
+          "begin": 197100,
+          "end": 197580
+        },
+        {
+          "word": "→",
+          "begin": 197620,
+          "end": 198420
+        },
+        {
+          "word": "PCIe",
+          "begin": 198540,
+          "end": 199120
+        },
+        {
+          "word": "Switch/Bridge",
+          "begin": 199160,
+          "end": 200620
+        },
+        {
+          "word": "→",
+          "begin": 200660,
+          "end": 201420
+        },
+        {
+          "word": "Bus",
+          "begin": 201460,
+          "end": 201600
+        },
+        {
+          "word": "01,",
+          "begin": 201680,
+          "end": 202920
+        },
+        {
+          "word": "Device",
+          "begin": 203180,
+          "end": 203800
+        },
+        {
+          "word": "00,",
+          "begin": 204340,
+          "end": 205360
+        },
+        {
+          "word": "Function",
+          "begin": 205400,
+          "end": 205800
+        },
+        {
+          "word": "0",
+          "begin": 205880,
+          "end": 206220
+        },
+        {
+          "word": "→",
+          "begin": 206220,
+          "end": 207060
+        },
+        {
+          "word": "SSD.",
+          "begin": 207160,
+          "end": 208260
+        },
+        {
+          "word": "The",
+          "begin": 208320,
+          "end": 208700
+        },
+        {
+          "word": "BDF",
+          "begin": 208720,
+          "end": 208960
+        },
+        {
+          "word": "kernel's",
+          "begin": 208720,
+          "end": 208800
+        },
+        {
+          "word": "NVMe",
+          "begin": 208800,
+          "end": 209260
+        },
+        {
+          "word": "binds",
+          "begin": 209300,
+          "end": 209320
+        },
+        {
+          "word": "the",
+          "begin": 209360,
+          "end": 209380
+        },
+        {
+          "word": "You'll",
+          "begin": 209660,
+          "end": 209800
+        },
+        {
+          "word": "also",
+          "begin": 209880,
+          "end": 210100
+        },
+        {
+          "word": "see",
+          "begin": 210220,
+          "end": 210280
+        },
+        {
+          "word": "this",
+          "begin": 210360,
+          "end": 210500
+        },
+        {
+          "word": "path",
+          "begin": 210560,
+          "end": 210860
+        },
+        {
+          "word": "in",
+          "begin": 210920,
+          "end": 211020
+        },
+        {
+          "word": "/sys/bus/pci/devices/0000:01:00.0/",
+          "begin": 211120,
+          "end": 222120
+        },
+        {
+          "word": "where",
+          "begin": 222140,
+          "end": 222420
+        },
+        {
+          "word": "the",
+          "begin": 222460,
+          "end": 222520
+        },
+        {
+          "word": "kernel",
+          "begin": 222620,
+          "end": 222860
+        },
+        {
+          "word": "exposes",
+          "begin": 222980,
+          "end": 223440
+        },
+        {
+          "word": "the",
+          "begin": 223440,
+          "end": 223500
+        },
+        {
+          "word": "device's",
+          "begin": 223540,
+          "end": 223960
+        },
+        {
+          "word": "config",
+          "begin": 223960,
+          "end": 224380
+        },
+        {
+          "word": "space",
+          "begin": 224380,
+          "end": 224600
+        },
+        {
+          "word": "and",
+          "begin": 224640,
+          "end": 224480
+        },
+        {
+          "word": "resource",
+          "begin": 224520,
+          "end": 224820
+        },
+        {
+          "word": "mappings.",
+          "begin": 224860,
+          "end": 225240
+        },
+        {
+          "word": "registers.",
+          "begin": 224860,
+          "end": 225460
+        },
+        {
+          "word": "When",
+          "begin": 225720,
+          "end": 225820
+        },
+        {
+          "word": "the",
+          "begin": 225820,
+          "end": 225880
+        },
+        {
+          "word": "NVMe",
+          "begin": 226000,
+          "end": 226480
+        },
+        {
+          "word": "driver",
+          "begin": 226580,
+          "end": 226920
+        },
+        {
+          "word": "wants",
+          "begin": 227040,
+          "end": 227240
+        },
+        {
+          "word": "to",
+          "begin": 227280,
+          "end": 227320
+        },
+        {
+          "word": "tell",
+          "begin": 227380,
+          "end": 227520
+        },
+        {
+          "word": "the",
+          "begin": 227560,
+          "end": 228540
+        },
+        {
+          "word": "drive",
+          "begin": 228680,
+          "end": 228800
+        }
+      ]
+    },
+    {
+      "blockIndex": 14,
+      "type": "paragraph",
+      "text": "Every NVMe interaction starts and ends with these registers. When the NVMe driver wants to tell the drive &ldquo;I've placed a command for you,&rdquo; it writes to a doorbell register. When it wants to turn the drive on, it writes to CC. When it wants to check if the drive is ready, it reads CSTS.",
+      "beginMs": 228860,
+      "endMs": 238940,
+      "timestamps": [
+        {
+          "word": "placed",
+          "begin": 228860,
+          "end": 229120
+        },
+        {
+          "word": "a",
+          "begin": 229120,
+          "end": 229140
+        },
+        {
+          "word": "command",
+          "begin": 229200,
+          "end": 229520
+        },
+        {
+          "word": "for",
+          "begin": 229600,
+          "end": 229760
+        },
+        {
+          "word": "you,&rdquo;",
+          "begin": 229760,
+          "end": 230580
+        },
+        {
+          "word": "it",
+          "begin": 230880,
+          "end": 230960
+        },
+        {
+          "word": "writes",
+          "begin": 231000,
+          "end": 231240
+        },
+        {
+          "word": "to",
+          "begin": 231280,
+          "end": 231340
+        },
+        {
+          "word": "a",
+          "begin": 231400,
+          "end": 231560
+        },
+        {
+          "word": "doorbell",
+          "begin": 231700,
+          "end": 231820
+        },
+        {
+          "word": "register.",
+          "begin": 231880,
+          "end": 232260
+        },
+        {
+          "word": "When",
+          "begin": 232720,
+          "end": 232820
+        },
+        {
+          "word": "it",
+          "begin": 232820,
+          "end": 232880
+        },
+        {
+          "word": "wants",
+          "begin": 232920,
+          "end": 233120
+        },
+        {
+          "word": "to",
+          "begin": 233160,
+          "end": 233220
+        },
+        {
+          "word": "turn",
+          "begin": 233280,
+          "end": 233460
+        },
+        {
+          "word": "the",
+          "begin": 233460,
+          "end": 233500
+        },
+        {
+          "word": "drive",
+          "begin": 233560,
+          "end": 233800
+        },
+        {
+          "word": "on,",
+          "begin": 233860,
+          "end": 234060
+        },
+        {
+          "word": "it",
+          "begin": 234160,
+          "end": 234240
+        },
+        {
+          "word": "writes",
+          "begin": 234280,
+          "end": 234800
+        },
+        {
+          "word": "to",
+          "begin": 235020,
+          "end": 235040
+        },
+        {
+          "word": "When",
+          "begin": 235500,
+          "end": 235600
+        },
+        {
+          "word": "it",
+          "begin": 235600,
+          "end": 235620
+        },
+        {
+          "word": "wants",
+          "begin": 235700,
+          "end": 235880
+        },
+        {
+          "word": "to",
+          "begin": 235900,
+          "end": 235960
+        },
+        {
+          "word": "check",
+          "begin": 236020,
+          "end": 236220
+        },
+        {
+          "word": "if",
+          "begin": 236240,
+          "end": 236320
+        },
+        {
+          "word": "the",
+          "begin": 236340,
+          "end": 236400
+        },
+        {
+          "word": "drive",
+          "begin": 236440,
+          "end": 236680
+        },
+        {
+          "word": "is",
+          "begin": 236700,
+          "end": 236780
+        },
+        {
+          "word": "ready,",
+          "begin": 236840,
+          "end": 237020
+        },
+        {
+          "word": "it",
+          "begin": 237220,
+          "end": 237300
+        },
+        {
+          "word": "reads",
+          "begin": 237360,
+          "end": 237600
+        },
+        {
+          "word": "CSTS.",
+          "begin": 237600,
+          "end": 238520
+        },
+        {
+          "word": "Think",
+          "begin": 238800,
+          "end": 238940
+        }
+      ]
+    },
+    {
+      "blockIndex": 15,
+      "type": "paragraph",
+      "text": "Think of it this way: The NVMe spec is like a contract. It says &ldquo;at offset 0x14, there will be a configuration register.&rdquo; Any NVMe drive from any manufacturer follows this same layout. That's why one generic NVMe driver works with thousands of different SSDs.",
+      "beginMs": 238960,
+      "endMs": 256600,
+      "timestamps": [
+        {
+          "word": "of",
+          "begin": 238960,
+          "end": 239040
+        },
+        {
+          "word": "it",
+          "begin": 239060,
+          "end": 239140
+        },
+        {
+          "word": "this",
+          "begin": 239160,
+          "end": 239340
+        },
+        {
+          "word": "way:",
+          "begin": 239400,
+          "end": 239460
+        },
+        {
+          "word": "The",
+          "begin": 239900,
+          "end": 239960
+        },
+        {
+          "word": "NVMe",
+          "begin": 240080,
+          "end": 240560
+        },
+        {
+          "word": "spec",
+          "begin": 240720,
+          "end": 241020
+        },
+        {
+          "word": "is",
+          "begin": 241100,
+          "end": 241200
+        },
+        {
+          "word": "like",
+          "begin": 241220,
+          "end": 241360
+        },
+        {
+          "word": "a",
+          "begin": 241380,
+          "end": 241400
+        },
+        {
+          "word": "contract.",
+          "begin": 241460,
+          "end": 242040
+        },
+        {
+          "word": "It",
+          "begin": 242340,
+          "end": 242440
+        },
+        {
+          "word": "says",
+          "begin": 242500,
+          "end": 242940
+        },
+        {
+          "word": "&ldquo;at",
+          "begin": 243040,
+          "end": 243740
+        },
+        {
+          "word": "offset",
+          "begin": 244080,
+          "end": 244600
+        },
+        {
+          "word": "0x14,",
+          "begin": 244620,
+          "end": 245680
+        },
+        {
+          "word": "there",
+          "begin": 245980,
+          "end": 246040
+        },
+        {
+          "word": "will",
+          "begin": 246080,
+          "end": 246160
+        },
+        {
+          "word": "be",
+          "begin": 246200,
+          "end": 246240
+        },
+        {
+          "word": "a",
+          "begin": 246280,
+          "end": 246320
+        },
+        {
+          "word": "configuration",
+          "begin": 246360,
+          "end": 247060
+        },
+        {
+          "word": "register.&rdquo;",
+          "begin": 247120,
+          "end": 249600
+        },
+        {
+          "word": "Any",
+          "begin": 249740,
+          "end": 249900
+        },
+        {
+          "word": "NVMe",
+          "begin": 250020,
+          "end": 250240
+        },
+        {
+          "word": "drive",
+          "begin": 250460,
+          "end": 250600
+        },
+        {
+          "word": "any",
+          "begin": 250680,
+          "end": 250800
+        },
+        {
+          "word": "manufacturer",
+          "begin": 250880,
+          "end": 251480
+        },
+        {
+          "word": "follows",
+          "begin": 251660,
+          "end": 251980
+        },
+        {
+          "word": "this",
+          "begin": 252020,
+          "end": 252180
+        },
+        {
+          "word": "same",
+          "begin": 252220,
+          "end": 252440
+        },
+        {
+          "word": "layout.",
+          "begin": 252480,
+          "end": 252880
+        },
+        {
+          "word": "That's",
+          "begin": 253240,
+          "end": 253420
+        },
+        {
+          "word": "why",
+          "begin": 253460,
+          "end": 253540
+        },
+        {
+          "word": "one",
+          "begin": 253700,
+          "end": 253880
+        },
+        {
+          "word": "generic",
+          "begin": 253940,
+          "end": 254320
+        },
+        {
+          "word": "NVMe",
+          "begin": 254400,
+          "end": 254860
+        },
+        {
+          "word": "driver",
+          "begin": 254960,
+          "end": 255300
+        },
+        {
+          "word": "works",
+          "begin": 255420,
+          "end": 255640
+        },
+        {
+          "word": "with",
+          "begin": 255680,
+          "end": 255780
+        },
+        {
+          "word": "thousands",
+          "begin": 255860,
+          "end": 256220
+        },
+        {
+          "word": "of",
+          "begin": 256240,
+          "end": 256320
+        },
+        {
+          "word": "different",
+          "begin": 256360,
+          "end": 256600
+        },
+        {
+          "word": "SSDs.",
+          "begin": 256600,
+          "end": 256540
+        },
+        {
+          "word": "How",
+          "begin": 256540,
+          "end": 256600
+        }
+      ]
+    },
+    {
+      "blockIndex": 16,
+      "type": "info",
+      "text": "How big is BAR0?: The register area itself is small (a few hundred bytes for the core registers), but the doorbell area grows with the number of queues. Each queue needs two doorbells (submit + complete), and doorbells start at offset 0x1000. With 64 I/O queues, that's about 0x1000 + 128 × 4 = ~0x1200 bytes total. The BIOS allocates enough space for the maximum the drive supports.",
+      "beginMs": 256600,
+      "endMs": 286300,
+      "timestamps": [
+        {
+          "word": "big",
+          "begin": 256600,
+          "end": 256800
+        },
+        {
+          "word": "is",
+          "begin": 256820,
+          "end": 257339
+        },
+        {
+          "word": "BAR0?:",
+          "begin": 257980,
+          "end": 258459
+        },
+        {
+          "word": "The",
+          "begin": 258519,
+          "end": 258680
+        },
+        {
+          "word": "register",
+          "begin": 258779,
+          "end": 259860
+        },
+        {
+          "word": "area",
+          "begin": 259860,
+          "end": 260100
+        },
+        {
+          "word": "itself",
+          "begin": 260120,
+          "end": 260540
+        },
+        {
+          "word": "is",
+          "begin": 260560,
+          "end": 260660
+        },
+        {
+          "word": "small",
+          "begin": 260720,
+          "end": 261079
+        },
+        {
+          "word": "(a",
+          "begin": 261160,
+          "end": 261180
+        },
+        {
+          "word": "few",
+          "begin": 261180,
+          "end": 261440
+        },
+        {
+          "word": "hundred",
+          "begin": 261500,
+          "end": 262019
+        },
+        {
+          "word": "bytes",
+          "begin": 262019,
+          "end": 262120
+        },
+        {
+          "word": "for",
+          "begin": 262120,
+          "end": 262240
+        },
+        {
+          "word": "the",
+          "begin": 262280,
+          "end": 262360
+        },
+        {
+          "word": "core",
+          "begin": 262500,
+          "end": 262560
+        },
+        {
+          "word": "registers),",
+          "begin": 262620,
+          "end": 263220
+        },
+        {
+          "word": "but",
+          "begin": 263240,
+          "end": 263360
+        },
+        {
+          "word": "the",
+          "begin": 263400,
+          "end": 263640
+        },
+        {
+          "word": "doorbell",
+          "begin": 263880,
+          "end": 264140
+        },
+        {
+          "word": "area",
+          "begin": 264180,
+          "end": 264500
+        },
+        {
+          "word": "grows",
+          "begin": 264580,
+          "end": 264940
+        },
+        {
+          "word": "with",
+          "begin": 264960,
+          "end": 265280
+        },
+        {
+          "word": "the",
+          "begin": 265360,
+          "end": 265400
+        },
+        {
+          "word": "number",
+          "begin": 265460,
+          "end": 265680
+        },
+        {
+          "word": "of",
+          "begin": 265700,
+          "end": 265780
+        },
+        {
+          "word": "queues.",
+          "begin": 265840,
+          "end": 266240
+        },
+        {
+          "word": "Each",
+          "begin": 266640,
+          "end": 266900
+        },
+        {
+          "word": "queue",
+          "begin": 266900,
+          "end": 267020
+        },
+        {
+          "word": "needs",
+          "begin": 267180,
+          "end": 267380
+        },
+        {
+          "word": "two",
+          "begin": 267380,
+          "end": 267500
+        },
+        {
+          "word": "doorbells",
+          "begin": 267500,
+          "end": 268120
+        },
+        {
+          "word": "(submit",
+          "begin": 268160,
+          "end": 268460
+        },
+        {
+          "word": "+",
+          "begin": 268460,
+          "end": 268740
+        },
+        {
+          "word": "complete),",
+          "begin": 268800,
+          "end": 268960
+        },
+        {
+          "word": "and",
+          "begin": 269000,
+          "end": 269560
+        },
+        {
+          "word": "doorbells",
+          "begin": 269620,
+          "end": 269960
+        },
+        {
+          "word": "start",
+          "begin": 270060,
+          "end": 270420
+        },
+        {
+          "word": "at",
+          "begin": 270500,
+          "end": 270720
+        },
+        {
+          "word": "offset",
+          "begin": 270760,
+          "end": 270980
+        },
+        {
+          "word": "0x1000.",
+          "begin": 270980,
+          "end": 272620
+        },
+        {
+          "word": "With",
+          "begin": 273220,
+          "end": 273320
+        },
+        {
+          "word": "64",
+          "begin": 273400,
+          "end": 273660
+        },
+        {
+          "word": "I/O",
+          "begin": 273740,
+          "end": 274500
+        },
+        {
+          "word": "queues,",
+          "begin": 274760,
+          "end": 274780
+        },
+        {
+          "word": "that's",
+          "begin": 275040,
+          "end": 275240
+        },
+        {
+          "word": "about",
+          "begin": 275260,
+          "end": 275520
+        },
+        {
+          "word": "0x1000",
+          "begin": 275580,
+          "end": 277240
+        },
+        {
+          "word": "+",
+          "begin": 277480,
+          "end": 277720
+        },
+        {
+          "word": "128",
+          "begin": 277780,
+          "end": 278380
+        },
+        {
+          "word": "×",
+          "begin": 278420,
+          "end": 278720
+        },
+        {
+          "word": "4",
+          "begin": 278800,
+          "end": 278880
+        },
+        {
+          "word": "=",
+          "begin": 279360,
+          "end": 279720
+        },
+        {
+          "word": "~0x1200",
+          "begin": 279760,
+          "end": 283000
+        },
+        {
+          "word": "bytes",
+          "begin": 283060,
+          "end": 283540
+        },
+        {
+          "word": "total.",
+          "begin": 283620,
+          "end": 283960
+        },
+        {
+          "word": "The",
+          "begin": 283960,
+          "end": 284020
+        },
+        {
+          "word": "BIOS",
+          "begin": 284060,
+          "end": 284300
+        },
+        {
+          "word": "allocates",
+          "begin": 284360,
+          "end": 284800
+        },
+        {
+          "word": "enough",
+          "begin": 284800,
+          "end": 285060
+        },
+        {
+          "word": "space",
+          "begin": 285100,
+          "end": 285320
+        },
+        {
+          "word": "for",
+          "begin": 285360,
+          "end": 285480
+        },
+        {
+          "word": "the",
+          "begin": 285500,
+          "end": 285580
+        },
+        {
+          "word": "maximum",
+          "begin": 285700,
+          "end": 286300
+        },
+        {
+          "word": "the",
+          "begin": 285700,
+          "end": 285720
+        },
+        {
+          "word": "drive",
+          "begin": 285720,
+          "end": 285740
+        },
+        {
+          "word": "supports.",
+          "begin": 285800,
+          "end": 286300
+        }
+      ]
+    },
+    {
+      "blockIndex": 17,
+      "type": "reveal",
+      "text": "Knowledge check: A colleague claims that NVMe devices use I/O ports (like legacy PCI devices) to access BAR0 registers. Explain why this is wrong and what mechanism is actually used. The answer: BAR0 uses Memory-Mapped I/O (MMIO), not I/O ports. The SSD's hardware registers are mapped into the CPU's physical address space, so the CPU reads and writes them using normal memory instructions (MOV) rather than special IN/OUT port instructions. MMIO is faster and more flexible than I/O ports — it works with the CPU's memory controller and caching infrastructure, and doesn't require the limited 64KB I/O port address space that legacy PCI devices used.",
+      "beginMs": 286780,
+      "endMs": 329920,
+      "timestamps": [
+        {
+          "word": "Knowledge",
+          "begin": 286780,
+          "end": 287080
+        },
+        {
+          "word": "check:",
+          "begin": 287180,
+          "end": 287480
+        },
+        {
+          "word": "A",
+          "begin": 287640,
+          "end": 287740
+        },
+        {
+          "word": "colleague",
+          "begin": 287740,
+          "end": 288100
+        },
+        {
+          "word": "claims",
+          "begin": 288140,
+          "end": 288520
+        },
+        {
+          "word": "that",
+          "begin": 288560,
+          "end": 288680
+        },
+        {
+          "word": "NVMe",
+          "begin": 288760,
+          "end": 289160
+        },
+        {
+          "word": "devices",
+          "begin": 289240,
+          "end": 289720
+        },
+        {
+          "word": "use",
+          "begin": 289760,
+          "end": 289940
+        },
+        {
+          "word": "I/O",
+          "begin": 290100,
+          "end": 290680
+        },
+        {
+          "word": "ports",
+          "begin": 290840,
+          "end": 291260
+        },
+        {
+          "word": "(like",
+          "begin": 291260,
+          "end": 291400
+        },
+        {
+          "word": "legacy",
+          "begin": 291400,
+          "end": 291600
+        },
+        {
+          "word": "PCI",
+          "begin": 291720,
+          "end": 292240
+        },
+        {
+          "word": "devices)",
+          "begin": 292240,
+          "end": 292760
+        },
+        {
+          "word": "to",
+          "begin": 292980,
+          "end": 293040
+        },
+        {
+          "word": "access",
+          "begin": 293100,
+          "end": 293860
+        },
+        {
+          "word": "BAR0",
+          "begin": 294020,
+          "end": 294240
+        },
+        {
+          "word": "registers.",
+          "begin": 294320,
+          "end": 294920
+        },
+        {
+          "word": "Explain",
+          "begin": 295520,
+          "end": 295900
+        },
+        {
+          "word": "why",
+          "begin": 295940,
+          "end": 296000
+        },
+        {
+          "word": "this",
+          "begin": 296080,
+          "end": 296220
+        },
+        {
+          "word": "is",
+          "begin": 296240,
+          "end": 296340
+        },
+        {
+          "word": "wrong",
+          "begin": 296420,
+          "end": 296760
+        },
+        {
+          "word": "and",
+          "begin": 296840,
+          "end": 296900
+        },
+        {
+          "word": "what",
+          "begin": 296940,
+          "end": 297080
+        },
+        {
+          "word": "mechanism",
+          "begin": 297120,
+          "end": 297580
+        },
+        {
+          "word": "is",
+          "begin": 297600,
+          "end": 297680
+        },
+        {
+          "word": "actually",
+          "begin": 297760,
+          "end": 298040
+        },
+        {
+          "word": "used.",
+          "begin": 298140,
+          "end": 298540
+        },
+        {
+          "word": "The",
+          "begin": 298960,
+          "end": 299020
+        },
+        {
+          "word": "answer:",
+          "begin": 299100,
+          "end": 300120
+        },
+        {
+          "word": "BAR0",
+          "begin": 300300,
+          "end": 300560
+        },
+        {
+          "word": "uses",
+          "begin": 300700,
+          "end": 301020
+        },
+        {
+          "word": "Memory-Mapped",
+          "begin": 301080,
+          "end": 301320
+        },
+        {
+          "word": "(MMIO),",
+          "begin": 301400,
+          "end": 302860
+        },
+        {
+          "word": "not",
+          "begin": 303320,
+          "end": 303500
+        },
+        {
+          "word": "I/O",
+          "begin": 303600,
+          "end": 303780
+        },
+        {
+          "word": "ports.",
+          "begin": 303900,
+          "end": 304340
+        },
+        {
+          "word": "The",
+          "begin": 304720,
+          "end": 304780
+        },
+        {
+          "word": "SSD's",
+          "begin": 304880,
+          "end": 305380
+        },
+        {
+          "word": "hardware",
+          "begin": 305420,
+          "end": 305700
+        },
+        {
+          "word": "registers",
+          "begin": 305800,
+          "end": 306340
+        },
+        {
+          "word": "are",
+          "begin": 306420,
+          "end": 306440
+        },
+        {
+          "word": "mapped",
+          "begin": 306540,
+          "end": 306800
+        },
+        {
+          "word": "into",
+          "begin": 306820,
+          "end": 306960
+        },
+        {
+          "word": "the",
+          "begin": 307000,
+          "end": 307060
+        },
+        {
+          "word": "CPU's",
+          "begin": 307160,
+          "end": 307680
+        },
+        {
+          "word": "physical",
+          "begin": 307740,
+          "end": 308080
+        },
+        {
+          "word": "address",
+          "begin": 308120,
+          "end": 308420
+        },
+        {
+          "word": "space,",
+          "begin": 308440,
+          "end": 309120
+        },
+        {
+          "word": "so",
+          "begin": 309180,
+          "end": 309420
+        },
+        {
+          "word": "the",
+          "begin": 309520,
+          "end": 309580
+        },
+        {
+          "word": "CPU",
+          "begin": 309520,
+          "end": 309720
+        },
+        {
+          "word": "reads",
+          "begin": 309840,
+          "end": 310140
+        },
+        {
+          "word": "and",
+          "begin": 310160,
+          "end": 310260
+        },
+        {
+          "word": "writes",
+          "begin": 310300,
+          "end": 310600
+        },
+        {
+          "word": "them",
+          "begin": 310600,
+          "end": 310740
+        },
+        {
+          "word": "using",
+          "begin": 310780,
+          "end": 311040
+        },
+        {
+          "word": "normal",
+          "begin": 311120,
+          "end": 311360
+        },
+        {
+          "word": "memory",
+          "begin": 311460,
+          "end": 311720
+        },
+        {
+          "word": "instructions",
+          "begin": 311780,
+          "end": 312320
+        },
+        {
+          "word": "(MOV)",
+          "begin": 312380,
+          "end": 312660
+        },
+        {
+          "word": "rather",
+          "begin": 312680,
+          "end": 312860
+        },
+        {
+          "word": "than",
+          "begin": 312860,
+          "end": 313400
+        },
+        {
+          "word": "special",
+          "begin": 313420,
+          "end": 313760
+        },
+        {
+          "word": "IN/OUT",
+          "begin": 313760,
+          "end": 314600
+        },
+        {
+          "word": "port",
+          "begin": 314640,
+          "end": 315400
+        },
+        {
+          "word": "instructions.",
+          "begin": 315420,
+          "end": 316120
+        },
+        {
+          "word": "MMIO",
+          "begin": 316640,
+          "end": 317080
+        },
+        {
+          "word": "is",
+          "begin": 317220,
+          "end": 317320
+        },
+        {
+          "word": "faster",
+          "begin": 317400,
+          "end": 317760
+        },
+        {
+          "word": "and",
+          "begin": 317900,
+          "end": 318000
+        },
+        {
+          "word": "more",
+          "begin": 318040,
+          "end": 318320
+        },
+        {
+          "word": "flexible",
+          "begin": 318320,
+          "end": 318660
+        },
+        {
+          "word": "than",
+          "begin": 318760,
+          "end": 318860
+        },
+        {
+          "word": "I/O",
+          "begin": 318940,
+          "end": 319360
+        },
+        {
+          "word": "ports",
+          "begin": 319560,
+          "end": 320040
+        },
+        {
+          "word": "it",
+          "begin": 320100,
+          "end": 320160
+        },
+        {
+          "word": "works",
+          "begin": 320100,
+          "end": 320340
+        },
+        {
+          "word": "with",
+          "begin": 320360,
+          "end": 320500
+        },
+        {
+          "word": "the",
+          "begin": 320500,
+          "end": 320540
+        },
+        {
+          "word": "CPU's",
+          "begin": 320660,
+          "end": 321180
+        },
+        {
+          "word": "memory",
+          "begin": 321240,
+          "end": 321480
+        },
+        {
+          "word": "controller",
+          "begin": 321560,
+          "end": 321980
+        },
+        {
+          "word": "and",
+          "begin": 322120,
+          "end": 322200
+        },
+        {
+          "word": "caching",
+          "begin": 322260,
+          "end": 322640
+        },
+        {
+          "word": "infrastructure,",
+          "begin": 322680,
+          "end": 323260
+        },
+        {
+          "word": "and",
+          "begin": 323660,
+          "end": 323760
+        },
+        {
+          "word": "doesn't",
+          "begin": 323800,
+          "end": 324080
+        },
+        {
+          "word": "require",
+          "begin": 324100,
+          "end": 324500
+        },
+        {
+          "word": "the",
+          "begin": 324580,
+          "end": 324640
+        },
+        {
+          "word": "limited",
+          "begin": 324720,
+          "end": 325060
+        },
+        {
+          "word": "I/O",
+          "begin": 325160,
+          "end": 326800
+        },
+        {
+          "word": "port",
+          "begin": 326920,
+          "end": 326940
+        },
+        {
+          "word": "address",
+          "begin": 327020,
+          "end": 327360
+        },
+        {
+          "word": "space",
+          "begin": 327380,
+          "end": 327680
+        },
+        {
+          "word": "that",
+          "begin": 327720,
+          "end": 327840
+        },
+        {
+          "word": "legacy",
+          "begin": 327900,
+          "end": 328260
+        },
+        {
+          "word": "PCI",
+          "begin": 328400,
+          "end": 328840
+        },
+        {
+          "word": "devices",
+          "begin": 328980,
+          "end": 329460
+        },
+        {
+          "word": "used.",
+          "begin": 329500,
+          "end": 329920
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

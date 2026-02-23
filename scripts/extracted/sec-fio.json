@@ -1,0 +1,121 @@
+{
+  "sectionId": "sec-fio",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Benchmarking with fio — Measuring Your SSD",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: fio Is a Storage Stress-Tester. fio (Flexible I/O tester) is like a gym workout program for your SSD. You specify the exercise (random reads, sequential writes, mixed), the intensity (queue depth, number of jobs), and the duration. fio runs the workout and reports how the SSD performed — IOPS, bandwidth, and latency percentiles.",
+      "blockIndex": 1
+    },
+    {
+      "type": "term",
+      "text": "fio (Flexible I/O Tester): The industry-standard open-source tool for benchmarking and stress-testing storage devices. Supports custom workload definitions: I/O pattern, block size, queue depth, thread count, and duration. Results include IOPS, bandwidth, and latency histograms.",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "We've set up a filesystem and mounted our NVMe drive. Now the question: how fast is it actually? SSD manufacturers advertise speeds like &ldquo;7,000 MB/s read,&rdquo; but those numbers only tell part of the story. Real-world performance depends on the I/O pattern: random vs sequential, read vs write, block size, and how many requests are in flight simultaneously.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "Why can't you just copy a large file and time it? Because file copies are sequential reads and writes through the filesystem — they only test one dimension of SSD performance. A database server doing 10,000 random 4K reads per second has completely different needs than a video editor streaming 2 GB/s sequentially.",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "fio (Flexible I/O Tester) is the industry-standard tool for answering these questions. It lets you simulate any workload pattern and measures three critical metrics:",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "But wait — IOPS and bandwidth are related, right? Yes! IOPS × block_size = bandwidth. If you do 1,000,000 IOPS at 4K, that's 4 GB/s bandwidth. If you do 50,000 IOPS at 128K, that's 6.4 GB/s. The SSD has a maximum for both — it can't exceed its IOPS limit OR its bandwidth limit, whichever it hits first.",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "fio works by running &ldquo;jobs&rdquo; — you tell it what I/O pattern to generate, and it hammers the drive while collecting detailed statistics. Let's explore the presets first, then dive into what each parameter does.",
+      "blockIndex": 7
+    },
+    {
+      "type": "paragraph",
+      "text": "Why does my SSD benchmark show 5 GB/s for the first 30 seconds, then drop to 1.5 GB/s? Because most consumer SSDs have an SLC cache — a portion of the TLC/QLC NAND that temporarily operates in faster SLC mode (1 bit per cell instead of 3-4). Writes go to this fast cache first.",
+      "blockIndex": 8
+    },
+    {
+      "type": "paragraph",
+      "text": "But the SLC cache has a finite size (typically 10-100 GB depending on the drive and how full it is). Once it fills up, writes fall back to direct TLC/QLC programming — which is 2-5x slower. Short benchmarks only measure cache speed. To see real sustained performance, you need to:",
+      "blockIndex": 9
+    },
+    {
+      "type": "paragraph",
+      "text": "Instead of passing everything on the command line, fio can read a .fio jobfile — an INI-style config file that defines one or more jobs. This is cleaner for complex tests and lets you save configurations for reproducible benchmarking.",
+      "blockIndex": 10
+    },
+    {
+      "type": "paragraph",
+      "text": "A jobfile has a [global] section that sets defaults, and each [job-name] section can override any global setting. This lets you run mixed workloads — e.g., 70% read + 30% write simultaneously — in a single test run.",
+      "blockIndex": 11
+    },
+    {
+      "type": "paragraph",
+      "text": "One request at a time. The application sends a read/write and waits (blocks) until it completes before sending the next one. Like ordering food and standing at the counter until it's ready. Simple but slow — the SSD is idle while the app processes results.",
+      "blockIndex": 12
+    },
+    {
+      "type": "paragraph",
+      "text": "Submit multiple requests without waiting. The application fires off many reads/writes and collects completions later. Like ordering from multiple counters simultaneously. The SSD's multiple NAND channels stay busy.",
+      "blockIndex": 13
+    },
+    {
+      "type": "paragraph",
+      "text": "Connection to NVMe queues: Remember from Lesson 6 — NVMe has deep queues (64K entries). Synchronous I/O can only use QD=1. To leverage NVMe's parallelism, you must use async I/O.",
+      "blockIndex": 14
+    },
+    {
+      "type": "paragraph",
+      "text": "When an application writes data, it may sit in the OS buffer cache or the SSD's volatile write cache. fsync() forces all buffered writes to be flushed to stable storage. Databases use fsync to guarantee durability — &ldquo;if I get an fsync success, this data survived a power loss.&rdquo;",
+      "blockIndex": 15
+    },
+    {
+      "type": "paragraph",
+      "text": "When a database does INSERT + fsync, the database isn't done until fsync returns. The SSD must flush its volatile cache to NAND. SSDs with capacitor-backed caches can acknowledge fsync instantly (data is safe even on power loss). Cheaper SSDs without capacitors must actually write to NAND first — much slower.",
+      "blockIndex": 16
+    },
+    {
+      "type": "paragraph",
+      "text": "fio's output looks intimidating, but once you know what each line means, it tells you everything about your SSD's behavior:",
+      "blockIndex": 17
+    },
+    {
+      "type": "paragraph",
+      "text": "If you run two fio tests on the same drive and get wildly different results, what went wrong? Probably nothing — you measured two different things:",
+      "blockIndex": 18
+    },
+    {
+      "type": "paragraph",
+      "text": "Fresh drive, SLC cache not full, GC not active. This is what spec sheets advertise. Typically 2-5x higher than steady state for write workloads.",
+      "blockIndex": 19
+    },
+    {
+      "type": "paragraph",
+      "text": "Drive is mostly full, SLC cache exhausted, GC running continuously. This is real-world performance under sustained load. The only number that matters for servers and databases.",
+      "blockIndex": 20
+    },
+    {
+      "type": "info",
+      "text": "CAUTION: fio on raw devices destroys data: Using --filename=/dev/nvme0n1 writes directly to the block device, overwriting ALL data — filesystem, partitions, everything. Always double-check the device name with lsblk before running fio. For safe testing, use a file path (--filename=/tmp/fio.dat) instead — slightly less accurate but won't destroy your data.",
+      "blockIndex": 21
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: A benchmark shows an NVMe SSD doing 50,000 IOPS at QD1 but 900,000 IOPS at QD128. Why does increasing queue depth improve performance by 18x? What is happening inside the SSD at the hardware level that explains this massive difference? The answer: At QD1 (iodepth=1), only one I/O request is in flight at a time. The SSD has multiple NAND dies connected across several channels (typically 4-8), but only one die is active — the rest sit idle waiting. The host sends a request, waits for the SSD to read from a single die (~50-100us), gets the response, then sends the next. At QD128, 128 requests are in flight simultaneously. The SSD's controller can distribute these across all NAND channels and dies in parallel — while one die is reading, others are already processing different requests. This channel-level parallelism is the key: an 8-channel controller with 2 dies per channel can theoretically serve 16 requests simultaneously. Additionally, deeper queues allow the controller's internal scheduler to reorder requests for optimal NAND access patterns, reducing die conflicts and improving throughput. The relationship is IOPS x block_size = bandwidth, so at QD128 with 4K blocks: 900K x 4K = 3.6 GB/s — approaching the PCIe lane limit.",
+      "requiresReveal": true,
+      "blockIndex": 22
+    }
+  ]
+}

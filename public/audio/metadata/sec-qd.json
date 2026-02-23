@@ -1,0 +1,2200 @@
+{
+  "sectionId": "sec-qd",
+  "audioFile": "/audio/sections/sec-qd.mp3",
+  "totalDurationMs": 157320,
+  "fileSizeBytes": 2517504,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "paragraph",
+      "text": "Queue Depth (QD) is how many commands are in-flight simultaneously — submitted to the SSD but not yet completed. A single NVMe submission queue can hold up to 65,535 entries. Higher QD lets the SSD's controller keep all its NAND dies busy in parallel.",
+      "beginMs": 0,
+      "endMs": 17520,
+      "timestamps": [
+        {
+          "word": "Queue",
+          "begin": 0,
+          "end": 120
+        },
+        {
+          "word": "Depth",
+          "begin": 240,
+          "end": 400
+        },
+        {
+          "word": "(QD)",
+          "begin": 420,
+          "end": 740
+        },
+        {
+          "word": "is",
+          "begin": 480,
+          "end": 540
+        },
+        {
+          "word": "how",
+          "begin": 540,
+          "end": 740
+        },
+        {
+          "word": "many",
+          "begin": 980,
+          "end": 1120
+        },
+        {
+          "word": "commands",
+          "begin": 1120,
+          "end": 1460
+        },
+        {
+          "word": "are",
+          "begin": 1500,
+          "end": 1600
+        },
+        {
+          "word": "in-flight",
+          "begin": 1620,
+          "end": 2120
+        },
+        {
+          "word": "simultaneously",
+          "begin": 2180,
+          "end": 3040
+        },
+        {
+          "word": "submitted",
+          "begin": 3040,
+          "end": 3920
+        },
+        {
+          "word": "to",
+          "begin": 3940,
+          "end": 4059
+        },
+        {
+          "word": "the",
+          "begin": 4100,
+          "end": 4160
+        },
+        {
+          "word": "but",
+          "begin": 4200,
+          "end": 4240
+        },
+        {
+          "word": "not",
+          "begin": 4240,
+          "end": 4500
+        },
+        {
+          "word": "yet",
+          "begin": 4540,
+          "end": 4780
+        },
+        {
+          "word": "completed.",
+          "begin": 4780,
+          "end": 5380
+        },
+        {
+          "word": "A",
+          "begin": 5400,
+          "end": 5440
+        },
+        {
+          "word": "single",
+          "begin": 5480,
+          "end": 5600
+        },
+        {
+          "word": "NVMe",
+          "begin": 5600,
+          "end": 5980
+        },
+        {
+          "word": "submission",
+          "begin": 6080,
+          "end": 7040
+        },
+        {
+          "word": "queue",
+          "begin": 7120,
+          "end": 7320
+        },
+        {
+          "word": "can",
+          "begin": 7440,
+          "end": 7900
+        },
+        {
+          "word": "hold",
+          "begin": 7920,
+          "end": 8220
+        },
+        {
+          "word": "up",
+          "begin": 8240,
+          "end": 8320
+        },
+        {
+          "word": "to",
+          "begin": 8400,
+          "end": 8520
+        },
+        {
+          "word": "65,535",
+          "begin": 8700,
+          "end": 10960
+        },
+        {
+          "word": "entries.",
+          "begin": 10980,
+          "end": 12120
+        },
+        {
+          "word": "Higher",
+          "begin": 12260,
+          "end": 12640
+        },
+        {
+          "word": "QD",
+          "begin": 12640,
+          "end": 12840
+        },
+        {
+          "word": "lets",
+          "begin": 12980,
+          "end": 13160
+        },
+        {
+          "word": "the",
+          "begin": 13200,
+          "end": 13260
+        },
+        {
+          "word": "SSD's",
+          "begin": 13360,
+          "end": 13920
+        },
+        {
+          "word": "controller",
+          "begin": 13960,
+          "end": 14400
+        },
+        {
+          "word": "keep",
+          "begin": 14540,
+          "end": 14720
+        },
+        {
+          "word": "all",
+          "begin": 14800,
+          "end": 14920
+        },
+        {
+          "word": "its",
+          "begin": 14940,
+          "end": 15060
+        },
+        {
+          "word": "NAND",
+          "begin": 15140,
+          "end": 15340
+        },
+        {
+          "word": "dies",
+          "begin": 15400,
+          "end": 15700
+        },
+        {
+          "word": "busy",
+          "begin": 15780,
+          "end": 15980
+        },
+        {
+          "word": "in",
+          "begin": 16079,
+          "end": 16160
+        },
+        {
+          "word": "parallel.",
+          "begin": 16200,
+          "end": 16680
+        },
+        {
+          "word": "Only",
+          "begin": 17060,
+          "end": 17240
+        },
+        {
+          "word": "1",
+          "begin": 17340,
+          "end": 17520
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "paragraph",
+      "text": "Only 1 command in-flight. The CPU waits idle while the SSD reads NAND. Most NAND dies are idle. Measures pure latency but wastes bandwidth.",
+      "beginMs": 17580,
+      "endMs": 25820,
+      "timestamps": [
+        {
+          "word": "command",
+          "begin": 17580,
+          "end": 18020
+        },
+        {
+          "word": "in-flight.",
+          "begin": 18120,
+          "end": 18480
+        },
+        {
+          "word": "The",
+          "begin": 18800,
+          "end": 18840
+        },
+        {
+          "word": "CPU",
+          "begin": 18940,
+          "end": 19300
+        },
+        {
+          "word": "waits",
+          "begin": 19420,
+          "end": 19640
+        },
+        {
+          "word": "idle",
+          "begin": 19740,
+          "end": 19940
+        },
+        {
+          "word": "while",
+          "begin": 20120,
+          "end": 20240
+        },
+        {
+          "word": "the",
+          "begin": 20280,
+          "end": 20340
+        },
+        {
+          "word": "SSD",
+          "begin": 20440,
+          "end": 20860
+        },
+        {
+          "word": "reads",
+          "begin": 20980,
+          "end": 21220
+        },
+        {
+          "word": "NAND.",
+          "begin": 21280,
+          "end": 21580
+        },
+        {
+          "word": "Most",
+          "begin": 21620,
+          "end": 22220
+        },
+        {
+          "word": "NAND",
+          "begin": 22280,
+          "end": 22480
+        },
+        {
+          "word": "dies",
+          "begin": 22520,
+          "end": 22800
+        },
+        {
+          "word": "are",
+          "begin": 22840,
+          "end": 22860
+        },
+        {
+          "word": "idle.",
+          "begin": 23000,
+          "end": 23200
+        },
+        {
+          "word": "Measures",
+          "begin": 23660,
+          "end": 23940
+        },
+        {
+          "word": "pure",
+          "begin": 24020,
+          "end": 24260
+        },
+        {
+          "word": "latency",
+          "begin": 24260,
+          "end": 24640
+        },
+        {
+          "word": "but",
+          "begin": 24720,
+          "end": 24820
+        },
+        {
+          "word": "wastes",
+          "begin": 24880,
+          "end": 25180
+        },
+        {
+          "word": "bandwidth.",
+          "begin": 25240,
+          "end": 25820
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "paragraph",
+      "text": "Enough commands to keep most NAND dies busy. Latency increases slightly but IOPS scales dramatically. This is the typical operating range for high-performance storage workloads.",
+      "beginMs": 26020,
+      "endMs": 35460,
+      "timestamps": [
+        {
+          "word": "Enough",
+          "begin": 26020,
+          "end": 26280
+        },
+        {
+          "word": "commands",
+          "begin": 26340,
+          "end": 26700
+        },
+        {
+          "word": "to",
+          "begin": 26720,
+          "end": 26840
+        },
+        {
+          "word": "keep",
+          "begin": 26900,
+          "end": 27060
+        },
+        {
+          "word": "most",
+          "begin": 27060,
+          "end": 27360
+        },
+        {
+          "word": "NAND",
+          "begin": 27380,
+          "end": 27580
+        },
+        {
+          "word": "dies",
+          "begin": 27640,
+          "end": 27900
+        },
+        {
+          "word": "busy.",
+          "begin": 27960,
+          "end": 28180
+        },
+        {
+          "word": "Latency",
+          "begin": 28180,
+          "end": 29000
+        },
+        {
+          "word": "increases",
+          "begin": 29120,
+          "end": 29620
+        },
+        {
+          "word": "slightly",
+          "begin": 29680,
+          "end": 30020
+        },
+        {
+          "word": "but",
+          "begin": 30120,
+          "end": 30200
+        },
+        {
+          "word": "IOPS",
+          "begin": 30200,
+          "end": 30580
+        },
+        {
+          "word": "scales",
+          "begin": 30660,
+          "end": 30960
+        },
+        {
+          "word": "dramatically.",
+          "begin": 31000,
+          "end": 31520
+        },
+        {
+          "word": "This",
+          "begin": 31920,
+          "end": 32060
+        },
+        {
+          "word": "is",
+          "begin": 32080,
+          "end": 32140
+        },
+        {
+          "word": "the",
+          "begin": 32140,
+          "end": 32240
+        },
+        {
+          "word": "typical",
+          "begin": 32299,
+          "end": 32600
+        },
+        {
+          "word": "operating",
+          "begin": 32720,
+          "end": 33140
+        },
+        {
+          "word": "range",
+          "begin": 33180,
+          "end": 33460
+        },
+        {
+          "word": "for",
+          "begin": 33520,
+          "end": 33680
+        },
+        {
+          "word": "high-performance",
+          "begin": 33680,
+          "end": 34380
+        },
+        {
+          "word": "storage",
+          "begin": 34420,
+          "end": 34780
+        },
+        {
+          "word": "workloads.",
+          "begin": 34840,
+          "end": 35460
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "All dies are saturated — adding more commands just increases queue wait time. Latency climbs steeply while IOPS barely improves. The SSD is at maximum throughput.",
+      "beginMs": 35660,
+      "endMs": 45740,
+      "timestamps": [
+        {
+          "word": "All",
+          "begin": 35660,
+          "end": 35800
+        },
+        {
+          "word": "dies",
+          "begin": 35860,
+          "end": 36140
+        },
+        {
+          "word": "are",
+          "begin": 36160,
+          "end": 36180
+        },
+        {
+          "word": "saturated",
+          "begin": 36300,
+          "end": 36920
+        },
+        {
+          "word": "adding",
+          "begin": 37200,
+          "end": 37420
+        },
+        {
+          "word": "more",
+          "begin": 37480,
+          "end": 37720
+        },
+        {
+          "word": "commands",
+          "begin": 37720,
+          "end": 38140
+        },
+        {
+          "word": "just",
+          "begin": 38140,
+          "end": 38480
+        },
+        {
+          "word": "increases",
+          "begin": 38560,
+          "end": 39080
+        },
+        {
+          "word": "queue",
+          "begin": 39140,
+          "end": 39280
+        },
+        {
+          "word": "wait",
+          "begin": 39380,
+          "end": 39560
+        },
+        {
+          "word": "time.",
+          "begin": 39620,
+          "end": 39920
+        },
+        {
+          "word": "Latency",
+          "begin": 40200,
+          "end": 40560
+        },
+        {
+          "word": "climbs",
+          "begin": 40660,
+          "end": 40960
+        },
+        {
+          "word": "steeply",
+          "begin": 41040,
+          "end": 41440
+        },
+        {
+          "word": "while",
+          "begin": 41560,
+          "end": 41700
+        },
+        {
+          "word": "IOPS",
+          "begin": 41820,
+          "end": 42200
+        },
+        {
+          "word": "barely",
+          "begin": 42260,
+          "end": 42520
+        },
+        {
+          "word": "improves.",
+          "begin": 42600,
+          "end": 43180
+        },
+        {
+          "word": "The",
+          "begin": 43440,
+          "end": 43500
+        },
+        {
+          "word": "SSD",
+          "begin": 43580,
+          "end": 44020
+        },
+        {
+          "word": "is",
+          "begin": 44140,
+          "end": 44240
+        },
+        {
+          "word": "at",
+          "begin": 44280,
+          "end": 44400
+        },
+        {
+          "word": "maximum",
+          "begin": 44440,
+          "end": 44920
+        },
+        {
+          "word": "throughput.",
+          "begin": 45000,
+          "end": 45480
+        },
+        {
+          "word": "Queue",
+          "begin": 45640,
+          "end": 45740
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "heading",
+      "text": "Queue Depth and IOPS",
+      "beginMs": 45900,
+      "endMs": 46840,
+      "timestamps": [
+        {
+          "word": "Depth",
+          "begin": 45900,
+          "end": 46200
+        },
+        {
+          "word": "and",
+          "begin": 46280,
+          "end": 46360
+        },
+        {
+          "word": "IOPS",
+          "begin": 46460,
+          "end": 46840
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "term",
+      "text": "IOPS (I/O Operations Per Second): A measure of how many read or write operations a storage device can complete per second. Higher queue depth generally increases IOPS by keeping more NAND dies busy in parallel.",
+      "beginMs": 46920,
+      "endMs": 58560,
+      "timestamps": [
+        {
+          "word": "(I/O",
+          "begin": 46920,
+          "end": 47120
+        },
+        {
+          "word": "Operations",
+          "begin": 47280,
+          "end": 47840
+        },
+        {
+          "word": "Per",
+          "begin": 47900,
+          "end": 47960
+        },
+        {
+          "word": "Second):",
+          "begin": 48080,
+          "end": 48380
+        },
+        {
+          "word": "A",
+          "begin": 48380,
+          "end": 48740
+        },
+        {
+          "word": "measure",
+          "begin": 48820,
+          "end": 49100
+        },
+        {
+          "word": "of",
+          "begin": 49100,
+          "end": 49180
+        },
+        {
+          "word": "how",
+          "begin": 49220,
+          "end": 49300
+        },
+        {
+          "word": "many",
+          "begin": 49400,
+          "end": 49520
+        },
+        {
+          "word": "read",
+          "begin": 49640,
+          "end": 49840
+        },
+        {
+          "word": "or",
+          "begin": 49880,
+          "end": 49900
+        },
+        {
+          "word": "write",
+          "begin": 50020,
+          "end": 50220
+        },
+        {
+          "word": "operations",
+          "begin": 50280,
+          "end": 50900
+        },
+        {
+          "word": "a",
+          "begin": 50920,
+          "end": 50940
+        },
+        {
+          "word": "storage",
+          "begin": 51060,
+          "end": 51480
+        },
+        {
+          "word": "device",
+          "begin": 51480,
+          "end": 51840
+        },
+        {
+          "word": "can",
+          "begin": 51880,
+          "end": 52000
+        },
+        {
+          "word": "complete",
+          "begin": 52060,
+          "end": 52400
+        },
+        {
+          "word": "per",
+          "begin": 52400,
+          "end": 52540
+        },
+        {
+          "word": "second.",
+          "begin": 52660,
+          "end": 53020
+        },
+        {
+          "word": "Higher",
+          "begin": 53020,
+          "end": 53540
+        },
+        {
+          "word": "queue",
+          "begin": 53660,
+          "end": 53780
+        },
+        {
+          "word": "depth",
+          "begin": 53880,
+          "end": 54140
+        },
+        {
+          "word": "generally",
+          "begin": 54240,
+          "end": 54580
+        },
+        {
+          "word": "increases",
+          "begin": 54660,
+          "end": 55160
+        },
+        {
+          "word": "IOPS",
+          "begin": 55280,
+          "end": 56080
+        },
+        {
+          "word": "by",
+          "begin": 56340,
+          "end": 56400
+        },
+        {
+          "word": "keeping",
+          "begin": 56500,
+          "end": 56780
+        },
+        {
+          "word": "more",
+          "begin": 56840,
+          "end": 56920
+        },
+        {
+          "word": "NAND",
+          "begin": 57060,
+          "end": 57280
+        },
+        {
+          "word": "dies",
+          "begin": 57320,
+          "end": 57620
+        },
+        {
+          "word": "busy",
+          "begin": 57700,
+          "end": 57900
+        },
+        {
+          "word": "in",
+          "begin": 57980,
+          "end": 58040
+        },
+        {
+          "word": "parallel.",
+          "begin": 58100,
+          "end": 58560
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "An SSD contains multiple NAND dies, each capable of operating independently. But to keep them all busy, the host needs to submit multiple commands at once. Queue depth determines how well the controller can parallelize work across NAND dies.",
+      "beginMs": 58820,
+      "endMs": 71800,
+      "timestamps": [
+        {
+          "word": "An",
+          "begin": 58820,
+          "end": 58900
+        },
+        {
+          "word": "SSD",
+          "begin": 58940,
+          "end": 59400
+        },
+        {
+          "word": "contains",
+          "begin": 59520,
+          "end": 59920
+        },
+        {
+          "word": "multiple",
+          "begin": 59980,
+          "end": 60300
+        },
+        {
+          "word": "NAND",
+          "begin": 60400,
+          "end": 60620
+        },
+        {
+          "word": "dies,",
+          "begin": 60660,
+          "end": 61020
+        },
+        {
+          "word": "each",
+          "begin": 61320,
+          "end": 61480
+        },
+        {
+          "word": "capable",
+          "begin": 61540,
+          "end": 61940
+        },
+        {
+          "word": "of",
+          "begin": 61960,
+          "end": 62060
+        },
+        {
+          "word": "operating",
+          "begin": 62100,
+          "end": 62560
+        },
+        {
+          "word": "independently.",
+          "begin": 62580,
+          "end": 63200
+        },
+        {
+          "word": "But",
+          "begin": 63520,
+          "end": 63600
+        },
+        {
+          "word": "to",
+          "begin": 63620,
+          "end": 63680
+        },
+        {
+          "word": "keep",
+          "begin": 63720,
+          "end": 63920
+        },
+        {
+          "word": "them",
+          "begin": 63940,
+          "end": 64060
+        },
+        {
+          "word": "all",
+          "begin": 64099,
+          "end": 64200
+        },
+        {
+          "word": "busy,",
+          "begin": 64260,
+          "end": 64500
+        },
+        {
+          "word": "the",
+          "begin": 64879,
+          "end": 64940
+        },
+        {
+          "word": "host",
+          "begin": 65000,
+          "end": 65260
+        },
+        {
+          "word": "needs",
+          "begin": 65280,
+          "end": 65480
+        },
+        {
+          "word": "to",
+          "begin": 65519,
+          "end": 65580
+        },
+        {
+          "word": "submit",
+          "begin": 65640,
+          "end": 65920
+        },
+        {
+          "word": "multiple",
+          "begin": 65980,
+          "end": 66320
+        },
+        {
+          "word": "commands",
+          "begin": 66400,
+          "end": 66820
+        },
+        {
+          "word": "at",
+          "begin": 66840,
+          "end": 66900
+        },
+        {
+          "word": "once.",
+          "begin": 66940,
+          "end": 67260
+        },
+        {
+          "word": "Queue",
+          "begin": 67640,
+          "end": 67760
+        },
+        {
+          "word": "depth",
+          "begin": 67880,
+          "end": 68120
+        },
+        {
+          "word": "determines",
+          "begin": 68180,
+          "end": 68620
+        },
+        {
+          "word": "how",
+          "begin": 68640,
+          "end": 68740
+        },
+        {
+          "word": "well",
+          "begin": 68860,
+          "end": 69000
+        },
+        {
+          "word": "the",
+          "begin": 69040,
+          "end": 69080
+        },
+        {
+          "word": "controller",
+          "begin": 69140,
+          "end": 69760
+        },
+        {
+          "word": "can",
+          "begin": 69820,
+          "end": 70020
+        },
+        {
+          "word": "parallelize",
+          "begin": 70040,
+          "end": 70460
+        },
+        {
+          "word": "work",
+          "begin": 70520,
+          "end": 70760
+        },
+        {
+          "word": "across",
+          "begin": 70800,
+          "end": 71140
+        },
+        {
+          "word": "NAND",
+          "begin": 71200,
+          "end": 71400
+        },
+        {
+          "word": "dies.",
+          "begin": 71440,
+          "end": 71800
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "Think of it like a restaurant with 8 chefs (NAND dies). If you order one dish at a time (QD1), 7 chefs stand idle. If you order 8 dishes at once (QD8), every chef is cooking — your food arrives much faster overall, even though each dish takes the same time.",
+      "beginMs": 72080,
+      "endMs": 86980,
+      "timestamps": [
+        {
+          "word": "Think",
+          "begin": 72080,
+          "end": 72220
+        },
+        {
+          "word": "of",
+          "begin": 72220,
+          "end": 72300
+        },
+        {
+          "word": "it",
+          "begin": 72300,
+          "end": 72380
+        },
+        {
+          "word": "like",
+          "begin": 72380,
+          "end": 72520
+        },
+        {
+          "word": "a",
+          "begin": 72540,
+          "end": 72560
+        },
+        {
+          "word": "restaurant",
+          "begin": 72620,
+          "end": 73000
+        },
+        {
+          "word": "with",
+          "begin": 73020,
+          "end": 73120
+        },
+        {
+          "word": "8",
+          "begin": 73200,
+          "end": 73340
+        },
+        {
+          "word": "chefs",
+          "begin": 73400,
+          "end": 73660
+        },
+        {
+          "word": "(NAND",
+          "begin": 73720,
+          "end": 73920
+        },
+        {
+          "word": "dies).",
+          "begin": 73940,
+          "end": 74280
+        },
+        {
+          "word": "If",
+          "begin": 74600,
+          "end": 74700
+        },
+        {
+          "word": "you",
+          "begin": 74700,
+          "end": 74740
+        },
+        {
+          "word": "order",
+          "begin": 74740,
+          "end": 75100
+        },
+        {
+          "word": "one",
+          "begin": 75100,
+          "end": 75240
+        },
+        {
+          "word": "dish",
+          "begin": 75280,
+          "end": 75440
+        },
+        {
+          "word": "at",
+          "begin": 75460,
+          "end": 75540
+        },
+        {
+          "word": "a",
+          "begin": 75540,
+          "end": 75560
+        },
+        {
+          "word": "time",
+          "begin": 75640,
+          "end": 75920
+        },
+        {
+          "word": "(QD1),",
+          "begin": 76000,
+          "end": 76740
+        },
+        {
+          "word": "7",
+          "begin": 77000,
+          "end": 77240
+        },
+        {
+          "word": "chefs",
+          "begin": 77360,
+          "end": 77580
+        },
+        {
+          "word": "stand",
+          "begin": 77600,
+          "end": 77760
+        },
+        {
+          "word": "idle.",
+          "begin": 77780,
+          "end": 78180
+        },
+        {
+          "word": "If",
+          "begin": 78460,
+          "end": 78560
+        },
+        {
+          "word": "you",
+          "begin": 78560,
+          "end": 78600
+        },
+        {
+          "word": "order",
+          "begin": 78600,
+          "end": 78860
+        },
+        {
+          "word": "8",
+          "begin": 79000,
+          "end": 79160
+        },
+        {
+          "word": "dishes",
+          "begin": 79180,
+          "end": 79480
+        },
+        {
+          "word": "at",
+          "begin": 79520,
+          "end": 79580
+        },
+        {
+          "word": "once",
+          "begin": 79640,
+          "end": 79880
+        },
+        {
+          "word": "(QD8),",
+          "begin": 79960,
+          "end": 80700
+        },
+        {
+          "word": "every",
+          "begin": 80960,
+          "end": 81120
+        },
+        {
+          "word": "chef",
+          "begin": 81220,
+          "end": 81300
+        },
+        {
+          "word": "is",
+          "begin": 81300,
+          "end": 81500
+        },
+        {
+          "word": "cooking",
+          "begin": 81500,
+          "end": 81740
+        },
+        {
+          "word": "your",
+          "begin": 81760,
+          "end": 82220
+        },
+        {
+          "word": "food",
+          "begin": 82360,
+          "end": 82520
+        },
+        {
+          "word": "arrives",
+          "begin": 82520,
+          "end": 82880
+        },
+        {
+          "word": "much",
+          "begin": 82940,
+          "end": 83120
+        },
+        {
+          "word": "faster",
+          "begin": 83200,
+          "end": 83540
+        },
+        {
+          "word": "overall,",
+          "begin": 83660,
+          "end": 84120
+        },
+        {
+          "word": "even",
+          "begin": 84400,
+          "end": 84620
+        },
+        {
+          "word": "though",
+          "begin": 84640,
+          "end": 84700
+        },
+        {
+          "word": "each",
+          "begin": 84860,
+          "end": 85100
+        },
+        {
+          "word": "dish",
+          "begin": 85100,
+          "end": 85300
+        },
+        {
+          "word": "takes",
+          "begin": 85380,
+          "end": 85640
+        },
+        {
+          "word": "the",
+          "begin": 85640,
+          "end": 85680
+        },
+        {
+          "word": "same",
+          "begin": 85760,
+          "end": 85960
+        },
+        {
+          "word": "time.",
+          "begin": 86020,
+          "end": 86340
+        },
+        {
+          "word": "Knowledge",
+          "begin": 86700,
+          "end": 86980
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "reveal",
+      "text": "Knowledge check: Why does a typical NVMe SSD achieve only ~15K IOPS at QD1 despite being capable of 250K+ IOPS at higher queue depths? What specific hardware resources are being wasted at QD1, and why can't the controller optimize around this? The answer: At QD1 (single command in flight), the SSD achieves only ~10-20K IOPS because only one NAND die is active at a time while all others sit idle. A typical SSD has 8-16 dies across 4-8 channels, each capable of independent operation — but with only one command pending, the controller can only read from one die while the rest wait. The IOPS at QD1 is essentially 1 / (single_read_latency), where a NAND page read takes ~50-100us, giving ~10-20K IOPS. The controller can't optimize around this because it has no advance knowledge of what the host will request next — it must wait for each command to complete before receiving the next one. At QD32, 32 commands are in-flight simultaneously, allowing the controller to dispatch reads across many dies in parallel, multiplying throughput while each individual read still takes the same ~50-100us.",
+      "beginMs": 87060,
+      "endMs": 157060,
+      "timestamps": [
+        {
+          "word": "check:",
+          "begin": 87060,
+          "end": 87300
+        },
+        {
+          "word": "Why",
+          "begin": 87300,
+          "end": 87540
+        },
+        {
+          "word": "does",
+          "begin": 87640,
+          "end": 87780
+        },
+        {
+          "word": "a",
+          "begin": 87780,
+          "end": 87820
+        },
+        {
+          "word": "typical",
+          "begin": 87880,
+          "end": 88220
+        },
+        {
+          "word": "NVMe",
+          "begin": 88320,
+          "end": 88720
+        },
+        {
+          "word": "SSD",
+          "begin": 88860,
+          "end": 89260
+        },
+        {
+          "word": "achieve",
+          "begin": 89340,
+          "end": 89660
+        },
+        {
+          "word": "only",
+          "begin": 89720,
+          "end": 89880
+        },
+        {
+          "word": "~15K",
+          "begin": 89980,
+          "end": 90720
+        },
+        {
+          "word": "IOPS",
+          "begin": 90800,
+          "end": 91180
+        },
+        {
+          "word": "at",
+          "begin": 91220,
+          "end": 91320
+        },
+        {
+          "word": "QD1",
+          "begin": 91360,
+          "end": 91780
+        },
+        {
+          "word": "despite",
+          "begin": 91860,
+          "end": 92320
+        },
+        {
+          "word": "being",
+          "begin": 92340,
+          "end": 92500
+        },
+        {
+          "word": "capable",
+          "begin": 92560,
+          "end": 92960
+        },
+        {
+          "word": "of",
+          "begin": 92980,
+          "end": 93060
+        },
+        {
+          "word": "250K+",
+          "begin": 93120,
+          "end": 94480
+        },
+        {
+          "word": "IOPS",
+          "begin": 94560,
+          "end": 94960
+        },
+        {
+          "word": "at",
+          "begin": 95120,
+          "end": 95240
+        },
+        {
+          "word": "higher",
+          "begin": 95280,
+          "end": 95620
+        },
+        {
+          "word": "queue",
+          "begin": 95640,
+          "end": 95700
+        },
+        {
+          "word": "depths?",
+          "begin": 95800,
+          "end": 96120
+        },
+        {
+          "word": "What",
+          "begin": 96640,
+          "end": 96780
+        },
+        {
+          "word": "specific",
+          "begin": 96820,
+          "end": 97300
+        },
+        {
+          "word": "hardware",
+          "begin": 97340,
+          "end": 97620
+        },
+        {
+          "word": "resources",
+          "begin": 97740,
+          "end": 98280
+        },
+        {
+          "word": "are",
+          "begin": 98360,
+          "end": 98380
+        },
+        {
+          "word": "being",
+          "begin": 98460,
+          "end": 98640
+        },
+        {
+          "word": "wasted",
+          "begin": 98700,
+          "end": 99080
+        },
+        {
+          "word": "at",
+          "begin": 99160,
+          "end": 99240
+        },
+        {
+          "word": "QD1,",
+          "begin": 99300,
+          "end": 99840
+        },
+        {
+          "word": "and",
+          "begin": 100160,
+          "end": 100240
+        },
+        {
+          "word": "why",
+          "begin": 100280,
+          "end": 100360
+        },
+        {
+          "word": "can't",
+          "begin": 100500,
+          "end": 100660
+        },
+        {
+          "word": "the",
+          "begin": 100680,
+          "end": 100720
+        },
+        {
+          "word": "controller",
+          "begin": 100780,
+          "end": 101140
+        },
+        {
+          "word": "optimize",
+          "begin": 101260,
+          "end": 101680
+        },
+        {
+          "word": "around",
+          "begin": 101700,
+          "end": 101960
+        },
+        {
+          "word": "this?",
+          "begin": 102000,
+          "end": 102260
+        },
+        {
+          "word": "The",
+          "begin": 102600,
+          "end": 102640
+        },
+        {
+          "word": "answer:",
+          "begin": 102760,
+          "end": 103040
+        },
+        {
+          "word": "At",
+          "begin": 103400,
+          "end": 103480
+        },
+        {
+          "word": "QD1",
+          "begin": 103560,
+          "end": 104100
+        },
+        {
+          "word": "(single",
+          "begin": 104200,
+          "end": 104400
+        },
+        {
+          "word": "command",
+          "begin": 104500,
+          "end": 104880
+        },
+        {
+          "word": "in",
+          "begin": 104960,
+          "end": 105040
+        },
+        {
+          "word": "flight),",
+          "begin": 105140,
+          "end": 106240
+        },
+        {
+          "word": "the",
+          "begin": 106300,
+          "end": 106380
+        },
+        {
+          "word": "achieves",
+          "begin": 106440,
+          "end": 106820
+        },
+        {
+          "word": "only",
+          "begin": 106820,
+          "end": 107060
+        },
+        {
+          "word": "IOPS",
+          "begin": 107160,
+          "end": 108940
+        },
+        {
+          "word": "because",
+          "begin": 109200,
+          "end": 109420
+        },
+        {
+          "word": "only",
+          "begin": 109480,
+          "end": 109640
+        },
+        {
+          "word": "one",
+          "begin": 109760,
+          "end": 109940
+        },
+        {
+          "word": "NAND",
+          "begin": 110000,
+          "end": 110200
+        },
+        {
+          "word": "die",
+          "begin": 110280,
+          "end": 110360
+        },
+        {
+          "word": "is",
+          "begin": 110560,
+          "end": 110660
+        },
+        {
+          "word": "active",
+          "begin": 110760,
+          "end": 111040
+        },
+        {
+          "word": "at",
+          "begin": 111080,
+          "end": 111140
+        },
+        {
+          "word": "a",
+          "begin": 111160,
+          "end": 111180
+        },
+        {
+          "word": "time",
+          "begin": 111260,
+          "end": 111620
+        },
+        {
+          "word": "while",
+          "begin": 111900,
+          "end": 112060
+        },
+        {
+          "word": "all",
+          "begin": 112160,
+          "end": 112280
+        },
+        {
+          "word": "others",
+          "begin": 112360,
+          "end": 112880
+        },
+        {
+          "word": "sit",
+          "begin": 112980,
+          "end": 113120
+        },
+        {
+          "word": "idle.",
+          "begin": 112980,
+          "end": 113120
+        },
+        {
+          "word": "A",
+          "begin": 113360,
+          "end": 113460
+        },
+        {
+          "word": "typical",
+          "begin": 113460,
+          "end": 113820
+        },
+        {
+          "word": "SSD",
+          "begin": 113920,
+          "end": 114760
+        },
+        {
+          "word": "has",
+          "begin": 114860,
+          "end": 114980
+        },
+        {
+          "word": "8-16",
+          "begin": 115020,
+          "end": 115600
+        },
+        {
+          "word": "dies",
+          "begin": 115660,
+          "end": 116000
+        },
+        {
+          "word": "across",
+          "begin": 116080,
+          "end": 116440
+        },
+        {
+          "word": "4-8",
+          "begin": 116520,
+          "end": 116960
+        },
+        {
+          "word": "channels,",
+          "begin": 116980,
+          "end": 117440
+        },
+        {
+          "word": "each",
+          "begin": 117720,
+          "end": 117940
+        },
+        {
+          "word": "capable",
+          "begin": 117940,
+          "end": 118320
+        },
+        {
+          "word": "of",
+          "begin": 118340,
+          "end": 118440
+        },
+        {
+          "word": "independent",
+          "begin": 118500,
+          "end": 118960
+        },
+        {
+          "word": "operation",
+          "begin": 119020,
+          "end": 119640
+        },
+        {
+          "word": "but",
+          "begin": 119900,
+          "end": 120000
+        },
+        {
+          "word": "with",
+          "begin": 120020,
+          "end": 120140
+        },
+        {
+          "word": "only",
+          "begin": 120140,
+          "end": 120400
+        },
+        {
+          "word": "one",
+          "begin": 120480,
+          "end": 120640
+        },
+        {
+          "word": "command",
+          "begin": 120700,
+          "end": 121000
+        },
+        {
+          "word": "pending,",
+          "begin": 121060,
+          "end": 121440
+        },
+        {
+          "word": "the",
+          "begin": 121720,
+          "end": 121760
+        },
+        {
+          "word": "controller",
+          "begin": 121820,
+          "end": 122200
+        },
+        {
+          "word": "can",
+          "begin": 122300,
+          "end": 122420
+        },
+        {
+          "word": "only",
+          "begin": 122500,
+          "end": 122680
+        },
+        {
+          "word": "read",
+          "begin": 122760,
+          "end": 122940
+        },
+        {
+          "word": "from",
+          "begin": 123000,
+          "end": 123140
+        },
+        {
+          "word": "one",
+          "begin": 123200,
+          "end": 123340
+        },
+        {
+          "word": "die",
+          "begin": 123400,
+          "end": 123480
+        },
+        {
+          "word": "while",
+          "begin": 123960,
+          "end": 124060
+        },
+        {
+          "word": "the",
+          "begin": 124100,
+          "end": 124160
+        },
+        {
+          "word": "rest",
+          "begin": 124220,
+          "end": 124480
+        },
+        {
+          "word": "wait.",
+          "begin": 124540,
+          "end": 124840
+        },
+        {
+          "word": "The",
+          "begin": 125280,
+          "end": 125340
+        },
+        {
+          "word": "IOPS",
+          "begin": 125460,
+          "end": 125780
+        },
+        {
+          "word": "at",
+          "begin": 125860,
+          "end": 125940
+        },
+        {
+          "word": "QD1",
+          "begin": 126000,
+          "end": 126600
+        },
+        {
+          "word": "is",
+          "begin": 126680,
+          "end": 128039
+        },
+        {
+          "word": "essentially",
+          "begin": 128199,
+          "end": 128440
+        },
+        {
+          "word": "1",
+          "begin": 128520,
+          "end": 128680
+        },
+        {
+          "word": "(single_read_latency),",
+          "begin": 128740,
+          "end": 129139
+        },
+        {
+          "word": "where",
+          "begin": 129520,
+          "end": 129660
+        },
+        {
+          "word": "a",
+          "begin": 129660,
+          "end": 129680
+        },
+        {
+          "word": "NAND",
+          "begin": 129759,
+          "end": 130160
+        },
+        {
+          "word": "page",
+          "begin": 130280,
+          "end": 130620
+        },
+        {
+          "word": "read",
+          "begin": 130680,
+          "end": 130860
+        },
+        {
+          "word": "takes",
+          "begin": 130940,
+          "end": 131220
+        },
+        {
+          "word": "~50-100us,",
+          "begin": 131340,
+          "end": 132400
+        },
+        {
+          "word": "giving",
+          "begin": 132680,
+          "end": 132900
+        },
+        {
+          "word": "~10-20K",
+          "begin": 133000,
+          "end": 134500
+        },
+        {
+          "word": "IOPS.",
+          "begin": 134560,
+          "end": 135020
+        },
+        {
+          "word": "The",
+          "begin": 135480,
+          "end": 135520
+        },
+        {
+          "word": "controller",
+          "begin": 135580,
+          "end": 136100
+        },
+        {
+          "word": "can't",
+          "begin": 136100,
+          "end": 136280
+        },
+        {
+          "word": "optimize",
+          "begin": 136360,
+          "end": 136760
+        },
+        {
+          "word": "around",
+          "begin": 136780,
+          "end": 137080
+        },
+        {
+          "word": "this",
+          "begin": 137100,
+          "end": 137340
+        },
+        {
+          "word": "because",
+          "begin": 137420,
+          "end": 137580
+        },
+        {
+          "word": "it",
+          "begin": 137580,
+          "end": 137660
+        },
+        {
+          "word": "has",
+          "begin": 137680,
+          "end": 137760
+        },
+        {
+          "word": "no",
+          "begin": 137760,
+          "end": 138140
+        },
+        {
+          "word": "advance",
+          "begin": 138140,
+          "end": 138400
+        },
+        {
+          "word": "knowledge",
+          "begin": 138440,
+          "end": 138880
+        },
+        {
+          "word": "of",
+          "begin": 138960,
+          "end": 139040
+        },
+        {
+          "word": "what",
+          "begin": 139060,
+          "end": 139200
+        },
+        {
+          "word": "the",
+          "begin": 139220,
+          "end": 139280
+        },
+        {
+          "word": "host",
+          "begin": 139340,
+          "end": 139580
+        },
+        {
+          "word": "will",
+          "begin": 139620,
+          "end": 139720
+        },
+        {
+          "word": "request",
+          "begin": 139760,
+          "end": 140200
+        },
+        {
+          "word": "next",
+          "begin": 140240,
+          "end": 140600
+        },
+        {
+          "word": "it",
+          "begin": 140600,
+          "end": 140600
+        },
+        {
+          "word": "must",
+          "begin": 140600,
+          "end": 140940
+        },
+        {
+          "word": "wait",
+          "begin": 140960,
+          "end": 141100
+        },
+        {
+          "word": "for",
+          "begin": 141100,
+          "end": 141200
+        },
+        {
+          "word": "each",
+          "begin": 141220,
+          "end": 141700
+        },
+        {
+          "word": "command",
+          "begin": 141760,
+          "end": 142080
+        },
+        {
+          "word": "to",
+          "begin": 142120,
+          "end": 142180
+        },
+        {
+          "word": "complete",
+          "begin": 142240,
+          "end": 142620
+        },
+        {
+          "word": "before",
+          "begin": 142660,
+          "end": 142860
+        },
+        {
+          "word": "receiving",
+          "begin": 142980,
+          "end": 143380
+        },
+        {
+          "word": "the",
+          "begin": 143400,
+          "end": 143460
+        },
+        {
+          "word": "next",
+          "begin": 143520,
+          "end": 143780
+        },
+        {
+          "word": "one.",
+          "begin": 143820,
+          "end": 144000
+        },
+        {
+          "word": "At",
+          "begin": 144380,
+          "end": 144440
+        },
+        {
+          "word": "QD32,",
+          "begin": 144520,
+          "end": 145280
+        },
+        {
+          "word": "32",
+          "begin": 145700,
+          "end": 146060
+        },
+        {
+          "word": "commands",
+          "begin": 146160,
+          "end": 146560
+        },
+        {
+          "word": "are",
+          "begin": 146580,
+          "end": 146600
+        },
+        {
+          "word": "in-flight",
+          "begin": 146740,
+          "end": 147180
+        },
+        {
+          "word": "simultaneously,",
+          "begin": 147240,
+          "end": 148040
+        },
+        {
+          "word": "allowing",
+          "begin": 148040,
+          "end": 148660
+        },
+        {
+          "word": "the",
+          "begin": 148680,
+          "end": 148740
+        },
+        {
+          "word": "controller",
+          "begin": 148780,
+          "end": 149440
+        },
+        {
+          "word": "to",
+          "begin": 149440,
+          "end": 149460
+        },
+        {
+          "word": "dispatch",
+          "begin": 149440,
+          "end": 149880
+        },
+        {
+          "word": "reads",
+          "begin": 149960,
+          "end": 150220
+        },
+        {
+          "word": "across",
+          "begin": 150220,
+          "end": 150540
+        },
+        {
+          "word": "many",
+          "begin": 150640,
+          "end": 150800
+        },
+        {
+          "word": "dies",
+          "begin": 150920,
+          "end": 151200
+        },
+        {
+          "word": "in",
+          "begin": 151240,
+          "end": 151300
+        },
+        {
+          "word": "parallel,",
+          "begin": 151360,
+          "end": 151840
+        },
+        {
+          "word": "multiplying",
+          "begin": 152060,
+          "end": 152580
+        },
+        {
+          "word": "throughput",
+          "begin": 152660,
+          "end": 153100
+        },
+        {
+          "word": "while",
+          "begin": 153180,
+          "end": 153320
+        },
+        {
+          "word": "each",
+          "begin": 153420,
+          "end": 153680
+        },
+        {
+          "word": "individual",
+          "begin": 153680,
+          "end": 154060
+        },
+        {
+          "word": "read",
+          "begin": 154180,
+          "end": 154460
+        },
+        {
+          "word": "still",
+          "begin": 154520,
+          "end": 154720
+        },
+        {
+          "word": "takes",
+          "begin": 154780,
+          "end": 155000
+        },
+        {
+          "word": "the",
+          "begin": 155040,
+          "end": 155100
+        },
+        {
+          "word": "same",
+          "begin": 155200,
+          "end": 155700
+        },
+        {
+          "word": "~50-100us.",
+          "begin": 155760,
+          "end": 157060
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

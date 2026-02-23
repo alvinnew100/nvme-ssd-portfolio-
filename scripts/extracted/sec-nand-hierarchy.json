@@ -1,0 +1,52 @@
+{
+  "sectionId": "sec-nand-hierarchy",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "How NAND Cells Are Organized",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: NAND Hierarchy Is Like a Library. Pages are like sheets of paper (you read/write one at a time). Blocks are notebooks (you can only shred a whole notebook at once). Planes are bookshelves (multiple notebooks accessible in parallel). Dies are library floors (each operates independently). Packages are the building (containing everything in one physical chip).",
+      "blockIndex": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "A single NAND cell is microscopic — it stores just 1 to 4 bits. So how do you get from a tiny cell to a 1 TB drive? By organizing billions of cells into a strict hierarchy, like a library system: pages in notebooks, notebooks on shelves, shelves on floors, floors in a building.",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "Why does this hierarchy matter? Because it explains the most important rule of flash memory: you can read and write individual pages, but you can only erase entire blocks . This mismatch between write size and erase size is the root cause of many SSD behaviors we'll explore later. But why can't you erase a single page? Because of how NAND physics works — erasing requires a high voltage pulse that affects all cells connected to the same block's circuitry.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "You can read or write to a single page (4-16 KB), but erasing must happen at the block level (hundreds of pages at once). Imagine needing to shred an entire notebook just to correct one page — that's the constraint the SSD's firmware must work around.",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "So what happens when you want to change just one page's data? The SSD can't erase that one page — it would destroy the other 127+ pages in the same block. Instead, it writes the new data to a different free page and updates a mapping table. The old page becomes &ldquo;stale.&rdquo;",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "But then stale pages pile up — who cleans them? That's exactly the problem the Flash Translation Layer (FTL) solves. Let's see how in the next section.",
+      "blockIndex": 6
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: If the erase unit (block) were the same size as the write unit (page), how would SSD design change? What complexity exists solely because of this size mismatch? The answer: The NAND hierarchy from smallest to largest is: Page (4-16 KB, read/write unit) < Block (128-256 pages, erase unit) < Plane (~1,000 blocks, parallel unit) < Die (2-4 planes, one silicon chip) < Package (1-16 dies, physical chip). If erase and write units were the same size, we could eliminate the Flash Translation Layer's out-of-place write scheme entirely — data could be overwritten in place like DRAM. This would also eliminate garbage collection (no stale pages to clean up), write amplification (no need to copy valid pages before erasing), and most of wear leveling's complexity. The mismatch exists because NAND physics requires a high-voltage bulk erase that affects all cells sharing a common substrate region — you can't isolate a single page's cells for erasure.",
+      "requiresReveal": true,
+      "blockIndex": 7
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: Is the block-level erase constraint a firmware limitation that could be fixed with better software, or a physical hardware constraint? What exactly happens at the silicon level during an erase operation that makes page-level erasure impossible? The answer: It is a fundamental physical hardware constraint, not a firmware limitation. During an erase operation, a high voltage (~20V) is applied to the substrate (p-well) while the control gates are grounded. This creates a strong electric field that pulls electrons out of the floating gates via Fowler-Nordheim tunneling. The critical point is that all cells within a block share the same p-well substrate region — so when you apply the erase voltage, it affects every cell in that block simultaneously. You cannot selectively voltage-isolate individual pages within a block because they are physically connected to the same substrate. This is an inherent consequence of how NAND flash arrays are manufactured on silicon.",
+      "requiresReveal": true,
+      "blockIndex": 8
+    }
+  ]
+}

@@ -1,0 +1,8764 @@
+{
+  "sectionId": "sec-security",
+  "audioFile": "/audio/sections/sec-security.mp3",
+  "totalDurationMs": 673600,
+  "fileSizeBytes": 10778880,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "Security — Protecting Data at the Hardware Level",
+      "beginMs": 120,
+      "endMs": 3040,
+      "timestamps": [
+        {
+          "word": "Security",
+          "begin": 120,
+          "end": 560
+        },
+        {
+          "word": "Protecting",
+          "begin": 840,
+          "end": 1260
+        },
+        {
+          "word": "Data",
+          "begin": 1320,
+          "end": 1580
+        },
+        {
+          "word": "at",
+          "begin": 1760,
+          "end": 1820
+        },
+        {
+          "word": "the",
+          "begin": 1840,
+          "end": 1900
+        },
+        {
+          "word": "Hardware",
+          "begin": 1980,
+          "end": 2340
+        },
+        {
+          "word": "Level",
+          "begin": 2340,
+          "end": 2540
+        },
+        {
+          "word": "Analogy:",
+          "begin": 2580,
+          "end": 3040
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: SSD Security Has Three Layers. SSD security is like securing a vault: encryption (scrambles data so stolen NAND chips are unreadable), authentication (only authorized users can unlock the drive), and sanitization (irreversibly destroy data when decommissioning). TCG Opal provides hardware-based encryption with user/admin passwords.",
+      "beginMs": 3620,
+      "endMs": 22920,
+      "timestamps": [
+        {
+          "word": "SSD",
+          "begin": 3620,
+          "end": 4000
+        },
+        {
+          "word": "Security",
+          "begin": 4120,
+          "end": 4520
+        },
+        {
+          "word": "Has",
+          "begin": 4620,
+          "end": 4800
+        },
+        {
+          "word": "Three",
+          "begin": 4880,
+          "end": 5000
+        },
+        {
+          "word": "Layers.",
+          "begin": 5120,
+          "end": 5540
+        },
+        {
+          "word": "SSD",
+          "begin": 5880,
+          "end": 6280
+        },
+        {
+          "word": "security",
+          "begin": 6380,
+          "end": 6780
+        },
+        {
+          "word": "is",
+          "begin": 6840,
+          "end": 6940
+        },
+        {
+          "word": "like",
+          "begin": 6940,
+          "end": 7140
+        },
+        {
+          "word": "securing",
+          "begin": 7200,
+          "end": 7720
+        },
+        {
+          "word": "a",
+          "begin": 7760,
+          "end": 7780
+        },
+        {
+          "word": "vault:",
+          "begin": 7900,
+          "end": 8039
+        },
+        {
+          "word": "encryption",
+          "begin": 8320,
+          "end": 8800
+        },
+        {
+          "word": "(scrambles",
+          "begin": 8860,
+          "end": 9300
+        },
+        {
+          "word": "data",
+          "begin": 9340,
+          "end": 9580
+        },
+        {
+          "word": "so",
+          "begin": 9720,
+          "end": 9780
+        },
+        {
+          "word": "stolen",
+          "begin": 9880,
+          "end": 10240
+        },
+        {
+          "word": "NAND",
+          "begin": 10260,
+          "end": 10580
+        },
+        {
+          "word": "chips",
+          "begin": 10620,
+          "end": 10820
+        },
+        {
+          "word": "are",
+          "begin": 10900,
+          "end": 11000
+        },
+        {
+          "word": "unreadable),",
+          "begin": 11020,
+          "end": 11460
+        },
+        {
+          "word": "authentication",
+          "begin": 11940,
+          "end": 12720
+        },
+        {
+          "word": "(only",
+          "begin": 12820,
+          "end": 13000
+        },
+        {
+          "word": "authorized",
+          "begin": 13140,
+          "end": 13640
+        },
+        {
+          "word": "users",
+          "begin": 13660,
+          "end": 14000
+        },
+        {
+          "word": "can",
+          "begin": 14040,
+          "end": 14160
+        },
+        {
+          "word": "unlock",
+          "begin": 14180,
+          "end": 14480
+        },
+        {
+          "word": "the",
+          "begin": 14520,
+          "end": 14560
+        },
+        {
+          "word": "drive),",
+          "begin": 14620,
+          "end": 15000
+        },
+        {
+          "word": "and",
+          "begin": 15280,
+          "end": 15380
+        },
+        {
+          "word": "sanitization",
+          "begin": 15460,
+          "end": 16200
+        },
+        {
+          "word": "(irreversibly",
+          "begin": 16320,
+          "end": 16920
+        },
+        {
+          "word": "destroy",
+          "begin": 16980,
+          "end": 17280
+        },
+        {
+          "word": "data",
+          "begin": 17440,
+          "end": 17680
+        },
+        {
+          "word": "when",
+          "begin": 17760,
+          "end": 17880
+        },
+        {
+          "word": "decommissioning).",
+          "begin": 17940,
+          "end": 18600
+        },
+        {
+          "word": "TCG",
+          "begin": 18880,
+          "end": 19420
+        },
+        {
+          "word": "Opal",
+          "begin": 19600,
+          "end": 19800
+        },
+        {
+          "word": "provides",
+          "begin": 19940,
+          "end": 20280
+        },
+        {
+          "word": "hardware-based",
+          "begin": 20320,
+          "end": 20940
+        },
+        {
+          "word": "encryption",
+          "begin": 20960,
+          "end": 21460
+        },
+        {
+          "word": "with",
+          "begin": 21500,
+          "end": 21620
+        },
+        {
+          "word": "user/admin",
+          "begin": 21680,
+          "end": 22260
+        },
+        {
+          "word": "passwords.",
+          "begin": 22320,
+          "end": 22920
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "term",
+      "text": "TCG Opal: A standard for hardware-based full-disk encryption built into the SSD controller. Uses a Data Encryption Key (DEK) to encrypt all data written to NAND, and an Authentication Key (AK) to lock/unlock the drive.",
+      "beginMs": 23860,
+      "endMs": 39740,
+      "timestamps": [
+        {
+          "word": "TCG",
+          "begin": 23860,
+          "end": 24360
+        },
+        {
+          "word": "Opal:",
+          "begin": 24520,
+          "end": 24740
+        },
+        {
+          "word": "A",
+          "begin": 25120,
+          "end": 25140
+        },
+        {
+          "word": "standard",
+          "begin": 25260,
+          "end": 25640
+        },
+        {
+          "word": "for",
+          "begin": 25700,
+          "end": 25760
+        },
+        {
+          "word": "hardware-based",
+          "begin": 25860,
+          "end": 26540
+        },
+        {
+          "word": "full-disk",
+          "begin": 26600,
+          "end": 26980
+        },
+        {
+          "word": "encryption",
+          "begin": 27000,
+          "end": 27480
+        },
+        {
+          "word": "built",
+          "begin": 27560,
+          "end": 27740
+        },
+        {
+          "word": "into",
+          "begin": 27780,
+          "end": 28440
+        },
+        {
+          "word": "the",
+          "begin": 28480,
+          "end": 28560
+        },
+        {
+          "word": "controller.",
+          "begin": 28640,
+          "end": 28980
+        },
+        {
+          "word": "Uses",
+          "begin": 29780,
+          "end": 30120
+        },
+        {
+          "word": "a",
+          "begin": 30160,
+          "end": 30340
+        },
+        {
+          "word": "Data",
+          "begin": 30440,
+          "end": 30480
+        },
+        {
+          "word": "Encryption",
+          "begin": 30560,
+          "end": 31020
+        },
+        {
+          "word": "Key",
+          "begin": 31080,
+          "end": 31220
+        },
+        {
+          "word": "(DEK)",
+          "begin": 31480,
+          "end": 32220
+        },
+        {
+          "word": "to",
+          "begin": 32220,
+          "end": 32280
+        },
+        {
+          "word": "encrypt",
+          "begin": 32320,
+          "end": 32640
+        },
+        {
+          "word": "all",
+          "begin": 32659,
+          "end": 32380
+        },
+        {
+          "word": "data",
+          "begin": 32439,
+          "end": 32640
+        },
+        {
+          "word": "written",
+          "begin": 32659,
+          "end": 33360
+        },
+        {
+          "word": "to",
+          "begin": 33400,
+          "end": 33420
+        },
+        {
+          "word": "NAND,",
+          "begin": 33440,
+          "end": 33500
+        },
+        {
+          "word": "and",
+          "begin": 33560,
+          "end": 33580
+        },
+        {
+          "word": "Authentication",
+          "begin": 33600,
+          "end": 35160
+        },
+        {
+          "word": "Key",
+          "begin": 35260,
+          "end": 35320
+        },
+        {
+          "word": "(AK)",
+          "begin": 35360,
+          "end": 35620
+        },
+        {
+          "word": "to",
+          "begin": 35740,
+          "end": 35800
+        },
+        {
+          "word": "lock/unlock",
+          "begin": 35840,
+          "end": 37320
+        },
+        {
+          "word": "the",
+          "begin": 37360,
+          "end": 37400
+        },
+        {
+          "word": "drive.",
+          "begin": 37440,
+          "end": 37700
+        },
+        {
+          "word": "DEK",
+          "begin": 37740,
+          "end": 38180
+        },
+        {
+          "word": "(Data",
+          "begin": 39040,
+          "end": 39740
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "term",
+      "text": "DEK (Data Encryption Key): The symmetric key (typically AES-256) used to encrypt/decrypt all data on the SSD. Stored securely in the controller. Crypto-erasing the DEK instantly makes all data on the drive unrecoverable.",
+      "beginMs": 39800,
+      "endMs": 54340,
+      "timestamps": [
+        {
+          "word": "Encryption",
+          "begin": 39800,
+          "end": 40300
+        },
+        {
+          "word": "Key):",
+          "begin": 40340,
+          "end": 40460
+        },
+        {
+          "word": "The",
+          "begin": 40540,
+          "end": 40640
+        },
+        {
+          "word": "symmetric",
+          "begin": 41040,
+          "end": 41560
+        },
+        {
+          "word": "key",
+          "begin": 41620,
+          "end": 41740
+        },
+        {
+          "word": "(typically",
+          "begin": 41900,
+          "end": 42200
+        },
+        {
+          "word": "AES-256)",
+          "begin": 42200,
+          "end": 44180
+        },
+        {
+          "word": "used",
+          "begin": 44320,
+          "end": 44520
+        },
+        {
+          "word": "to",
+          "begin": 44560,
+          "end": 44620
+        },
+        {
+          "word": "encrypt/decrypt",
+          "begin": 44660,
+          "end": 46020
+        },
+        {
+          "word": "all",
+          "begin": 46020,
+          "end": 46180
+        },
+        {
+          "word": "data",
+          "begin": 46280,
+          "end": 46300
+        },
+        {
+          "word": "on",
+          "begin": 46340,
+          "end": 46480
+        },
+        {
+          "word": "the",
+          "begin": 46540,
+          "end": 46620
+        },
+        {
+          "word": "Stored",
+          "begin": 47440,
+          "end": 47720
+        },
+        {
+          "word": "securely",
+          "begin": 47760,
+          "end": 48180
+        },
+        {
+          "word": "in",
+          "begin": 48280,
+          "end": 48360
+        },
+        {
+          "word": "the",
+          "begin": 48360,
+          "end": 48420
+        },
+        {
+          "word": "controller.",
+          "begin": 48480,
+          "end": 48880
+        },
+        {
+          "word": "Crypto-erasing",
+          "begin": 49280,
+          "end": 50000
+        },
+        {
+          "word": "the",
+          "begin": 50000,
+          "end": 50060
+        },
+        {
+          "word": "DEK",
+          "begin": 50120,
+          "end": 50580
+        },
+        {
+          "word": "instantly",
+          "begin": 50840,
+          "end": 51180
+        },
+        {
+          "word": "makes",
+          "begin": 51180,
+          "end": 51320
+        },
+        {
+          "word": "all",
+          "begin": 51360,
+          "end": 51460
+        },
+        {
+          "word": "data",
+          "begin": 51500,
+          "end": 51800
+        },
+        {
+          "word": "on",
+          "begin": 51840,
+          "end": 52180
+        },
+        {
+          "word": "the",
+          "begin": 52200,
+          "end": 52240
+        },
+        {
+          "word": "drive",
+          "begin": 52320,
+          "end": 52600
+        },
+        {
+          "word": "unrecoverable.",
+          "begin": 52680,
+          "end": 53280
+        },
+        {
+          "word": "So",
+          "begin": 54280,
+          "end": 54340
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "So far, we've talked about reading, writing, erasing, and updating SSDs. But what about protecting the data on them? If someone steals your laptop — or a decommissioned server drive ends up on eBay — can they read your data?",
+      "beginMs": 54460,
+      "endMs": 68220,
+      "timestamps": [
+        {
+          "word": "far,",
+          "begin": 54460,
+          "end": 55040
+        },
+        {
+          "word": "we've",
+          "begin": 55060,
+          "end": 55160
+        },
+        {
+          "word": "talked",
+          "begin": 55200,
+          "end": 55460
+        },
+        {
+          "word": "about",
+          "begin": 55460,
+          "end": 55700
+        },
+        {
+          "word": "reading,",
+          "begin": 55760,
+          "end": 56120
+        },
+        {
+          "word": "writing,",
+          "begin": 56500,
+          "end": 56860
+        },
+        {
+          "word": "erasing,",
+          "begin": 57300,
+          "end": 57960
+        },
+        {
+          "word": "and",
+          "begin": 58040,
+          "end": 58240
+        },
+        {
+          "word": "updating",
+          "begin": 58040,
+          "end": 58420
+        },
+        {
+          "word": "SSDs.",
+          "begin": 58500,
+          "end": 59180
+        },
+        {
+          "word": "But",
+          "begin": 59480,
+          "end": 59560
+        },
+        {
+          "word": "what",
+          "begin": 59600,
+          "end": 59720
+        },
+        {
+          "word": "about",
+          "begin": 59720,
+          "end": 59960
+        },
+        {
+          "word": "protecting",
+          "begin": 60000,
+          "end": 60440
+        },
+        {
+          "word": "the",
+          "begin": 60460,
+          "end": 60520
+        },
+        {
+          "word": "data",
+          "begin": 60580,
+          "end": 60840
+        },
+        {
+          "word": "on",
+          "begin": 60940,
+          "end": 61040
+        },
+        {
+          "word": "them?",
+          "begin": 61060,
+          "end": 61260
+        },
+        {
+          "word": "If",
+          "begin": 61920,
+          "end": 62000
+        },
+        {
+          "word": "someone",
+          "begin": 62080,
+          "end": 62320
+        },
+        {
+          "word": "steals",
+          "begin": 62400,
+          "end": 62680
+        },
+        {
+          "word": "your",
+          "begin": 62700,
+          "end": 62760
+        },
+        {
+          "word": "laptop",
+          "begin": 62840,
+          "end": 63340
+        },
+        {
+          "word": "or",
+          "begin": 63480,
+          "end": 63580
+        },
+        {
+          "word": "a",
+          "begin": 63580,
+          "end": 63600
+        },
+        {
+          "word": "decommissioned",
+          "begin": 63680,
+          "end": 64180
+        },
+        {
+          "word": "server",
+          "begin": 64280,
+          "end": 64480
+        },
+        {
+          "word": "drive",
+          "begin": 64560,
+          "end": 64819
+        },
+        {
+          "word": "ends",
+          "begin": 64920,
+          "end": 65080
+        },
+        {
+          "word": "up",
+          "begin": 65120,
+          "end": 65239
+        },
+        {
+          "word": "on",
+          "begin": 65260,
+          "end": 65360
+        },
+        {
+          "word": "eBay",
+          "begin": 65459,
+          "end": 66140
+        },
+        {
+          "word": "can",
+          "begin": 66140,
+          "end": 66260
+        },
+        {
+          "word": "they",
+          "begin": 66260,
+          "end": 66320
+        },
+        {
+          "word": "read",
+          "begin": 66420,
+          "end": 66580
+        },
+        {
+          "word": "your",
+          "begin": 66580,
+          "end": 66640
+        },
+        {
+          "word": "data?",
+          "begin": 66720,
+          "end": 66980
+        },
+        {
+          "word": "Here's",
+          "begin": 67900,
+          "end": 68140
+        },
+        {
+          "word": "the",
+          "begin": 68180,
+          "end": 68220
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "Here's the key insight: software encryption (like BitLocker or LUKS) encrypts data before it reaches the SSD. But there's another approach — the SSD itself can encrypt everything internally, transparently, without any software overhead. This is called a Self-Encrypting Drive (SED).",
+      "beginMs": 68300,
+      "endMs": 85140,
+      "timestamps": [
+        {
+          "word": "key",
+          "begin": 68300,
+          "end": 68420
+        },
+        {
+          "word": "insight:",
+          "begin": 68560,
+          "end": 69020
+        },
+        {
+          "word": "software",
+          "begin": 69380,
+          "end": 69820
+        },
+        {
+          "word": "encryption",
+          "begin": 69840,
+          "end": 70320
+        },
+        {
+          "word": "(like",
+          "begin": 70360,
+          "end": 70500
+        },
+        {
+          "word": "BitLocker",
+          "begin": 70560,
+          "end": 71300
+        },
+        {
+          "word": "or",
+          "begin": 71520,
+          "end": 71740
+        },
+        {
+          "word": "LUKS)",
+          "begin": 71740,
+          "end": 72360
+        },
+        {
+          "word": "encrypts",
+          "begin": 72460,
+          "end": 72860
+        },
+        {
+          "word": "data",
+          "begin": 72920,
+          "end": 73200
+        },
+        {
+          "word": "before",
+          "begin": 73340,
+          "end": 73660
+        },
+        {
+          "word": "it",
+          "begin": 73680,
+          "end": 73760
+        },
+        {
+          "word": "reaches",
+          "begin": 73800,
+          "end": 74700
+        },
+        {
+          "word": "the",
+          "begin": 74780,
+          "end": 74860
+        },
+        {
+          "word": "But",
+          "begin": 75660,
+          "end": 75760
+        },
+        {
+          "word": "there's",
+          "begin": 75800,
+          "end": 75980
+        },
+        {
+          "word": "another",
+          "begin": 76000,
+          "end": 76280
+        },
+        {
+          "word": "approach",
+          "begin": 76380,
+          "end": 77460
+        },
+        {
+          "word": "the",
+          "begin": 77560,
+          "end": 77640
+        },
+        {
+          "word": "SSD",
+          "begin": 77560,
+          "end": 77860
+        },
+        {
+          "word": "itself",
+          "begin": 77940,
+          "end": 78360
+        },
+        {
+          "word": "can",
+          "begin": 78420,
+          "end": 78540
+        },
+        {
+          "word": "encrypt",
+          "begin": 78540,
+          "end": 78880
+        },
+        {
+          "word": "everything",
+          "begin": 79000,
+          "end": 79380
+        },
+        {
+          "word": "internally,",
+          "begin": 79400,
+          "end": 79880
+        },
+        {
+          "word": "transparently,",
+          "begin": 80080,
+          "end": 80720
+        },
+        {
+          "word": "without",
+          "begin": 80720,
+          "end": 81140
+        },
+        {
+          "word": "any",
+          "begin": 81140,
+          "end": 81060
+        },
+        {
+          "word": "software",
+          "begin": 81060,
+          "end": 81440
+        },
+        {
+          "word": "overhead.",
+          "begin": 81440,
+          "end": 81940
+        },
+        {
+          "word": "This",
+          "begin": 82000,
+          "end": 82240
+        },
+        {
+          "word": "is",
+          "begin": 82260,
+          "end": 82280
+        },
+        {
+          "word": "called",
+          "begin": 82360,
+          "end": 83380
+        },
+        {
+          "word": "a",
+          "begin": 83380,
+          "end": 83400
+        },
+        {
+          "word": "Self-Encrypting",
+          "begin": 83480,
+          "end": 84420
+        },
+        {
+          "word": "Drive",
+          "begin": 84460,
+          "end": 84620
+        },
+        {
+          "word": "(SED).",
+          "begin": 84660,
+          "end": 84780
+        },
+        {
+          "word": "But",
+          "begin": 84780,
+          "end": 84880
+        },
+        {
+          "word": "why",
+          "begin": 84900,
+          "end": 85140
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "But why encrypt at the hardware level? Three reasons:",
+      "beginMs": 85200,
+      "endMs": 89540,
+      "timestamps": [
+        {
+          "word": "encrypt",
+          "begin": 85200,
+          "end": 86580
+        },
+        {
+          "word": "at",
+          "begin": 86580,
+          "end": 86660
+        },
+        {
+          "word": "the",
+          "begin": 86720,
+          "end": 86800
+        },
+        {
+          "word": "hardware",
+          "begin": 86960,
+          "end": 87380
+        },
+        {
+          "word": "level?",
+          "begin": 87400,
+          "end": 88340
+        },
+        {
+          "word": "Three",
+          "begin": 89000,
+          "end": 89120
+        },
+        {
+          "word": "reasons:",
+          "begin": 89220,
+          "end": 89540
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "paragraph",
+      "text": "The drive encrypts all data with AES-256 transparently. The encryption key is generated inside the controller and never leaves the chip. Even the host OS never sees the raw key.",
+      "beginMs": 89600,
+      "endMs": 99860,
+      "timestamps": [
+        {
+          "word": "The",
+          "begin": 89600,
+          "end": 89900
+        },
+        {
+          "word": "drive",
+          "begin": 89960,
+          "end": 90220
+        },
+        {
+          "word": "encrypts",
+          "begin": 90240,
+          "end": 90640
+        },
+        {
+          "word": "all",
+          "begin": 90680,
+          "end": 90760
+        },
+        {
+          "word": "data",
+          "begin": 90820,
+          "end": 91740
+        },
+        {
+          "word": "with",
+          "begin": 91880,
+          "end": 92000
+        },
+        {
+          "word": "AES-256",
+          "begin": 92000,
+          "end": 92640
+        },
+        {
+          "word": "transparently.",
+          "begin": 92680,
+          "end": 93320
+        },
+        {
+          "word": "The",
+          "begin": 93640,
+          "end": 93680
+        },
+        {
+          "word": "encryption",
+          "begin": 93680,
+          "end": 94100
+        },
+        {
+          "word": "key",
+          "begin": 94100,
+          "end": 94120
+        },
+        {
+          "word": "is",
+          "begin": 94140,
+          "end": 94460
+        },
+        {
+          "word": "generated",
+          "begin": 94520,
+          "end": 95040
+        },
+        {
+          "word": "inside",
+          "begin": 95140,
+          "end": 95500
+        },
+        {
+          "word": "the",
+          "begin": 95500,
+          "end": 95560
+        },
+        {
+          "word": "controller",
+          "begin": 95600,
+          "end": 96040
+        },
+        {
+          "word": "and",
+          "begin": 96220,
+          "end": 96320
+        },
+        {
+          "word": "never",
+          "begin": 96360,
+          "end": 96540
+        },
+        {
+          "word": "leaves",
+          "begin": 96620,
+          "end": 96820
+        },
+        {
+          "word": "the",
+          "begin": 96840,
+          "end": 96900
+        },
+        {
+          "word": "chip.",
+          "begin": 96980,
+          "end": 97240
+        },
+        {
+          "word": "Even",
+          "begin": 97520,
+          "end": 97700
+        },
+        {
+          "word": "the",
+          "begin": 97720,
+          "end": 97760
+        },
+        {
+          "word": "host",
+          "begin": 97820,
+          "end": 98100
+        },
+        {
+          "word": "OS",
+          "begin": 98220,
+          "end": 98880
+        },
+        {
+          "word": "never",
+          "begin": 98880,
+          "end": 99040
+        },
+        {
+          "word": "sees",
+          "begin": 99160,
+          "end": 99360
+        },
+        {
+          "word": "the",
+          "begin": 99400,
+          "end": 99440
+        },
+        {
+          "word": "raw",
+          "begin": 99520,
+          "end": 99600
+        },
+        {
+          "word": "key.",
+          "begin": 99740,
+          "end": 99860
+        }
+      ]
+    },
+    {
+      "blockIndex": 8,
+      "type": "paragraph",
+      "text": "But wait — if it's always encrypted, how does the host read data? The controller decrypts on-the-fly as data leaves the drive. From the host's perspective, it looks like an unencrypted drive. The protection kicks in when the drive is powered off or removed.",
+      "beginMs": 100660,
+      "endMs": 114280,
+      "timestamps": [
+        {
+          "word": "But",
+          "begin": 100660,
+          "end": 100740
+        },
+        {
+          "word": "wait",
+          "begin": 100800,
+          "end": 101080
+        },
+        {
+          "word": "if",
+          "begin": 101320,
+          "end": 101400
+        },
+        {
+          "word": "it's",
+          "begin": 101400,
+          "end": 101520
+        },
+        {
+          "word": "always",
+          "begin": 101560,
+          "end": 101820
+        },
+        {
+          "word": "encrypted,",
+          "begin": 101840,
+          "end": 102340
+        },
+        {
+          "word": "how",
+          "begin": 102560,
+          "end": 102760
+        },
+        {
+          "word": "does",
+          "begin": 102800,
+          "end": 102980
+        },
+        {
+          "word": "the",
+          "begin": 102980,
+          "end": 103040
+        },
+        {
+          "word": "host",
+          "begin": 103140,
+          "end": 103220
+        },
+        {
+          "word": "read",
+          "begin": 103260,
+          "end": 103380
+        },
+        {
+          "word": "data?",
+          "begin": 103380,
+          "end": 103660
+        },
+        {
+          "word": "The",
+          "begin": 104160,
+          "end": 104200
+        },
+        {
+          "word": "controller",
+          "begin": 104260,
+          "end": 104640
+        },
+        {
+          "word": "decrypts",
+          "begin": 104720,
+          "end": 105080
+        },
+        {
+          "word": "on-the-fly",
+          "begin": 105200,
+          "end": 105860
+        },
+        {
+          "word": "as",
+          "begin": 105920,
+          "end": 105940
+        },
+        {
+          "word": "data",
+          "begin": 105980,
+          "end": 106160
+        },
+        {
+          "word": "leaves",
+          "begin": 106240,
+          "end": 106440
+        },
+        {
+          "word": "the",
+          "begin": 106460,
+          "end": 106520
+        },
+        {
+          "word": "drive.",
+          "begin": 106580,
+          "end": 106940
+        },
+        {
+          "word": "From",
+          "begin": 107440,
+          "end": 107560
+        },
+        {
+          "word": "the",
+          "begin": 107580,
+          "end": 107620
+        },
+        {
+          "word": "host's",
+          "begin": 107700,
+          "end": 107980
+        },
+        {
+          "word": "perspective,",
+          "begin": 107980,
+          "end": 108560
+        },
+        {
+          "word": "it",
+          "begin": 108820,
+          "end": 108920
+        },
+        {
+          "word": "looks",
+          "begin": 108960,
+          "end": 109140
+        },
+        {
+          "word": "like",
+          "begin": 109140,
+          "end": 109280
+        },
+        {
+          "word": "an",
+          "begin": 109300,
+          "end": 109360
+        },
+        {
+          "word": "unencrypted",
+          "begin": 109460,
+          "end": 109980
+        },
+        {
+          "word": "drive.",
+          "begin": 110020,
+          "end": 110440
+        },
+        {
+          "word": "The",
+          "begin": 110660,
+          "end": 110700
+        },
+        {
+          "word": "protection",
+          "begin": 110760,
+          "end": 111220
+        },
+        {
+          "word": "kicks",
+          "begin": 111300,
+          "end": 111540
+        },
+        {
+          "word": "in",
+          "begin": 111600,
+          "end": 111780
+        },
+        {
+          "word": "when",
+          "begin": 111860,
+          "end": 112000
+        },
+        {
+          "word": "the",
+          "begin": 112000,
+          "end": 112060
+        },
+        {
+          "word": "drive",
+          "begin": 112120,
+          "end": 112400
+        },
+        {
+          "word": "is",
+          "begin": 112420,
+          "end": 112500
+        },
+        {
+          "word": "powered",
+          "begin": 112500,
+          "end": 112860
+        },
+        {
+          "word": "off",
+          "begin": 112900,
+          "end": 113100
+        },
+        {
+          "word": "or",
+          "begin": 113200,
+          "end": 113220
+        },
+        {
+          "word": "removed.",
+          "begin": 113320,
+          "end": 113780
+        },
+        {
+          "word": "If",
+          "begin": 114200,
+          "end": 114280
+        }
+      ]
+    },
+    {
+      "blockIndex": 9,
+      "type": "paragraph",
+      "text": "If the drive always decrypts for the host, what stops a thief? TCG Opal. It's an industry standard that adds authentication — a password that must be provided before the drive will unlock.",
+      "beginMs": 114320,
+      "endMs": 125320,
+      "timestamps": [
+        {
+          "word": "the",
+          "begin": 114320,
+          "end": 114380
+        },
+        {
+          "word": "drive",
+          "begin": 114440,
+          "end": 114720
+        },
+        {
+          "word": "always",
+          "begin": 114800,
+          "end": 115060
+        },
+        {
+          "word": "decrypts",
+          "begin": 115100,
+          "end": 115480
+        },
+        {
+          "word": "for",
+          "begin": 115520,
+          "end": 115620
+        },
+        {
+          "word": "the",
+          "begin": 115620,
+          "end": 115660
+        },
+        {
+          "word": "host,",
+          "begin": 115740,
+          "end": 116080
+        },
+        {
+          "word": "what",
+          "begin": 116300,
+          "end": 116440
+        },
+        {
+          "word": "stops",
+          "begin": 116480,
+          "end": 116780
+        },
+        {
+          "word": "a",
+          "begin": 116800,
+          "end": 116840
+        },
+        {
+          "word": "thief?",
+          "begin": 116920,
+          "end": 117240
+        },
+        {
+          "word": "TCG",
+          "begin": 117800,
+          "end": 118300
+        },
+        {
+          "word": "Opal.",
+          "begin": 118480,
+          "end": 118780
+        },
+        {
+          "word": "It's",
+          "begin": 119020,
+          "end": 119120
+        },
+        {
+          "word": "an",
+          "begin": 119140,
+          "end": 119220
+        },
+        {
+          "word": "industry",
+          "begin": 119240,
+          "end": 119560
+        },
+        {
+          "word": "standard",
+          "begin": 119660,
+          "end": 120120
+        },
+        {
+          "word": "that",
+          "begin": 120200,
+          "end": 120300
+        },
+        {
+          "word": "adds",
+          "begin": 120360,
+          "end": 120520
+        },
+        {
+          "word": "authentication",
+          "begin": 120580,
+          "end": 121300
+        },
+        {
+          "word": "a",
+          "begin": 121600,
+          "end": 121700
+        },
+        {
+          "word": "password",
+          "begin": 121700,
+          "end": 122220
+        },
+        {
+          "word": "that",
+          "begin": 122360,
+          "end": 122480
+        },
+        {
+          "word": "must",
+          "begin": 122520,
+          "end": 122680
+        },
+        {
+          "word": "be",
+          "begin": 122700,
+          "end": 122760
+        },
+        {
+          "word": "provided",
+          "begin": 122840,
+          "end": 123320
+        },
+        {
+          "word": "before",
+          "begin": 123380,
+          "end": 123700
+        },
+        {
+          "word": "the",
+          "begin": 123700,
+          "end": 123740
+        },
+        {
+          "word": "drive",
+          "begin": 123800,
+          "end": 124020
+        },
+        {
+          "word": "will",
+          "begin": 124040,
+          "end": 124140
+        },
+        {
+          "word": "unlock.",
+          "begin": 124160,
+          "end": 124600
+        },
+        {
+          "word": "Features:",
+          "begin": 124860,
+          "end": 125320
+        }
+      ]
+    },
+    {
+      "blockIndex": 10,
+      "type": "paragraph",
+      "text": "Features: pre-boot authentication (password required before OS loads), per-range locking (different passwords for different LBA ranges), and enterprise key management. TCG Opal communicates with the drive through NVMe Security Send/Receive commands.",
+      "beginMs": 125600,
+      "endMs": 150900,
+      "timestamps": [
+        {
+          "word": "pre-boot",
+          "begin": 125600,
+          "end": 126000
+        },
+        {
+          "word": "authentication",
+          "begin": 126060,
+          "end": 126720
+        },
+        {
+          "word": "(password",
+          "begin": 126780,
+          "end": 127280
+        },
+        {
+          "word": "required",
+          "begin": 127400,
+          "end": 127920
+        },
+        {
+          "word": "before",
+          "begin": 127960,
+          "end": 128380
+        },
+        {
+          "word": "OS",
+          "begin": 128479,
+          "end": 128620
+        },
+        {
+          "word": "loads),",
+          "begin": 128680,
+          "end": 129039
+        },
+        {
+          "word": "per-range",
+          "begin": 129380,
+          "end": 129880
+        },
+        {
+          "word": "locking",
+          "begin": 129960,
+          "end": 130259
+        },
+        {
+          "word": "(different",
+          "begin": 130320,
+          "end": 130560
+        },
+        {
+          "word": "passwords",
+          "begin": 130600,
+          "end": 131120
+        },
+        {
+          "word": "for",
+          "begin": 131200,
+          "end": 131260
+        },
+        {
+          "word": "different",
+          "begin": 131340,
+          "end": 131580
+        },
+        {
+          "word": "LBA",
+          "begin": 131640,
+          "end": 131920
+        },
+        {
+          "word": "ranges),",
+          "begin": 132040,
+          "end": 132520
+        },
+        {
+          "word": "and",
+          "begin": 132880,
+          "end": 132980
+        },
+        {
+          "word": "enterprise",
+          "begin": 133060,
+          "end": 133520
+        },
+        {
+          "word": "key",
+          "begin": 133580,
+          "end": 133660
+        },
+        {
+          "word": "management.",
+          "begin": 133760,
+          "end": 134300
+        },
+        {
+          "word": "TCG",
+          "begin": 145520,
+          "end": 146000
+        },
+        {
+          "word": "Opal",
+          "begin": 146160,
+          "end": 146360
+        },
+        {
+          "word": "communicates",
+          "begin": 146540,
+          "end": 147120
+        },
+        {
+          "word": "with",
+          "begin": 147160,
+          "end": 147260
+        },
+        {
+          "word": "the",
+          "begin": 147280,
+          "end": 147340
+        },
+        {
+          "word": "drive",
+          "begin": 147420,
+          "end": 147720
+        },
+        {
+          "word": "through",
+          "begin": 147760,
+          "end": 147840
+        },
+        {
+          "word": "NVMe",
+          "begin": 147980,
+          "end": 148440
+        },
+        {
+          "word": "Security",
+          "begin": 148600,
+          "end": 149040
+        },
+        {
+          "word": "Send/Receive",
+          "begin": 149160,
+          "end": 150360
+        },
+        {
+          "word": "commands.",
+          "begin": 150400,
+          "end": 150900
+        }
+      ]
+    },
+    {
+      "blockIndex": 11,
+      "type": "paragraph",
+      "text": "If the encryption key never leaves the chip, how does your password unlock the data? The answer is a two-level key hierarchy:",
+      "beginMs": 151400,
+      "endMs": 161040,
+      "timestamps": [
+        {
+          "word": "If",
+          "begin": 151400,
+          "end": 151480
+        },
+        {
+          "word": "the",
+          "begin": 151520,
+          "end": 151560
+        },
+        {
+          "word": "encryption",
+          "begin": 151640,
+          "end": 152100
+        },
+        {
+          "word": "key",
+          "begin": 152160,
+          "end": 152280
+        },
+        {
+          "word": "never",
+          "begin": 152420,
+          "end": 152620
+        },
+        {
+          "word": "leaves",
+          "begin": 152720,
+          "end": 152920
+        },
+        {
+          "word": "the",
+          "begin": 152960,
+          "end": 153000
+        },
+        {
+          "word": "chip,",
+          "begin": 153080,
+          "end": 153360
+        },
+        {
+          "word": "how",
+          "begin": 153640,
+          "end": 153720
+        },
+        {
+          "word": "does",
+          "begin": 153760,
+          "end": 153900
+        },
+        {
+          "word": "your",
+          "begin": 153900,
+          "end": 153960
+        },
+        {
+          "word": "password",
+          "begin": 154040,
+          "end": 154480
+        },
+        {
+          "word": "unlock",
+          "begin": 154560,
+          "end": 154900
+        },
+        {
+          "word": "the",
+          "begin": 154940,
+          "end": 155000
+        },
+        {
+          "word": "data?",
+          "begin": 155060,
+          "end": 155300
+        },
+        {
+          "word": "The",
+          "begin": 158920,
+          "end": 158980
+        },
+        {
+          "word": "answer",
+          "begin": 159100,
+          "end": 159340
+        },
+        {
+          "word": "is",
+          "begin": 159480,
+          "end": 159560
+        },
+        {
+          "word": "a",
+          "begin": 159580,
+          "end": 159700
+        },
+        {
+          "word": "two-level",
+          "begin": 159700,
+          "end": 160120
+        },
+        {
+          "word": "key",
+          "begin": 160240,
+          "end": 160360
+        },
+        {
+          "word": "hierarchy:",
+          "begin": 160500,
+          "end": 161040
+        }
+      ]
+    },
+    {
+      "blockIndex": 12,
+      "type": "paragraph",
+      "text": "The actual key that encrypts/decrypts your data. Generated randomly by the controller's hardware random number generator during manufacturing. This key never changes — it's the same for the life of the drive (unless you do a crypto erase, which generates a new one).",
+      "beginMs": 164340,
+      "endMs": 181320,
+      "timestamps": [
+        {
+          "word": "The",
+          "begin": 164340,
+          "end": 164400
+        },
+        {
+          "word": "actual",
+          "begin": 164520,
+          "end": 164860
+        },
+        {
+          "word": "key",
+          "begin": 164940,
+          "end": 165060
+        },
+        {
+          "word": "that",
+          "begin": 165200,
+          "end": 165300
+        },
+        {
+          "word": "encrypts/decrypts",
+          "begin": 165300,
+          "end": 166620
+        },
+        {
+          "word": "your",
+          "begin": 166640,
+          "end": 166700
+        },
+        {
+          "word": "data.",
+          "begin": 166780,
+          "end": 167020
+        },
+        {
+          "word": "Generated",
+          "begin": 167860,
+          "end": 168340
+        },
+        {
+          "word": "randomly",
+          "begin": 168380,
+          "end": 168740
+        },
+        {
+          "word": "by",
+          "begin": 168740,
+          "end": 168960
+        },
+        {
+          "word": "the",
+          "begin": 169020,
+          "end": 169060
+        },
+        {
+          "word": "controller's",
+          "begin": 169120,
+          "end": 169700
+        },
+        {
+          "word": "hardware",
+          "begin": 169700,
+          "end": 169980
+        },
+        {
+          "word": "random",
+          "begin": 170120,
+          "end": 170440
+        },
+        {
+          "word": "number",
+          "begin": 170500,
+          "end": 170720
+        },
+        {
+          "word": "generator",
+          "begin": 170800,
+          "end": 171800
+        },
+        {
+          "word": "during",
+          "begin": 171840,
+          "end": 172120
+        },
+        {
+          "word": "manufacturing.",
+          "begin": 172120,
+          "end": 173920
+        },
+        {
+          "word": "This",
+          "begin": 174040,
+          "end": 174220
+        },
+        {
+          "word": "key",
+          "begin": 174320,
+          "end": 174420
+        },
+        {
+          "word": "never",
+          "begin": 174520,
+          "end": 175260
+        },
+        {
+          "word": "changes",
+          "begin": 175260,
+          "end": 175800
+        },
+        {
+          "word": "it's",
+          "begin": 175820,
+          "end": 175900
+        },
+        {
+          "word": "the",
+          "begin": 175900,
+          "end": 175940
+        },
+        {
+          "word": "same",
+          "begin": 176020,
+          "end": 176300
+        },
+        {
+          "word": "for",
+          "begin": 176300,
+          "end": 176460
+        },
+        {
+          "word": "the",
+          "begin": 176460,
+          "end": 176580
+        },
+        {
+          "word": "life",
+          "begin": 176840,
+          "end": 177080
+        },
+        {
+          "word": "of",
+          "begin": 177080,
+          "end": 177120
+        },
+        {
+          "word": "the",
+          "begin": 177200,
+          "end": 177300
+        },
+        {
+          "word": "drive",
+          "begin": 177360,
+          "end": 177600
+        },
+        {
+          "word": "(unless",
+          "begin": 177600,
+          "end": 177760
+        },
+        {
+          "word": "you",
+          "begin": 177800,
+          "end": 177860
+        },
+        {
+          "word": "do",
+          "begin": 177960,
+          "end": 178060
+        },
+        {
+          "word": "a",
+          "begin": 178100,
+          "end": 178120
+        },
+        {
+          "word": "crypto",
+          "begin": 178360,
+          "end": 178960
+        },
+        {
+          "word": "erase,",
+          "begin": 178980,
+          "end": 179240
+        },
+        {
+          "word": "which",
+          "begin": 179260,
+          "end": 179420
+        },
+        {
+          "word": "generates",
+          "begin": 179520,
+          "end": 181160
+        },
+        {
+          "word": "a",
+          "begin": 181160,
+          "end": 181200
+        },
+        {
+          "word": "new",
+          "begin": 181240,
+          "end": 181280
+        },
+        {
+          "word": "one).",
+          "begin": 181280,
+          "end": 181500
+        },
+        {
+          "word": "your",
+          "begin": 181280,
+          "end": 181320
+        }
+      ]
+    },
+    {
+      "blockIndex": 13,
+      "type": "paragraph",
+      "text": "Derived from your password. The KEK encrypts the DEK. When you type your password, the drive derives the KEK, uses it to decrypt the DEK, and then uses the DEK to decrypt your data. Why this indirection? So you can change your password without re-encrypting the entire drive — only the wrapped DEK needs to be re-encrypted with the new KEK.",
+      "beginMs": 181400,
+      "endMs": 201980,
+      "timestamps": [
+        {
+          "word": "password.",
+          "begin": 181400,
+          "end": 181920
+        },
+        {
+          "word": "The",
+          "begin": 182600,
+          "end": 182640
+        },
+        {
+          "word": "KEK",
+          "begin": 182720,
+          "end": 182820
+        },
+        {
+          "word": "encrypts",
+          "begin": 182980,
+          "end": 183600
+        },
+        {
+          "word": "the",
+          "begin": 183640,
+          "end": 183700
+        },
+        {
+          "word": "DEK.",
+          "begin": 183760,
+          "end": 183840
+        },
+        {
+          "word": "When",
+          "begin": 183880,
+          "end": 184040
+        },
+        {
+          "word": "you",
+          "begin": 184060,
+          "end": 184260
+        },
+        {
+          "word": "type",
+          "begin": 184380,
+          "end": 185540
+        },
+        {
+          "word": "your",
+          "begin": 185540,
+          "end": 185600
+        },
+        {
+          "word": "password,",
+          "begin": 185680,
+          "end": 186140
+        },
+        {
+          "word": "the",
+          "begin": 186280,
+          "end": 186420
+        },
+        {
+          "word": "drive",
+          "begin": 186560,
+          "end": 187200
+        },
+        {
+          "word": "derives",
+          "begin": 187240,
+          "end": 187600
+        },
+        {
+          "word": "the",
+          "begin": 187640,
+          "end": 187680
+        },
+        {
+          "word": "KEK,",
+          "begin": 187760,
+          "end": 188240
+        },
+        {
+          "word": "uses",
+          "begin": 188700,
+          "end": 189000
+        },
+        {
+          "word": "it",
+          "begin": 189020,
+          "end": 189100
+        },
+        {
+          "word": "to",
+          "begin": 189100,
+          "end": 189200
+        },
+        {
+          "word": "decrypt",
+          "begin": 189280,
+          "end": 189620
+        },
+        {
+          "word": "the",
+          "begin": 189680,
+          "end": 189720
+        },
+        {
+          "word": "DEK,",
+          "begin": 189800,
+          "end": 190180
+        },
+        {
+          "word": "and",
+          "begin": 190240,
+          "end": 190740
+        },
+        {
+          "word": "then",
+          "begin": 190780,
+          "end": 190920
+        },
+        {
+          "word": "uses",
+          "begin": 190940,
+          "end": 191220
+        },
+        {
+          "word": "the",
+          "begin": 191260,
+          "end": 191300
+        },
+        {
+          "word": "DEK",
+          "begin": 191380,
+          "end": 191620
+        },
+        {
+          "word": "to",
+          "begin": 191740,
+          "end": 192100
+        },
+        {
+          "word": "decrypt",
+          "begin": 192180,
+          "end": 192520
+        },
+        {
+          "word": "your",
+          "begin": 192580,
+          "end": 192640
+        },
+        {
+          "word": "data.",
+          "begin": 192720,
+          "end": 192960
+        },
+        {
+          "word": "Why",
+          "begin": 194140,
+          "end": 194360
+        },
+        {
+          "word": "this",
+          "begin": 194360,
+          "end": 194500
+        },
+        {
+          "word": "indirection?",
+          "begin": 194540,
+          "end": 195160
+        },
+        {
+          "word": "So",
+          "begin": 195960,
+          "end": 196080
+        },
+        {
+          "word": "you",
+          "begin": 196080,
+          "end": 196120
+        },
+        {
+          "word": "can",
+          "begin": 196180,
+          "end": 196300
+        },
+        {
+          "word": "change",
+          "begin": 196340,
+          "end": 196620
+        },
+        {
+          "word": "your",
+          "begin": 196620,
+          "end": 196740
+        },
+        {
+          "word": "password",
+          "begin": 196740,
+          "end": 197160
+        },
+        {
+          "word": "without",
+          "begin": 197180,
+          "end": 197480
+        },
+        {
+          "word": "re-encrypting",
+          "begin": 197500,
+          "end": 198060
+        },
+        {
+          "word": "the",
+          "begin": 198080,
+          "end": 198140
+        },
+        {
+          "word": "entire",
+          "begin": 198200,
+          "end": 198520
+        },
+        {
+          "word": "drive",
+          "begin": 198600,
+          "end": 198940
+        },
+        {
+          "word": "only",
+          "begin": 199340,
+          "end": 199520
+        },
+        {
+          "word": "the",
+          "begin": 199580,
+          "end": 199640
+        },
+        {
+          "word": "wrapped",
+          "begin": 199700,
+          "end": 199980
+        },
+        {
+          "word": "DEK",
+          "begin": 200000,
+          "end": 200260
+        },
+        {
+          "word": "needs",
+          "begin": 200260,
+          "end": 200600
+        },
+        {
+          "word": "to",
+          "begin": 200680,
+          "end": 200740
+        },
+        {
+          "word": "be",
+          "begin": 200780,
+          "end": 200840
+        },
+        {
+          "word": "re-encrypted",
+          "begin": 200860,
+          "end": 201280
+        },
+        {
+          "word": "with",
+          "begin": 201300,
+          "end": 201440
+        },
+        {
+          "word": "the",
+          "begin": 201460,
+          "end": 201520
+        },
+        {
+          "word": "new",
+          "begin": 201600,
+          "end": 201720
+        },
+        {
+          "word": "KEK.",
+          "begin": 201720,
+          "end": 201860
+        },
+        {
+          "word": "And",
+          "begin": 201860,
+          "end": 201980
+        }
+      ]
+    },
+    {
+      "blockIndex": 14,
+      "type": "paragraph",
+      "text": "And what is &ldquo;crypto erase&rdquo; really? The drive generates a new random DEK. The old DEK is gone. Since all data was encrypted with the old DEK, it's now unreadable — even though the NAND cells still physically hold the encrypted bits. No need to erase billions of cells — just destroy one 256-bit key.",
+      "beginMs": 202000,
+      "endMs": 227120,
+      "timestamps": [
+        {
+          "word": "what",
+          "begin": 202000,
+          "end": 202460
+        },
+        {
+          "word": "is",
+          "begin": 202520,
+          "end": 202540
+        },
+        {
+          "word": "&ldquo;crypto",
+          "begin": 203280,
+          "end": 205780
+        },
+        {
+          "word": "erase&rdquo;",
+          "begin": 205840,
+          "end": 206840
+        },
+        {
+          "word": "really?",
+          "begin": 207560,
+          "end": 207780
+        },
+        {
+          "word": "The",
+          "begin": 208480,
+          "end": 208520
+        },
+        {
+          "word": "drive",
+          "begin": 208580,
+          "end": 208860
+        },
+        {
+          "word": "generates",
+          "begin": 208860,
+          "end": 209360
+        },
+        {
+          "word": "a",
+          "begin": 209400,
+          "end": 209580
+        },
+        {
+          "word": "new",
+          "begin": 209720,
+          "end": 209800
+        },
+        {
+          "word": "random",
+          "begin": 209720,
+          "end": 210040
+        },
+        {
+          "word": "DEK.",
+          "begin": 210120,
+          "end": 210340
+        },
+        {
+          "word": "The",
+          "begin": 210440,
+          "end": 211360
+        },
+        {
+          "word": "old",
+          "begin": 211380,
+          "end": 211680
+        },
+        {
+          "word": "DEK",
+          "begin": 211680,
+          "end": 211760
+        },
+        {
+          "word": "is",
+          "begin": 211800,
+          "end": 211960
+        },
+        {
+          "word": "gone.",
+          "begin": 212040,
+          "end": 212740
+        },
+        {
+          "word": "Since",
+          "begin": 213380,
+          "end": 213560
+        },
+        {
+          "word": "all",
+          "begin": 213680,
+          "end": 213800
+        },
+        {
+          "word": "data",
+          "begin": 213800,
+          "end": 214100
+        },
+        {
+          "word": "was",
+          "begin": 214180,
+          "end": 214320
+        },
+        {
+          "word": "encrypted",
+          "begin": 214340,
+          "end": 214780
+        },
+        {
+          "word": "with",
+          "begin": 214800,
+          "end": 214940
+        },
+        {
+          "word": "the",
+          "begin": 214940,
+          "end": 214980
+        },
+        {
+          "word": "old",
+          "begin": 215100,
+          "end": 215260
+        },
+        {
+          "word": "DEK,",
+          "begin": 215300,
+          "end": 215720
+        },
+        {
+          "word": "it's",
+          "begin": 216200,
+          "end": 216300
+        },
+        {
+          "word": "now",
+          "begin": 216300,
+          "end": 216480
+        },
+        {
+          "word": "unreadable",
+          "begin": 216680,
+          "end": 217140
+        },
+        {
+          "word": "even",
+          "begin": 217520,
+          "end": 217680
+        },
+        {
+          "word": "though",
+          "begin": 217720,
+          "end": 217780
+        },
+        {
+          "word": "the",
+          "begin": 217860,
+          "end": 217920
+        },
+        {
+          "word": "NAND",
+          "begin": 218000,
+          "end": 218240
+        },
+        {
+          "word": "cells",
+          "begin": 218320,
+          "end": 218580
+        },
+        {
+          "word": "still",
+          "begin": 218580,
+          "end": 218780
+        },
+        {
+          "word": "physically",
+          "begin": 218860,
+          "end": 219200
+        },
+        {
+          "word": "hold",
+          "begin": 219300,
+          "end": 219600
+        },
+        {
+          "word": "the",
+          "begin": 219600,
+          "end": 219640
+        },
+        {
+          "word": "encrypted",
+          "begin": 219700,
+          "end": 220160
+        },
+        {
+          "word": "bits.",
+          "begin": 220200,
+          "end": 220480
+        },
+        {
+          "word": "No",
+          "begin": 221200,
+          "end": 221280
+        },
+        {
+          "word": "need",
+          "begin": 221400,
+          "end": 221560
+        },
+        {
+          "word": "to",
+          "begin": 221600,
+          "end": 221680
+        },
+        {
+          "word": "erase",
+          "begin": 221740,
+          "end": 222040
+        },
+        {
+          "word": "billions",
+          "begin": 222120,
+          "end": 222440
+        },
+        {
+          "word": "of",
+          "begin": 222460,
+          "end": 222520
+        },
+        {
+          "word": "cells",
+          "begin": 222600,
+          "end": 222980
+        },
+        {
+          "word": "just",
+          "begin": 223300,
+          "end": 223440
+        },
+        {
+          "word": "destroy",
+          "begin": 223500,
+          "end": 223800
+        },
+        {
+          "word": "one",
+          "begin": 224020,
+          "end": 224200
+        },
+        {
+          "word": "256-bit",
+          "begin": 224280,
+          "end": 225520
+        },
+        {
+          "word": "key.",
+          "begin": 225560,
+          "end": 225680
+        },
+        {
+          "word": "NVMe",
+          "begin": 226300,
+          "end": 226740
+        },
+        {
+          "word": "doesn't",
+          "begin": 226860,
+          "end": 227120
+        }
+      ]
+    },
+    {
+      "blockIndex": 15,
+      "type": "paragraph",
+      "text": "NVMe doesn't handle encryption directly — it provides two &ldquo;tunnel&rdquo; commands that carry security protocol messages between the host and the drive's security subsystem:",
+      "beginMs": 227180,
+      "endMs": 235940,
+      "timestamps": [
+        {
+          "word": "handle",
+          "begin": 227180,
+          "end": 227460
+        },
+        {
+          "word": "encryption",
+          "begin": 227500,
+          "end": 227960
+        },
+        {
+          "word": "directly",
+          "begin": 227980,
+          "end": 228360
+        },
+        {
+          "word": "it",
+          "begin": 228760,
+          "end": 228800
+        },
+        {
+          "word": "provides",
+          "begin": 228840,
+          "end": 229260
+        },
+        {
+          "word": "two",
+          "begin": 229320,
+          "end": 229440
+        },
+        {
+          "word": "&ldquo;tunnel&rdquo;",
+          "begin": 229520,
+          "end": 229960
+        },
+        {
+          "word": "commands",
+          "begin": 230020,
+          "end": 230480
+        },
+        {
+          "word": "that",
+          "begin": 230500,
+          "end": 230620
+        },
+        {
+          "word": "carry",
+          "begin": 230660,
+          "end": 230880
+        },
+        {
+          "word": "security",
+          "begin": 231000,
+          "end": 231400
+        },
+        {
+          "word": "protocol",
+          "begin": 231500,
+          "end": 231820
+        },
+        {
+          "word": "messages",
+          "begin": 231920,
+          "end": 232400
+        },
+        {
+          "word": "between",
+          "begin": 232460,
+          "end": 232740
+        },
+        {
+          "word": "the",
+          "begin": 232760,
+          "end": 232800
+        },
+        {
+          "word": "host",
+          "begin": 232880,
+          "end": 233240
+        },
+        {
+          "word": "and",
+          "begin": 233340,
+          "end": 233420
+        },
+        {
+          "word": "the",
+          "begin": 233420,
+          "end": 233480
+        },
+        {
+          "word": "drive's",
+          "begin": 233540,
+          "end": 233880
+        },
+        {
+          "word": "security",
+          "begin": 233940,
+          "end": 234360
+        },
+        {
+          "word": "subsystem:",
+          "begin": 234480,
+          "end": 235040
+        },
+        {
+          "word": "Host",
+          "begin": 235580,
+          "end": 235940
+        }
+      ]
+    },
+    {
+      "blockIndex": 16,
+      "type": "paragraph",
+      "text": "Host sends a command or data to the drive's security subsystem. Example: &ldquo;Here is my password, please unlock.&rdquo;",
+      "beginMs": 236020,
+      "endMs": 245800,
+      "timestamps": [
+        {
+          "word": "sends",
+          "begin": 236020,
+          "end": 236240
+        },
+        {
+          "word": "a",
+          "begin": 236260,
+          "end": 236280
+        },
+        {
+          "word": "command",
+          "begin": 236340,
+          "end": 236800
+        },
+        {
+          "word": "or",
+          "begin": 236920,
+          "end": 236940
+        },
+        {
+          "word": "data",
+          "begin": 237060,
+          "end": 237800
+        },
+        {
+          "word": "to",
+          "begin": 237840,
+          "end": 237900
+        },
+        {
+          "word": "the",
+          "begin": 237960,
+          "end": 238040
+        },
+        {
+          "word": "drive's",
+          "begin": 237960,
+          "end": 238360
+        },
+        {
+          "word": "security",
+          "begin": 238420,
+          "end": 238860
+        },
+        {
+          "word": "subsystem.",
+          "begin": 238960,
+          "end": 239520
+        },
+        {
+          "word": "Example:",
+          "begin": 239860,
+          "end": 240900
+        },
+        {
+          "word": "&ldquo;Here",
+          "begin": 240900,
+          "end": 242300
+        },
+        {
+          "word": "is",
+          "begin": 242320,
+          "end": 242400
+        },
+        {
+          "word": "my",
+          "begin": 242440,
+          "end": 242620
+        },
+        {
+          "word": "password,",
+          "begin": 242620,
+          "end": 243140
+        },
+        {
+          "word": "please",
+          "begin": 243440,
+          "end": 243760
+        },
+        {
+          "word": "unlock.&rdquo;",
+          "begin": 243880,
+          "end": 245800
+        }
+      ]
+    },
+    {
+      "blockIndex": 17,
+      "type": "paragraph",
+      "text": "Host reads a response from the drive's security subsystem. Example: &ldquo;Password accepted, drive unlocked.&rdquo;",
+      "beginMs": 245800,
+      "endMs": 251540,
+      "timestamps": [
+        {
+          "word": "Host",
+          "begin": 245800,
+          "end": 246120
+        },
+        {
+          "word": "reads",
+          "begin": 246200,
+          "end": 246400
+        },
+        {
+          "word": "a",
+          "begin": 246420,
+          "end": 246440
+        },
+        {
+          "word": "response",
+          "begin": 246480,
+          "end": 247000
+        },
+        {
+          "word": "from",
+          "begin": 247060,
+          "end": 247180
+        },
+        {
+          "word": "the",
+          "begin": 247200,
+          "end": 247260
+        },
+        {
+          "word": "drive's",
+          "begin": 247320,
+          "end": 247660
+        },
+        {
+          "word": "security",
+          "begin": 247720,
+          "end": 248120
+        },
+        {
+          "word": "subsystem.",
+          "begin": 248240,
+          "end": 248800
+        },
+        {
+          "word": "Example:",
+          "begin": 249160,
+          "end": 250060
+        },
+        {
+          "word": "accepted,",
+          "begin": 250180,
+          "end": 250280
+        },
+        {
+          "word": "drive",
+          "begin": 250380,
+          "end": 250680
+        },
+        {
+          "word": "unlocked.&rdquo;",
+          "begin": 250760,
+          "end": 251280
+        },
+        {
+          "word": "The",
+          "begin": 251280,
+          "end": 251540
+        }
+      ]
+    },
+    {
+      "blockIndex": 18,
+      "type": "paragraph",
+      "text": "The SECP field in Security Send/Receive specifies which security protocol to use. Think of it as selecting a language for the conversation:",
+      "beginMs": 251640,
+      "endMs": 259660,
+      "timestamps": [
+        {
+          "word": "SECP",
+          "begin": 251640,
+          "end": 251880
+        },
+        {
+          "word": "field",
+          "begin": 252000,
+          "end": 252500
+        },
+        {
+          "word": "in",
+          "begin": 252540,
+          "end": 252720
+        },
+        {
+          "word": "Security",
+          "begin": 252780,
+          "end": 253420
+        },
+        {
+          "word": "Send/Receive",
+          "begin": 253540,
+          "end": 254520
+        },
+        {
+          "word": "specifies",
+          "begin": 254600,
+          "end": 255220
+        },
+        {
+          "word": "which",
+          "begin": 255280,
+          "end": 255420
+        },
+        {
+          "word": "security",
+          "begin": 255480,
+          "end": 255880
+        },
+        {
+          "word": "protocol",
+          "begin": 255960,
+          "end": 256420
+        },
+        {
+          "word": "to",
+          "begin": 256480,
+          "end": 256540
+        },
+        {
+          "word": "use.",
+          "begin": 256540,
+          "end": 256959
+        },
+        {
+          "word": "Think",
+          "begin": 257300,
+          "end": 257459
+        },
+        {
+          "word": "of",
+          "begin": 257480,
+          "end": 257540
+        },
+        {
+          "word": "it",
+          "begin": 257560,
+          "end": 257640
+        },
+        {
+          "word": "as",
+          "begin": 257660,
+          "end": 257740
+        },
+        {
+          "word": "selecting",
+          "begin": 257800,
+          "end": 258220
+        },
+        {
+          "word": "a",
+          "begin": 258240,
+          "end": 258260
+        },
+        {
+          "word": "language",
+          "begin": 258320,
+          "end": 258700
+        },
+        {
+          "word": "for",
+          "begin": 258740,
+          "end": 258800
+        },
+        {
+          "word": "the",
+          "begin": 258839,
+          "end": 258880
+        },
+        {
+          "word": "conversation:",
+          "begin": 258940,
+          "end": 259660
+        }
+      ]
+    },
+    {
+      "blockIndex": 19,
+      "type": "paragraph",
+      "text": "So how do you actually set a password and lock the drive? TCG Opal uses the Security Send/Receive commands under the hood, but you don't construct those raw NVMe commands yourself. Instead, you use sedutil-cli — an open-source tool that speaks the TCG Opal protocol.",
+      "beginMs": 260019,
+      "endMs": 277360,
+      "timestamps": [
+        {
+          "word": "So",
+          "begin": 260019,
+          "end": 260180
+        },
+        {
+          "word": "how",
+          "begin": 260180,
+          "end": 260240
+        },
+        {
+          "word": "do",
+          "begin": 260300,
+          "end": 260360
+        },
+        {
+          "word": "you",
+          "begin": 260380,
+          "end": 260440
+        },
+        {
+          "word": "actually",
+          "begin": 260540,
+          "end": 261019
+        },
+        {
+          "word": "set",
+          "begin": 261060,
+          "end": 261079
+        },
+        {
+          "word": "a",
+          "begin": 261079,
+          "end": 261100
+        },
+        {
+          "word": "password",
+          "begin": 261180,
+          "end": 261760
+        },
+        {
+          "word": "and",
+          "begin": 261860,
+          "end": 261959
+        },
+        {
+          "word": "lock",
+          "begin": 262000,
+          "end": 262220
+        },
+        {
+          "word": "the",
+          "begin": 262280,
+          "end": 262320
+        },
+        {
+          "word": "drive?",
+          "begin": 262380,
+          "end": 263100
+        },
+        {
+          "word": "TCG",
+          "begin": 263100,
+          "end": 263600
+        },
+        {
+          "word": "Opal",
+          "begin": 263760,
+          "end": 263960
+        },
+        {
+          "word": "uses",
+          "begin": 264120,
+          "end": 264460
+        },
+        {
+          "word": "the",
+          "begin": 264520,
+          "end": 264560
+        },
+        {
+          "word": "Security",
+          "begin": 264660,
+          "end": 265080
+        },
+        {
+          "word": "Send/Receive",
+          "begin": 265220,
+          "end": 266120
+        },
+        {
+          "word": "commands",
+          "begin": 266260,
+          "end": 266700
+        },
+        {
+          "word": "under",
+          "begin": 266800,
+          "end": 266960
+        },
+        {
+          "word": "the",
+          "begin": 267020,
+          "end": 267080
+        },
+        {
+          "word": "hood,",
+          "begin": 267140,
+          "end": 267400
+        },
+        {
+          "word": "but",
+          "begin": 267640,
+          "end": 267740
+        },
+        {
+          "word": "you",
+          "begin": 267740,
+          "end": 267800
+        },
+        {
+          "word": "don't",
+          "begin": 267860,
+          "end": 268040
+        },
+        {
+          "word": "construct",
+          "begin": 268080,
+          "end": 268520
+        },
+        {
+          "word": "those",
+          "begin": 268560,
+          "end": 268760
+        },
+        {
+          "word": "raw",
+          "begin": 268840,
+          "end": 268920
+        },
+        {
+          "word": "NVMe",
+          "begin": 269200,
+          "end": 269620
+        },
+        {
+          "word": "commands",
+          "begin": 269740,
+          "end": 270120
+        },
+        {
+          "word": "yourself.",
+          "begin": 270140,
+          "end": 270640
+        },
+        {
+          "word": "Instead,",
+          "begin": 271040,
+          "end": 271540
+        },
+        {
+          "word": "you",
+          "begin": 271680,
+          "end": 271720
+        },
+        {
+          "word": "use",
+          "begin": 271740,
+          "end": 272080
+        },
+        {
+          "word": "sedutil-cli",
+          "begin": 272140,
+          "end": 273060
+        },
+        {
+          "word": "an",
+          "begin": 273540,
+          "end": 273620
+        },
+        {
+          "word": "open-source",
+          "begin": 273700,
+          "end": 274240
+        },
+        {
+          "word": "tool",
+          "begin": 274300,
+          "end": 274540
+        },
+        {
+          "word": "that",
+          "begin": 274620,
+          "end": 274780
+        },
+        {
+          "word": "speaks",
+          "begin": 274840,
+          "end": 275080
+        },
+        {
+          "word": "the",
+          "begin": 275100,
+          "end": 275180
+        },
+        {
+          "word": "TCG",
+          "begin": 275180,
+          "end": 275820
+        },
+        {
+          "word": "Opal",
+          "begin": 276040,
+          "end": 276220
+        },
+        {
+          "word": "protocol.",
+          "begin": 276340,
+          "end": 276840
+        },
+        {
+          "word": "Why",
+          "begin": 277300,
+          "end": 277360
+        }
+      ]
+    },
+    {
+      "blockIndex": 20,
+      "type": "paragraph",
+      "text": "Why not just use nvme-cli? Because nvme-cli doesn't understand TCG Opal's protocol messages. It can send raw Security Send/Receive commands, but the payload format is defined by the TCG Opal specification — a complex binary protocol with sessions, tokens, and method calls. sedutil handles all of that for you.",
+      "beginMs": 277460,
+      "endMs": 298940,
+      "timestamps": [
+        {
+          "word": "not",
+          "begin": 277460,
+          "end": 277600
+        },
+        {
+          "word": "just",
+          "begin": 277600,
+          "end": 277840
+        },
+        {
+          "word": "use",
+          "begin": 277880,
+          "end": 278060
+        },
+        {
+          "word": "nvme-cli?",
+          "begin": 278160,
+          "end": 279120
+        },
+        {
+          "word": "Because",
+          "begin": 279520,
+          "end": 279780
+        },
+        {
+          "word": "nvme-cli",
+          "begin": 279880,
+          "end": 281000
+        },
+        {
+          "word": "doesn't",
+          "begin": 281420,
+          "end": 281640
+        },
+        {
+          "word": "understand",
+          "begin": 281640,
+          "end": 281840
+        },
+        {
+          "word": "TCG",
+          "begin": 281840,
+          "end": 282480
+        },
+        {
+          "word": "Opal's",
+          "begin": 282600,
+          "end": 283420
+        },
+        {
+          "word": "protocol",
+          "begin": 283420,
+          "end": 283820
+        },
+        {
+          "word": "messages.",
+          "begin": 283880,
+          "end": 284440
+        },
+        {
+          "word": "It",
+          "begin": 284840,
+          "end": 284880
+        },
+        {
+          "word": "can",
+          "begin": 284920,
+          "end": 285040
+        },
+        {
+          "word": "send",
+          "begin": 285120,
+          "end": 285320
+        },
+        {
+          "word": "raw",
+          "begin": 285400,
+          "end": 285480
+        },
+        {
+          "word": "Security",
+          "begin": 285700,
+          "end": 286120
+        },
+        {
+          "word": "Send/Receive",
+          "begin": 286260,
+          "end": 286980
+        },
+        {
+          "word": "commands,",
+          "begin": 287040,
+          "end": 287540
+        },
+        {
+          "word": "but",
+          "begin": 287800,
+          "end": 287920
+        },
+        {
+          "word": "the",
+          "begin": 287920,
+          "end": 287960
+        },
+        {
+          "word": "payload",
+          "begin": 288020,
+          "end": 288420
+        },
+        {
+          "word": "format",
+          "begin": 288500,
+          "end": 288880
+        },
+        {
+          "word": "is",
+          "begin": 288940,
+          "end": 289020
+        },
+        {
+          "word": "defined",
+          "begin": 289060,
+          "end": 289500
+        },
+        {
+          "word": "by",
+          "begin": 289560,
+          "end": 289620
+        },
+        {
+          "word": "the",
+          "begin": 289680,
+          "end": 289740
+        },
+        {
+          "word": "TCG",
+          "begin": 289820,
+          "end": 290320
+        },
+        {
+          "word": "Opal",
+          "begin": 290520,
+          "end": 290700
+        },
+        {
+          "word": "specification",
+          "begin": 290820,
+          "end": 291640
+        },
+        {
+          "word": "a",
+          "begin": 291960,
+          "end": 291980
+        },
+        {
+          "word": "complex",
+          "begin": 292060,
+          "end": 292540
+        },
+        {
+          "word": "binary",
+          "begin": 292620,
+          "end": 292980
+        },
+        {
+          "word": "protocol",
+          "begin": 293060,
+          "end": 293580
+        },
+        {
+          "word": "with",
+          "begin": 293860,
+          "end": 293960
+        },
+        {
+          "word": "sessions,",
+          "begin": 294060,
+          "end": 294540
+        },
+        {
+          "word": "tokens,",
+          "begin": 294840,
+          "end": 295340
+        },
+        {
+          "word": "and",
+          "begin": 295620,
+          "end": 295720
+        },
+        {
+          "word": "method",
+          "begin": 295760,
+          "end": 296040
+        },
+        {
+          "word": "calls.",
+          "begin": 296100,
+          "end": 296460
+        },
+        {
+          "word": "sedutil",
+          "begin": 296840,
+          "end": 297180
+        },
+        {
+          "word": "handles",
+          "begin": 297220,
+          "end": 297560
+        },
+        {
+          "word": "all",
+          "begin": 297680,
+          "end": 297820
+        },
+        {
+          "word": "of",
+          "begin": 297840,
+          "end": 297920
+        },
+        {
+          "word": "that",
+          "begin": 297940,
+          "end": 298100
+        },
+        {
+          "word": "for",
+          "begin": 298160,
+          "end": 298220
+        },
+        {
+          "word": "you.",
+          "begin": 298300,
+          "end": 298380
+        },
+        {
+          "word": "Here's",
+          "begin": 298700,
+          "end": 298940
+        }
+      ]
+    },
+    {
+      "blockIndex": 21,
+      "type": "paragraph",
+      "text": "Here's a chicken-and-egg problem: if the drive is locked, the OS can't boot (the drive won't return any data). But if the OS can't boot, how do you type in your password to unlock the drive?",
+      "beginMs": 298940,
+      "endMs": 308040,
+      "timestamps": [
+        {
+          "word": "a",
+          "begin": 298940,
+          "end": 298980
+        },
+        {
+          "word": "chicken-and-egg",
+          "begin": 299060,
+          "end": 299560
+        },
+        {
+          "word": "problem:",
+          "begin": 299620,
+          "end": 300020
+        },
+        {
+          "word": "if",
+          "begin": 300360,
+          "end": 300460
+        },
+        {
+          "word": "the",
+          "begin": 300480,
+          "end": 300540
+        },
+        {
+          "word": "drive",
+          "begin": 300600,
+          "end": 300960
+        },
+        {
+          "word": "is",
+          "begin": 300960,
+          "end": 301040
+        },
+        {
+          "word": "locked,",
+          "begin": 301040,
+          "end": 301280
+        },
+        {
+          "word": "the",
+          "begin": 301300,
+          "end": 301580
+        },
+        {
+          "word": "OS",
+          "begin": 301580,
+          "end": 301960
+        },
+        {
+          "word": "can't",
+          "begin": 302000,
+          "end": 302220
+        },
+        {
+          "word": "boot",
+          "begin": 302280,
+          "end": 302440
+        },
+        {
+          "word": "(the",
+          "begin": 302460,
+          "end": 302520
+        },
+        {
+          "word": "drive",
+          "begin": 302560,
+          "end": 302840
+        },
+        {
+          "word": "won't",
+          "begin": 302840,
+          "end": 303040
+        },
+        {
+          "word": "return",
+          "begin": 303060,
+          "end": 303380
+        },
+        {
+          "word": "any",
+          "begin": 303400,
+          "end": 303520
+        },
+        {
+          "word": "data).",
+          "begin": 303600,
+          "end": 303860
+        },
+        {
+          "word": "But",
+          "begin": 304240,
+          "end": 304320
+        },
+        {
+          "word": "if",
+          "begin": 304340,
+          "end": 304420
+        },
+        {
+          "word": "the",
+          "begin": 304460,
+          "end": 304520
+        },
+        {
+          "word": "OS",
+          "begin": 304580,
+          "end": 304820
+        },
+        {
+          "word": "can't",
+          "begin": 304880,
+          "end": 305080
+        },
+        {
+          "word": "boot,",
+          "begin": 305140,
+          "end": 305400
+        },
+        {
+          "word": "how",
+          "begin": 305660,
+          "end": 305740
+        },
+        {
+          "word": "do",
+          "begin": 305800,
+          "end": 305840
+        },
+        {
+          "word": "you",
+          "begin": 305860,
+          "end": 305920
+        },
+        {
+          "word": "type",
+          "begin": 306000,
+          "end": 306240
+        },
+        {
+          "word": "in",
+          "begin": 306260,
+          "end": 306340
+        },
+        {
+          "word": "your",
+          "begin": 306360,
+          "end": 306420
+        },
+        {
+          "word": "password",
+          "begin": 306500,
+          "end": 306960
+        },
+        {
+          "word": "to",
+          "begin": 307000,
+          "end": 307060
+        },
+        {
+          "word": "unlock",
+          "begin": 307160,
+          "end": 307480
+        },
+        {
+          "word": "the",
+          "begin": 307520,
+          "end": 307560
+        },
+        {
+          "word": "drive?",
+          "begin": 307620,
+          "end": 308040
+        }
+      ]
+    },
+    {
+      "blockIndex": 22,
+      "type": "paragraph",
+      "text": "TCG Opal solves this with MBR shadowing. The idea: the drive has a small hidden storage area called the Shadow MBR. You load a tiny bootable image into it — the PBA (Pre-Boot Authentication) image. This is a minimal Linux system whose only job is to ask for your password.",
+      "beginMs": 308480,
+      "endMs": 325420,
+      "timestamps": [
+        {
+          "word": "TCG",
+          "begin": 308480,
+          "end": 308900
+        },
+        {
+          "word": "Opal",
+          "begin": 308980,
+          "end": 309480
+        },
+        {
+          "word": "solves",
+          "begin": 309520,
+          "end": 309640
+        },
+        {
+          "word": "this",
+          "begin": 309640,
+          "end": 309840
+        },
+        {
+          "word": "with",
+          "begin": 309900,
+          "end": 310020
+        },
+        {
+          "word": "MBR",
+          "begin": 310100,
+          "end": 310440
+        },
+        {
+          "word": "shadowing.",
+          "begin": 310620,
+          "end": 311060
+        },
+        {
+          "word": "The",
+          "begin": 311320,
+          "end": 311360
+        },
+        {
+          "word": "idea:",
+          "begin": 311360,
+          "end": 311820
+        },
+        {
+          "word": "the",
+          "begin": 312160,
+          "end": 312200
+        },
+        {
+          "word": "drive",
+          "begin": 312260,
+          "end": 312580
+        },
+        {
+          "word": "has",
+          "begin": 312580,
+          "end": 312700
+        },
+        {
+          "word": "a",
+          "begin": 312720,
+          "end": 312740
+        },
+        {
+          "word": "small",
+          "begin": 312840,
+          "end": 313120
+        },
+        {
+          "word": "hidden",
+          "begin": 313180,
+          "end": 313400
+        },
+        {
+          "word": "storage",
+          "begin": 313480,
+          "end": 313860
+        },
+        {
+          "word": "area",
+          "begin": 313920,
+          "end": 314180
+        },
+        {
+          "word": "called",
+          "begin": 314320,
+          "end": 314520
+        },
+        {
+          "word": "the",
+          "begin": 314520,
+          "end": 314560
+        },
+        {
+          "word": "Shadow",
+          "begin": 314560,
+          "end": 315000
+        },
+        {
+          "word": "MBR.",
+          "begin": 315180,
+          "end": 316020
+        },
+        {
+          "word": "You",
+          "begin": 316020,
+          "end": 316060
+        },
+        {
+          "word": "load",
+          "begin": 316140,
+          "end": 316440
+        },
+        {
+          "word": "a",
+          "begin": 316560,
+          "end": 316740
+        },
+        {
+          "word": "tiny",
+          "begin": 316860,
+          "end": 317040
+        },
+        {
+          "word": "bootable",
+          "begin": 317100,
+          "end": 317160
+        },
+        {
+          "word": "image",
+          "begin": 317300,
+          "end": 317560
+        },
+        {
+          "word": "into",
+          "begin": 317600,
+          "end": 317800
+        },
+        {
+          "word": "it",
+          "begin": 317900,
+          "end": 318540
+        },
+        {
+          "word": "the",
+          "begin": 318660,
+          "end": 318740
+        },
+        {
+          "word": "PBA",
+          "begin": 318860,
+          "end": 319100
+        },
+        {
+          "word": "(Pre-Boot",
+          "begin": 319100,
+          "end": 319580
+        },
+        {
+          "word": "Authentication)",
+          "begin": 319720,
+          "end": 320500
+        },
+        {
+          "word": "image.",
+          "begin": 320580,
+          "end": 320900
+        },
+        {
+          "word": "This",
+          "begin": 321280,
+          "end": 321420
+        },
+        {
+          "word": "is",
+          "begin": 321460,
+          "end": 321540
+        },
+        {
+          "word": "a",
+          "begin": 321540,
+          "end": 321600
+        },
+        {
+          "word": "minimal",
+          "begin": 321700,
+          "end": 321960
+        },
+        {
+          "word": "Linux",
+          "begin": 322080,
+          "end": 322320
+        },
+        {
+          "word": "system",
+          "begin": 322400,
+          "end": 322760
+        },
+        {
+          "word": "whose",
+          "begin": 322800,
+          "end": 322960
+        },
+        {
+          "word": "only",
+          "begin": 323080,
+          "end": 323260
+        },
+        {
+          "word": "job",
+          "begin": 323360,
+          "end": 323640
+        },
+        {
+          "word": "is",
+          "begin": 323660,
+          "end": 323740
+        },
+        {
+          "word": "to",
+          "begin": 323780,
+          "end": 323840
+        },
+        {
+          "word": "ask",
+          "begin": 323940,
+          "end": 324140
+        },
+        {
+          "word": "for",
+          "begin": 324180,
+          "end": 324300
+        },
+        {
+          "word": "your",
+          "begin": 324320,
+          "end": 324360
+        },
+        {
+          "word": "password.",
+          "begin": 324440,
+          "end": 325000
+        },
+        {
+          "word": "How",
+          "begin": 325160,
+          "end": 325420
+        }
+      ]
+    },
+    {
+      "blockIndex": 23,
+      "type": "paragraph",
+      "text": "How does &ldquo;shadowing&rdquo; work exactly? When MBR shadowing is enabled and the drive is locked, reads to the beginning of the drive (where the MBR/boot sector normally lives) return the Shadow MBR content instead of the actual disk content. The BIOS or UEFI sees what looks like a normal bootable drive and loads the PBA image.",
+      "beginMs": 325420,
+      "endMs": 346680,
+      "timestamps": [
+        {
+          "word": "does",
+          "begin": 325420,
+          "end": 326840
+        },
+        {
+          "word": "&ldquo;shadowing&rdquo;",
+          "begin": 327300,
+          "end": 328560
+        },
+        {
+          "word": "work",
+          "begin": 328920,
+          "end": 329120
+        },
+        {
+          "word": "exactly?",
+          "begin": 329160,
+          "end": 330140
+        },
+        {
+          "word": "When",
+          "begin": 330140,
+          "end": 329240
+        },
+        {
+          "word": "MBR",
+          "begin": 329300,
+          "end": 329580
+        },
+        {
+          "word": "shadowing",
+          "begin": 329580,
+          "end": 330160
+        },
+        {
+          "word": "is",
+          "begin": 330240,
+          "end": 330360
+        },
+        {
+          "word": "enabled",
+          "begin": 330400,
+          "end": 331040
+        },
+        {
+          "word": "and",
+          "begin": 331100,
+          "end": 331240
+        },
+        {
+          "word": "the",
+          "begin": 331280,
+          "end": 331360
+        },
+        {
+          "word": "drive",
+          "begin": 331400,
+          "end": 331800
+        },
+        {
+          "word": "is",
+          "begin": 331820,
+          "end": 331900
+        },
+        {
+          "word": "locked,",
+          "begin": 331920,
+          "end": 332060
+        },
+        {
+          "word": "reads",
+          "begin": 332080,
+          "end": 332320
+        },
+        {
+          "word": "to",
+          "begin": 332380,
+          "end": 332480
+        },
+        {
+          "word": "the",
+          "begin": 332480,
+          "end": 332560
+        },
+        {
+          "word": "beginning",
+          "begin": 332720,
+          "end": 333300
+        },
+        {
+          "word": "of",
+          "begin": 333300,
+          "end": 333340
+        },
+        {
+          "word": "the",
+          "begin": 333340,
+          "end": 333460
+        },
+        {
+          "word": "drive",
+          "begin": 333500,
+          "end": 333740
+        },
+        {
+          "word": "(where",
+          "begin": 333780,
+          "end": 334100
+        },
+        {
+          "word": "the",
+          "begin": 334100,
+          "end": 334140
+        },
+        {
+          "word": "MBR/boot",
+          "begin": 334200,
+          "end": 334660
+        },
+        {
+          "word": "sector",
+          "begin": 334740,
+          "end": 335280
+        },
+        {
+          "word": "normally",
+          "begin": 335440,
+          "end": 335940
+        },
+        {
+          "word": "lives)",
+          "begin": 336040,
+          "end": 336280
+        },
+        {
+          "word": "return",
+          "begin": 336280,
+          "end": 336660
+        },
+        {
+          "word": "the",
+          "begin": 336660,
+          "end": 336760
+        },
+        {
+          "word": "Shadow",
+          "begin": 336840,
+          "end": 337080
+        },
+        {
+          "word": "MBR",
+          "begin": 337160,
+          "end": 337240
+        },
+        {
+          "word": "content",
+          "begin": 337340,
+          "end": 337880
+        },
+        {
+          "word": "instead",
+          "begin": 337900,
+          "end": 338660
+        },
+        {
+          "word": "of",
+          "begin": 338680,
+          "end": 338420
+        },
+        {
+          "word": "the",
+          "begin": 338460,
+          "end": 338700
+        },
+        {
+          "word": "actual",
+          "begin": 338800,
+          "end": 339060
+        },
+        {
+          "word": "disk",
+          "begin": 339100,
+          "end": 339240
+        },
+        {
+          "word": "content.",
+          "begin": 339240,
+          "end": 340700
+        },
+        {
+          "word": "The",
+          "begin": 341000,
+          "end": 341060
+        },
+        {
+          "word": "BIOS",
+          "begin": 341120,
+          "end": 341880
+        },
+        {
+          "word": "or",
+          "begin": 341880,
+          "end": 341960
+        },
+        {
+          "word": "UEFI",
+          "begin": 342060,
+          "end": 342420
+        },
+        {
+          "word": "sees",
+          "begin": 343080,
+          "end": 343300
+        },
+        {
+          "word": "what",
+          "begin": 343340,
+          "end": 343480
+        },
+        {
+          "word": "looks",
+          "begin": 343520,
+          "end": 343720
+        },
+        {
+          "word": "like",
+          "begin": 343740,
+          "end": 343900
+        },
+        {
+          "word": "a",
+          "begin": 343900,
+          "end": 343940
+        },
+        {
+          "word": "normal",
+          "begin": 344000,
+          "end": 344280
+        },
+        {
+          "word": "bootable",
+          "begin": 344360,
+          "end": 344740
+        },
+        {
+          "word": "drive",
+          "begin": 344740,
+          "end": 345100
+        },
+        {
+          "word": "and",
+          "begin": 345200,
+          "end": 345300
+        },
+        {
+          "word": "loads",
+          "begin": 345340,
+          "end": 345620
+        },
+        {
+          "word": "the",
+          "begin": 345660,
+          "end": 345720
+        },
+        {
+          "word": "PBA",
+          "begin": 345780,
+          "end": 346380
+        },
+        {
+          "word": "image.",
+          "begin": 346440,
+          "end": 346680
+        }
+      ]
+    },
+    {
+      "blockIndex": 24,
+      "type": "paragraph",
+      "text": "The PBA boots, prompts you for your password, and sends it to the drive via TCG Opal commands. Once authenticated, the drive unlocks and disables the shadow — now reads to the beginning of the drive return the actual boot sector. The PBA then triggers a warm reboot, and this time the BIOS sees your real OS and boots normally.",
+      "beginMs": 347040,
+      "endMs": 367360,
+      "timestamps": [
+        {
+          "word": "The",
+          "begin": 347040,
+          "end": 347080
+        },
+        {
+          "word": "PBA",
+          "begin": 347160,
+          "end": 347520
+        },
+        {
+          "word": "boots,",
+          "begin": 347680,
+          "end": 348060
+        },
+        {
+          "word": "prompts",
+          "begin": 348440,
+          "end": 348740
+        },
+        {
+          "word": "you",
+          "begin": 348760,
+          "end": 348820
+        },
+        {
+          "word": "for",
+          "begin": 348900,
+          "end": 348960
+        },
+        {
+          "word": "your",
+          "begin": 349000,
+          "end": 349060
+        },
+        {
+          "word": "password,",
+          "begin": 349140,
+          "end": 349680
+        },
+        {
+          "word": "and",
+          "begin": 350020,
+          "end": 350120
+        },
+        {
+          "word": "sends",
+          "begin": 350200,
+          "end": 350440
+        },
+        {
+          "word": "it",
+          "begin": 350440,
+          "end": 350520
+        },
+        {
+          "word": "to",
+          "begin": 350540,
+          "end": 350620
+        },
+        {
+          "word": "the",
+          "begin": 350660,
+          "end": 350720
+        },
+        {
+          "word": "drive",
+          "begin": 350780,
+          "end": 351160
+        },
+        {
+          "word": "via",
+          "begin": 351300,
+          "end": 351640
+        },
+        {
+          "word": "TCG",
+          "begin": 351760,
+          "end": 352040
+        },
+        {
+          "word": "Opal",
+          "begin": 352220,
+          "end": 352400
+        },
+        {
+          "word": "commands.",
+          "begin": 352500,
+          "end": 353000
+        },
+        {
+          "word": "Once",
+          "begin": 353160,
+          "end": 353360
+        },
+        {
+          "word": "authenticated,",
+          "begin": 353400,
+          "end": 353960
+        },
+        {
+          "word": "the",
+          "begin": 353960,
+          "end": 354540
+        },
+        {
+          "word": "drive",
+          "begin": 354600,
+          "end": 354920
+        },
+        {
+          "word": "unlocks",
+          "begin": 354960,
+          "end": 355460
+        },
+        {
+          "word": "and",
+          "begin": 355560,
+          "end": 355640
+        },
+        {
+          "word": "disables",
+          "begin": 355660,
+          "end": 356120
+        },
+        {
+          "word": "the",
+          "begin": 356140,
+          "end": 356200
+        },
+        {
+          "word": "shadow",
+          "begin": 356280,
+          "end": 356540
+        },
+        {
+          "word": "now",
+          "begin": 357060,
+          "end": 357120
+        },
+        {
+          "word": "reads",
+          "begin": 357280,
+          "end": 357480
+        },
+        {
+          "word": "to",
+          "begin": 357480,
+          "end": 357620
+        },
+        {
+          "word": "the",
+          "begin": 357660,
+          "end": 357720
+        },
+        {
+          "word": "beginning",
+          "begin": 357760,
+          "end": 358100
+        },
+        {
+          "word": "of",
+          "begin": 358120,
+          "end": 358180
+        },
+        {
+          "word": "the",
+          "begin": 358180,
+          "end": 358260
+        },
+        {
+          "word": "drive",
+          "begin": 358340,
+          "end": 358720
+        },
+        {
+          "word": "return",
+          "begin": 358960,
+          "end": 359340
+        },
+        {
+          "word": "the",
+          "begin": 359360,
+          "end": 359400
+        },
+        {
+          "word": "actual",
+          "begin": 359520,
+          "end": 359840
+        },
+        {
+          "word": "boot",
+          "begin": 359960,
+          "end": 360140
+        },
+        {
+          "word": "sector.",
+          "begin": 360200,
+          "end": 361140
+        },
+        {
+          "word": "The",
+          "begin": 361140,
+          "end": 361180
+        },
+        {
+          "word": "PBA",
+          "begin": 361240,
+          "end": 361780
+        },
+        {
+          "word": "then",
+          "begin": 361780,
+          "end": 361940
+        },
+        {
+          "word": "triggers",
+          "begin": 362000,
+          "end": 362460
+        },
+        {
+          "word": "a",
+          "begin": 362460,
+          "end": 362480
+        },
+        {
+          "word": "warm",
+          "begin": 362560,
+          "end": 362800
+        },
+        {
+          "word": "reboot,",
+          "begin": 362860,
+          "end": 363260
+        },
+        {
+          "word": "and",
+          "begin": 363680,
+          "end": 363760
+        },
+        {
+          "word": "this",
+          "begin": 363779,
+          "end": 363940
+        },
+        {
+          "word": "time",
+          "begin": 363980,
+          "end": 364240
+        },
+        {
+          "word": "the",
+          "begin": 364280,
+          "end": 364320
+        },
+        {
+          "word": "BIOS",
+          "begin": 364400,
+          "end": 365120
+        },
+        {
+          "word": "sees",
+          "begin": 365140,
+          "end": 365160
+        },
+        {
+          "word": "your",
+          "begin": 365160,
+          "end": 365340
+        },
+        {
+          "word": "real",
+          "begin": 365380,
+          "end": 365520
+        },
+        {
+          "word": "OS",
+          "begin": 365620,
+          "end": 365940
+        },
+        {
+          "word": "and",
+          "begin": 366020,
+          "end": 366120
+        },
+        {
+          "word": "boots",
+          "begin": 366180,
+          "end": 366460
+        },
+        {
+          "word": "normally.",
+          "begin": 366560,
+          "end": 366920
+        },
+        {
+          "word": "Why",
+          "begin": 367300,
+          "end": 367360
+        }
+      ]
+    },
+    {
+      "blockIndex": 25,
+      "type": "paragraph",
+      "text": "Why not just use BIOS/UEFI password instead? Because a BIOS password only prevents booting — it doesn't encrypt the data. Someone could remove the drive and read it in another machine. SED with MBR shadowing encrypts the data AND prevents unauthorized boot. Even if the drive is moved to another machine, the data stays locked.",
+      "beginMs": 367480,
+      "endMs": 387360,
+      "timestamps": [
+        {
+          "word": "not",
+          "begin": 367480,
+          "end": 367640
+        },
+        {
+          "word": "just",
+          "begin": 367640,
+          "end": 367940
+        },
+        {
+          "word": "use",
+          "begin": 367960,
+          "end": 368180
+        },
+        {
+          "word": "BIOS/UEFI",
+          "begin": 368180,
+          "end": 369380
+        },
+        {
+          "word": "password",
+          "begin": 369500,
+          "end": 370240
+        },
+        {
+          "word": "instead?",
+          "begin": 370320,
+          "end": 370840
+        },
+        {
+          "word": "Because",
+          "begin": 371520,
+          "end": 371760
+        },
+        {
+          "word": "a",
+          "begin": 371780,
+          "end": 371800
+        },
+        {
+          "word": "BIOS",
+          "begin": 371880,
+          "end": 372220
+        },
+        {
+          "word": "password",
+          "begin": 372300,
+          "end": 372820
+        },
+        {
+          "word": "only",
+          "begin": 372940,
+          "end": 373120
+        },
+        {
+          "word": "prevents",
+          "begin": 373220,
+          "end": 373560
+        },
+        {
+          "word": "booting",
+          "begin": 373660,
+          "end": 374000
+        },
+        {
+          "word": "it",
+          "begin": 373720,
+          "end": 373900
+        },
+        {
+          "word": "doesn't",
+          "begin": 373980,
+          "end": 374520
+        },
+        {
+          "word": "encrypt",
+          "begin": 374560,
+          "end": 374780
+        },
+        {
+          "word": "the",
+          "begin": 374800,
+          "end": 374880
+        },
+        {
+          "word": "data.",
+          "begin": 374920,
+          "end": 375040
+        },
+        {
+          "word": "Someone",
+          "begin": 375120,
+          "end": 375280
+        },
+        {
+          "word": "could",
+          "begin": 375340,
+          "end": 375540
+        },
+        {
+          "word": "remove",
+          "begin": 375560,
+          "end": 376460
+        },
+        {
+          "word": "the",
+          "begin": 376460,
+          "end": 376480
+        },
+        {
+          "word": "drive",
+          "begin": 376520,
+          "end": 376780
+        },
+        {
+          "word": "and",
+          "begin": 376800,
+          "end": 376920
+        },
+        {
+          "word": "read",
+          "begin": 376940,
+          "end": 377140
+        },
+        {
+          "word": "it",
+          "begin": 377160,
+          "end": 377260
+        },
+        {
+          "word": "in",
+          "begin": 377280,
+          "end": 377580
+        },
+        {
+          "word": "another",
+          "begin": 377680,
+          "end": 378020
+        },
+        {
+          "word": "machine.",
+          "begin": 378080,
+          "end": 378980
+        },
+        {
+          "word": "SED",
+          "begin": 379400,
+          "end": 379700
+        },
+        {
+          "word": "with",
+          "begin": 379720,
+          "end": 379860
+        },
+        {
+          "word": "MBR",
+          "begin": 379860,
+          "end": 380560
+        },
+        {
+          "word": "shadowing",
+          "begin": 380560,
+          "end": 380920
+        },
+        {
+          "word": "encrypts",
+          "begin": 380960,
+          "end": 381420
+        },
+        {
+          "word": "the",
+          "begin": 381420,
+          "end": 381460
+        },
+        {
+          "word": "data",
+          "begin": 381520,
+          "end": 381740
+        },
+        {
+          "word": "AND",
+          "begin": 381920,
+          "end": 381980
+        },
+        {
+          "word": "prevents",
+          "begin": 382040,
+          "end": 382380
+        },
+        {
+          "word": "unauthorized",
+          "begin": 382460,
+          "end": 383060
+        },
+        {
+          "word": "boot.",
+          "begin": 383120,
+          "end": 383380
+        },
+        {
+          "word": "Even",
+          "begin": 383800,
+          "end": 383980
+        },
+        {
+          "word": "if",
+          "begin": 383980,
+          "end": 384060
+        },
+        {
+          "word": "the",
+          "begin": 384080,
+          "end": 384140
+        },
+        {
+          "word": "drive",
+          "begin": 384200,
+          "end": 384480
+        },
+        {
+          "word": "is",
+          "begin": 384480,
+          "end": 384580
+        },
+        {
+          "word": "moved",
+          "begin": 384640,
+          "end": 384860
+        },
+        {
+          "word": "to",
+          "begin": 384860,
+          "end": 384920
+        },
+        {
+          "word": "another",
+          "begin": 384980,
+          "end": 385240
+        },
+        {
+          "word": "machine,",
+          "begin": 385300,
+          "end": 385720
+        },
+        {
+          "word": "the",
+          "begin": 385840,
+          "end": 385900
+        },
+        {
+          "word": "data",
+          "begin": 385960,
+          "end": 386160
+        },
+        {
+          "word": "stays",
+          "begin": 386240,
+          "end": 386580
+        },
+        {
+          "word": "locked.",
+          "begin": 386580,
+          "end": 386900
+        },
+        {
+          "word": "If",
+          "begin": 387280,
+          "end": 387360
+        }
+      ]
+    },
+    {
+      "blockIndex": 26,
+      "type": "paragraph",
+      "text": "If there are multiple locking ranges with different passwords, who manages all of this? TCG Opal has a concept of authorities — different identities with different permissions:",
+      "beginMs": 387400,
+      "endMs": 396820,
+      "timestamps": [
+        {
+          "word": "there",
+          "begin": 387400,
+          "end": 387500
+        },
+        {
+          "word": "are",
+          "begin": 387540,
+          "end": 387560
+        },
+        {
+          "word": "multiple",
+          "begin": 387660,
+          "end": 387980
+        },
+        {
+          "word": "locking",
+          "begin": 388080,
+          "end": 388400
+        },
+        {
+          "word": "ranges",
+          "begin": 388440,
+          "end": 388780
+        },
+        {
+          "word": "with",
+          "begin": 388800,
+          "end": 388900
+        },
+        {
+          "word": "different",
+          "begin": 388960,
+          "end": 389200
+        },
+        {
+          "word": "passwords,",
+          "begin": 389240,
+          "end": 389800
+        },
+        {
+          "word": "who",
+          "begin": 389260,
+          "end": 389340
+        },
+        {
+          "word": "manages",
+          "begin": 389360,
+          "end": 390180
+        },
+        {
+          "word": "all",
+          "begin": 390200,
+          "end": 390320
+        },
+        {
+          "word": "of",
+          "begin": 390320,
+          "end": 390360
+        },
+        {
+          "word": "this?",
+          "begin": 390420,
+          "end": 391180
+        },
+        {
+          "word": "TCG",
+          "begin": 391480,
+          "end": 392140
+        },
+        {
+          "word": "Opal",
+          "begin": 392320,
+          "end": 392540
+        },
+        {
+          "word": "has",
+          "begin": 392680,
+          "end": 392820
+        },
+        {
+          "word": "a",
+          "begin": 392840,
+          "end": 392860
+        },
+        {
+          "word": "concept",
+          "begin": 392940,
+          "end": 393440
+        },
+        {
+          "word": "of",
+          "begin": 393500,
+          "end": 393580
+        },
+        {
+          "word": "authorities",
+          "begin": 393600,
+          "end": 394240
+        },
+        {
+          "word": "different",
+          "begin": 394580,
+          "end": 394840
+        },
+        {
+          "word": "identities",
+          "begin": 394840,
+          "end": 395440
+        },
+        {
+          "word": "with",
+          "begin": 395480,
+          "end": 395600
+        },
+        {
+          "word": "different",
+          "begin": 395640,
+          "end": 395920
+        },
+        {
+          "word": "permissions:",
+          "begin": 395960,
+          "end": 396360
+        },
+        {
+          "word": "The",
+          "begin": 396420,
+          "end": 396820
+        }
+      ]
+    },
+    {
+      "blockIndex": 27,
+      "type": "paragraph",
+      "text": "The owner of the drive. Can change all settings, create/delete locking ranges, and manage other authorities. Think of SID as the building owner — they can change any lock, give out any key, or reset the entire system.",
+      "beginMs": 397360,
+      "endMs": 412620,
+      "timestamps": [
+        {
+          "word": "the",
+          "begin": 397360,
+          "end": 397400
+        },
+        {
+          "word": "drive.",
+          "begin": 397480,
+          "end": 397900
+        },
+        {
+          "word": "Can",
+          "begin": 398400,
+          "end": 398520
+        },
+        {
+          "word": "change",
+          "begin": 398580,
+          "end": 399140
+        },
+        {
+          "word": "all",
+          "begin": 399180,
+          "end": 399300
+        },
+        {
+          "word": "settings,",
+          "begin": 399180,
+          "end": 399600
+        },
+        {
+          "word": "create/delete",
+          "begin": 399860,
+          "end": 400700
+        },
+        {
+          "word": "locking",
+          "begin": 400840,
+          "end": 401180
+        },
+        {
+          "word": "ranges,",
+          "begin": 401220,
+          "end": 401720
+        },
+        {
+          "word": "and",
+          "begin": 402000,
+          "end": 402080
+        },
+        {
+          "word": "manage",
+          "begin": 402120,
+          "end": 402600
+        },
+        {
+          "word": "other",
+          "begin": 402620,
+          "end": 402700
+        },
+        {
+          "word": "authorities.",
+          "begin": 402700,
+          "end": 403340
+        },
+        {
+          "word": "Think",
+          "begin": 403660,
+          "end": 403840
+        },
+        {
+          "word": "of",
+          "begin": 403860,
+          "end": 404040
+        },
+        {
+          "word": "SID",
+          "begin": 404140,
+          "end": 404440
+        },
+        {
+          "word": "as",
+          "begin": 404580,
+          "end": 404680
+        },
+        {
+          "word": "the",
+          "begin": 404720,
+          "end": 404760
+        },
+        {
+          "word": "building",
+          "begin": 404820,
+          "end": 405140
+        },
+        {
+          "word": "owner",
+          "begin": 405180,
+          "end": 405720
+        },
+        {
+          "word": "they",
+          "begin": 405800,
+          "end": 405900
+        },
+        {
+          "word": "can",
+          "begin": 405960,
+          "end": 406180
+        },
+        {
+          "word": "change",
+          "begin": 406220,
+          "end": 406460
+        },
+        {
+          "word": "any",
+          "begin": 406480,
+          "end": 406620
+        },
+        {
+          "word": "lock,",
+          "begin": 406620,
+          "end": 406920
+        },
+        {
+          "word": "give",
+          "begin": 407160,
+          "end": 407280
+        },
+        {
+          "word": "out",
+          "begin": 407320,
+          "end": 407440
+        },
+        {
+          "word": "any",
+          "begin": 407520,
+          "end": 407660
+        },
+        {
+          "word": "key,",
+          "begin": 407780,
+          "end": 407900
+        },
+        {
+          "word": "or",
+          "begin": 408380,
+          "end": 408400
+        },
+        {
+          "word": "reset",
+          "begin": 408540,
+          "end": 408940
+        },
+        {
+          "word": "the",
+          "begin": 408940,
+          "end": 409000
+        },
+        {
+          "word": "entire",
+          "begin": 409060,
+          "end": 409400
+        },
+        {
+          "word": "system.",
+          "begin": 409500,
+          "end": 409900
+        },
+        {
+          "word": "The",
+          "begin": 410820,
+          "end": 410860
+        },
+        {
+          "word": "primary",
+          "begin": 410940,
+          "end": 411360
+        },
+        {
+          "word": "administrator.",
+          "begin": 411440,
+          "end": 412060
+        },
+        {
+          "word": "Can",
+          "begin": 412480,
+          "end": 412620
+        }
+      ]
+    },
+    {
+      "blockIndex": 28,
+      "type": "paragraph",
+      "text": "The primary administrator. Can lock/unlock ranges and manage day-to-day security operations. The building manager — can lock/unlock doors but can't change the master plan.",
+      "beginMs": 412660,
+      "endMs": 422640,
+      "timestamps": [
+        {
+          "word": "lock/unlock",
+          "begin": 412660,
+          "end": 413620
+        },
+        {
+          "word": "ranges",
+          "begin": 413660,
+          "end": 414140
+        },
+        {
+          "word": "and",
+          "begin": 414240,
+          "end": 414340
+        },
+        {
+          "word": "manage",
+          "begin": 414360,
+          "end": 414680
+        },
+        {
+          "word": "day-to-day",
+          "begin": 414760,
+          "end": 415100
+        },
+        {
+          "word": "security",
+          "begin": 415240,
+          "end": 415640
+        },
+        {
+          "word": "operations.",
+          "begin": 415720,
+          "end": 416460
+        },
+        {
+          "word": "The",
+          "begin": 417160,
+          "end": 417220
+        },
+        {
+          "word": "building",
+          "begin": 417280,
+          "end": 417600
+        },
+        {
+          "word": "manager",
+          "begin": 417640,
+          "end": 418000
+        },
+        {
+          "word": "can",
+          "begin": 418420,
+          "end": 418560
+        },
+        {
+          "word": "lock/unlock",
+          "begin": 418600,
+          "end": 419280
+        },
+        {
+          "word": "doors",
+          "begin": 419340,
+          "end": 419680
+        },
+        {
+          "word": "but",
+          "begin": 419740,
+          "end": 419840
+        },
+        {
+          "word": "can't",
+          "begin": 419880,
+          "end": 420080
+        },
+        {
+          "word": "change",
+          "begin": 420080,
+          "end": 420480
+        },
+        {
+          "word": "the",
+          "begin": 420480,
+          "end": 420520
+        },
+        {
+          "word": "master",
+          "begin": 420560,
+          "end": 420940
+        },
+        {
+          "word": "plan.",
+          "begin": 420940,
+          "end": 421280
+        },
+        {
+          "word": "Optional",
+          "begin": 422280,
+          "end": 422640
+        }
+      ]
+    },
+    {
+      "blockIndex": 29,
+      "type": "paragraph",
+      "text": "Optional user authorities. Each can be assigned to a specific locking range. Tenants — each has a key to their own apartment but can't access others.",
+      "beginMs": 422760,
+      "endMs": 432220,
+      "timestamps": [
+        {
+          "word": "user",
+          "begin": 422760,
+          "end": 423060
+        },
+        {
+          "word": "authorities.",
+          "begin": 423060,
+          "end": 423680
+        },
+        {
+          "word": "Each",
+          "begin": 424400,
+          "end": 424660
+        },
+        {
+          "word": "can",
+          "begin": 424660,
+          "end": 424760
+        },
+        {
+          "word": "be",
+          "begin": 424800,
+          "end": 424840
+        },
+        {
+          "word": "assigned",
+          "begin": 424900,
+          "end": 425280
+        },
+        {
+          "word": "to",
+          "begin": 425300,
+          "end": 425360
+        },
+        {
+          "word": "a",
+          "begin": 425400,
+          "end": 425420
+        },
+        {
+          "word": "specific",
+          "begin": 425500,
+          "end": 425960
+        },
+        {
+          "word": "locking",
+          "begin": 426020,
+          "end": 426340
+        },
+        {
+          "word": "range.",
+          "begin": 426400,
+          "end": 426760
+        },
+        {
+          "word": "Tenants",
+          "begin": 427439,
+          "end": 427920
+        },
+        {
+          "word": "each",
+          "begin": 428240,
+          "end": 428400
+        },
+        {
+          "word": "has",
+          "begin": 428420,
+          "end": 428580
+        },
+        {
+          "word": "a",
+          "begin": 428599,
+          "end": 428620
+        },
+        {
+          "word": "key",
+          "begin": 428700,
+          "end": 428819
+        },
+        {
+          "word": "to",
+          "begin": 428939,
+          "end": 429000
+        },
+        {
+          "word": "their",
+          "begin": 429040,
+          "end": 429180
+        },
+        {
+          "word": "own",
+          "begin": 429200,
+          "end": 429319
+        },
+        {
+          "word": "apartment",
+          "begin": 429340,
+          "end": 429860
+        },
+        {
+          "word": "but",
+          "begin": 430080,
+          "end": 430160
+        },
+        {
+          "word": "can't",
+          "begin": 430220,
+          "end": 430440
+        },
+        {
+          "word": "access",
+          "begin": 430500,
+          "end": 430880
+        },
+        {
+          "word": "others.",
+          "begin": 430960,
+          "end": 431360
+        },
+        {
+          "word": "What",
+          "begin": 432100,
+          "end": 432220
+        }
+      ]
+    },
+    {
+      "blockIndex": 30,
+      "type": "paragraph",
+      "text": "What happens if you set the SID password but forget it? You can still PSID revert (physical label) to factory reset. But if you set the Admin1 password and forget it, only the SID or PSID can recover. This layered authority system prevents a single compromised password from giving access to everything.",
+      "beginMs": 432260,
+      "endMs": 450680,
+      "timestamps": [
+        {
+          "word": "happens",
+          "begin": 432260,
+          "end": 432600
+        },
+        {
+          "word": "if",
+          "begin": 432620,
+          "end": 432700
+        },
+        {
+          "word": "you",
+          "begin": 432720,
+          "end": 432780
+        },
+        {
+          "word": "set",
+          "begin": 432900,
+          "end": 433080
+        },
+        {
+          "word": "the",
+          "begin": 433100,
+          "end": 433280
+        },
+        {
+          "word": "SID",
+          "begin": 433380,
+          "end": 433640
+        },
+        {
+          "word": "password",
+          "begin": 433740,
+          "end": 434280
+        },
+        {
+          "word": "but",
+          "begin": 434280,
+          "end": 434500
+        },
+        {
+          "word": "forget",
+          "begin": 434560,
+          "end": 434840
+        },
+        {
+          "word": "it?",
+          "begin": 434860,
+          "end": 435020
+        },
+        {
+          "word": "You",
+          "begin": 435620,
+          "end": 435680
+        },
+        {
+          "word": "can",
+          "begin": 435760,
+          "end": 435880
+        },
+        {
+          "word": "still",
+          "begin": 435960,
+          "end": 436160
+        },
+        {
+          "word": "PSID",
+          "begin": 436240,
+          "end": 436440
+        },
+        {
+          "word": "revert",
+          "begin": 436540,
+          "end": 437000
+        },
+        {
+          "word": "(physical",
+          "begin": 437000,
+          "end": 437460
+        },
+        {
+          "word": "label)",
+          "begin": 437520,
+          "end": 437840
+        },
+        {
+          "word": "to",
+          "begin": 437940,
+          "end": 438200
+        },
+        {
+          "word": "factory",
+          "begin": 438300,
+          "end": 438660
+        },
+        {
+          "word": "reset.",
+          "begin": 438760,
+          "end": 439240
+        },
+        {
+          "word": "But",
+          "begin": 439860,
+          "end": 439960
+        },
+        {
+          "word": "if",
+          "begin": 439980,
+          "end": 440080
+        },
+        {
+          "word": "you",
+          "begin": 440080,
+          "end": 440140
+        },
+        {
+          "word": "set",
+          "begin": 440260,
+          "end": 440400
+        },
+        {
+          "word": "the",
+          "begin": 440420,
+          "end": 440480
+        },
+        {
+          "word": "Admin1",
+          "begin": 440620,
+          "end": 441120
+        },
+        {
+          "word": "password",
+          "begin": 441180,
+          "end": 441720
+        },
+        {
+          "word": "and",
+          "begin": 441840,
+          "end": 441900
+        },
+        {
+          "word": "forget",
+          "begin": 441960,
+          "end": 442260
+        },
+        {
+          "word": "it,",
+          "begin": 442280,
+          "end": 442440
+        },
+        {
+          "word": "only",
+          "begin": 442680,
+          "end": 442860
+        },
+        {
+          "word": "the",
+          "begin": 442920,
+          "end": 443120
+        },
+        {
+          "word": "SID",
+          "begin": 443240,
+          "end": 443460
+        },
+        {
+          "word": "or",
+          "begin": 443500,
+          "end": 443760
+        },
+        {
+          "word": "PSID",
+          "begin": 443860,
+          "end": 444040
+        },
+        {
+          "word": "can",
+          "begin": 444140,
+          "end": 444640
+        },
+        {
+          "word": "recover.",
+          "begin": 444680,
+          "end": 445020
+        },
+        {
+          "word": "This",
+          "begin": 445840,
+          "end": 446020
+        },
+        {
+          "word": "layered",
+          "begin": 446120,
+          "end": 446360
+        },
+        {
+          "word": "authority",
+          "begin": 446360,
+          "end": 446680
+        },
+        {
+          "word": "system",
+          "begin": 446780,
+          "end": 447140
+        },
+        {
+          "word": "prevents",
+          "begin": 447240,
+          "end": 447560
+        },
+        {
+          "word": "a",
+          "begin": 447600,
+          "end": 447620
+        },
+        {
+          "word": "single",
+          "begin": 447720,
+          "end": 447920
+        },
+        {
+          "word": "compromised",
+          "begin": 448020,
+          "end": 448560
+        },
+        {
+          "word": "password",
+          "begin": 448620,
+          "end": 449100
+        },
+        {
+          "word": "from",
+          "begin": 449160,
+          "end": 449280
+        },
+        {
+          "word": "giving",
+          "begin": 449340,
+          "end": 449560
+        },
+        {
+          "word": "access",
+          "begin": 449660,
+          "end": 450040
+        },
+        {
+          "word": "to",
+          "begin": 450080,
+          "end": 450140
+        },
+        {
+          "word": "everything.",
+          "begin": 450240,
+          "end": 450680
+        }
+      ]
+    },
+    {
+      "blockIndex": 31,
+      "type": "paragraph",
+      "text": "Why would you need multiple passwords for one drive? Imagine a shared server where the OS partition and the data partition need different access controls. Or a laptop where the recovery partition should stay accessible even when the main partition is locked. TCG Opal supports locking ranges — independent LBA regions, each with its own password and lock state.",
+      "beginMs": 451300,
+      "endMs": 472640,
+      "timestamps": [
+        {
+          "word": "Why",
+          "begin": 451300,
+          "end": 451380
+        },
+        {
+          "word": "would",
+          "begin": 451480,
+          "end": 451600
+        },
+        {
+          "word": "you",
+          "begin": 451600,
+          "end": 451660
+        },
+        {
+          "word": "need",
+          "begin": 451720,
+          "end": 451860
+        },
+        {
+          "word": "multiple",
+          "begin": 451920,
+          "end": 452220
+        },
+        {
+          "word": "passwords",
+          "begin": 452320,
+          "end": 452840
+        },
+        {
+          "word": "for",
+          "begin": 452900,
+          "end": 453080
+        },
+        {
+          "word": "one",
+          "begin": 453100,
+          "end": 453220
+        },
+        {
+          "word": "drive?",
+          "begin": 453260,
+          "end": 453620
+        },
+        {
+          "word": "Imagine",
+          "begin": 454220,
+          "end": 454620
+        },
+        {
+          "word": "a",
+          "begin": 454640,
+          "end": 454660
+        },
+        {
+          "word": "shared",
+          "begin": 454780,
+          "end": 455000
+        },
+        {
+          "word": "server",
+          "begin": 455080,
+          "end": 455580
+        },
+        {
+          "word": "where",
+          "begin": 455600,
+          "end": 455620
+        },
+        {
+          "word": "the",
+          "begin": 455700,
+          "end": 455760
+        },
+        {
+          "word": "OS",
+          "begin": 455860,
+          "end": 456100
+        },
+        {
+          "word": "partition",
+          "begin": 456160,
+          "end": 456660
+        },
+        {
+          "word": "and",
+          "begin": 456740,
+          "end": 456840
+        },
+        {
+          "word": "the",
+          "begin": 456840,
+          "end": 456880
+        },
+        {
+          "word": "data",
+          "begin": 456940,
+          "end": 457120
+        },
+        {
+          "word": "partition",
+          "begin": 457180,
+          "end": 457680
+        },
+        {
+          "word": "need",
+          "begin": 457740,
+          "end": 457880
+        },
+        {
+          "word": "different",
+          "begin": 457880,
+          "end": 458220
+        },
+        {
+          "word": "access",
+          "begin": 458300,
+          "end": 458640
+        },
+        {
+          "word": "controls.",
+          "begin": 458680,
+          "end": 459180
+        },
+        {
+          "word": "Or",
+          "begin": 459880,
+          "end": 459980
+        },
+        {
+          "word": "a",
+          "begin": 459980,
+          "end": 460000
+        },
+        {
+          "word": "laptop",
+          "begin": 460080,
+          "end": 460600
+        },
+        {
+          "word": "where",
+          "begin": 460740,
+          "end": 460800
+        },
+        {
+          "word": "the",
+          "begin": 460880,
+          "end": 460940
+        },
+        {
+          "word": "recovery",
+          "begin": 460980,
+          "end": 461400
+        },
+        {
+          "word": "partition",
+          "begin": 461480,
+          "end": 461960
+        },
+        {
+          "word": "should",
+          "begin": 462060,
+          "end": 462180
+        },
+        {
+          "word": "stay",
+          "begin": 462180,
+          "end": 462360
+        },
+        {
+          "word": "accessible",
+          "begin": 462440,
+          "end": 463220
+        },
+        {
+          "word": "even",
+          "begin": 463220,
+          "end": 463400
+        },
+        {
+          "word": "when",
+          "begin": 463440,
+          "end": 463580
+        },
+        {
+          "word": "the",
+          "begin": 463580,
+          "end": 463620
+        },
+        {
+          "word": "main",
+          "begin": 463680,
+          "end": 463860
+        },
+        {
+          "word": "partition",
+          "begin": 463900,
+          "end": 464340
+        },
+        {
+          "word": "is",
+          "begin": 464360,
+          "end": 464460
+        },
+        {
+          "word": "locked.",
+          "begin": 464500,
+          "end": 464820
+        },
+        {
+          "word": "TCG",
+          "begin": 465280,
+          "end": 465720
+        },
+        {
+          "word": "Opal",
+          "begin": 465860,
+          "end": 466300
+        },
+        {
+          "word": "supports",
+          "begin": 466300,
+          "end": 466640
+        },
+        {
+          "word": "locking",
+          "begin": 466720,
+          "end": 467060
+        },
+        {
+          "word": "ranges",
+          "begin": 467120,
+          "end": 467600
+        },
+        {
+          "word": "independent",
+          "begin": 467760,
+          "end": 468320
+        },
+        {
+          "word": "LBA",
+          "begin": 468400,
+          "end": 468860
+        },
+        {
+          "word": "regions,",
+          "begin": 468860,
+          "end": 469340
+        },
+        {
+          "word": "each",
+          "begin": 469560,
+          "end": 469720
+        },
+        {
+          "word": "with",
+          "begin": 469780,
+          "end": 469900
+        },
+        {
+          "word": "its",
+          "begin": 469920,
+          "end": 470040
+        },
+        {
+          "word": "own",
+          "begin": 470140,
+          "end": 470300
+        },
+        {
+          "word": "password",
+          "begin": 470360,
+          "end": 470920
+        },
+        {
+          "word": "and",
+          "begin": 471020,
+          "end": 471120
+        },
+        {
+          "word": "lock",
+          "begin": 471160,
+          "end": 471380
+        },
+        {
+          "word": "state.",
+          "begin": 471380,
+          "end": 471760
+        },
+        {
+          "word": "Setting",
+          "begin": 472420,
+          "end": 472640
+        }
+      ]
+    },
+    {
+      "blockIndex": 32,
+      "type": "paragraph",
+      "text": "Setting up SED encryption from scratch, step by step. Why so many steps? Because security requires explicit intent at every stage — you don't want encryption activating accidentally and locking you out of your own drive.",
+      "beginMs": 472660,
+      "endMs": 485780,
+      "timestamps": [
+        {
+          "word": "up",
+          "begin": 472660,
+          "end": 472780
+        },
+        {
+          "word": "SED",
+          "begin": 472780,
+          "end": 473040
+        },
+        {
+          "word": "encryption",
+          "begin": 473080,
+          "end": 473560
+        },
+        {
+          "word": "from",
+          "begin": 473620,
+          "end": 473820
+        },
+        {
+          "word": "scratch,",
+          "begin": 473860,
+          "end": 474080
+        },
+        {
+          "word": "step",
+          "begin": 474140,
+          "end": 474760
+        },
+        {
+          "word": "by",
+          "begin": 474800,
+          "end": 475020
+        },
+        {
+          "word": "step.",
+          "begin": 475140,
+          "end": 475460
+        },
+        {
+          "word": "Why",
+          "begin": 476120,
+          "end": 476200
+        },
+        {
+          "word": "so",
+          "begin": 476380,
+          "end": 476440
+        },
+        {
+          "word": "many",
+          "begin": 476520,
+          "end": 476640
+        },
+        {
+          "word": "steps?",
+          "begin": 476740,
+          "end": 477160
+        },
+        {
+          "word": "Because",
+          "begin": 477580,
+          "end": 477900
+        },
+        {
+          "word": "security",
+          "begin": 477940,
+          "end": 478360
+        },
+        {
+          "word": "requires",
+          "begin": 478420,
+          "end": 478860
+        },
+        {
+          "word": "explicit",
+          "begin": 478880,
+          "end": 479340
+        },
+        {
+          "word": "intent",
+          "begin": 479360,
+          "end": 479760
+        },
+        {
+          "word": "at",
+          "begin": 479780,
+          "end": 479860
+        },
+        {
+          "word": "every",
+          "begin": 479940,
+          "end": 480120
+        },
+        {
+          "word": "stage",
+          "begin": 480240,
+          "end": 480860
+        },
+        {
+          "word": "you",
+          "begin": 480860,
+          "end": 480900
+        },
+        {
+          "word": "don't",
+          "begin": 480920,
+          "end": 481080
+        },
+        {
+          "word": "want",
+          "begin": 481100,
+          "end": 481240
+        },
+        {
+          "word": "encryption",
+          "begin": 481260,
+          "end": 481700
+        },
+        {
+          "word": "activating",
+          "begin": 481760,
+          "end": 482240
+        },
+        {
+          "word": "accidentally",
+          "begin": 482300,
+          "end": 482880
+        },
+        {
+          "word": "and",
+          "begin": 482900,
+          "end": 483240
+        },
+        {
+          "word": "locking",
+          "begin": 483280,
+          "end": 483580
+        },
+        {
+          "word": "you",
+          "begin": 483580,
+          "end": 483620
+        },
+        {
+          "word": "out",
+          "begin": 483640,
+          "end": 483860
+        },
+        {
+          "word": "of",
+          "begin": 483860,
+          "end": 483940
+        },
+        {
+          "word": "your",
+          "begin": 483960,
+          "end": 484020
+        },
+        {
+          "word": "own",
+          "begin": 484120,
+          "end": 484300
+        },
+        {
+          "word": "drive.",
+          "begin": 484300,
+          "end": 484720
+        },
+        {
+          "word": "Once",
+          "begin": 485460,
+          "end": 485780
+        }
+      ]
+    },
+    {
+      "blockIndex": 33,
+      "type": "paragraph",
+      "text": "Once SED is set up, what happens every time you turn on the machine? Here's the boot sequence:",
+      "beginMs": 485880,
+      "endMs": 490180,
+      "timestamps": [
+        {
+          "word": "SED",
+          "begin": 485880,
+          "end": 486100
+        },
+        {
+          "word": "is",
+          "begin": 486200,
+          "end": 486260
+        },
+        {
+          "word": "set",
+          "begin": 486260,
+          "end": 486480
+        },
+        {
+          "word": "up,",
+          "begin": 486520,
+          "end": 486720
+        },
+        {
+          "word": "what",
+          "begin": 486880,
+          "end": 487000
+        },
+        {
+          "word": "happens",
+          "begin": 487020,
+          "end": 487360
+        },
+        {
+          "word": "every",
+          "begin": 487400,
+          "end": 487540
+        },
+        {
+          "word": "time",
+          "begin": 487620,
+          "end": 487840
+        },
+        {
+          "word": "you",
+          "begin": 487860,
+          "end": 487900
+        },
+        {
+          "word": "turn",
+          "begin": 487980,
+          "end": 488160
+        },
+        {
+          "word": "on",
+          "begin": 488180,
+          "end": 488300
+        },
+        {
+          "word": "the",
+          "begin": 488300,
+          "end": 488340
+        },
+        {
+          "word": "machine?",
+          "begin": 488360,
+          "end": 488780
+        },
+        {
+          "word": "Here's",
+          "begin": 489200,
+          "end": 489400
+        },
+        {
+          "word": "the",
+          "begin": 489400,
+          "end": 489460
+        },
+        {
+          "word": "boot",
+          "begin": 489460,
+          "end": 489760
+        },
+        {
+          "word": "sequence:",
+          "begin": 489820,
+          "end": 490180
+        }
+      ]
+    },
+    {
+      "blockIndex": 34,
+      "type": "paragraph",
+      "text": "Why the reboot? Because the BIOS already cached the PBA boot sector in memory. A warm reboot forces it to re-read the drive, and now it gets the real OS boot sector because MBRDone disabled the shadow.",
+      "beginMs": 489880,
+      "endMs": 502240,
+      "timestamps": [
+        {
+          "word": "Why",
+          "begin": 489880,
+          "end": 490040
+        },
+        {
+          "word": "the",
+          "begin": 490040,
+          "end": 490080
+        },
+        {
+          "word": "reboot?",
+          "begin": 490140,
+          "end": 490680
+        },
+        {
+          "word": "Because",
+          "begin": 490680,
+          "end": 490880
+        },
+        {
+          "word": "the",
+          "begin": 490980,
+          "end": 491240
+        },
+        {
+          "word": "BIOS",
+          "begin": 491800,
+          "end": 492100
+        },
+        {
+          "word": "already",
+          "begin": 492120,
+          "end": 492740
+        },
+        {
+          "word": "cached",
+          "begin": 492780,
+          "end": 492940
+        },
+        {
+          "word": "the",
+          "begin": 492940,
+          "end": 492960
+        },
+        {
+          "word": "PBA",
+          "begin": 493060,
+          "end": 493540
+        },
+        {
+          "word": "boot",
+          "begin": 493600,
+          "end": 493980
+        },
+        {
+          "word": "sector",
+          "begin": 494120,
+          "end": 494560
+        },
+        {
+          "word": "in",
+          "begin": 494580,
+          "end": 494780
+        },
+        {
+          "word": "memory.",
+          "begin": 494820,
+          "end": 495140
+        },
+        {
+          "word": "A",
+          "begin": 494880,
+          "end": 495020
+        },
+        {
+          "word": "warm",
+          "begin": 495080,
+          "end": 495540
+        },
+        {
+          "word": "reboot",
+          "begin": 495640,
+          "end": 496320
+        },
+        {
+          "word": "forces",
+          "begin": 496320,
+          "end": 496620
+        },
+        {
+          "word": "it",
+          "begin": 496640,
+          "end": 496800
+        },
+        {
+          "word": "to",
+          "begin": 496820,
+          "end": 496860
+        },
+        {
+          "word": "re-read",
+          "begin": 496900,
+          "end": 497420
+        },
+        {
+          "word": "the",
+          "begin": 497460,
+          "end": 497520
+        },
+        {
+          "word": "drive,",
+          "begin": 497580,
+          "end": 498000
+        },
+        {
+          "word": "and",
+          "begin": 498100,
+          "end": 498200
+        },
+        {
+          "word": "now",
+          "begin": 498240,
+          "end": 498320
+        },
+        {
+          "word": "it",
+          "begin": 498440,
+          "end": 498480
+        },
+        {
+          "word": "gets",
+          "begin": 498520,
+          "end": 498700
+        },
+        {
+          "word": "the",
+          "begin": 498760,
+          "end": 498800
+        },
+        {
+          "word": "real",
+          "begin": 498880,
+          "end": 499460
+        },
+        {
+          "word": "OS",
+          "begin": 499540,
+          "end": 499780
+        },
+        {
+          "word": "boot",
+          "begin": 499540,
+          "end": 499700
+        },
+        {
+          "word": "sector",
+          "begin": 499760,
+          "end": 500040
+        },
+        {
+          "word": "because",
+          "begin": 500240,
+          "end": 500500
+        },
+        {
+          "word": "MBRDone",
+          "begin": 500600,
+          "end": 501320
+        },
+        {
+          "word": "disabled",
+          "begin": 501360,
+          "end": 501820
+        },
+        {
+          "word": "the",
+          "begin": 501820,
+          "end": 501880
+        },
+        {
+          "word": "shadow.",
+          "begin": 501960,
+          "end": 502240
+        }
+      ]
+    },
+    {
+      "blockIndex": 35,
+      "type": "paragraph",
+      "text": "What if you forget your password? Every TCG Opal drive has a PSID (Physical Security ID) — a long alphanumeric string printed on the drive's physical label. It's like the master key that the building owner keeps in a safe.",
+      "beginMs": 502800,
+      "endMs": 515460,
+      "timestamps": [
+        {
+          "word": "What",
+          "begin": 502800,
+          "end": 502900
+        },
+        {
+          "word": "if",
+          "begin": 502920,
+          "end": 503020
+        },
+        {
+          "word": "you",
+          "begin": 503020,
+          "end": 503080
+        },
+        {
+          "word": "forget",
+          "begin": 503180,
+          "end": 503440
+        },
+        {
+          "word": "your",
+          "begin": 503460,
+          "end": 503520
+        },
+        {
+          "word": "password?",
+          "begin": 503600,
+          "end": 504180
+        },
+        {
+          "word": "Every",
+          "begin": 504180,
+          "end": 504020
+        },
+        {
+          "word": "TCG",
+          "begin": 504160,
+          "end": 504720
+        },
+        {
+          "word": "Opal",
+          "begin": 504840,
+          "end": 505160
+        },
+        {
+          "word": "drive",
+          "begin": 505260,
+          "end": 505820
+        },
+        {
+          "word": "has",
+          "begin": 505840,
+          "end": 506120
+        },
+        {
+          "word": "a",
+          "begin": 506140,
+          "end": 506200
+        },
+        {
+          "word": "PSID",
+          "begin": 506260,
+          "end": 506420
+        },
+        {
+          "word": "(Physical",
+          "begin": 506500,
+          "end": 507280
+        },
+        {
+          "word": "Security",
+          "begin": 507340,
+          "end": 507860
+        },
+        {
+          "word": "ID)",
+          "begin": 507920,
+          "end": 508040
+        },
+        {
+          "word": "a",
+          "begin": 508140,
+          "end": 508800
+        },
+        {
+          "word": "long",
+          "begin": 508880,
+          "end": 509120
+        },
+        {
+          "word": "alphanumeric",
+          "begin": 509200,
+          "end": 509860
+        },
+        {
+          "word": "string",
+          "begin": 509920,
+          "end": 510220
+        },
+        {
+          "word": "printed",
+          "begin": 510320,
+          "end": 510600
+        },
+        {
+          "word": "on",
+          "begin": 510640,
+          "end": 510720
+        },
+        {
+          "word": "the",
+          "begin": 510720,
+          "end": 510760
+        },
+        {
+          "word": "drive's",
+          "begin": 510820,
+          "end": 511160
+        },
+        {
+          "word": "physical",
+          "begin": 511240,
+          "end": 511540
+        },
+        {
+          "word": "label.",
+          "begin": 511620,
+          "end": 512260
+        },
+        {
+          "word": "It's",
+          "begin": 512260,
+          "end": 512360
+        },
+        {
+          "word": "like",
+          "begin": 512380,
+          "end": 512520
+        },
+        {
+          "word": "the",
+          "begin": 512560,
+          "end": 512600
+        },
+        {
+          "word": "master",
+          "begin": 512680,
+          "end": 513040
+        },
+        {
+          "word": "key",
+          "begin": 513140,
+          "end": 513260
+        },
+        {
+          "word": "that",
+          "begin": 513400,
+          "end": 513460
+        },
+        {
+          "word": "the",
+          "begin": 513540,
+          "end": 513580
+        },
+        {
+          "word": "building",
+          "begin": 513680,
+          "end": 514000
+        },
+        {
+          "word": "owner",
+          "begin": 514040,
+          "end": 514200
+        },
+        {
+          "word": "keeps",
+          "begin": 514300,
+          "end": 514560
+        },
+        {
+          "word": "in",
+          "begin": 514600,
+          "end": 514660
+        },
+        {
+          "word": "a",
+          "begin": 514660,
+          "end": 514680
+        },
+        {
+          "word": "safe.",
+          "begin": 514800,
+          "end": 515140
+        },
+        {
+          "word": "Why",
+          "begin": 515380,
+          "end": 515460
+        }
+      ]
+    },
+    {
+      "blockIndex": 36,
+      "type": "paragraph",
+      "text": "Why is it on a physical label? Because it's meant to require physical access. A remote attacker who compromised your OS can't read the PSID — they'd need to physically look at the drive. This is a deliberate security design: the person with physical possession of the hardware has the ultimate override.",
+      "beginMs": 515580,
+      "endMs": 531480,
+      "timestamps": [
+        {
+          "word": "is",
+          "begin": 515580,
+          "end": 515680
+        },
+        {
+          "word": "it",
+          "begin": 515700,
+          "end": 515760
+        },
+        {
+          "word": "on",
+          "begin": 515800,
+          "end": 515880
+        },
+        {
+          "word": "a",
+          "begin": 515900,
+          "end": 515920
+        },
+        {
+          "word": "physical",
+          "begin": 516000,
+          "end": 516300
+        },
+        {
+          "word": "label?",
+          "begin": 516400,
+          "end": 516640
+        },
+        {
+          "word": "Because",
+          "begin": 517080,
+          "end": 517340
+        },
+        {
+          "word": "it's",
+          "begin": 517340,
+          "end": 517460
+        },
+        {
+          "word": "meant",
+          "begin": 517540,
+          "end": 517680
+        },
+        {
+          "word": "to",
+          "begin": 517680,
+          "end": 517800
+        },
+        {
+          "word": "require",
+          "begin": 517820,
+          "end": 518200
+        },
+        {
+          "word": "physical",
+          "begin": 518340,
+          "end": 518620
+        },
+        {
+          "word": "access.",
+          "begin": 518760,
+          "end": 519280
+        },
+        {
+          "word": "A",
+          "begin": 519640,
+          "end": 519660
+        },
+        {
+          "word": "remote",
+          "begin": 519720,
+          "end": 520180
+        },
+        {
+          "word": "attacker",
+          "begin": 520260,
+          "end": 520480
+        },
+        {
+          "word": "who",
+          "begin": 520560,
+          "end": 520620
+        },
+        {
+          "word": "compromised",
+          "begin": 520700,
+          "end": 521280
+        },
+        {
+          "word": "your",
+          "begin": 521280,
+          "end": 521320
+        },
+        {
+          "word": "OS",
+          "begin": 521320,
+          "end": 521820
+        },
+        {
+          "word": "can't",
+          "begin": 521900,
+          "end": 522140
+        },
+        {
+          "word": "read",
+          "begin": 522180,
+          "end": 522320
+        },
+        {
+          "word": "the",
+          "begin": 522340,
+          "end": 522360
+        },
+        {
+          "word": "PSID",
+          "begin": 522360,
+          "end": 522480
+        },
+        {
+          "word": "they'd",
+          "begin": 522540,
+          "end": 522840
+        },
+        {
+          "word": "need",
+          "begin": 522960,
+          "end": 523500
+        },
+        {
+          "word": "to",
+          "begin": 523500,
+          "end": 523560
+        },
+        {
+          "word": "physically",
+          "begin": 523640,
+          "end": 523920
+        },
+        {
+          "word": "look",
+          "begin": 524040,
+          "end": 524200
+        },
+        {
+          "word": "at",
+          "begin": 524220,
+          "end": 524320
+        },
+        {
+          "word": "the",
+          "begin": 524340,
+          "end": 524680
+        },
+        {
+          "word": "drive.",
+          "begin": 524700,
+          "end": 525260
+        },
+        {
+          "word": "This",
+          "begin": 525440,
+          "end": 525600
+        },
+        {
+          "word": "is",
+          "begin": 525620,
+          "end": 525720
+        },
+        {
+          "word": "a",
+          "begin": 525740,
+          "end": 525760
+        },
+        {
+          "word": "deliberate",
+          "begin": 525820,
+          "end": 526280
+        },
+        {
+          "word": "security",
+          "begin": 526320,
+          "end": 526760
+        },
+        {
+          "word": "design:",
+          "begin": 526820,
+          "end": 527260
+        },
+        {
+          "word": "the",
+          "begin": 527560,
+          "end": 527600
+        },
+        {
+          "word": "person",
+          "begin": 527660,
+          "end": 527960
+        },
+        {
+          "word": "with",
+          "begin": 528000,
+          "end": 528100
+        },
+        {
+          "word": "physical",
+          "begin": 528200,
+          "end": 528500
+        },
+        {
+          "word": "possession",
+          "begin": 528600,
+          "end": 529020
+        },
+        {
+          "word": "of",
+          "begin": 529040,
+          "end": 529120
+        },
+        {
+          "word": "the",
+          "begin": 529140,
+          "end": 529180
+        },
+        {
+          "word": "hardware",
+          "begin": 529260,
+          "end": 529700
+        },
+        {
+          "word": "has",
+          "begin": 529700,
+          "end": 529820
+        },
+        {
+          "word": "the",
+          "begin": 529820,
+          "end": 529920
+        },
+        {
+          "word": "ultimate",
+          "begin": 530040,
+          "end": 530400
+        },
+        {
+          "word": "override.",
+          "begin": 530480,
+          "end": 531060
+        },
+        {
+          "word": "What",
+          "begin": 531360,
+          "end": 531480
+        }
+      ]
+    },
+    {
+      "blockIndex": 37,
+      "type": "paragraph",
+      "text": "What exactly happens during PSID revert? The drive generates a new DEK (data encryption key). Since all data was encrypted with the old DEK, it's now permanently unreadable. All passwords are cleared. All locking ranges are reset. The drive returns to factory state — ready for a new --initialSetup.",
+      "beginMs": 531500,
+      "endMs": 550200,
+      "timestamps": [
+        {
+          "word": "exactly",
+          "begin": 531500,
+          "end": 531940
+        },
+        {
+          "word": "happens",
+          "begin": 532040,
+          "end": 532480
+        },
+        {
+          "word": "during",
+          "begin": 532520,
+          "end": 533280
+        },
+        {
+          "word": "PSID",
+          "begin": 533420,
+          "end": 533500
+        },
+        {
+          "word": "revert?",
+          "begin": 533640,
+          "end": 534100
+        },
+        {
+          "word": "The",
+          "begin": 534420,
+          "end": 534480
+        },
+        {
+          "word": "drive",
+          "begin": 534540,
+          "end": 534840
+        },
+        {
+          "word": "generates",
+          "begin": 534900,
+          "end": 535340
+        },
+        {
+          "word": "a",
+          "begin": 535520,
+          "end": 535600
+        },
+        {
+          "word": "new",
+          "begin": 535520,
+          "end": 535600
+        },
+        {
+          "word": "DEK",
+          "begin": 535800,
+          "end": 536460
+        },
+        {
+          "word": "(data",
+          "begin": 536460,
+          "end": 536660
+        },
+        {
+          "word": "encryption",
+          "begin": 536740,
+          "end": 537220
+        },
+        {
+          "word": "key).",
+          "begin": 537300,
+          "end": 537420
+        },
+        {
+          "word": "Since",
+          "begin": 537820,
+          "end": 538000
+        },
+        {
+          "word": "all",
+          "begin": 538060,
+          "end": 538180
+        },
+        {
+          "word": "data",
+          "begin": 538260,
+          "end": 538480
+        },
+        {
+          "word": "was",
+          "begin": 538540,
+          "end": 538660
+        },
+        {
+          "word": "encrypted",
+          "begin": 538680,
+          "end": 539140
+        },
+        {
+          "word": "with",
+          "begin": 539160,
+          "end": 539300
+        },
+        {
+          "word": "the",
+          "begin": 539300,
+          "end": 539340
+        },
+        {
+          "word": "old",
+          "begin": 539460,
+          "end": 539600
+        },
+        {
+          "word": "DEK,",
+          "begin": 539600,
+          "end": 540040
+        },
+        {
+          "word": "it's",
+          "begin": 540100,
+          "end": 540660
+        },
+        {
+          "word": "now",
+          "begin": 540660,
+          "end": 540820
+        },
+        {
+          "word": "permanently",
+          "begin": 540960,
+          "end": 541400
+        },
+        {
+          "word": "unreadable.",
+          "begin": 541400,
+          "end": 542020
+        },
+        {
+          "word": "All",
+          "begin": 542420,
+          "end": 542540
+        },
+        {
+          "word": "passwords",
+          "begin": 542600,
+          "end": 543080
+        },
+        {
+          "word": "are",
+          "begin": 543120,
+          "end": 543240
+        },
+        {
+          "word": "cleared.",
+          "begin": 543240,
+          "end": 543600
+        },
+        {
+          "word": "All",
+          "begin": 543960,
+          "end": 544080
+        },
+        {
+          "word": "locking",
+          "begin": 544160,
+          "end": 544500
+        },
+        {
+          "word": "ranges",
+          "begin": 544540,
+          "end": 544880
+        },
+        {
+          "word": "are",
+          "begin": 544920,
+          "end": 544940
+        },
+        {
+          "word": "reset.",
+          "begin": 545040,
+          "end": 545520
+        },
+        {
+          "word": "The",
+          "begin": 545920,
+          "end": 545960
+        },
+        {
+          "word": "drive",
+          "begin": 546040,
+          "end": 546360
+        },
+        {
+          "word": "returns",
+          "begin": 546360,
+          "end": 546740
+        },
+        {
+          "word": "to",
+          "begin": 546780,
+          "end": 546840
+        },
+        {
+          "word": "factory",
+          "begin": 546940,
+          "end": 547280
+        },
+        {
+          "word": "state",
+          "begin": 547400,
+          "end": 547720
+        },
+        {
+          "word": "ready",
+          "begin": 548020,
+          "end": 548180
+        },
+        {
+          "word": "for",
+          "begin": 548280,
+          "end": 548380
+        },
+        {
+          "word": "a",
+          "begin": 548400,
+          "end": 548420
+        },
+        {
+          "word": "new",
+          "begin": 548540,
+          "end": 548620
+        },
+        {
+          "word": "--initialSetup.",
+          "begin": 548780,
+          "end": 549600
+        },
+        {
+          "word": "SED",
+          "begin": 549780,
+          "end": 550200
+        }
+      ]
+    },
+    {
+      "blockIndex": 38,
+      "type": "info",
+      "text": "SED vs software encryption — a tradeoff: SED is faster (zero CPU overhead) and simpler, but you're trusting the drive's firmware implementation. Security researchers have found vulnerabilities in some SED implementations (notably Samsung and Crucial drives in 2018 where the DEK wasn't actually protected by the password). Many security-conscious environments use both — software encryption (LUKS/BitLocker) layered on top of hardware encryption — so a flaw in either layer doesn't expose data. Why not just use software encryption alone? Because SED gives you instant crypto erase capability that software alone can't match — and for drive decommissioning, that's invaluable.",
+      "beginMs": 550520,
+      "endMs": 595480,
+      "timestamps": [
+        {
+          "word": "vs",
+          "begin": 550520,
+          "end": 550820
+        },
+        {
+          "word": "software",
+          "begin": 550880,
+          "end": 551260
+        },
+        {
+          "word": "encryption",
+          "begin": 551260,
+          "end": 551760
+        },
+        {
+          "word": "a",
+          "begin": 551760,
+          "end": 551900
+        },
+        {
+          "word": "tradeoff:",
+          "begin": 551960,
+          "end": 552420
+        },
+        {
+          "word": "SED",
+          "begin": 552640,
+          "end": 553040
+        },
+        {
+          "word": "is",
+          "begin": 553280,
+          "end": 553380
+        },
+        {
+          "word": "faster",
+          "begin": 553380,
+          "end": 553720
+        },
+        {
+          "word": "(zero",
+          "begin": 553760,
+          "end": 554140
+        },
+        {
+          "word": "CPU",
+          "begin": 554300,
+          "end": 554660
+        },
+        {
+          "word": "overhead)",
+          "begin": 554680,
+          "end": 555240
+        },
+        {
+          "word": "and",
+          "begin": 555320,
+          "end": 555420
+        },
+        {
+          "word": "simpler,",
+          "begin": 555500,
+          "end": 555800
+        },
+        {
+          "word": "but",
+          "begin": 556060,
+          "end": 556180
+        },
+        {
+          "word": "you're",
+          "begin": 556180,
+          "end": 556240
+        },
+        {
+          "word": "trusting",
+          "begin": 556340,
+          "end": 556740
+        },
+        {
+          "word": "the",
+          "begin": 556760,
+          "end": 556800
+        },
+        {
+          "word": "drive's",
+          "begin": 556860,
+          "end": 557180
+        },
+        {
+          "word": "firmware",
+          "begin": 557260,
+          "end": 557520
+        },
+        {
+          "word": "implementation.",
+          "begin": 557640,
+          "end": 558440
+        },
+        {
+          "word": "Security",
+          "begin": 559240,
+          "end": 559640
+        },
+        {
+          "word": "researchers",
+          "begin": 559720,
+          "end": 560280
+        },
+        {
+          "word": "have",
+          "begin": 560280,
+          "end": 560360
+        },
+        {
+          "word": "found",
+          "begin": 560360,
+          "end": 560640
+        },
+        {
+          "word": "vulnerabilities",
+          "begin": 560700,
+          "end": 561420
+        },
+        {
+          "word": "in",
+          "begin": 561480,
+          "end": 561540
+        },
+        {
+          "word": "some",
+          "begin": 561540,
+          "end": 562000
+        },
+        {
+          "word": "SED",
+          "begin": 562100,
+          "end": 562380
+        },
+        {
+          "word": "implementations",
+          "begin": 562700,
+          "end": 563500
+        },
+        {
+          "word": "(notably",
+          "begin": 563560,
+          "end": 563880
+        },
+        {
+          "word": "Samsung",
+          "begin": 564020,
+          "end": 564560
+        },
+        {
+          "word": "and",
+          "begin": 564680,
+          "end": 564820
+        },
+        {
+          "word": "Crucial",
+          "begin": 564820,
+          "end": 565100
+        },
+        {
+          "word": "drives",
+          "begin": 565200,
+          "end": 565560
+        },
+        {
+          "word": "in",
+          "begin": 565640,
+          "end": 565720
+        },
+        {
+          "word": "2018",
+          "begin": 565760,
+          "end": 566520
+        },
+        {
+          "word": "where",
+          "begin": 566600,
+          "end": 566760
+        },
+        {
+          "word": "the",
+          "begin": 566760,
+          "end": 566800
+        },
+        {
+          "word": "DEK",
+          "begin": 566860,
+          "end": 567180
+        },
+        {
+          "word": "wasn't",
+          "begin": 567260,
+          "end": 567580
+        },
+        {
+          "word": "actually",
+          "begin": 567600,
+          "end": 568060
+        },
+        {
+          "word": "protected",
+          "begin": 568160,
+          "end": 568600
+        },
+        {
+          "word": "by",
+          "begin": 568640,
+          "end": 568720
+        },
+        {
+          "word": "the",
+          "begin": 568800,
+          "end": 568840
+        },
+        {
+          "word": "password).",
+          "begin": 568900,
+          "end": 569420
+        },
+        {
+          "word": "Many",
+          "begin": 570100,
+          "end": 570280
+        },
+        {
+          "word": "security-conscious",
+          "begin": 570380,
+          "end": 571240
+        },
+        {
+          "word": "environments",
+          "begin": 571260,
+          "end": 571800
+        },
+        {
+          "word": "use",
+          "begin": 571860,
+          "end": 572020
+        },
+        {
+          "word": "both",
+          "begin": 572100,
+          "end": 572420
+        },
+        {
+          "word": "software",
+          "begin": 572800,
+          "end": 573180
+        },
+        {
+          "word": "encryption",
+          "begin": 573180,
+          "end": 573660
+        },
+        {
+          "word": "(LUKS/BitLocker)",
+          "begin": 573800,
+          "end": 574620
+        },
+        {
+          "word": "layered",
+          "begin": 574720,
+          "end": 575540
+        },
+        {
+          "word": "on",
+          "begin": 575580,
+          "end": 575820
+        },
+        {
+          "word": "top",
+          "begin": 575820,
+          "end": 576060
+        },
+        {
+          "word": "of",
+          "begin": 576080,
+          "end": 576100
+        },
+        {
+          "word": "hardware",
+          "begin": 576200,
+          "end": 577000
+        },
+        {
+          "word": "encryption",
+          "begin": 577040,
+          "end": 577740
+        },
+        {
+          "word": "so",
+          "begin": 577760,
+          "end": 577840
+        },
+        {
+          "word": "a",
+          "begin": 577900,
+          "end": 578000
+        },
+        {
+          "word": "flaw",
+          "begin": 578040,
+          "end": 578140
+        },
+        {
+          "word": "in",
+          "begin": 578220,
+          "end": 578300
+        },
+        {
+          "word": "either",
+          "begin": 578340,
+          "end": 579020
+        },
+        {
+          "word": "layer",
+          "begin": 579140,
+          "end": 579520
+        },
+        {
+          "word": "doesn't",
+          "begin": 579540,
+          "end": 580240
+        },
+        {
+          "word": "expose",
+          "begin": 580260,
+          "end": 580600
+        },
+        {
+          "word": "data.",
+          "begin": 580640,
+          "end": 581160
+        },
+        {
+          "word": "Why",
+          "begin": 582159,
+          "end": 582240
+        },
+        {
+          "word": "not",
+          "begin": 582320,
+          "end": 582460
+        },
+        {
+          "word": "just",
+          "begin": 582460,
+          "end": 582680
+        },
+        {
+          "word": "use",
+          "begin": 582720,
+          "end": 582880
+        },
+        {
+          "word": "software",
+          "begin": 582940,
+          "end": 583360
+        },
+        {
+          "word": "encryption",
+          "begin": 583380,
+          "end": 583840
+        },
+        {
+          "word": "alone?",
+          "begin": 583880,
+          "end": 584240
+        },
+        {
+          "word": "Because",
+          "begin": 584920,
+          "end": 585200
+        },
+        {
+          "word": "SED",
+          "begin": 585320,
+          "end": 585500
+        },
+        {
+          "word": "gives",
+          "begin": 585540,
+          "end": 585700
+        },
+        {
+          "word": "you",
+          "begin": 585740,
+          "end": 585900
+        },
+        {
+          "word": "instant",
+          "begin": 585920,
+          "end": 586500
+        },
+        {
+          "word": "crypto",
+          "begin": 586540,
+          "end": 586820
+        },
+        {
+          "word": "erase",
+          "begin": 586840,
+          "end": 587480
+        },
+        {
+          "word": "capability",
+          "begin": 587480,
+          "end": 588040
+        },
+        {
+          "word": "that",
+          "begin": 588080,
+          "end": 588680
+        },
+        {
+          "word": "software",
+          "begin": 588760,
+          "end": 589180
+        },
+        {
+          "word": "alone",
+          "begin": 589200,
+          "end": 589480
+        },
+        {
+          "word": "can't",
+          "begin": 589560,
+          "end": 589800
+        },
+        {
+          "word": "match",
+          "begin": 589840,
+          "end": 589920
+        },
+        {
+          "word": "and",
+          "begin": 590600,
+          "end": 590680
+        },
+        {
+          "word": "for",
+          "begin": 590720,
+          "end": 590880
+        },
+        {
+          "word": "drive",
+          "begin": 590880,
+          "end": 591100
+        },
+        {
+          "word": "decommissioning,",
+          "begin": 591140,
+          "end": 591800
+        },
+        {
+          "word": "that's",
+          "begin": 592080,
+          "end": 592300
+        },
+        {
+          "word": "invaluable.",
+          "begin": 592320,
+          "end": 592820
+        },
+        {
+          "word": "Knowledge",
+          "begin": 593620,
+          "end": 593940
+        },
+        {
+          "word": "check:",
+          "begin": 594020,
+          "end": 594800
+        },
+        {
+          "word": "A",
+          "begin": 594840,
+          "end": 594920
+        },
+        {
+          "word": "self-encrypting",
+          "begin": 594840,
+          "end": 595480
+        }
+      ]
+    },
+    {
+      "blockIndex": 39,
+      "type": "reveal",
+      "text": "Knowledge check: A self-encrypting drive (SED) with TCG Opal can 'erase' a 4 TB drive in under one second via crypto erase. How is this possible when physically erasing 4 TB of NAND cells would take minutes? Walk through the key hierarchy and explain exactly what happens during a crypto erase. The answer: The SED encrypts ALL data written to NAND using a Data Encryption Key (DEK) — a randomly generated AES-256 key stored securely in the controller chip. The DEK itself is encrypted by a Key Encryption Key (KEK) derived from your password. During a crypto erase, the controller doesn't touch the NAND at all. It simply generates a new random DEK and discards the old one. Since every bit on the NAND was encrypted with the old DEK, and that key no longer exists anywhere, the encrypted data is now indistinguishable from random noise — cryptographically unrecoverable even with direct NAND chip access. This takes microseconds because it only involves destroying one 256-bit key, regardless of drive capacity. The two-level key hierarchy (DEK + KEK) also explains why you can change your password without re-encrypting the entire drive — only the KEK wrapping needs to be updated, while the DEK stays the same.",
+      "beginMs": 595520,
+      "endMs": 673460,
+      "timestamps": [
+        {
+          "word": "drive",
+          "begin": 595520,
+          "end": 595840
+        },
+        {
+          "word": "(SED)",
+          "begin": 595960,
+          "end": 596380
+        },
+        {
+          "word": "with",
+          "begin": 596620,
+          "end": 596760
+        },
+        {
+          "word": "TCG",
+          "begin": 596840,
+          "end": 597340
+        },
+        {
+          "word": "Opal",
+          "begin": 597500,
+          "end": 597700
+        },
+        {
+          "word": "can",
+          "begin": 598140,
+          "end": 598280
+        },
+        {
+          "word": "'erase'",
+          "begin": 598300,
+          "end": 598640
+        },
+        {
+          "word": "a",
+          "begin": 598740,
+          "end": 598760
+        },
+        {
+          "word": "4",
+          "begin": 598900,
+          "end": 598980
+        },
+        {
+          "word": "TB",
+          "begin": 599140,
+          "end": 599400
+        },
+        {
+          "word": "drive",
+          "begin": 599500,
+          "end": 599880
+        },
+        {
+          "word": "in",
+          "begin": 599960,
+          "end": 600040
+        },
+        {
+          "word": "under",
+          "begin": 600140,
+          "end": 600280
+        },
+        {
+          "word": "one",
+          "begin": 600380,
+          "end": 600540
+        },
+        {
+          "word": "second",
+          "begin": 600660,
+          "end": 600980
+        },
+        {
+          "word": "via",
+          "begin": 600980,
+          "end": 601320
+        },
+        {
+          "word": "crypto",
+          "begin": 601400,
+          "end": 601880
+        },
+        {
+          "word": "erase.",
+          "begin": 601920,
+          "end": 602200
+        },
+        {
+          "word": "How",
+          "begin": 603060,
+          "end": 603160
+        },
+        {
+          "word": "is",
+          "begin": 603280,
+          "end": 603360
+        },
+        {
+          "word": "this",
+          "begin": 603400,
+          "end": 603460
+        },
+        {
+          "word": "possible",
+          "begin": 603600,
+          "end": 604460
+        },
+        {
+          "word": "when",
+          "begin": 604460,
+          "end": 604560
+        },
+        {
+          "word": "physically",
+          "begin": 604660,
+          "end": 604980
+        },
+        {
+          "word": "erasing",
+          "begin": 604980,
+          "end": 605520
+        },
+        {
+          "word": "4",
+          "begin": 605660,
+          "end": 605740
+        },
+        {
+          "word": "TB",
+          "begin": 605920,
+          "end": 606520
+        },
+        {
+          "word": "of",
+          "begin": 606520,
+          "end": 607140
+        },
+        {
+          "word": "NAND",
+          "begin": 607300,
+          "end": 607600
+        },
+        {
+          "word": "would",
+          "begin": 607640,
+          "end": 607740
+        },
+        {
+          "word": "take",
+          "begin": 607780,
+          "end": 607980
+        },
+        {
+          "word": "minutes?",
+          "begin": 608040,
+          "end": 608420
+        },
+        {
+          "word": "Walk",
+          "begin": 609040,
+          "end": 609280
+        },
+        {
+          "word": "through",
+          "begin": 609320,
+          "end": 609400
+        },
+        {
+          "word": "the",
+          "begin": 609460,
+          "end": 609520
+        },
+        {
+          "word": "key",
+          "begin": 609600,
+          "end": 609720
+        },
+        {
+          "word": "hierarchy",
+          "begin": 609840,
+          "end": 610280
+        },
+        {
+          "word": "and",
+          "begin": 610460,
+          "end": 610540
+        },
+        {
+          "word": "explain",
+          "begin": 610540,
+          "end": 610940
+        },
+        {
+          "word": "exactly",
+          "begin": 610960,
+          "end": 611380
+        },
+        {
+          "word": "what",
+          "begin": 611380,
+          "end": 611480
+        },
+        {
+          "word": "happens",
+          "begin": 611480,
+          "end": 612060
+        },
+        {
+          "word": "during",
+          "begin": 612120,
+          "end": 612320
+        },
+        {
+          "word": "a",
+          "begin": 612160,
+          "end": 612240
+        },
+        {
+          "word": "crypto",
+          "begin": 612240,
+          "end": 612540
+        },
+        {
+          "word": "erase.",
+          "begin": 612600,
+          "end": 613240
+        },
+        {
+          "word": "The",
+          "begin": 614120,
+          "end": 614179
+        },
+        {
+          "word": "answer:",
+          "begin": 614319,
+          "end": 615060
+        },
+        {
+          "word": "The",
+          "begin": 615060,
+          "end": 615220
+        },
+        {
+          "word": "SED",
+          "begin": 615360,
+          "end": 615620
+        },
+        {
+          "word": "encrypts",
+          "begin": 615820,
+          "end": 616260
+        },
+        {
+          "word": "ALL",
+          "begin": 616260,
+          "end": 615960
+        },
+        {
+          "word": "data",
+          "begin": 615960,
+          "end": 616260
+        },
+        {
+          "word": "written",
+          "begin": 616260,
+          "end": 616560
+        },
+        {
+          "word": "to",
+          "begin": 616640,
+          "end": 616720
+        },
+        {
+          "word": "NAND",
+          "begin": 616820,
+          "end": 617420
+        },
+        {
+          "word": "using",
+          "begin": 617420,
+          "end": 617500
+        },
+        {
+          "word": "a",
+          "begin": 617540,
+          "end": 617600
+        },
+        {
+          "word": "Data",
+          "begin": 617540,
+          "end": 617780
+        },
+        {
+          "word": "Encryption",
+          "begin": 617960,
+          "end": 618400
+        },
+        {
+          "word": "Key",
+          "begin": 618480,
+          "end": 618560
+        },
+        {
+          "word": "(DEK)",
+          "begin": 618640,
+          "end": 618680
+        },
+        {
+          "word": "a",
+          "begin": 618740,
+          "end": 618880
+        },
+        {
+          "word": "randomly",
+          "begin": 618900,
+          "end": 619420
+        },
+        {
+          "word": "generated",
+          "begin": 619560,
+          "end": 621180
+        },
+        {
+          "word": "AES-256",
+          "begin": 621180,
+          "end": 623180
+        },
+        {
+          "word": "key",
+          "begin": 623180,
+          "end": 623220
+        },
+        {
+          "word": "stored",
+          "begin": 623280,
+          "end": 623580
+        },
+        {
+          "word": "securely",
+          "begin": 623700,
+          "end": 624380
+        },
+        {
+          "word": "in",
+          "begin": 624420,
+          "end": 624580
+        },
+        {
+          "word": "the",
+          "begin": 624580,
+          "end": 624720
+        },
+        {
+          "word": "controller",
+          "begin": 624800,
+          "end": 625580
+        },
+        {
+          "word": "chip.",
+          "begin": 625620,
+          "end": 626240
+        },
+        {
+          "word": "The",
+          "begin": 626840,
+          "end": 626880
+        },
+        {
+          "word": "DEK",
+          "begin": 626960,
+          "end": 627400
+        },
+        {
+          "word": "itself",
+          "begin": 627500,
+          "end": 627940
+        },
+        {
+          "word": "is",
+          "begin": 628000,
+          "end": 628100
+        },
+        {
+          "word": "encrypted",
+          "begin": 628120,
+          "end": 628600
+        },
+        {
+          "word": "by",
+          "begin": 628660,
+          "end": 628740
+        },
+        {
+          "word": "a",
+          "begin": 628840,
+          "end": 628860
+        },
+        {
+          "word": "Key",
+          "begin": 628960,
+          "end": 629100
+        },
+        {
+          "word": "Encryption",
+          "begin": 629320,
+          "end": 629860
+        },
+        {
+          "word": "Key",
+          "begin": 629960,
+          "end": 630080
+        },
+        {
+          "word": "(KEK)",
+          "begin": 630620,
+          "end": 631300
+        },
+        {
+          "word": "derived",
+          "begin": 631600,
+          "end": 632000
+        },
+        {
+          "word": "from",
+          "begin": 632040,
+          "end": 632180
+        },
+        {
+          "word": "your",
+          "begin": 632180,
+          "end": 632240
+        },
+        {
+          "word": "password.",
+          "begin": 632320,
+          "end": 632880
+        },
+        {
+          "word": "During",
+          "begin": 633680,
+          "end": 633920
+        },
+        {
+          "word": "a",
+          "begin": 633940,
+          "end": 633960
+        },
+        {
+          "word": "crypto",
+          "begin": 634040,
+          "end": 634320
+        },
+        {
+          "word": "erase,",
+          "begin": 634420,
+          "end": 634860
+        },
+        {
+          "word": "the",
+          "begin": 635140,
+          "end": 635180
+        },
+        {
+          "word": "controller",
+          "begin": 635240,
+          "end": 635680
+        },
+        {
+          "word": "doesn't",
+          "begin": 635780,
+          "end": 636040
+        },
+        {
+          "word": "touch",
+          "begin": 636040,
+          "end": 636320
+        },
+        {
+          "word": "the",
+          "begin": 636400,
+          "end": 636440
+        },
+        {
+          "word": "NAND",
+          "begin": 636520,
+          "end": 636780
+        },
+        {
+          "word": "at",
+          "begin": 636820,
+          "end": 636900
+        },
+        {
+          "word": "all.",
+          "begin": 636940,
+          "end": 637140
+        },
+        {
+          "word": "It",
+          "begin": 637980,
+          "end": 638080
+        },
+        {
+          "word": "simply",
+          "begin": 638140,
+          "end": 638400
+        },
+        {
+          "word": "generates",
+          "begin": 638500,
+          "end": 638960
+        },
+        {
+          "word": "a",
+          "begin": 639000,
+          "end": 639180
+        },
+        {
+          "word": "new",
+          "begin": 639340,
+          "end": 639420
+        },
+        {
+          "word": "random",
+          "begin": 639340,
+          "end": 639660
+        },
+        {
+          "word": "DEK",
+          "begin": 639740,
+          "end": 640120
+        },
+        {
+          "word": "and",
+          "begin": 640200,
+          "end": 640800
+        },
+        {
+          "word": "discards",
+          "begin": 640840,
+          "end": 641320
+        },
+        {
+          "word": "the",
+          "begin": 641360,
+          "end": 641400
+        },
+        {
+          "word": "old",
+          "begin": 641500,
+          "end": 641660
+        },
+        {
+          "word": "one.",
+          "begin": 641720,
+          "end": 641920
+        },
+        {
+          "word": "Since",
+          "begin": 642560,
+          "end": 642760
+        },
+        {
+          "word": "every",
+          "begin": 642840,
+          "end": 643000
+        },
+        {
+          "word": "bit",
+          "begin": 643100,
+          "end": 643220
+        },
+        {
+          "word": "on",
+          "begin": 643240,
+          "end": 643340
+        },
+        {
+          "word": "the",
+          "begin": 643340,
+          "end": 643380
+        },
+        {
+          "word": "NAND",
+          "begin": 643440,
+          "end": 643700
+        },
+        {
+          "word": "was",
+          "begin": 643740,
+          "end": 643880
+        },
+        {
+          "word": "encrypted",
+          "begin": 643900,
+          "end": 644320
+        },
+        {
+          "word": "with",
+          "begin": 644340,
+          "end": 644420
+        },
+        {
+          "word": "the",
+          "begin": 644460,
+          "end": 644520
+        },
+        {
+          "word": "old",
+          "begin": 644640,
+          "end": 644820
+        },
+        {
+          "word": "DEK,",
+          "begin": 644880,
+          "end": 645300
+        },
+        {
+          "word": "and",
+          "begin": 645640,
+          "end": 645740
+        },
+        {
+          "word": "that",
+          "begin": 645760,
+          "end": 645940
+        },
+        {
+          "word": "key",
+          "begin": 646000,
+          "end": 646120
+        },
+        {
+          "word": "no",
+          "begin": 646280,
+          "end": 646500
+        },
+        {
+          "word": "longer",
+          "begin": 646500,
+          "end": 646740
+        },
+        {
+          "word": "exists",
+          "begin": 646800,
+          "end": 647260
+        },
+        {
+          "word": "anywhere,",
+          "begin": 647360,
+          "end": 648140
+        },
+        {
+          "word": "the",
+          "begin": 648140,
+          "end": 648220
+        },
+        {
+          "word": "encrypted",
+          "begin": 648240,
+          "end": 648500
+        },
+        {
+          "word": "data",
+          "begin": 648500,
+          "end": 648840
+        },
+        {
+          "word": "is",
+          "begin": 648960,
+          "end": 649060
+        },
+        {
+          "word": "now",
+          "begin": 649060,
+          "end": 649380
+        },
+        {
+          "word": "indistinguishable",
+          "begin": 649420,
+          "end": 650120
+        },
+        {
+          "word": "from",
+          "begin": 650260,
+          "end": 650400
+        },
+        {
+          "word": "random",
+          "begin": 650460,
+          "end": 650760
+        },
+        {
+          "word": "noise",
+          "begin": 650820,
+          "end": 651220
+        },
+        {
+          "word": "cryptographically",
+          "begin": 651480,
+          "end": 652160
+        },
+        {
+          "word": "unrecoverable",
+          "begin": 652280,
+          "end": 652920
+        },
+        {
+          "word": "even",
+          "begin": 653120,
+          "end": 653340
+        },
+        {
+          "word": "with",
+          "begin": 653360,
+          "end": 653480
+        },
+        {
+          "word": "direct",
+          "begin": 653540,
+          "end": 653860
+        },
+        {
+          "word": "NAND",
+          "begin": 653960,
+          "end": 654160
+        },
+        {
+          "word": "chip",
+          "begin": 654160,
+          "end": 654480
+        },
+        {
+          "word": "access.",
+          "begin": 654520,
+          "end": 655020
+        },
+        {
+          "word": "This",
+          "begin": 655340,
+          "end": 655520
+        },
+        {
+          "word": "takes",
+          "begin": 655580,
+          "end": 655800
+        },
+        {
+          "word": "microseconds",
+          "begin": 655880,
+          "end": 656560
+        },
+        {
+          "word": "because",
+          "begin": 656620,
+          "end": 656860
+        },
+        {
+          "word": "it",
+          "begin": 656860,
+          "end": 656940
+        },
+        {
+          "word": "only",
+          "begin": 657020,
+          "end": 657200
+        },
+        {
+          "word": "involves",
+          "begin": 657240,
+          "end": 657600
+        },
+        {
+          "word": "destroying",
+          "begin": 657660,
+          "end": 658080
+        },
+        {
+          "word": "one",
+          "begin": 658160,
+          "end": 658340
+        },
+        {
+          "word": "256-bit",
+          "begin": 658420,
+          "end": 659520
+        },
+        {
+          "word": "key,",
+          "begin": 659660,
+          "end": 659780
+        },
+        {
+          "word": "regardless",
+          "begin": 660220,
+          "end": 660700
+        },
+        {
+          "word": "of",
+          "begin": 660740,
+          "end": 660800
+        },
+        {
+          "word": "drive",
+          "begin": 660840,
+          "end": 661060
+        },
+        {
+          "word": "capacity.",
+          "begin": 661100,
+          "end": 661560
+        },
+        {
+          "word": "The",
+          "begin": 661760,
+          "end": 661800
+        },
+        {
+          "word": "two-level",
+          "begin": 661880,
+          "end": 662160
+        },
+        {
+          "word": "key",
+          "begin": 662200,
+          "end": 662260
+        },
+        {
+          "word": "hierarchy",
+          "begin": 662360,
+          "end": 663040
+        },
+        {
+          "word": "(DEK",
+          "begin": 663160,
+          "end": 663660
+        },
+        {
+          "word": "+",
+          "begin": 663820,
+          "end": 664360
+        },
+        {
+          "word": "KEK)",
+          "begin": 664460,
+          "end": 664880
+        },
+        {
+          "word": "also",
+          "begin": 664900,
+          "end": 665080
+        },
+        {
+          "word": "explains",
+          "begin": 665160,
+          "end": 665600
+        },
+        {
+          "word": "why",
+          "begin": 665620,
+          "end": 665760
+        },
+        {
+          "word": "you",
+          "begin": 665760,
+          "end": 665800
+        },
+        {
+          "word": "can",
+          "begin": 665860,
+          "end": 665920
+        },
+        {
+          "word": "change",
+          "begin": 665940,
+          "end": 666300
+        },
+        {
+          "word": "your",
+          "begin": 666320,
+          "end": 666340
+        },
+        {
+          "word": "password",
+          "begin": 666420,
+          "end": 666900
+        },
+        {
+          "word": "without",
+          "begin": 666940,
+          "end": 667260
+        },
+        {
+          "word": "re-encrypting",
+          "begin": 667280,
+          "end": 667800
+        },
+        {
+          "word": "the",
+          "begin": 667840,
+          "end": 667900
+        },
+        {
+          "word": "entire",
+          "begin": 667960,
+          "end": 668420
+        },
+        {
+          "word": "drive",
+          "begin": 668420,
+          "end": 668380
+        },
+        {
+          "word": "only",
+          "begin": 668400,
+          "end": 669140
+        },
+        {
+          "word": "the",
+          "begin": 669140,
+          "end": 669720
+        },
+        {
+          "word": "KEK",
+          "begin": 669840,
+          "end": 669940
+        },
+        {
+          "word": "wrapping",
+          "begin": 670080,
+          "end": 670420
+        },
+        {
+          "word": "needs",
+          "begin": 670460,
+          "end": 670640
+        },
+        {
+          "word": "to",
+          "begin": 670680,
+          "end": 670720
+        },
+        {
+          "word": "be",
+          "begin": 670760,
+          "end": 670820
+        },
+        {
+          "word": "updated,",
+          "begin": 670920,
+          "end": 671420
+        },
+        {
+          "word": "while",
+          "begin": 671720,
+          "end": 671840
+        },
+        {
+          "word": "the",
+          "begin": 671880,
+          "end": 671940
+        },
+        {
+          "word": "DEK",
+          "begin": 672000,
+          "end": 672500
+        },
+        {
+          "word": "stays",
+          "begin": 672680,
+          "end": 672940
+        },
+        {
+          "word": "the",
+          "begin": 672980,
+          "end": 673020
+        },
+        {
+          "word": "same.",
+          "begin": 673120,
+          "end": 673460
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

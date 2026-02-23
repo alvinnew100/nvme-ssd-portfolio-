@@ -1,0 +1,2121 @@
+{
+  "sectionId": "sec-ssd",
+  "audioFile": "/audio/sections/sec-ssd.mp3",
+  "totalDurationMs": 157960,
+  "fileSizeBytes": 2527872,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "Inside the SSD — The Complete Picture",
+      "beginMs": 40,
+      "endMs": 2560,
+      "timestamps": [
+        {
+          "word": "Inside",
+          "begin": 40,
+          "end": 420
+        },
+        {
+          "word": "the",
+          "begin": 440,
+          "end": 500
+        },
+        {
+          "word": "SSD",
+          "begin": 580,
+          "end": 1040
+        },
+        {
+          "word": "The",
+          "begin": 1320,
+          "end": 1360
+        },
+        {
+          "word": "Complete",
+          "begin": 1420,
+          "end": 1760
+        },
+        {
+          "word": "Picture",
+          "begin": 1800,
+          "end": 2120
+        },
+        {
+          "word": "Analogy:",
+          "begin": 2120,
+          "end": 2560
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: An SSD Is a Mini-Computer. An SSD isn't just a storage chip — it's a complete mini-computer with its own processor (controller), its own RAM (DRAM), and its own storage (NAND flash). The controller runs firmware that manages all the complexity: translating addresses, fixing errors, balancing wear, and talking to your computer over PCIe.",
+      "beginMs": 2860,
+      "endMs": 22500,
+      "timestamps": [
+        {
+          "word": "An",
+          "begin": 2860,
+          "end": 2940
+        },
+        {
+          "word": "SSD",
+          "begin": 3040,
+          "end": 3480
+        },
+        {
+          "word": "Is",
+          "begin": 3680,
+          "end": 3760
+        },
+        {
+          "word": "a",
+          "begin": 3780,
+          "end": 3800
+        },
+        {
+          "word": "Mini-Computer.",
+          "begin": 3900,
+          "end": 4860
+        },
+        {
+          "word": "An",
+          "begin": 4880,
+          "end": 4920
+        },
+        {
+          "word": "SSD",
+          "begin": 5000,
+          "end": 5400
+        },
+        {
+          "word": "isn't",
+          "begin": 5580,
+          "end": 5780
+        },
+        {
+          "word": "just",
+          "begin": 5780,
+          "end": 6040
+        },
+        {
+          "word": "a",
+          "begin": 6040,
+          "end": 6080
+        },
+        {
+          "word": "storage",
+          "begin": 6140,
+          "end": 6400
+        },
+        {
+          "word": "chip",
+          "begin": 6460,
+          "end": 6820
+        },
+        {
+          "word": "it's",
+          "begin": 7040,
+          "end": 7140
+        },
+        {
+          "word": "a",
+          "begin": 7140,
+          "end": 7160
+        },
+        {
+          "word": "complete",
+          "begin": 7220,
+          "end": 7620
+        },
+        {
+          "word": "mini-computer",
+          "begin": 7700,
+          "end": 8260
+        },
+        {
+          "word": "with",
+          "begin": 8260,
+          "end": 8480
+        },
+        {
+          "word": "its",
+          "begin": 8480,
+          "end": 8580
+        },
+        {
+          "word": "own",
+          "begin": 8580,
+          "end": 8860
+        },
+        {
+          "word": "processor",
+          "begin": 8940,
+          "end": 9360
+        },
+        {
+          "word": "(controller),",
+          "begin": 9440,
+          "end": 9840
+        },
+        {
+          "word": "its",
+          "begin": 10120,
+          "end": 10240
+        },
+        {
+          "word": "own",
+          "begin": 10280,
+          "end": 10440
+        },
+        {
+          "word": "RAM",
+          "begin": 10500,
+          "end": 10720
+        },
+        {
+          "word": "(DRAM),",
+          "begin": 10800,
+          "end": 11280
+        },
+        {
+          "word": "and",
+          "begin": 11400,
+          "end": 11500
+        },
+        {
+          "word": "its",
+          "begin": 11500,
+          "end": 11600
+        },
+        {
+          "word": "own",
+          "begin": 11640,
+          "end": 11780
+        },
+        {
+          "word": "storage",
+          "begin": 11860,
+          "end": 12220
+        },
+        {
+          "word": "(NAND",
+          "begin": 12280,
+          "end": 12520
+        },
+        {
+          "word": "flash).",
+          "begin": 12520,
+          "end": 12920
+        },
+        {
+          "word": "The",
+          "begin": 13200,
+          "end": 13240
+        },
+        {
+          "word": "controller",
+          "begin": 13300,
+          "end": 13680
+        },
+        {
+          "word": "runs",
+          "begin": 13760,
+          "end": 13960
+        },
+        {
+          "word": "firmware",
+          "begin": 14040,
+          "end": 14520
+        },
+        {
+          "word": "that",
+          "begin": 14520,
+          "end": 14640
+        },
+        {
+          "word": "manages",
+          "begin": 14680,
+          "end": 15080
+        },
+        {
+          "word": "all",
+          "begin": 15180,
+          "end": 15300
+        },
+        {
+          "word": "the",
+          "begin": 15320,
+          "end": 15380
+        },
+        {
+          "word": "complexity:",
+          "begin": 15440,
+          "end": 15980
+        },
+        {
+          "word": "translating",
+          "begin": 16239,
+          "end": 16760
+        },
+        {
+          "word": "addresses,",
+          "begin": 16800,
+          "end": 17320
+        },
+        {
+          "word": "fixing",
+          "begin": 17560,
+          "end": 17840
+        },
+        {
+          "word": "errors,",
+          "begin": 17920,
+          "end": 18280
+        },
+        {
+          "word": "balancing",
+          "begin": 18460,
+          "end": 18900
+        },
+        {
+          "word": "wear,",
+          "begin": 18960,
+          "end": 19040
+        },
+        {
+          "word": "and",
+          "begin": 19380,
+          "end": 19440
+        },
+        {
+          "word": "talking",
+          "begin": 19480,
+          "end": 19780
+        },
+        {
+          "word": "to",
+          "begin": 19820,
+          "end": 19880
+        },
+        {
+          "word": "your",
+          "begin": 19900,
+          "end": 19960
+        },
+        {
+          "word": "computer",
+          "begin": 20040,
+          "end": 20360
+        },
+        {
+          "word": "over",
+          "begin": 20380,
+          "end": 20700
+        },
+        {
+          "word": "PCIe.",
+          "begin": 20780,
+          "end": 21320
+        },
+        {
+          "word": "SSD",
+          "begin": 21800,
+          "end": 22500
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "term",
+      "text": "SSD Controller: The 'brain' of the SSD — a specialized processor (often ARM Cortex-R cores) that runs firmware to manage address mapping, error correction, wear leveling, and communication with the host computer.",
+      "beginMs": 22620,
+      "endMs": 35820,
+      "timestamps": [
+        {
+          "word": "Controller:",
+          "begin": 22620,
+          "end": 23080
+        },
+        {
+          "word": "The",
+          "begin": 23400,
+          "end": 23460
+        },
+        {
+          "word": "'brain'",
+          "begin": 23540,
+          "end": 24460
+        },
+        {
+          "word": "of",
+          "begin": 24580,
+          "end": 24760
+        },
+        {
+          "word": "the",
+          "begin": 24840,
+          "end": 24900
+        },
+        {
+          "word": "a",
+          "begin": 25240,
+          "end": 25260
+        },
+        {
+          "word": "specialized",
+          "begin": 25340,
+          "end": 25960
+        },
+        {
+          "word": "processor",
+          "begin": 26000,
+          "end": 26480
+        },
+        {
+          "word": "(often",
+          "begin": 26800,
+          "end": 27660
+        },
+        {
+          "word": "ARM",
+          "begin": 27660,
+          "end": 27800
+        },
+        {
+          "word": "Cortex-R",
+          "begin": 27880,
+          "end": 28480
+        },
+        {
+          "word": "cores)",
+          "begin": 28660,
+          "end": 29060
+        },
+        {
+          "word": "that",
+          "begin": 29240,
+          "end": 29340
+        },
+        {
+          "word": "runs",
+          "begin": 29380,
+          "end": 29580
+        },
+        {
+          "word": "firmware",
+          "begin": 29660,
+          "end": 29960
+        },
+        {
+          "word": "to",
+          "begin": 30140,
+          "end": 30220
+        },
+        {
+          "word": "manage",
+          "begin": 30280,
+          "end": 30540
+        },
+        {
+          "word": "address",
+          "begin": 30640,
+          "end": 30940
+        },
+        {
+          "word": "mapping,",
+          "begin": 31000,
+          "end": 31360
+        },
+        {
+          "word": "error",
+          "begin": 31560,
+          "end": 31680
+        },
+        {
+          "word": "correction,",
+          "begin": 31780,
+          "end": 32299
+        },
+        {
+          "word": "wear",
+          "begin": 32479,
+          "end": 32740
+        },
+        {
+          "word": "leveling,",
+          "begin": 32740,
+          "end": 33020
+        },
+        {
+          "word": "and",
+          "begin": 33020,
+          "end": 33360
+        },
+        {
+          "word": "communication",
+          "begin": 33400,
+          "end": 34060
+        },
+        {
+          "word": "with",
+          "begin": 34100,
+          "end": 34160
+        },
+        {
+          "word": "the",
+          "begin": 34220,
+          "end": 34280
+        },
+        {
+          "word": "host",
+          "begin": 34340,
+          "end": 34560
+        },
+        {
+          "word": "computer.",
+          "begin": 34600,
+          "end": 34980
+        },
+        {
+          "word": "So",
+          "begin": 35360,
+          "end": 35600
+        },
+        {
+          "word": "far",
+          "begin": 35600,
+          "end": 35820
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "So far we've seen the building blocks: bits, bytes, LBAs, and NAND cells organized into pages, blocks, and dies. But how do all these pieces fit together inside an actual SSD? An SSD isn't just a pile of NAND chips — it's a complete mini-computer.",
+      "beginMs": 35840,
+      "endMs": 53580,
+      "timestamps": [
+        {
+          "word": "we've",
+          "begin": 35840,
+          "end": 35940
+        },
+        {
+          "word": "seen",
+          "begin": 36000,
+          "end": 36180
+        },
+        {
+          "word": "the",
+          "begin": 36180,
+          "end": 36220
+        },
+        {
+          "word": "building",
+          "begin": 36300,
+          "end": 36580
+        },
+        {
+          "word": "blocks:",
+          "begin": 36620,
+          "end": 37020
+        },
+        {
+          "word": "bits,",
+          "begin": 37360,
+          "end": 37680
+        },
+        {
+          "word": "bytes,",
+          "begin": 37960,
+          "end": 38320
+        },
+        {
+          "word": "LBAs,",
+          "begin": 38620,
+          "end": 39580
+        },
+        {
+          "word": "and",
+          "begin": 39880,
+          "end": 39980
+        },
+        {
+          "word": "NAND",
+          "begin": 40020,
+          "end": 40280
+        },
+        {
+          "word": "cells",
+          "begin": 40380,
+          "end": 40680
+        },
+        {
+          "word": "organized",
+          "begin": 40800,
+          "end": 41280
+        },
+        {
+          "word": "into",
+          "begin": 41320,
+          "end": 41400
+        },
+        {
+          "word": "pages,",
+          "begin": 41400,
+          "end": 42040
+        },
+        {
+          "word": "blocks,",
+          "begin": 42260,
+          "end": 42700
+        },
+        {
+          "word": "and",
+          "begin": 42940,
+          "end": 43020
+        },
+        {
+          "word": "dies.",
+          "begin": 43080,
+          "end": 43500
+        },
+        {
+          "word": "But",
+          "begin": 44040,
+          "end": 44120
+        },
+        {
+          "word": "how",
+          "begin": 44160,
+          "end": 44240
+        },
+        {
+          "word": "do",
+          "begin": 44320,
+          "end": 44380
+        },
+        {
+          "word": "all",
+          "begin": 44520,
+          "end": 44620
+        },
+        {
+          "word": "these",
+          "begin": 44660,
+          "end": 44820
+        },
+        {
+          "word": "pieces",
+          "begin": 44860,
+          "end": 45200
+        },
+        {
+          "word": "fit",
+          "begin": 45240,
+          "end": 45380
+        },
+        {
+          "word": "together",
+          "begin": 45380,
+          "end": 45740
+        },
+        {
+          "word": "inside",
+          "begin": 45860,
+          "end": 46180
+        },
+        {
+          "word": "an",
+          "begin": 46200,
+          "end": 46260
+        },
+        {
+          "word": "actual",
+          "begin": 46360,
+          "end": 46960
+        },
+        {
+          "word": "SSD?",
+          "begin": 47080,
+          "end": 48400
+        },
+        {
+          "word": "An",
+          "begin": 48520,
+          "end": 48840
+        },
+        {
+          "word": "SSD",
+          "begin": 49040,
+          "end": 49220
+        },
+        {
+          "word": "isn't",
+          "begin": 49220,
+          "end": 49460
+        },
+        {
+          "word": "a",
+          "begin": 49480,
+          "end": 49500
+        },
+        {
+          "word": "pile",
+          "begin": 49560,
+          "end": 49960
+        },
+        {
+          "word": "of",
+          "begin": 50080,
+          "end": 50200
+        },
+        {
+          "word": "NAND",
+          "begin": 50240,
+          "end": 50700
+        },
+        {
+          "word": "chips",
+          "begin": 50860,
+          "end": 51220
+        },
+        {
+          "word": "it's",
+          "begin": 51520,
+          "end": 51640
+        },
+        {
+          "word": "a",
+          "begin": 51660,
+          "end": 51680
+        },
+        {
+          "word": "complete",
+          "begin": 51740,
+          "end": 52180
+        },
+        {
+          "word": "mini-computer.",
+          "begin": 52240,
+          "end": 52860
+        },
+        {
+          "word": "Why",
+          "begin": 53240,
+          "end": 53460
+        },
+        {
+          "word": "does",
+          "begin": 53460,
+          "end": 53580
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "Why does an SSD need to be a computer? Because someone has to manage all the complexity we just learned about — translating LBAs to physical pages, choosing which cells to write to, handling the read/write vs erase size mismatch, fixing bit errors, monitoring wear. That management software needs a processor, memory, and interfaces, just like a computer.",
+      "beginMs": 53600,
+      "endMs": 72820,
+      "timestamps": [
+        {
+          "word": "an",
+          "begin": 53600,
+          "end": 53680
+        },
+        {
+          "word": "SSD",
+          "begin": 53760,
+          "end": 54240
+        },
+        {
+          "word": "need",
+          "begin": 54380,
+          "end": 54520
+        },
+        {
+          "word": "to",
+          "begin": 54560,
+          "end": 54600
+        },
+        {
+          "word": "be",
+          "begin": 54660,
+          "end": 54720
+        },
+        {
+          "word": "a",
+          "begin": 54760,
+          "end": 54780
+        },
+        {
+          "word": "computer?",
+          "begin": 54860,
+          "end": 55280
+        },
+        {
+          "word": "Because",
+          "begin": 55560,
+          "end": 55800
+        },
+        {
+          "word": "someone",
+          "begin": 55860,
+          "end": 56100
+        },
+        {
+          "word": "has",
+          "begin": 56100,
+          "end": 56280
+        },
+        {
+          "word": "to",
+          "begin": 56320,
+          "end": 56380
+        },
+        {
+          "word": "manage",
+          "begin": 56440,
+          "end": 56740
+        },
+        {
+          "word": "all",
+          "begin": 56780,
+          "end": 56880
+        },
+        {
+          "word": "the",
+          "begin": 56880,
+          "end": 56920
+        },
+        {
+          "word": "complexity",
+          "begin": 56960,
+          "end": 57500
+        },
+        {
+          "word": "we",
+          "begin": 57560,
+          "end": 57620
+        },
+        {
+          "word": "just",
+          "begin": 57700,
+          "end": 57880
+        },
+        {
+          "word": "learned",
+          "begin": 57900,
+          "end": 58100
+        },
+        {
+          "word": "about",
+          "begin": 58100,
+          "end": 58400
+        },
+        {
+          "word": "translating",
+          "begin": 58640,
+          "end": 59060
+        },
+        {
+          "word": "LBAs",
+          "begin": 59160,
+          "end": 59880
+        },
+        {
+          "word": "to",
+          "begin": 59940,
+          "end": 59980
+        },
+        {
+          "word": "physical",
+          "begin": 60060,
+          "end": 60340
+        },
+        {
+          "word": "pages,",
+          "begin": 60440,
+          "end": 60900
+        },
+        {
+          "word": "choosing",
+          "begin": 61140,
+          "end": 61440
+        },
+        {
+          "word": "which",
+          "begin": 61480,
+          "end": 61620
+        },
+        {
+          "word": "cells",
+          "begin": 61700,
+          "end": 61960
+        },
+        {
+          "word": "to",
+          "begin": 62000,
+          "end": 62060
+        },
+        {
+          "word": "write",
+          "begin": 62140,
+          "end": 62340
+        },
+        {
+          "word": "to,",
+          "begin": 62380,
+          "end": 62480
+        },
+        {
+          "word": "handling",
+          "begin": 62860,
+          "end": 63200
+        },
+        {
+          "word": "the",
+          "begin": 63240,
+          "end": 63280
+        },
+        {
+          "word": "read/write",
+          "begin": 63360,
+          "end": 63880
+        },
+        {
+          "word": "vs",
+          "begin": 63880,
+          "end": 64180
+        },
+        {
+          "word": "erase",
+          "begin": 64200,
+          "end": 64500
+        },
+        {
+          "word": "size",
+          "begin": 64560,
+          "end": 64920
+        },
+        {
+          "word": "mismatch,",
+          "begin": 64920,
+          "end": 65780
+        },
+        {
+          "word": "fixing",
+          "begin": 65780,
+          "end": 66080
+        },
+        {
+          "word": "bit",
+          "begin": 66160,
+          "end": 66300
+        },
+        {
+          "word": "errors,",
+          "begin": 66400,
+          "end": 66760
+        },
+        {
+          "word": "monitoring",
+          "begin": 66960,
+          "end": 67400
+        },
+        {
+          "word": "wear.",
+          "begin": 67480,
+          "end": 67560
+        },
+        {
+          "word": "That",
+          "begin": 67920,
+          "end": 68100
+        },
+        {
+          "word": "management",
+          "begin": 68140,
+          "end": 68560
+        },
+        {
+          "word": "software",
+          "begin": 68620,
+          "end": 68960
+        },
+        {
+          "word": "needs",
+          "begin": 69100,
+          "end": 69260
+        },
+        {
+          "word": "a",
+          "begin": 69260,
+          "end": 69300
+        },
+        {
+          "word": "processor,",
+          "begin": 69380,
+          "end": 69880
+        },
+        {
+          "word": "memory,",
+          "begin": 70040,
+          "end": 70340
+        },
+        {
+          "word": "and",
+          "begin": 70500,
+          "end": 70580
+        },
+        {
+          "word": "interfaces,",
+          "begin": 70640,
+          "end": 71300
+        },
+        {
+          "word": "just",
+          "begin": 71540,
+          "end": 71740
+        },
+        {
+          "word": "like",
+          "begin": 71740,
+          "end": 71880
+        },
+        {
+          "word": "a",
+          "begin": 71880,
+          "end": 71900
+        },
+        {
+          "word": "computer.",
+          "begin": 71960,
+          "end": 72760
+        },
+        {
+          "word": "An",
+          "begin": 72780,
+          "end": 72820
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "paragraph",
+      "text": "An SSD has three main parts:",
+      "beginMs": 72860,
+      "endMs": 74900,
+      "timestamps": [
+        {
+          "word": "SSD",
+          "begin": 72860,
+          "end": 73300
+        },
+        {
+          "word": "has",
+          "begin": 73400,
+          "end": 73560
+        },
+        {
+          "word": "three",
+          "begin": 73640,
+          "end": 73780
+        },
+        {
+          "word": "main",
+          "begin": 73900,
+          "end": 74140
+        },
+        {
+          "word": "parts:",
+          "begin": 74140,
+          "end": 74900
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "paragraph",
+      "text": "The diagram below shows how these parts connect. The host computer talks to the controller through the PCIe bus (covered in the next lesson), and the controller manages everything else.",
+      "beginMs": 74960,
+      "endMs": 83760,
+      "timestamps": [
+        {
+          "word": "The",
+          "begin": 74960,
+          "end": 75040
+        },
+        {
+          "word": "diagram",
+          "begin": 74960,
+          "end": 75380
+        },
+        {
+          "word": "below",
+          "begin": 75420,
+          "end": 75600
+        },
+        {
+          "word": "shows",
+          "begin": 75760,
+          "end": 75960
+        },
+        {
+          "word": "how",
+          "begin": 75980,
+          "end": 76060
+        },
+        {
+          "word": "these",
+          "begin": 76140,
+          "end": 76280
+        },
+        {
+          "word": "parts",
+          "begin": 76340,
+          "end": 76560
+        },
+        {
+          "word": "connect.",
+          "begin": 76620,
+          "end": 77020
+        },
+        {
+          "word": "The",
+          "begin": 77180,
+          "end": 77240
+        },
+        {
+          "word": "host",
+          "begin": 77280,
+          "end": 77520
+        },
+        {
+          "word": "computer",
+          "begin": 77560,
+          "end": 77860
+        },
+        {
+          "word": "talks",
+          "begin": 77940,
+          "end": 78200
+        },
+        {
+          "word": "to",
+          "begin": 78240,
+          "end": 78280
+        },
+        {
+          "word": "the",
+          "begin": 78320,
+          "end": 78380
+        },
+        {
+          "word": "controller",
+          "begin": 78420,
+          "end": 78840
+        },
+        {
+          "word": "through",
+          "begin": 78960,
+          "end": 79040
+        },
+        {
+          "word": "the",
+          "begin": 79100,
+          "end": 79140
+        },
+        {
+          "word": "PCIe",
+          "begin": 79200,
+          "end": 79720
+        },
+        {
+          "word": "bus",
+          "begin": 79840,
+          "end": 80140
+        },
+        {
+          "word": "(covered",
+          "begin": 80480,
+          "end": 80760
+        },
+        {
+          "word": "in",
+          "begin": 80760,
+          "end": 80840
+        },
+        {
+          "word": "the",
+          "begin": 80840,
+          "end": 80900
+        },
+        {
+          "word": "next",
+          "begin": 80940,
+          "end": 81180
+        },
+        {
+          "word": "lesson),",
+          "begin": 81220,
+          "end": 81580
+        },
+        {
+          "word": "and",
+          "begin": 81940,
+          "end": 82020
+        },
+        {
+          "word": "the",
+          "begin": 82020,
+          "end": 82060
+        },
+        {
+          "word": "controller",
+          "begin": 82120,
+          "end": 82540
+        },
+        {
+          "word": "manages",
+          "begin": 82620,
+          "end": 83020
+        },
+        {
+          "word": "everything",
+          "begin": 83020,
+          "end": 83440
+        },
+        {
+          "word": "else.",
+          "begin": 83480,
+          "end": 83760
+        }
+      ]
+    },
+    {
+      "blockIndex": 7,
+      "type": "reveal",
+      "text": "Knowledge check: Why does an SSD need its own dedicated processor and RAM, essentially making it a 'computer within a computer'? What would happen if the host CPU had to manage all of these responsibilities directly? The answer: The SSD controller is a full SoC (System-on-Chip) running firmware that handles FTL address mapping, ECC error correction, wear leveling, garbage collection, and NVMe protocol processing. It needs its own processor (often ARM Cortex-R cores) because these tasks are enormously complex and time-critical — the FTL must translate every single I/O into physical addresses, ECC must correct bit errors on every read, and GC must run continuously in the background. If the host CPU managed this directly, it would waste enormous cycles on microsecond-level NAND timing, consume massive bandwidth shuttling mapping tables over PCIe, and every SSD internal operation (GC, wear leveling) would stall host applications. The dedicated DRAM caches the FTL mapping table (~4 bytes per LBA, so ~4 GB for a 1 TB drive) for O(1) address lookups — without it, every read would require an extra NAND access just to find the mapping, roughly doubling latency.",
+      "beginMs": 84020,
+      "endMs": 157340,
+      "timestamps": [
+        {
+          "word": "Knowledge",
+          "begin": 84020,
+          "end": 84280
+        },
+        {
+          "word": "check:",
+          "begin": 84280,
+          "end": 84640
+        },
+        {
+          "word": "Why",
+          "begin": 84960,
+          "end": 85040
+        },
+        {
+          "word": "does",
+          "begin": 85120,
+          "end": 85240
+        },
+        {
+          "word": "an",
+          "begin": 85260,
+          "end": 85340
+        },
+        {
+          "word": "SSD",
+          "begin": 85340,
+          "end": 85600
+        },
+        {
+          "word": "need",
+          "begin": 85680,
+          "end": 85780
+        },
+        {
+          "word": "its",
+          "begin": 85800,
+          "end": 86060
+        },
+        {
+          "word": "own",
+          "begin": 86080,
+          "end": 86460
+        },
+        {
+          "word": "dedicated",
+          "begin": 86500,
+          "end": 86980
+        },
+        {
+          "word": "processor",
+          "begin": 87040,
+          "end": 87740
+        },
+        {
+          "word": "and",
+          "begin": 87780,
+          "end": 87840
+        },
+        {
+          "word": "RAM,",
+          "begin": 87920,
+          "end": 88220
+        },
+        {
+          "word": "essentially",
+          "begin": 88580,
+          "end": 89000
+        },
+        {
+          "word": "making",
+          "begin": 89080,
+          "end": 89320
+        },
+        {
+          "word": "it",
+          "begin": 89360,
+          "end": 89420
+        },
+        {
+          "word": "a",
+          "begin": 89420,
+          "end": 89460
+        },
+        {
+          "word": "'computer",
+          "begin": 89520,
+          "end": 89920
+        },
+        {
+          "word": "within",
+          "begin": 90020,
+          "end": 90260
+        },
+        {
+          "word": "a",
+          "begin": 90260,
+          "end": 90360
+        },
+        {
+          "word": "computer'?",
+          "begin": 90360,
+          "end": 90760
+        },
+        {
+          "word": "What",
+          "begin": 91540,
+          "end": 91640
+        },
+        {
+          "word": "would",
+          "begin": 91660,
+          "end": 91760
+        },
+        {
+          "word": "happen",
+          "begin": 91780,
+          "end": 92060
+        },
+        {
+          "word": "if",
+          "begin": 92060,
+          "end": 92140
+        },
+        {
+          "word": "the",
+          "begin": 92160,
+          "end": 92220
+        },
+        {
+          "word": "host",
+          "begin": 92280,
+          "end": 92520
+        },
+        {
+          "word": "CPU",
+          "begin": 92560,
+          "end": 92900
+        },
+        {
+          "word": "had",
+          "begin": 93000,
+          "end": 93140
+        },
+        {
+          "word": "to",
+          "begin": 93160,
+          "end": 93220
+        },
+        {
+          "word": "manage",
+          "begin": 93280,
+          "end": 93560
+        },
+        {
+          "word": "all",
+          "begin": 93660,
+          "end": 93780
+        },
+        {
+          "word": "of",
+          "begin": 93800,
+          "end": 93860
+        },
+        {
+          "word": "these",
+          "begin": 93900,
+          "end": 94040
+        },
+        {
+          "word": "responsibilities",
+          "begin": 94080,
+          "end": 94860
+        },
+        {
+          "word": "directly?",
+          "begin": 94900,
+          "end": 95300
+        },
+        {
+          "word": "The",
+          "begin": 96080,
+          "end": 96120
+        },
+        {
+          "word": "answer:",
+          "begin": 96240,
+          "end": 97300
+        },
+        {
+          "word": "The",
+          "begin": 97340,
+          "end": 97400
+        },
+        {
+          "word": "controller",
+          "begin": 97520,
+          "end": 97940
+        },
+        {
+          "word": "is",
+          "begin": 98080,
+          "end": 98180
+        },
+        {
+          "word": "a",
+          "begin": 98200,
+          "end": 98420
+        },
+        {
+          "word": "full",
+          "begin": 98480,
+          "end": 98620
+        },
+        {
+          "word": "SoC",
+          "begin": 98720,
+          "end": 99000
+        },
+        {
+          "word": "(System-on-Chip)",
+          "begin": 99140,
+          "end": 99920
+        },
+        {
+          "word": "running",
+          "begin": 100040,
+          "end": 100280
+        },
+        {
+          "word": "firmware",
+          "begin": 100360,
+          "end": 100660
+        },
+        {
+          "word": "that",
+          "begin": 100900,
+          "end": 101020
+        },
+        {
+          "word": "handles",
+          "begin": 101060,
+          "end": 101960
+        },
+        {
+          "word": "FTL",
+          "begin": 102060,
+          "end": 102380
+        },
+        {
+          "word": "mapping,",
+          "begin": 102380,
+          "end": 102660
+        },
+        {
+          "word": "ECC",
+          "begin": 102680,
+          "end": 103520
+        },
+        {
+          "word": "error",
+          "begin": 103720,
+          "end": 103860
+        },
+        {
+          "word": "correction,",
+          "begin": 103960,
+          "end": 104480
+        },
+        {
+          "word": "wear",
+          "begin": 104820,
+          "end": 105100
+        },
+        {
+          "word": "leveling,",
+          "begin": 105120,
+          "end": 105500
+        },
+        {
+          "word": "garbage",
+          "begin": 105800,
+          "end": 106120
+        },
+        {
+          "word": "collection,",
+          "begin": 106180,
+          "end": 107320
+        },
+        {
+          "word": "and",
+          "begin": 107420,
+          "end": 107560
+        },
+        {
+          "word": "NVMe",
+          "begin": 107660,
+          "end": 107680
+        },
+        {
+          "word": "protocol",
+          "begin": 107820,
+          "end": 108240
+        },
+        {
+          "word": "processing.",
+          "begin": 108320,
+          "end": 108920
+        },
+        {
+          "word": "It",
+          "begin": 109240,
+          "end": 109340
+        },
+        {
+          "word": "needs",
+          "begin": 109360,
+          "end": 109520
+        },
+        {
+          "word": "its",
+          "begin": 109520,
+          "end": 109700
+        },
+        {
+          "word": "own",
+          "begin": 109740,
+          "end": 109860
+        },
+        {
+          "word": "processor",
+          "begin": 109920,
+          "end": 110620
+        },
+        {
+          "word": "(often",
+          "begin": 110720,
+          "end": 110860
+        },
+        {
+          "word": "ARM",
+          "begin": 110980,
+          "end": 111220
+        },
+        {
+          "word": "Cortex-R",
+          "begin": 111220,
+          "end": 111820
+        },
+        {
+          "word": "cores)",
+          "begin": 112040,
+          "end": 112440
+        },
+        {
+          "word": "because",
+          "begin": 112640,
+          "end": 112860
+        },
+        {
+          "word": "these",
+          "begin": 112900,
+          "end": 113080
+        },
+        {
+          "word": "tasks",
+          "begin": 113140,
+          "end": 113580
+        },
+        {
+          "word": "are",
+          "begin": 113620,
+          "end": 113700
+        },
+        {
+          "word": "enormously",
+          "begin": 113700,
+          "end": 114280
+        },
+        {
+          "word": "complex",
+          "begin": 114360,
+          "end": 114900
+        },
+        {
+          "word": "and",
+          "begin": 114960,
+          "end": 115040
+        },
+        {
+          "word": "time-critical",
+          "begin": 115080,
+          "end": 116060
+        },
+        {
+          "word": "the",
+          "begin": 116080,
+          "end": 116100
+        },
+        {
+          "word": "FTL",
+          "begin": 116180,
+          "end": 116660
+        },
+        {
+          "word": "must",
+          "begin": 116760,
+          "end": 116960
+        },
+        {
+          "word": "translate",
+          "begin": 117000,
+          "end": 117480
+        },
+        {
+          "word": "every",
+          "begin": 117560,
+          "end": 117720
+        },
+        {
+          "word": "single",
+          "begin": 117840,
+          "end": 118220
+        },
+        {
+          "word": "I/O",
+          "begin": 118360,
+          "end": 119040
+        },
+        {
+          "word": "into",
+          "begin": 119060,
+          "end": 119320
+        },
+        {
+          "word": "physical",
+          "begin": 119440,
+          "end": 119800
+        },
+        {
+          "word": "addresses,",
+          "begin": 119840,
+          "end": 120680
+        },
+        {
+          "word": "ECC",
+          "begin": 120720,
+          "end": 120740
+        },
+        {
+          "word": "must",
+          "begin": 120860,
+          "end": 121080
+        },
+        {
+          "word": "correct",
+          "begin": 121120,
+          "end": 121440
+        },
+        {
+          "word": "bit",
+          "begin": 121520,
+          "end": 121660
+        },
+        {
+          "word": "errors",
+          "begin": 121740,
+          "end": 122100
+        },
+        {
+          "word": "on",
+          "begin": 122160,
+          "end": 122260
+        },
+        {
+          "word": "every",
+          "begin": 122340,
+          "end": 122540
+        },
+        {
+          "word": "read,",
+          "begin": 122640,
+          "end": 122940
+        },
+        {
+          "word": "and",
+          "begin": 123140,
+          "end": 123240
+        },
+        {
+          "word": "GC",
+          "begin": 123300,
+          "end": 123600
+        },
+        {
+          "word": "must",
+          "begin": 123740,
+          "end": 123980
+        },
+        {
+          "word": "run",
+          "begin": 124040,
+          "end": 124200
+        },
+        {
+          "word": "continuously",
+          "begin": 124260,
+          "end": 124880
+        },
+        {
+          "word": "in",
+          "begin": 124880,
+          "end": 125120
+        },
+        {
+          "word": "the",
+          "begin": 125120,
+          "end": 125180
+        },
+        {
+          "word": "background.",
+          "begin": 125220,
+          "end": 125800
+        },
+        {
+          "word": "If",
+          "begin": 126100,
+          "end": 126180
+        },
+        {
+          "word": "the",
+          "begin": 126220,
+          "end": 126280
+        },
+        {
+          "word": "host",
+          "begin": 126340,
+          "end": 126640
+        },
+        {
+          "word": "CPU",
+          "begin": 126700,
+          "end": 127040
+        },
+        {
+          "word": "managed",
+          "begin": 127140,
+          "end": 127500
+        },
+        {
+          "word": "this",
+          "begin": 127560,
+          "end": 127720
+        },
+        {
+          "word": "directly,",
+          "begin": 127760,
+          "end": 128199
+        },
+        {
+          "word": "it",
+          "begin": 128520,
+          "end": 128560
+        },
+        {
+          "word": "would",
+          "begin": 128600,
+          "end": 128699
+        },
+        {
+          "word": "waste",
+          "begin": 128759,
+          "end": 129020
+        },
+        {
+          "word": "enormous",
+          "begin": 129100,
+          "end": 129600
+        },
+        {
+          "word": "cycles",
+          "begin": 129660,
+          "end": 130300
+        },
+        {
+          "word": "on",
+          "begin": 130340,
+          "end": 130360
+        },
+        {
+          "word": "microsecond-level",
+          "begin": 130440,
+          "end": 131280
+        },
+        {
+          "word": "NAND",
+          "begin": 131400,
+          "end": 131420
+        },
+        {
+          "word": "timing,",
+          "begin": 131480,
+          "end": 131880
+        },
+        {
+          "word": "consume",
+          "begin": 132140,
+          "end": 132520
+        },
+        {
+          "word": "massive",
+          "begin": 132580,
+          "end": 132960
+        },
+        {
+          "word": "bandwidth",
+          "begin": 133020,
+          "end": 133480
+        },
+        {
+          "word": "shuttling",
+          "begin": 133480,
+          "end": 133780
+        },
+        {
+          "word": "mapping",
+          "begin": 133820,
+          "end": 134080
+        },
+        {
+          "word": "tables",
+          "begin": 134080,
+          "end": 134520
+        },
+        {
+          "word": "over",
+          "begin": 134580,
+          "end": 134720
+        },
+        {
+          "word": "PCIe,",
+          "begin": 134820,
+          "end": 135460
+        },
+        {
+          "word": "and",
+          "begin": 135860,
+          "end": 135980
+        },
+        {
+          "word": "every",
+          "begin": 136080,
+          "end": 136260
+        },
+        {
+          "word": "SSD",
+          "begin": 136400,
+          "end": 136820
+        },
+        {
+          "word": "internal",
+          "begin": 136980,
+          "end": 137320
+        },
+        {
+          "word": "operation",
+          "begin": 137420,
+          "end": 137980
+        },
+        {
+          "word": "(GC,",
+          "begin": 138080,
+          "end": 138420
+        },
+        {
+          "word": "wear",
+          "begin": 138980,
+          "end": 139060
+        },
+        {
+          "word": "leveling)",
+          "begin": 139220,
+          "end": 139580
+        },
+        {
+          "word": "would",
+          "begin": 139620,
+          "end": 139740
+        },
+        {
+          "word": "stall",
+          "begin": 139800,
+          "end": 140100
+        },
+        {
+          "word": "host",
+          "begin": 140160,
+          "end": 140420
+        },
+        {
+          "word": "applications.",
+          "begin": 140500,
+          "end": 141280
+        },
+        {
+          "word": "The",
+          "begin": 141540,
+          "end": 141580
+        },
+        {
+          "word": "dedicated",
+          "begin": 141640,
+          "end": 142180
+        },
+        {
+          "word": "DRAM",
+          "begin": 142220,
+          "end": 142680
+        },
+        {
+          "word": "caches",
+          "begin": 142760,
+          "end": 143140
+        },
+        {
+          "word": "the",
+          "begin": 143180,
+          "end": 143240
+        },
+        {
+          "word": "FTL",
+          "begin": 143360,
+          "end": 143800
+        },
+        {
+          "word": "mapping",
+          "begin": 143880,
+          "end": 144200
+        },
+        {
+          "word": "table",
+          "begin": 144240,
+          "end": 145000
+        },
+        {
+          "word": "(~4",
+          "begin": 145180,
+          "end": 145800
+        },
+        {
+          "word": "bytes",
+          "begin": 145860,
+          "end": 146640
+        },
+        {
+          "word": "per",
+          "begin": 147080,
+          "end": 147160
+        },
+        {
+          "word": "LBA,",
+          "begin": 147300,
+          "end": 147940
+        },
+        {
+          "word": "so",
+          "begin": 147940,
+          "end": 148060
+        },
+        {
+          "word": "~4",
+          "begin": 148060,
+          "end": 148560
+        },
+        {
+          "word": "GB",
+          "begin": 148680,
+          "end": 149020
+        },
+        {
+          "word": "for",
+          "begin": 149080,
+          "end": 149140
+        },
+        {
+          "word": "a",
+          "begin": 149280,
+          "end": 149300
+        },
+        {
+          "word": "1",
+          "begin": 149420,
+          "end": 149680
+        },
+        {
+          "word": "TB",
+          "begin": 149780,
+          "end": 149860
+        },
+        {
+          "word": "drive)",
+          "begin": 149960,
+          "end": 150400
+        },
+        {
+          "word": "for",
+          "begin": 150440,
+          "end": 150880
+        },
+        {
+          "word": "O(1)",
+          "begin": 150940,
+          "end": 151180
+        },
+        {
+          "word": "address",
+          "begin": 151200,
+          "end": 151860
+        },
+        {
+          "word": "lookups",
+          "begin": 151880,
+          "end": 152280
+        },
+        {
+          "word": "without",
+          "begin": 152320,
+          "end": 152580
+        },
+        {
+          "word": "it,",
+          "begin": 152600,
+          "end": 152640
+        },
+        {
+          "word": "every",
+          "begin": 152660,
+          "end": 152920
+        },
+        {
+          "word": "read",
+          "begin": 152960,
+          "end": 153220
+        },
+        {
+          "word": "would",
+          "begin": 153260,
+          "end": 153340
+        },
+        {
+          "word": "require",
+          "begin": 153340,
+          "end": 153720
+        },
+        {
+          "word": "an",
+          "begin": 153840,
+          "end": 154060
+        },
+        {
+          "word": "extra",
+          "begin": 154100,
+          "end": 154760
+        },
+        {
+          "word": "NAND",
+          "begin": 154800,
+          "end": 154960
+        },
+        {
+          "word": "access",
+          "begin": 155000,
+          "end": 155260
+        },
+        {
+          "word": "just",
+          "begin": 155260,
+          "end": 155640
+        },
+        {
+          "word": "to",
+          "begin": 156080,
+          "end": 156140
+        },
+        {
+          "word": "find",
+          "begin": 156240,
+          "end": 156360
+        },
+        {
+          "word": "the",
+          "begin": 156480,
+          "end": 156560
+        },
+        {
+          "word": "mapping,",
+          "begin": 156620,
+          "end": 156640
+        },
+        {
+          "word": "doubling",
+          "begin": 156660,
+          "end": 156840
+        },
+        {
+          "word": "latency.",
+          "begin": 156900,
+          "end": 157340
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

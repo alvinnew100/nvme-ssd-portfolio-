@@ -1,0 +1,2317 @@
+{
+  "sectionId": "sec-errors",
+  "audioFile": "/audio/sections/sec-errors.mp3",
+  "totalDurationMs": 176120,
+  "fileSizeBytes": 2818560,
+  "blocks": [
+    {
+      "blockIndex": 0,
+      "type": "heading",
+      "text": "When Things Go Wrong — Error Handling",
+      "beginMs": 20,
+      "endMs": 2680,
+      "timestamps": [
+        {
+          "word": "When",
+          "begin": 20,
+          "end": 120
+        },
+        {
+          "word": "Things",
+          "begin": 180,
+          "end": 360
+        },
+        {
+          "word": "Go",
+          "begin": 360,
+          "end": 480
+        },
+        {
+          "word": "Wrong",
+          "begin": 580,
+          "end": 880
+        },
+        {
+          "word": "Error",
+          "begin": 1140,
+          "end": 1280
+        },
+        {
+          "word": "Handling",
+          "begin": 1360,
+          "end": 1760
+        },
+        {
+          "word": "Analogy:",
+          "begin": 1780,
+          "end": 2680
+        }
+      ]
+    },
+    {
+      "blockIndex": 1,
+      "type": "analogy",
+      "text": "Analogy: CQ Status Codes Are Error Reports. When the SSD finishes a command, it writes a 16-byte completion entry to the CQ. The status field is like a report card — 0x0 means success, anything else is an error code telling you exactly what went wrong and whether the command can be retried.",
+      "beginMs": 2800,
+      "endMs": 20220,
+      "timestamps": [
+        {
+          "word": "CQ",
+          "begin": 2800,
+          "end": 2920
+        },
+        {
+          "word": "Status",
+          "begin": 3060,
+          "end": 3380
+        },
+        {
+          "word": "Codes",
+          "begin": 3440,
+          "end": 3700
+        },
+        {
+          "word": "Are",
+          "begin": 3720,
+          "end": 3900
+        },
+        {
+          "word": "Error",
+          "begin": 4019,
+          "end": 4160
+        },
+        {
+          "word": "Reports.",
+          "begin": 4240,
+          "end": 4640
+        },
+        {
+          "word": "When",
+          "begin": 5040,
+          "end": 5640
+        },
+        {
+          "word": "the",
+          "begin": 5720,
+          "end": 5800
+        },
+        {
+          "word": "finishes",
+          "begin": 5980,
+          "end": 6320
+        },
+        {
+          "word": "a",
+          "begin": 6340,
+          "end": 6360
+        },
+        {
+          "word": "command,",
+          "begin": 6420,
+          "end": 6880
+        },
+        {
+          "word": "it",
+          "begin": 7080,
+          "end": 7160
+        },
+        {
+          "word": "writes",
+          "begin": 7200,
+          "end": 7420
+        },
+        {
+          "word": "a",
+          "begin": 7440,
+          "end": 7460
+        },
+        {
+          "word": "16-byte",
+          "begin": 7580,
+          "end": 8220
+        },
+        {
+          "word": "completion",
+          "begin": 8260,
+          "end": 8720
+        },
+        {
+          "word": "entry",
+          "begin": 8760,
+          "end": 9100
+        },
+        {
+          "word": "to",
+          "begin": 9140,
+          "end": 9200
+        },
+        {
+          "word": "the",
+          "begin": 9300,
+          "end": 9380
+        },
+        {
+          "word": "CQ.",
+          "begin": 9500,
+          "end": 9620
+        },
+        {
+          "word": "The",
+          "begin": 10040,
+          "end": 10100
+        },
+        {
+          "word": "status",
+          "begin": 10160,
+          "end": 10560
+        },
+        {
+          "word": "field",
+          "begin": 10600,
+          "end": 10840
+        },
+        {
+          "word": "is",
+          "begin": 10860,
+          "end": 10940
+        },
+        {
+          "word": "like",
+          "begin": 10960,
+          "end": 11100
+        },
+        {
+          "word": "a",
+          "begin": 11120,
+          "end": 11200
+        },
+        {
+          "word": "report",
+          "begin": 11200,
+          "end": 11520
+        },
+        {
+          "word": "card",
+          "begin": 11580,
+          "end": 12140
+        },
+        {
+          "word": "0x0",
+          "begin": 12140,
+          "end": 12860
+        },
+        {
+          "word": "means",
+          "begin": 13000,
+          "end": 13200
+        },
+        {
+          "word": "success,",
+          "begin": 13260,
+          "end": 13800
+        },
+        {
+          "word": "anything",
+          "begin": 14040,
+          "end": 14360
+        },
+        {
+          "word": "else",
+          "begin": 14420,
+          "end": 14660
+        },
+        {
+          "word": "is",
+          "begin": 14720,
+          "end": 14800
+        },
+        {
+          "word": "an",
+          "begin": 14800,
+          "end": 14840
+        },
+        {
+          "word": "error",
+          "begin": 14840,
+          "end": 15180
+        },
+        {
+          "word": "code",
+          "begin": 15280,
+          "end": 15600
+        },
+        {
+          "word": "telling",
+          "begin": 15880,
+          "end": 16140
+        },
+        {
+          "word": "you",
+          "begin": 16160,
+          "end": 16219
+        },
+        {
+          "word": "exactly",
+          "begin": 16280,
+          "end": 16720
+        },
+        {
+          "word": "what",
+          "begin": 16800,
+          "end": 16920
+        },
+        {
+          "word": "went",
+          "begin": 16960,
+          "end": 17120
+        },
+        {
+          "word": "wrong",
+          "begin": 17180,
+          "end": 17480
+        },
+        {
+          "word": "and",
+          "begin": 17680,
+          "end": 17760
+        },
+        {
+          "word": "whether",
+          "begin": 17800,
+          "end": 18040
+        },
+        {
+          "word": "the",
+          "begin": 18040,
+          "end": 18080
+        },
+        {
+          "word": "command",
+          "begin": 18140,
+          "end": 18500
+        },
+        {
+          "word": "can",
+          "begin": 18560,
+          "end": 18660
+        },
+        {
+          "word": "be",
+          "begin": 18680,
+          "end": 18720
+        },
+        {
+          "word": "retried.",
+          "begin": 18800,
+          "end": 19320
+        },
+        {
+          "word": "We've",
+          "begin": 19780,
+          "end": 19920
+        },
+        {
+          "word": "seen",
+          "begin": 19920,
+          "end": 20220
+        }
+      ]
+    },
+    {
+      "blockIndex": 2,
+      "type": "paragraph",
+      "text": "We've seen how commands are sent (via SQ) and results come back (via CQ). But what if a command fails? Maybe you tried to read an LBA that doesn't exist, or a NAND page has gone bad. The SSD needs a way to tell you exactly what went wrong.",
+      "beginMs": 20240,
+      "endMs": 32759,
+      "timestamps": [
+        {
+          "word": "how",
+          "begin": 20240,
+          "end": 20320
+        },
+        {
+          "word": "commands",
+          "begin": 20420,
+          "end": 20960
+        },
+        {
+          "word": "are",
+          "begin": 21000,
+          "end": 21100
+        },
+        {
+          "word": "sent",
+          "begin": 21100,
+          "end": 21160
+        },
+        {
+          "word": "(via",
+          "begin": 21200,
+          "end": 21580
+        },
+        {
+          "word": "SQ)",
+          "begin": 21640,
+          "end": 21760
+        },
+        {
+          "word": "and",
+          "begin": 22200,
+          "end": 22280
+        },
+        {
+          "word": "results",
+          "begin": 22300,
+          "end": 22620
+        },
+        {
+          "word": "come",
+          "begin": 22680,
+          "end": 22800
+        },
+        {
+          "word": "back",
+          "begin": 22840,
+          "end": 23060
+        },
+        {
+          "word": "(via",
+          "begin": 23120,
+          "end": 23420
+        },
+        {
+          "word": "CQ).",
+          "begin": 23540,
+          "end": 23660
+        },
+        {
+          "word": "But",
+          "begin": 24020,
+          "end": 24100
+        },
+        {
+          "word": "what",
+          "begin": 24140,
+          "end": 24180
+        },
+        {
+          "word": "if",
+          "begin": 24200,
+          "end": 24260
+        },
+        {
+          "word": "a",
+          "begin": 24260,
+          "end": 24420
+        },
+        {
+          "word": "command",
+          "begin": 24480,
+          "end": 24800
+        },
+        {
+          "word": "fails?",
+          "begin": 24900,
+          "end": 25300
+        },
+        {
+          "word": "Maybe",
+          "begin": 25600,
+          "end": 25780
+        },
+        {
+          "word": "you",
+          "begin": 25820,
+          "end": 25880
+        },
+        {
+          "word": "tried",
+          "begin": 25940,
+          "end": 26200
+        },
+        {
+          "word": "to",
+          "begin": 26200,
+          "end": 26240
+        },
+        {
+          "word": "read",
+          "begin": 26320,
+          "end": 26480
+        },
+        {
+          "word": "an",
+          "begin": 26500,
+          "end": 26580
+        },
+        {
+          "word": "LBA",
+          "begin": 26640,
+          "end": 27140
+        },
+        {
+          "word": "that",
+          "begin": 27140,
+          "end": 27240
+        },
+        {
+          "word": "doesn't",
+          "begin": 27280,
+          "end": 27520
+        },
+        {
+          "word": "exist,",
+          "begin": 27540,
+          "end": 28020
+        },
+        {
+          "word": "or",
+          "begin": 28280,
+          "end": 28380
+        },
+        {
+          "word": "a",
+          "begin": 28400,
+          "end": 28420
+        },
+        {
+          "word": "NAND",
+          "begin": 28480,
+          "end": 28740
+        },
+        {
+          "word": "page",
+          "begin": 28820,
+          "end": 29120
+        },
+        {
+          "word": "has",
+          "begin": 29120,
+          "end": 29220
+        },
+        {
+          "word": "gone",
+          "begin": 29260,
+          "end": 29460
+        },
+        {
+          "word": "bad.",
+          "begin": 29520,
+          "end": 29860
+        },
+        {
+          "word": "The",
+          "begin": 30200,
+          "end": 30240
+        },
+        {
+          "word": "SSD",
+          "begin": 30340,
+          "end": 30780
+        },
+        {
+          "word": "needs",
+          "begin": 30940,
+          "end": 31140
+        },
+        {
+          "word": "a",
+          "begin": 31160,
+          "end": 31180
+        },
+        {
+          "word": "way",
+          "begin": 31240,
+          "end": 31320
+        },
+        {
+          "word": "to",
+          "begin": 31400,
+          "end": 31440
+        },
+        {
+          "word": "tell",
+          "begin": 31520,
+          "end": 31680
+        },
+        {
+          "word": "you",
+          "begin": 31720,
+          "end": 31780
+        },
+        {
+          "word": "exactly",
+          "begin": 31840,
+          "end": 32280
+        },
+        {
+          "word": "what",
+          "begin": 32360,
+          "end": 32479
+        },
+        {
+          "word": "went",
+          "begin": 32520,
+          "end": 32680
+        },
+        {
+          "word": "wrong.",
+          "begin": 32720,
+          "end": 32759
+        }
+      ]
+    },
+    {
+      "blockIndex": 3,
+      "type": "paragraph",
+      "text": "Every command gets a 16-byte Completion Queue Entry (CQE) — the result slip. Inside this result, there's a status field that contains:",
+      "beginMs": 32780,
+      "endMs": 41120,
+      "timestamps": [
+        {
+          "word": "Every",
+          "begin": 32780,
+          "end": 33440
+        },
+        {
+          "word": "command",
+          "begin": 33520,
+          "end": 33860
+        },
+        {
+          "word": "gets",
+          "begin": 33860,
+          "end": 33840
+        },
+        {
+          "word": "a",
+          "begin": 33840,
+          "end": 33880
+        },
+        {
+          "word": "16-byte",
+          "begin": 33940,
+          "end": 34880
+        },
+        {
+          "word": "Completion",
+          "begin": 34920,
+          "end": 35360
+        },
+        {
+          "word": "Queue",
+          "begin": 34960,
+          "end": 34980
+        },
+        {
+          "word": "Entry",
+          "begin": 35000,
+          "end": 35180
+        },
+        {
+          "word": "(CQE)",
+          "begin": 35260,
+          "end": 35820
+        },
+        {
+          "word": "the",
+          "begin": 35860,
+          "end": 35920
+        },
+        {
+          "word": "result",
+          "begin": 35920,
+          "end": 36620
+        },
+        {
+          "word": "slip.",
+          "begin": 37240,
+          "end": 38060
+        },
+        {
+          "word": "Inside",
+          "begin": 38320,
+          "end": 38680
+        },
+        {
+          "word": "this",
+          "begin": 38700,
+          "end": 38840
+        },
+        {
+          "word": "result,",
+          "begin": 38880,
+          "end": 39220
+        },
+        {
+          "word": "there's",
+          "begin": 39220,
+          "end": 39460
+        },
+        {
+          "word": "a",
+          "begin": 39480,
+          "end": 39600
+        },
+        {
+          "word": "status",
+          "begin": 39640,
+          "end": 39940
+        },
+        {
+          "word": "field",
+          "begin": 40000,
+          "end": 40220
+        },
+        {
+          "word": "that",
+          "begin": 40220,
+          "end": 40320
+        },
+        {
+          "word": "contains:",
+          "begin": 40360,
+          "end": 40820
+        },
+        {
+          "word": "Why",
+          "begin": 41040,
+          "end": 41120
+        }
+      ]
+    },
+    {
+      "blockIndex": 4,
+      "type": "paragraph",
+      "text": "Why is DNR so important? When a driver gets an error, it needs to decide: should I retry? DNR answers this instantly. A media error (dead NAND page) with DNR=1 means &ldquo;stop trying, this data is gone.&rdquo; A busy error with DNR=0 means &ldquo;try again in a moment.&rdquo;",
+      "beginMs": 41300,
+      "endMs": 63640,
+      "timestamps": [
+        {
+          "word": "is",
+          "begin": 41300,
+          "end": 41400
+        },
+        {
+          "word": "DNR",
+          "begin": 41440,
+          "end": 41940
+        },
+        {
+          "word": "so",
+          "begin": 41940,
+          "end": 42000
+        },
+        {
+          "word": "important?",
+          "begin": 42080,
+          "end": 42580
+        },
+        {
+          "word": "When",
+          "begin": 43000,
+          "end": 43100
+        },
+        {
+          "word": "a",
+          "begin": 43120,
+          "end": 43140
+        },
+        {
+          "word": "driver",
+          "begin": 43220,
+          "end": 43500
+        },
+        {
+          "word": "gets",
+          "begin": 43580,
+          "end": 43740
+        },
+        {
+          "word": "an",
+          "begin": 43780,
+          "end": 43840
+        },
+        {
+          "word": "error,",
+          "begin": 43940,
+          "end": 44120
+        },
+        {
+          "word": "it",
+          "begin": 44460,
+          "end": 44560
+        },
+        {
+          "word": "needs",
+          "begin": 44580,
+          "end": 44760
+        },
+        {
+          "word": "to",
+          "begin": 44760,
+          "end": 44800
+        },
+        {
+          "word": "decide:",
+          "begin": 44840,
+          "end": 45380
+        },
+        {
+          "word": "should",
+          "begin": 45640,
+          "end": 45780
+        },
+        {
+          "word": "I",
+          "begin": 45800,
+          "end": 45820
+        },
+        {
+          "word": "retry?",
+          "begin": 45920,
+          "end": 46240
+        },
+        {
+          "word": "DNR",
+          "begin": 46940,
+          "end": 47480
+        },
+        {
+          "word": "answers",
+          "begin": 47520,
+          "end": 47780
+        },
+        {
+          "word": "this",
+          "begin": 47820,
+          "end": 47980
+        },
+        {
+          "word": "instantly.",
+          "begin": 48060,
+          "end": 48480
+        },
+        {
+          "word": "A",
+          "begin": 48800,
+          "end": 48840
+        },
+        {
+          "word": "media",
+          "begin": 48900,
+          "end": 49160
+        },
+        {
+          "word": "error",
+          "begin": 49280,
+          "end": 49440
+        },
+        {
+          "word": "(dead",
+          "begin": 49640,
+          "end": 49840
+        },
+        {
+          "word": "NAND",
+          "begin": 49880,
+          "end": 50120
+        },
+        {
+          "word": "page)",
+          "begin": 50200,
+          "end": 51660
+        },
+        {
+          "word": "with",
+          "begin": 51740,
+          "end": 52000
+        },
+        {
+          "word": "DNR=1",
+          "begin": 52340,
+          "end": 52660
+        },
+        {
+          "word": "means",
+          "begin": 52780,
+          "end": 52880
+        },
+        {
+          "word": "&ldquo;stop",
+          "begin": 52960,
+          "end": 54180
+        },
+        {
+          "word": "trying,",
+          "begin": 54180,
+          "end": 54660
+        },
+        {
+          "word": "this",
+          "begin": 54960,
+          "end": 55100
+        },
+        {
+          "word": "data",
+          "begin": 55160,
+          "end": 55380
+        },
+        {
+          "word": "is",
+          "begin": 55480,
+          "end": 55580
+        },
+        {
+          "word": "gone.&rdquo;",
+          "begin": 55640,
+          "end": 57040
+        },
+        {
+          "word": "A",
+          "begin": 57720,
+          "end": 57740
+        },
+        {
+          "word": "busy",
+          "begin": 57820,
+          "end": 58020
+        },
+        {
+          "word": "error",
+          "begin": 58180,
+          "end": 58520
+        },
+        {
+          "word": "with",
+          "begin": 58580,
+          "end": 58760
+        },
+        {
+          "word": "DNR=0",
+          "begin": 58800,
+          "end": 60320
+        },
+        {
+          "word": "means",
+          "begin": 60400,
+          "end": 60500
+        },
+        {
+          "word": "&ldquo;try",
+          "begin": 60560,
+          "end": 61640
+        },
+        {
+          "word": "again",
+          "begin": 61780,
+          "end": 62060
+        },
+        {
+          "word": "in",
+          "begin": 62080,
+          "end": 62160
+        },
+        {
+          "word": "a",
+          "begin": 62180,
+          "end": 62200
+        },
+        {
+          "word": "moment.&rdquo;",
+          "begin": 62260,
+          "end": 63640
+        }
+      ]
+    },
+    {
+      "blockIndex": 5,
+      "type": "info",
+      "text": "Async Event Requests (AER) — the drive calling YOU: So far, communication has been one-way: the host sends commands, the SSD responds. But what if something urgent happens on the SSD — a temperature spike, a namespace change, or a firmware activation? The host pre-posts &ldquo;Async Event Request&rdquo; commands. The SSD holds them and only completes one when something important happens — like a fire alarm that sits silent until there's smoke.",
+      "beginMs": 64140,
+      "endMs": 99200,
+      "timestamps": [
+        {
+          "word": "Async",
+          "begin": 64140,
+          "end": 64500
+        },
+        {
+          "word": "Event",
+          "begin": 64519,
+          "end": 64760
+        },
+        {
+          "word": "Requests",
+          "begin": 64800,
+          "end": 66060
+        },
+        {
+          "word": "(AER)",
+          "begin": 66180,
+          "end": 66340
+        },
+        {
+          "word": "the",
+          "begin": 66340,
+          "end": 66380
+        },
+        {
+          "word": "drive",
+          "begin": 66440,
+          "end": 66680
+        },
+        {
+          "word": "calling",
+          "begin": 66740,
+          "end": 67060
+        },
+        {
+          "word": "YOU:",
+          "begin": 67100,
+          "end": 67180
+        },
+        {
+          "word": "So",
+          "begin": 67740,
+          "end": 67800
+        },
+        {
+          "word": "far,",
+          "begin": 67940,
+          "end": 68040
+        },
+        {
+          "word": "communication",
+          "begin": 68320,
+          "end": 68940
+        },
+        {
+          "word": "has",
+          "begin": 68980,
+          "end": 69120
+        },
+        {
+          "word": "been",
+          "begin": 69160,
+          "end": 69260
+        },
+        {
+          "word": "one-way:",
+          "begin": 69320,
+          "end": 70040
+        },
+        {
+          "word": "the",
+          "begin": 70120,
+          "end": 70200
+        },
+        {
+          "word": "host",
+          "begin": 70120,
+          "end": 70360
+        },
+        {
+          "word": "sends",
+          "begin": 70400,
+          "end": 70660
+        },
+        {
+          "word": "commands,",
+          "begin": 70720,
+          "end": 71960
+        },
+        {
+          "word": "the",
+          "begin": 72020,
+          "end": 72100
+        },
+        {
+          "word": "responds.",
+          "begin": 72200,
+          "end": 72820
+        },
+        {
+          "word": "But",
+          "begin": 73680,
+          "end": 73760
+        },
+        {
+          "word": "what",
+          "begin": 73800,
+          "end": 73920
+        },
+        {
+          "word": "if",
+          "begin": 73940,
+          "end": 74020
+        },
+        {
+          "word": "something",
+          "begin": 74100,
+          "end": 74400
+        },
+        {
+          "word": "urgent",
+          "begin": 74460,
+          "end": 74720
+        },
+        {
+          "word": "happens",
+          "begin": 74760,
+          "end": 75600
+        },
+        {
+          "word": "on",
+          "begin": 75640,
+          "end": 75780
+        },
+        {
+          "word": "the",
+          "begin": 75840,
+          "end": 75920
+        },
+        {
+          "word": "a",
+          "begin": 76840,
+          "end": 76860
+        },
+        {
+          "word": "temperature",
+          "begin": 76940,
+          "end": 77340
+        },
+        {
+          "word": "spike,",
+          "begin": 77460,
+          "end": 77820
+        },
+        {
+          "word": "namespace",
+          "begin": 78340,
+          "end": 78900
+        },
+        {
+          "word": "change,",
+          "begin": 78980,
+          "end": 79340
+        },
+        {
+          "word": "or",
+          "begin": 79700,
+          "end": 79800
+        },
+        {
+          "word": "a",
+          "begin": 79800,
+          "end": 79820
+        },
+        {
+          "word": "firmware",
+          "begin": 79940,
+          "end": 80320
+        },
+        {
+          "word": "activation?",
+          "begin": 80360,
+          "end": 80980
+        },
+        {
+          "word": "The",
+          "begin": 81680,
+          "end": 81720
+        },
+        {
+          "word": "host",
+          "begin": 81800,
+          "end": 82140
+        },
+        {
+          "word": "pre-posts",
+          "begin": 82140,
+          "end": 82780
+        },
+        {
+          "word": "&ldquo;Async",
+          "begin": 82920,
+          "end": 84260
+        },
+        {
+          "word": "Event",
+          "begin": 84280,
+          "end": 84640
+        },
+        {
+          "word": "Request&rdquo;",
+          "begin": 84920,
+          "end": 86100
+        },
+        {
+          "word": "commands.",
+          "begin": 86480,
+          "end": 88560
+        },
+        {
+          "word": "The",
+          "begin": 88620,
+          "end": 88680
+        },
+        {
+          "word": "holds",
+          "begin": 88840,
+          "end": 89180
+        },
+        {
+          "word": "them",
+          "begin": 89180,
+          "end": 89380
+        },
+        {
+          "word": "and",
+          "begin": 89740,
+          "end": 89820
+        },
+        {
+          "word": "only",
+          "begin": 89900,
+          "end": 90080
+        },
+        {
+          "word": "completes",
+          "begin": 90140,
+          "end": 90520
+        },
+        {
+          "word": "one",
+          "begin": 90600,
+          "end": 90860
+        },
+        {
+          "word": "when",
+          "begin": 91200,
+          "end": 91300
+        },
+        {
+          "word": "something",
+          "begin": 91400,
+          "end": 91700
+        },
+        {
+          "word": "important",
+          "begin": 91720,
+          "end": 92180
+        },
+        {
+          "word": "happens",
+          "begin": 92220,
+          "end": 92700
+        },
+        {
+          "word": "like",
+          "begin": 93440,
+          "end": 93580
+        },
+        {
+          "word": "a",
+          "begin": 93580,
+          "end": 93600
+        },
+        {
+          "word": "fire",
+          "begin": 93720,
+          "end": 93980
+        },
+        {
+          "word": "alarm",
+          "begin": 94000,
+          "end": 94300
+        },
+        {
+          "word": "that",
+          "begin": 94360,
+          "end": 94500
+        },
+        {
+          "word": "sits",
+          "begin": 94580,
+          "end": 94920
+        },
+        {
+          "word": "silent",
+          "begin": 95040,
+          "end": 95220
+        },
+        {
+          "word": "until",
+          "begin": 95260,
+          "end": 95500
+        },
+        {
+          "word": "there's",
+          "begin": 95540,
+          "end": 95600
+        },
+        {
+          "word": "smoke.",
+          "begin": 95760,
+          "end": 96100
+        },
+        {
+          "word": "Knowledge",
+          "begin": 96980,
+          "end": 97260
+        },
+        {
+          "word": "check:",
+          "begin": 97340,
+          "end": 98060
+        },
+        {
+          "word": "An",
+          "begin": 98180,
+          "end": 98300
+        },
+        {
+          "word": "NVMe",
+          "begin": 98380,
+          "end": 98400
+        },
+        {
+          "word": "driver",
+          "begin": 98500,
+          "end": 98760
+        },
+        {
+          "word": "receives",
+          "begin": 98840,
+          "end": 99120
+        },
+        {
+          "word": "a",
+          "begin": 99140,
+          "end": 99200
+        }
+      ]
+    },
+    {
+      "blockIndex": 6,
+      "type": "reveal",
+      "text": "Knowledge check: An NVMe driver receives a completion entry with DNR=0 (Do Not Retry = false) and a media error status code. A colleague says 'just retry it forever until it works.' Under what conditions is this a terrible strategy, and how should a production driver actually handle retryable errors? The answer: Retrying forever is dangerous for several reasons: (1) If the NAND page has a marginal ECC issue, repeated reads can actually worsen bit errors through read disturb — each read attempt stresses neighboring cells. (2) Infinite retries block the queue slot, preventing other commands from completing. With thousands of pending I/Os, one stuck retry loop can cascade into a system-wide hang. (3) Some 'retryable' errors are actually transient-then-permanent — the SSD may return DNR=0 initially because it's still attempting internal recovery, but the data may ultimately be unrecoverable. A production driver should: set a maximum retry count (Linux NVMe uses ~3-5 retries), implement exponential backoff between retries, escalate to the upper layer (filesystem/application) after exhausting retries so it can take corrective action (like reading from a RAID mirror or reporting the error to the user), and log every retry for diagnostic purposes. The DNR bit is a hint, not a guarantee — DNR=0 means 'a retry might help,' not 'a retry will definitely work.'",
+      "beginMs": 99240,
+      "endMs": 176000,
+      "timestamps": [
+        {
+          "word": "completion",
+          "begin": 99240,
+          "end": 99660
+        },
+        {
+          "word": "entry",
+          "begin": 99700,
+          "end": 99920
+        },
+        {
+          "word": "with",
+          "begin": 100100,
+          "end": 100220
+        },
+        {
+          "word": "DNR=0",
+          "begin": 100300,
+          "end": 101580
+        },
+        {
+          "word": "(Do",
+          "begin": 101580,
+          "end": 101620
+        },
+        {
+          "word": "Not",
+          "begin": 101680,
+          "end": 101840
+        },
+        {
+          "word": "Retry",
+          "begin": 101880,
+          "end": 102120
+        },
+        {
+          "word": "=",
+          "begin": 102260,
+          "end": 102520
+        },
+        {
+          "word": "false)",
+          "begin": 102580,
+          "end": 102940
+        },
+        {
+          "word": "and",
+          "begin": 103100,
+          "end": 103180
+        },
+        {
+          "word": "a",
+          "begin": 103180,
+          "end": 103220
+        },
+        {
+          "word": "media",
+          "begin": 103280,
+          "end": 103500
+        },
+        {
+          "word": "error",
+          "begin": 103600,
+          "end": 103720
+        },
+        {
+          "word": "status",
+          "begin": 103820,
+          "end": 104140
+        },
+        {
+          "word": "code.",
+          "begin": 104200,
+          "end": 104460
+        },
+        {
+          "word": "A",
+          "begin": 105080,
+          "end": 105100
+        },
+        {
+          "word": "colleague",
+          "begin": 105160,
+          "end": 105460
+        },
+        {
+          "word": "says",
+          "begin": 105540,
+          "end": 105760
+        },
+        {
+          "word": "'just",
+          "begin": 105860,
+          "end": 106040
+        },
+        {
+          "word": "retry",
+          "begin": 106080,
+          "end": 106400
+        },
+        {
+          "word": "it",
+          "begin": 106440,
+          "end": 106460
+        },
+        {
+          "word": "forever",
+          "begin": 106520,
+          "end": 106780
+        },
+        {
+          "word": "until",
+          "begin": 106900,
+          "end": 107140
+        },
+        {
+          "word": "it",
+          "begin": 107140,
+          "end": 107200
+        },
+        {
+          "word": "works.'",
+          "begin": 107240,
+          "end": 107580
+        },
+        {
+          "word": "Under",
+          "begin": 108340,
+          "end": 108480
+        },
+        {
+          "word": "what",
+          "begin": 108540,
+          "end": 108660
+        },
+        {
+          "word": "conditions",
+          "begin": 108700,
+          "end": 109080
+        },
+        {
+          "word": "is",
+          "begin": 109120,
+          "end": 109140
+        },
+        {
+          "word": "this",
+          "begin": 109160,
+          "end": 108840
+        },
+        {
+          "word": "a",
+          "begin": 108840,
+          "end": 108880
+        },
+        {
+          "word": "terrible",
+          "begin": 108940,
+          "end": 109240
+        },
+        {
+          "word": "strategy,",
+          "begin": 109280,
+          "end": 109760
+        },
+        {
+          "word": "and",
+          "begin": 109780,
+          "end": 109960
+        },
+        {
+          "word": "how",
+          "begin": 109980,
+          "end": 110040
+        },
+        {
+          "word": "should",
+          "begin": 110120,
+          "end": 110260
+        },
+        {
+          "word": "a",
+          "begin": 110280,
+          "end": 110640
+        },
+        {
+          "word": "production",
+          "begin": 110660,
+          "end": 111140
+        },
+        {
+          "word": "driver",
+          "begin": 111140,
+          "end": 111420
+        },
+        {
+          "word": "actually",
+          "begin": 111440,
+          "end": 111780
+        },
+        {
+          "word": "handle",
+          "begin": 111900,
+          "end": 111740
+        },
+        {
+          "word": "retryable",
+          "begin": 111760,
+          "end": 112460
+        },
+        {
+          "word": "errors?",
+          "begin": 112460,
+          "end": 113480
+        },
+        {
+          "word": "The",
+          "begin": 114200,
+          "end": 114260
+        },
+        {
+          "word": "answer:",
+          "begin": 114340,
+          "end": 115120
+        },
+        {
+          "word": "Retrying",
+          "begin": 115140,
+          "end": 115520
+        },
+        {
+          "word": "forever",
+          "begin": 115580,
+          "end": 116040
+        },
+        {
+          "word": "is",
+          "begin": 116100,
+          "end": 116120
+        },
+        {
+          "word": "dangerous",
+          "begin": 116180,
+          "end": 116640
+        },
+        {
+          "word": "for",
+          "begin": 116680,
+          "end": 116740
+        },
+        {
+          "word": "several",
+          "begin": 116840,
+          "end": 117080
+        },
+        {
+          "word": "reasons:",
+          "begin": 117140,
+          "end": 117540
+        },
+        {
+          "word": "(1)",
+          "begin": 117880,
+          "end": 118140
+        },
+        {
+          "word": "If",
+          "begin": 118440,
+          "end": 118520
+        },
+        {
+          "word": "the",
+          "begin": 118540,
+          "end": 118600
+        },
+        {
+          "word": "NAND",
+          "begin": 118660,
+          "end": 118860
+        },
+        {
+          "word": "page",
+          "begin": 118860,
+          "end": 119240
+        },
+        {
+          "word": "has",
+          "begin": 119240,
+          "end": 119360
+        },
+        {
+          "word": "a",
+          "begin": 119380,
+          "end": 119400
+        },
+        {
+          "word": "marginal",
+          "begin": 119460,
+          "end": 119840
+        },
+        {
+          "word": "ECC",
+          "begin": 119920,
+          "end": 120060
+        },
+        {
+          "word": "issue,",
+          "begin": 120080,
+          "end": 120280
+        },
+        {
+          "word": "repeated",
+          "begin": 120400,
+          "end": 121300
+        },
+        {
+          "word": "reads",
+          "begin": 121360,
+          "end": 121600
+        },
+        {
+          "word": "can",
+          "begin": 121600,
+          "end": 121780
+        },
+        {
+          "word": "actually",
+          "begin": 121840,
+          "end": 122160
+        },
+        {
+          "word": "worsen",
+          "begin": 122240,
+          "end": 122560
+        },
+        {
+          "word": "bit",
+          "begin": 122640,
+          "end": 122740
+        },
+        {
+          "word": "errors",
+          "begin": 122800,
+          "end": 123060
+        },
+        {
+          "word": "through",
+          "begin": 123120,
+          "end": 123200
+        },
+        {
+          "word": "read",
+          "begin": 123300,
+          "end": 123440
+        },
+        {
+          "word": "disturb",
+          "begin": 123480,
+          "end": 123900
+        },
+        {
+          "word": "each",
+          "begin": 124120,
+          "end": 124280
+        },
+        {
+          "word": "read",
+          "begin": 124360,
+          "end": 124520
+        },
+        {
+          "word": "attempt",
+          "begin": 124540,
+          "end": 124900
+        },
+        {
+          "word": "stresses",
+          "begin": 124960,
+          "end": 125340
+        },
+        {
+          "word": "neighboring",
+          "begin": 125380,
+          "end": 125720
+        },
+        {
+          "word": "cells.",
+          "begin": 125800,
+          "end": 126160
+        },
+        {
+          "word": "(2)",
+          "begin": 126820,
+          "end": 126900
+        },
+        {
+          "word": "Infinite",
+          "begin": 127000,
+          "end": 127340
+        },
+        {
+          "word": "retries",
+          "begin": 127380,
+          "end": 127860
+        },
+        {
+          "word": "block",
+          "begin": 127940,
+          "end": 128139
+        },
+        {
+          "word": "the",
+          "begin": 128139,
+          "end": 128220
+        },
+        {
+          "word": "queue",
+          "begin": 128300,
+          "end": 128400
+        },
+        {
+          "word": "slot,",
+          "begin": 128520,
+          "end": 128840
+        },
+        {
+          "word": "preventing",
+          "begin": 129080,
+          "end": 129460
+        },
+        {
+          "word": "other",
+          "begin": 129539,
+          "end": 129660
+        },
+        {
+          "word": "commands",
+          "begin": 129740,
+          "end": 130100
+        },
+        {
+          "word": "from",
+          "begin": 130139,
+          "end": 130259
+        },
+        {
+          "word": "completing.",
+          "begin": 130300,
+          "end": 130800
+        },
+        {
+          "word": "With",
+          "begin": 131220,
+          "end": 131320
+        },
+        {
+          "word": "thousands",
+          "begin": 131400,
+          "end": 131800
+        },
+        {
+          "word": "of",
+          "begin": 131800,
+          "end": 131880
+        },
+        {
+          "word": "pending",
+          "begin": 131940,
+          "end": 132220
+        },
+        {
+          "word": "I/Os,",
+          "begin": 132320,
+          "end": 133160
+        },
+        {
+          "word": "one",
+          "begin": 133240,
+          "end": 133260
+        },
+        {
+          "word": "stuck",
+          "begin": 133300,
+          "end": 133480
+        },
+        {
+          "word": "retry",
+          "begin": 133520,
+          "end": 133760
+        },
+        {
+          "word": "loop",
+          "begin": 133880,
+          "end": 134080
+        },
+        {
+          "word": "can",
+          "begin": 134120,
+          "end": 134240
+        },
+        {
+          "word": "cascade",
+          "begin": 134300,
+          "end": 134780
+        },
+        {
+          "word": "into",
+          "begin": 134820,
+          "end": 134980
+        },
+        {
+          "word": "a",
+          "begin": 135040,
+          "end": 135060
+        },
+        {
+          "word": "system-wide",
+          "begin": 135160,
+          "end": 135740
+        },
+        {
+          "word": "hang.",
+          "begin": 135740,
+          "end": 136000
+        },
+        {
+          "word": "(3)",
+          "begin": 136560,
+          "end": 136700
+        },
+        {
+          "word": "'retryable'",
+          "begin": 136880,
+          "end": 137480
+        },
+        {
+          "word": "errors",
+          "begin": 137560,
+          "end": 137860
+        },
+        {
+          "word": "are",
+          "begin": 137940,
+          "end": 137960
+        },
+        {
+          "word": "actually",
+          "begin": 138100,
+          "end": 138400
+        },
+        {
+          "word": "transient-then-permanent",
+          "begin": 138480,
+          "end": 139600
+        },
+        {
+          "word": "the",
+          "begin": 139640,
+          "end": 139960
+        },
+        {
+          "word": "SSD",
+          "begin": 140060,
+          "end": 140500
+        },
+        {
+          "word": "may",
+          "begin": 140620,
+          "end": 140780
+        },
+        {
+          "word": "return",
+          "begin": 140780,
+          "end": 141120
+        },
+        {
+          "word": "DNR=0",
+          "begin": 141200,
+          "end": 142260
+        },
+        {
+          "word": "initially",
+          "begin": 142380,
+          "end": 142780
+        },
+        {
+          "word": "because",
+          "begin": 143120,
+          "end": 143340
+        },
+        {
+          "word": "it's",
+          "begin": 143360,
+          "end": 143460
+        },
+        {
+          "word": "still",
+          "begin": 143500,
+          "end": 143700
+        },
+        {
+          "word": "attempting",
+          "begin": 143720,
+          "end": 144120
+        },
+        {
+          "word": "internal",
+          "begin": 144160,
+          "end": 144460
+        },
+        {
+          "word": "recovery,",
+          "begin": 144540,
+          "end": 144960
+        },
+        {
+          "word": "but",
+          "begin": 145280,
+          "end": 145360
+        },
+        {
+          "word": "the",
+          "begin": 145380,
+          "end": 145440
+        },
+        {
+          "word": "data",
+          "begin": 145520,
+          "end": 145720
+        },
+        {
+          "word": "may",
+          "begin": 145800,
+          "end": 146020
+        },
+        {
+          "word": "ultimately",
+          "begin": 146040,
+          "end": 146380
+        },
+        {
+          "word": "be",
+          "begin": 146380,
+          "end": 146580
+        },
+        {
+          "word": "unrecoverable.",
+          "begin": 146680,
+          "end": 147280
+        },
+        {
+          "word": "A",
+          "begin": 147940,
+          "end": 147960
+        },
+        {
+          "word": "production",
+          "begin": 148020,
+          "end": 148420
+        },
+        {
+          "word": "driver",
+          "begin": 148460,
+          "end": 148740
+        },
+        {
+          "word": "should:",
+          "begin": 148880,
+          "end": 149140
+        },
+        {
+          "word": "set",
+          "begin": 149400,
+          "end": 149540
+        },
+        {
+          "word": "a",
+          "begin": 149560,
+          "end": 149580
+        },
+        {
+          "word": "maximum",
+          "begin": 149640,
+          "end": 150100
+        },
+        {
+          "word": "retry",
+          "begin": 150140,
+          "end": 150420
+        },
+        {
+          "word": "count",
+          "begin": 150560,
+          "end": 150880
+        },
+        {
+          "word": "(Linux",
+          "begin": 151060,
+          "end": 151340
+        },
+        {
+          "word": "NVMe",
+          "begin": 151440,
+          "end": 152460
+        },
+        {
+          "word": "uses",
+          "begin": 152460,
+          "end": 152820
+        },
+        {
+          "word": "~3-5",
+          "begin": 152820,
+          "end": 154240
+        },
+        {
+          "word": "retries),",
+          "begin": 154280,
+          "end": 154820
+        },
+        {
+          "word": "implement",
+          "begin": 155040,
+          "end": 155440
+        },
+        {
+          "word": "exponential",
+          "begin": 155520,
+          "end": 156040
+        },
+        {
+          "word": "backoff",
+          "begin": 156120,
+          "end": 156540
+        },
+        {
+          "word": "between",
+          "begin": 156580,
+          "end": 156900
+        },
+        {
+          "word": "retries,",
+          "begin": 156960,
+          "end": 157480
+        },
+        {
+          "word": "escalate",
+          "begin": 157680,
+          "end": 158120
+        },
+        {
+          "word": "to",
+          "begin": 158160,
+          "end": 158220
+        },
+        {
+          "word": "the",
+          "begin": 158260,
+          "end": 158300
+        },
+        {
+          "word": "upper",
+          "begin": 158420,
+          "end": 158580
+        },
+        {
+          "word": "layer",
+          "begin": 158680,
+          "end": 158840
+        },
+        {
+          "word": "(filesystem/application)",
+          "begin": 158960,
+          "end": 160740
+        },
+        {
+          "word": "after",
+          "begin": 160760,
+          "end": 160960
+        },
+        {
+          "word": "exhausting",
+          "begin": 161000,
+          "end": 161780
+        },
+        {
+          "word": "retries",
+          "begin": 161780,
+          "end": 162040
+        },
+        {
+          "word": "so",
+          "begin": 162080,
+          "end": 162200
+        },
+        {
+          "word": "it",
+          "begin": 162220,
+          "end": 162320
+        },
+        {
+          "word": "can",
+          "begin": 162360,
+          "end": 162460
+        },
+        {
+          "word": "take",
+          "begin": 162460,
+          "end": 162700
+        },
+        {
+          "word": "corrective",
+          "begin": 162740,
+          "end": 163280
+        },
+        {
+          "word": "action",
+          "begin": 163300,
+          "end": 163460
+        },
+        {
+          "word": "(like",
+          "begin": 163460,
+          "end": 163600
+        },
+        {
+          "word": "reading",
+          "begin": 163680,
+          "end": 163980
+        },
+        {
+          "word": "from",
+          "begin": 164000,
+          "end": 164460
+        },
+        {
+          "word": "a",
+          "begin": 164540,
+          "end": 164600
+        },
+        {
+          "word": "RAID",
+          "begin": 164680,
+          "end": 165020
+        },
+        {
+          "word": "mirror",
+          "begin": 165040,
+          "end": 165480
+        },
+        {
+          "word": "or",
+          "begin": 165500,
+          "end": 165580
+        },
+        {
+          "word": "reporting",
+          "begin": 165580,
+          "end": 166300
+        },
+        {
+          "word": "the",
+          "begin": 166300,
+          "end": 166380
+        },
+        {
+          "word": "error",
+          "begin": 166420,
+          "end": 166740
+        },
+        {
+          "word": "to",
+          "begin": 166740,
+          "end": 166920
+        },
+        {
+          "word": "the",
+          "begin": 167020,
+          "end": 167080
+        },
+        {
+          "word": "user),",
+          "begin": 167080,
+          "end": 167460
+        },
+        {
+          "word": "and",
+          "begin": 167500,
+          "end": 167920
+        },
+        {
+          "word": "log",
+          "begin": 167940,
+          "end": 168000
+        },
+        {
+          "word": "diagnostic",
+          "begin": 167940,
+          "end": 168060
+        },
+        {
+          "word": "purposes.",
+          "begin": 168100,
+          "end": 168660
+        },
+        {
+          "word": "The",
+          "begin": 168880,
+          "end": 169080
+        },
+        {
+          "word": "DNR",
+          "begin": 169160,
+          "end": 169320
+        },
+        {
+          "word": "bit",
+          "begin": 169460,
+          "end": 169700
+        },
+        {
+          "word": "is",
+          "begin": 169820,
+          "end": 169920
+        },
+        {
+          "word": "a",
+          "begin": 169940,
+          "end": 170040
+        },
+        {
+          "word": "hint,",
+          "begin": 170040,
+          "end": 170280
+        },
+        {
+          "word": "not",
+          "begin": 170600,
+          "end": 170760
+        },
+        {
+          "word": "a",
+          "begin": 170760,
+          "end": 170780
+        },
+        {
+          "word": "guarantee",
+          "begin": 170860,
+          "end": 171260
+        },
+        {
+          "word": "DNR=0",
+          "begin": 171720,
+          "end": 172760
+        },
+        {
+          "word": "means",
+          "begin": 172920,
+          "end": 173120
+        },
+        {
+          "word": "'a",
+          "begin": 173140,
+          "end": 173160
+        },
+        {
+          "word": "retry",
+          "begin": 173240,
+          "end": 173520
+        },
+        {
+          "word": "might",
+          "begin": 173640,
+          "end": 173860
+        },
+        {
+          "word": "help,'",
+          "begin": 173860,
+          "end": 174140
+        },
+        {
+          "word": "not",
+          "begin": 174380,
+          "end": 174540
+        },
+        {
+          "word": "'a",
+          "begin": 174540,
+          "end": 174560
+        },
+        {
+          "word": "retry",
+          "begin": 174640,
+          "end": 174920
+        },
+        {
+          "word": "will",
+          "begin": 175040,
+          "end": 175120
+        },
+        {
+          "word": "definitely",
+          "begin": 175220,
+          "end": 175640
+        },
+        {
+          "word": "work.'",
+          "begin": 175720,
+          "end": 176000
+        }
+      ],
+      "requiresReveal": true
+    }
+  ]
+}

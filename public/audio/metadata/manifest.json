@@ -1,0 +1,329 @@
+{
+  "generatedAt": "2026-02-23T19:21:33Z",
+  "voice": "Sitcom Girl",
+  "voiceId": "5bbc32c1-a1f6-44e8-bedb-9870f23619e2",
+  "totalDurationMs": 9856758,
+  "totalSizeBytes": 157736448,
+  "sections": [
+    {
+      "sectionId": "sec-storage",
+      "label": "What Is Storage",
+      "audioFile": "/audio/sections/sec-storage.mp3",
+      "totalDurationMs": 146800,
+      "fileSizeBytes": 2349312,
+      "blockCount": 7
+    },
+    {
+      "sectionId": "sec-bus",
+      "label": "What Is a Bus",
+      "audioFile": "/audio/sections/sec-bus.mp3",
+      "totalDurationMs": 206360,
+      "fileSizeBytes": 3302400,
+      "blockCount": 8
+    },
+    {
+      "sectionId": "sec-data-flow",
+      "label": "How Data Flows",
+      "audioFile": "/audio/sections/sec-data-flow.mp3",
+      "totalDurationMs": 183320,
+      "fileSizeBytes": 2933760,
+      "blockCount": 7
+    },
+    {
+      "sectionId": "sec-transistor",
+      "label": "Transistors",
+      "audioFile": "/audio/sections/sec-transistor.mp3",
+      "totalDurationMs": 113840,
+      "fileSizeBytes": 1822080,
+      "blockCount": 6
+    },
+    {
+      "sectionId": "sec-binary",
+      "label": "Binary",
+      "audioFile": "/audio/sections/sec-binary.mp3",
+      "totalDurationMs": 256279,
+      "fileSizeBytes": 4101120,
+      "blockCount": 12
+    },
+    {
+      "sectionId": "sec-lba",
+      "label": "LBA",
+      "audioFile": "/audio/sections/sec-lba.mp3",
+      "totalDurationMs": 326400,
+      "fileSizeBytes": 5223552,
+      "blockCount": 11
+    },
+    {
+      "sectionId": "sec-nand-basics",
+      "label": "NAND Basics",
+      "audioFile": "/audio/sections/sec-nand-basics.mp3",
+      "totalDurationMs": 192560,
+      "fileSizeBytes": 3081600,
+      "blockCount": 12
+    },
+    {
+      "sectionId": "sec-nand-types",
+      "label": "Cell Types",
+      "audioFile": "/audio/sections/sec-nand-types.mp3",
+      "totalDurationMs": 143840,
+      "fileSizeBytes": 2302080,
+      "blockCount": 4
+    },
+    {
+      "sectionId": "sec-nand-endurance",
+      "label": "Endurance",
+      "audioFile": "/audio/sections/sec-nand-endurance.mp3",
+      "totalDurationMs": 245080,
+      "fileSizeBytes": 3921792,
+      "blockCount": 10
+    },
+    {
+      "sectionId": "sec-nand-hierarchy",
+      "label": "NAND Hierarchy",
+      "audioFile": "/audio/sections/sec-nand-hierarchy.mp3",
+      "totalDurationMs": 232920,
+      "fileSizeBytes": 3727104,
+      "blockCount": 9
+    },
+    {
+      "sectionId": "sec-ssd",
+      "label": "SSD Overview",
+      "audioFile": "/audio/sections/sec-ssd.mp3",
+      "totalDurationMs": 157960,
+      "fileSizeBytes": 2527872,
+      "blockCount": 8
+    },
+    {
+      "sectionId": "sec-ftl",
+      "label": "FTL",
+      "audioFile": "/audio/sections/sec-ftl.mp3",
+      "totalDurationMs": 158600,
+      "fileSizeBytes": 2538240,
+      "blockCount": 8
+    },
+    {
+      "sectionId": "sec-gc",
+      "label": "Garbage Collection",
+      "audioFile": "/audio/sections/sec-gc.mp3",
+      "totalDurationMs": 130759,
+      "fileSizeBytes": 2092800,
+      "blockCount": 7
+    },
+    {
+      "sectionId": "sec-vpc",
+      "label": "Block Management",
+      "audioFile": "/audio/sections/sec-vpc.mp3",
+      "totalDurationMs": 169960,
+      "fileSizeBytes": 2719872,
+      "blockCount": 9
+    },
+    {
+      "sectionId": "sec-qd",
+      "label": "Queue Depth",
+      "audioFile": "/audio/sections/sec-qd.mp3",
+      "totalDurationMs": 157320,
+      "fileSizeBytes": 2517504,
+      "blockCount": 9
+    },
+    {
+      "sectionId": "sec-pcie",
+      "label": "PCIe",
+      "audioFile": "/audio/sections/sec-pcie.mp3",
+      "totalDurationMs": 390520,
+      "fileSizeBytes": 6249216,
+      "blockCount": 17
+    },
+    {
+      "sectionId": "sec-bar0",
+      "label": "BAR0 Registers",
+      "audioFile": "/audio/sections/sec-bar0.mp3",
+      "totalDurationMs": 330320,
+      "fileSizeBytes": 5286144,
+      "blockCount": 18
+    },
+    {
+      "sectionId": "sec-queues",
+      "label": "Queues",
+      "audioFile": "/audio/sections/sec-queues.mp3",
+      "totalDurationMs": 282320,
+      "fileSizeBytes": 4518144,
+      "blockCount": 15
+    },
+    {
+      "sectionId": "sec-doorbells",
+      "label": "Doorbells",
+      "audioFile": "/audio/sections/sec-doorbells.mp3",
+      "totalDurationMs": 234160,
+      "fileSizeBytes": 3747072,
+      "blockCount": 12
+    },
+    {
+      "sectionId": "sec-boot",
+      "label": "Boot Sequence",
+      "audioFile": "/audio/sections/sec-boot.mp3",
+      "totalDurationMs": 189680,
+      "fileSizeBytes": 3035520,
+      "blockCount": 7
+    },
+    {
+      "sectionId": "sec-bus-trace",
+      "label": "Bus Trace",
+      "audioFile": "/audio/sections/sec-bus-trace.mp3",
+      "totalDurationMs": 210120,
+      "fileSizeBytes": 3362304,
+      "blockCount": 11
+    },
+    {
+      "sectionId": "sec-sqe",
+      "label": "SQE Structure",
+      "audioFile": "/audio/sections/sec-sqe.mp3",
+      "totalDurationMs": 164680,
+      "fileSizeBytes": 2635392,
+      "blockCount": 7
+    },
+    {
+      "sectionId": "sec-identify",
+      "label": "Identify",
+      "audioFile": "/audio/sections/sec-identify.mp3",
+      "totalDurationMs": 164400,
+      "fileSizeBytes": 2630784,
+      "blockCount": 8
+    },
+    {
+      "sectionId": "sec-namespaces",
+      "label": "Namespaces",
+      "audioFile": "/audio/sections/sec-namespaces.mp3",
+      "totalDurationMs": 217680,
+      "fileSizeBytes": 3483264,
+      "blockCount": 9
+    },
+    {
+      "sectionId": "sec-admin-cmds",
+      "label": "Admin Commands",
+      "audioFile": "/audio/sections/sec-admin-cmds.mp3",
+      "totalDurationMs": 140360,
+      "fileSizeBytes": 2246400,
+      "blockCount": 7
+    },
+    {
+      "sectionId": "sec-io-cmds",
+      "label": "I/O Commands",
+      "audioFile": "/audio/sections/sec-io-cmds.mp3",
+      "totalDurationMs": 167600,
+      "fileSizeBytes": 2682240,
+      "blockCount": 8
+    },
+    {
+      "sectionId": "sec-errors",
+      "label": "Errors",
+      "audioFile": "/audio/sections/sec-errors.mp3",
+      "totalDurationMs": 176120,
+      "fileSizeBytes": 2818560,
+      "blockCount": 7
+    },
+    {
+      "sectionId": "sec-io-path",
+      "label": "I/O Path",
+      "audioFile": "/audio/sections/sec-io-path.mp3",
+      "totalDurationMs": 132840,
+      "fileSizeBytes": 2125824,
+      "blockCount": 5
+    },
+    {
+      "sectionId": "sec-smart",
+      "label": "SMART",
+      "audioFile": "/audio/sections/sec-smart.mp3",
+      "totalDurationMs": 170840,
+      "fileSizeBytes": 2734080,
+      "blockCount": 9
+    },
+    {
+      "sectionId": "sec-trim",
+      "label": "TRIM & GC",
+      "audioFile": "/audio/sections/sec-trim.mp3",
+      "totalDurationMs": 296400,
+      "fileSizeBytes": 4743168,
+      "blockCount": 19
+    },
+    {
+      "sectionId": "sec-waf",
+      "label": "Write Amplification",
+      "audioFile": "/audio/sections/sec-waf.mp3",
+      "totalDurationMs": 191360,
+      "fileSizeBytes": 3062400,
+      "blockCount": 10
+    },
+    {
+      "sectionId": "sec-format-sanitize",
+      "label": "Format & Sanitize",
+      "audioFile": "/audio/sections/sec-format-sanitize.mp3",
+      "totalDurationMs": 237920,
+      "fileSizeBytes": 3807360,
+      "blockCount": 11
+    },
+    {
+      "sectionId": "sec-wear",
+      "label": "Wear Leveling",
+      "audioFile": "/audio/sections/sec-wear.mp3",
+      "totalDurationMs": 224600,
+      "fileSizeBytes": 3594240,
+      "blockCount": 13
+    },
+    {
+      "sectionId": "sec-filesystems",
+      "label": "Filesystems",
+      "audioFile": "/audio/sections/sec-filesystems.mp3",
+      "totalDurationMs": 357560,
+      "fileSizeBytes": 5721984,
+      "blockCount": 18
+    },
+    {
+      "sectionId": "sec-fio",
+      "label": "fio Guide",
+      "audioFile": "/audio/sections/sec-fio.mp3",
+      "totalDurationMs": 420040,
+      "fileSizeBytes": 6721920,
+      "blockCount": 23
+    },
+    {
+      "sectionId": "sec-testing",
+      "label": "Testing",
+      "audioFile": "/audio/sections/sec-testing.mp3",
+      "totalDurationMs": 158760,
+      "fileSizeBytes": 2540544,
+      "blockCount": 7
+    },
+    {
+      "sectionId": "sec-firmware",
+      "label": "Firmware",
+      "audioFile": "/audio/sections/sec-firmware.mp3",
+      "totalDurationMs": 302320,
+      "fileSizeBytes": 4838400,
+      "blockCount": 18
+    },
+    {
+      "sectionId": "sec-security",
+      "label": "Security",
+      "audioFile": "/audio/sections/sec-security.mp3",
+      "totalDurationMs": 673600,
+      "fileSizeBytes": 10778880,
+      "blockCount": 40
+    },
+    {
+      "sectionId": "sec-passthru",
+      "label": "Passthru",
+      "audioFile": "/audio/sections/sec-passthru.mp3",
+      "totalDurationMs": 714560,
+      "fileSizeBytes": 11434368,
+      "blockCount": 38
+    },
+    {
+      "sectionId": "sec-tracing",
+      "label": "Tracing",
+      "audioFile": "/audio/sections/sec-tracing.mp3",
+      "totalDurationMs": 486000,
+      "fileSizeBytes": 7777152,
+      "blockCount": 32
+    }
+  ]
+}

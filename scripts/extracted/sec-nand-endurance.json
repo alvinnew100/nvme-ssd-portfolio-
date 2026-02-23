@@ -1,0 +1,57 @@
+{
+  "sectionId": "sec-nand-endurance",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "One Program (write) + Erase cycle. Each time you write data and later erase the block to make room, that's one P/E cycle counted against the cell's lifespan.",
+      "blockIndex": 0
+    },
+    {
+      "type": "paragraph",
+      "text": "Each erase forces high voltage through the oxide insulator. Over time, electrons get permanently stuck in the oxide (charge trapping), making it leaky. Eventually, the floating gate can't reliably hold charge at the right level.",
+      "blockIndex": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "SLC only distinguishes 2 levels (big margin), so it tolerates more oxide damage. QLC distinguishes 16 levels (tiny margins) — even small oxide degradation causes read errors. That's why SLC lasts ~100K cycles but QLC only ~1K.",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "The manufacturer's rated endurance for the whole drive. Example: 600 TBW on a 1TB TLC drive means ~600 full-drive writes before expected failures. TBW = drive capacity × P/E cycles × write amplification factor.",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "The drive doesn't instantly die. Error correction (ECC) handles increasing bit errors as oxide degrades. But eventually errors exceed what ECC can fix, and sectors become unreadable. SMART attribute &ldquo;Percentage Used&rdquo; tracks this.",
+      "blockIndex": 4
+    },
+    {
+      "type": "heading",
+      "text": "NAND Endurance — How Long Cells Last",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "Endurance is a measure of how many times a NAND cell can be written to and erased before it becomes unreliable. Every time you write data and later erase the block to make room for new data, that counts as one P/E (Program/Erase) cycle. The endurance rating (e.g., &ldquo;~100,000 P/E&rdquo;) tells you the maximum number of these cycles the cell is designed to survive. After that, the cell's oxide insulator is too damaged to reliably store charge, and bit errors increase beyond what error correction can handle.",
+      "blockIndex": 6
+    },
+    {
+      "type": "paragraph",
+      "text": "Why does this matter? Because the cell type you choose (SLC/MLC/TLC/QLC) directly determines how long the drive lasts. The current cell type () has an endurance of cycles. Here's why:",
+      "blockIndex": 7
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: How would you estimate TLC endurance from first principles, knowing that SLC endures ~100K cycles and each additional bit per cell roughly reduces endurance by an order of magnitude? What physical mechanism drives this relationship? The answer: SLC (~100K P/E cycles) has 2 voltage levels with wide margins. Each additional bit doubles the voltage levels and roughly halves the margin between them: MLC (4 levels, ~10K cycles), TLC (8 levels, ~3K cycles), QLC (16 levels, ~1K cycles). TLC endures approximately 3,000 P/E cycles. The physical mechanism is oxide degradation: each erase cycle's high-voltage pulse permanently traps a few electrons in the tunnel oxide. With SLC's wide margins, the cell tolerates substantial threshold voltage shifts before misreads occur. With TLC's 8 tightly-packed levels, even small voltage shifts push distributions into neighboring states. The relationship isn't perfectly geometric because ECC and read-retry algorithms partially compensate for increased error rates.",
+      "requiresReveal": true,
+      "blockIndex": 8
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: A colleague says 'NAND cells wear out because the silicon melts from repeated writes.' When is this wrong, and what is the actual physical degradation mechanism? How does it manifest as observable symptoms? The answer: This is entirely wrong — silicon doesn't melt at normal operating temperatures (its melting point is 1,414C). The actual mechanism is oxide degradation through charge trapping. Each high-voltage erase cycle (~20V) forces electrons through the thin tunnel oxide via Fowler-Nordheim tunneling. Some electrons become permanently trapped in defect sites within the oxide layer itself. Over thousands of cycles, these trapped charges make the oxide increasingly 'leaky,' causing two observable symptoms: (1) the floating gate loses charge faster (reduced data retention), and (2) the threshold voltage distributions widen and shift, causing the controller to misread voltage levels. The symptoms manifest as increasing bit error rates in SMART data, more frequent ECC corrections, and eventually uncorrectable read errors.",
+      "requiresReveal": true,
+      "blockIndex": 9
+    }
+  ]
+}

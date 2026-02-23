@@ -1,0 +1,41 @@
+{
+  "sectionId": "sec-admin-cmds",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "Admin Commands — Managing the Drive",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: Admin Commands Are Management Controls. Admin commands are like the control room operations of a building — creating queues, reading logs, updating firmware, checking health. They manage the SSD itself rather than reading/writing user data. Admin commands go through the Admin Submission Queue (ASQ), which is always queue pair 0.",
+      "blockIndex": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "So far we've seen the Identify command — the first question the driver asks. But there are many more management commands. Think of admin commands as the building manager's toolkit: they handle configuration, health checks, firmware updates, security, and creating/destroying queues.",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "Admin commands always go on Queue ID 0 — the special admin queue that was created during boot. They manage the drive itself, not your data. (Data commands use I/O queues with QID &ge; 1, which we'll cover next.)",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "Why separate admin from I/O queues? Because you always need a way to manage the drive, even when I/O queues are congested. The admin queue is like a &ldquo;priority line&rdquo; that can't be blocked by data traffic.",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "Click any command below to see its nvme-cli equivalent — the actual terminal command you'd type to issue it:",
+      "blockIndex": 5
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: Why does NVMe separate admin commands from I/O commands into different queues, rather than mixing them all into a single queue? Under what conditions would a shared queue become a serious problem? The answer: Admin commands handle device management — identifying the controller, creating queues, getting logs, updating firmware — while I/O commands handle user data transfer (reads and writes). NVMe separates them because the admin queue is a 'priority lifeline' that must always remain responsive. If admin and I/O commands shared a queue, a burst of thousands of I/O operations could starve critical management commands. Imagine needing to check drive health during a heavy database workload — if your health-check command is stuck behind 64K pending reads, you can't diagnose the problem. Worse, if you need to abort a stuck I/O command or reset a queue, you need a separate channel to issue that abort. The admin queue (QID 0) is always available and never competes with data traffic. This separation also simplifies the controller's internal scheduling — it can prioritize admin commands and guarantee they complete within a bounded time.",
+      "requiresReveal": true,
+      "blockIndex": 6
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "sectionId": "sec-ftl",
+  "blocks": [
+    {
+      "type": "heading",
+      "text": "The Flash Translation Layer (FTL)",
+      "blockIndex": 0
+    },
+    {
+      "type": "analogy",
+      "text": "Analogy: The FTL Is a Library Card Catalog. Imagine a library that can't erase single pages — only whole shelves. When you update a book, the librarian writes the new version on a fresh shelf, updates the card catalog to point there, and marks the old copy as 'outdated.' Later, a cleanup crew (garbage collection) moves valid books off shelves with too many outdated copies, then clears those shelves for reuse.",
+      "blockIndex": 1
+    },
+    {
+      "type": "term",
+      "text": "FTL (Flash Translation Layer): The firmware inside the SSD controller that translates logical addresses (LBAs from the host) to physical NAND page locations. It handles out-of-place writes, garbage collection, and wear leveling — all invisible to the host operating system.",
+      "blockIndex": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "Remember the &ldquo;shredding the whole notebook&rdquo; problem from the hierarchy section? You can write individual pages, but erasing requires wiping entire blocks (hundreds of pages). So what happens when you want to update just one page's worth of data?",
+      "blockIndex": 3
+    },
+    {
+      "type": "paragraph",
+      "text": "The SSD can't erase a whole block just to update one page — that would destroy all the other data in that block. Instead, the controller uses a clever trick called the Flash Translation Layer (FTL). Instead of overwriting the old page, it writes the new data to a completely different, free page somewhere else on the drive, then updates a mapping table to point the LBA at the new location.",
+      "blockIndex": 4
+    },
+    {
+      "type": "paragraph",
+      "text": "The old page still exists but now contains outdated data — it's called &ldquo;stale.&rdquo; Stale pages waste space. They'll be cleaned up later by a process called garbage collection.",
+      "blockIndex": 5
+    },
+    {
+      "type": "paragraph",
+      "text": "Let's see how this works visually, then try it yourself:",
+      "blockIndex": 6
+    },
+    {
+      "type": "reveal",
+      "text": "Knowledge check: Why is out-of-place writing not merely a software optimization but an absolute physical necessity for NAND flash? What would need to change at the silicon level to allow in-place overwrites? The answer: NAND flash pages can only be programmed (written) once per erase cycle — once electrons are pushed into the floating gate, you can't selectively add more to change the stored value. You can only remove electrons via a high-voltage erase, which affects the entire block (128-256 pages). To overwrite a single page in place, you'd need to erase its entire block first, destroying all other data in that block. The FTL avoids this by writing updated data to a fresh, pre-erased page and updating the mapping table to redirect the LBA to the new location. To enable true in-place overwrites, the silicon would need per-page erase capability — which would require electrically isolating each page's cells on separate substrate wells, dramatically increasing die area and manufacturing complexity. This is why no NAND flash supports in-place overwrites; it's a fundamental physical limitation, not a design choice.",
+      "requiresReveal": true,
+      "blockIndex": 7
+    }
+  ]
+}
