@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef } from "react";
 import { useVoiceoverStore } from "@/store/voiceoverStore";
-import { useActiveSection } from "@/hooks/useActiveSection";
+import { useActiveSection, SECTION_IDS } from "@/hooks/useActiveSection";
 import type { SectionMetadata, TextBlock } from "@/types/voiceover";
 
 /** Binary search for the active block at a given time. */
@@ -22,11 +22,9 @@ function findActiveBlock(blocks: TextBlock[], timeMs: number): number {
     }
   }
 
-  // Verify the found block actually contains the time
   if (result >= 0 && blocks[result].endMs >= timeMs) {
     return result;
   }
-  // If between blocks, return the previous one
   return result;
 }
 
@@ -49,6 +47,11 @@ function findActiveWord(block: TextBlock, timeMs: number): number {
   }
 
   return result;
+}
+
+/** Helper to get fresh store state (avoids stale closures) */
+function getState() {
+  return useVoiceoverStore.getState();
 }
 
 interface VoiceoverHook {
@@ -75,21 +78,22 @@ export function useVoiceover(): VoiceoverHook {
   const activeSection = useActiveSection();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const animFrameRef = useRef<number>(0);
-  const userScrollingRef = useRef(false);
+  const activeSectionRef = useRef<string | null>(null);
   const lastSectionRef = useRef<string | null>(null);
+
+  // Keep activeSectionRef in sync
+  activeSectionRef.current = activeSection;
 
   // Create or get the shared audio element
   useEffect(() => {
-    if (!audioRef.current) {
-      let el = document.getElementById("voiceover-audio") as HTMLAudioElement;
-      if (!el) {
-        el = document.createElement("audio");
-        el.id = "voiceover-audio";
-        el.preload = "none";
-        document.body.appendChild(el);
-      }
-      audioRef.current = el;
+    let el = document.getElementById("voiceover-audio") as HTMLAudioElement;
+    if (!el) {
+      el = document.createElement("audio");
+      el.id = "voiceover-audio";
+      el.preload = "auto";
+      document.body.appendChild(el);
     }
+    audioRef.current = el;
   }, []);
 
   // Sync playback rate
@@ -110,16 +114,16 @@ export function useVoiceover(): VoiceoverHook {
       const audio = audioRef.current;
       if (audio && !audio.paused) {
         const timeMs = audio.currentTime * 1000;
-        store.setCurrentTime(timeMs);
+        const s = getState();
+        s.setCurrentTime(timeMs);
 
-        // Find active block
-        const meta = store.currentSectionId
-          ? store.getMetadata(store.currentSectionId)
+        const meta = s.currentSectionId
+          ? s.getMetadata(s.currentSectionId)
           : undefined;
         if (meta) {
           const blockIdx = findActiveBlock(meta.blocks, timeMs);
-          if (blockIdx !== store.currentBlockIndex && blockIdx >= 0) {
-            store.setCurrentBlockIndex(blockIdx);
+          if (blockIdx !== s.currentBlockIndex && blockIdx >= 0) {
+            s.setCurrentBlockIndex(blockIdx);
           }
         }
       }
@@ -136,49 +140,59 @@ export function useVoiceover(): VoiceoverHook {
     if (!audio) return;
 
     const onEnded = () => {
-      store.setPlaying(false);
-      store.setCurrentTime(0);
-      store.setCurrentBlockIndex(0);
+      getState().setPlaying(false);
+      getState().setCurrentTime(0);
+      getState().setCurrentBlockIndex(0);
     };
 
     audio.addEventListener("ended", onEnded);
     return () => audio.removeEventListener("ended", onEnded);
   }, []);
 
-  // Auto-switch section when user scrolls to a new section
-  useEffect(() => {
-    if (!activeSection || activeSection === lastSectionRef.current) return;
-    lastSectionRef.current = activeSection;
-
-    if (store.isPlaying && store.currentSectionId !== activeSection) {
-      // Save position for departing section
-      if (store.currentSectionId) {
-        store.saveResumePosition(store.currentSectionId);
-      }
-
-      // Switch to new section
-      switchToSection(activeSection);
-    }
-  }, [activeSection, store.isPlaying]);
-
   /** Load metadata for a section (lazy) */
   const loadSectionMetadata = useCallback(
     async (sectionId: string): Promise<SectionMetadata | null> => {
-      const existing = store.getMetadata(sectionId);
+      const existing = getState().getMetadata(sectionId);
       if (existing) return existing;
 
       try {
         const res = await fetch(`/audio/metadata/${sectionId}.json`);
-        if (!res.ok) return null;
+        if (!res.ok) {
+          console.error(`[voiceover] Failed to load metadata for ${sectionId}: ${res.status}`);
+          return null;
+        }
         const meta: SectionMetadata = await res.json();
-        store.loadMetadata(sectionId, meta);
+        getState().loadMetadata(sectionId, meta);
         return meta;
-      } catch {
+      } catch (err) {
+        console.error(`[voiceover] Error loading metadata for ${sectionId}:`, err);
         return null;
       }
     },
     []
   );
+
+  /** Wait for audio element to be ready to play */
+  const waitForCanPlay = useCallback((audio: HTMLAudioElement): Promise<void> => {
+    return new Promise((resolve, reject) => {
+      if (audio.readyState >= 3) {
+        resolve();
+        return;
+      }
+      const onCanPlay = () => {
+        audio.removeEventListener("canplay", onCanPlay);
+        audio.removeEventListener("error", onError);
+        resolve();
+      };
+      const onError = () => {
+        audio.removeEventListener("canplay", onCanPlay);
+        audio.removeEventListener("error", onError);
+        reject(new Error(`Audio load error: ${audio.error?.message || "unknown"}`));
+      };
+      audio.addEventListener("canplay", onCanPlay);
+      audio.addEventListener("error", onError);
+    });
+  }, []);
 
   /** Switch audio to a new section */
   const switchToSection = useCallback(
@@ -187,120 +201,152 @@ export function useVoiceover(): VoiceoverHook {
       if (!meta || !audioRef.current) return;
 
       const audio = audioRef.current;
-      const wasPlaying = store.isPlaying;
+      const s = getState();
 
-      // Set new source
+      // Set new source and load
       audio.src = meta.audioFile;
-      audio.playbackRate = store.playbackRate;
+      audio.playbackRate = s.playbackRate;
+      audio.load();
 
       // Resume from saved position or start
-      const resume = store.getResumePosition(sectionId);
+      const resume = s.getResumePosition(sectionId);
       if (resume) {
         audio.currentTime = resume.timeMs / 1000;
-        store.setCurrentBlockIndex(resume.blockIndex);
-        store.setCurrentTime(resume.timeMs);
+        s.setCurrentBlockIndex(resume.blockIndex);
+        s.setCurrentTime(resume.timeMs);
       } else {
         audio.currentTime = 0;
-        store.setCurrentBlockIndex(0);
-        store.setCurrentTime(0);
+        s.setCurrentBlockIndex(0);
+        s.setCurrentTime(0);
       }
 
-      store.setCurrentSection(sectionId);
+      s.setCurrentSection(sectionId);
 
-      if (wasPlaying) {
-        try {
-          await audio.play();
-          store.setPlaying(true);
-        } catch {}
+      // Wait for audio to be ready
+      try {
+        await waitForCanPlay(audio);
+      } catch (err) {
+        console.error(`[voiceover] Audio load failed for ${sectionId}:`, err);
       }
     },
-    [store.playbackRate]
+    [loadSectionMetadata, waitForCanPlay]
   );
+
+  // Auto-switch section when user scrolls to a new section
+  useEffect(() => {
+    if (!activeSection || activeSection === lastSectionRef.current) return;
+    lastSectionRef.current = activeSection;
+
+    const s = getState();
+    if (s.isPlaying && s.currentSectionId !== activeSection) {
+      // Save position for departing section
+      if (s.currentSectionId) {
+        s.saveResumePosition(s.currentSectionId);
+      }
+
+      // Switch to new section and resume playback
+      (async () => {
+        await switchToSection(activeSection);
+        const audio = audioRef.current;
+        if (audio) {
+          try {
+            await audio.play();
+            getState().setPlaying(true);
+          } catch (err) {
+            console.error("[voiceover] Auto-switch play failed:", err);
+          }
+        }
+      })();
+    }
+  }, [activeSection, switchToSection]);
 
   // Actions
   const play = useCallback(
     async (sectionId?: string) => {
-      const targetSection = sectionId || activeSection || store.currentSectionId;
+      const s = getState();
+      const targetSection =
+        sectionId ||
+        activeSectionRef.current ||
+        s.currentSectionId ||
+        SECTION_IDS[0]; // Fallback to first section
+
       if (!targetSection) return;
 
-      if (targetSection !== store.currentSectionId) {
+      const audio = audioRef.current;
+      if (!audio) {
+        console.error("[voiceover] Audio element not ready");
+        return;
+      }
+
+      // Switch source if needed
+      if (targetSection !== s.currentSectionId || !audio.src || !audio.src.includes(targetSection)) {
         await switchToSection(targetSection);
       }
 
+      // Ensure metadata is loaded
       const meta = await loadSectionMetadata(targetSection);
-      if (!meta || !audioRef.current) return;
-
-      const audio = audioRef.current;
-
-      // If no source set yet, set it
-      if (!audio.src || !audio.src.includes(targetSection)) {
-        audio.src = meta.audioFile;
-        audio.playbackRate = store.playbackRate;
-
-        const resume = store.getResumePosition(targetSection);
-        if (resume) {
-          audio.currentTime = resume.timeMs / 1000;
-        }
+      if (!meta) {
+        console.error(`[voiceover] No metadata for ${targetSection}`);
+        return;
       }
-
-      store.setCurrentSection(targetSection);
 
       try {
         await audio.play();
-        store.setPlaying(true);
-      } catch {}
+        getState().setPlaying(true);
+      } catch (err) {
+        console.error("[voiceover] Play failed:", err);
+      }
     },
-    [activeSection, store.currentSectionId, store.playbackRate]
+    [switchToSection, loadSectionMetadata]
   );
 
   const pause = useCallback(() => {
     if (audioRef.current) {
       audioRef.current.pause();
     }
-    if (store.currentSectionId) {
-      store.saveResumePosition(store.currentSectionId);
+    const s = getState();
+    if (s.currentSectionId) {
+      s.saveResumePosition(s.currentSectionId);
     }
-    store.setPlaying(false);
-  }, [store.currentSectionId]);
+    s.setPlaying(false);
+  }, []);
 
   const togglePlay = useCallback(() => {
-    if (store.isPlaying) {
+    if (getState().isPlaying) {
       pause();
     } else {
       play();
     }
-  }, [store.isPlaying, play, pause]);
+  }, [play, pause]);
 
   const skipForward = useCallback(() => {
-    const meta = store.currentSectionId
-      ? store.getMetadata(store.currentSectionId)
-      : undefined;
+    const s = getState();
+    const meta = s.currentSectionId ? s.getMetadata(s.currentSectionId) : undefined;
     if (!meta) return;
-    const nextIdx = Math.min(store.currentBlockIndex + 1, meta.blocks.length - 1);
+    const nextIdx = Math.min(s.currentBlockIndex + 1, meta.blocks.length - 1);
     const block = meta.blocks[nextIdx];
     if (block && audioRef.current) {
       audioRef.current.currentTime = block.beginMs / 1000;
-      store.setCurrentBlockIndex(nextIdx);
-      store.setCurrentTime(block.beginMs);
+      s.setCurrentBlockIndex(nextIdx);
+      s.setCurrentTime(block.beginMs);
     }
-  }, [store.currentSectionId, store.currentBlockIndex]);
+  }, []);
 
   const skipBackward = useCallback(() => {
-    const meta = store.currentSectionId
-      ? store.getMetadata(store.currentSectionId)
-      : undefined;
+    const s = getState();
+    const meta = s.currentSectionId ? s.getMetadata(s.currentSectionId) : undefined;
     if (!meta) return;
-    const prevIdx = Math.max(store.currentBlockIndex - 1, 0);
+    const prevIdx = Math.max(s.currentBlockIndex - 1, 0);
     const block = meta.blocks[prevIdx];
     if (block && audioRef.current) {
       audioRef.current.currentTime = block.beginMs / 1000;
-      store.setCurrentBlockIndex(prevIdx);
-      store.setCurrentTime(block.beginMs);
+      s.setCurrentBlockIndex(prevIdx);
+      s.setCurrentTime(block.beginMs);
     }
-  }, [store.currentSectionId, store.currentBlockIndex]);
+  }, []);
 
   const setPlaybackRate = useCallback((rate: number) => {
-    store.setPlaybackRate(rate);
+    getState().setPlaybackRate(rate);
     if (audioRef.current) {
       audioRef.current.playbackRate = rate;
     }
@@ -309,7 +355,7 @@ export function useVoiceover(): VoiceoverHook {
   const seekToTime = useCallback((timeMs: number) => {
     if (audioRef.current) {
       audioRef.current.currentTime = timeMs / 1000;
-      store.setCurrentTime(timeMs);
+      getState().setCurrentTime(timeMs);
     }
   }, []);
 
