@@ -50,10 +50,10 @@ export default function VoiceoverHighlighter() {
     const container = document.getElementById(currentSectionId);
     if (!container) return;
 
-    // Query narrative elements in DOM order:
-    // p tags, h3 tags, and elements with data-vo attribute
+    // Query narrative elements in DOM order, excluding children of [data-vo]
+    // to avoid double-counting (e.g. AnalogyCard's inner <p>)
     const elements = container.querySelectorAll(
-      "p.text-text-secondary, h3, [data-vo]"
+      "p.text-text-secondary:not([data-vo] *), h3:not([data-vo] *), [data-vo]"
     );
 
     const targetElement = elements[currentBlockIndex];
