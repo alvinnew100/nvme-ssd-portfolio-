@@ -114,6 +114,7 @@ interface VoiceoverHook {
   skipBackward: () => void;
   setPlaybackRate: (rate: number) => void;
   seekToTime: (timeMs: number) => void;
+  playFromBlock: (sectionId: string, blockIndex: number) => void;
 }
 
 export function useVoiceover(): VoiceoverHook {
@@ -303,6 +304,41 @@ export function useVoiceover(): VoiceoverHook {
     getState().setCurrentTime(timeMs);
   }, []);
 
+  /** Play a specific section starting from a specific block index */
+  const playFromBlock = useCallback((sectionId: string, blockIndex: number) => {
+    (async () => {
+      const meta = await fetchMetadata(sectionId);
+      if (!meta) return;
+
+      const block = meta.blocks[blockIndex];
+      if (!block) return;
+
+      const audio = getAudio();
+      const s = getState();
+
+      // Set source if needed
+      const currentSrc = audio.src || "";
+      if (!currentSrc.includes(sectionId)) {
+        audio.src = `${BASE_PATH}${meta.audioFile}`;
+        audio.playbackRate = s.playbackRate;
+      }
+
+      s.setCurrentSection(sectionId);
+      s.setCurrentBlockIndex(blockIndex);
+      s.setCurrentTime(block.beginMs);
+
+      try {
+        s.setPlaying(true);
+        const playPromise = audio.play();
+        if (playPromise) await playPromise;
+        audio.currentTime = block.beginMs / 1000;
+      } catch (err) {
+        console.error("[voiceover] playFromBlock failed:", err);
+        getState().setPlaying(false);
+      }
+    })();
+  }, []);
+
   // Derive active word
   const meta = store.currentSectionId
     ? store.getMetadata(store.currentSectionId)
@@ -329,5 +365,6 @@ export function useVoiceover(): VoiceoverHook {
     skipBackward,
     setPlaybackRate,
     seekToTime,
+    playFromBlock,
   };
 }
