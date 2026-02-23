@@ -170,6 +170,10 @@ export default function Queues() {
   };
 
   const processCommand = () => {
+    if (cqCount >= QUEUE_SIZE) {
+      setStatus("CQ full! Controller stalled — consume completion results before processing more commands.");
+      return;
+    }
     if (sqCount === 0) {
       setStatus("SQ empty — nothing to process.");
       return;
@@ -190,15 +194,11 @@ export default function Queues() {
     const oldSqHead = sqHead;
     setSqHead((sqHead + 1) % QUEUE_SIZE);
 
-    if (cqCount < QUEUE_SIZE) {
-      const newCq = [...cqSlots];
-      newCq[cqTail] = cmd;
-      setCqSlots(newCq);
-      setCqTail((cqTail + 1) % QUEUE_SIZE);
-      setStatus(`Controller fetched ${cmd.label} from SQ[${oldSqHead}], posted result at CQ[${cqTail}]. Interrupt sent.`);
-    } else {
-      setStatus(`Controller fetched ${cmd.label} but CQ is full!`);
-    }
+    const newCq = [...cqSlots];
+    newCq[cqTail] = cmd;
+    setCqSlots(newCq);
+    setCqTail((cqTail + 1) % QUEUE_SIZE);
+    setStatus(`Controller fetched ${cmd.label} from SQ[${oldSqHead}], posted result at CQ[${cqTail}]. Interrupt sent.`);
   };
 
   const consumeCompletion = () => {
@@ -530,6 +530,8 @@ export default function Queues() {
           id="act2-queues-quiz1"
           prompt="Imagine the NVMe driver keeps submitting commands without checking how full the Submission Queue is. What happens when the tail pointer catches the head pointer, and why doesn't NVMe have a hardware mechanism to auto-recover from this?"
           answer="When the tail pointer catches the head pointer, the circular buffer is full — there are no free slots left. The host must wait for the controller to process commands (which advances the head pointer, freeing slots) before submitting more. NVMe doesn't auto-recover because the host driver is responsible for tracking available queue depth. The driver maintains a local count of in-flight commands and never advances the tail past the head. If the driver had a bug and overwrote an unprocessed entry, the original command would be lost and the replacement would be corrupted — leading to data loss or controller errors. This design keeps hardware simple and puts flow control responsibility on the software, which can make smarter scheduling decisions."
+          options={["The SSD hardware automatically expands the queue size when tail catches head", "The queue wraps around and new commands overwrite the oldest unprocessed entries", "The circular buffer is full — no free slots remain, and the host must wait for the controller to advance the head pointer", "The phase bit flips and the SSD begins processing from the head again in reverse order"]}
+          correctIndex={2}
         />
       </div>
     </SectionWrapper>

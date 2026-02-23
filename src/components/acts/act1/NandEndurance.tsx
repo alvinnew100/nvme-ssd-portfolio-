@@ -212,6 +212,13 @@ export default function NandEndurance() {
           prompt="How would you estimate TLC endurance from first principles, knowing that SLC endures ~100K cycles and each additional bit per cell roughly reduces endurance by an order of magnitude? What physical mechanism drives this relationship?"
           answer="SLC (~100K P/E cycles) has 2 voltage levels with wide margins. Each additional bit doubles the voltage levels and roughly halves the margin between them: MLC (4 levels, ~10K cycles), TLC (8 levels, ~3K cycles), QLC (16 levels, ~1K cycles). TLC endures approximately 3,000 P/E cycles. The physical mechanism is oxide degradation: each erase cycle's high-voltage pulse permanently traps a few electrons in the tunnel oxide. With SLC's wide margins, the cell tolerates substantial threshold voltage shifts before misreads occur. With TLC's 8 tightly-packed levels, even small voltage shifts push distributions into neighboring states. The relationship isn't perfectly geometric because ECC and read-retry algorithms partially compensate for increased error rates."
           hint="More bits per cell means more voltage levels, which stresses the oxide layer faster."
+          options={[
+            "~3,000 P/E cycles — each additional bit roughly halves voltage margins, reducing tolerance to oxide degradation",
+            "~30,000 P/E cycles — TLC is only slightly worse than MLC due to advanced ECC",
+            "~300 P/E cycles — the exponential degradation is more severe than commonly believed",
+            "~10,000 P/E cycles — same as MLC, since 3 bits vs 2 bits is a minor difference"
+          ]}
+          correctIndex={0}
         />
 
         <RevealCard
@@ -219,6 +226,13 @@ export default function NandEndurance() {
           prompt="A colleague says 'NAND cells wear out because the silicon melts from repeated writes.' When is this wrong, and what is the actual physical degradation mechanism? How does it manifest as observable symptoms?"
           answer="This is entirely wrong — silicon doesn't melt at normal operating temperatures (its melting point is 1,414C). The actual mechanism is oxide degradation through charge trapping. Each high-voltage erase cycle (~20V) forces electrons through the thin tunnel oxide via Fowler-Nordheim tunneling. Some electrons become permanently trapped in defect sites within the oxide layer itself. Over thousands of cycles, these trapped charges make the oxide increasingly 'leaky,' causing two observable symptoms: (1) the floating gate loses charge faster (reduced data retention), and (2) the threshold voltage distributions widen and shift, causing the controller to misread voltage levels. The symptoms manifest as increasing bit error rates in SMART data, more frequent ECC corrections, and eventually uncorrectable read errors."
           hint="Think about which cell type stores more bits and therefore has more voltage levels to distinguish."
+          options={[
+            "Partially true — microscopic silicon melting at the tunnel oxide causes degradation over time",
+            "Wrong — the actual mechanism is electromigration, where metal interconnects physically thin out",
+            "Wrong — oxide degradation from charge trapping during high-voltage erase cycles shifts threshold voltages and increases bit error rates",
+            "Wrong — cells degrade because the floating gate physically expands from absorbing electrons"
+          ]}
+          correctIndex={2}
         />
       </div>
     </SectionWrapper>

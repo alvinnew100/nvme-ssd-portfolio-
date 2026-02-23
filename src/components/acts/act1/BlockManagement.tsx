@@ -363,6 +363,13 @@ export default function BlockManagement() {
           id="act1-block-quiz1"
           prompt="Why does the garbage collector prioritize blocks with the fewest valid pages rather than the oldest blocks or random blocks? What metric does it optimize, and what would happen if it chose blocks randomly instead?"
           answer="The GC engine picks the block with the lowest VPC (Valid Page Count) because it must copy all valid pages to a new block before erasing. Choosing the block with the fewest valid pages minimizes write amplification — the ratio of actual NAND writes to host-requested writes. A block with VPC=2 out of 256 pages requires copying only 2 pages to reclaim 254 free pages (excellent efficiency). A block with VPC=250 would require copying 250 pages to reclaim only 6 pages (terrible efficiency). Random selection would average these extremes, dramatically increasing write amplification, which accelerates wear and reduces the drive's effective lifespan. The GC maintains a VPC table in DRAM for O(1) lookup of the best candidate. Erase count, by contrast, is used for wear leveling decisions, not GC source selection — these are separate optimization goals."
+          options={[
+            "Blocks with fewer valid pages are physically located closer to the controller for faster access",
+            "Fewer valid pages means fewer copies needed before erasing — minimizing write amplification and maximizing reclaimed free space per GC operation",
+            "Blocks with more valid pages have higher voltage thresholds that prevent safe erasure",
+            "It's random — the 'lowest VPC' claim is a simplification; real GC uses round-robin"
+          ]}
+          correctIndex={1}
         />
       </div>
     </SectionWrapper>

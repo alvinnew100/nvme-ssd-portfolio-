@@ -146,6 +146,8 @@ export default function SMART() {
           prompt="You see two SMART fields: 'Percentage Used: 80%' and 'Data Units Written: 50 TB' on a drive rated for 600 TBW. Why don't these two numbers tell the same story? What hidden factor explains the discrepancy?"
           answer="Data Units Written (50 TB) only counts host-initiated writes — what the OS sent to the SSD. But Percentage Used (80%) reflects the actual NAND wear, which includes all internal writes: garbage collection copies, wear-leveling page moves, metadata updates, and FTL journaling. The discrepancy reveals a Write Amplification Factor of roughly (80% of 600 TBW) / 50 TB = 480 / 50 = 9.6x. This means for every byte the host wrote, the SSD internally wrote nearly 10 bytes to NAND. The drive is wearing out far faster than the host write volume alone suggests — likely due to heavy random writes, a nearly-full drive, or missing TRIM support."
           hint="Consider what 'Percentage Used' is actually measuring versus what 'Data Units Written' counts."
+          options={["The discrepancy is a firmware reporting bug common in consumer SSDs", "Percentage Used reflects total NAND wear including internal writes from GC and wear leveling, while Data Units Written only counts host writes — the gap reveals write amplification", "Percentage Used includes data read operations in its wear calculation not just writes", "Data Units Written counts compressed bytes while Percentage Used counts uncompressed"]}
+          correctIndex={1}
         />
       </div>
     </SectionWrapper>

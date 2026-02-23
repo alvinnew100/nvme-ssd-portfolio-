@@ -195,6 +195,13 @@ export default function NandCellTypes() {
           id="act1-nandtypes-quiz1"
           prompt="Why does SLC endure ~100x more P/E cycles than QLC? What is the precise physical mechanism that connects 'more bits per cell' to 'faster wear-out'?"
           answer="SLC distinguishes only 2 voltage levels with wide margins between them, so it can tolerate significant oxide degradation before misreads occur (~100,000 P/E cycles). QLC packs 16 voltage levels into the same voltage range, meaning the margins between adjacent levels are razor-thin. Even small amounts of oxide damage (trapped electrons shifting threshold voltages) cause the distributions to overlap, leading to bit errors. The progression is: SLC (~100K cycles, 2 levels), MLC (~10K cycles, 4 levels), TLC (~3K cycles, 8 levels), QLC (~1K cycles, 16 levels). Each doubling of levels roughly reduces endurance by 3-10x because the margin for error shrinks exponentially while oxide damage accumulates linearly with P/E cycles."
+          options={[
+            "SLC cells are manufactured with thicker oxide layers than QLC cells",
+            "SLC has only 2 voltage levels with wide margins, so it tolerates more oxide degradation before misreads occur",
+            "QLC cells physically shrink after each erase cycle, eventually becoming too small to hold charge",
+            "SLC uses error correction that QLC cannot — QLC raw bit errors are unfixable"
+          ]}
+          correctIndex={1}
         />
 
         <RevealCard
@@ -202,6 +209,13 @@ export default function NandCellTypes() {
           prompt="If a manufacturer converts an SLC die to QLC without changing the physical cell count, the capacity quadruples. So why don't all SSDs just use QLC? What are the hidden costs of packing more bits into each cell?"
           answer="From lowest to highest density: SLC (1 bit/cell) < MLC (2 bits/cell) < TLC (3 bits/cell) < QLC (4 bits/cell). While QLC quadruples the storage per cell compared to SLC, the hidden costs are severe: (1) Write speed drops dramatically because programming 16 precise voltage levels requires iterative verify steps, (2) Read latency increases because the controller must make 15 voltage comparisons instead of 1, (3) Endurance plummets from ~100K to ~1K P/E cycles, and (4) Error rates skyrocket, demanding more powerful (and slower) ECC algorithms like LDPC with soft-decision decoding. This is why many SSDs use SLC as a write cache — incoming data is written quickly to SLC-mode cells, then slowly 'folded' into TLC/QLC cells in the background."
           hint="More bits per cell = more data stored in the same physical space."
+          options={[
+            "QLC requires a different PCIe interface not supported by most motherboards",
+            "QLC increases capacity 4x but write speed drops, read latency increases, endurance plummets to ~1K P/E cycles, and error rates spike",
+            "QLC technology is still experimental and not yet available in consumer drives",
+            "The only downside is slightly higher cost per cell due to precision manufacturing"
+          ]}
+          correctIndex={1}
         />
       </div>
     </SectionWrapper>

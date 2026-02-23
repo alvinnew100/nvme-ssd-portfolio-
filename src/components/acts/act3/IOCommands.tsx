@@ -173,6 +173,8 @@ export default function IOCommands() {
           prompt="A database completes a Write command and gets a successful completion entry back. Power is lost one second later. Is the data guaranteed to be on NAND? What additional step is needed for crash consistency, and why doesn't NVMe guarantee persistence on every write by default?"
           answer="A successful Write completion does NOT guarantee data is on NAND — it may still be sitting in the SSD's volatile DRAM write cache. The Flush command (opcode 0x00) forces all cached data to be committed to non-volatile NAND flash. Databases issue Flush after every transaction commit to ensure crash consistency. NVMe doesn't guarantee persistence on every write by default because the DRAM write cache dramatically improves performance — DRAM writes complete in microseconds while NAND programming takes hundreds of microseconds. Flushing after every single write would negate this benefit. Instead, NVMe gives the host control: use normal writes for speed, and issue Flush (or set the FUA bit on individual writes) when persistence is critical. This lets the application choose the right tradeoff between speed and durability."
           hint="Consider what happens to data in the SSD's volatile write cache during a power loss."
+          options={["Yes — a successful completion means the SSD has committed data to NAND flash", "No — data may be in the SSD volatile DRAM cache; a Flush command or FUA bit is needed to guarantee persistence", "Yes — NVMe requires write-through caching by default so all writes hit NAND immediately", "It depends on the drive model — enterprise SSDs guarantee persistence but consumer SSDs do not"]}
+          correctIndex={1}
         />
       </div>
     </SectionWrapper>

@@ -246,6 +246,13 @@ export default function SsdOverview() {
           id="act1-ssd-quiz1"
           prompt="Why does an SSD need its own dedicated processor and RAM, essentially making it a 'computer within a computer'? What would happen if the host CPU had to manage all of these responsibilities directly?"
           answer="The SSD controller is a full SoC (System-on-Chip) running firmware that handles FTL address mapping, ECC error correction, wear leveling, garbage collection, and NVMe protocol processing. It needs its own processor (often ARM Cortex-R cores) because these tasks are enormously complex and time-critical — the FTL must translate every single I/O into physical addresses, ECC must correct bit errors on every read, and GC must run continuously in the background. If the host CPU managed this directly, it would waste enormous cycles on microsecond-level NAND timing, consume massive bandwidth shuttling mapping tables over PCIe, and every SSD internal operation (GC, wear leveling) would stall host applications. The dedicated DRAM caches the FTL mapping table (~4 bytes per LBA, so ~4 GB for a 1 TB drive) for O(1) address lookups — without it, every read would require an extra NAND access just to find the mapping, roughly doubling latency."
+          options={[
+            "It's a cost-saving measure — using the host CPU would require a more expensive motherboard",
+            "The dedicated controller handles FTL mapping, ECC, wear leveling, and GC at microsecond timescales; offloading this to the host CPU would waste cycles and bandwidth",
+            "The host CPU cannot execute the custom instruction set required by NAND flash chips",
+            "It's optional — DRAM-less SSDs prove the controller can work without dedicated resources"
+          ]}
+          correctIndex={1}
         />
       </div>
     </SectionWrapper>

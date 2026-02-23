@@ -121,6 +121,13 @@ export default function QueueDepthIOPS() {
           prompt="Why does a typical NVMe SSD achieve only ~15K IOPS at QD1 despite being capable of 250K+ IOPS at higher queue depths? What specific hardware resources are being wasted at QD1, and why can't the controller optimize around this?"
           answer="At QD1 (single command in flight), the SSD achieves only ~10-20K IOPS because only one NAND die is active at a time while all others sit idle. A typical SSD has 8-16 dies across 4-8 channels, each capable of independent operation — but with only one command pending, the controller can only read from one die while the rest wait. The IOPS at QD1 is essentially 1 / (single_read_latency), where a NAND page read takes ~50-100us, giving ~10-20K IOPS. The controller can't optimize around this because it has no advance knowledge of what the host will request next — it must wait for each command to complete before receiving the next one. At QD32, 32 commands are in-flight simultaneously, allowing the controller to dispatch reads across many dies in parallel, multiplying throughput while each individual read still takes the same ~50-100us."
           hint="IOPS x block_size = bandwidth. Work backwards from the given values."
+          options={[
+            "The NVMe protocol adds 50us of software overhead per command at QD1",
+            "PCIe bandwidth is the bottleneck at QD1 since each 4KB read can't saturate a x4 link",
+            "At QD1 only one NAND die is active while all others idle; at higher QDs the controller dispatches reads across many dies in parallel",
+            "QD1 uses synchronous NAND mode which is inherently slower than the async mode used at higher QDs"
+          ]}
+          correctIndex={2}
         />
 
         <div className="bg-story-card rounded-2xl p-6 card-shadow">

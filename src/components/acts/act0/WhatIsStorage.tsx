@@ -108,6 +108,13 @@ export default function WhatIsStorage() {
           prompt="If RAM is ~1,000x faster than an SSD, why doesn't the system just use RAM for everything? What fundamental tradeoff forces us to have a storage hierarchy instead of a single memory type?"
           answer="RAM (DRAM) achieves 50-100 nanosecond access times vs. 10-100 microseconds for SSDs, but it has two fatal flaws for permanent storage: (1) it's volatile — all data vanishes when power is lost, so your files wouldn't survive a reboot, and (2) it costs ~$3-5/GB vs. ~$0.05/GB for SSD storage, making a 1TB RAM-only system prohibitively expensive. The storage hierarchy exists because no single technology optimizes for speed, persistence, and cost simultaneously. Each layer trades one attribute for another: registers are fastest but smallest, SSDs balance speed with persistence, and HDDs maximize capacity at the cost of speed."
           hint="Think about which type keeps data even when the power is turned off."
+          options={[
+            "RAM is volatile and loses data on power loss, and costs ~60-100x more per GB than SSD storage",
+            "RAM can only store executable code, not user data files",
+            "The CPU can only address 64 GB of RAM due to bus width limitations",
+            "RAM cells wear out faster than NAND cells, making it impractical for storage"
+          ]}
+          correctIndex={0}
         />
 
         <RevealCard
@@ -115,6 +122,13 @@ export default function WhatIsStorage() {
           prompt="If you swapped the SSD and RAM layers in the storage hierarchy — putting NAND where DRAM is and vice versa — what specific operations would break or slow down catastrophically, and why?"
           answer="The hierarchy from fastest to slowest is: CPU Registers (< 1 ns) > L1/L2/L3 Cache (1-10 ns) > RAM/DRAM (50-100 ns) > SSD/NAND (10-100 us) > HDD (5-10 ms). If you used NAND as main memory, the CPU would stall for ~1,000x longer on every memory access — page table walks, stack operations, and instruction fetches would all grind to a halt since they rely on nanosecond-level DRAM latency. Conversely, using DRAM as persistent storage would mean losing all data on every power loss (DRAM is volatile), and the cost would be astronomical ($3-5/GB vs $0.05/GB). Each layer exists precisely because no single technology can simultaneously be fast, persistent, large, and cheap."
           hint="Think of the storage hierarchy pyramid — faster and smaller at the top, slower and bigger at the bottom."
+          options={[
+            "Performance would improve because NAND has higher bandwidth than DRAM",
+            "The CPU would stall ~1,000x longer on every memory access, and all persistent data would be lost on power loss since DRAM is volatile",
+            "The system would work identically since both are semiconductor-based memory technologies",
+            "Only write operations would slow down; reads from NAND are comparable to DRAM"
+          ]}
+          correctIndex={1}
         />
       </div>
     </SectionWrapper>

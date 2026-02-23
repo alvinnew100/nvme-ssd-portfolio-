@@ -266,6 +266,8 @@ export default function BAR0() {
           prompt="A colleague claims that NVMe devices use I/O ports (like legacy PCI devices) to access BAR0 registers. Explain why this is wrong and what mechanism is actually used."
           answer="BAR0 uses Memory-Mapped I/O (MMIO), not I/O ports. The SSD's hardware registers are mapped into the CPU's physical address space, so the CPU reads and writes them using normal memory instructions (MOV) rather than special IN/OUT port instructions. MMIO is faster and more flexible than I/O ports — it works with the CPU's memory controller and caching infrastructure, and doesn't require the limited 64KB I/O port address space that legacy PCI devices used."
           hint="BAR0 registers are accessed through a specific memory I/O technique."
+          options={["Correct — NVMe uses I/O ports for compatibility with legacy PCI software", "Wrong — BAR0 uses Memory-Mapped I/O where registers appear as normal memory addresses accessible via standard CPU load/store instructions", "Wrong — NVMe uses a proprietary register protocol that bypasses both MMIO and I/O ports", "Partially correct — I/O ports handle admin commands while MMIO handles data transfer"]}
+          correctIndex={1}
         />
       </div>
     </SectionWrapper>

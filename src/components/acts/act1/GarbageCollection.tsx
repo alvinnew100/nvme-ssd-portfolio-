@@ -118,6 +118,13 @@ export default function GarbageCollection() {
           prompt="If the garbage collector erased the source block before copying its valid pages to a new location, what would happen? Why must the GC steps execute in a very specific order, and what does each step depend on?"
           answer="If the block were erased before copying valid pages, that data would be permanently destroyed — a catastrophic data loss. The GC steps must follow this strict order: (1) Select source block — pick the block with the lowest VPC for optimal efficiency, (2) Copy valid pages — move them to a free block so the data is safely duplicated, (3) Update FTL table — redirect the LBA mappings to point at the new physical locations (without this step, reads would still go to the old block), (4) Erase source block — now safe because valid data exists elsewhere and mappings point to the copies, (5) Return to free pool — the erased block is clean and available for new writes. Each step depends on the prior one: you can't erase before copying, you can't update mappings before knowing where copies landed, and you can't return the block to the free pool before erasing it."
           hint="Think about what must happen before the block can be safely erased."
+          options={[
+            "The SSD would automatically recover the data from its ECC backup copies",
+            "Valid pages would be permanently destroyed — GC must copy valid data first, update FTL mappings, then erase",
+            "The erase operation would fail because the block protection bit prevents erasing blocks with valid data",
+            "Nothing bad would happen — NAND erase only marks pages as free without actually destroying data"
+          ]}
+          correctIndex={1}
         />
 
         <InfoCard variant="note" title="Why FTL matters for performance">

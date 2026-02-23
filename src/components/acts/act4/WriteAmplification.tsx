@@ -230,6 +230,8 @@ export default function WriteAmplification() {
           prompt="An SSD benchmark reports 100 GB of host writes but the SSD's internal NAND write counter shows 300 GB. Derive the Write Amplification Factor and explain what's causing the extra writes."
           answer="WAF = NAND writes / Host writes = 300 GB / 100 GB = 3.0. The extra 200 GB comes from garbage collection: when the SSD needs to reclaim blocks, it must read valid pages from partially-empty blocks, write them to new blocks, then erase the old blocks. Each GC cycle amplifies writes. Other contributors include metadata updates, wear-leveling page moves, and write-ahead logging in the FTL. A WAF of 3 means the NAND is wearing out 3x faster than the host workload alone would suggest."
           hint="WAF = actual NAND writes / host writes. A WAF of 1.0 means no amplification."
+          options={["WAF = 3.0 — the extra 200 GB comes from garbage collection copying valid pages plus metadata updates and wear-leveling moves", "WAF = 0.33 — the SSD achieved 3x compression so fewer NAND writes were needed", "WAF = 3.0 — but the extra writes are caused by NAND read-retry operations not GC", "WAF = 1.5 — the 300 GB NAND counter double-counts writes to mirrored pages"]}
+          correctIndex={0}
         />
       </div>
     </SectionWrapper>

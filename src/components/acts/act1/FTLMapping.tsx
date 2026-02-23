@@ -385,6 +385,13 @@ export default function FTLMapping() {
           id="act1-ftl-quiz1"
           prompt="Why is out-of-place writing not merely a software optimization but an absolute physical necessity for NAND flash? What would need to change at the silicon level to allow in-place overwrites?"
           answer="NAND flash pages can only be programmed (written) once per erase cycle — once electrons are pushed into the floating gate, you can't selectively add more to change the stored value. You can only remove electrons via a high-voltage erase, which affects the entire block (128-256 pages). To overwrite a single page in place, you'd need to erase its entire block first, destroying all other data in that block. The FTL avoids this by writing updated data to a fresh, pre-erased page and updating the mapping table to redirect the LBA to the new location. To enable true in-place overwrites, the silicon would need per-page erase capability — which would require electrically isolating each page's cells on separate substrate wells, dramatically increasing die area and manufacturing complexity. This is why no NAND flash supports in-place overwrites; it's a fundamental physical limitation, not a design choice."
+          options={[
+            "In-place writes are possible but slower, so the FTL chooses out-of-place for performance",
+            "NAND pages can only be written once per erase cycle, and erasing affects an entire block — so updating one page in place would destroy all other data in that block",
+            "The PCIe protocol doesn't support in-place NAND addressing",
+            "Out-of-place writes are just a software optimization to reduce controller complexity"
+          ]}
+          correctIndex={1}
         />
       </div>
     </SectionWrapper>

@@ -201,6 +201,13 @@ export default function TransistorBasics() {
           answerPreview="A very large number..."
           answer={<span>Approximately <strong className="text-nvme-amber">~8 trillion</strong> NAND cells. Each cell stores one or more bits, and a 1TB drive needs about 8 trillion bits (1 TB = 8 Tb). With multi-bit cells (TLC stores 3 bits per cell), the actual transistor count is around 2.7 trillion.</span>}
           hint="Think about what turns current flow on and off at the smallest scale."
+          options={[
+            "~8 trillion NAND cells (1 TB = 8 Tb, so at minimum one cell per bit)",
+            "~500 billion NAND cells, since modern cells each store multiple bits",
+            "~1 million per GB, so roughly 1 billion cells total",
+            "~64 trillion cells — one per bit assuming QLC (4 bits per cell) density"
+          ]}
+          correctIndex={0}
         />
 
         <RevealCard
@@ -208,6 +215,13 @@ export default function TransistorBasics() {
           prompt="Why is a regular transistor useless for long-term data storage? What specific structural addition does a NAND cell have that solves this, and what would happen if that structure degraded?"
           answer="A regular transistor loses its state the instant power is removed — current either flows or it doesn't, with no memory. A NAND cell adds a floating gate, an extra conductive layer surrounded by oxide insulation that physically traps electrons. These trapped electrons shift the transistor's threshold voltage, encoding data that persists without power. If the oxide insulator degrades (from repeated program/erase cycles), electrons leak out or get stuck in the oxide itself, causing the cell to misread its stored voltage level — this is exactly how NAND cells wear out over time."
           hint="Consider which component acts as the fundamental on/off switch in all digital circuits."
+          options={[
+            "It uses a magnetic core instead of silicon to retain state",
+            "It adds a floating gate surrounded by oxide insulation that traps electrons, enabling non-volatile storage",
+            "It stores data in the transistor's base region using capacitive charge, similar to DRAM",
+            "It uses a secondary power supply to maintain the gate voltage indefinitely"
+          ]}
+          correctIndex={1}
         />
       </div>
     </SectionWrapper>

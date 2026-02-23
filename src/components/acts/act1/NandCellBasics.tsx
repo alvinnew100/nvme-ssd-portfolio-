@@ -343,6 +343,13 @@ export default function NandCellBasics() {
           prompt="Under what conditions do electrons leak from the floating gate, and what are the consequences for a powered-off SSD sitting on a shelf for years? How does prior wear affect this?"
           answer="Electrons slowly tunnel through the oxide insulator via quantum mechanical tunneling — a process called charge leakage or data retention loss. The rate depends heavily on temperature (heat provides energy for tunneling) and oxide degradation from prior P/E cycles. A fresh SSD can retain data for 10+ years at room temperature, but a heavily worn SSD (near its endurance limit) may only retain data for months because its oxide is damaged and leakier. This is why enterprise SSDs have stricter data retention specs at higher temperatures, and why it's risky to use a worn SSD for archival cold storage. Powered-on SSDs periodically refresh data (read and rewrite) to counteract leakage."
           hint="The name of each NAND type indicates how many bits each cell stores."
+          options={[
+            "Electrons escape when the drive exceeds its rated temperature for more than 24 hours",
+            "Leakage only occurs during active read operations due to read disturb voltage",
+            "Electrons slowly tunnel through oxide via quantum mechanics; worn oxide leaks faster, reducing retention from 10+ years to months",
+            "Electrons are stable indefinitely — data loss in powered-off SSDs is caused by cosmic ray bit flips"
+          ]}
+          correctIndex={2}
         />
       </div>
     </SectionWrapper>

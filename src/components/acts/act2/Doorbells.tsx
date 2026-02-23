@@ -188,6 +188,8 @@ export default function Doorbells() {
           prompt="If the SSD controller were responsible for polling the Submission Queue instead of relying on the host to ring a doorbell, what performance and power problems would arise? Why does NVMe use the doorbell model instead?"
           answer="The host CPU writes to the doorbell register (via MMIO) to notify the SSD controller that new commands have been placed in the submission queue. If the SSD polled the queue instead, it would waste PCIe bandwidth by constantly issuing DMA reads to check for new entries — burning power and consuming bus cycles even when no commands are pending. The doorbell model is event-driven: the SSD sleeps until the host writes to the doorbell register, which costs exactly one PCIe Memory Write TLP (4 bytes). Even better, the host can batch multiple commands into the SQ and ring the doorbell once, triggering the SSD to process the entire batch. This is why NVMe achieves millions of IOPS with minimal CPU overhead — the notification cost is amortized across many commands."
           hint="Think about how the host CPU notifies the SSD that new commands are waiting."
+          options={["Polling would be more efficient since the SSD could batch-check multiple queues simultaneously", "Polling would waste PCIe bandwidth with constant DMA reads even when idle; doorbells are event-driven and cost just one 4-byte MMIO write", "The SSD lacks the ability to initiate PCIe transactions so it physically cannot poll host memory", "Doorbells are slower but more reliable because MMIO writes are guaranteed to arrive in order"]}
+          correctIndex={1}
         />
       </div>
     </SectionWrapper>

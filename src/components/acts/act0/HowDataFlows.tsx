@@ -180,12 +180,26 @@ export default function HowDataFlows() {
           prompt="If the NVMe driver placed a command directly on the PCIe bus before the OS kernel processed the file read request, what would go wrong? Why must these I/O layers execute in a specific order?"
           answer="The I/O path must flow: Application > OS/Kernel > NVMe Driver > PCIe Bus > SSD Controller > NAND Flash. If the driver bypassed the OS, it wouldn't know which logical block addresses (LBAs) correspond to the requested file — the filesystem layer in the kernel is responsible for translating filenames into LBA ranges. Without that translation, the driver would send garbage addresses to the SSD. Similarly, the NVMe driver must format the request into a proper NVMe submission queue entry before the PCIe bus can carry it, and the SSD controller must decode that command before it can address the correct NAND dies. Each layer depends on the output of the layer above it."
           hint="Think about the layers from software (top) down to hardware (bottom)."
+          options={[
+            "Nothing would go wrong — the driver can directly translate filenames to physical addresses",
+            "The driver wouldn't know which LBA addresses correspond to the requested file, since the filesystem layer handles that translation",
+            "The PCIe bus would reject the command because it lacks the kernel's authentication signature",
+            "The SSD would process it faster by skipping the kernel overhead"
+          ]}
+          correctIndex={1}
         />
 
         <RevealCard
           id="act0-dataflow-quiz1"
           prompt="Why is it elegant that the CPU 'doesn't know' it's talking to an SSD when using Memory-Mapped I/O? What would the alternative look like, and why would it be worse?"
           answer="In MMIO, the SSD's control registers are mapped to normal memory addresses. The CPU reads and writes these addresses as if they were RAM, but the hardware silently routes those accesses to the SSD's registers via PCIe. This is elegant because the CPU uses the same load/store instructions it already knows — no special I/O instructions needed. The alternative (port-mapped I/O using IN/OUT instructions) requires separate address spaces, special privilege levels, and can't leverage the CPU's existing memory infrastructure like caches and TLBs. MMIO also scales better: any number of devices can be mapped into the vast 64-bit address space, whereas I/O ports are limited to a 16-bit address range (65,536 ports total)."
+          options={[
+            "It allows the CPU to use the same load/store instructions for device access with no special I/O instructions needed",
+            "It means the SSD can intercept and optimize CPU instructions before they execute",
+            "It enables the SSD to directly modify CPU cache lines for faster data transfer",
+            "It prevents malware from detecting the SSD, improving security"
+          ]}
+          correctIndex={0}
         />
       </div>
     </SectionWrapper>

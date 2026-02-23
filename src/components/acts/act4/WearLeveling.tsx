@@ -221,6 +221,8 @@ export default function WearLeveling() {
           id="act4-wear-quiz1"
           prompt="An SSD uses only dynamic wear leveling. Over time, certain blocks that hold rarely-updated OS files have very low erase counts while frequently-written blocks are nearing their P/E limit. Why is this happening, and what would static wear leveling do differently?"
           answer="Dynamic wear leveling only ensures new writes go to the least-worn free block. It never touches cold data sitting on low-wear blocks. Over time, blocks holding rarely-updated data (OS files, static configs) accumulate very low erase counts while hot blocks exhaust their P/E cycles. Static wear leveling solves this by periodically moving cold data off low-wear blocks to high-wear blocks, then using the freed low-wear blocks for new hot writes. This forces all blocks to share the wear burden evenly. The tradeoff is that moving cold data generates additional NAND writes (increasing WAF), so the FTL must balance wear uniformity against write amplification."
+          options={["Dynamic wear leveling distributes writes across all blocks equally so this scenario cannot occur", "Dynamic leveling only balances writes to free blocks; static leveling also relocates cold data off low-wear blocks forcing all blocks to share the wear burden", "The issue is caused by TRIM not being enabled not by the wear leveling algorithm", "This is expected behavior — OS blocks should always have lower erase counts since they are read-only"]}
+          correctIndex={1}
         />
       </div>
     </SectionWrapper>

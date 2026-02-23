@@ -275,6 +275,13 @@ export default function LBA() {
           id="act1-lba-quiz1"
           prompt="Why would it be disastrous for the OS to directly address physical NAND locations? What fundamental SSD behavior makes an abstraction layer like LBAs essential?"
           answer="The SSD constantly moves data internally for wear leveling, garbage collection, and error recovery. If the OS used physical NAND addresses, every internal data relocation would invalidate the OS's references, causing data corruption or loss. LBAs provide a stable abstraction — the FTL (Flash Translation Layer) maintains a mapping table that translates fixed LBAs to changing physical locations, so the OS never needs to know where data actually lives on NAND. This decoupling also allows the SSD to optimize data placement for performance (e.g., striping across channels) and reliability (e.g., moving data away from failing cells) without any OS involvement. The LBA interface is essentially a contract: the OS says 'store this at address 42' and the SSD guarantees it can retrieve it from address 42, regardless of how many times the physical location changes internally."
+          options={[
+            "The OS lacks the voltage control hardware needed to read individual NAND cells",
+            "Physical NAND uses analog voltages incompatible with the digital OS",
+            "The SSD constantly relocates data internally for wear leveling and GC, so physical addresses change unpredictably",
+            "NAND addresses use a different bit width than the CPU's address bus"
+          ]}
+          correctIndex={2}
         />
 
         <RevealCard
@@ -282,6 +289,13 @@ export default function LBA() {
           prompt="How would you derive the total number of LBAs on a 1 TB drive with 512-byte sectors from first principles? Why does the choice of sector size (512B vs 4KB) matter for the FTL's memory overhead?"
           answer="1 TB = 1,000,000,000,000 bytes. Dividing by 512 bytes per LBA gives ~1,953,125,000 LBAs, or approximately 1.95 billion. This sector size choice has a massive impact on FTL overhead: the mapping table stores one physical address per LBA (typically 4 bytes each). With 512-byte LBAs, the table needs ~1.95 billion x 4 bytes = ~7.8 GB of DRAM — enormous. With 4KB LBAs, the same drive has only ~244 million LBAs, requiring ~976 MB of DRAM — 8x less. This is why 4KB-native drives are more efficient: fewer LBAs means a smaller mapping table, less DRAM needed, and faster table lookups. It also explains why DRAM-less SSDs using HMB (Host Memory Buffer) strongly prefer 4KB sectors."
           hint="Each sector is 512 bytes. Divide the total capacity by the sector size."
+          options={[
+            "~1.95 billion LBAs; using 4KB sectors instead reduces FTL mapping table size by 8x",
+            "~976 million LBAs; the sector size doesn't affect FTL overhead significantly",
+            "~8 billion LBAs; one LBA per byte of storage",
+            "~244 million LBAs regardless of sector size, since LBA count is fixed by the controller"
+          ]}
+          correctIndex={0}
         />
       </div>
     </SectionWrapper>

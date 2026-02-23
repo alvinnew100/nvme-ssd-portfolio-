@@ -572,6 +572,8 @@ export default function PCIe() {
           prompt="Your NVMe SSD spec sheet says 'PCIe Gen 4 x4' but advertises 'up to 7 GB/s.' Why isn't it 16 GB/s (since Gen 4 is 16 GT/s per lane times 4 lanes = 64 GT/s)? Walk through the math that explains the gap between raw signaling rate and usable bandwidth."
           answer="PCIe Gen 4 runs at 16 GT/s per lane. With 4 lanes that's 64 GT/s raw. But each 'transfer' is just 1 bit (including encoding overhead). Gen 4 uses 128b/130b encoding, meaning for every 130 bits transmitted, only 128 carry actual data — about 98.5% efficiency. So: 64 GT/s × (128/130) = ~63.02 Gbit/s of usable data. Divide by 8 to convert bits to bytes: ~7.88 GB/s. That's why SSD specs say 'up to 7 GB/s' — it's the theoretical maximum of the PCIe link after encoding overhead. The remaining gap comes from protocol overhead (TLP headers, flow control) and the SSD controller's own limitations."
           hint="PCIe Gen 4 runs at 16 GT/s per lane. With 4 lanes and 128b/130b encoding overhead..."
+          options={["Because Gen 4 uses 50% of bandwidth for error correction", "64 GT/s raw but 128b/130b encoding plus bit-to-byte conversion gives ~7.88 GB/s theoretical max", "The x4 means the bandwidth is divided by 4, not multiplied", "16 GT/s equals 16 GB/s per lane, but the SSD controller limits it to 7 GB/s"]}
+          correctIndex={1}
         />
       </div>
     </SectionWrapper>

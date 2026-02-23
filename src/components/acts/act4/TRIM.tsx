@@ -566,6 +566,8 @@ export default function TRIM() {
           id="act4-trim-quiz1"
           prompt="A colleague says: 'TRIM is optional — the SSD works fine without it.' Under what conditions is this true, and when does it fail catastrophically? Trace the chain of consequences when TRIM is absent on a heavily-used drive."
           answer="Without TRIM, the SSD has no way to know when files are deleted — the filesystem marks LBAs as free internally, but the SSD still considers those pages valid. On a lightly-used drive with plenty of free space, this barely matters because GC has enough free blocks to work with. But as the drive fills up, consequences cascade: GC must copy 'valid' pages that are actually dead data, dramatically increasing write amplification. More GC writes means faster NAND wear. Fewer free blocks forces foreground GC, which blocks host I/O and causes latency spikes. Eventually the drive enters a vicious cycle — high WAF, degraded performance, and shortened lifespan. TRIM breaks this cycle by telling the SSD which pages are stale, so GC skips them entirely."
+          options={["True — TRIM is purely a performance optimization with no impact on drive longevity", "Without TRIM the SSD treats deleted data as valid, forcing GC to copy dead pages — causing cascading write amplification, faster wear, and latency spikes as the drive fills up", "TRIM is only needed for HDDs; SSDs handle deleted data automatically through the FTL", "TRIM is mandatory — the SSD will refuse to write new data without it once 50 percent full"]}
+          correctIndex={1}
         />
       </div>
     </SectionWrapper>

@@ -218,7 +218,7 @@ export default function BootSequence() {
                   >
                     {i + 1}
                   </div>
-                  <span className="text-[9px] sm:text-[10px] font-mono mt-1.5 text-center leading-tight max-w-[72px]" style={{ color: i === activePhase ? step.color : "#9e9789" }}>
+                  <span className="text-[9px] sm:text-[10px] font-mono mt-1.5 text-center leading-tight max-w-[100px] whitespace-normal" style={{ color: i === activePhase ? step.color : "#9e9789" }}>
                     {step.phase}
                   </span>
                 </button>
@@ -321,6 +321,8 @@ export default function BootSequence() {
           prompt="If the NVMe driver tried to submit I/O commands before creating the I/O queues — or tried to create queues before enabling the controller — what would happen? Explain why the boot sequence must follow a strict order and what depends on what."
           answer="The boot sequence is a dependency chain where each step requires the previous one: (1) PCIe Enumeration must happen first — the BIOS scans the bus to discover devices. Without this, the CPU doesn't know the SSD exists. (2) BAR0 Assignment maps the SSD's registers to memory addresses. Without BAR0, there's no way to access the controller's registers. (3) Admin Queue creation (writing AQA, ASQ, ACQ registers) sets up the communication channel. Without admin queues, there's no way to send any commands at all. (4) Enabling the controller (CC.EN=1) powers up the SSD's command processing engine. Before this, the SSD ignores queue contents. (5) Identify Controller queries capabilities — the driver needs to know queue limits before creating I/O queues. (6) Finally, I/O Queue creation gives the driver high-speed data channels. If you tried to submit I/O commands before this step, there would be no I/O queues to put them in. Each step builds on the last — skip any step and the subsequent steps fail or produce undefined behavior."
           hint="Think about what the host needs to set up before it can send any NVMe commands."
+          options={["The commands would succeed but execute more slowly without proper queue optimization", "Each step depends on the previous: discovery finds the device, BAR0 maps registers, admin queues enable communication, controller enablement starts processing, I/O queues provide data channels — skipping any step causes undefined behavior", "The SSD firmware would auto-detect the missing steps and configure itself", "Only the I/O queue creation order matters — all other steps can run in any sequence"]}
+          correctIndex={1}
         />
       </div>
     </SectionWrapper>
